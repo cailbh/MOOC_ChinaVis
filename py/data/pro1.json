@@ -1,0 +1,2678 @@
+ [
+		{
+			"id": "1568086661408161792",
+			"label": "",
+			"score": 1,
+			"problemPoolIndex": 1,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1477262017438560256",
+			"title": "C语言中的转义字符‘\\n’表示的功能是换行。",
+			"content": "C语言中的转义字符‘\\n’表示的功能是换行。 ",
+			"type": "TRUE_OR_FALSE",
+			"author": "吴光生",
+			"authorOrganization": {
+				"id": "974911818648657920",
+				"name": "新余学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "64",
+							"name": "基本数据类型与表达式",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "65",
+							"name": "表达式",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1568086661336858624",
+			"judgeConfig": {
+				"trueOrFalseJudgeConfig": {
+					"answer": "TRUE"
+				}
+			},
+			"solution": "",
+			"description": "C语言中的转义字符‘\\n’表示的功能是换行。 ",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1568086661408161793",
+			"label": "",
+			"score": 1,
+			"problemPoolIndex": 2,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1503307092835577856",
+			"title": "在C语言中，单精度的浮点类型用double表示。",
+			"content": "在C语言中，单精度的浮点类型用double表示。",
+			"type": "TRUE_OR_FALSE",
+			"author": "吴光生",
+			"authorOrganization": {
+				"id": "974911818648657920",
+				"name": "新余学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "64",
+							"name": "基本数据类型与表达式",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "65",
+							"name": "表达式",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1568086661336858624",
+			"judgeConfig": {
+				"trueOrFalseJudgeConfig": {
+					"answer": "FALSE"
+				}
+			},
+			"solution": "",
+			"description": "在C语言中，单精度的浮点类型用double表示。",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1568086661408161794",
+			"label": "",
+			"score": 1,
+			"problemPoolIndex": 3,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1503307243058769920",
+			"title": "C语言中的转义字符‘\\t’表示的功能是换行。",
+			"content": "C语言中的转义字符‘\\t’表示的功能是换行。",
+			"type": "TRUE_OR_FALSE",
+			"author": "吴光生",
+			"authorOrganization": {
+				"id": "974911818648657920",
+				"name": "新余学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "64",
+							"name": "基本数据类型与表达式",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "65",
+							"name": "表达式",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1568086661336858624",
+			"judgeConfig": {
+				"trueOrFalseJudgeConfig": {
+					"answer": "FALSE"
+				}
+			},
+			"solution": "",
+			"description": "C语言中的转义字符‘\\t’表示的功能是换行。",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1568086661408161795",
+			"label": "",
+			"score": 1,
+			"problemPoolIndex": 4,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1503307934297763840",
+			"title": "C语言标识符中，大小写字母是有区别的。",
+			"content": "C语言标识符中，大小写字母是有区别的。",
+			"type": "TRUE_OR_FALSE",
+			"author": "吴光生",
+			"authorOrganization": {
+				"id": "974911818648657920",
+				"name": "新余学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "64",
+							"name": "基本数据类型与表达式",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "65",
+							"name": "表达式",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1568086661336858624",
+			"judgeConfig": {
+				"trueOrFalseJudgeConfig": {
+					"answer": "TRUE"
+				}
+			},
+			"solution": "",
+			"description": "C语言标识符中，大小写字母是有区别的。",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1568086661408161796",
+			"label": "",
+			"score": 1,
+			"problemPoolIndex": 5,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1764",
+			"title": "任何表达式语句都是表达式加分号组成的。",
+			"content": "任何表达式语句都是表达式加分号组成的。  ~@[](1)",
+			"type": "TRUE_OR_FALSE",
+			"author": "王从银",
+			"authorOrganization": {
+				"id": "36",
+				"name": "吉首大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "64",
+							"name": "基本数据类型与表达式",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "65",
+							"name": "表达式",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1568086661336858624",
+			"judgeConfig": {
+				"trueOrFalseJudgeConfig": {
+					"answer": "TRUE"
+				}
+			},
+			"solution": "",
+			"description": "任何表达式语句都是表达式加分号组成的。  ",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+        
+		{
+			"id": "1568086661408161797",
+			"label": "",
+			"score": 2,
+			"problemPoolIndex": 1,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false,
+				"multipleChoiceProblemConfig": {
+					"choices": [
+						"'{' 和‘}'",
+						"'[' 和 ']'",
+						"'/\\*' 和 '\\*/'",
+						"'\\*/' 和 '/\\*'"
+					],
+					"maxDisplayChoicesPerLine": 1
+				}
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "985",
+			"title": "C 语言程序中可以对程序进行注释，注释部分必须用什么符号括起来？",
+			"content": "C 语言程序中可以对程序进行注释，注释部分必须用什么符号括起来？ @[](2)\nA. '{' 和‘}'\nB. '[' 和 ']'\nC. '/\\*' 和 '\\*/'\nD. '\\*/' 和 '/\\*'",
+			"type": "MULTIPLE_CHOICE",
+			"author": "往年试卷",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 2,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "64",
+							"name": "基本数据类型与表达式",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "65",
+							"name": "表达式",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1568086661336858624",
+			"judgeConfig": {
+				"multipleChoiceJudgeConfig": {
+					"answer": "C"
+				}
+			},
+			"solution": "",
+			"description": "C 语言程序中可以对程序进行注释，注释部分必须用什么符号括起来？",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1568086661408161798",
+			"label": "",
+			"score": 2,
+			"problemPoolIndex": 2,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false,
+				"multipleChoiceProblemConfig": {
+					"choices": [
+						"98, b",
+						"语法不合法",
+						"98, 99",
+						"98, c"
+					],
+					"maxDisplayChoicesPerLine": 1
+				}
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "988",
+			"title": "已知字符 'a' 的ASCII码为 97，执行下列语句的输出是\\_\\_\\_\\_。",
+			"content": "已知字符 'a' 的ASCII码为 97，执行下列语句的输出是\\_\\_\\_\\_。@[](2)\n\n`printf (\"%d, %c\", 'b', 'b'+1 ) ; `\n\nA. 98, b\nB. 语法不合法\nC. 98, 99\nD. 98, c",
+			"type": "MULTIPLE_CHOICE",
+			"author": "往年试卷",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 2,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "64",
+							"name": "基本数据类型与表达式",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "65",
+							"name": "表达式",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1568086661336858624",
+			"judgeConfig": {
+				"multipleChoiceJudgeConfig": {
+					"answer": "D"
+				}
+			},
+			"solution": "",
+			"description": "已知字符 'a' 的ASCII码为 97，执行下列语句的输出是\\_\\_\\_\\_。\n\n`printf (\"%d, %c\", 'b', 'b'+1 ) ; `",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1568086661408161799",
+			"label": "",
+			"score": 2,
+			"problemPoolIndex": 3,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false,
+				"multipleChoiceProblemConfig": {
+					"choices": [
+						"i!=0 && j!=0",
+						"i+j!=0",
+						"i || j",
+						"i&&j"
+					],
+					"maxDisplayChoicesPerLine": 1
+				}
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "992",
+			"title": "判断 i 和 j 至少有一个值为非0的表达式是\\_\\_\\_\\_。",
+			"content": "判断 i 和 j 至少有一个值为非0的表达式是\\_\\_\\_\\_。  @[](2)\n\nA. i!=0 && j!=0\nB. i+j!=0\nC. i || j\nD. i&&j",
+			"type": "MULTIPLE_CHOICE",
+			"author": "往年试卷",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 2,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "64",
+							"name": "基本数据类型与表达式",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "65",
+							"name": "表达式",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1568086661336858624",
+			"judgeConfig": {
+				"multipleChoiceJudgeConfig": {
+					"answer": "C"
+				}
+			},
+			"solution": "",
+			"description": "判断 i 和 j 至少有一个值为非0的表达式是\\_\\_\\_\\_。",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1568086661408161800",
+			"label": "",
+			"score": 2,
+			"problemPoolIndex": 4,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false,
+				"multipleChoiceProblemConfig": {
+					"choices": [
+						"`5&&3\t`",
+						"`int(5.5)`",
+						"`+a`",
+						"`a=b=c=3`"
+					],
+					"maxDisplayChoicesPerLine": 1
+				}
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1073",
+			"title": "若变量已正确定义并赋值，表达式（ ）不符合C语言语法。",
+			"content": "若变量已正确定义并赋值，表达式（ ）不符合C语言语法。   @[](2)\n\nA. `5&&3\t`\nB. `int(5.5)`\nC. `+a`\nD. `a=b=c=3`",
+			"type": "MULTIPLE_CHOICE",
+			"author": "王秀",
+			"authorOrganization": {
+				"id": "14",
+				"name": "福州大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "64",
+							"name": "基本数据类型与表达式",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "65",
+							"name": "表达式",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1568086661336858624",
+			"judgeConfig": {
+				"multipleChoiceJudgeConfig": {
+					"answer": "B"
+				}
+			},
+			"solution": "",
+			"description": "若变量已正确定义并赋值，表达式（ ）不符合C语言语法。",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1568086661408161801",
+			"label": "",
+			"score": 2,
+			"problemPoolIndex": 5,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false,
+				"multipleChoiceProblemConfig": {
+					"choices": [
+						"x!=0 || y!=0",
+						"x || y",
+						"!(x==0 || y==0)",
+						"!(x==0 && y==0)"
+					],
+					"maxDisplayChoicesPerLine": 1
+				}
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1041",
+			"title": "表达式__不能用于判断“x和y不同时为零”。",
+			"content": "表达式__不能用于判断“x和y不同时为零”。   @[](2)\n\nA. x!=0 || y!=0\nB. x || y\nC. !(x==0 || y==0)\nD. !(x==0 && y==0)",
+			"type": "MULTIPLE_CHOICE",
+			"author": "往年试卷",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 2,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "64",
+							"name": "基本数据类型与表达式",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "65",
+							"name": "表达式",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1568086661336858624",
+			"judgeConfig": {
+				"multipleChoiceJudgeConfig": {
+					"answer": "C"
+				}
+			},
+			"solution": "",
+			"description": "表达式__不能用于判断“x和y不同时为零”。",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1568086661408161802",
+			"label": "",
+			"score": 2,
+			"problemPoolIndex": 6,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false,
+				"multipleChoiceProblemConfig": {
+					"choices": [
+						"`-(k++)\t`",
+						"`-(k+1)`",
+						"`-(++k)`",
+						"`(-k)++`"
+					],
+					"maxDisplayChoicesPerLine": 1
+				}
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1075",
+			"title": "若变量已正确定义并赋值，表达式 `-k++` 等价于（ ）。",
+			"content": "若变量已正确定义并赋值，表达式 `-k++` 等价于（ ）。   @[](2)\n\nA. `-(k++)\t`\nB. `-(k+1)`\nC. `-(++k)`\nD. `(-k)++`",
+			"type": "MULTIPLE_CHOICE",
+			"author": "王秀",
+			"authorOrganization": {
+				"id": "14",
+				"name": "福州大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 2,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "64",
+							"name": "基本数据类型与表达式",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "65",
+							"name": "表达式",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1568086661336858624",
+			"judgeConfig": {
+				"multipleChoiceJudgeConfig": {
+					"answer": "A"
+				}
+			},
+			"solution": "",
+			"description": "若变量已正确定义并赋值，表达式 `-k++` 等价于（ ）。",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1568086661408161803",
+			"label": "",
+			"score": 2,
+			"problemPoolIndex": 7,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false,
+				"multipleChoiceProblemConfig": {
+					"choices": [
+						"6",
+						"12",
+						"30",
+						"36"
+					],
+					"maxDisplayChoicesPerLine": 1
+				}
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1083",
+			"title": "已知`int i, a;` 执行语句`i=(a=2*3,a*5),a+6;`后，变量`i`的值是（ ）。",
+			"content": "已知`int i, a;` 执行语句`i=(a=2*3,a*5),a+6;`后，变量`i`的值是（ ）。   @[](2)\n\nA. 6 \t\nB. 12\nC. 30\nD. 36",
+			"type": "MULTIPLE_CHOICE",
+			"author": "王秀",
+			"authorOrganization": {
+				"id": "14",
+				"name": "福州大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 3,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "64",
+							"name": "基本数据类型与表达式",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "65",
+							"name": "表达式",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1568086661336858624",
+			"judgeConfig": {
+				"multipleChoiceJudgeConfig": {
+					"answer": "C"
+				}
+			},
+			"solution": "",
+			"description": "已知`int i, a;` 执行语句`i=(a=2*3,a*5),a+6;`后，变量`i`的值是（ ）。",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1568086661408161804",
+			"label": "",
+			"score": 2,
+			"problemPoolIndex": 8,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false,
+				"multipleChoiceProblemConfig": {
+					"choices": [
+						"(x>=y)&&(y>=z) ",
+						" (x>=y)AND(y>=x)",
+						"x>=y>=z    ",
+						"(x≥y)&&(y≥z)"
+					],
+					"maxDisplayChoicesPerLine": 1
+				}
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1302789019088277504",
+			"title": "为表示x≥y≥z，须用的C语言表达式为（  ）。",
+			"content": "为表示x≥y≥z，须用的C语言表达式为（  ）。\n\n@[](2)\n\nA. (x>=y)&&(y>=z) \nB.  (x>=y)AND(y>=x)\nC. x>=y>=z    \nD. (x≥y)&&(y≥z)",
+			"type": "MULTIPLE_CHOICE",
+			"author": "C课程组",
+			"authorOrganization": {
+				"id": "1182483848191823872",
+				"name": "湖南工程学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "64",
+							"name": "基本数据类型与表达式",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "65",
+							"name": "表达式",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1568086661336858624",
+			"judgeConfig": {
+				"multipleChoiceJudgeConfig": {
+					"answer": "A"
+				}
+			},
+			"solution": "",
+			"description": "为表示x≥y≥z，须用的C语言表达式为（  ）。\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1568086661408161805",
+			"label": "",
+			"score": 2,
+			"problemPoolIndex": 9,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false,
+				"multipleChoiceProblemConfig": {
+					"choices": [
+						"算术运算、赋值运算、关系运算",
+						"关系运算、赋值运算、算术运算",
+						"算术运算、关系运算、赋值运算",
+						"关系运算、算术运算、赋值运算"
+					],
+					"maxDisplayChoicesPerLine": 1
+				}
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1363686766195081216",
+			"title": "以下运算符优先级按从高到低排列正确的是(     )。",
+			"content": "以下运算符优先级按从高到低排列正确的是(     )。\n\n@[](2)\n\nA. 算术运算、赋值运算、关系运算\nB. 关系运算、赋值运算、算术运算\nC. 算术运算、关系运算、赋值运算\nD. 关系运算、算术运算、赋值运算",
+			"type": "MULTIPLE_CHOICE",
+			"author": "黄龙军",
+			"authorOrganization": {
+				"id": "170",
+				"name": "绍兴文理学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "64",
+							"name": "基本数据类型与表达式",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "65",
+							"name": "表达式",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1568086661336858624",
+			"judgeConfig": {
+				"multipleChoiceJudgeConfig": {
+					"answer": "C"
+				}
+			},
+			"solution": "",
+			"description": "以下运算符优先级按从高到低排列正确的是(     )。\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1568086661408161806",
+			"label": "",
+			"score": 1,
+			"problemPoolIndex": 10,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false,
+				"multipleChoiceProblemConfig": {
+					"choices": [
+						"11010110",
+						"11010111",
+						"11101011",
+						"11101010"
+					],
+					"maxDisplayChoicesPerLine": 1
+				}
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "944548697331687424",
+			"title": "将十进制数215转换成二进制数是   ",
+			"content": "将十进制数215转换成二进制数是   @[](1)\n\nA. 11010110\nB. 11010111\nC. 11101011\nD. 11101010\n",
+			"type": "MULTIPLE_CHOICE",
+			"author": "C课程组",
+			"authorOrganization": {
+				"id": "70",
+				"name": "武汉理工大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "89",
+							"name": "其他",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "315",
+							"name": "其他",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1568086661336858624",
+			"judgeConfig": {
+				"multipleChoiceJudgeConfig": {
+					"answer": "B"
+				}
+			},
+			"solution": "",
+			"description": "将十进制数215转换成二进制数是",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1568086661408161807",
+			"label": "",
+			"score": 2,
+			"problemPoolIndex": 11,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false,
+				"multipleChoiceProblemConfig": {
+					"choices": [
+						"10010101",
+						"1011111",
+						"1011110",
+						"101111"
+					],
+					"maxDisplayChoicesPerLine": 1
+				}
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1174346577650094080",
+			"title": "十进制数95的二进制数为（   ） 。   ",
+			"content": "十进制数95的二进制数为（   ） 。   @[](2)\n\nA. 10010101\nB. 1011111\nC. 1011110\nD. 101111\n",
+			"type": "MULTIPLE_CHOICE",
+			"author": "王俊玲",
+			"authorOrganization": {
+				"id": "46",
+				"name": "集美大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "89",
+							"name": "其他",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "315",
+							"name": "其他",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1568086661336858624",
+			"judgeConfig": {
+				"multipleChoiceJudgeConfig": {
+					"answer": "B"
+				}
+			},
+			"solution": "",
+			"description": "十进制数95的二进制数为（   ） 。",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1568086661408161808",
+			"label": "",
+			"score": 2,
+			"problemPoolIndex": 12,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false,
+				"multipleChoiceProblemConfig": {
+					"choices": [
+						"5F",
+						"F5",
+						"5E",
+						"E"
+					],
+					"maxDisplayChoicesPerLine": 1
+				}
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1174346965988118528",
+			"title": "十进制数95的十六进制数为（） 。   ",
+			"content": "十进制数95的十六进制数为（） 。   @[](2)\n\nA. 5F\nB. F5\nC. 5E\nD. E\n",
+			"type": "MULTIPLE_CHOICE",
+			"author": "王俊玲",
+			"authorOrganization": {
+				"id": "46",
+				"name": "集美大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "89",
+							"name": "其他",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "315",
+							"name": "其他",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1568086661336858624",
+			"judgeConfig": {
+				"multipleChoiceJudgeConfig": {
+					"answer": "A"
+				}
+			},
+			"solution": "",
+			"description": "十进制数95的十六进制数为（） 。",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1568086661408161809",
+			"label": "",
+			"score": 2,
+			"problemPoolIndex": 13,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false,
+				"multipleChoiceProblemConfig": {
+					"choices": [
+						"731",
+						"137",
+						"5F",
+						"136"
+					],
+					"maxDisplayChoicesPerLine": 1
+				}
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1174347535029342208",
+			"title": "十进制数95的八进制数为（） 。   ",
+			"content": "十进制数95的八进制数为（） 。   @[](2)\n\nA. 731\nB. 137\nC. 5F\nD. 136\n",
+			"type": "MULTIPLE_CHOICE",
+			"author": "王俊玲",
+			"authorOrganization": {
+				"id": "46",
+				"name": "集美大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "89",
+							"name": "其他",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "315",
+							"name": "其他",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1568086661336858624",
+			"judgeConfig": {
+				"multipleChoiceJudgeConfig": {
+					"answer": "B"
+				}
+			},
+			"solution": "",
+			"description": "十进制数95的八进制数为（） 。",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1568086661408161810",
+			"label": "",
+			"score": 2,
+			"problemPoolIndex": 14,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false,
+				"multipleChoiceProblemConfig": {
+					"choices": [
+						"20",
+						"35",
+						"23",
+						"36"
+					],
+					"maxDisplayChoicesPerLine": 1
+				}
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1174348464466137088",
+			"title": "二进制数100011，对应的十六进制数为（） 。 ",
+			"content": "二进制数100011，对应的十六进制数为（） 。 @[](2)\n\nA. 20\nB. 35\nC. 23\nD. 36\n",
+			"type": "MULTIPLE_CHOICE",
+			"author": "王俊玲",
+			"authorOrganization": {
+				"id": "46",
+				"name": "集美大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "89",
+							"name": "其他",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "315",
+							"name": "其他",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1568086661336858624",
+			"judgeConfig": {
+				"multipleChoiceJudgeConfig": {
+					"answer": "C"
+				}
+			},
+			"solution": "",
+			"description": "二进制数100011，对应的十六进制数为（） 。",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1568086661408161811",
+			"label": "",
+			"score": 1,
+			"problemPoolIndex": 15,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false,
+				"multipleChoiceProblemConfig": {
+					"choices": [
+						"%d",
+						"%X",
+						"%f",
+						"%o"
+					],
+					"maxDisplayChoicesPerLine": 4
+				}
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1090091348309131264",
+			"title": "输出整数",
+			"content": "输出整数\n\nprintf 函数输出整数时不能使用 ▁▁▁▁▁ 格式限定符。",
+			"type": "MULTIPLE_CHOICE",
+			"author": "李祥",
+			"authorOrganization": {
+				"id": "135",
+				"name": "湖北经济学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "64",
+							"name": "基本数据类型与表达式",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "66",
+							"name": "输入输出格式化控制",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1568086661336858624",
+			"judgeConfig": {
+				"multipleChoiceJudgeConfig": {
+					"answer": "C"
+				}
+			},
+			"solution": "",
+			"description": "输出整数\n\nprintf 函数输出整数时不能使用 ▁▁▁▁▁ 格式限定符。",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1568086661408161812",
+			"label": "",
+			"score": 3,
+			"problemPoolIndex": 1,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"fillInTheBlankProblemConfig": {
+					"scores": [
+						1,
+						1,
+						1
+					],
+					"blankLength": 10,
+					"blanks": [
+						{
+							"index": 25,
+							"multipleLine": false,
+							"length": 1,
+							"choices": {},
+							"maxDisplayChoicesPerLine": 0
+						},
+						{
+							"index": 37,
+							"multipleLine": false,
+							"length": 1,
+							"choices": {},
+							"maxDisplayChoicesPerLine": 0
+						},
+						{
+							"index": 54,
+							"multipleLine": false,
+							"length": 10,
+							"choices": {},
+							"maxDisplayChoicesPerLine": 0
+						}
+					],
+					"choiceBlank": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "904937568070164480",
+			"title": "字符串 \"123\"",
+			"content": "字符串 \"123\"\n\n字符串 \"123\" 长度为  个字符，\n\n占用内存  个字节，\n\n这些字节的值依次是  。\n\n---\n\n注：请填十进制数，以西文逗号间隔，不留空格。数字 0 的 ASCII 码为 48。\n",
+			"type": "FILL_IN_THE_BLANK",
+			"author": "李祥",
+			"authorOrganization": {
+				"id": "135",
+				"name": "湖北经济学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "64",
+							"name": "基本数据类型与表达式",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "65",
+							"name": "表达式",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1568086661336858624",
+			"judgeConfig": {
+				"fillInTheBlankJudgeConfig": {
+					"answers": [
+						{
+							"availableAnswers": [
+								"3"
+							],
+							"groupId": 0
+						},
+						{
+							"availableAnswers": [
+								"4"
+							],
+							"groupId": 0
+						},
+						{
+							"availableAnswers": [
+								"49,50,51,0"
+							],
+							"groupId": 0
+						}
+					]
+				}
+			},
+			"solution": "",
+			"description": "字符串 \"123\"\n\n字符串 \"123\" 长度为  个字符，\n\n占用内存  个字节，\n\n这些字节的值依次是  。\n\n---\n\n注：请填十进制数，以西文逗号间隔，不留空格。数字 0 的 ASCII 码为 48。\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1568086661408161813",
+			"label": "",
+			"score": 2,
+			"problemPoolIndex": 2,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"fillInTheBlankProblemConfig": {
+					"scores": [
+						2
+					],
+					"blankLength": 1,
+					"blanks": [
+						{
+							"index": 11,
+							"multipleLine": false,
+							"length": 1,
+							"choices": {},
+							"maxDisplayChoicesPerLine": 0
+						}
+					],
+					"choiceBlank": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "991667420013817856",
+			"title": "表达式 !!2 的值为@",
+			"content": "表达式 !!2 的值为@@[](2) ",
+			"type": "FILL_IN_THE_BLANK",
+			"author": "徐镜春",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "64",
+							"name": "基本数据类型与表达式",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "65",
+							"name": "表达式",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1568086661336858624",
+			"judgeConfig": {
+				"fillInTheBlankJudgeConfig": {
+					"answers": [
+						{
+							"availableAnswers": [
+								"1"
+							],
+							"groupId": 0
+						}
+					]
+				}
+			},
+			"solution": "",
+			"description": "表达式 !!2 的值为 ",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1568086661408161814",
+			"label": "",
+			"score": 6,
+			"problemPoolIndex": 3,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"fillInTheBlankProblemConfig": {
+					"scores": [
+						2,
+						2,
+						2
+					],
+					"blankLength": 8,
+					"blanks": [
+						{
+							"index": 9,
+							"multipleLine": false,
+							"length": 3,
+							"choices": {},
+							"maxDisplayChoicesPerLine": 1
+						},
+						{
+							"index": 29,
+							"multipleLine": false,
+							"length": 3,
+							"choices": {},
+							"maxDisplayChoicesPerLine": 1
+						},
+						{
+							"index": 45,
+							"multipleLine": false,
+							"length": 8,
+							"choices": {},
+							"maxDisplayChoicesPerLine": 1
+						}
+					],
+					"choiceBlank": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1561918336450572288",
+			"title": "进制转换 - C/C++ 位操作",
+			"content": "0x0310 =  （十进制）\n0b01111010 =    （十进制）\n0x8F =   （二进制 ，不含0b）\n\n\n### 感觉不会？  那试着听听**免费的B站网课**\n[简洁的C和C++ - 重庆大学在线课程](https://www.bilibili.com/video/BV1it411d7zx/)\n[Python编程基础及应用 - 重庆大学在线课程](https://www.bilibili.com/video/BV1kt411R7uW/)\n![image.png](~/6e79c9e3-cb7f-486d-ab78-36b5a8f655c0.png)\n\n",
+			"type": "FILL_IN_THE_BLANK",
+			"author": "海洋饼干叔叔",
+			"authorOrganization": {
+				"id": "93",
+				"name": "重庆大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "64",
+							"name": "基本数据类型与表达式",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "65",
+							"name": "表达式",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1568086661336858624",
+			"judgeConfig": {
+				"fillInTheBlankJudgeConfig": {
+					"answers": [
+						{
+							"availableAnswers": [
+								"784 "
+							],
+							"groupId": 0
+						},
+						{
+							"availableAnswers": [
+								"122"
+							],
+							"groupId": 0
+						},
+						{
+							"availableAnswers": [
+								"10001111"
+							],
+							"groupId": 0
+						}
+					]
+				}
+			},
+			"solution": "",
+			"description": "0x0310 =  （十进制）\n0b01111010 =    （十进制）\n0x8F =   （二进制 ，不含0b）\n\n\n### 感觉不会？  那试着听听**免费的B站网课**\n[简洁的C和C++ - 重庆大学在线课程](https://www.bilibili.com/video/BV1it411d7zx/)\n[Python编程基础及应用 - 重庆大学在线课程](https://www.bilibili.com/video/BV1kt411R7uW/)\n![image.png](~/6e79c9e3-cb7f-486d-ab78-36b5a8f655c0.png)\n\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1568086661408161815",
+			"label": "",
+			"score": 2,
+			"problemPoolIndex": 4,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"fillInTheBlankProblemConfig": {
+					"scores": [
+						2
+					],
+					"blankLength": 10,
+					"blanks": [
+						{
+							"index": 11,
+							"multipleLine": false,
+							"length": 10,
+							"choices": {},
+							"maxDisplayChoicesPerLine": 0
+						}
+					],
+					"choiceBlank": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1176515207892537344",
+			"title": "下列程序段的输出结果是@。",
+			"content": "下列程序段的输出结果是@@[](2)。\n```\nint main(void)\n{   float  a;  \n    int  b=5;\n    a=5/2;  \n    b=b/2*a;\n    printf(\"%f,%d\\n\",a,b);\t\n    return 0;\t\t\n}\n```\n",
+			"type": "FILL_IN_THE_BLANK",
+			"author": "王俊玲",
+			"authorOrganization": {
+				"id": "46",
+				"name": "集美大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "64",
+							"name": "基本数据类型与表达式",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "65",
+							"name": "表达式",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1568086661336858624",
+			"judgeConfig": {
+				"fillInTheBlankJudgeConfig": {
+					"answers": [
+						{
+							"availableAnswers": [
+								"2.000000,4"
+							],
+							"groupId": 0
+						}
+					]
+				}
+			},
+			"solution": "",
+			"description": "下列程序段的输出结果是。\n```\nint main(void)\n{   float  a;  \n    int  b=5;\n    a=5/2;  \n    b=b/2*a;\n    printf(\"%f,%d\\n\",a,b);\t\n    return 0;\t\t\n}\n```\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1568086661408161816",
+			"label": "",
+			"score": 2,
+			"problemPoolIndex": 5,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"fillInTheBlankProblemConfig": {
+					"scores": [
+						2
+					],
+					"blankLength": 5,
+					"blanks": [
+						{
+							"index": 31,
+							"multipleLine": false,
+							"length": 5,
+							"choices": {},
+							"maxDisplayChoicesPerLine": 0
+						}
+					],
+					"choiceBlank": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "991674936495980544",
+			"title": "已知字符'a'的ASCII码为97，则下列语句的输出结果为  @ ",
+			"content": "已知字符'a'的ASCII码为97，则下列语句的输出结果为  @@[](2) \n\n```\nprintf(\"%c#%d#\", 98 , 'c' );\n```",
+			"type": "FILL_IN_THE_BLANK",
+			"author": "徐镜春",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "64",
+							"name": "基本数据类型与表达式",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "65",
+							"name": "表达式",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "64",
+							"name": "基本数据类型与表达式",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "66",
+							"name": "输入输出格式化控制",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1568086661336858624",
+			"judgeConfig": {
+				"fillInTheBlankJudgeConfig": {
+					"answers": [
+						{
+							"availableAnswers": [
+								"b#99#"
+							],
+							"groupId": 0
+						}
+					]
+				}
+			},
+			"solution": "",
+			"description": "已知字符'a'的ASCII码为97，则下列语句的输出结果为   \n\n```\nprintf(\"%c#%d#\", 98 , 'c' );\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1568086661408161817",
+			"label": "",
+			"score": 10,
+			"problemPoolIndex": 1,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "sample, 输入超过32",
+							"showHint": false,
+							"score": 6,
+							"updateAt": "2015-07-01T12:12:25Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "输入小于32",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2015-07-01T12:12:25Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "等于32",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2015-07-01T12:12:25Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "5",
+			"title": "计算摄氏温度",
+			"content": "给定一个华氏温度$$F$$，本题要求编写程序，计算对应的摄氏温度$$C$$。计算公式：$$C = 5\\times (F-32)/9$$。题目保证输入与输出均在整型范围内。\n\n### 输入格式:\n\n输入在一行中给出一个华氏温度。\n\n### 输出格式:\n\n在一行中按照格式“Celsius = C”输出对应的摄氏温度C的整数值。 \n\n### 输入样例:\n```in\n150\n```\n\n### 输出样例:\n```out\nCelsius = 65\n```",
+			"type": "PROGRAMMING",
+			"author": "陈建海",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "64",
+							"name": "基本数据类型与表达式",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "65",
+							"name": "表达式",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "64",
+							"name": "基本数据类型与表达式",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "66",
+							"name": "输入输出格式化控制",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 48,
+			"submitCount": 291,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1568086661336858624",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5993fa4493d1de004a0fcb8f",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": true,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "给定一个华氏温度$$F$$，本题要求编写程序，计算对应的摄氏温度$$C$$。计算公式：$$C = 5\\times (F-32)/9$$。题目保证输入与输出均在整型范围内。\n\n### 输入格式:\n\n输入在一行中给出一个华氏温度。\n\n### 输出格式:\n\n在一行中按照格式“Celsius = C”输出对应的摄氏温度C的整数值。 \n\n### 输入样例:\n```in\n150\n```\n\n### 输出样例:\n```out\nCelsius = 65\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1568086661408161818",
+			"label": "",
+			"score": 5,
+			"problemPoolIndex": 2,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "",
+							"showHint": false,
+							"score": 5,
+							"updateAt": "2015-08-02T15:36:23Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "477",
+			"title": "输出菱形图案",
+			"content": "本题要求编写程序，输出指定的由“A”组成的菱形图案。\n\n### 输入格式：\n\n本题无输入\n\n### 输出格式：\n\n按照下列格式输出由“A”组成的菱形图案。\n\n```\n  A\nA   A\n  A\n```",
+			"type": "PROGRAMMING",
+			"author": "张高燕",
+			"authorOrganization": {
+				"id": "2",
+				"name": "浙大城市学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "64",
+							"name": "基本数据类型与表达式",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "66",
+							"name": "输入输出格式化控制",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 48,
+			"submitCount": 175,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1568086661336858624",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5993fa4793d1de004a0fcc60",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "本题要求编写程序，输出指定的由“A”组成的菱形图案。\n\n### 输入格式：\n\n本题无输入\n\n### 输出格式：\n\n按照下列格式输出由“A”组成的菱形图案。\n\n```\n  A\nA   A\n  A\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1568086661408161819",
+			"label": "",
+			"score": 10,
+			"problemPoolIndex": 3,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "等价样例1",
+							"showHint": false,
+							"score": 4,
+							"updateAt": "2015-11-01T15:13:11Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "等价样例2",
+							"showHint": false,
+							"score": 4,
+							"updateAt": "2015-11-01T15:13:11Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "输入有0",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2015-11-01T15:13:11Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "输入上界",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2015-11-01T15:13:11Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "6 3\n",
+							"output": "6 + 3 = 9\n6 - 3 = 3\n6 * 3 = 18\n6 / 3 = 2\n"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1068",
+			"title": "算术入门之加减乘除",
+			"content": "对于输入的两个整数，按照要求输出其和差积商。\n\n### 输入格式:\n\n在一行内输入两个不超过100的非负整数a和b，中间以一个空格间隔，且保证b不为0。\n\n### 输出格式:\n\n共四行，格式是：\n```\n[a] + [b] = [a+b]\n[a] - [b] = [a-b]\n[a] * [b] = [a*b]\n[a] / [b] = [a/b]\n```\n 其中，带有方括号的内容（如`[a]`、`[b]`、`[a+b]`等）表示相应整数或运算结果的值，在输出时要用实际的值代替。\n\n 并且：如果a能够被b整除，那么a/b应输出为整数格式，否则a/b输出为带两位小数的格式。\n\n**提示：**注意表达式中的空格。\n\n### 输入样例1:\n```in\n6 3\n```\n\n### 输出样例1:\n```out\n6 + 3 = 9\n6 - 3 = 3\n6 * 3 = 18\n6 / 3 = 2\n```\n### 输入样例2:\n```\n8 6\n```\n\n### 输出样例2:\n```\n8 + 6 = 14\n8 - 6 = 2\n8 * 6 = 48\n8 / 6 = 1.33\n```",
+			"type": "PROGRAMMING",
+			"author": "周强",
+			"authorOrganization": {
+				"id": "19",
+				"name": "青岛大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "64",
+							"name": "基本数据类型与表达式",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "66",
+							"name": "输入输出格式化控制",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "67",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "68",
+							"name": "if-else",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 49,
+			"submitCount": 465,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1568086661336858624",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5993fa4c93d1de004a0fcd2d",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "对于输入的两个整数，按照要求输出其和差积商。\n\n### 输入格式:\n\n在一行内输入两个不超过100的非负整数a和b，中间以一个空格间隔，且保证b不为0。\n\n### 输出格式:\n\n共四行，格式是：\n```\n[a] + [b] = [a+b]\n[a] - [b] = [a-b]\n[a] * [b] = [a*b]\n[a] / [b] = [a/b]\n```\n 其中，带有方括号的内容（如`[a]`、`[b]`、`[a+b]`等）表示相应整数或运算结果的值，在输出时要用实际的值代替。\n\n 并且：如果a能够被b整除，那么a/b应输出为整数格式，否则a/b输出为带两位小数的格式。\n\n**提示：**注意表达式中的空格。\n\n### 输入样例1:\n```in\n6 3\n```\n\n### 输出样例1:\n```out\n6 + 3 = 9\n6 - 3 = 3\n6 * 3 = 18\n6 / 3 = 2\n```\n### 输入样例2:\n```\n8 6\n```\n\n### 输出样例2:\n```\n8 + 6 = 14\n8 - 6 = 2\n8 * 6 = 48\n8 / 6 = 1.33\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1568086661408161820",
+			"label": "",
+			"score": 5,
+			"problemPoolIndex": 4,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "",
+							"showHint": false,
+							"score": 5,
+							"updateAt": "2000-01-01T00:00:00Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "无\n",
+							"output": "Hello World!\n"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "10574",
+			"title": "Hello World",
+			"content": "这道超级简单的题目没有任何输入。\n\n你只需要在一行中输出著名短句“Hello World!”就可以了。\n\n### 输入样例：\n```in\n无\n```\n\n### 输出样例：\n```out\nHello World!\n```\n",
+			"type": "PROGRAMMING",
+			"author": "陈越",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "64",
+							"name": "基本数据类型与表达式",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "66",
+							"name": "输入输出格式化控制",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 48,
+			"submitCount": 91,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1568086661336858624",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5af50fc18c3638000a2d9326",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "这道超级简单的题目没有任何输入。\n\n你只需要在一行中输出著名短句“Hello World!”就可以了。\n\n### 输入样例：\n```in\n无\n```\n\n### 输出样例：\n```out\nHello World!\n```\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1568086661408161821",
+			"label": "",
+			"score": 5,
+			"problemPoolIndex": 5,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "",
+							"showHint": false,
+							"score": 5,
+							"updateAt": "2000-01-01T00:00:00Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "无\n",
+							"output": "This is a simple problem.\n"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "10598",
+			"title": "简单题",
+			"content": "这次真的没骗你 —— 这道超级简单的题目没有任何输入。\n\n你只需要在一行中输出事实：`This is a simple problem.` 就可以了。\n\n### 输入样例：\n```in\n无\n```\n\n### 输出样例：\n```out\nThis is a simple problem.\n```\n",
+			"type": "PROGRAMMING",
+			"author": "陈越",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "64",
+							"name": "基本数据类型与表达式",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "66",
+							"name": "输入输出格式化控制",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 44,
+			"submitCount": 96,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1568086661336858624",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5af50fd48c3638000a2d933e",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "这次真的没骗你 —— 这道超级简单的题目没有任何输入。\n\n你只需要在一行中输出事实：`This is a simple problem.` 就可以了。\n\n### 输入样例：\n```in\n无\n```\n\n### 输出样例：\n```out\nThis is a simple problem.\n```\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		}
+	]
