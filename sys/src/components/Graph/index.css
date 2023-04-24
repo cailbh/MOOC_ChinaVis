@@ -139,3 +139,25 @@
   top: 57px;
   right: 473px;
 }
+
+.chartTooltip {
+  position: absolute;
+  width: 200px;
+  height: auto;
+  /* padding-left: 10px;
+  padding-top: -10px;
+  padding-bottom: -10px; */
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 5px;
+  /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); */
+  /* pointer-events: none; */
+}
+.chartTooltip.hidden {
+  display: none;
+}
+.chartTooltip p {
+  margin: 0;
+  font-size: 14px;
+  text-align: left;
+}

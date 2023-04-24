@@ -7,6 +7,8 @@
       scrollbar-width: none !important;
     }
   }
+  /* .element::-webkit-scrollbar { width: 0 !important }
+  .element { overflow: -moz-scrollbars-none; } */
   #root {
     scrollbar-width: none;
     height: var(--heightStyle);
@@ -91,10 +93,22 @@
     width: 530px;
     height: 721px;
   }
+  #procPanel{
+    scrollbar-width: none;
+    float: left;
+    width: 22%;
+    height: 35%;
+  }
+  #netPPanel{
+    scrollbar-width: none;
+    float: left;
+    width: 22%;
+    height: 35%;
+  }
   #overviewPanel{
     scrollbar-width: none;
     float: left;
-    width: 25%;
+    width: 22%;
     height: 50%;
   }
   #graphContainer{
@@ -102,7 +116,7 @@
     scrollbar-width: none;
     float: left;
     width: 61%;
-    height: 50%;
+    height: 100%;
     /* background-color: #c32; */
   }
   /* .panel{

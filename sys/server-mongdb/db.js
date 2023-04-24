@@ -1,7 +1,7 @@
 // Schema、Model、Entity或者Documents的关系:Schema生成Model，Model创造Entity，Model和Entity都可对数据库操作造成影响，但Model比Entity更具操作性。
 const mongoose = require('mongoose');
 // 连接数据库 
-mongoose.connect('mongodb://127.0.0.1:27017/MOOCProblemVis');
+mongoose.connect('mongodb://127.0.0.1:27017/PTADATA');
 
 // 为这次连接绑定事件
 const db = mongoose.connection;
@@ -22,6 +22,30 @@ const problemSchema = mongoose.Schema({
     exercise_id: String,
     lanuage: String,
 });
+const problemsSchema = mongoose.Schema({
+    id: String,
+    title: String,
+    content: String,
+    option: Object,
+    answer: String,
+    score: Number,
+    type: Number,
+    typetext: String,
+    location: String,
+    context_id: Array,
+    exercise_id: String,
+    lanuage: String,
+});
+const conceptsSchema = mongoose.Schema({
+    id: String,
+    name: String,
+    totalAttempts: Number,
+    acceptedAttempts: Number,
+    tscoringRate    : Number,
+    accuracy: Number,
+    proCount: Number,
+    acceptedRate: Number,
+});
 const userProblemSchema = mongoose.Schema({
     log_id: String,
     problem_id: String,
@@ -33,6 +57,11 @@ const userProblemSchema = mongoose.Schema({
 });
 
 const conceptProblemSchema = mongoose.Schema({
+    concept_name: String,
+    problem: String,
+    conceptId:Number
+})
+const problemConceptSchema = mongoose.Schema({
     concept: String,
     problem: String
 })
@@ -42,14 +71,23 @@ const conceptSchema = mongoose.Schema({
     context:Array
 })
 
-
+const submissionsSchema = mongoose.Schema({
+    id: String,
+})
+const studentSchema = mongoose.Schema({
+    id: String,
+})
 /************** 定义模型Model **************/
 const Models = {
    
-    Concept: mongoose.model('concept', conceptSchema, 'filterDS_concept'),
-    UserProblem: mongoose.model('userProblem', userProblemSchema, 'filterDS_user_problem'),
-    ConceptProblem: mongoose.model('conceptProblem', conceptProblemSchema, 'filterDS_concept_problem'),
-    Problem:mongoose.model('problem', problemSchema, 'filterDS_problem'),
+    Concept: mongoose.model('concept', conceptsSchema, 'ent_concept'),
+    // UserProblem: mongoose.model('userProblem', userProblemSchema, 'filterDS_user_problem'),
+    // ConceptProblem: mongoose.model('conceptProblem', conceptProblemSchema, 'filterDS_concept_problem'),
+    ProblemConcept: mongoose.model('problemConcept', problemConceptSchema, 'problem_concept'),
+    // Problem:mongoose.model('problem', problemsSchema, 'problems'),
+    Problem:mongoose.model('problem', problemsSchema, 'ent_problem'),
+    Student:mongoose.model('student', studentSchema, 'ent_student'),
+    Submission:mongoose.model('submission', submissionsSchema, 'submissions'),
 }
 
 module.exports = Models;

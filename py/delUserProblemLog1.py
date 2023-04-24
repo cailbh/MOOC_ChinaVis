@@ -19,8 +19,7 @@ ent_user.delete_many({})
 ent_concept.delete_many({})
 
 entProblem = []
-entStudent = {}
-entConcept = []
+entStudent = []
 for p in collect_problem.find({}):
     p['totalAttempts'] = 0
     p['acceptedAttempts'] = 0
@@ -29,20 +28,9 @@ for p in collect_problem.find({}):
     p['conCount'] = 0
     p['log'] = {}
     entProblem.append(p)
-
-for c in collect_concept.find({}):
-    c['totalAttempts'] = 0
-    c['acceptedAttempts'] = 0
-    c['scoringRate'] = 0
-    c['accuracy'] = 0
-    c['proCount'] = 0
-    entConcept.append(c)
-
 for l in collect_userSubmissions.find({}):
     print(l)
     userId = l['user']['user']['id']
-    if userId not in entStudent:
-        entStudent[userId] = {}
     jageProblemContents = l['judgeResponseContents']
     submitAt = l['submitAt']
     for i in jageProblemContents:
@@ -50,17 +38,13 @@ for l in collect_userSubmissions.find({}):
         score = i['score']
         status = i['status']
 
-        if problemId not in entStudent[userId]:
-            entStudent[userId][problemId] = {'log': [i], 'best': i}
-        entStudent[userId][problemId]['log'].append(i)
-        if entStudent[userId][problemId]['best']['score'] < score:
-            entStudent[userId][problemId]['best'] = i
         for p in entProblem:
             if p['id'] == problemId:
                 p['totalAttempts'] += 1
                 if status == 'ACCEPTED':
                     p['acceptedAttempts'] += 1
                 p['totalScore'] += score / p['score']
+                print(p['log'].keys())
                 if userId not in p['log']:
                     p['log'][userId] = [score, 1]
                 else:
@@ -68,16 +52,13 @@ for l in collect_userSubmissions.find({}):
                     if p['log'][userId][0] < score:
                         p['log'][userId] = [score, p['log'][userId][1]]
 
-pro_con_list = []
+print(entProblem)
+
 for r in collect_problem_concept.find({}):
     problemId = r['problem']
-    conceptId = r['contentId']
-    pro_con_list.append(r)
     for p in entProblem:
         if p['id'] == problemId:
             p['conCount'] += 1
-
-    # c['proCount'] += 1
 
 for ep in entProblem:
     ep['scoringRate'] = ep['totalScore'] / ep['totalAttempts']
@@ -86,29 +67,11 @@ for ep in entProblem:
     cur = 0
     for l in ep['log']:
         num += 1
+        print(l)
         if ep['log'][l][0] == ep['score']:
             cur += 1
+    print(cur)
     if cur != 0:
         ep['accuracy'] = cur / num
 
-for c in entConcept:
-    i = 0
-    for r in pro_con_list:
-        if str(r['contentId']) == str(c['id']):
-            i += 1
-            problemId = r['problem']
-            for p in entProblem:
-                if p['id'] == str(problemId):
-                    c['proCount'] += 1
-                    c['totalAttempts'] += p['totalAttempts']
-                    c['acceptedAttempts'] += p['acceptedAttempts']
-                    c['scoringRate'] += p['scoringRate']
-                    c['accuracy'] += p['accuracy']
-    print(i, c)
-    c['acceptedRate'] = c['acceptedAttempts'] / c['totalAttempts']
-    c['scoringRate'] = c['scoringRate'] / i
-    c['accuracy'] = c['accuracy'] / i
-
 ent_problem.insert_many(entProblem)
-ent_concept.insert_many(entConcept)
-ent_user.insert_many([entStudent])

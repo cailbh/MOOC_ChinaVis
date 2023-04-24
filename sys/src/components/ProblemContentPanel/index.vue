@@ -2,68 +2,32 @@
 <!-- eslint-disable no-unused-vars -->
 
 <template>
-  <div class="editPanel">
-    <div class="panelHead">SupportPanel</div>
-    <div id="editPanelDiv" class="panelBody" ref="editPanelDiv">
+  <div class="procPanel">
+    <div class="panelHead"></div>
+      <!-- //SupportPanel</div> -->
+    <div id="procPanelDiv" class="panelBody" ref="procPanelDiv">
       <div id="topicLine" ref="topicLine"></div>
-      <!-- <div id="rootTree" ref="rootTree">
-        <div id="toolsButs">
-          <el-collapse accordion>
-            <el-collapse-item>
-              <template slot="title">
-                <img class="iconUpload" :src="toolsButsUrl">
-              </template>
-              <div id="addNodeSonDiv" class="toolsBut" @click="addNodeSonClk">
-                <img class="iconUpload" :src="addNodeSonUrl">
-              </div>
-              <div id="addNodePerDiv" class="toolsBut" @click="addNodePerClk">
-                <img class="iconUpload" :src="addNodePerUrl">
-              </div>
-              <div id="addLinkBasicDiv" class="toolsBut" @click="addLinkBasicClk">
-                <img class="iconUpload" :src="addLinkBasicUrl">
-              </div>
-            </el-collapse-item>
-          </el-collapse>
-        </div>
-      </div> -->
-      <div id="editData" ref="editData">
-        <el-table class="editTable" :data="tableData" style="width: 100%">
-          <el-table-column prop="key" label="" width="260">
-          </el-table-column>
-          <el-table-column prop="value" label="" width="260">
+      
+      <el-table :data="tableData" style="width: 100%">
+          <!-- <el-table-column prop="key" label="" width="190">
+          </el-table-column> -->
+          <el-table-column prop="value" label="" width="480">
             <template slot-scope="scope">
-              <div v-if="scope.row.key == 'type'">
-                <el-radio-group v-model="typeRadio" size="small" @change="selectType">
-                  <el-radio-button label="cell State"></el-radio-button>
-                  <el-radio-button label="hidden State"></el-radio-button>
-                </el-radio-group>
+              <div v-if="scope.row.key == 'Title'">
+                <div style="float: left;height: auto;">
+                {{ scope.row.value }}</div>
+
               </div>
-              <div v-if="scope.row.key == 'lecture style'">
-                <div class="block">
-                  <el-slider v-model="lectureStyleValue" range>
-                  </el-slider>
-                </div>
-              </div>
-              <div v-if="scope.row.key == 'name'">
-                <el-input size="small" :placeholder="scope.row.value" v-model="nameinput" clearable>
-                </el-input>
-              </div>
-              <div :class="scope.row.key + ' tableCell'" :height="scope.row.value === '' ? '10' : '0'"
-                disable-transitions>
-                <!-- {{ scope.row.value }} -->
+              <div v-if="scope.row.key == 'Content'">
+                <div style="float: left;height: auto;">
+                {{ scope.row.value }}</div>
               </div>
             </template>
           </el-table-column>
         </el-table>
-        <div id="cancelDiv" @click="cancelClk">
-          <img class="iconUpload" :src="cancelUrl">
-        </div>
-        <div id="confirmDiv" @click="confirmClk">
-          <img class="iconUpload" :src="confirmUrl">
-        </div>
-      </div>
+      <div id="procData" ref="procData"></div>
     </div>
-  </div>
+    </div>
 </template>
   
 <script>
@@ -71,8 +35,8 @@ import * as d3 from 'd3'
 import { onMounted, ref } from 'vue';
 import filenames from "@/utils/fileName";
 import domtoimage from 'dom-to-image';
-import TestJson from "@/assets/json/case2_fin.json";
-import TestRelJson from "@/assets/json/case2_fin_rel.json";
+// import TestJson from "@/assets/json/case2_fin.json";
+// import TestRelJson from "@/assets/json/case2_fin_rel.json";
 import tools from "@/utils/tools.js";
 import { tree } from 'd3';
 import { SourceNode } from 'source-list-map';
@@ -82,30 +46,29 @@ export default {
   data() {
     return {
       typeRadio: "cell State",
-      data: TestJson,
-      relData: TestRelJson,
+      // data: TestJson,
+      // relData: TestRelJson,
       treeData: null,
       toolsState: '',
-      confirmUrl: require("@/assets/img/confirm.svg"),
-      cancelUrl: require("@/assets/img/cancel.svg"),
-      toolsButsUrl: require("@/assets/img/toolsButs.png"),
-      addNodeSonUrl: require("@/assets/img/addNode1.png"),
-      addNodePerUrl: require("@/assets/img/addNode2.png"),
-      addLinkBasicUrl: require("@/assets/img/addLink.png"),
+      problemsData:[],
+      // confirmUrl: require("@/assets/img/confirm.svg"),
+      // cancelUrl: require("@/assets/img/cancel.svg"),
+      // toolsButsUrl: require("@/assets/img/toolsButs.png"),
+      // addNodeSonUrl: require("@/assets/img/addNode1.png"),
+      // addNodePerUrl: require("@/assets/img/addNode2.png"),
+      // addLinkBasicUrl: require("@/assets/img/addLink.png"),
       // nameinput: "Random Variables",
       nameinput: "Fundamental Graphs",
       // nameinput: "Trees",
       lectureStyleValue: [0, 80],
       tableData: [{
-        key: 'type',
+        key: 'Title',
         value: '',
       }, {
-        key: 'name',
+        key: 'Content',
         value: '',
-      }, {
-        key: 'lecture style',
-        value: '',
-      }],
+      }
+      ],
       curEntId: "",
       insertEntId: "",
       insertSourceEntId: "-1",
@@ -193,7 +156,7 @@ export default {
     lectureStyleValue(val){
       console.log(val);
       let mid = (val[0]+val[1])/2;
-      d3.select("#editData .el-slider__runway")
+      d3.select("#procData .el-slider__runway")
       .attr("style","background: linear-gradient(90deg, #ff9c9c "+mid+"%,#6f8be0 "+mid+"%) !important")
     },
     type(val) {
@@ -202,35 +165,6 @@ export default {
     //   console.log(val);
     // },
     curEntId(curEntId) {
-      const _this = this;
-      let data = _this.data;
-      let curEnt = data.find(function (d) { return d['id'] == curEntId; });
-      if (curEnt['type'] == '1') {
-        _this.typeRadio = "hidden State";
-      }
-      else {
-        _this.typeRadio = "cell State";
-      }
-      _this.nameinput = curEnt['name'];
-      let duration = tools.time2seconds(curEnt['time'][1]) - tools.time2seconds(curEnt['time'][0]);
-      let typeDurScale_linear = d3.scaleLinear([0, duration], [0, 100]);
-      let typeData = curEnt["attribute"]["expressions"];
-      let typeDur = 0;
-      let styleValue = [];
-      for (let i in typeData) {
-        // let color = typeColor[i];
-        let typeDurition = typeData[i];
-        let totalTypeSeconds = 0;
-        for (let d in typeDurition) {
-          totalTypeSeconds += (tools.time2seconds(typeDurition[d][1]) - tools.time2seconds(typeDurition[d][0]))
-        }
-        typeDur += totalTypeSeconds;
-        styleValue.push(typeDurScale_linear(typeDur))
-      }
-
-      _this.lectureStyleValue = styleValue
-      _this.drawEntity(curEnt);
-      _this.drawSonLine(curEnt);
     }
   },
   methods: {
@@ -273,7 +207,7 @@ export default {
       typeData['3'].push([t2, curEnt['time'][1]]);
       curEnt["attribute"]["expressions"] = typeData;
 
-      let entRects = d3.selectAll(".editEnt").nodes();
+      let entRects = d3.selectAll(".procEnt").nodes();
       console.log(entRects)
       let totalSonDuration = _this.totalSonDuration;
       let wid = _this.entLineWidth;
@@ -435,426 +369,14 @@ export default {
     addLinkBasicClk() {
       this.toolsState = 'addLinkBasic';
     },
-    drawtopicLine() {
+    drawprocData() {
       const _this = this;
       const margin = _this.margin;
-      const color = _this.mcolor;
-
-      let width = this.$refs.topicLine.offsetWidth - margin.left - margin.right;
-      let height = this.$refs.topicLine.offsetHeight - margin.top - margin.bottom;
-      _this.topicLineWidth = width;
-      _this.topicLineHeight = height;
-      d3.select("#topicLine").select("svg").remove();
-      var svg = d3.select("#topicLine").append("svg")
-        .attr("id", "topicLineSvg")
-        .attr("width", width)
-        .attr("height", height);
-
-      let groups = svg.append("g").attr("id", "groups").attr("width", width).attr("height", height);
-      let rootEntG = groups.append("g").attr("id", "rootEntG").attr("width", width).attr("height", height);
-      let oriLineG = groups.append("g").attr("id", "oriLineG").attr("width", width).attr("height", height);
-
-      oriLineG.append("line")
-        .attr("x1", 0)
-        .attr("y1", height / 2)
-        .attr("x2", width)
-        .attr("y2", height / 2)
-        .attr("stroke", "rgb(200,200,200)")
-        .attr("stroke-width", "5px");
-
-      let cxLinear = d3.scaleLinear([0, _this.videoDuration], [margin.left, width])
-
-      let data = tools.deepClone(_this.data);
-      let DivisionDataList = [];
-      let colorIndex = 0;
-      for (let i = 0; i < data.length; i++) {
-        if (data[i]['layout'] == '0') {
-          if (DivisionDataList.length != 0) {
-            DivisionDataList[DivisionDataList.length - 1]['nextId'] = data[i]['id'];
-            data[i]['preId'] = DivisionDataList[DivisionDataList.length - 1]['id'];
-          }
-          else { data[i]['preId'] = "-1"; }
-          DivisionDataList.push(data[i]);
-          let time = tools.time2seconds(data[i]['time'][0]);
-          let endTime = tools.time2seconds(data[i]['time'][0]) + data[i]['totalDuration'];
-          let cx = cxLinear(time);
-          let endx = cxLinear(endTime);
-          _this.colorMap[data[i]['id']] = colorIndex % color.length;
-          _this.drawRect(oriLineG, cx - 5, height / 2 - 5, 10, 10, height / 2, "division_" + data[i]["id"], "rootdivisionLine", "rgb(250,250,250)", 0, '', 1)
-          _this.drawRect(rootEntG, cx, margin.top, endx - cx, height - margin.top - margin.bottom, height / 2, "rootEnt_" + data[i]['id'], "rootEnt", color[_this.colorMap[data[i]['id']]], 5, "rgb(150,150,150)", 0.1)
-          colorIndex++;
-        }
-      }
-      DivisionDataList[DivisionDataList.length - 1]['nextId'] = "-1";
-      _this.rootDivisionDataList = DivisionDataList;
-
-      // oriLineG.append("ellipse")
-      // .attr("cx",50)
-      // .attr("cy",height/2)
-      // .attr("rx",50)
-      // .attr("ry",height/2)
-      // .attr("fill",color[3])
-      // .attr("stroke", color[3])
-
-      // .attr("stroke-width", "5px");
-      // console.log(data)
-      // this.$bus.$emit("getData",data)
-    },
-    drawRect(svg, x, y, w, h, rx, idName, className, fill, strokeWidth, stroke, opacity) {
-      const _this = this;
-      svg.append("rect")
-        .attr("x", x)
-        .attr("y", y)
-        .attr("id", idName)
-        .attr("class", className)
-        .attr("opacity", opacity)
-        .attr("width", w)
-        .attr("height", h)
-        .attr("fill", fill)
-        .attr("rx", rx)
-        .attr("stroke", stroke)//"rgb(150,150,150)")
-        .attr("stroke-width", strokeWidth)
-        .on("mousedown", function (d) {
-          _this.selectRectId = idName.split("_")[1] //d3.select(this).attr("id");
-          if (d3.select(this).attr("class") == "rootdivisionLine") {
-            _this.selectRectClass = "rootEnt";
-            _this.moveLineWidth = _this.topicLineWidth;
-            _this.DivisionDataList = _this.rootDivisionDataList;
-            // document.getElementById('topicLineSvg').addEventListener("mousemove", _this.moveRect); // 监听点击事件
-          }
-          else if (d3.select(this).attr("class") == "entdivisionLine") {
-            _this.selectRectClass = "editEnt";
-            _this.moveLineWidth = _this.entLineWidth;
-            _this.DivisionDataList = _this.entDivisionDataList;
-            document.getElementById('editEnt').addEventListener("mousemove", _this.moveRect); // 监听点击事件
-          }
-        })
-        .on("mouseup", function (d) {
-          // document.getElementById('topicLineSvg').removeEventListener("mousemove", _this.moveRect); // 
-          document.getElementById('editEnt').removeEventListener("mousemove", _this.moveRect); // 
-          // _this.$bus.$emit("graphData", _this.data);
-
-          _this.$bus.$emit("treeData", _this.treeData);
-        })
-    },
-    moveRect(e) {
-      const _this = this;
-      let selectRect = _this.DivisionDataList.find(function (d) { return d['id'] == _this.selectRectId; })//右边的rect
-      let preId = selectRect['preId'];//左边的rect
-      let nextId = selectRect['nextId'];//右边的右边rect
-      let rectClass = _this.selectRectClass;
-      let prex = 0;
-      if (preId != '-1') {
-        prex = d3.select("#" + rectClass + "_" + preId).attr("x")
-        d3.select("#" + rectClass + "_" + preId)
-          .attr("width", function (d) {
-            return e.offsetX - prex;
-          })
-      }
-      let nextX = 100;
-      if (nextId == '-1') {
-        nextX = _this.moveLineWidth;
-      }
-      else {
-        nextX = d3.select("#" + rectClass + "_" + nextId).attr("x");
-      }
-      d3.select("#" + rectClass + "_" + _this.selectRectId)
-        .attr("width", function (d) {
-          return nextX - e.offsetX;
-        })
-        .attr("x", e.offsetX)
-      d3.select("#division_" + _this.selectRectId)
-        .attr("x", e.offsetX - 5)
-
-      if ((e.offsetX > (_this.topicLineWidth)) || (e.offsetX < (0)) || (e.offsetY > (_this.topicLineHeight)) || (e.offsetY < (0))) {
-        // document.getElementById('topicLineSvg').removeEventListener("mousemove", _this.moveRect); // 
-      }
-    },
-    getTreeData(){
-      const _this = this;
-      let oriData = tools.deepClone(this.data);
-      var data = {
-        "name": "root",
-        "children": []
-      };
-
-      for (let i = oriData.length - 1; i >= 0; i--) {
-        let sons = oriData[i]['son'];
-        oriData[i]['children'] = [];
-        if (sons.length > 0) {
-          for (let s = 0; s < sons.length; s++) {
-            oriData[i]['children'].push(oriData.find(function (d) { return d['id'] == sons[s] }))
-          }
-        }
-      }
-      let c = 0 ;
-      for (let i = 0; i < oriData.length; i++) {
-
-        let layout = oriData[i]['layout'];
-        if (layout == '0') {
-          data['children'].push(oriData[i]);
-          if(oriData[i]['name']!="Test"){
-            _this.rootColorMap[oriData[i]['id']] = _this.mcolor[c];
-            c++;
-          }
-          else{
-            _this.rootColorMap[oriData[i]['id']] ="rgb(250, 199, 88)";
-          }
-        }
-      }
-
-      this.treeData = data;
-      console.log(_this.rootColorMap)
-      this.$bus.$emit("treeData", [data,_this.rootColorMap]);
-    },
-    drawrootTree() {
-      const _this = this;
-      const margin = _this.margin;
-      let width = this.$refs.rootTree.offsetWidth - margin.left - margin.right;
-      let height = this.$refs.rootTree.offsetHeight - margin.top - margin.bottom;
-
-      let color = _this.mcolor;
-      let colorMap = _this.colorMap;
-      // var tree = d3.tree()
-      //   .size([width, height - 200]);
-      d3.select("#rootTree").select("svg").remove();
-      var svg = d3.select("#rootTree").append("svg")
-        .attr("width", width)
-        .attr("height", height)
-
-      let transY = height;
-      let treeGTransformX = _this.treeGTransformX;
-      let treeGTransformY = _this.treeGTransformY;
-      let treeGTransformK = _this.treeGTransformK;
-      let groups = svg.append("g")
-        .attr("id", "editrootTreeg")
-        .attr("width", width)
-        .attr("height", height)
-        .attr("transform",  "translate("+treeGTransformX+',' +treeGTransformY + ") scale("+treeGTransformK+")");
-
-        let stx = 0;
-        let sty = 0;
-        let stk =1;
-      var graphZoom = d3.zoom()
-        .scaleExtent([0, 10])
-        .on("start", (e) => {
-          sty = e.transform.y;
-          stx = e.transform.x;
-          stk = e.transform.k;
-        })
-        .on('zoom', (e) => {
-          treeGTransformX = _this.treeGTransformX + e.transform.x - stx;
-          treeGTransformY = _this.treeGTransformY + e.transform.y - sty;
-          treeGTransformK = _this.treeGTransformK + e.transform.k - stk;
-          groups.attr('transform', 'translate(' + (treeGTransformX) + ',' + (treeGTransformY) + ') scale(' + (treeGTransformK) + ')')
-        })
-        .on('end', (e) => {
-          _this.treeGTransformX = treeGTransformX;
-          _this.treeGTransformY = treeGTransformY;
-          _this.treeGTransformK = treeGTransformK;
-          groups.attr('transform', 'translate(' + (treeGTransformX) + ',' + (treeGTransformY) + ') scale(' + (treeGTransformK) + ')')
-        });
-      svg.call(graphZoom)
-
-      const gLink = groups.append("g")
-        .attr("fill", "none")
-        .attr("stroke", "#555")
-        .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
-        .attr("stroke-opacity", 0.4)
-        .attr("stroke-width", 1.5);
-
-      const gNode = groups.append("g")
-        .attr("cursor", "pointer")
-        .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
-        .attr("pointer-events", "all")
-
-      let data = _this.treeData;
-      let diagonal = d3.linkHorizontal().x(d => d.y).y(d => d.x);
-      let tree = d3.tree().nodeSize([50, 150]);//.size([(height - margin.left - margin.right) * 2, (width - margin.left - margin.right)-10])
-      const root = d3.hierarchy(data);
-      const nodes = root.descendants().reverse();
-      const links = root.links();
-      tree(root);
-      console.log(nodes)
-      const node = gNode.selectAll("g")
-        .data(nodes, d => d.id);
-
-      const nodeEnter = node.data(nodes).enter().append("g")
-        .attr("transform", (d) => {
-          return `translate(${d.y},${d.x})`
-        })
-        .on("click", (event, d) => {
-          d.children = d.children ? null : d._children;
-          // update(d);
-        })
-
-      nodeEnter.append("circle")
-        .attr("r", 10)
-        .attr("id", function (d) {
-          console.log(d)
-          if(d.data.name == 'root')
-            return "treeNode_-1";
-          return "treeNode_" + d.data.id;
-        })
-        .attr("fill", function (d) {
-          if (d.data.name == 'root') {
-            return 'grey'
-          }
-          else {
-            let parent = d.parent;
-            let rootd = null;
-            while (parent.data.name != 'root') {
-              rootd = parent;
-              if (parent.parent.data.name == 'root') {
-                return color[colorMap[parent.data.id]]
-              }
-              parent = parent.parent;
-            }
-            return color[colorMap[d.data.id]]
-          }
-
-        })
-        .attr("stroke", "rgb(100,100,100)")
-        // .attr("fill", d => d._children ? "#555" : "#999")
-        .attr("stroke-width", 1)
-        .on("mouseover", function () {
-          d3.select(this).attr("r", 15);
-
-        })
-        .on("mouseleave", function () {
-          d3.select(this).attr("r", 10)
-        })
-        .on("mousedown", function () {
-          let nodeIdN = d3.select(this).attr("id");
-          let nodeId = nodeIdN.split("_")[1];
-          _this.curEntId = nodeId;
-          if(nodeId == '-1'){
-            _this.insertEntId = parseInt(nodeId) + 1 + '';
-          _this.click_node();
-            return
-          }
-          let curData = _this.data.find(function (d) { return d['id'] == nodeId; });
-          if (_this.toolsState == 'addNodeSon') {
-            _this.insertEntId = parseInt(nodeId) + 1 + '';
-          }
-          else if (_this.toolsState == 'addLinkBasic') {
-            if(_this.insertSourceEntId =="-1")
-              _this.insertSourceEntId = parseInt(nodeId) + '';
-            else{
-              _this.insertTargetEntId = parseInt(nodeId) + '';
-            }
-          }
-          if ( (curData['son'].length > 0)) {
-            _this.insertEntId = parseInt(curData['son'][0]) + 1 +'';
-          };
-          _this.click_node();
-        })
-
-      // nodeEnter.append("text")
-      //   .attr("dy", "0.31em")
-      //   .attr("x", d => d._children ? -6 : 6)
-      //   .attr("text-anchor", d => d._children ? "end" : "start")
-      //   .text(d => d.data.name)
-      //   .clone(true).lower()
-      //   .attr("stroke-linejoin", "round")
-      //   .attr("stroke-width", 3)
-      //   .attr("stroke", "white");
-
-      const link = gLink.selectAll("path")
-        .data(links, d => d.target.id);
-
-      const linkEnter = link.enter().append("path")
-        .attr("d", d => {
-          const o = { x: d.source.x, y: d.source.y };
-          const p = { x: d.target.x, y: d.target.y }
-          return diagonal({ source: o, target: p });
-        })
-        .attr("stroke", "rgb(100,100,100)")
-        .attr("stroke-width", 5)
-      _this.drawRootTreeRel(gLink, nodes);
-    },
-    drawRootTreeRel(svg, nodeData) {
-
-      const _this = this;
-      let relData = _this.relData;
-      let oData = _this.drawEntityLocation;
-      console.log(nodeData)
-      let margin = _this.margin;
-      let height = svg.attr('height');
-      // let basicRel = relData['similarityRel'];
-      let basicRel = relData['basicRel'];
-      for (let r = 0; r < basicRel.length; r++) {
-
-        let sourceId = basicRel[r][0];
-        let targetId = basicRel[r][1];
-        let idN = "basicRel" + sourceId + "_" + targetId;
-        let classN = "basicRel source" + sourceId + " target" + targetId;
-        let sourceNode = nodeData.find(function (d) { return d['data']['id'] == sourceId });
-        let targetNode = nodeData.find(function (d) { return d['data']['id'] == targetId });
-        if (sourceNode['x'] > targetNode['x']) {
-          let tp = sourceNode;
-          sourceNode = targetNode;
-          targetNode = tp;
-        }
-        const path = d3.path();
-
-        let startX = sourceNode['y'];
-        let endX = targetNode['y'];
-        let startY = sourceNode['x'];
-        let endY = targetNode['x'];
-        let midX = (startX + endX) / 2;
-        let midY = (startY + endY) / 2;
-        let cnx = (startX > endX) ? (startX + 10 + 0.25 * (endY - startY)) : (endX + 10 + 0.25 * (endY - startY));
-        path.moveTo(startX, startY);
-        path.bezierCurveTo(cnx, midY, cnx, midY, endX, endY);
-        _this.drawTimeLine(svg, path, "rgb(200,200,200)", 5, "9,9", idN, classN);
-
-
-      };
-      let similarityRel = relData['similarityRel'];
-      // let basicRel = relData['basicRel'];
-      for (let r = 0; r < similarityRel.length; r++) {
-
-        let sourceId = similarityRel[r][0];
-        let targetId = similarityRel[r][1];
-
-        let idN = "similarityRel" + sourceId + "_" + targetId;
-
-        let classN = "similarityRel source" + sourceId + " target" + targetId;
-        let sourceNode = nodeData.find(function (d) { return d['data']['id'] == sourceId });
-        let targetNode = nodeData.find(function (d) { return d['data']['id'] == targetId });
-        if (sourceNode['x'] > targetNode['x']) {
-          let tp = sourceNode;
-          sourceNode = targetNode;
-          targetNode = tp;
-        }
-        const path = d3.path();
-
-        let startX = sourceNode['y'];
-        let endX = targetNode['y'];
-        let startY = sourceNode['x'];
-        let endY = targetNode['x'];
-        let midX = (startX + endX) / 2;
-        let midY = (startY + endY) / 2;
-        let cnx = (startX > endX) ? (startX + 100 + 0.5 * (endY - startY)) : (endX + 100 + 0.5 * (endY - startY));
-
-        path.moveTo(startX, startY);
-        path.lineTo(cnx, startY);
-        path.lineTo(cnx, endY);
-        path.lineTo(endX, endY);
-        _this.drawTimeLine(svg, path, "rgb(200,200,200)", 5, "0", idN, classN);
-
-
-      };
-    },
-    draweditData() {
-      const _this = this;
-      const margin = _this.margin;
-      let width = this.$refs.editData.offsetWidth - margin.left - margin.right - 60;
-      let height = this.$refs.editData.offsetHeight - margin.top - margin.bottom;
-      d3.select("#editData").select("svg").remove();
-      var svg = d3.select("#editData").append("svg")
-        .attr("id", "editEnt")
+      let width = this.$refs.procData.offsetWidth - margin.left - margin.right - 60;
+      let height = this.$refs.procData.offsetHeight - margin.top - margin.bottom;
+      d3.select("#procData").select("svg").remove();
+      var svg = d3.select("#procData").append("svg")
+        .attr("id", "procEnt")
         .attr("width", width)
         .attr("height", height);
 
@@ -862,8 +384,8 @@ export default {
       let sonG = svg.append("g").attr("id", "sonG").attr("width", width).attr("height", height).attr("transform", "translate(1,320)");
       // _this.entG = entG;
       // _this.sonG = sonG;
-      _this.drawEntity(_this.data[0]);
-      _this.drawSonLine(_this.data[1]);
+      _this.drawQuestionSurface(entG);
+      // _this.drawSonLine(_this.data[1]);
     },
     drawSonLine(data) {
       const _this = this;
@@ -871,7 +393,7 @@ export default {
       let w = psvg.attr("width") - 1;
       let h = 40;
       psvg.remove();
-      let svg = d3.select("#editEnt").append("g").attr("id", "sonG").attr("width", w + 1).attr("height", h + 2).attr("transform", "translate(1,320)");
+      let svg = d3.select("#procEnt").append("g").attr("id", "sonG").attr("width", w + 1).attr("height", h + 2).attr("transform", "translate(1,320)");
       let color_linear = _this.importanceColor_linear;
       let compute_color = _this.importanceCompute_color;
       let oData = _this.data;
@@ -923,8 +445,8 @@ export default {
         if (i != 0) {
           _this.drawRect(svg, cx - 5, 0, 5, h, h / 2, "division_" + curEnt['id'], "entdivisionLine", "rgb(250,250,250)", 5, '', 0);
         }
-        if (dataLi[i]['id'] == data['id']) _this.drawRect(svg, cx, 0, endx - cx, h, h / 2, "editEnt_" + curEnt['id'], "editEnt", entColor, 1, "black", 1)//color[_this.colorMap[son['id']]], 5, 0.1)
-        else _this.drawRect(svg, cx, 0, endx - cx, h, h / 2, "editEnt_" + curEnt['id'], "editEnt", entColor, 1, "rgb(150,150,150)", 1)//color[_this.colorMap[son['id']]], 5, 0.1)
+        if (dataLi[i]['id'] == data['id']) _this.drawRect(svg, cx, 0, endx - cx, h, h / 2, "procEnt_" + curEnt['id'], "procEnt", entColor, 1, "black", 1)//color[_this.colorMap[son['id']]], 5, 0.1)
+        else _this.drawRect(svg, cx, 0, endx - cx, h, h / 2, "procEnt_" + curEnt['id'], "procEnt", entColor, 1, "rgb(150,150,150)", 1)//color[_this.colorMap[son['id']]], 5, 0.1)
         prex = endx;
       }
       DivisionDataList[DivisionDataList.length - 1]['nextId'] = "-1";
@@ -936,7 +458,7 @@ export default {
       let w = psvg.attr("width");
       let h = psvg.attr("height");
       psvg.remove();
-      let svg = d3.select("#editEnt").append("g").attr("id", "entG").attr("width", w).attr("height", h);
+      let svg = d3.select("#procEnt").append("g").attr("id", "entG").attr("width", w).attr("height", h);
       let color_linear = _this.importanceColor_linear;
       let compute_color = _this.importanceCompute_color;
       let totalDurationValue = data['totalDuration'];
@@ -1137,7 +659,7 @@ export default {
       let w = psvg.attr("width");
       let h = psvg.attr("height");
       psvg.remove();
-      let svg = d3.select("#editEnt").append("g").attr("id", "entG").attr("width", w).attr("height", h);
+      let svg = d3.select("#procEnt").append("g").attr("id", "entG").attr("width", w).attr("height", h);
       let color_linear = _this.importanceColor_linear;
       let compute_color = _this.importanceCompute_color;
       let totalDurationValue = data['totalDuration'];
@@ -1391,6 +913,28 @@ export default {
       // let txts = _this.nameinput.split(" ")
       // _this.drawTxt(svg, x - r - 32, y + r + 50, r * 2 + 64, txts, "grey");
     },
+    drawQuestionSurface(svg){
+      const _this = this;
+      let psvg =svg
+      let w = psvg.attr("width");
+      let h = psvg.attr("height");
+      psvg.select("#procG").remove();
+      let prog = psvg.append("g").attr("id", "procG").attr("width", w).attr("height", h);
+      let proData = _this.problemsData;
+      let proId = _this.curEntId;
+      if(proId == ""){return;}
+      let curPro = proData.find(function(p){return (p['id']).toString() == (proId).toString()})
+      let title = curPro['title'];
+      let tx=10;
+      let ty = 20;
+      // ty = _this.drawTxt(prog,tx,ty,w,`Title:${title}`,"black",22,'title');
+      let content = curPro['content'];
+
+      _this.tableData.find(function(t){return t['key'] == 'Title'})['value'] = title;
+      _this.tableData.find(function(t){return t['key'] == 'Content'})['value'] = content;
+      console.log(_this.tableData)
+      // _this.drawTxt(prog,tx,ty+25,w,`Title:${content}`,"black",16,'title');
+    },
     drawTxt(svg, x, y, width, txts, fill, fontsize = 12, idN) {
       let tx = x;
       let ty = y;
@@ -1405,7 +949,7 @@ export default {
           .attr("id", `${idN}_${t}`)
           .attr("fill", fill)
           .attr("font-size", fontsize)
-          .style("text-anchor", "middle")
+          .style("text-anchor", "start")
           .text(pretext)
         let textWidth = document.getElementById(`${idN}_${t}`).getBBox().width;
         if((textWidth>width)||(t==txts.length -1)){
@@ -1418,6 +962,7 @@ export default {
         }
         preWidth += textWidth;
       }
+      return ty;
     },
     drawTxtOri1(svg, x, y, width, txts, fill,fontsize=12) {
       let tx = x;
@@ -1591,36 +1136,7 @@ export default {
     updata() {
       
     const _this = this;
-      let data = _this.data;
-      let maxDImportance = Math.max.apply(Math, data.map(function (d) { return d['attribute']['importance']; }))
-      let minDImportance = Math.min.apply(Math, data.map(function (d) { return d['attribute']['importance']; }))
-      let maxDRelevance = Math.max.apply(Math, data.map(function (d) { return d['attribute']['relevance']; }))
-      let minDRelevance = Math.min.apply(Math, data.map(function (d) { return d['attribute']['relevance']; }))
-      let maxDDuration = Math.max.apply(Math, data.map(function (d) { return tools.time2seconds(d['time'][1]) - tools.time2seconds(d['time'][0]); }))
-      let maxTotalDuration = Math.max.apply(Math, data.map(function (d) { return d['totalDuration']; }))
-
-      _this.minDImportance = minDImportance;
-      _this.maxDImportance = maxDImportance;
-      _this.minDRelevance = minDRelevance;
-      _this.maxDRelevance = maxDRelevance;
-      _this.maxDDuration = maxDDuration;
-      _this.maxTotalDuration = maxTotalDuration;
-
-      let currentMaxColor = _this.importanceMaxColor;
-      let currentMinColor = _this.importanceMinColor;
-      _this.importanceColor_linear = d3.scaleLinear().domain([minDImportance, maxDImportance]).range([0, 1]);
-      _this.importanceCompute_color = d3.interpolate(currentMinColor, currentMaxColor);
-      _this.relevanceScale_linear = d3.scaleLinear([minDRelevance, maxDRelevance], [20, 50])
-      _this.totalDurationScale_linear = d3.scaleLinear().domain([0, maxTotalDuration]).range([20, 60]);
-
-
-
-
-      _this.$bus.$emit("graphData", _this.data);
-      _this.$bus.$emit("relData", _this.relData);
-      // _this.drawtopicLine();
-      // _this.drawrootTree();
-      _this.draweditData();
+      _this.drawprocData();
     },
     click_Ent(time) {
       this.$emit("timeDur", time);
@@ -1629,17 +1145,19 @@ export default {
   created() {
     const _this = this;
     this.$nextTick(() => {
-      _this.getTreeData();
       _this.updata();
 
     });
   },
   mounted() {
     const _this = this
-    _this.tableData.find(function (d) { return d['key'] == 'name' })['value'] = 'Computer Network';
+    // _this.tableData.find(function (d) { return d['key'] == 'name' })['value'] = 'Computer Network';
     this.$bus.$on('selectEnt', (val) => {
-     console.log(val);
      _this.curEntId = val;
+     _this.updata();
+    });
+    this.$bus.$on('allProblem', (val) => {
+     _this.problemsData = val;
     });
   },
   // beforeDestroy() {

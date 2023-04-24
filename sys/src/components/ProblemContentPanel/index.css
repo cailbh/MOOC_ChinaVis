@@ -1,4 +1,4 @@
-.editPanel{
+.procPanel{
   width: 100%;
   height: 100%;
   /* position: fixed; */
@@ -6,7 +6,7 @@
   /* left: 0;
     top: 0; */
 }
-.editTable{
+.procTable{
   /* margin: 50px; */
 }
 
@@ -19,7 +19,9 @@
 .tableCell{
   height: 40px;
 }
-
+.el-table .cell {
+  overflow: visible;
+}
 
 #rootTree{
   float: left;
@@ -27,7 +29,7 @@
   height: 85%;
   width: 60%;
 }
-#editData{
+#procData{
   float: left;
   /* background-color: red; */
   /* border-left: solid rgba(179, 179, 179, 1) 3px; */
@@ -50,7 +52,7 @@
   font-size: 15px;
 }
 
-#editData .el-slider__bar {
+#procData .el-slider__bar {
   background-color: #f4f4d0;
 }
 .el-table_2_column_3{
@@ -83,4 +85,11 @@
 }
 .toolsBut{
   margin: 5px;
+}
+#procPanelDiv{
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+.el-table--scrollable-x .el-table__body-wrapper{
+  overflow: hidden;
 }

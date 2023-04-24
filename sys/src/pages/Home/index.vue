@@ -11,9 +11,9 @@
         <!-- <Head></Head> -->
       </div>
       <div id="allBody">
-        <!-- <div id="controlPanel" class="panel">
+        <div id="controlPanel" class="panel">
           <ControlPanel></ControlPanel>
-        </div> -->
+        </div>
         <div id="graphContainer" v-show="showGraph" class="panel">
           <Graph @timeDur="getTimeDur" :videoTime="videoTime" @toolState="getToolState" ></Graph>
         </div>
@@ -25,6 +25,12 @@
         <!-- <div id="editPanel" class="panel"  v-if='showEdit==true'>
           <EditPanel></EditPanel>
         </div> -->
+        <div id="procPanel" class="panel">
+          <ProcPanel></ProcPanel>
+        </div>
+        <div id="netPPanel" class="panel">
+          <NetPPanel></NetPPanel>
+        </div>
         <!-- </transition> -->
       </div>
     </div>
@@ -32,10 +38,12 @@
 </template>
 
 <script>
-import Head from "@/components/Header/index.vue"
-import Graph from '@/components/Graph/index.vue'
+import Head from "@/components/Header/index.vue";
+import Graph from '@/components/Graph/index.vue';
+import ProcPanel from '@/components/ProblemContentPanel/index.vue';
+import NetPPanel from '@/components/NetProblemPanel/index.vue';
 export default {
-  components: { Head, Graph},
+  components: { Head, Graph, ProcPanel,NetPPanel},
   /* eslint-disable no-unused-vars */
   data() {
     return {
