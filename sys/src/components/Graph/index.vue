@@ -45,6 +45,7 @@ export default {
       data: '',
       problemsData: [],
       submissionsData:[],
+      studentsData:[],
       conceptsData: [],
       problemConceptData: [],
       userProblemData: [],
@@ -165,56 +166,6 @@ export default {
     curProblemId(val) {
       const _this = this;
       _this.$bus.$emit("selectEnt", val);
-      // let entityLocationData = _this.drawEntityLocation;
-
-      // let relData = _this.relData;
-      // let showJageData = _this.showEntityList;
-      // let basicRel = relData['basicRel'];
-      // for (let r = 0; r < basicRel.length; r++) {
-      //   let sorceId = basicRel[r][0];
-      //   let targetId = basicRel[r][1];
-      //   let sorceJage = showJageData.find(function (d) { return d['id'] == sorceId })['show'];
-      //   let targetJage = showJageData.find(function (d) { return d['id'] == targetId })['show'];
-      //   if (sorceJage && targetJage) {
-      //     let trnId = '-1';
-      //     if (sorceId == parseInt(val)) {
-      //       trnId = targetId;
-      //     }
-      //     else if (targetId == parseInt(val)) {
-      //       trnId = sorceId;
-      //     }
-      //     if (trnId != '-1') {
-      //       let curEnt = entityLocationData.find(function (d) { return parseInt(d['id']) == trnId });
-      //       _this.assistGTransformX = parseInt(-curEnt['x']) + parseFloat(curEnt['r']) + 150;
-      //       _this.assistGTransformY = parseInt(-curEnt['y']) + parseFloat(curEnt['r']) + 300;
-      //       _this.updataAssistGraphPanel();
-      //     }
-      //   }
-
-      // };
-      // let similarityRel = relData['similarityRel'];
-      // for (let r = 0; r < similarityRel.length; r++) {
-      //   let sorceId = similarityRel[r][0];
-      //   let targetId = similarityRel[r][1];
-      //   let sorceJage = showJageData.find(function (d) { return d['id'] == sorceId })['show'];
-      //   let targetJage = showJageData.find(function (d) { return d['id'] == targetId })['show'];
-      //   if (sorceJage && targetJage) {
-      //     let trnId = '-1';
-      //     if (sorceId == parseInt(val)) {
-      //       trnId = targetId;
-      //     }
-      //     else if (targetId == parseInt(val)) {
-      //       trnId = sorceId;
-      //     }
-      //     if (trnId != '-1') {
-      //       let curEnt = entityLocationData.find(function (d) { return parseInt(d['id']) == trnId });
-      //       _this.assistGTransformX = parseInt(-curEnt['x']) + parseFloat(curEnt['r']) + 150;
-      //       _this.assistGTransformY = parseInt(-curEnt['y']) + parseFloat(curEnt['r']) + 300;
-      //       _this.updataAssistGraphPanel();
-      //     }
-      //   }
-
-      // };
 
 
     },
@@ -243,6 +194,7 @@ export default {
         .get("/api/concept/allConcept", {}, {})
         .then((response) => {
           _this.conceptsData = response.body;
+          _this.$bus.$emit("Concept", _this.conceptsData);
         });
     },
     getSubmissions() {
@@ -258,11 +210,21 @@ export default {
       this.$http.get("/api/conceptProblem/allRel", {}, {})
         .then((response) => {
           _this.problemConceptData = response.body;
+          _this.$bus.$emit("Pro_Con", _this.problemConceptData);
           _this.updataGraph();
+        });
+    },
+    getStudents() {
+      const _this = this;
+      this.$http.get("/api/student/allStudent", {}, {})
+        .then((response) => {
+          _this.studentsData = response.body;
+          _this.$bus.$emit("Student", _this.studentsData);
         });
     },
     getAllData() {
       const _this = this;
+      this.getStudents();
       this.getProblems();
       this.getConcept();
       this.getProblemConcept();

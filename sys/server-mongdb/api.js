@@ -58,7 +58,15 @@ router.get('/api/concept/allConcept', (req, res) => {
 // 获取学生接口
 router.get('/api/student/allStudent', (req, res) => {
     // 通过模型去查找数据库
-    models.Student.find((err, data) => {
+    const aggregate = [
+        {
+            "$project":
+            {
+                "_id": 0
+            }
+        }
+    ]
+    models.Student.aggregate(aggregate).then((err, data) => {
         if (err) {
             res.send(err);
         } else {
