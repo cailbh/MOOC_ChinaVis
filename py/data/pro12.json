@@ -1,0 +1,1215 @@
+[
+		{
+			"id": "1601015996230680576",
+			"label": "",
+			"score": 300,
+			"problemPoolIndex": 1,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"test_1": {
+							"hint": ">90",
+							"showHint": false,
+							"score": 50,
+							"updateAt": "2020-09-30T02:56:39Z",
+							"isPublic": false
+						},
+						"test_2": {
+							"hint": "80-89",
+							"showHint": false,
+							"score": 50,
+							"updateAt": "2020-09-30T02:57:29Z",
+							"isPublic": false
+						},
+						"test_3": {
+							"hint": "70-79",
+							"showHint": false,
+							"score": 50,
+							"updateAt": "2020-09-30T02:57:21Z",
+							"isPublic": false
+						},
+						"test_4": {
+							"hint": "60-69",
+							"showHint": false,
+							"score": 50,
+							"updateAt": "2020-09-30T02:58:09Z",
+							"isPublic": false
+						},
+						"test_5": {
+							"hint": "<60",
+							"showHint": false,
+							"score": 50,
+							"updateAt": "2020-09-30T03:00:04Z",
+							"isPublic": false
+						},
+						"test_6": {
+							"hint": ">100 或<0",
+							"showHint": false,
+							"score": 50,
+							"updateAt": "2020-09-30T03:01:44Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "98\n",
+							"output": "A\n"
+						},
+						{
+							"name": "",
+							"input": "103\n",
+							"output": "输入错误\n"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 8192,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1311137716558749696",
+			"title": "成绩百分与五分制的转换",
+			"content": "输入百分成绩，输出五分制等级。转换规则如下：100~90等级A，89~80等级B，79~70等级C，69~60等级D，小于60等级E，如果输入的成绩在0--100范围之外，则输出”输入错误“。\n\n### 输入格式:\n\n输入一个正整数，在0--100之间。\n注意：\n1.  输入使用input()，不要增加额外的提示信息\n1.  input 函数返回值是字符串, 可以使用 int(input()) 或 eval(input()) 来进行转换\n\n\n### 输出格式:\n\n直接输出A、B、C、D、E其中的一个，或者”输入错误“。\n\n### 输入样例1:\n```in\n98\n```\n\n### 输出样例1:\n\n```out\nA\n```\n### 输入样例2:\n```in\n103\n```\n\n### 输出样例2:\n\n```out\n输入错误\n```",
+			"type": "PROGRAMMING",
+			"author": "python备课组",
+			"authorOrganization": {
+				"id": "210",
+				"name": "福州大学至诚学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "924247594312409088",
+							"name": "Python程序设计",
+							"isLeaf": false,
+							"enName": "Python Programming"
+						},
+						{
+							"id": "924248445119619072",
+							"name": "选择分支结构",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "924249537052139520",
+							"name": "多分支",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 41,
+			"submitCount": 72,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1601015996159377408",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5f73f3e7799965000721394c",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "GCC",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "输入百分成绩，输出五分制等级。转换规则如下：100~90等级A，89~80等级B，79~70等级C，69~60等级D，小于60等级E，如果输入的成绩在0--100范围之外，则输出”输入错误“。\n\n### 输入格式:\n\n输入一个正整数，在0--100之间。\n注意：\n1.  输入使用input()，不要增加额外的提示信息\n1.  input 函数返回值是字符串, 可以使用 int(input()) 或 eval(input()) 来进行转换\n\n\n### 输出格式:\n\n直接输出A、B、C、D、E其中的一个，或者”输入错误“。\n\n### 输入样例1:\n```in\n98\n```\n\n### 输出样例1:\n\n```out\nA\n```\n### 输入样例2:\n```in\n103\n```\n\n### 输出样例2:\n\n```out\n输入错误\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1601015996230680577",
+			"label": "",
+			"score": 300,
+			"problemPoolIndex": 2,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"1": {
+							"hint": "无",
+							"showHint": false,
+							"score": 60,
+							"updateAt": "2022-12-03T07:10:47Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "无",
+							"showHint": false,
+							"score": 60,
+							"updateAt": "2022-12-03T07:11:08Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "无",
+							"showHint": false,
+							"score": 60,
+							"updateAt": "2022-12-03T07:12:02Z",
+							"isPublic": false
+						},
+						"4": {
+							"hint": "无",
+							"showHint": false,
+							"score": 60,
+							"updateAt": "2022-12-03T07:12:54Z",
+							"isPublic": false
+						},
+						"5": {
+							"hint": "无",
+							"showHint": false,
+							"score": 60,
+							"updateAt": "2022-12-03T07:14:49Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "3 5\n1 7 8 9 6\n2 7 5 0 7\n4 3 8 2 6",
+							"output": "yes\n"
+						},
+						{
+							"name": "",
+							"input": "3 4\n1 8 8 9 \n2 7 5 0 \n4 3 6 2",
+							"output": "no\n"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 8192,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1598937448774889472",
+			"title": "错误探测",
+			"content": "给定一个m行n列的二维数组。\n如果每一行偶数的个数是偶数，并且每一列奇数的个数是奇数，认为是正确的，输出yes；否则输出no\n注意：0是偶数。\n### 输入格式:\n\n第1行是两个整数m、n。输入保证1 <= m <= 100, 1 <= n <= 200。 \n接下来输入有m行，每行n个整数。输入保证在32位整型取值范围之内。\n### 输出格式:\n如果输入的每一行偶数的个数是偶数，并且每一列奇数的个数是奇数，输出yes；否则输出no\n\n### 输入样例1:\n```in\n3 5\n1 7 8 9 6\n2 7 5 0 7\n4 3 8 2 6\n```\n\n### 输出样例1:\n```out\nyes\n```\n\n### 输入样例2:\n```in\n3 4\n1 8 8 9 \n2 7 5 0 \n4 3 6 2\n```\n\n### 输出样例2:\n```out\nno\n```\n\n### 输出样例2提示:\n输入的第2列\n8\n7\n3\n奇数的个数不是奇数，所以输出 no",
+			"type": "PROGRAMMING",
+			"author": "伍建全",
+			"authorOrganization": {
+				"id": "34",
+				"name": "重庆科技学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 2,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "78",
+							"name": "数组",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "81",
+							"name": "二维数组",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 38,
+			"submitCount": 86,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1601015996159377408",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "638af677f77d37305f291643",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "GCC",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "GCC",
+					"interactorProgram": "",
+					"testDataVersion": 12
+				}
+			},
+			"solution": "",
+			"description": "给定一个m行n列的二维数组。\n如果每一行偶数的个数是偶数，并且每一列奇数的个数是奇数，认为是正确的，输出yes；否则输出no\n注意：0是偶数。\n### 输入格式:\n\n第1行是两个整数m、n。输入保证1 <= m <= 100, 1 <= n <= 200。 \n接下来输入有m行，每行n个整数。输入保证在32位整型取值范围之内。\n### 输出格式:\n如果输入的每一行偶数的个数是偶数，并且每一列奇数的个数是奇数，输出yes；否则输出no\n\n### 输入样例1:\n```in\n3 5\n1 7 8 9 6\n2 7 5 0 7\n4 3 8 2 6\n```\n\n### 输出样例1:\n```out\nyes\n```\n\n### 输入样例2:\n```in\n3 4\n1 8 8 9 \n2 7 5 0 \n4 3 6 2\n```\n\n### 输出样例2:\n```out\nno\n```\n\n### 输出样例2提示:\n输入的第2列\n8\n7\n3\n奇数的个数不是奇数，所以输出 no",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1601015996230680578",
+			"label": "",
+			"score": 300,
+			"problemPoolIndex": 3,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"mid1": {
+							"hint": "无",
+							"showHint": false,
+							"score": 30,
+							"updateAt": "2022-12-04T04:33:19Z",
+							"isPublic": false
+						},
+						"mid2": {
+							"hint": "无",
+							"showHint": false,
+							"score": 30,
+							"updateAt": "2022-12-04T04:33:29Z",
+							"isPublic": false
+						},
+						"mid3": {
+							"hint": "无",
+							"showHint": false,
+							"score": 30,
+							"updateAt": "2022-12-04T04:33:42Z",
+							"isPublic": false
+						},
+						"mid4": {
+							"hint": "无",
+							"showHint": false,
+							"score": 30,
+							"updateAt": "2022-12-04T04:33:54Z",
+							"isPublic": false
+						},
+						"mid5": {
+							"hint": "无",
+							"showHint": false,
+							"score": 30,
+							"updateAt": "2022-12-04T04:34:10Z",
+							"isPublic": false
+						},
+						"mid6": {
+							"hint": "无",
+							"showHint": false,
+							"score": 30,
+							"updateAt": "2022-12-04T04:34:28Z",
+							"isPublic": false
+						},
+						"mid7": {
+							"hint": "无",
+							"showHint": false,
+							"score": 30,
+							"updateAt": "2022-12-04T04:34:42Z",
+							"isPublic": false
+						},
+						"mid8": {
+							"hint": "无",
+							"showHint": false,
+							"score": 30,
+							"updateAt": "2022-12-04T04:34:55Z",
+							"isPublic": false
+						},
+						"mid9": {
+							"hint": "无",
+							"showHint": false,
+							"score": 30,
+							"updateAt": "2022-12-04T04:35:07Z",
+							"isPublic": false
+						},
+						"mid10": {
+							"hint": "无",
+							"showHint": false,
+							"score": 30,
+							"updateAt": "2022-12-04T04:35:17Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "1 3 2\n",
+							"output": "2\n"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 8192,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1599257924319576064",
+			"title": "h020-求中间数",
+			"content": "\n\n给出三个数，找出这三个数当中的中间数\n\n### 输入格式:\n\n输入三个数\n\n### 输出格式:\n\n输出这三个数当中的中间数\n\n### 输入样例:\n\n在这里给出一组输入。例如：\n\n```in\n1 3 2\n```\n\n### 输出样例:\n\n在这里给出相应的输出。例如：\n\n```out\n2\n```\n",
+			"type": "PROGRAMMING",
+			"author": "黄正鹏",
+			"authorOrganization": {
+				"id": "1067247900581347328",
+				"name": "贵州工程应用技术学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "1027906739684155392",
+							"name": "PHP程序设计",
+							"isLeaf": false,
+							"enName": "PHP Programming"
+						},
+						{
+							"id": "1027906981326397440",
+							"name": "数组",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "1027907811647602688",
+							"name": "数组的常用函数",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 40,
+			"submitCount": 58,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1601015996159377408",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "638c22f3c44a5e15e40056d9",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "GCC",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "GCC",
+					"interactorProgram": "",
+					"testDataVersion": 22
+				}
+			},
+			"solution": "",
+			"description": "\n\n给出三个数，找出这三个数当中的中间数\n\n### 输入格式:\n\n输入三个数\n\n### 输出格式:\n\n输出这三个数当中的中间数\n\n### 输入样例:\n\n在这里给出一组输入。例如：\n\n```in\n1 3 2\n```\n\n### 输出样例:\n\n在这里给出相应的输出。例如：\n\n```out\n2\n```\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1601015996230680579",
+			"label": "",
+			"score": 300,
+			"problemPoolIndex": 4,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"1": {
+							"hint": "1",
+							"showHint": false,
+							"score": 30,
+							"updateAt": "2022-11-28T01:11:39Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "2",
+							"showHint": false,
+							"score": 30,
+							"updateAt": "2022-11-28T01:11:59Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "2",
+							"showHint": false,
+							"score": 30,
+							"updateAt": "2022-11-28T01:13:03Z",
+							"isPublic": false
+						},
+						"4": {
+							"hint": "4",
+							"showHint": false,
+							"score": 30,
+							"updateAt": "2022-11-28T01:15:00Z",
+							"isPublic": false
+						},
+						"5": {
+							"hint": "5",
+							"showHint": false,
+							"score": 30,
+							"updateAt": "2022-11-28T01:15:15Z",
+							"isPublic": false
+						},
+						"6": {
+							"hint": "6",
+							"showHint": false,
+							"score": 30,
+							"updateAt": "2022-11-28T01:27:35Z",
+							"isPublic": false
+						},
+						"7": {
+							"hint": "7",
+							"showHint": false,
+							"score": 30,
+							"updateAt": "2022-11-28T01:27:52Z",
+							"isPublic": false
+						},
+						"8": {
+							"hint": "8",
+							"showHint": false,
+							"score": 30,
+							"updateAt": "2022-11-28T01:28:12Z",
+							"isPublic": false
+						},
+						"9": {
+							"hint": "9",
+							"showHint": false,
+							"score": 30,
+							"updateAt": "2022-11-28T01:29:00Z",
+							"isPublic": false
+						},
+						"10": {
+							"hint": "10",
+							"showHint": false,
+							"score": 30,
+							"updateAt": "2022-11-28T01:29:51Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "6 40\n6\n18\n11\n13\n19\n11",
+							"output": "3\n"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 8192,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1597035092109938688",
+			"title": "F009 放书",
+			"content": "周小小最近想为自己的图书室添置一个巨型书架，尽管它是如此的大，但它还是几乎瞬间就被各种各样的书塞满了。现在，只有书架的顶上还留有一点空间。\n\t所有N(1<=N<=2000)把椅子都有一个确定的高度Hi（1<=Hi<=1000）。为了够到书架顶，周小小想像演杂技一般，将椅子一个一个的叠在一起，并上去把书架的空间补上。\n\t显然，椅子叠的越多，就越不稳定，于是小小希望在够到书架顶的前提下，让椅子数量尽量少，作为聪明的你，一定能帮助他计算出这个最小数量吧。\n\n### 输入格式:\n\n第1行: 2个用空格隔开的整数：N和B，表示有N把椅子和书架的高度；\n第2行到N+1行: 第i+1行是1个整数：Hi，表示椅子的高度。\n可能存在多组输入数据。\n\n### 输出格式:\n\n输出1个整数，即最少要多少把椅子。（如果到不了顶端，输出-1）\n\n### 输入样例:\n\n```in\n6 40\n6\n18\n11\n13\n19\n11\n```\n\n### 输出样例:\n\n```out\n3\n```\n",
+			"type": "PROGRAMMING",
+			"author": "周治国",
+			"authorOrganization": {
+				"id": "27",
+				"name": "东北师范大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "89",
+							"name": "其他",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "315",
+							"name": "其他",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 30,
+			"submitCount": 190,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1601015996159377408",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "63840acbf77d37305f28e3aa",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "GCC",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "GCC",
+					"interactorProgram": "",
+					"testDataVersion": 25
+				}
+			},
+			"solution": "",
+			"description": "周小小最近想为自己的图书室添置一个巨型书架，尽管它是如此的大，但它还是几乎瞬间就被各种各样的书塞满了。现在，只有书架的顶上还留有一点空间。\n\t所有N(1<=N<=2000)把椅子都有一个确定的高度Hi（1<=Hi<=1000）。为了够到书架顶，周小小想像演杂技一般，将椅子一个一个的叠在一起，并上去把书架的空间补上。\n\t显然，椅子叠的越多，就越不稳定，于是小小希望在够到书架顶的前提下，让椅子数量尽量少，作为聪明的你，一定能帮助他计算出这个最小数量吧。\n\n### 输入格式:\n\n第1行: 2个用空格隔开的整数：N和B，表示有N把椅子和书架的高度；\n第2行到N+1行: 第i+1行是1个整数：Hi，表示椅子的高度。\n可能存在多组输入数据。\n\n### 输出格式:\n\n输出1个整数，即最少要多少把椅子。（如果到不了顶端，输出-1）\n\n### 输入样例:\n\n```in\n6 40\n6\n18\n11\n13\n19\n11\n```\n\n### 输出样例:\n\n```out\n3\n```\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1601015996230680580",
+			"label": "",
+			"score": 300,
+			"problemPoolIndex": 5,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"article1": {
+							"hint": "",
+							"showHint": false,
+							"score": 30,
+							"updateAt": "2022-11-26T10:00:13Z",
+							"isPublic": false
+						},
+						"article2": {
+							"hint": "",
+							"showHint": false,
+							"score": 30,
+							"updateAt": "2022-11-26T10:00:13Z",
+							"isPublic": false
+						},
+						"article3": {
+							"hint": "",
+							"showHint": false,
+							"score": 30,
+							"updateAt": "2022-11-26T10:00:13Z",
+							"isPublic": false
+						},
+						"article4": {
+							"hint": "",
+							"showHint": false,
+							"score": 30,
+							"updateAt": "2022-11-26T10:00:13Z",
+							"isPublic": false
+						},
+						"article5": {
+							"hint": "",
+							"showHint": false,
+							"score": 30,
+							"updateAt": "2022-11-26T10:00:13Z",
+							"isPublic": false
+						},
+						"article6": {
+							"hint": "",
+							"showHint": false,
+							"score": 30,
+							"updateAt": "2022-11-26T10:00:13Z",
+							"isPublic": false
+						},
+						"article7": {
+							"hint": "",
+							"showHint": false,
+							"score": 30,
+							"updateAt": "2022-11-26T10:00:13Z",
+							"isPublic": false
+						},
+						"article8": {
+							"hint": "",
+							"showHint": false,
+							"score": 30,
+							"updateAt": "2022-11-26T10:00:13Z",
+							"isPublic": false
+						},
+						"article9": {
+							"hint": "",
+							"showHint": false,
+							"score": 30,
+							"updateAt": "2022-11-26T10:00:13Z",
+							"isPublic": false
+						},
+						"article10": {
+							"hint": "",
+							"showHint": false,
+							"score": 30,
+							"updateAt": "2022-11-26T10:00:13Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "oWxxn*srK*E * AGX* 4*R0 1*W Pm****Lr* *m**Zn*  6Q N *w  sh 78f x*h 8f2k* 8zk  MO\n2**G4q*M02U*Y0k T  **7M9 H LY4NE 4    1*6**U*e*Ntn **g  *  av*M* Y  FSG9*FVt*B* \n*5*iYHu*6i****G*9Q  c2 Y1*Y6K  B P84I*F8*3 4 ey 0 R  9*bvYx9  6 *X 73 5 0useR6 E\n",
+							"output": "52\n41\n41\n56\n50\n"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 8192,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1596443647770624000",
+			"title": "h003.读文章",
+			"content": "\n假定文章是一个3行80列的二维数组，读文章就是将文章中的大写字母、小写字母、数字、空格以及其他字符统计。\n\n### 输入格式:\n\n输入一篇文章，输入要保证文章为一个3行80列的二维数组。\n\n### 输出格式:\n\n输出文章中大写字母、小写字母、数字、空格以及其他字符的数量。\n\n### 输入样例:\n\n\n```in\noWxxn*srK*E * AGX* 4*R0 1*W Pm****Lr* *m**Zn*  6Q N *w  sh 78f x*h 8f2k* 8zk  MO\n2**G4q*M02U*Y0k T  **7M9 H LY4NE 4    1*6**U*e*Ntn **g  *  av*M* Y  FSG9*FVt*B* \n*5*iYHu*6i****G*9Q  c2 Y1*Y6K  B P84I*F8*3 4 ey 0 R  9*bvYx9  6 *X 73 5 0useR6 E\n\n```\n\n### 输出样例:\n\n\n```out\n52\n41\n41\n56\n50\n\n```\n",
+			"type": "PROGRAMMING",
+			"author": "黄正鹏",
+			"authorOrganization": {
+				"id": "1067247900581347328",
+				"name": "贵州工程应用技术学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "78",
+							"name": "数组",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "81",
+							"name": "二维数组",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 40,
+			"submitCount": 93,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1601015996159377408",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "6381e3ad1d8a342ac5c498bb",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "GCC",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "GCC",
+					"interactorProgram": "",
+					"testDataVersion": 5
+				}
+			},
+			"solution": "",
+			"description": "\n假定文章是一个3行80列的二维数组，读文章就是将文章中的大写字母、小写字母、数字、空格以及其他字符统计。\n\n### 输入格式:\n\n输入一篇文章，输入要保证文章为一个3行80列的二维数组。\n\n### 输出格式:\n\n输出文章中大写字母、小写字母、数字、空格以及其他字符的数量。\n\n### 输入样例:\n\n\n```in\noWxxn*srK*E * AGX* 4*R0 1*W Pm****Lr* *m**Zn*  6Q N *w  sh 78f x*h 8f2k* 8zk  MO\n2**G4q*M02U*Y0k T  **7M9 H LY4NE 4    1*6**U*e*Ntn **g  *  av*M* Y  FSG9*FVt*B* \n*5*iYHu*6i****G*9Q  c2 Y1*Y6K  B P84I*F8*3 4 ey 0 R  9*bvYx9  6 *X 73 5 0useR6 E\n\n```\n\n### 输出样例:\n\n\n```out\n52\n41\n41\n56\n50\n\n```\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1601015996230680581",
+			"label": "",
+			"score": 300,
+			"problemPoolIndex": 6,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"output1": {
+							"hint": "",
+							"showHint": false,
+							"score": 43,
+							"updateAt": "2022-12-03T16:50:08Z",
+							"isPublic": false
+						},
+						"output2": {
+							"hint": "",
+							"showHint": false,
+							"score": 43,
+							"updateAt": "2022-12-03T16:50:08Z",
+							"isPublic": false
+						},
+						"output3": {
+							"hint": "",
+							"showHint": false,
+							"score": 43,
+							"updateAt": "2022-12-03T16:50:08Z",
+							"isPublic": false
+						},
+						"output4": {
+							"hint": "",
+							"showHint": false,
+							"score": 43,
+							"updateAt": "2022-12-03T16:50:08Z",
+							"isPublic": false
+						},
+						"output5": {
+							"hint": "",
+							"showHint": false,
+							"score": 43,
+							"updateAt": "2022-12-03T16:50:08Z",
+							"isPublic": false
+						},
+						"output6": {
+							"hint": "",
+							"showHint": false,
+							"score": 43,
+							"updateAt": "2022-12-03T16:50:08Z",
+							"isPublic": false
+						},
+						"output7": {
+							"hint": "",
+							"showHint": false,
+							"score": 42,
+							"updateAt": "2022-12-03T16:50:08Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "AfaAe_a_f_\n",
+							"output": "faeAF\n"
+						},
+						{
+							"name": "",
+							"input": "aBC__D_f\n",
+							"output": "a_b_c___d_f\n"
+						},
+						{
+							"name": "",
+							"input": "aBcd_e_f\n",
+							"output": "Error!\n"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 8192,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1599080200057647104",
+			"title": "语言之争",
+			"content": "\n现在要你编写一个程序进行字符串s1特定的转换输出。\n输出为“Error!”情况：1.字符串s1含大写字符并且首字符为小写字符，同时含字符“_\"不相连。2.字符串s1不含大写字符或者首字符大写并且有多个字符“_”相连或者不含字符“_”。\n输出不为“Error!”情况：当字符串s1含有多个字符“_”相连或者不含字符“_”表示将字符串s1中的大写字符转换成字符“_”加其小写字符，输出转换后的字符串s2;否则表示将字符串s1中字符“_”后紧邻的一个小写字符转换成其大写字符，删除字符串s1中原有的所有大写字符和字符“_”,输出转换后的字符串s2。\n### 输入格式:\n\n输入一串字符串s1。\n字符串s1：26英文字母和字符“_”组合，字符“_”可以没有。\n### 输出格式:\n\n输出转换后的字符串s2。\n\n### 输入字符串（小写字符转换成大写字符）样例1:\n\n在这里给出一组输入。例如：\n\n```in\nAfaAe_a_f_\n```\n\n### 输出样例1:\n\n在这里给出相应的输出。例如：\n\n```out\nfaeAF\n```\n### 输入字符串（大写字符转换成小写字符）样例2:\n\n在这里给出一组输入。例如：\n\n```in\naBC__D_f\n```\n\n### 输出样例2:\n\n在这里给出相应的输出。例如：\n\n```out\na_b_c___d_f\n```\n\n### 输入样例3:\n\n在这里给出一组输入。例如：\n\n```in\naBcd_e_f\n```\n\n### 输出样例3:\n\n在这里给出相应的输出。例如：\n\n```out\nError!\n```\n\n",
+			"type": "PROGRAMMING",
+			"author": "黄正鹏",
+			"authorOrganization": {
+				"id": "1067247900581347328",
+				"name": "贵州工程应用技术学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 3,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "1199542721402277888",
+							"name": "C#程序设计",
+							"isLeaf": false,
+							"enName": "C# Programming"
+						},
+						{
+							"id": "1199542849299181568",
+							"name": "数组与集合",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "1199543318595670016",
+							"name": "字符串",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 1,
+			"submitCount": 41,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1601015996159377408",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "638b7e40f77d37305f2919ed",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "GCC",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "GCC",
+					"interactorProgram": "",
+					"testDataVersion": 3
+				}
+			},
+			"solution": "",
+			"description": "\n现在要你编写一个程序进行字符串s1特定的转换输出。\n输出为“Error!”情况：1.字符串s1含大写字符并且首字符为小写字符，同时含字符“_\"不相连。2.字符串s1不含大写字符或者首字符大写并且有多个字符“_”相连或者不含字符“_”。\n输出不为“Error!”情况：当字符串s1含有多个字符“_”相连或者不含字符“_”表示将字符串s1中的大写字符转换成字符“_”加其小写字符，输出转换后的字符串s2;否则表示将字符串s1中字符“_”后紧邻的一个小写字符转换成其大写字符，删除字符串s1中原有的所有大写字符和字符“_”,输出转换后的字符串s2。\n### 输入格式:\n\n输入一串字符串s1。\n字符串s1：26英文字母和字符“_”组合，字符“_”可以没有。\n### 输出格式:\n\n输出转换后的字符串s2。\n\n### 输入字符串（小写字符转换成大写字符）样例1:\n\n在这里给出一组输入。例如：\n\n```in\nAfaAe_a_f_\n```\n\n### 输出样例1:\n\n在这里给出相应的输出。例如：\n\n```out\nfaeAF\n```\n### 输入字符串（大写字符转换成小写字符）样例2:\n\n在这里给出一组输入。例如：\n\n```in\naBC__D_f\n```\n\n### 输出样例2:\n\n在这里给出相应的输出。例如：\n\n```out\na_b_c___d_f\n```\n\n### 输入样例3:\n\n在这里给出一组输入。例如：\n\n```in\naBcd_e_f\n```\n\n### 输出样例3:\n\n在这里给出相应的输出。例如：\n\n```out\nError!\n```\n\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1601015996230680582",
+			"label": "",
+			"score": 300,
+			"problemPoolIndex": 7,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"input1": {
+							"hint": "无",
+							"showHint": false,
+							"score": 150,
+							"updateAt": "2022-12-04T02:31:17Z",
+							"isPublic": false
+						},
+						"input2": {
+							"hint": "无",
+							"showHint": false,
+							"score": 150,
+							"updateAt": "2022-12-04T02:32:19Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "50\n",
+							"output": "x*y=60\n"
+						},
+						{
+							"name": "",
+							"input": "100\n",
+							"output": "x*y=250\n"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 8192,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1599215155270119424",
+			"title": "编写程序 ，求二元一次方程一组解乘积的最大值。",
+			"content": "有二元一次方程5x+2y=n，其中20<=n<=100，编写程序求该方程正整数解x和y相乘的最大值。\n\n### 输入格式:\n\n输入一个[20,100]间的正整数n。\n\n### 输出格式:\n\n输出对应方程正整数解x*y的最大值。\n\n### 输入样例1:\n\n```in\n50\n```\n### 输出样例1:\n\n```out\nx*y=60\n```\n### 输入样例2:\n\n```in\n100\n```\n### 输出样例2:\n\n```out\nx*y=250\n```\n\n",
+			"type": "PROGRAMMING",
+			"author": "gllypx",
+			"authorOrganization": {
+				"id": "1017669010988019712",
+				"name": "桂林学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "循环控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "73",
+							"name": "嵌套循环",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 35,
+			"submitCount": 46,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1601015996159377408",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "638bf907c44a5e15e4005546",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "GCC",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "GCC",
+					"interactorProgram": "",
+					"testDataVersion": 18
+				}
+			},
+			"solution": "",
+			"description": "有二元一次方程5x+2y=n，其中20<=n<=100，编写程序求该方程正整数解x和y相乘的最大值。\n\n### 输入格式:\n\n输入一个[20,100]间的正整数n。\n\n### 输出格式:\n\n输出对应方程正整数解x*y的最大值。\n\n### 输入样例1:\n\n```in\n50\n```\n### 输出样例1:\n\n```out\nx*y=60\n```\n### 输入样例2:\n\n```in\n100\n```\n### 输出样例2:\n\n```out\nx*y=250\n```\n\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1601015996230680583",
+			"label": "",
+			"score": 300,
+			"problemPoolIndex": 8,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "",
+							"showHint": false,
+							"score": 60,
+							"updateAt": "2022-03-19T12:35:37Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "",
+							"showHint": false,
+							"score": 60,
+							"updateAt": "2022-03-19T12:35:37Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "",
+							"showHint": false,
+							"score": 60,
+							"updateAt": "2022-03-19T12:35:37Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "",
+							"showHint": false,
+							"score": 60,
+							"updateAt": "2022-03-19T12:35:37Z",
+							"isPublic": false
+						},
+						"4": {
+							"hint": "",
+							"showHint": false,
+							"score": 60,
+							"updateAt": "2022-03-19T12:35:37Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "6 5\n1 2\n1 3\n1 4\n2 4\n3 5",
+							"output": "2\n5 1"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [
+						{
+							"compiler": "JAVAC",
+							"timeLimit": 1000,
+							"memoryLimit": 131072
+						},
+						{
+							"compiler": "PYTHON3",
+							"timeLimit": 1500,
+							"memoryLimit": 131072
+						}
+					],
+					"stackSizeLimit": 8192,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1501187720155676672",
+			"title": "Bang Bang Klee Ba！",
+			"content": "可莉今天抓到了花纹奇怪的蜥蜴，很多很多条！\n\n可莉很想知道她到底抓到了多少种不同的蜥蜴，每一种蜥蜴各抓了多少只。所以，求求你啦！帮帮可莉吧！\n\n\n![%OP~O2@A{2CY3WWAX5C1OWF.png](~/79b84ef1-f373-4ecc-a6a3-9e25f2063cc3.png)\n\n可莉一共抓到了n只蜥蜴，分别编号1~n，但她不知道每只蜥蜴的具体种类。派蒙作为你的好向导，告诉你了m条信息，每条信息可以知道其中哪两只蜥蜴属于同一种类，但十分聪明的派蒙算不出来蜥蜴的种类数和每种蜥蜴的具体数量，所以就交给非常聪明的你了！\n\n\n### 输入格式:\n\n第一行有n，m两个正整数，n为可莉今天抓到的蜥蜴总数，m为信息的数量。($$1≤n,m≤10^5$$ )\n\n接下来m行，每行两个正整数a，b，表示第a只蜥蜴与第b只蜥蜴属于同一类别。\n\n### 输出格式:\n\n第一行输出一个正整数sum，表示抓到的蜥蜴种数。\n\n第二行有sum个正整数，以**降序**输出每种蜥蜴的数量，两数间使用一个空格隔开，行末没有多余的空格。\n\n### 输入样例:\n\n```in\n6 5\n1 2\n1 3\n1 4\n2 4\n3 5\n```\n\n### 输出样例:\n\n```out\n2\n5 1\n```\n\n### 样例解释:\n\n6只蜥蜴当中，第1,2,3,4,5只蜥蜴属于同一类别，所以共计2类。\n\n按照蜥蜴数量降序排列后，第一类蜥蜴共5只，第二类蜥蜴共1只。\n",
+			"type": "PROGRAMMING",
+			"author": "Chocola",
+			"authorOrganization": {
+				"id": "13",
+				"name": "成都信息工程大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 2,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "1",
+							"name": "数据结构与算法",
+							"isLeaf": false,
+							"enName": "Data Structures and Algorithms"
+						},
+						{
+							"id": "12",
+							"name": "树",
+							"isLeaf": false,
+							"enName": "Trees"
+						},
+						{
+							"id": "23",
+							"name": "并查集",
+							"isLeaf": true,
+							"enName": "Union/Find"
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 68,
+			"problemStatus": "PRIVATE",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1601015996159377408",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "6235ce1a48f35774a205336b",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "GCC",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 1
+				}
+			},
+			"solution": "",
+			"description": "可莉今天抓到了花纹奇怪的蜥蜴，很多很多条！\n\n可莉很想知道她到底抓到了多少种不同的蜥蜴，每一种蜥蜴各抓了多少只。所以，求求你啦！帮帮可莉吧！\n\n\n![%OP~O2@A{2CY3WWAX5C1OWF.png](~/79b84ef1-f373-4ecc-a6a3-9e25f2063cc3.png)\n\n可莉一共抓到了n只蜥蜴，分别编号1~n，但她不知道每只蜥蜴的具体种类。派蒙作为你的好向导，告诉你了m条信息，每条信息可以知道其中哪两只蜥蜴属于同一种类，但十分聪明的派蒙算不出来蜥蜴的种类数和每种蜥蜴的具体数量，所以就交给非常聪明的你了！\n\n\n### 输入格式:\n\n第一行有n，m两个正整数，n为可莉今天抓到的蜥蜴总数，m为信息的数量。($$1≤n,m≤10^5$$ )\n\n接下来m行，每行两个正整数a，b，表示第a只蜥蜴与第b只蜥蜴属于同一类别。\n\n### 输出格式:\n\n第一行输出一个正整数sum，表示抓到的蜥蜴种数。\n\n第二行有sum个正整数，以**降序**输出每种蜥蜴的数量，两数间使用一个空格隔开，行末没有多余的空格。\n\n### 输入样例:\n\n```in\n6 5\n1 2\n1 3\n1 4\n2 4\n3 5\n```\n\n### 输出样例:\n\n```out\n2\n5 1\n```\n\n### 样例解释:\n\n6只蜥蜴当中，第1,2,3,4,5只蜥蜴属于同一类别，所以共计2类。\n\n按照蜥蜴数量降序排列后，第一类蜥蜴共5只，第二类蜥蜴共1只。\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		}
+	]

@@ -65,10 +65,10 @@ const problemConceptSchema = mongoose.Schema({
     concept: String,
     problem: String
 })
-const conceptSchema = mongoose.Schema({
+const conceptTreeSchema = mongoose.Schema({
     id: String,
     name: String,
-    context:Array
+    layout:Number,
 })
 
 const submissionsSchema = mongoose.Schema({
@@ -82,6 +82,7 @@ const Models = {
    
     Concept: mongoose.model('concept', conceptsSchema, 'ent_concept'),
     // UserProblem: mongoose.model('userProblem', userProblemSchema, 'filterDS_user_problem'),
+    ConceptTree: mongoose.model('conceptTree', conceptTreeSchema, 'conceptTree'),
     // ConceptProblem: mongoose.model('conceptProblem', conceptProblemSchema, 'filterDS_concept_problem'),
     ProblemConcept: mongoose.model('problemConcept', problemConceptSchema, 'problem_concept'),
     // Problem:mongoose.model('problem', problemsSchema, 'problems'),

@@ -64,8 +64,8 @@ export default {
     },
     calcNetDataRady(val){
       if(val==3){
-        this.calcNetData();
-        this.getProRel();
+        // this.calcNetData();
+        // this.getProRel();
       }
     },
     type(val) {
@@ -532,8 +532,8 @@ export default {
   created() {
     const _this = this;
     this.$nextTick(() => {
-      _this.calcNetData();
-      _this.updata();
+      // _this.calcNetData();
+      // _this.updata();
 
     });
   },
@@ -542,7 +542,7 @@ export default {
     // _this.tableData.find(function (d) { return d['key'] == 'name' })['value'] = 'Computer Network';
     this.$bus.$on('selectEnt', (val) => {
      _this.curEntId = val;
-     _this.updata();
+    //  _this.updata();
     });
     this.$bus.$on('allProblem', (val) => {
      _this.problemsData = val;

@@ -1,0 +1,2704 @@
+[
+		{
+			"id": "1581529427070414868",
+			"label": "",
+			"score": 15,
+			"problemPoolIndex": 1,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "同sample，m严格小于n/2",
+							"showHint": false,
+							"score": 9,
+							"updateAt": "2015-07-05T18:41:10Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "m==n/2",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2015-07-05T18:41:10Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "m大于n/2，且n-m==1",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2015-07-05T18:41:10Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "n==m",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2015-07-05T18:41:10Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "70",
+			"title": "求组合数",
+			"content": "本题要求编写程序，根据公式$$C^{m}_{n} = \\frac{n!}{m!(n-m)!}$$算出从$$n$$个不同元素中取出$$m$$个元素（$$m\\le n$$）的组合数。\n\n建议定义和调用函数`fact(n)`计算`n!`，其中`n`的类型是`int`，函数类型是`double`。\n\n### 输入格式:\n\n输入在一行中给出两个正整数$$m$$和$$n$$（$$m\\le n$$），以空格分隔。\n\n### 输出格式:\n\n按照格式“result = 组合数计算结果”输出。题目保证结果在`double`类型范围内。\n\n### 输入样例:\n```in\n2 7\n```\n\n### 输出样例:\n```out\nresult = 21\n```",
+			"type": "PROGRAMMING",
+			"author": "颜晖",
+			"authorOrganization": {
+				"id": "2",
+				"name": "浙大城市学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "循环控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "71",
+							"name": "for",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "74",
+							"name": "函数与程序结构",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "75",
+							"name": "函数定义与调用",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 41,
+			"submitCount": 69,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1581529426990723072",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5993fa4493d1de004a0fcb98",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "本题要求编写程序，根据公式$$C^{m}_{n} = \\frac{n!}{m!(n-m)!}$$算出从$$n$$个不同元素中取出$$m$$个元素（$$m\\le n$$）的组合数。\n\n建议定义和调用函数`fact(n)`计算`n!`，其中`n`的类型是`int`，函数类型是`double`。\n\n### 输入格式:\n\n输入在一行中给出两个正整数$$m$$和$$n$$（$$m\\le n$$），以空格分隔。\n\n### 输出格式:\n\n按照格式“result = 组合数计算结果”输出。题目保证结果在`double`类型范围内。\n\n### 输入样例:\n```in\n2 7\n```\n\n### 输出样例:\n```out\nresult = 21\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1581529427070414869",
+			"label": "",
+			"score": 15,
+			"problemPoolIndex": 2,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "sample，N是奇数",
+							"showHint": false,
+							"score": 7,
+							"updateAt": "2015-07-05T20:40:24Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "N是偶数",
+							"showHint": false,
+							"score": 4,
+							"updateAt": "2015-07-05T20:40:24Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "最小奇数",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2015-07-05T20:40:24Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "最小偶数",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2015-07-05T20:40:24Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "5\n",
+							"output": "0.917\n"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "74",
+			"title": "求交错序列前N项和",
+			"content": "本题要求编写程序，计算交错序列 1-2/3+3/5-4/7+5/9-6/11+... 的前N项之和。\n\n### 输入格式:\n\n输入在一行中给出一个正整数N。\n\n### 输出格式:\n\n在一行中输出部分和的值，结果保留三位小数。\n\n### 输入样例:\n```in\n5\n```\n\n### 输出样例:\n```out\n0.917\n```",
+			"type": "PROGRAMMING",
+			"author": "陈建海",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "循环控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "71",
+							"name": "for",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 39,
+			"submitCount": 82,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1581529426990723072",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5993fa4493d1de004a0fcb9c",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 1
+				}
+			},
+			"solution": "",
+			"description": "本题要求编写程序，计算交错序列 1-2/3+3/5-4/7+5/9-6/11+... 的前N项之和。\n\n### 输入格式:\n\n输入在一行中给出一个正整数N。\n\n### 输出格式:\n\n在一行中输出部分和的值，结果保留三位小数。\n\n### 输入样例:\n```in\n5\n```\n\n### 输出样例:\n```out\n0.917\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1581529427070414870",
+			"label": "",
+			"score": 15,
+			"problemPoolIndex": 3,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "同sample",
+							"showHint": false,
+							"score": 9,
+							"updateAt": "2015-07-05T21:01:33Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "最小N",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2015-07-05T21:01:33Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "较大N",
+							"showHint": false,
+							"score": 4,
+							"updateAt": "2015-07-05T21:01:33Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "75",
+			"title": "求平方根序列前N项和",
+			"content": "本题要求编写程序，计算平方根序列$$\\sqrt{1} + \\sqrt{2} + \\sqrt{3} + \\cdots$$的前N项之和。可包含头文件`math.h`，并调用`sqrt`函数求平方根。\n\n### 输入格式:\n\n输入在一行中给出一个正整数N。\n\n### 输出格式:\n\n在一行中按照“sum = S”的格式输出部分和的值S，精确到小数点后两位。题目保证计算结果不超过双精度范围。\n\n### 输入样例:\n```in\n10\n```\n\n### 输出样例:\n```out\nsum = 22.47\n```",
+			"type": "PROGRAMMING",
+			"author": "颜晖",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "循环控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "71",
+							"name": "for",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 39,
+			"submitCount": 69,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1581529426990723072",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5993fa4493d1de004a0fcb9d",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "本题要求编写程序，计算平方根序列$$\\sqrt{1} + \\sqrt{2} + \\sqrt{3} + \\cdots$$的前N项之和。可包含头文件`math.h`，并调用`sqrt`函数求平方根。\n\n### 输入格式:\n\n输入在一行中给出一个正整数N。\n\n### 输出格式:\n\n在一行中按照“sum = S”的格式输出部分和的值S，精确到小数点后两位。题目保证计算结果不超过双精度范围。\n\n### 输入样例:\n```in\n10\n```\n\n### 输出样例:\n```out\nsum = 22.47\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1581529427070414871",
+			"label": "",
+			"score": 15,
+			"problemPoolIndex": 4,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "同sample",
+							"showHint": false,
+							"score": 9,
+							"updateAt": "2015-07-05T21:07:54Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "N最小",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2015-07-05T21:07:54Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "N最大",
+							"showHint": false,
+							"score": 4,
+							"updateAt": "2015-07-05T21:07:54Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "76",
+			"title": "求阶乘序列前N项和",
+			"content": "本题要求编写程序，计算序列 $$1! + 2! + 3! + \\cdots$$ 的前N项之和。\n\n### 输入格式:\n\n输入在一行中给出一个不超过12的正整数N。\n\n### 输出格式:\n\n在一行中输出整数结果。\n\n### 输入样例:\n```in\n5\n```\n\n### 输出样例:\n```out\n153\n```",
+			"type": "PROGRAMMING",
+			"author": "C课程组",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "循环控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "71",
+							"name": "for",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 39,
+			"submitCount": 51,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1581529426990723072",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5993fa4493d1de004a0fcb9e",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "本题要求编写程序，计算序列 $$1! + 2! + 3! + \\cdots$$ 的前N项之和。\n\n### 输入格式:\n\n输入在一行中给出一个不超过12的正整数N。\n\n### 输出格式:\n\n在一行中输出整数结果。\n\n### 输入样例:\n```in\n5\n```\n\n### 输出样例:\n```out\n153\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1581529427070414872",
+			"label": "",
+			"score": 15,
+			"problemPoolIndex": 5,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "sample等价，有大于、等于、小于60分",
+							"showHint": false,
+							"score": 9,
+							"updateAt": "2015-07-08T12:52:29Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "人数较多，但没有人及格",
+							"showHint": false,
+							"score": 4,
+							"updateAt": "2015-07-08T12:52:29Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "没有学生",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2015-07-08T12:52:29Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "78",
+			"title": "统计学生平均成绩与及格人数",
+			"content": "本题要求编写程序，计算学生们的平均成绩，并统计及格（成绩不低于60分）的人数。题目保证输入与输出均在整型范围内。\n\n### 输入格式:\n\n输入在第一行中给出非负整数N，即学生人数。第二行给出N个非负整数，即这N位学生的成绩，其间以空格分隔。 \n\n### 输出格式:\n\n按照以下格式输出：\n```\naverage = 成绩均值\ncount = 及格人数\n```\n其中平均值精确到小数点后一位。 \n\n### 输入样例:\n```in\n5\n77 54 92 73 60\n```\n\n### 输出样例:\n```out\naverage = 71.2\ncount = 4\n```",
+			"type": "PROGRAMMING",
+			"author": "C课程组",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "67",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "68",
+							"name": "if-else",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "循环控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "71",
+							"name": "for",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 36,
+			"submitCount": 177,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1581529426990723072",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5993fa4493d1de004a0fcba0",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "本题要求编写程序，计算学生们的平均成绩，并统计及格（成绩不低于60分）的人数。题目保证输入与输出均在整型范围内。\n\n### 输入格式:\n\n输入在第一行中给出非负整数N，即学生人数。第二行给出N个非负整数，即这N位学生的成绩，其间以空格分隔。 \n\n### 输出格式:\n\n按照以下格式输出：\n```\naverage = 成绩均值\ncount = 及格人数\n```\n其中平均值精确到小数点后一位。 \n\n### 输入样例:\n```in\n5\n77 54 92 73 60\n```\n\n### 输出样例:\n```out\naverage = 71.2\ncount = 4\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1581529427070414873",
+			"label": "",
+			"score": 15,
+			"problemPoolIndex": 6,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "sample 四种类型全有，数字和字母取边界",
+							"showHint": false,
+							"score": 7,
+							"updateAt": "2015-07-08T13:02:51Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "10个回车",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2015-07-08T13:02:51Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "10个数字有重复",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2015-07-08T13:02:51Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "10个字母有重复",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2015-07-08T13:02:51Z",
+							"isPublic": false
+						},
+						"4": {
+							"hint": "其他字符的边界",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2015-07-08T13:02:51Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "79",
+			"title": "统计字符",
+			"content": "本题要求编写程序，输入10个字符，统计其中英文字母、空格或回车、数字字符和其他字符的个数。\n\n### 输入格式:\n\n输入为10个字符。最后一个回车表示输入结束，不算在内。\n\n### 输出格式:\n\n在一行内按照\n```\nletter = 英文字母个数, blank = 空格或回车个数, digit = 数字字符个数, other = 其他字符个数\n```\n的格式输出。\n\n### 输入样例:\n```in\naZ &\n09 Az\n```\n\n### 输出样例:\n```out\nletter = 4, blank = 3, digit = 2, other = 1\n```",
+			"type": "PROGRAMMING",
+			"author": "颜晖",
+			"authorOrganization": {
+				"id": "2",
+				"name": "浙大城市学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "67",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "68",
+							"name": "if-else",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "循环控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "71",
+							"name": "for",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 40,
+			"submitCount": 102,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1581529426990723072",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5993fa4493d1de004a0fcba1",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "本题要求编写程序，输入10个字符，统计其中英文字母、空格或回车、数字字符和其他字符的个数。\n\n### 输入格式:\n\n输入为10个字符。最后一个回车表示输入结束，不算在内。\n\n### 输出格式:\n\n在一行内按照\n```\nletter = 英文字母个数, blank = 空格或回车个数, digit = 数字字符个数, other = 其他字符个数\n```\n的格式输出。\n\n### 输入样例:\n```in\naZ &\n09 Az\n```\n\n### 输出样例:\n```out\nletter = 4, blank = 3, digit = 2, other = 1\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1581529427070414874",
+			"label": "",
+			"score": 15,
+			"problemPoolIndex": 7,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "sample 1 正常的21世纪年份，正好截止到某闰年",
+							"showHint": false,
+							"score": 7,
+							"updateAt": "2015-08-03T13:04:09Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "sample 2 小于2001 非21世纪的年份",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2015-08-03T13:04:09Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "21世纪所有的年份",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2015-08-03T13:04:09Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "超过21世纪上界的年份",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2015-08-03T13:04:09Z",
+							"isPublic": false
+						},
+						"4": {
+							"hint": "没有闰年",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2015-08-03T13:04:09Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "80",
+			"title": "输出闰年",
+			"content": "输出21世纪中截止某个年份以来的所有闰年年份。注意：闰年的判别条件是该年年份能被4整除但不能被100整除、或者能被400整除。\n\n### 输入格式:\n\n输入在一行中给出21世纪的某个截止年份。\n\n### 输出格式:\n\n逐行输出满足条件的所有闰年年份，即每个年份占一行。输入若非21世纪的年份则输出\"Invalid year!\"。若不存在任何闰年，则输出“None”。\n\n### 输入样例1:\n```in\n2048\n```\n\n### 输出样例1:\n```out\n2004\n2008\n2012\n2016\n2020\n2024\n2028\n2032\n2036\n2040\n2044\n2048\n```\n\n### 输入样例2:\n```\n2000\n```\n\n### 输出样例2:\n```\nInvalid year!\n```",
+			"type": "PROGRAMMING",
+			"author": "陈建海",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "67",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "68",
+							"name": "if-else",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "循环控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "71",
+							"name": "for",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 42,
+			"submitCount": 149,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1581529426990723072",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5993fa4493d1de004a0fcba2",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "输出21世纪中截止某个年份以来的所有闰年年份。注意：闰年的判别条件是该年年份能被4整除但不能被100整除、或者能被400整除。\n\n### 输入格式:\n\n输入在一行中给出21世纪的某个截止年份。\n\n### 输出格式:\n\n逐行输出满足条件的所有闰年年份，即每个年份占一行。输入若非21世纪的年份则输出\"Invalid year!\"。若不存在任何闰年，则输出“None”。\n\n### 输入样例1:\n```in\n2048\n```\n\n### 输出样例1:\n```out\n2004\n2008\n2012\n2016\n2020\n2024\n2028\n2032\n2036\n2040\n2044\n2048\n```\n\n### 输入样例2:\n```\n2000\n```\n\n### 输出样例2:\n```\nInvalid year!\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1581529427070414875",
+			"label": "",
+			"score": 15,
+			"problemPoolIndex": 8,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "同sample，有分数段为0",
+							"showHint": false,
+							"score": 9,
+							"updateAt": "2015-07-08T15:19:17Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "最小N，最小分数",
+							"showHint": false,
+							"score": 3,
+							"updateAt": "2015-07-08T15:19:17Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "最大随机N，各个分数段全有，有最大100分",
+							"showHint": false,
+							"score": 3,
+							"updateAt": "2015-07-08T15:19:17Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "86",
+			"title": "统计学生成绩",
+			"content": "本题要求编写程序读入N个学生的百分制成绩，统计五分制成绩的分布。百分制成绩到五分制成绩的转换规则：\n\n- 大于等于90分为A；\n- 小于90且大于等于80为B；\n- 小于80且大于等于70为C；\n- 小于70且大于等于60为D；\n- 小于60为E。\n\n### 输入格式:\n\n输入在第一行中给出一个正整数N（$$\\le$$1000），即学生人数；第二行中给出N个学生的百分制成绩，其间以空格分隔。 \n\n### 输出格式:\n\n在一行中输出A、B、C、D、E对应的五分制成绩的人数分布，数字间以空格分隔，行末不得有多余空格。\n\n### 输入样例:\n```in\n7\n77 54 92 73 60 65 69\n```\n\n### 输出样例:\n```out\n1 0 2 3 1\n```",
+			"type": "PROGRAMMING",
+			"author": "陈建海",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "67",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "69",
+							"name": "switch",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "循环控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "71",
+							"name": "for",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 39,
+			"submitCount": 63,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1581529426990723072",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5993fa4493d1de004a0fcba8",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "本题要求编写程序读入N个学生的百分制成绩，统计五分制成绩的分布。百分制成绩到五分制成绩的转换规则：\n\n- 大于等于90分为A；\n- 小于90且大于等于80为B；\n- 小于80且大于等于70为C；\n- 小于70且大于等于60为D；\n- 小于60为E。\n\n### 输入格式:\n\n输入在第一行中给出一个正整数N（$$\\le$$1000），即学生人数；第二行中给出N个学生的百分制成绩，其间以空格分隔。 \n\n### 输出格式:\n\n在一行中输出A、B、C、D、E对应的五分制成绩的人数分布，数字间以空格分隔，行末不得有多余空格。\n\n### 输入样例:\n```in\n7\n77 54 92 73 60 65 69\n```\n\n### 输出样例:\n```out\n1 0 2 3 1\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1581529427070414876",
+			"label": "",
+			"score": 20,
+			"problemPoolIndex": 9,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "同sample",
+							"showHint": false,
+							"score": 12,
+							"updateAt": "2015-07-14T13:07:07Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "只有1对",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2015-07-14T13:07:07Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "无满足条件",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2015-07-14T13:07:07Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "正好有一对跨界",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2015-07-14T13:07:07Z",
+							"isPublic": false
+						},
+						"4": {
+							"hint": "最大N",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2015-07-14T13:07:07Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "20\n",
+							"output": "4\n"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "296",
+			"title": "素数对猜想",
+			"content": "让我们定义$$d_n$$为：$$d_n = p_{n+1}-p_n$$，其中$$p_i$$是第$$i$$个素数。显然有$$d_1 = 1$$，且对于$$n>1$$有$$d_n$$是偶数。“素数对猜想”认为“存在无穷多对相邻且差为2的素数”。\n\n现给定任意正整数`N`($$<10^5$$)，请计算不超过`N`的满足猜想的素数对的个数。\n\n\n### 输入格式:\n\n输入在一行给出正整数`N`。\n\n### 输出格式:\n\n在一行中输出不超过`N`的满足猜想的素数对的个数。\n\n### 输入样例:\n```in\n20\n```\n\n### 输出样例:\n```out\n4\n```",
+			"type": "PROGRAMMING",
+			"author": "陈越",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 2,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "74",
+							"name": "函数与程序结构",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "75",
+							"name": "函数定义与调用",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 40,
+			"submitCount": 77,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1581529426990723072",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5993fa4593d1de004a0fcbab",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "让我们®ä¹$$d_n$$ä¸ºï¼$$d_n = p_{n+1}-p_n$$ï¼å¶ä¸­$$p_i$$æ¯ç¬¬$$i$$ä¸ªç´ æ°ãæ¾ç¶æ$$d_1 = 1$$ï¼ä¸å¯¹äº$$n>1$$æ$$d_n$$æ¯å¶æ°ãâç´ æ°å¯¹çæ³âè®¤ä¸ºâå­å¨æ ç©·å¤å¯¹ç¸é»ä¸å·®ä¸º2çç´ æ°âã\n\nç°ç»å®ä»»ææ­£æ´æ°`N`($$<10^5$$)ï¼è¯·è®¡ç®ä¸è¶è¿`N`çæ»¡è¶³çæ³çç´ æ°å¯¹çä¸ªæ°ã\n\n\n### è¾å¥æ ¼å¼:\n\nè¾å¥å¨ä¸è¡ç»åºæ­£æ´æ°`N`ã\n\n### è¾åºæ ¼å¼:\n\nå¨ä¸è¡ä¸­è¾åºä¸è¶è¿`N`çæ»¡è¶³çæ³çç´ æ°å¯¹çä¸ªæ°ã\n\n### è¾å¥æ ·ä¾:\n```in\n20\n```\n\n### è¾åºæ ·ä¾:\n```out\n4\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1581529427070414877",
+			"label": "",
+			"score": 20,
+			"problemPoolIndex": 10,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "è·sampleå®å¨ä¸æ ·ï¼è¶è¿longï¼ä½unsigned longå¯ä»¥ï¼æ2ä¸ªéå¤æ°å­",
+							"showHint": false,
+							"score": 3,
+							"updateAt": "2015-07-14T13:22:19Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "longå¯ä»¥ï¼ç­æ¡æ¯Noï¼ä½æ°ä¸å¹é",
+							"showHint": false,
+							"score": 5,
+							"updateAt": "2015-07-14T13:22:19Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "10ä¸ªæ°å­å¨åºç°ï¼unsigned longå¯ä»¥ï¼ç­æ¡Yes",
+							"showHint": false,
+							"score": 5,
+							"updateAt": "2015-07-14T13:22:19Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "è¶è¿unsigned longï¼è¾å¥ä¸­ææ°å­ä¸å¨ç»æä¸­ï¼ä½ç»ææ°å­é½å¨è¾å¥é",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2015-07-14T13:22:19Z",
+							"isPublic": false
+						},
+						"4": {
+							"hint": "æé¿ä¸²ï¼10ä¸ªæ°å­å¨åºç°",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2015-07-14T13:22:19Z",
+							"isPublic": false
+						},
+						"5": {
+							"hint": "æé¿ä¸²å¨æ¯9",
+							"showHint": false,
+							"score": 3,
+							"updateAt": "2015-07-14T13:22:19Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "298",
+			"title": "Have Fun with Numbers",
+			"content": "Notice that the number 123456789 is a 9-digit number consisting exactly the numbers from 1 to 9, with no duplication.  Double it we will obtain 246913578, which happens to be another 9-digit number consisting exactly the numbers from 1 to 9, only in a different permutation.  Check to see the result if we double it again!\n\nNow you are suppose to check if there are more numbers with this property.  That is, double a given number with $$k$$ digits, you are to tell if the resulting number consists of only a permutation of the digits in the original number.\n\n### Input Specification:\n\nEach input contains one test case.  Each case contains one positive integer with no more than 20 digits.\n\n### Output Specification:\n\nFor each test case, first print in a line \"Yes\" if doubling the input number gives a number that consists of only a permutation of the digits in the original number, or \"No\" if not.  Then in the next line, print the doubled number.\n\n### Sample Input:\n```in\n1234567899\n```\n\n### Sample Output:\n```out\nYes\n2469135798\n```",
+			"type": "PROGRAMMING",
+			"author": "éè¶",
+			"authorOrganization": {
+				"id": "1",
+				"name": "æµæ±å¤§å­¦",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 2,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "Cç¨åºè®¾è®¡",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "å¾ªç¯æ§å¶",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "71",
+							"name": "for",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "Cç¨åºè®¾è®¡",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "74",
+							"name": "å½æ°ä¸ç¨åºç»æ",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "75",
+							"name": "å½æ°å®ä¹ä¸è°ç¨",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 39,
+			"submitCount": 190,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1581529426990723072",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5993fa4593d1de004a0fcbad",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "Notice that the number 123456789 is a 9-digit number consisting exactly the numbers from 1 to 9, with no duplication.  Double it we will obtain 246913578, which happens to be another 9-digit number consisting exactly the numbers from 1 to 9, only in a different permutation.  Check to see the result if we double it again!\n\nNow you are suppose to check if there are more numbers with this property.  That is, double a given number with $$k$$ digits, you are to tell if the resulting number consists of only a permutation of the digits in the original number.\n\n### Input Specification:\n\nEach input contains one test case.  Each case contains one positive integer with no more than 20 digits.\n\n### Output Specification:\n\nFor each test case, first print in a line \"Yes\" if doubling the input number gives a number that consists of only a permutation of the digits in the original number, or \"No\" if not.  Then in the next line, print the doubled number.\n\n### Sample Input:\n```in\n1234567899\n```\n\n### Sample Output:\n```out\nYes\n2469135798\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1581529427070414878",
+			"label": "",
+			"score": 15,
+			"problemPoolIndex": 11,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "sampleç­ä»·ï¼è´æ°ç»å°¾",
+							"showHint": false,
+							"score": 9,
+							"updateAt": "2015-07-18T14:24:29Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "ä»¥0ç»å°¾",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2015-07-18T14:24:29Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "å¨å¶æ°ï¼-2ç»å°¾",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2015-07-18T14:24:29Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "è¾å¤§è§æ¨¡æ°æ®",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2015-07-18T14:24:29Z",
+							"isPublic": false
+						},
+						"4": {
+							"hint": "ç©ºé",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2015-07-18T14:24:29Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "368",
+			"title": "æ±å¥æ°å",
+			"content": "æ¬é¢è¦æ±è®¡ç®ç»å®çä¸ç³»åæ­£æ´æ°ä¸­å¥æ°çåã\n\n### è¾å¥æ ¼å¼:\n\nè¾å¥å¨ä¸è¡ä¸­ç»åºä¸ç³»åæ­£æ´æ°ï¼å¶é´ä»¥ç©ºæ ¼åéãå½è¯»å°é¶æè´æ´æ°æ¶ï¼è¡¨ç¤ºè¾å¥ç»æï¼è¯¥æ°å­ä¸è¦å¤çã\n\n### è¾åºæ ¼å¼:\n\nå¨ä¸è¡ä¸­è¾åºæ­£æ´æ°åºåä¸­å¥æ°çåã\n\n### è¾å¥æ ·ä¾:\n```in\n8 7 4 3 70 5 6 101 -1\n```\n\n### è¾åºæ ·ä¾:\n```out\n116\n```",
+			"type": "PROGRAMMING",
+			"author": "Cè¯¾ç¨ç»",
+			"authorOrganization": {
+				"id": "1",
+				"name": "æµæ±å¤§å­¦",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "Cç¨åºè®¾è®¡",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "å¾ªç¯æ§å¶",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "72",
+							"name": "whileådo-while",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 41,
+			"submitCount": 68,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1581529426990723072",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5993fa4693d1de004a0fcbf3",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "æ¬é¢è¦æ±è®¡ç®ç»å®çä¸ç³»åæ­£æ´æ°ä¸­å¥æ°çåã\n\n### è¾å¥æ ¼å¼:\n\nè¾å¥å¨ä¸è¡ä¸­ç»åºä¸ç³»åæ­£æ´æ°ï¼å¶é´ä»¥ç©ºæ ¼åéãå½è¯»å°é¶æè´æ´æ°æ¶ï¼è¡¨ç¤ºè¾å¥ç»æï¼è¯¥æ°å­ä¸è¦å¤çã\n\n### è¾åºæ ¼å¼:\n\nå¨ä¸è¡ä¸­è¾åºæ­£æ´æ°åºåä¸­å¥æ°çåã\n\n### è¾å¥æ ·ä¾:\n```in\n8 7 4 3 70 5 6 101 -1\n```\n\n### è¾åºæ ·ä¾:\n```out\n116\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1581529427070414879",
+			"label": "",
+			"score": 15,
+			"problemPoolIndex": 12,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "sampleç­ä»·",
+							"showHint": false,
+							"score": 11,
+							"updateAt": "2015-08-04T17:40:32Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "æå°n",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2015-08-04T17:40:32Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "æå¤§n",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2015-08-04T17:40:32Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "491",
+			"title": "æ±å¹ä¹å",
+			"content": "æ¬é¢è¦æ±ç¼åç¨åºï¼è®¡ç®$$sum=2^1 + 2^2 + 2^3 + \\cdots + 2^n$$ãå¯ä»¥è°ç¨powå½æ°æ±å¹ã\n\n### è¾å¥æ ¼å¼:\n\nè¾å¥å¨ä¸è¡ä¸­ç»åºæ­£æ´æ°$$n$$ï¼$$\\le$$10ï¼ã\n\n### è¾åºæ ¼å¼:\n\næç§æ ¼å¼âresult = è®¡ç®ç»æâè¾åºã\n\n### è¾å¥æ ·ä¾:\n```in\n5\n```\n\n### è¾åºæ ·ä¾:\n```out\nresult = 62\n```",
+			"type": "PROGRAMMING",
+			"author": "é¢æ",
+			"authorOrganization": {
+				"id": "2",
+				"name": "æµå¤§åå¸å­¦é¢",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "Cç¨åºè®¾è®¡",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "74",
+							"name": "å½æ°ä¸ç¨åºç»æ",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "75",
+							"name": "å½æ°å®ä¹ä¸è°ç¨",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "Cç¨åºè®¾è®¡",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "å¾ªç¯æ§å¶",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "71",
+							"name": "for",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 40,
+			"submitCount": 51,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1581529426990723072",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5993fa4793d1de004a0fcc6e",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "æ¬é¢è¦æ±ç¼åç¨åºï¼è®¡ç®$$sum=2^1 + 2^2 + 2^3 + \\cdots + 2^n$$ãå¯ä»¥è°ç¨powå½æ°æ±å¹ã\n\n### è¾å¥æ ¼å¼:\n\nè¾å¥å¨ä¸è¡ä¸­ç»åºæ­£æ´æ°$$n$$ï¼$$\\le$$10ï¼ã\n\n### è¾åºæ ¼å¼:\n\næç§æ ¼å¼âresult = è®¡ç®ç»æâè¾åºã\n\n### è¾å¥æ ·ä¾:\n```in\n5\n```\n\n### è¾åºæ ·ä¾:\n```out\nresult = 62\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1581529427070414880",
+			"label": "",
+			"score": 20,
+			"problemPoolIndex": 13,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "sampleç­ä»·ï¼åè§£ä¸å¯ä¸",
+							"showHint": false,
+							"score": 10,
+							"updateAt": "2015-08-04T20:06:45Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "æå°N",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2015-08-04T20:06:45Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "æå¤§N",
+							"showHint": false,
+							"score": 4,
+							"updateAt": "2015-08-04T20:06:45Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "pæ¯è¾å¤§",
+							"showHint": false,
+							"score": 4,
+							"updateAt": "2015-08-04T20:06:45Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "497",
+			"title": "éªè¯âå¥å¾·å·´èµ«çæ³â",
+			"content": "æ°å­¦é¢åèåçâå¥å¾·å·´èµ«çæ³âçå¤§è´æææ¯ï¼ä»»ä½ä¸ä¸ªå¤§äº2çå¶æ°æ»è½è¡¨ç¤ºä¸ºä¸¤ä¸ªç´ æ°ä¹åãæ¯å¦ï¼24=5+19ï¼å¶ä¸­5å19é½æ¯ç´ æ°ãæ¬å®éªçä»»å¡æ¯è®¾è®¡ä¸ä¸ªç¨åºï¼éªè¯20äº¿ä»¥åçå¶æ°é½å¯ä»¥åè§£æä¸¤ä¸ªç´ æ°ä¹åã\n\n### è¾å¥æ ¼å¼ï¼\n\nè¾å¥å¨ä¸è¡ä¸­ç»åºä¸ä¸ª(2, 2 000 000 000]èå´åçå¶æ°Nã\n\n### è¾åºæ ¼å¼ï¼\n\nå¨ä¸è¡ä¸­æç§æ ¼å¼âN = p + qâè¾åºNçç´ æ°åè§£ï¼å¶ä¸­p $$\\le$$ qåä¸ºç´ æ°ãåå ä¸ºè¿æ ·çåè§£ä¸å¯ä¸ï¼ä¾å¦24è¿å¯ä»¥åè§£ä¸º7+17ï¼ï¼è¦æ±å¿é¡»è¾åºææè§£ä¸­pæå°çè§£ã\n\n### è¾å¥æ ·ä¾ï¼\n```in\n24\n```\n\n### è¾åºæ ·ä¾ï¼\n```out\n24 = 5 + 19\n```",
+			"type": "PROGRAMMING",
+			"author": "å¾éæ¥",
+			"authorOrganization": {
+				"id": "1",
+				"name": "æµæ±å¤§å­¦",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 2,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "Cç¨åºè®¾è®¡",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "å¾ªç¯æ§å¶",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "71",
+							"name": "for",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "Cç¨åºè®¾è®¡",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "74",
+							"name": "å½æ°ä¸ç¨åºç»æ",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "75",
+							"name": "å½æ°å®ä¹ä¸è°ç¨",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 40,
+			"submitCount": 124,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1581529426990723072",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5993fa4793d1de004a0fcc74",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "æ°å­¦é¢åèåçâå¥å¾·å·´èµ«çæ³âçå¤§è´æææ¯ï¼ä»»ä½ä¸ä¸ªå¤§äº2çå¶æ°æ»è½è¡¨ç¤ºä¸ºä¸¤ä¸ªç´ æ°ä¹åãæ¯å¦ï¼24=5+19ï¼å¶ä¸­5å19é½æ¯ç´ æ°ãæ¬å®éªçä»»å¡æ¯è®¾è®¡ä¸ä¸ªç¨åºï¼éªè¯20äº¿ä»¥åçå¶æ°é½å¯ä»¥åè§£æä¸¤ä¸ªç´ æ°ä¹åã\n\n### è¾å¥æ ¼å¼ï¼\n\nè¾å¥å¨ä¸è¡ä¸­ç»åºä¸ä¸ª(2, 2 000 000 000]èå´åçå¶æ°Nã\n\n### è¾åºæ ¼å¼ï¼\n\nå¨ä¸è¡ä¸­æç§æ ¼å¼âN = p + qâè¾åºNçç´ æ°åè§£ï¼å¶ä¸­p $$\\le$$ qåä¸ºç´ æ°ãåå ä¸ºè¿æ ·çåè§£ä¸å¯ä¸ï¼ä¾å¦24è¿å¯ä»¥åè§£ä¸º7+17ï¼ï¼è¦æ±å¿é¡»è¾åºææè§£ä¸­pæå°çè§£ã\n\n### è¾å¥æ ·ä¾ï¼\n```in\n24\n```\n\n### è¾åºæ ·ä¾ï¼\n```out\n24 = 5 + 19\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1581529427070414881",
+			"label": "",
+			"score": 15,
+			"problemPoolIndex": 14,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "sampleç­ä»·",
+							"showHint": false,
+							"score": 9,
+							"updateAt": "2015-08-05T14:14:26Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "epsè¾å°",
+							"showHint": false,
+							"score": 3,
+							"updateAt": "2015-08-05T14:14:26Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "epsè¾å¤§ï¼åªåç¬¬1é¡¹",
+							"showHint": false,
+							"score": 3,
+							"updateAt": "2015-08-05T14:14:26Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "509",
+			"title": "è¿ä¼¼æ±PI",
+			"content": "æ¬é¢è¦æ±ç¼åç¨åºï¼æ ¹æ®ä¸å¼æ±$$\\pi$$çè¿ä¼¼å¼ï¼ç´å°æåä¸é¡¹å°äºç»å®ç²¾åº¦epsã\n\n$$\\frac{\\pi}{2}=1+\\frac{1!}{3}+\\frac{2!}{3\\times 5} + \\frac{3!}{3\\times 5\\times 7}+ \\cdots +\\frac{i!}{3\\times 5\\times \\cdots \\times (2\\times i+1)}+ \\cdots$$\n\n### è¾å¥æ ¼å¼ï¼\n\nè¾å¥å¨ä¸è¡ä¸­ç»åºç²¾åº¦epsï¼å¯ä»¥ä½¿ç¨ä»¥ä¸è¯­å¥æ¥è¯»è¾å¥ï¼\n```c++\nscanf(\"%le\", &eps);\n```\n\n### è¾åºæ ¼å¼ï¼\n\nå¨ä¸è¡åï¼æç§ä»¥ä¸æ ¼å¼è¾åº$$\\pi$$çè¿ä¼¼å¼ï¼ä¿çå°æ°ç¹å5ä½ï¼ï¼\n\n```\nPI = è¿ä¼¼å¼\n```\n\n### è¾å¥æ ·ä¾ï¼\n```in\n1E-5\n```\n\n### è¾åºæ ·ä¾ï¼\n```out\nPI = 3.14158\n```",
+			"type": "PROGRAMMING",
+			"author": "å¼ é«ç",
+			"authorOrganization": {
+				"id": "2",
+				"name": "æµå¤§åå¸å­¦é¢",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "Cç¨åºè®¾è®¡",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "74",
+							"name": "å½æ°ä¸ç¨åºç»æ",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "75",
+							"name": "å½æ°å®ä¹ä¸è°ç¨",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "Cç¨åºè®¾è®¡",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "å¾ªç¯æ§å¶",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "71",
+							"name": "for",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 48,
+			"submitCount": 205,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1581529426990723072",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5993fa4793d1de004a0fcc80",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "æ¬é¢è¦æ±ç¼åç¨åºï¼æ ¹æ®ä¸å¼æ±$$\\pi$$çè¿ä¼¼å¼ï¼ç´å°æåä¸é¡¹å°äºç»å®ç²¾åº¦epsã\n\n$$\\frac{\\pi}{2}=1+\\frac{1!}{3}+\\frac{2!}{3\\times 5} + \\frac{3!}{3\\times 5\\times 7}+ \\cdots +\\frac{i!}{3\\times 5\\times \\cdots \\times (2\\times i+1)}+ \\cdots$$\n\n### è¾å¥æ ¼å¼ï¼\n\nè¾å¥å¨ä¸è¡ä¸­ç»åºç²¾åº¦epsï¼å¯ä»¥ä½¿ç¨ä»¥ä¸è¯­å¥æ¥è¯»è¾å¥ï¼\n```c++\nscanf(\"%le\", &eps);\n```\n\n### è¾åºæ ¼å¼ï¼\n\nå¨ä¸è¡åï¼æç§ä»¥ä¸æ ¼å¼è¾åº$$\\pi$$çè¿ä¼¼å¼ï¼ä¿çå°æ°ç¹å5ä½ï¼ï¼\n\n```\nPI = è¿ä¼¼å¼\n```\n\n### è¾å¥æ ·ä¾ï¼\n```in\n1E-5\n```\n\n### è¾åºæ ·ä¾ï¼\n```out\nPI = 3.14158\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1581529427070414882",
+			"label": "",
+			"score": 20,
+			"problemPoolIndex": 15,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "sampleç­ä»·ï¼è®¡ç®1å3ï¼0ç»å°¾",
+							"showHint": false,
+							"score": 10,
+							"updateAt": "2015-08-12T17:51:20Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "è®¡ç®2ï¼è´æ°ç»å°¾",
+							"showHint": false,
+							"score": 4,
+							"updateAt": "2015-08-12T17:51:20Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "åå¤è°ç¨3ç§è®¡ç®ï¼å¤§äº3ç»å°¾",
+							"showHint": false,
+							"score": 4,
+							"updateAt": "2015-08-12T17:51:20Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "ç´æ¥éåº",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2015-08-12T17:51:20Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "538",
+			"title": "åå½¢ä½ä½ç§¯è®¡ç®å¨",
+			"content": "æ¬é¢è¦æ±å®ç°ä¸ä¸ªå¸¸ç¨åå½¢ä½ä½ç§¯çè®¡ç®å¨ãè®¡ç®å¬å¼å¦ä¸ï¼\n\n- çä½ä½ç§¯ $$V = \\frac{4}{3} \\pi r^3$$ï¼å¶ä¸­$$r$$æ¯çä½åå¾ã\n- åæ±ä½ä½ç§¯ $$V = \\pi r^2 h$$ï¼å¶ä¸­$$r$$æ¯åºååå¾ï¼$$h$$æ¯é«ã\n- åé¥ä½ä½ç§¯ $$V = \\frac{1}{3}\\pi r^2 h$$ï¼å¶ä¸­$$r$$æ¯åºååå¾ï¼$$h$$æ¯é«ã\n\n### è¾å¥æ ¼å¼ï¼\n\nå¨æ¯æ¬¡è®¡ç®ä¹åï¼è¦æ±è¾åºå¦ä¸çé¢ï¼\n```\n1-Ball\n2-Cylinder\n3-Cone\nother-Exit\nPlease enter your command:\n```\nç¶åä»æ åè¾å¥è¯»è¿ä¸ä¸ªæ´æ°æä»¤ã\n\n### è¾åºæ ¼å¼ï¼\n\nå¦æè¯»å¥çæä»¤æ¯1æ2æ3ï¼åæ§è¡ç¸åºçä½ç§¯è®¡ç®ï¼å¦ææ¯å¶ä»æ´æ°ï¼åç¨åºç»æè¿è¡ã\n\n- å½è¾å¥ä¸º1æ¶ï¼å¨è®¡ç®çä½ä½ç§¯ä¹åï¼æå°`Please enter the radius:`ï¼ç¶åè¯»å¥çä½åå¾ï¼å®æè®¡ç®ï¼\n- å½è¾å¥ä¸º2æ¶ï¼å¨è®¡ç®åæ±ä½ä½ç§¯ä¹åï¼æå°`Please enter the radius and the height:`ï¼ç¶åè¯»å¥åºååå¾åé«ï¼å®æè®¡ç®ï¼\n- å½è¾å¥ä¸º3æ¶ï¼å¨è®¡ç®åé¥ä½ä½ç§¯ä¹åï¼æå°`Please enter the radius and the height:`ï¼ç¶åè¯»å¥åºååå¾åé«ï¼å®æè®¡ç®ã\n\nè®¡ç®ç»æå¨ä¸è¡åè¾åºï¼ä¿çå°æ°ç¹åä¸¤ä½ã\n\n### è¾å¥æ ·ä¾ï¼\n```in\n1\n2\n3\n2.4 3\n0\n```\n\n### è¾åºæ ·ä¾ï¼\n```out\n1-Ball\n2-Cylinder\n3-Cone\nother-Exit\nPlease enter your command:\nPlease enter the radius:\n33.51\n1-Ball\n2-Cylinder\n3-Cone\nother-Exit\nPlease enter your command:\nPlease enter the radius and the height:\n18.10\n1-Ball\n2-Cylinder\n3-Cone\nother-Exit\nPlease enter your command:\n```",
+			"type": "PROGRAMMING",
+			"author": "å¼ é«ç",
+			"authorOrganization": {
+				"id": "1",
+				"name": "æµæ±å¤§å­¦",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 2,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "Cç¨åºè®¾è®¡",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "74",
+							"name": "å½æ°ä¸ç¨åºç»æ",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "75",
+							"name": "å½æ°å®ä¹ä¸è°ç¨",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 45,
+			"submitCount": 176,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1581529426990723072",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5993fa4793d1de004a0fcc9d",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "æ¬é¢è¦æ±å®ç°ä¸ä¸ªå¸¸ç¨åå½¢ä½ä½ç§¯çè®¡ç®å¨ãè®¡ç®å¬å¼å¦ä¸ï¼\n\n- çä½ä½ç§¯ $$V = \\frac{4}{3} \\pi r^3$$ï¼å¶ä¸­$$r$$æ¯çä½åå¾ã\n- åæ±ä½ä½ç§¯ $$V = \\pi r^2 h$$ï¼å¶ä¸­$$r$$æ¯åºååå¾ï¼$$h$$æ¯é«ã\n- åé¥ä½ä½ç§¯ $$V = \\frac{1}{3}\\pi r^2 h$$ï¼å¶ä¸­$$r$$æ¯åºååå¾ï¼$$h$$æ¯é«ã\n\n### è¾å¥æ ¼å¼ï¼\n\nå¨æ¯æ¬¡è®¡ç®ä¹åï¼è¦æ±è¾åºå¦ä¸çé¢ï¼\n```\n1-Ball\n2-Cylinder\n3-Cone\nother-Exit\nPlease enter your command:\n```\nç¶åä»æ åè¾å¥è¯»è¿ä¸ä¸ªæ´æ°æä»¤ã\n\n### è¾åºæ ¼å¼ï¼\n\nå¦æè¯»å¥çæä»¤æ¯1æ2æ3ï¼åæ§è¡ç¸åºçä½ç§¯è®¡ç®ï¼å¦ææ¯å¶ä»æ´æ°ï¼åç¨åºç»æè¿è¡ã\n\n- å½è¾å¥ä¸º1æ¶ï¼å¨è®¡ç®çä½ä½ç§¯ä¹åï¼æå°`Please enter the radius:`ï¼ç¶åè¯»å¥çä½åå¾ï¼å®æè®¡ç®ï¼\n- å½è¾å¥ä¸º2æ¶ï¼å¨è®¡ç®åæ±ä½ä½ç§¯ä¹åï¼æå°`Please enter the radius and the height:`ï¼ç¶åè¯»å¥åºååå¾åé«ï¼å®æè®¡ç®ï¼\n- å½è¾å¥ä¸º3æ¶ï¼å¨è®¡ç®åé¥ä½ä½ç§¯ä¹åï¼æå°`Please enter the radius and the height:`ï¼ç¶åè¯»å¥åºååå¾åé«ï¼å®æè®¡ç®ã\n\nè®¡ç®ç»æå¨ä¸è¡åè¾åºï¼ä¿çå°æ°ç¹åä¸¤ä½ã\n\n### è¾å¥æ ·ä¾ï¼\n```in\n1\n2\n3\n2.4 3\n0\n```\n\n### è¾åºæ ·ä¾ï¼\n```out\n1-Ball\n2-Cylinder\n3-Cone\nother-Exit\nPlease enter your command:\nPlease enter the radius:\n33.51\n1-Ball\n2-Cylinder\n3-Cone\nother-Exit\nPlease enter your command:\nPlease enter the radius and the height:\n18.10\n1-Ball\n2-Cylinder\n3-Cone\nother-Exit\nPlease enter your command:\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1581529427070414883",
+			"label": "",
+			"score": 20,
+			"problemPoolIndex": 16,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "ç­ä»·æ ·ä¾ï¼æææè¿ç®ç¬¦åè´æ°",
+							"showHint": false,
+							"score": 10,
+							"updateAt": "2015-11-01T13:12:22Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "æå°æ°",
+							"showHint": false,
+							"score": 4,
+							"updateAt": "2015-11-01T13:12:22Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "è´æ°å¨èµ·å§ä½ç½®",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2015-11-01T13:12:22Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "å¤éæ¬å·åä»æä¸ä¸ªæä½æ°",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2015-11-01T13:12:22Z",
+							"isPublic": false
+						},
+						"4": {
+							"hint": "æå¤§é¿åº¦ï¼æ­£å·èµ·å§",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2015-11-01T13:12:22Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1117",
+			"title": "ååè¡¨è¾¾å¼ââåä¸ªtokenizerå§",
+			"content": "**[åè¯´ç¹åºé¢èæ¯]**\n\nè¿ä¸ªé¢æ¯ä¸ºä½å¹´çº§åå­¦ãå­¦Cè¯­è¨çåå­¦åå¤çï¼å ä¸ºï¼å¯¹è¿é¨ååå­¦ï¼è¿ä¸ªé¢ç®ç¼åèµ·æ¥ç¥æä¸ç¹å¤æãå¦ææ¯é«å¹´çº§ãå­¦è¿äºæ­£åè¡¨è¾¾å¼ï¼Regular Expressionï¼çåå­¦æèå­¦è¿äºJavaç­OOè¯­è¨çåå­¦åè¿ä¸ªé¢ï¼åºå½åç°è¿é¢æ¯è¾ç®åå§ãå¦ï¼å¯¹äºï¼ä»ä¹æ¯tokenizerï¼è¯·èªè¡æ¥è¯¢è§£å³ãåæ­£å¨æ­¤å¤ä¸åºç¿»è¯æâä»¤çè§£æå¨âã\n\n**[æ­£é¢]**\n\nååè¿ç®è¡¨è¾¾å¼ç±**è¿ç®æ°**ï¼å¿å®åå«`æ°å­`ï¼å¯è½åå«`æ­£æè´ç¬¦å·`ã`å°æ°ç¹`ï¼ã**è¿ç®ç¬¦**ï¼åæ¬`+`ã`-`ã`*`ã`/`ï¼ä»¥åå°æ¬å·ï¼`(`å`)`ï¼ç»æï¼æ¯ä¸ªè¿ç®æ°ãè¿ç®ç¬¦åæ¬å·é½æ¯ä¸ä¸ª*token*ï¼æ è®°ï¼ãç°å¨ï¼å¯¹äºç»å®çä¸ä¸ªååè¿ç®è¡¨è¾¾å¼ï¼è¯·æå¥¹çæ¯ä¸ªtokenåååºæ¥ãé¢ç®ä¿è¯ç»å®çè¡¨è¾¾å¼æ¯æ­£ç¡®çï¼ä¸éè¦åæææ§æ£æ¥ã\n\n\n### è¾å¥æ ¼å¼:\n\nå¨ä¸è¡ä¸­ç»åºé¿åº¦ä¸è¶è¿40ä¸ªå­ç¬¦çè¡¨è¾¾å¼ï¼å¶ä¸­æ²¡æç©ºæ ¼ï¼ä»ç±ä¸æä¸­tokençå­ç¬¦ç»æ\n\n### è¾åºæ ¼å¼:\n\nä¾æ¬¡è¾åºè¡¨è¾¾å¼ä¸­çtokensï¼æ¯ä¸ªtokenå ä¸è¡ã\n\n### è¾å¥æ ·ä¾:\n```in\n32*((2-2)+5)/(-15)\n```\n\n### è¾åºæ ·ä¾:\n```out\n32\n*\n(\n(\n2\n-\n2\n)\n+\n5\n)\n/\n(\n-15\n)\n```",
+			"type": "PROGRAMMING",
+			"author": "å¨å¼º",
+			"authorOrganization": {
+				"id": "19",
+				"name": "éå²å¤§å­¦",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 2,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "Cç¨åºè®¾è®¡",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "74",
+							"name": "å½æ°ä¸ç¨åºç»æ",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "75",
+							"name": "å½æ°å®ä¹ä¸è°ç¨",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "Cç¨åºè®¾è®¡",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "78",
+							"name": "æ°ç»",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "80",
+							"name": "å­ç¬¦ä¸²",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 45,
+			"submitCount": 186,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1581529426990723072",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5993fa4c93d1de004a0fcd34",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "**[åè¯´ç¹åºé¢èæ¯]**\n\nè¿ä¸ªé¢æ¯ä¸ºä½å¹´çº§åå­¦ãå­¦Cè¯­è¨çåå­¦åå¤çï¼å ä¸ºï¼å¯¹è¿é¨ååå­¦ï¼è¿ä¸ªé¢ç®ç¼åèµ·æ¥ç¥æä¸ç¹å¤æãå¦ææ¯é«å¹´çº§ãå­¦è¿äºæ­£åè¡¨è¾¾å¼ï¼Regular Expressionï¼çåå­¦æèå­¦è¿äºJavaç­OOè¯­è¨çåå­¦åè¿ä¸ªé¢ï¼åºå½åç°è¿é¢æ¯è¾ç®åå§ãå¦ï¼å¯¹äºï¼ä»ä¹æ¯tokenizerï¼è¯·èªè¡æ¥è¯¢è§£å³ãåæ­£å¨æ­¤å¤ä¸åºç¿»è¯æâä»¤çè§£æå¨âã\n\n**[æ­£é¢]**\n\nååè¿ç®è¡¨è¾¾å¼ç±**è¿ç®æ°**ï¼å¿å®åå«`æ°å­`ï¼å¯è½åå«`æ­£æè´ç¬¦å·`ã`å°æ°ç¹`ï¼ã**è¿ç®ç¬¦**ï¼åæ¬`+`ã`-`ã`*`ã`/`ï¼ä»¥åå°æ¬å·ï¼`(`å`)`ï¼ç»æï¼æ¯ä¸ªè¿ç®æ°ãè¿ç®ç¬¦åæ¬å·é½æ¯ä¸ä¸ª*token*ï¼æ è®°ï¼ãç°å¨ï¼å¯¹äºç»å®çä¸ä¸ªååè¿ç®è¡¨è¾¾å¼ï¼è¯·æå¥¹çæ¯ä¸ªtokenåååºæ¥ãé¢ç®ä¿è¯ç»å®çè¡¨è¾¾å¼æ¯æ­£ç¡®çï¼ä¸éè¦åæææ§æ£æ¥ã\n\n\n### è¾å¥æ ¼å¼:\n\nå¨ä¸è¡ä¸­ç»åºé¿åº¦ä¸è¶è¿40ä¸ªå­ç¬¦çè¡¨è¾¾å¼ï¼å¶ä¸­æ²¡æç©ºæ ¼ï¼ä»ç±ä¸æä¸­tokençå­ç¬¦ç»æ\n\n### è¾åºæ ¼å¼:\n\nä¾æ¬¡è¾åºè¡¨è¾¾å¼ä¸­çtokensï¼æ¯ä¸ªtokenå ä¸è¡ã\n\n### è¾å¥æ ·ä¾:\n```in\n32*((2-2)+5)/(-15)\n```\n\n### è¾åºæ ·ä¾:\n```out\n32\n*\n(\n(\n2\n-\n2\n)\n+\n5\n)\n/\n(\n-15\n)\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1581529427070414884",
+			"label": "",
+			"score": 20,
+			"problemPoolIndex": 17,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 800,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "样例等价，多行输出",
+							"showHint": false,
+							"score": 12,
+							"updateAt": "2015-10-21T21:06:36Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "一行内输出",
+							"showHint": false,
+							"score": 3,
+							"updateAt": "2015-10-21T21:06:36Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "最小N",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2015-10-21T21:06:36Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "最大N",
+							"showHint": false,
+							"score": 4,
+							"updateAt": "2015-10-21T21:06:36Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1126",
+			"title": "整数分解为若干项之和",
+			"content": "将一个正整数N分解成几个正整数相加，可以有多种分解方法，例如7=6+1，7=5+2，7=5+1+1，…。编程求出正整数N的所有整数分解式子。\n\n### 输入格式：\n\n每个输入包含一个测试用例，即正整数N (0$$<$$N$$\\le$$30)。\n\n### 输出格式：\n\n按递增顺序输出N的所有整数分解式子。递增顺序是指：对于两个分解序列$$N_1=$${$$n_1, n_2, \\cdots$$}和$$N_2=$${$$m_1, m_2, \\cdots$$}，若存在$$i$$使得$$n_1=m_1, \\cdots , n_i=m_i$$，但是$$n_{i+1} < m_{i+1}$$,则$$N_1$$序列必定在$$N_2$$序列之前输出。每个式子由小到大相加，式子间用分号隔开，且每输出4个式子后换行。\n\n### 输入样例：\n```in\n7\n```\n\n### 输出样例：\n```out\n7=1+1+1+1+1+1+1;7=1+1+1+1+1+2;7=1+1+1+1+3;7=1+1+1+2+2\n7=1+1+1+4;7=1+1+2+3;7=1+1+5;7=1+2+2+2\n7=1+2+4;7=1+3+3;7=1+6;7=2+2+3\n7=2+5;7=3+4;7=7\n```",
+			"type": "PROGRAMMING",
+			"author": "DS课程组",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 2,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "74",
+							"name": "函数与程序结构",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "76",
+							"name": "递归函数",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 37,
+			"submitCount": 85,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1581529426990723072",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5993fa4c93d1de004a0fcd39",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "将一个正整数N分解成几个正整数相加，可以有多种分解方法，例如7=6+1，7=5+2，7=5+1+1，…。编程求出正整数N的所有整数分解式子。\n\n### 输入格式：\n\n每个输入包含一个测试用例，即正整数N (0$$<$$N$$\\le$$30)。\n\n### 输出格式：\n\n按递增顺序输出N的所有整数分解式子。递增顺序是指：对于两个分解序列$$N_1=$${$$n_1, n_2, \\cdots$$}和$$N_2=$${$$m_1, m_2, \\cdots$$}，若存在$$i$$使得$$n_1=m_1, \\cdots , n_i=m_i$$，但是$$n_{i+1} < m_{i+1}$$,则$$N_1$$序列必定在$$N_2$$序列之前输出。每个式子由小到大相加，式子间用分号隔开，且每输出4个式子后换行。\n\n### 输入样例：\n```in\n7\n```\n\n### 输出样例：\n```out\n7=1+1+1+1+1+1+1;7=1+1+1+1+1+2;7=1+1+1+1+3;7=1+1+1+2+2\n7=1+1+1+4;7=1+1+2+3;7=1+1+5;7=1+2+2+2\n7=1+2+4;7=1+3+3;7=1+6;7=2+2+3\n7=2+5;7=3+4;7=7\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1581529427070414885",
+			"label": "",
+			"score": 10,
+			"problemPoolIndex": 18,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "sample等价",
+							"showHint": false,
+							"score": 6,
+							"updateAt": "2017-01-31T17:09:25Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "最小N",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2017-01-31T17:09:25Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "次小N",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2017-01-31T17:09:25Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "次大N",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2017-01-31T17:09:25Z",
+							"isPublic": false
+						},
+						"4": {
+							"hint": "最大N",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2017-01-31T17:09:25Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "5011",
+			"title": "计算阶乘和",
+			"content": "对于给定的正整数$$N$$，需要你计算 $$S = 1! + 2! + 3! + ... + N!$$。\n\n### 输入格式：\n\n输入在一行中给出一个不超过10的正整数$$N$$。\n\n### 输出格式：\n\n在一行中输出$$S$$的值。\n\n### 输入样例：\n```in\n3\n```\n\n### 输出样例：\n```out\n9\n```",
+			"type": "PROGRAMMING",
+			"author": "陈越",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "循环控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "73",
+							"name": "嵌套循环",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 39,
+			"submitCount": 62,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1581529426990723072",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5993fa5893d1de004a0fd1d3",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "对于给定的正整数$$N$$，需要你计算 $$S = 1! + 2! + 3! + ... + N!$$。\n\n### 输入格式：\n\n输入在一行中给出一个不超过10的正整数$$N$$。\n\n### 输出格式：\n\n在一行中输出$$S$$的值。\n\n### 输入样例：\n```in\n3\n```\n\n### 输出样例：\n```out\n9\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1581529427070414886",
+			"label": "",
+			"score": 15,
+			"problemPoolIndex": 19,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "sample等价，N是偶数",
+							"showHint": false,
+							"score": 8,
+							"updateAt": "2017-01-31T17:23:09Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "最小N",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2017-01-31T17:23:09Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "小奇数N",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2017-01-31T17:23:09Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "最小偶数N",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2017-01-31T17:23:09Z",
+							"isPublic": false
+						},
+						"4": {
+							"hint": "最大N",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2017-01-31T17:23:09Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "5013",
+			"title": "跟奥巴马一起画方块",
+			"content": "美国总统奥巴马不仅呼吁所有人都学习编程，甚至以身作则编写代码，成为美国历史上首位编写计算机代码的总统。2014年底，为庆祝“计算机科学教育周”正式启动，奥巴马编写了很简单的计算机代码：在屏幕上画一个正方形。现在你也跟他一起画吧！\n\n### 输入格式：\n\n输入在一行中给出正方形边长$$N$$（$$3\\le N\\le 21$$）和组成正方形边的某种字符`C`，间隔一个空格。\n\n### 输出格式：\n\n输出由给定字符`C`画出的正方形。但是注意到行间距比列间距大，所以为了让结果看上去更像正方形，我们输出的行数实际上是列数的50%（四舍五入取整）。\n\n### 输入样例：\n```in\n10 a\n```\n\n### 输出样例：\n```out\naaaaaaaaaa\naaaaaaaaaa\naaaaaaaaaa\naaaaaaaaaa\naaaaaaaaaa\n```",
+			"type": "PROGRAMMING",
+			"author": "陈越",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "循环控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "73",
+							"name": "嵌套循环",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 43,
+			"submitCount": 99,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1581529426990723072",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5993fa5893d1de004a0fd1d5",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "美国总统奥巴马不仅呼吁所有人都学习编程，甚至以身作则编写代码，成为美国历史上首位编写计算机代码的总统。2014年底，为庆祝“计算机科学教育周”正式启动，奥巴马编写了很简单的计算机代码：在屏幕上画一个正方形。现在你也跟他一起画吧！\n\n### 输入格式：\n\n输入在一行中给出正方形边长$$N$$（$$3\\le N\\le 21$$）和组成正方形边的某种字符`C`，间隔一个空格。\n\n### 输出格式：\n\n输出由给定字符`C`画出的正方形。但是注意到行间距比列间距大，所以为了让结果看上去更像正方形，我们输出的行数实际上是列数的50%（四舍五入取整）。\n\n### 输入样例：\n```in\n10 a\n```\n\n### 输出样例：\n```out\naaaaaaaaaa\naaaaaaaaaa\naaaaaaaaaa\naaaaaaaaaa\naaaaaaaaaa\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1581529427070414887",
+			"label": "",
+			"score": 15,
+			"problemPoolIndex": 20,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "sample1等价，n是4，年份过1000",
+							"showHint": false,
+							"score": 7,
+							"updateAt": "2017-03-29T17:48:57Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "sample2等价，最小边界，0岁",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2017-03-29T17:48:57Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "最大边界",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2017-03-29T17:48:57Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "n是3，注意4位不相同的不算",
+							"showHint": false,
+							"score": 3,
+							"updateAt": "2017-03-29T17:48:57Z",
+							"isPublic": false
+						},
+						"4": {
+							"hint": "n是2，输出有前补零",
+							"showHint": false,
+							"score": 3,
+							"updateAt": "2017-03-29T17:48:57Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "6085",
+			"title": "出生年",
+			"content": "![](~/355)\n\n以上是新浪微博中一奇葩贴：“我出生于1988年，直到25岁才遇到4个数字都不相同的年份。”也就是说，直到2013年才达到“4个数字都不相同”的要求。本题请你根据要求，自动填充“我出生于`y`年，直到`x`岁才遇到`n`个数字都不相同的年份”这句话。\n\n### 输入格式：\n\n输入在一行中给出出生年份`y`和目标年份中不同数字的个数`n`，其中`y`在[1, 3000]之间，`n`可以是2、或3、或4。注意不足4位的年份要在前面补零，例如公元1年被认为是0001年，有2个不同的数字0和1。\n\n### 输出格式：\n\n根据输入，输出`x`和能达到要求的年份。数字间以1个空格分隔，行首尾不得有多余空格。年份要按4位输出。注意：所谓“`n`个数字都不相同”是指不同的数字正好是`n`个。如“2013”被视为满足“4位数字都不同”的条件，但不被视为满足2位或3位数字不同的条件。\n\n### 输入样例1：\n```in\n1988 4\n```\n\n### 输出样例1：\n```out\n25 2013\n```\n\n### 输入样例2：\n```\n1 2\n```\n\n### 输出样例2：\n```\n0 0001\n```",
+			"type": "PROGRAMMING",
+			"author": "陈越",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "74",
+							"name": "函数与程序结构",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "75",
+							"name": "函数定义与调用",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "78",
+							"name": "数组",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "79",
+							"name": "一维数组",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 55,
+			"submitCount": 115,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1581529426990723072",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5993fa5c93d1de004a0fd2e5",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "![](~/355)\n\n以上是新浪微博中一奇葩贴：“我出生于1988年，直到25岁才遇到4个数字都不相同的年份。”也就是说，直到2013年才达到“4个数字都不相同”的要求。本题请你根据要求，自动填充“我出生于`y`年，直到`x`岁才遇到`n`个数字都不相同的年份”这句话。\n\n### 输入格式：\n\n输入在一行中给出出生年份`y`和目标年份中不同数字的个数`n`，其中`y`在[1, 3000]之间，`n`可以是2、或3、或4。注意不足4位的年份要在前面补零，例如公元1年被认为是0001年，有2个不同的数字0和1。\n\n### 输出格式：\n\n根据输入，输出`x`和能达到要求的年份。数字间以1个空格分隔，行首尾不得有多余空格。年份要按4位输出。注意：所谓“`n`个数字都不相同”是指不同的数字正好是`n`个。如“2013”被视为满足“4位数字都不同”的条件，但不被视为满足2位或3位数字不同的条件。\n\n### 输入样例1：\n```in\n1988 4\n```\n\n### 输出样例1：\n```out\n25 2013\n```\n\n### 输入样例2：\n```\n1 2\n```\n\n### 输出样例2：\n```\n0 0001\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		}
+	]

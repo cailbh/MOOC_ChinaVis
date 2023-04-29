@@ -85,12 +85,12 @@ for i in range(5):
     # 至此成功破解验证码，由于算法问题，准确率不能达到100%，所以加了循环判断
 time.sleep(3)
 
-# url = 'https://pintia.cn/problem-sets/1568086661336858624/submissions'
+# url = 'https://pintia.cn/problem-sets/1601015996159377408/submissions'
 # response = requests.get(url)
 # data = response.content
 # print(data)
 #
-# url1 = 'https://pintia.cn/api/problem-sets/1568086661336858624/submissions?limit=50&filter=%7B%7D'
+# url1 = 'https://pintia.cn/api/problem-sets/1601015996159377408/submissions?limit=50&filter=%7B%7D'
 # response1 = requests.get(url1)
 # data1 = response1.content
 # print(data1)
@@ -98,7 +98,7 @@ time.sleep(3)
 # # print(subw)
 
 # 获取返回内容
-url = "https://pintia.cn/problem-sets/1568086661336858624/submissions"
+url = "https://pintia.cn/problem-sets/1601015996159377408/submissions"
 # BMPproxy.new_har("video", options={'captureHeaders': True, 'captureContent': True})
 
 # 模拟浏览器
@@ -115,7 +115,7 @@ content = []
 res = {}
 for entry in result['log']['entries']:
     _url = entry['request']['url']
-    if "https://pintia.cn/api/problem-sets/1568086661336858624/submissions?limit=50&filter=%7B%7D" in entry['request'][
+    if "https://pintia.cn/api/problem-sets/1601015996159377408/submissions?limit=50&filter=%7B%7D" in entry['request'][
         'url']:
         content = entry['response']['content']
         res = entry
@@ -128,10 +128,10 @@ print(result_json['request'])
 # result_json = res.json()
 # with open("baidu.json", "w", errors="igone", encoding="utf-8") as f:
 #     f.write(result_json)
-
+# 1601015996159377408
 
 final_result = []
-url = "https://pintia.cn/api/problem-sets/1568086661336858624/submissions"
+url = "https://pintia.cn/api/problem-sets/1601015996159377408/submissions"
 # url = result_json['request']['url']
 parms02 = {
     'limit': '200'
@@ -157,7 +157,7 @@ for s in cur_rel:
 fid = cur_rel[199]['id']
 i = 200
 while i == 200:
-    url = "https://pintia.cn/api/problem-sets/1568086661336858624/submissions?before=" + fid
+    url = "https://pintia.cn/api/problem-sets/1601015996159377408/submissions?before=" + fid
     # url = result_json['request']['url']
     parms02 = {
         'limit': '200'

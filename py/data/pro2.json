@@ -1,0 +1,4174 @@
+[
+	{
+		"id": "1570609751279202304",
+		"label": "",
+		"score": 1,
+		"problemPoolIndex": 1,
+		"problemPoolCompositionCount": 1,
+		"problemConfig": {
+			"solutionVisible": false,
+			"answerVisible": false
+		},
+		"deadline": "1970-01-01T00:00:00Z",
+		"problemId": "2878",
+		"title": "C语言程序是从源文件的第一条语句开始执行的。",
+		"content": "C语言程序是从源文件的第一条语句开始执行的。  ~@[](1)",
+		"type": "TRUE_OR_FALSE",
+		"author": "许莎",
+		"authorOrganization": {
+			"id": "34",
+			"name": "重庆科技学院",
+			"comment": "",
+			"code": "",
+			"country": "NO_COUNTRY",
+			"membersCount": 0,
+			"type": "UNKNOWN",
+			"balance": 0,
+			"subdomain": "",
+			"logo": ""
+		},
+		"difficulty": 1,
+		"knowledgePointPaths": [
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "64",
+						"name": "基本数据类型与表达式",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "65",
+						"name": "表达式",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			}
+		],
+		"compiler": "NO_COMPILER",
+		"acceptCount": 0,
+		"submitCount": 0,
+		"problemStatus": "REVIEWED",
+		"problemSelfCheckStatus": "NONE_SELF_CHECK",
+		"problemSetId": "1570609751203704832",
+		"judgeConfig": {
+			"trueOrFalseJudgeConfig": {
+				"answer": "FALSE"
+			}
+		},
+		"solution": "",
+		"description": "C语言程序是从源文件的第一条语句开始执行的。  ",
+		"creatorId": "916259821889974272",
+		"indexInProblemPool": 1,
+		"diffProblemConfigCase": false
+	},
+	{
+		"id": "1570609751279202305",
+		"label": "",
+		"score": 1,
+		"problemPoolIndex": 2,
+		"problemPoolCompositionCount": 1,
+		"problemConfig": {
+			"solutionVisible": false,
+			"answerVisible": false
+		},
+		"deadline": "1970-01-01T00:00:00Z",
+		"problemId": "4026",
+		"title": "语句`printf(\"%.2f\",1.0/3);`输出为`0.33`。  ",
+		"content": "语句`printf(\"%.2f\",1.0/3);`输出为`0.33`。  ~@[](1)",
+		"type": "TRUE_OR_FALSE",
+		"author": "王从银",
+		"authorOrganization": {
+			"id": "36",
+			"name": "吉首大学",
+			"comment": "",
+			"code": "",
+			"country": "NO_COUNTRY",
+			"membersCount": 0,
+			"type": "UNKNOWN",
+			"balance": 0,
+			"subdomain": "",
+			"logo": ""
+		},
+		"difficulty": 1,
+		"knowledgePointPaths": [
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "64",
+						"name": "基本数据类型与表达式",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "66",
+						"name": "输入输出格式化控制",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			}
+		],
+		"compiler": "NO_COMPILER",
+		"acceptCount": 0,
+		"submitCount": 0,
+		"problemStatus": "REVIEWED",
+		"problemSelfCheckStatus": "NONE_SELF_CHECK",
+		"problemSetId": "1570609751203704832",
+		"judgeConfig": {
+			"trueOrFalseJudgeConfig": {
+				"answer": "TRUE"
+			}
+		},
+		"solution": "",
+		"description": "语句`printf(\"%.2f\",1.0/3);`输出为`0.33`。  ",
+		"creatorId": "916259821889974272",
+		"indexInProblemPool": 1,
+		"diffProblemConfigCase": false
+	},
+	{
+		"id": "1570609751279202306",
+		"label": "",
+		"score": 1,
+		"problemPoolIndex": 3,
+		"problemPoolCompositionCount": 1,
+		"problemConfig": {
+			"solutionVisible": false,
+			"answerVisible": false
+		},
+		"deadline": "1970-01-01T00:00:00Z",
+		"problemId": "1127780435718676480",
+		"title": "实型数据可以进行求余数运算%。",
+		"content": "实型数据可以进行求余数运算%。",
+		"type": "TRUE_OR_FALSE",
+		"author": "崔孝凤",
+		"authorOrganization": {
+			"id": "77",
+			"name": "山东理工大学",
+			"comment": "",
+			"code": "",
+			"country": "NO_COUNTRY",
+			"membersCount": 0,
+			"type": "UNKNOWN",
+			"balance": 0,
+			"subdomain": "",
+			"logo": ""
+		},
+		"difficulty": 1,
+		"knowledgePointPaths": [
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "64",
+						"name": "基本数据类型与表达式",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "65",
+						"name": "表达式",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			}
+		],
+		"compiler": "NO_COMPILER",
+		"acceptCount": 0,
+		"submitCount": 0,
+		"problemStatus": "REVIEWED",
+		"problemSelfCheckStatus": "NONE_SELF_CHECK",
+		"problemSetId": "1570609751203704832",
+		"judgeConfig": {
+			"trueOrFalseJudgeConfig": {
+				"answer": "FALSE"
+			}
+		},
+		"solution": "",
+		"description": "实型数据可以进行求余数运算%。",
+		"creatorId": "916259821889974272",
+		"indexInProblemPool": 1,
+		"diffProblemConfigCase": false
+	},
+	{
+		"id": "1570609751279202307",
+		"label": "",
+		"score": 1,
+		"problemPoolIndex": 4,
+		"problemPoolCompositionCount": 1,
+		"problemConfig": {
+			"solutionVisible": false,
+			"answerVisible": false
+		},
+		"deadline": "1970-01-01T00:00:00Z",
+		"problemId": "1248428068923158528",
+		"title": "判断两个浮点数是否相同的运算虽然符合C语言规则，但是应该尽量避免。",
+		"content": "判断两个浮点数是否相同的运算虽然符合C语言规则，但是应该尽量避免。  ",
+		"type": "TRUE_OR_FALSE",
+		"author": "徐镜春",
+		"authorOrganization": {
+			"id": "1",
+			"name": "浙江大学",
+			"comment": "",
+			"code": "",
+			"country": "NO_COUNTRY",
+			"membersCount": 0,
+			"type": "UNKNOWN",
+			"balance": 0,
+			"subdomain": "",
+			"logo": ""
+		},
+		"difficulty": 1,
+		"knowledgePointPaths": [
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "64",
+						"name": "基本数据类型与表达式",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "65",
+						"name": "表达式",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			}
+		],
+		"compiler": "NO_COMPILER",
+		"acceptCount": 0,
+		"submitCount": 0,
+		"problemStatus": "REVIEWED",
+		"problemSelfCheckStatus": "NONE_SELF_CHECK",
+		"problemSetId": "1570609751203704832",
+		"judgeConfig": {
+			"trueOrFalseJudgeConfig": {
+				"answer": "TRUE"
+			}
+		},
+		"solution": "",
+		"description": "判断两个浮点数是否相同的运算虽然符合C语言规则，但是应该尽量避免。  ",
+		"creatorId": "916259821889974272",
+		"indexInProblemPool": 1,
+		"diffProblemConfigCase": false
+	},
+	{
+		"id": "1570609751279202308",
+		"label": "",
+		"score": 1,
+		"problemPoolIndex": 5,
+		"problemPoolCompositionCount": 1,
+		"problemConfig": {
+			"solutionVisible": false,
+			"answerVisible": false
+		},
+		"deadline": "1970-01-01T00:00:00Z",
+		"problemId": "951037528910290944",
+		"title": "C语言源代码可以不经过编译而被计算机直接运行。（ ）。  ",
+		"content": "C语言源代码可以不经过编译而被计算机直接运行。（ ）。  ~@[](2)",
+		"type": "TRUE_OR_FALSE",
+		"author": "黄隆华",
+		"authorOrganization": {
+			"id": "31",
+			"name": "怀化学院",
+			"comment": "",
+			"code": "",
+			"country": "NO_COUNTRY",
+			"membersCount": 0,
+			"type": "UNKNOWN",
+			"balance": 0,
+			"subdomain": "",
+			"logo": ""
+		},
+		"difficulty": 1,
+		"knowledgePointPaths": [
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "64",
+						"name": "基本数据类型与表达式",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "65",
+						"name": "表达式",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			}
+		],
+		"compiler": "NO_COMPILER",
+		"acceptCount": 0,
+		"submitCount": 0,
+		"problemStatus": "REVIEWED",
+		"problemSelfCheckStatus": "NONE_SELF_CHECK",
+		"problemSetId": "1570609751203704832",
+		"judgeConfig": {
+			"trueOrFalseJudgeConfig": {
+				"answer": "FALSE"
+			}
+		},
+		"solution": "",
+		"description": "C语言源代码可以不经过编译而被计算机直接运行。（ ）。  ",
+		"creatorId": "916259821889974272",
+		"indexInProblemPool": 1,
+		"diffProblemConfigCase": false
+	},
+	{
+		"id": "1570609751279202309",
+		"label": "",
+		"score": 2,
+		"problemPoolIndex": 1,
+		"problemPoolCompositionCount": 1,
+		"problemConfig": {
+			"solutionVisible": false,
+			"answerVisible": false,
+			"multipleChoiceProblemConfig": {
+				"choices": [
+					"3/5",
+					"3<5",
+					"3%5",
+					"3/5.0"
+				],
+				"maxDisplayChoicesPerLine": 1
+			}
+		},
+		"deadline": "1970-01-01T00:00:00Z",
+		"problemId": "1086",
+		"title": "表达式（ ）的值是0。",
+		"content": "表达式（ ）的值是0。   @[](2)\n\nA. 3/5\nB. 3<5\nC. 3%5\nD. 3/5.0",
+		"type": "MULTIPLE_CHOICE",
+		"author": "   王秀",
+		"authorOrganization": {
+			"id": "14",
+			"name": "福州大学",
+			"comment": "",
+			"code": "",
+			"country": "NO_COUNTRY",
+			"membersCount": 0,
+			"type": "UNKNOWN",
+			"balance": 0,
+			"subdomain": "",
+			"logo": ""
+		},
+		"difficulty": 1,
+		"knowledgePointPaths": [
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "64",
+						"name": "基本数据类型与表达式",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "65",
+						"name": "表达式",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			}
+		],
+		"compiler": "NO_COMPILER",
+		"acceptCount": 0,
+		"submitCount": 0,
+		"problemStatus": "REVIEWED",
+		"problemSelfCheckStatus": "NONE_SELF_CHECK",
+		"problemSetId": "1570609751203704832",
+		"judgeConfig": {
+			"multipleChoiceJudgeConfig": {
+				"answer": "A"
+			}
+		},
+		"solution": "",
+		"description": "表达式（ ）的值是0。",
+		"creatorId": "916259821889974272",
+		"indexInProblemPool": 1,
+		"diffProblemConfigCase": false
+	},
+	{
+		"id": "1570609751279202310",
+		"label": "",
+		"score": 2,
+		"problemPoolIndex": 2,
+		"problemPoolCompositionCount": 1,
+		"problemConfig": {
+			"solutionVisible": false,
+			"answerVisible": false,
+			"multipleChoiceProblemConfig": {
+				"choices": [
+					"把`x`和`y`按从大到小排列",
+					"把`x`和`y`按从小到大排列",
+					"无确定结果",
+					"交换`x`和`y`中 的值"
+				],
+				"maxDisplayChoicesPerLine": 1
+			}
+		},
+		"deadline": "1970-01-01T00:00:00Z",
+		"problemId": "1289",
+		"title": "设`x`和`y`均为`int`型变量，则以下语句：`x+=y; y=x-y; x-=y; `的功能是____。",
+		"content": "设`x`和`y`均为`int`型变量，则以下语句：`x+=y; y=x-y; x-=y; `的功能是____。 @[](2)\n\nA. 把`x`和`y`按从大到小排列    \nB. 把`x`和`y`按从小到大排列  \nC. 无确定结果    \nD. 交换`x`和`y`中 的值",
+		"type": "MULTIPLE_CHOICE",
+		"author": "林颖贤",
+		"authorOrganization": {
+			"id": "46",
+			"name": "集美大学",
+			"comment": "",
+			"code": "",
+			"country": "NO_COUNTRY",
+			"membersCount": 0,
+			"type": "UNKNOWN",
+			"balance": 0,
+			"subdomain": "",
+			"logo": ""
+		},
+		"difficulty": 2,
+		"knowledgePointPaths": [
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "64",
+						"name": "基本数据类型与表达式",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "65",
+						"name": "表达式",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			}
+		],
+		"compiler": "NO_COMPILER",
+		"acceptCount": 0,
+		"submitCount": 0,
+		"problemStatus": "REVIEWED",
+		"problemSelfCheckStatus": "NONE_SELF_CHECK",
+		"problemSetId": "1570609751203704832",
+		"judgeConfig": {
+			"multipleChoiceJudgeConfig": {
+				"answer": "D"
+			}
+		},
+		"solution": "",
+		"description": "设`x`和`y`均为`int`型变量，则以下语句：`x+=y; y=x-y; x-=y; `的功能是____。",
+		"creatorId": "916259821889974272",
+		"indexInProblemPool": 1,
+		"diffProblemConfigCase": false
+	},
+	{
+		"id": "1570609751279202311",
+		"label": "",
+		"score": 1,
+		"problemPoolIndex": 3,
+		"problemPoolCompositionCount": 1,
+		"problemConfig": {
+			"solutionVisible": false,
+			"answerVisible": false,
+			"multipleChoiceProblemConfig": {
+				"choices": [
+					"1",
+					"-1",
+					"2",
+					"-2"
+				],
+				"maxDisplayChoicesPerLine": 4
+			}
+		},
+		"deadline": "1970-01-01T00:00:00Z",
+		"problemId": "1016361551937437696",
+		"title": "表达式(整数除法-商)",
+		"content": "表达式\n\n下面的程序段将输出 ▁▁▁▁▁ 。\n\n```c\nint a = -5, b = -3, c;\nc = a / b;\nprintf(\"%d\\n\", c);\n```",
+		"type": "MULTIPLE_CHOICE",
+		"author": "李祥",
+		"authorOrganization": {
+			"id": "135",
+			"name": "湖北经济学院",
+			"comment": "",
+			"code": "",
+			"country": "NO_COUNTRY",
+			"membersCount": 0,
+			"type": "UNKNOWN",
+			"balance": 0,
+			"subdomain": "",
+			"logo": ""
+		},
+		"difficulty": 1,
+		"knowledgePointPaths": [
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "64",
+						"name": "基本数据类型与表达式",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "65",
+						"name": "表达式",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			}
+		],
+		"compiler": "NO_COMPILER",
+		"acceptCount": 0,
+		"submitCount": 0,
+		"problemStatus": "REVIEWED",
+		"problemSelfCheckStatus": "NONE_SELF_CHECK",
+		"problemSetId": "1570609751203704832",
+		"judgeConfig": {
+			"multipleChoiceJudgeConfig": {
+				"answer": "A"
+			}
+		},
+		"solution": "",
+		"description": "表达式\n\n下面的程序段将输出 ▁▁▁▁▁ 。\n\n```c\nint a = -5, b = -3, c;\nc = a / b;\nprintf(\"%d\\n\", c);\n```",
+		"creatorId": "916259821889974272",
+		"indexInProblemPool": 1,
+		"diffProblemConfigCase": false
+	},
+	{
+		"id": "1570609751279202312",
+		"label": "",
+		"score": 3,
+		"problemPoolIndex": 4,
+		"problemPoolCompositionCount": 1,
+		"problemConfig": {
+			"solutionVisible": false,
+			"answerVisible": false,
+			"multipleChoiceProblemConfig": {
+				"choices": [
+					"3",
+					" 4",
+					"0",
+					"1"
+				],
+				"maxDisplayChoicesPerLine": 1
+			}
+		},
+		"deadline": "1970-01-01T00:00:00Z",
+		"problemId": "1354720468908638208",
+		"title": "如果int a=3,b=4；则条件表达式\"a<b? a:b\"的值是（   ）。",
+		"content": "如果int a=3,b=4；则条件表达式\"a<b? a:b\"的值是（   ）。\n@[](3)\n\nA. 3\nB.  4\nC. 0\nD. 1",
+		"type": "MULTIPLE_CHOICE",
+		"author": "郑卫华",
+		"authorOrganization": {
+			"id": "1353694861766860800",
+			"name": "新疆科技学院",
+			"comment": "",
+			"code": "",
+			"country": "NO_COUNTRY",
+			"membersCount": 0,
+			"type": "UNKNOWN",
+			"balance": 0,
+			"subdomain": "",
+			"logo": ""
+		},
+		"difficulty": 1,
+		"knowledgePointPaths": [
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "64",
+						"name": "基本数据类型与表达式",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "65",
+						"name": "表达式",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			}
+		],
+		"compiler": "NO_COMPILER",
+		"acceptCount": 0,
+		"submitCount": 0,
+		"problemStatus": "REVIEWED",
+		"problemSelfCheckStatus": "NONE_SELF_CHECK",
+		"problemSetId": "1570609751203704832",
+		"judgeConfig": {
+			"multipleChoiceJudgeConfig": {
+				"answer": "A"
+			}
+		},
+		"solution": "",
+		"description": "如果int a=3,b=4；则条件表达式\"a<b? a:b\"的值是（   ）。",
+		"creatorId": "916259821889974272",
+		"indexInProblemPool": 1,
+		"diffProblemConfigCase": false
+	},
+	{
+		"id": "1570609751279202313",
+		"label": "",
+		"score": 2,
+		"problemPoolIndex": 5,
+		"problemPoolCompositionCount": 1,
+		"problemConfig": {
+			"solutionVisible": false,
+			"answerVisible": false,
+			"multipleChoiceProblemConfig": {
+				"choices": [
+					"printf(“%c”, c[3].name);",
+					"printf(“%c”, c[3].name[1]);",
+					"printf(“%c”, c[2].name[0]);",
+					"printf(“%c”, c[2].name[1]);"
+				],
+				"maxDisplayChoicesPerLine": 1
+			}
+		},
+		"deadline": "1970-01-01T00:00:00Z",
+		"problemId": "1372421146486362112",
+		"title": "根据下面的定义，能打印出字母M的语句是（    ）。",
+		"content": "根据下面的定义，能打印出字母M的语句是（    ）。\n\nStruct person {\nChar name[10];\nint age;}\nc[10] = { “John”, 17, ”Paul”, 19, ”Mary”, 18, ”Adam”, 16 };\n",
+		"type": "MULTIPLE_CHOICE",
+		"author": "潘芳芳",
+		"authorOrganization": {
+			"id": "1353694861766860800",
+			"name": "新疆科技学院",
+			"comment": "",
+			"code": "",
+			"country": "NO_COUNTRY",
+			"membersCount": 0,
+			"type": "UNKNOWN",
+			"balance": 0,
+			"subdomain": "",
+			"logo": ""
+		},
+		"difficulty": 2,
+		"knowledgePointPaths": [
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "82",
+						"name": "指针与结构",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "84",
+						"name": "结构",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			},
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "78",
+						"name": "数组",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "79",
+						"name": "一维数组",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			},
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "64",
+						"name": "基本数据类型与表达式",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "66",
+						"name": "输入输出格式化控制",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			}
+		],
+		"compiler": "NO_COMPILER",
+		"acceptCount": 0,
+		"submitCount": 0,
+		"problemStatus": "REVIEWED",
+		"problemSelfCheckStatus": "NONE_SELF_CHECK",
+		"problemSetId": "1570609751203704832",
+		"judgeConfig": {
+			"multipleChoiceJudgeConfig": {
+				"answer": "C"
+			}
+		},
+		"solution": "",
+		"description": "根据下面的定义，能打印出字母M的语句是（    ）。\n\nStruct person {\nChar name[10];\nint age;}\nc[10] = { “John”, 17, ”Paul”, 19, ”Mary”, 18, ”Adam”, 16 };\n",
+		"creatorId": "916259821889974272",
+		"indexInProblemPool": 1,
+		"diffProblemConfigCase": false
+	},
+	{
+		"id": "1570609751279202314",
+		"label": "",
+		"score": 1,
+		"problemPoolIndex": 6,
+		"problemPoolCompositionCount": 1,
+		"problemConfig": {
+			"solutionVisible": false,
+			"answerVisible": false,
+			"multipleChoiceProblemConfig": {
+				"choices": [
+					"```\nif(x>0) y=1;\n\nelse if(x==0) y=0;\n\nelse y=-1;\n```",
+					"```\ny=0;\n\nif(x>=0) ;\n\nif(x>0) y=1;\n\nelse y=-1;\n```",
+					"```\ny=0;\n\nif(x>0) y=1;\n\nelse if(x<0) y=-1;\n```",
+					"```\nif(x>=0)\n\nif(x>0) y=1;\n\nelse y=0;\n\t\t\nelse y=-1;\n```"
+				],
+				"maxDisplayChoicesPerLine": 1
+			}
+		},
+		"deadline": "1970-01-01T00:00:00Z",
+		"problemId": "1447756415476408320",
+		"title": "有一函数，以下程序段中错误的是？",
+		"content": "有一函数\n![QQ截图20211012104411.jpg](~/bbc9231e-27eb-4d8c-842c-9b32fcd67748.jpg)\n，以下程序段中错误的是？",
+		"type": "MULTIPLE_CHOICE",
+		"author": "gllypx",
+		"authorOrganization": {
+			"id": "1017669010988019712",
+			"name": "桂林学院",
+			"comment": "",
+			"code": "",
+			"country": "NO_COUNTRY",
+			"membersCount": 0,
+			"type": "UNKNOWN",
+			"balance": 0,
+			"subdomain": "",
+			"logo": ""
+		},
+		"difficulty": 1,
+		"knowledgePointPaths": [
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "64",
+						"name": "基本数据类型与表达式",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "65",
+						"name": "表达式",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			}
+		],
+		"compiler": "NO_COMPILER",
+		"acceptCount": 0,
+		"submitCount": 0,
+		"problemStatus": "REVIEWED",
+		"problemSelfCheckStatus": "NONE_SELF_CHECK",
+		"problemSetId": "1570609751203704832",
+		"judgeConfig": {
+			"multipleChoiceJudgeConfig": {
+				"answer": "B"
+			}
+		},
+		"solution": "",
+		"description": "有一函数\n![QQ截图20211012104411.jpg](~/bbc9231e-27eb-4d8c-842c-9b32fcd67748.jpg)\n，以下程序段中错误的是？",
+		"creatorId": "916259821889974272",
+		"indexInProblemPool": 1,
+		"diffProblemConfigCase": false
+	},
+	{
+		"id": "1570609751279202315",
+		"label": "",
+		"score": 2,
+		"problemPoolIndex": 7,
+		"problemPoolCompositionCount": 1,
+		"problemConfig": {
+			"solutionVisible": false,
+			"answerVisible": false,
+			"multipleChoiceProblemConfig": {
+				"choices": [
+					"x>=10 and x<=20",
+					"x>=10 or x<=20",
+					"x>=10 && x<=20",
+					"x>=10 || x<=20"
+				],
+				"maxDisplayChoicesPerLine": 1
+			}
+		},
+		"deadline": "1970-01-01T00:00:00Z",
+		"problemId": "1500519304788885504",
+		"title": "能正确表示逻辑关系：“10≤x≤20” 的C语言表达式是（    ）。",
+		"content": "能正确表示逻辑关系：“10≤x≤20” 的C语言表达式是（    ）。",
+		"type": "MULTIPLE_CHOICE",
+		"author": "吴光生",
+		"authorOrganization": {
+			"id": "974911818648657920",
+			"name": "新余学院",
+			"comment": "",
+			"code": "",
+			"country": "NO_COUNTRY",
+			"membersCount": 0,
+			"type": "UNKNOWN",
+			"balance": 0,
+			"subdomain": "",
+			"logo": ""
+		},
+		"difficulty": 1,
+		"knowledgePointPaths": [
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "64",
+						"name": "基本数据类型与表达式",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "65",
+						"name": "表达式",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			}
+		],
+		"compiler": "NO_COMPILER",
+		"acceptCount": 0,
+		"submitCount": 0,
+		"problemStatus": "REVIEWED",
+		"problemSelfCheckStatus": "NONE_SELF_CHECK",
+		"problemSetId": "1570609751203704832",
+		"judgeConfig": {
+			"multipleChoiceJudgeConfig": {
+				"answer": "C"
+			}
+		},
+		"solution": "",
+		"description": "能正确表示逻辑关系：“10≤x≤20” 的C语言表达式是（    ）。",
+		"creatorId": "916259821889974272",
+		"indexInProblemPool": 1,
+		"diffProblemConfigCase": false
+	},
+	{
+		"id": "1570609751279202316",
+		"label": "",
+		"score": 2,
+		"problemPoolIndex": 8,
+		"problemPoolCompositionCount": 1,
+		"problemConfig": {
+			"solutionVisible": false,
+			"answerVisible": false,
+			"multipleChoiceProblemConfig": {
+				"choices": [
+					"char",
+					"int",
+					"float",
+					"double"
+				],
+				"maxDisplayChoicesPerLine": 1
+			}
+		},
+		"deadline": "1970-01-01T00:00:00Z",
+		"problemId": "1500521764944482304",
+		"title": "若有变量定义：char c; int i; double x;则表达式c+5`*`i-x的最终计算结果为（    ）类型。",
+		"content": "若有变量定义：char c; int i; double x;则表达式`c+5*i-x`的最终计算结果为（    ）类型。",
+		"type": "MULTIPLE_CHOICE",
+		"author": "吴光生",
+		"authorOrganization": {
+			"id": "974911818648657920",
+			"name": "新余学院",
+			"comment": "",
+			"code": "",
+			"country": "NO_COUNTRY",
+			"membersCount": 0,
+			"type": "UNKNOWN",
+			"balance": 0,
+			"subdomain": "",
+			"logo": ""
+		},
+		"difficulty": 1,
+		"knowledgePointPaths": [
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "64",
+						"name": "基本数据类型与表达式",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "65",
+						"name": "表达式",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			}
+		],
+		"compiler": "NO_COMPILER",
+		"acceptCount": 0,
+		"submitCount": 0,
+		"problemStatus": "REVIEWED",
+		"problemSelfCheckStatus": "NONE_SELF_CHECK",
+		"problemSetId": "1570609751203704832",
+		"judgeConfig": {
+			"multipleChoiceJudgeConfig": {
+				"answer": "D"
+			}
+		},
+		"solution": "",
+		"description": "若有变量定义：char c; int i; double x;则表达式`c+5*i-x`的最终计算结果为（    ）类型。",
+		"creatorId": "916259821889974272",
+		"indexInProblemPool": 1,
+		"diffProblemConfigCase": false
+	},
+	{
+		"id": "1570609751279202317",
+		"label": "",
+		"score": 1,
+		"problemPoolIndex": 9,
+		"problemPoolCompositionCount": 1,
+		"problemConfig": {
+			"solutionVisible": false,
+			"answerVisible": false,
+			"multipleChoiceProblemConfig": {
+				"choices": [
+					"G",
+					"H",
+					"I",
+					"J"
+				],
+				"maxDisplayChoicesPerLine": 1
+			}
+		},
+		"deadline": "1970-01-01T00:00:00Z",
+		"problemId": "1506439888545984512",
+		"title": "下列程序执行后的输出结果是",
+		"content": "下列程序执行后的输出结果是\n```{c}\nmain()\n{\n\tint x='f';\n\tprintf(\"%c \\n\",'A'+(x-'a'+1));\n}\n```",
+		"type": "MULTIPLE_CHOICE",
+		"author": "赖晓燕",
+		"authorOrganization": {
+			"id": "1326129693716594688",
+			"name": "福建农林大学金山学院",
+			"comment": "",
+			"code": "",
+			"country": "NO_COUNTRY",
+			"membersCount": 0,
+			"type": "UNKNOWN",
+			"balance": 0,
+			"subdomain": "",
+			"logo": ""
+		},
+		"difficulty": 1,
+		"knowledgePointPaths": [
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "64",
+						"name": "基本数据类型与表达式",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "66",
+						"name": "输入输出格式化控制",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			}
+		],
+		"compiler": "NO_COMPILER",
+		"acceptCount": 0,
+		"submitCount": 0,
+		"problemStatus": "REVIEWED",
+		"problemSelfCheckStatus": "NONE_SELF_CHECK",
+		"problemSetId": "1570609751203704832",
+		"judgeConfig": {
+			"multipleChoiceJudgeConfig": {
+				"answer": "A"
+			}
+		},
+		"solution": "",
+		"description": "下列程序执行后的输出结果是\n```{c}\nmain()\n{\n\tint x='f';\n\tprintf(\"%c \\n\",'A'+(x-'a'+1));\n}\n```",
+		"creatorId": "916259821889974272",
+		"indexInProblemPool": 1,
+		"diffProblemConfigCase": false
+	},
+	{
+		"id": "1570609751279202318",
+		"label": "",
+		"score": 1,
+		"problemPoolIndex": 10,
+		"problemPoolCompositionCount": 1,
+		"problemConfig": {
+			"solutionVisible": false,
+			"answerVisible": false,
+			"multipleChoiceProblemConfig": {
+				"choices": [
+					"多个字符",
+					"一个字符",
+					" 一个实型变量值",
+					"一个整型变量表达式 "
+				],
+				"maxDisplayChoicesPerLine": 1
+			}
+		},
+		"deadline": "1970-01-01T00:00:00Z",
+		"problemId": "1506441727963578368",
+		"title": "putchar()函数的功能是向终端输出",
+		"content": "putchar()函数的功能是向终端输出",
+		"type": "MULTIPLE_CHOICE",
+		"author": "赖晓燕",
+		"authorOrganization": {
+			"id": "1326129693716594688",
+			"name": "福建农林大学金山学院",
+			"comment": "",
+			"code": "",
+			"country": "NO_COUNTRY",
+			"membersCount": 0,
+			"type": "UNKNOWN",
+			"balance": 0,
+			"subdomain": "",
+			"logo": ""
+		},
+		"difficulty": 1,
+		"knowledgePointPaths": [
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "64",
+						"name": "基本数据类型与表达式",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "66",
+						"name": "输入输出格式化控制",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			}
+		],
+		"compiler": "NO_COMPILER",
+		"acceptCount": 0,
+		"submitCount": 0,
+		"problemStatus": "REVIEWED",
+		"problemSelfCheckStatus": "NONE_SELF_CHECK",
+		"problemSetId": "1570609751203704832",
+		"judgeConfig": {
+			"multipleChoiceJudgeConfig": {
+				"answer": "B"
+			}
+		},
+		"solution": "",
+		"description": "putchar()函数的功能是向终端输出",
+		"creatorId": "916259821889974272",
+		"indexInProblemPool": 1,
+		"diffProblemConfigCase": false
+	},
+	{
+		"id": "1570609751279202319",
+		"label": "",
+		"score": 1,
+		"problemPoolIndex": 11,
+		"problemPoolCompositionCount": 1,
+		"problemConfig": {
+			"solutionVisible": false,
+			"answerVisible": false,
+			"multipleChoiceProblemConfig": {
+				"choices": [
+					"a>=10 or a<=0",
+					"a>=0 | a<=10",
+					"a>=10 && a<=0",
+					"a>=10 || a<=0"
+				],
+				"maxDisplayChoicesPerLine": 1
+			}
+		},
+		"deadline": "1970-01-01T00:00:00Z",
+		"problemId": "5137",
+		"title": "能正确表示逻辑关系\"$$a\\ge10$$ 或 $$a\\le0$$\"的C语言表达式是（）。   ",
+		"content": "能正确表示逻辑关系\"$$a\\ge10$$ 或 $$a\\le0$$\"的C语言表达式是（）。   @[](1)\n\nA. a>=10 or a<=0\nB. a>=0 | a<=10\nC. a>=10 && a<=0\nD. a>=10 || a<=0\n",
+		"type": "MULTIPLE_CHOICE",
+		"author": "颜晖",
+		"authorOrganization": {
+			"id": "1",
+			"name": "浙江大学",
+			"comment": "",
+			"code": "",
+			"country": "NO_COUNTRY",
+			"membersCount": 0,
+			"type": "UNKNOWN",
+			"balance": 0,
+			"subdomain": "",
+			"logo": ""
+		},
+		"difficulty": 1,
+		"knowledgePointPaths": [
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "64",
+						"name": "基本数据类型与表达式",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "65",
+						"name": "表达式",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			}
+		],
+		"compiler": "NO_COMPILER",
+		"acceptCount": 0,
+		"submitCount": 0,
+		"problemStatus": "REVIEWED",
+		"problemSelfCheckStatus": "NONE_SELF_CHECK",
+		"problemSetId": "1570609751203704832",
+		"judgeConfig": {
+			"multipleChoiceJudgeConfig": {
+				"answer": "D"
+			}
+		},
+		"solution": "",
+		"description": "能正确表示逻辑关系\"$$a\\ge10$$ 或 $$a\\le0$$\"的C语言表达式是（）。   \n\n",
+		"creatorId": "916259821889974272",
+		"indexInProblemPool": 1,
+		"diffProblemConfigCase": false
+	},
+	{
+		"id": "1570609751279202320",
+		"label": "",
+		"score": 2,
+		"problemPoolIndex": 12,
+		"problemPoolCompositionCount": 1,
+		"problemConfig": {
+			"solutionVisible": false,
+			"answerVisible": false,
+			"multipleChoiceProblemConfig": {
+				"choices": [
+					"```\nwhile ((ch = getchar()) == 'N')  \n\t printf(\"%c\", ch);\n```",
+					"```\nwhile (ch = getchar() == 'N')\n   printf(\"%c\", ch);\n```",
+					"while ( (ch = getchar( )) != 'N')\n\n    printf(\"%c\", ch);",
+					"while (ch = getchar() != 'N')\n\n      printf(\"%c\", ch);"
+				],
+				"maxDisplayChoicesPerLine": 1
+			}
+		},
+		"deadline": "1970-01-01T00:00:00Z",
+		"problemId": "1302445283271593984",
+		"title": "要求通过 while 循环不断输出字符，当读入字母 N 时结束循环。若变量已正确定义，下列程序段正确的是（  ）。",
+		"content": "要求通过 while 循环不断输出字符，当读入字母 N 时结束循环。若变量已正确定义，下列程序段正确的是（  ）。",
+		"type": "MULTIPLE_CHOICE",
+		"author": "C课程组",
+		"authorOrganization": {
+			"id": "1182483848191823872",
+			"name": "湖南工程学院",
+			"comment": "",
+			"code": "",
+			"country": "NO_COUNTRY",
+			"membersCount": 0,
+			"type": "UNKNOWN",
+			"balance": 0,
+			"subdomain": "",
+			"logo": ""
+		},
+		"difficulty": 2,
+		"knowledgePointPaths": [
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "64",
+						"name": "基本数据类型与表达式",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "65",
+						"name": "表达式",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			},
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "64",
+						"name": "基本数据类型与表达式",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "66",
+						"name": "输入输出格式化控制",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			},
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "70",
+						"name": "循环控制",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "72",
+						"name": "while和do-while",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			}
+		],
+		"compiler": "NO_COMPILER",
+		"acceptCount": 0,
+		"submitCount": 0,
+		"problemStatus": "REVIEWED",
+		"problemSelfCheckStatus": "NONE_SELF_CHECK",
+		"problemSetId": "1570609751203704832",
+		"judgeConfig": {
+			"multipleChoiceJudgeConfig": {
+				"answer": "C"
+			}
+		},
+		"solution": "",
+		"description": "要求通过 while 循环不断输出字符，当读入字母 N 时结束循环。若变量已正确定义，下列程序段正确的是（  ）。",
+		"creatorId": "916259821889974272",
+		"indexInProblemPool": 1,
+		"diffProblemConfigCase": false
+	},
+	{
+		"id": "1570609751279202321",
+		"label": "",
+		"score": 2,
+		"problemPoolIndex": 13,
+		"problemPoolCompositionCount": 1,
+		"problemConfig": {
+			"solutionVisible": false,
+			"answerVisible": false,
+			"multipleChoiceProblemConfig": {
+				"choices": [
+					"(x>=y)&&(y>=z) ",
+					" (x>=y)AND(y>=x)",
+					"x>=y>=z    ",
+					"(x≥y)&&(y≥z)"
+				],
+				"maxDisplayChoicesPerLine": 1
+			}
+		},
+		"deadline": "1970-01-01T00:00:00Z",
+		"problemId": "1302789019088277504",
+		"title": "为表示x≥y≥z，须用的C语言表达式为（  ）。",
+		"content": "为表示x≥y≥z，须用的C语言表达式为（  ）。\n\n@[](2)\n\nA. (x>=y)&&(y>=z) \nB.  (x>=y)AND(y>=x)\nC. x>=y>=z    \nD. (x≥y)&&(y≥z)",
+		"type": "MULTIPLE_CHOICE",
+		"author": "C课程组",
+		"authorOrganization": {
+			"id": "1182483848191823872",
+			"name": "湖南工程学院",
+			"comment": "",
+			"code": "",
+			"country": "NO_COUNTRY",
+			"membersCount": 0,
+			"type": "UNKNOWN",
+			"balance": 0,
+			"subdomain": "",
+			"logo": ""
+		},
+		"difficulty": 1,
+		"knowledgePointPaths": [
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "64",
+						"name": "基本数据类型与表达式",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "65",
+						"name": "表达式",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			}
+		],
+		"compiler": "NO_COMPILER",
+		"acceptCount": 0,
+		"submitCount": 0,
+		"problemStatus": "REVIEWED",
+		"problemSelfCheckStatus": "NONE_SELF_CHECK",
+		"problemSetId": "1570609751203704832",
+		"judgeConfig": {
+			"multipleChoiceJudgeConfig": {
+				"answer": "A"
+			}
+		},
+		"solution": "",
+		"description": "为表示x≥y≥z，须用的C语言表达式为（  ）。\n",
+		"creatorId": "916259821889974272",
+		"indexInProblemPool": 1,
+		"diffProblemConfigCase": false
+	},
+	{
+		"id": "1570609751279202322",
+		"label": "",
+		"score": 2,
+		"problemPoolIndex": 14,
+		"problemPoolCompositionCount": 1,
+		"problemConfig": {
+			"solutionVisible": false,
+			"answerVisible": false,
+			"multipleChoiceProblemConfig": {
+				"choices": [
+					"a=4, b=1",
+					"a=0,b=1",
+					"a=1,b=1",
+					"a=4,b=0"
+				],
+				"maxDisplayChoicesPerLine": 1
+			}
+		},
+		"deadline": "1970-01-01T00:00:00Z",
+		"problemId": "1403323578279960576",
+		"title": "下述代码执行后，a,b的值各为多少？",
+		"content": "下述代码执行后，a,b的值各为多少？\n\n```\n    int a = 0, b = 0;\n    a = (b++, 4);\n```",
+		"type": "MULTIPLE_CHOICE",
+		"author": "海洋饼干叔叔",
+		"authorOrganization": {
+			"id": "93",
+			"name": "重庆大学",
+			"comment": "",
+			"code": "",
+			"country": "NO_COUNTRY",
+			"membersCount": 0,
+			"type": "UNKNOWN",
+			"balance": 0,
+			"subdomain": "",
+			"logo": ""
+		},
+		"difficulty": 2,
+		"knowledgePointPaths": [
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "64",
+						"name": "基本数据类型与表达式",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "65",
+						"name": "表达式",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			}
+		],
+		"compiler": "NO_COMPILER",
+		"acceptCount": 0,
+		"submitCount": 0,
+		"problemStatus": "REVIEWED",
+		"problemSelfCheckStatus": "NONE_SELF_CHECK",
+		"problemSetId": "1570609751203704832",
+		"judgeConfig": {
+			"multipleChoiceJudgeConfig": {
+				"answer": "A"
+			}
+		},
+		"solution": "",
+		"description": "下述代码执行后，a,b的值各为多少？\n\n```\n    int a = 0, b = 0;\n    a = (b++, 4);\n```",
+		"creatorId": "916259821889974272",
+		"indexInProblemPool": 1,
+		"diffProblemConfigCase": false
+	},
+	{
+		"id": "1570609751279202323",
+		"label": "",
+		"score": 1,
+		"problemPoolIndex": 15,
+		"problemPoolCompositionCount": 1,
+		"problemConfig": {
+			"solutionVisible": false,
+			"answerVisible": false,
+			"multipleChoiceProblemConfig": {
+				"choices": [
+					"x=y*5=x+z\t",
+					"int(15.8%5) ",
+					"x=25%5.0",
+					"x=y+z+5,++y"
+				],
+				"maxDisplayChoicesPerLine": 1
+			}
+		},
+		"deadline": "1970-01-01T00:00:00Z",
+		"problemId": "1255797599237132288",
+		"title": "设变量已正确定义并赋值,以下正确的表达式是_____。 ",
+		"content": "设变量已正确定义并赋值,以下正确的表达式是_____。 @[](1.5)\nA. x=y*5=x+z\t\nB.  int(15.8%5) \nC.  x=25%5.0\nD. x=y+z+5,++y\n",
+		"type": "MULTIPLE_CHOICE",
+		"author": "yuanyuan",
+		"authorOrganization": {
+			"id": "1227073259052355584",
+			"name": "长春理工大学",
+			"comment": "",
+			"code": "",
+			"country": "NO_COUNTRY",
+			"membersCount": 0,
+			"type": "UNKNOWN",
+			"balance": 0,
+			"subdomain": "",
+			"logo": ""
+		},
+		"difficulty": 1,
+		"knowledgePointPaths": [
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "64",
+						"name": "基本数据类型与表达式",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "65",
+						"name": "表达式",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			}
+		],
+		"compiler": "NO_COMPILER",
+		"acceptCount": 0,
+		"submitCount": 0,
+		"problemStatus": "REVIEWED",
+		"problemSelfCheckStatus": "NONE_SELF_CHECK",
+		"problemSetId": "1570609751203704832",
+		"judgeConfig": {
+			"multipleChoiceJudgeConfig": {
+				"answer": "D"
+			}
+		},
+		"solution": "",
+		"description": "设变量已正确定义并赋值,以下正确的表达式是_____。 \n",
+		"creatorId": "916259821889974272",
+		"indexInProblemPool": 1,
+		"diffProblemConfigCase": false
+	},
+	{
+		"id": "1570609751279202324",
+		"label": "",
+		"score": 5,
+		"problemPoolIndex": 1,
+		"problemPoolCompositionCount": 1,
+		"problemConfig": {
+			"programmingProblemConfig": {
+				"timeLimit": 400,
+				"memoryLimit": 65536,
+				"codeSizeLimit": 16,
+				"cases": {
+					"0": {
+						"hint": "",
+						"showHint": false,
+						"score": 3,
+						"updateAt": "2000-01-01T00:00:00Z",
+						"isPublic": false
+					},
+					"1": {
+						"hint": "",
+						"showHint": false,
+						"score": 1,
+						"updateAt": "2000-01-01T00:00:00Z",
+						"isPublic": false
+					},
+					"2": {
+						"hint": "",
+						"showHint": false,
+						"score": 1,
+						"updateAt": "2000-01-01T00:00:00Z",
+						"isPublic": false
+					}
+				},
+				"exampleTestDatas": [
+					{
+						"name": "",
+						"input": "5\n",
+						"output": "2^5 = 32\n"
+					}
+				],
+				"testdataDescriptionCode": "",
+				"customizeLimits": [],
+				"stackSizeLimit": 0,
+				"tools": [],
+				"ignorePresentationError": false
+			},
+			"solutionVisible": false,
+			"answerVisible": false
+		},
+		"deadline": "1970-01-01T00:00:00Z",
+		"problemId": "10596",
+		"title": "计算指数",
+		"content": "真的没骗你，这道才是简单题 —— 对任意给定的不超过 10 的正整数 $$n$$，要求你输出 $$2^n$$。不难吧？\n\n### 输入格式：\n\n输入在一行中给出一个不超过 10 的正整数 $$n$$。\n\n### 输出格式：\n\n在一行中按照格式  `2^n = 计算结果`  输出 $$2^n$$ 的值。\n\n### 输入样例：\n```in\n5\n```\n\n### 输出样例：\n```out\n2^5 = 32\n```",
+		"type": "PROGRAMMING",
+		"author": "陈越",
+		"authorOrganization": {
+			"id": "1",
+			"name": "浙江大学",
+			"comment": "",
+			"code": "",
+			"country": "NO_COUNTRY",
+			"membersCount": 0,
+			"type": "UNKNOWN",
+			"balance": 0,
+			"subdomain": "",
+			"logo": ""
+		},
+		"difficulty": 1,
+		"knowledgePointPaths": [
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "64",
+						"name": "基本数据类型与表达式",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "65",
+						"name": "表达式",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			}
+		],
+		"compiler": "NO_COMPILER",
+		"acceptCount": 45,
+		"submitCount": 172,
+		"problemStatus": "REVIEWED",
+		"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+		"problemSetId": "1570609751203704832",
+		"judgeConfig": {
+			"programmingJudgeConfig": {
+				"testDataId": "5af50fd38c3638000a2d933c",
+				"answer": "",
+				"answerCompiler": "NO_COMPILER",
+				"useSpecialJudge": false,
+				"checkerCompiler": "NO_COMPILER",
+				"checkerProgram": "",
+				"scoringRule": "NORMAL",
+				"useInteractor": false,
+				"interactorCompiler": "NO_COMPILER",
+				"interactorProgram": "",
+				"testDataVersion": 0
+			}
+		},
+		"solution": "",
+		"description": "真的没骗你，这道才是简单题 —— 对任意给定的不超过 10 的正整数 $$n$$，要求你输出 $$2^n$$。不难吧？\n\n### 输入格式：\n\n输入在一行中给出一个不超过 10 的正整数 $$n$$。\n\n### 输出格式：\n\n在一行中按照格式  `2^n = 计算结果`  输出 $$2^n$$ 的值。\n\n### 输入样例：\n```in\n5\n```\n\n### 输出样例：\n```out\n2^5 = 32\n```",
+		"creatorId": "916259821889974272",
+		"indexInProblemPool": 1,
+		"diffProblemConfigCase": false
+	},
+	{
+		"id": "1570609751279202325",
+		"label": "",
+		"score": 5,
+		"problemPoolIndex": 2,
+		"problemPoolCompositionCount": 1,
+		"problemConfig": {
+			"programmingProblemConfig": {
+				"timeLimit": 400,
+				"memoryLimit": 65536,
+				"codeSizeLimit": 16,
+				"cases": {
+					"0": {
+						"hint": "",
+						"showHint": false,
+						"score": 2,
+						"updateAt": "2019-01-30T12:43:25Z",
+						"isPublic": false
+					},
+					"1": {
+						"hint": "",
+						"showHint": false,
+						"score": 1,
+						"updateAt": "2019-01-30T12:43:25Z",
+						"isPublic": false
+					},
+					"2": {
+						"hint": "",
+						"showHint": false,
+						"score": 1,
+						"updateAt": "2019-01-30T12:43:25Z",
+						"isPublic": false
+					},
+					"3": {
+						"hint": "",
+						"showHint": false,
+						"score": 1,
+						"updateAt": "2019-01-30T12:43:25Z",
+						"isPublic": false
+					}
+				},
+				"exampleTestDatas": [
+					{
+						"name": "",
+						"input": "8 3\n",
+						"output": "8/2.7=3\n"
+					}
+				],
+				"testdataDescriptionCode": "",
+				"customizeLimits": [],
+				"stackSizeLimit": 0,
+				"tools": [],
+				"ignorePresentationError": false
+			},
+			"solutionVisible": false,
+			"answerVisible": false
+		},
+		"deadline": "1970-01-01T00:00:00Z",
+		"problemId": "1090591322608398336",
+		"title": "考试周",
+		"content": "![ksz.jpg](~/6ea1fd32-0cef-4111-b263-5ef29393be2b.jpg)\n\n\n考试周快到了，浙江大学的电子屏又调皮了…… 本题请你帮小编写一个自动倒计时的程序，对给定的日期（例如“腊八”就对应 8）和倒计时天数（例如电子屏上的“四天之后”就对应 4），自动调整公式里的分母（例如 8/2=4 里面的那个 2）。\n\n### 输入格式：\n\n输入在一行中给出两个正整数：$$A$$ 是给定的日期，不超过 30；$$B$$ 是倒计时天数，不超过 10。\n\n### 输出格式：\n\n在一行中输出公式 $$A/X=B$$，其中 $$X$$ 是满足等式的数字，输出时保留小数点后 1 位即可。\n\n### 输入样例：\n```in\n8 3\n```\n\n### 输出样例：\n```out\n8/2.7=3\n```\n",
+		"type": "PROGRAMMING",
+		"author": "陈越",
+		"authorOrganization": {
+			"id": "1",
+			"name": "浙江大学",
+			"comment": "",
+			"code": "",
+			"country": "NO_COUNTRY",
+			"membersCount": 0,
+			"type": "UNKNOWN",
+			"balance": 0,
+			"subdomain": "",
+			"logo": ""
+		},
+		"difficulty": 1,
+		"knowledgePointPaths": [
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "64",
+						"name": "基本数据类型与表达式",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "65",
+						"name": "表达式",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			}
+		],
+		"compiler": "NO_COMPILER",
+		"acceptCount": 46,
+		"submitCount": 135,
+		"problemStatus": "REVIEWED",
+		"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+		"problemSetId": "1570609751203704832",
+		"judgeConfig": {
+			"programmingJudgeConfig": {
+				"testDataId": "5c519beda734c4000973b208",
+				"answer": "",
+				"answerCompiler": "NO_COMPILER",
+				"useSpecialJudge": false,
+				"checkerCompiler": "GCC",
+				"checkerProgram": "",
+				"scoringRule": "NORMAL",
+				"useInteractor": false,
+				"interactorCompiler": "NO_COMPILER",
+				"interactorProgram": "",
+				"testDataVersion": 0
+			}
+		},
+		"solution": "",
+		"description": "![ksz.jpg](~/6ea1fd32-0cef-4111-b263-5ef29393be2b.jpg)\n\n\n考试周快到了，浙江大学的电子屏又调皮了…… 本题请你帮小编写一个自动倒计时的程序，对给定的日期（例如“腊八”就对应 8）和倒计时天数（例如电子屏上的“四天之后”就对应 4），自动调整公式里的分母（例如 8/2=4 里面的那个 2）。\n\n### 输入格式：\n\n输入在一行中给出两个正整数：$$A$$ 是给定的日期，不超过 30；$$B$$ 是倒计时天数，不超过 10。\n\n### 输出格式：\n\n在一行中输出公式 $$A/X=B$$，其中 $$X$$ 是满足等式的数字，输出时保留小数点后 1 位即可。\n\n### 输入样例：\n```in\n8 3\n```\n\n### 输出样例：\n```out\n8/2.7=3\n```\n",
+		"creatorId": "916259821889974272",
+		"indexInProblemPool": 1,
+		"diffProblemConfigCase": false
+	},
+	{
+		"id": "1570609751279202326",
+		"label": "",
+		"score": 5,
+		"problemPoolIndex": 3,
+		"problemPoolCompositionCount": 1,
+		"problemConfig": {
+			"programmingProblemConfig": {
+				"timeLimit": 400,
+				"memoryLimit": 65536,
+				"codeSizeLimit": 16,
+				"cases": {
+					"0": {
+						"hint": "",
+						"showHint": false,
+						"score": 3,
+						"updateAt": "2020-02-12T14:06:49Z",
+						"isPublic": false
+					},
+					"1": {
+						"hint": "",
+						"showHint": false,
+						"score": 1,
+						"updateAt": "2020-02-12T14:06:49Z",
+						"isPublic": false
+					},
+					"2": {
+						"hint": "",
+						"showHint": false,
+						"score": 1,
+						"updateAt": "2020-02-12T14:06:49Z",
+						"isPublic": false
+					}
+				},
+				"exampleTestDatas": [
+					{
+						"name": "",
+						"input": "23 15 20\n",
+						"output": "6900\n"
+					}
+				],
+				"testdataDescriptionCode": "",
+				"customizeLimits": [],
+				"stackSizeLimit": 8192,
+				"tools": [],
+				"ignorePresentationError": false
+			},
+			"solutionVisible": false,
+			"answerVisible": false
+		},
+		"deadline": "1970-01-01T00:00:00Z",
+		"problemId": "1227594932566511616",
+		"title": "猫是液体",
+		"content": "\n![cat.JPG](~/d5ae2430-b2b4-47b9-aaf6-ad15f5babbf6.JPG)\n\n\n测量一个人的体积是很难的，但猫就不一样了。因为猫是液体，所以可以很容易地通过测量一个长方体容器的容积来得到容器里猫的体积。本题就请你完成这个计算。\n\n### 输入格式：\n\n输入在第一行中给出 3 个不超过 100 的正整数，分别对应容器的长、宽、高。\n\n### 输出格式：\n\n在一行中输出猫的体积。\n\n### 输入样例：\n```in\n23 15 20\n```\n\n### 输出样例：\n```out\n6900\n```\n",
+		"type": "PROGRAMMING",
+		"author": "陈越",
+		"authorOrganization": {
+			"id": "1",
+			"name": "浙江大学",
+			"comment": "",
+			"code": "",
+			"country": "NO_COUNTRY",
+			"membersCount": 0,
+			"type": "UNKNOWN",
+			"balance": 0,
+			"subdomain": "",
+			"logo": ""
+		},
+		"difficulty": 1,
+		"knowledgePointPaths": [
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "64",
+						"name": "基本数据类型与表达式",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "65",
+						"name": "表达式",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			}
+		],
+		"compiler": "NO_COMPILER",
+		"acceptCount": 44,
+		"submitCount": 73,
+		"problemStatus": "REVIEWED",
+		"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+		"problemSetId": "1570609751203704832",
+		"judgeConfig": {
+			"programmingJudgeConfig": {
+				"testDataId": "5e4406796d31f80005315c3c",
+				"answer": "",
+				"answerCompiler": "NO_COMPILER",
+				"useSpecialJudge": false,
+				"checkerCompiler": "GCC",
+				"checkerProgram": "",
+				"scoringRule": "NORMAL",
+				"useInteractor": false,
+				"interactorCompiler": "NO_COMPILER",
+				"interactorProgram": "",
+				"testDataVersion": 0
+			}
+		},
+		"solution": "",
+		"description": "\n![cat.JPG](~/d5ae2430-b2b4-47b9-aaf6-ad15f5babbf6.JPG)\n\n\n测量一个人的体积是很难的，但猫就不一样了。因为猫是液体，所以可以很容易地通过测量一个长方体容器的容积来得到容器里猫的体积。本题就请你完成这个计算。\n\n### 输入格式：\n\n输入在第一行中给出 3 个不超过 100 的正整数，分别对应容器的长、宽、高。\n\n### 输出格式：\n\n在一行中输出猫的体积。\n\n### 输入样例：\n```in\n23 15 20\n```\n\n### 输出样例：\n```out\n6900\n```\n",
+		"creatorId": "916259821889974272",
+		"indexInProblemPool": 1,
+		"diffProblemConfigCase": false
+	},
+	{
+		"id": "1570609751279202327",
+		"label": "",
+		"score": 5,
+		"problemPoolIndex": 4,
+		"problemPoolCompositionCount": 1,
+		"problemConfig": {
+			"programmingProblemConfig": {
+				"timeLimit": 400,
+				"memoryLimit": 65536,
+				"codeSizeLimit": 16,
+				"cases": {
+					"0": {
+						"hint": "",
+						"showHint": false,
+						"score": 3,
+						"updateAt": "2021-04-05T04:08:46Z",
+						"isPublic": false
+					},
+					"1": {
+						"hint": "",
+						"showHint": false,
+						"score": 1,
+						"updateAt": "2021-04-05T04:08:46Z",
+						"isPublic": false
+					},
+					"2": {
+						"hint": "",
+						"showHint": false,
+						"score": 1,
+						"updateAt": "2021-04-05T04:08:46Z",
+						"isPublic": false
+					}
+				},
+				"exampleTestDatas": [
+					{
+						"name": "",
+						"input": "100000 1000 72",
+						"output": "28000"
+					}
+				],
+				"testdataDescriptionCode": "",
+				"customizeLimits": [],
+				"stackSizeLimit": 8192,
+				"tools": [],
+				"ignorePresentationError": false
+			},
+			"solutionVisible": false,
+			"answerVisible": false
+		},
+		"deadline": "1970-01-01T00:00:00Z",
+		"problemId": "1378922457282224128",
+		"title": "两小时学完C语言",
+		"content": "\n![Q.JPG](~/b388314c-c7d3-48d8-befa-0fc45cf853a9.JPG)\n\n\n知乎上有个宝宝问：“两个小时内如何学完 C 语言？”当然，问的是“学完”并不是“学会”。\n\n假设一本 C 语言教科书有 N 个字，这个宝宝每分钟能看 K 个字，看了 M 分钟。还剩多少字没有看？\n\n### 输入格式：\n\n输入在一行中给出 3 个正整数，分别是 N（不超过 400 000），教科书的总字数；K（不超过 3 000），是宝宝每分钟能看的字数；M（不超过 120），是宝宝看书的分钟数。\n\n题目保证宝宝看完的字数不超过 N。\n\n### 输出格式：\n\n在一行中输出宝宝还没有看的字数。\n\n### 输入样例：\n```in\n100000 1000 72\n```\n\n### 输出样例：\n```out\n28000\n```\n",
+		"type": "PROGRAMMING",
+		"author": "陈越",
+		"authorOrganization": {
+			"id": "1",
+			"name": "浙江大学",
+			"comment": "",
+			"code": "",
+			"country": "NO_COUNTRY",
+			"membersCount": 0,
+			"type": "UNKNOWN",
+			"balance": 0,
+			"subdomain": "",
+			"logo": ""
+		},
+		"difficulty": 1,
+		"knowledgePointPaths": [
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "64",
+						"name": "基本数据类型与表达式",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "65",
+						"name": "表达式",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			}
+		],
+		"compiler": "NO_COMPILER",
+		"acceptCount": 43,
+		"submitCount": 62,
+		"problemStatus": "REVIEWED",
+		"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+		"problemSetId": "1570609751203704832",
+		"judgeConfig": {
+			"programmingJudgeConfig": {
+				"testDataId": "606a8d4ebe4f740007ab6d7b",
+				"answer": "",
+				"answerCompiler": "NO_COMPILER",
+				"useSpecialJudge": false,
+				"checkerCompiler": "GCC",
+				"checkerProgram": "",
+				"scoringRule": "NORMAL",
+				"useInteractor": false,
+				"interactorCompiler": "NO_COMPILER",
+				"interactorProgram": "",
+				"testDataVersion": 0
+			}
+		},
+		"solution": "",
+		"description": "\n![Q.JPG](~/b388314c-c7d3-48d8-befa-0fc45cf853a9.JPG)\n\n\n知乎上有个宝宝问：“两个小时内如何学完 C 语言？”当然，问的是“学完”并不是“学会”。\n\n假设一本 C 语言教科书有 N 个字，这个宝宝每分钟能看 K 个字，看了 M 分钟。还剩多少字没有看？\n\n### 输入格式：\n\n输入在一行中给出 3 个正整数，分别是 N（不超过 400 000），教科书的总字数；K（不超过 3 000），是宝宝每分钟能看的字数；M（不超过 120），是宝宝看书的分钟数。\n\n题目保证宝宝看完的字数不超过 N。\n\n### 输出格式：\n\n在一行中输出宝宝还没有看的字数。\n\n### 输入样例：\n```in\n100000 1000 72\n```\n\n### 输出样例：\n```out\n28000\n```\n",
+		"creatorId": "916259821889974272",
+		"indexInProblemPool": 1,
+		"diffProblemConfigCase": false
+	},
+	{
+		"id": "1570609751279202328",
+		"label": "",
+		"score": 5,
+		"problemPoolIndex": 5,
+		"problemPoolCompositionCount": 1,
+		"problemConfig": {
+			"programmingProblemConfig": {
+				"timeLimit": 400,
+				"memoryLimit": 65536,
+				"codeSizeLimit": 16,
+				"cases": {
+					"0": {
+						"hint": "sample等价，月有前导0",
+						"showHint": false,
+						"score": 4,
+						"updateAt": "2017-04-19T15:42:03Z",
+						"isPublic": false
+					},
+					"1": {
+						"hint": "最小年份，月日都有前导0",
+						"showHint": false,
+						"score": 1,
+						"updateAt": "2017-04-19T15:42:03Z",
+						"isPublic": false
+					}
+				},
+				"exampleTestDatas": [],
+				"testdataDescriptionCode": "",
+				"customizeLimits": [],
+				"stackSizeLimit": 0,
+				"tools": [],
+				"ignorePresentationError": false
+			},
+			"solutionVisible": false,
+			"answerVisible": false
+		},
+		"deadline": "1970-01-01T00:00:00Z",
+		"problemId": "6291",
+		"title": "日期格式化",
+		"content": "世界上不同国家有不同的写日期的习惯。比如美国人习惯写成“月-日-年”，而中国人习惯写成“年-月-日”。下面请你写个程序，自动把读入的美国格式的日期改写成中国习惯的日期。\n\n### 输入格式：\n\n输入在一行中按照“mm-dd-yyyy”的格式给出月、日、年。题目保证给出的日期是1900年元旦至今合法的日期。\n\n### 输出格式：\n\n在一行中按照“yyyy-mm-dd”的格式给出年、月、日。\n\n### 输入样例：\n```in\n03-15-2017\n```\n\n### 输出样例：\n```out\n2017-03-15\n```",
+		"type": "PROGRAMMING",
+		"author": "陈越",
+		"authorOrganization": {
+			"id": "1",
+			"name": "浙江大学",
+			"comment": "",
+			"code": "",
+			"country": "NO_COUNTRY",
+			"membersCount": 0,
+			"type": "UNKNOWN",
+			"balance": 0,
+			"subdomain": "",
+			"logo": ""
+		},
+		"difficulty": 1,
+		"knowledgePointPaths": [
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "64",
+						"name": "基本数据类型与表达式",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "66",
+						"name": "输入输出格式化控制",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			}
+		],
+		"compiler": "NO_COMPILER",
+		"acceptCount": 45,
+		"submitCount": 122,
+		"problemStatus": "REVIEWED",
+		"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+		"problemSetId": "1570609751203704832",
+		"judgeConfig": {
+			"programmingJudgeConfig": {
+				"testDataId": "5993fa5d93d1de004a0fd35c",
+				"answer": "",
+				"answerCompiler": "NO_COMPILER",
+				"useSpecialJudge": false,
+				"checkerCompiler": "NO_COMPILER",
+				"checkerProgram": "",
+				"scoringRule": "NORMAL",
+				"useInteractor": false,
+				"interactorCompiler": "NO_COMPILER",
+				"interactorProgram": "",
+				"testDataVersion": 0
+			}
+		},
+		"solution": "",
+		"description": "世界上不同国家有不同的写日期的习惯。比如美国人习惯写成“月-日-年”，而中国人习惯写成“年-月-日”。下面请你写个程序，自动把读入的美国格式的日期改写成中国习惯的日期。\n\n### 输入格式：\n\n输入在一行中按照“mm-dd-yyyy”的格式给出月、日、年。题目保证给出的日期是1900年元旦至今合法的日期。\n\n### 输出格式：\n\n在一行中按照“yyyy-mm-dd”的格式给出年、月、日。\n\n### 输入样例：\n```in\n03-15-2017\n```\n\n### 输出样例：\n```out\n2017-03-15\n```",
+		"creatorId": "916259821889974272",
+		"indexInProblemPool": 1,
+		"diffProblemConfigCase": false
+	},
+	{
+		"id": "1570609751279202329",
+		"label": "",
+		"score": 5,
+		"problemPoolIndex": 6,
+		"problemPoolCompositionCount": 1,
+		"problemConfig": {
+			"programmingProblemConfig": {
+				"timeLimit": 400,
+				"memoryLimit": 65536,
+				"codeSizeLimit": 16,
+				"cases": {
+					"0": {
+						"hint": "样例等价",
+						"showHint": false,
+						"score": 2,
+						"updateAt": "2022-04-20T07:51:22Z",
+						"isPublic": false
+					},
+					"1": {
+						"hint": ".",
+						"showHint": false,
+						"score": 1,
+						"updateAt": "2022-04-20T07:51:48Z",
+						"isPublic": false
+					},
+					"2": {
+						"hint": ".",
+						"showHint": false,
+						"score": 1,
+						"updateAt": "2022-04-20T07:52:09Z",
+						"isPublic": false
+					},
+					"3": {
+						"hint": ".",
+						"showHint": false,
+						"score": 1,
+						"updateAt": "2022-04-20T07:52:28Z",
+						"isPublic": false
+					}
+				},
+				"exampleTestDatas": [
+					{
+						"name": "",
+						"input": "102000 130",
+						"output": "784"
+					}
+				],
+				"testdataDescriptionCode": "",
+				"customizeLimits": [],
+				"stackSizeLimit": 8192,
+				"tools": [],
+				"ignorePresentationError": false
+			},
+			"solutionVisible": false,
+			"answerVisible": false
+		},
+		"deadline": "1970-01-01T00:00:00Z",
+		"problemId": "1510522990864830464",
+		"title": "种钻石",
+		"content": "\n![d.jpg](~/483c129d-c67a-4893-ab74-e2fa1453180e.jpg)\n\n\n2019年10月29日，中央电视台专题报道，中国科学院在培育钻石领域，取得科技突破。科学家们用金刚石的籽晶片作为种子，利用甲烷气体在能量作用下形成碳的等离子体，慢慢地沉积到钻石种子上，一周“种”出了一颗 1 克拉大小的钻石。\n\n本题给出钻石的需求量和人工培育钻石的速度，请你计算出货需要的时间。\n\n### 输入格式：\n\n输入在一行中给出钻石的需求量 $$N$$（不超过 $$10^7$$ 的正整数，以`微克拉`为单位）和人工培育钻石的速度 $$v$$（$$1\\le v \\le 200$$，以`微克拉/天`为单位的整数）。\n\n### 输出格式：\n\n在一行中输出培育 $$N$$ 微克拉钻石需要的整数天数。不到一天的时间不算在内。\n\n### 输入样例：\n```in\n102000 130\n```\n\n### 输出样例：\n```out\n784\n```\n",
+		"type": "PROGRAMMING",
+		"author": "陈越",
+		"authorOrganization": {
+			"id": "1",
+			"name": "浙江大学",
+			"comment": "",
+			"code": "",
+			"country": "NO_COUNTRY",
+			"membersCount": 0,
+			"type": "UNKNOWN",
+			"balance": 0,
+			"subdomain": "",
+			"logo": ""
+		},
+		"difficulty": 1,
+		"knowledgePointPaths": [
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "64",
+						"name": "基本数据类型与表达式",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "65",
+						"name": "表达式",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			}
+		],
+		"compiler": "NO_COMPILER",
+		"acceptCount": 44,
+		"submitCount": 68,
+		"problemStatus": "REVIEWED",
+		"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+		"problemSetId": "1570609751203704832",
+		"judgeConfig": {
+			"programmingJudgeConfig": {
+				"testDataId": "62494fd9f666296c039140e5",
+				"answer": "",
+				"answerCompiler": "NO_COMPILER",
+				"useSpecialJudge": false,
+				"checkerCompiler": "GCC",
+				"checkerProgram": "",
+				"scoringRule": "NORMAL",
+				"useInteractor": false,
+				"interactorCompiler": "NO_COMPILER",
+				"interactorProgram": "",
+				"testDataVersion": 0
+			}
+		},
+		"solution": "",
+		"description": "\n![d.jpg](~/483c129d-c67a-4893-ab74-e2fa1453180e.jpg)\n\n\n2019年10月29日，中央电视台专题报道，中国科学院在培育钻石领域，取得科技突破。科学家们用金刚石的籽晶片作为种子，利用甲烷气体在能量作用下形成碳的等离子体，慢慢地沉积到钻石种子上，一周“种”出了一颗 1 克拉大小的钻石。\n\n本题给出钻石的需求量和人工培育钻石的速度，请你计算出货需要的时间。\n\n### 输入格式：\n\n输入在一行中给出钻石的需求量 $$N$$（不超过 $$10^7$$ 的正整数，以`微克拉`为单位）和人工培育钻石的速度 $$v$$（$$1\\le v \\le 200$$，以`微克拉/天`为单位的整数）。\n\n### 输出格式：\n\n在一行中输出培育 $$N$$ 微克拉钻石需要的整数天数。不到一天的时间不算在内。\n\n### 输入样例：\n```in\n102000 130\n```\n\n### 输出样例：\n```out\n784\n```\n",
+		"creatorId": "916259821889974272",
+		"indexInProblemPool": 1,
+		"diffProblemConfigCase": false
+	},
+	{
+		"id": "1570609751279202330",
+		"label": "",
+		"score": 5,
+		"problemPoolIndex": 7,
+		"problemPoolCompositionCount": 1,
+		"problemConfig": {
+			"programmingProblemConfig": {
+				"timeLimit": 400,
+				"memoryLimit": 65536,
+				"codeSizeLimit": 16,
+				"cases": {
+					"0": {
+						"hint": "",
+						"showHint": false,
+						"score": 3,
+						"updateAt": "2021-05-08T08:32:03Z",
+						"isPublic": false
+					},
+					"1": {
+						"hint": "",
+						"showHint": false,
+						"score": 1,
+						"updateAt": "2021-05-08T08:32:03Z",
+						"isPublic": false
+					},
+					"2": {
+						"hint": "",
+						"showHint": false,
+						"score": 1,
+						"updateAt": "2021-05-08T08:32:03Z",
+						"isPublic": false
+					}
+				},
+				"exampleTestDatas": [
+					{
+						"name": "",
+						"input": "520\n",
+						"output": "print(520)\n"
+					}
+				],
+				"testdataDescriptionCode": "",
+				"customizeLimits": [],
+				"stackSizeLimit": 8192,
+				"tools": [],
+				"ignorePresentationError": false
+			},
+			"solutionVisible": false,
+			"answerVisible": false
+		},
+		"deadline": "1970-01-01T00:00:00Z",
+		"problemId": "1390947478490071040",
+		"title": "自动编程",
+		"content": "输出语句是每个程序员首先要掌握的语句。Python 的输出语句很简单，只要写一个 `print(X)` 即可，其中 `X` 是需要输出的内容。\n\n本题就请你写一个自动编程机，对任何一个要输出的整数 N，给出输出这个整数的 Python 语句。\n\n### 输入格式：\n\n输入给出一个不超过 $$10^5$$ 的正整数。\n\n### 输出格式：\n\n在一行中打印输出这个整数的 Python 语句，其中不包含任何空格。\n\n### 输入样例：\n```in\n520\n\n```\n\n### 输出样例：\n```out\nprint(520)\n\n```\n",
+		"type": "PROGRAMMING",
+		"author": "陈越",
+		"authorOrganization": {
+			"id": "1",
+			"name": "浙江大学",
+			"comment": "",
+			"code": "",
+			"country": "NO_COUNTRY",
+			"membersCount": 0,
+			"type": "UNKNOWN",
+			"balance": 0,
+			"subdomain": "",
+			"logo": ""
+		},
+		"difficulty": 1,
+		"knowledgePointPaths": [
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "64",
+						"name": "基本数据类型与表达式",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "66",
+						"name": "输入输出格式化控制",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			}
+		],
+		"compiler": "NO_COMPILER",
+		"acceptCount": 43,
+		"submitCount": 64,
+		"problemStatus": "REVIEWED",
+		"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+		"problemSetId": "1570609751203704832",
+		"judgeConfig": {
+			"programmingJudgeConfig": {
+				"testDataId": "60964c83567b020007b4880b",
+				"answer": "",
+				"answerCompiler": "NO_COMPILER",
+				"useSpecialJudge": false,
+				"checkerCompiler": "GCC",
+				"checkerProgram": "",
+				"scoringRule": "NORMAL",
+				"useInteractor": false,
+				"interactorCompiler": "NO_COMPILER",
+				"interactorProgram": "",
+				"testDataVersion": 0
+			}
+		},
+		"solution": "",
+		"description": "输出语句是每个程序员首先要掌握的语句。Python 的输出语句很简单，只要写一个 `print(X)` 即可，其中 `X` 是需要输出的内容。\n\n本题就请你写一个自动编程机，对任何一个要输出的整数 N，给出输出这个整数的 Python 语句。\n\n### 输入格式：\n\n输入给出一个不超过 $$10^5$$ 的正整数。\n\n### 输出格式：\n\n在一行中打印输出这个整数的 Python 语句，其中不包含任何空格。\n\n### 输入样例：\n```in\n520\n\n```\n\n### 输出样例：\n```out\nprint(520)\n\n```\n",
+		"creatorId": "916259821889974272",
+		"indexInProblemPool": 1,
+		"diffProblemConfigCase": false
+	},
+	{
+		"id": "1570609751279202331",
+		"label": "",
+		"score": 5,
+		"problemPoolIndex": 8,
+		"problemPoolCompositionCount": 1,
+		"problemConfig": {
+			"programmingProblemConfig": {
+				"timeLimit": 400,
+				"memoryLimit": 65536,
+				"codeSizeLimit": 16,
+				"cases": {
+					"0": {
+						"hint": "sample等价",
+						"showHint": false,
+						"score": 2,
+						"updateAt": "2016-07-30T23:00:48Z",
+						"isPublic": false
+					},
+					"1": {
+						"hint": "结果是边界值",
+						"showHint": false,
+						"score": 1,
+						"updateAt": "2016-07-30T23:00:48Z",
+						"isPublic": false
+					},
+					"2": {
+						"hint": "测试取模正确性",
+						"showHint": false,
+						"score": 1,
+						"updateAt": "2016-07-30T23:00:48Z",
+						"isPublic": false
+					},
+					"3": {
+						"hint": "对边界值取模",
+						"showHint": false,
+						"score": 1,
+						"updateAt": "2016-07-30T23:00:48Z",
+						"isPublic": false
+					}
+				},
+				"exampleTestDatas": [],
+				"testdataDescriptionCode": "",
+				"customizeLimits": [],
+				"stackSizeLimit": 0,
+				"tools": [],
+				"ignorePresentationError": false
+			},
+			"solutionVisible": false,
+			"answerVisible": false
+		},
+		"deadline": "1970-01-01T00:00:00Z",
+		"problemId": "3585",
+		"title": "后天",
+		"content": "如果今天是星期三，后天就是星期五；如果今天是星期六，后天就是星期一。我们用数字1到7对应星期一到星期日。给定某一天，请你输出那天的“后天”是星期几。\n\n### 输入格式：\n\n输入第一行给出一个正整数`D`（1 $$\\le$$ `D` $$\\le$$ 7），代表星期里的某一天。\n\n### 输出格式：\n\n在一行中输出`D`天的后天是星期几。\n\n### 输入样例：\n```in\n3\n```\n\n### 输出样例：\n```out\n5\n```",
+		"type": "PROGRAMMING",
+		"author": "陈越",
+		"authorOrganization": {
+			"id": "1",
+			"name": "浙江大学",
+			"comment": "",
+			"code": "",
+			"country": "NO_COUNTRY",
+			"membersCount": 0,
+			"type": "UNKNOWN",
+			"balance": 0,
+			"subdomain": "",
+			"logo": ""
+		},
+		"difficulty": 1,
+		"knowledgePointPaths": [
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "64",
+						"name": "基本数据类型与表达式",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "65",
+						"name": "表达式",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			}
+		],
+		"compiler": "NO_COMPILER",
+		"acceptCount": 43,
+		"submitCount": 94,
+		"problemStatus": "REVIEWED",
+		"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+		"problemSetId": "1570609751203704832",
+		"judgeConfig": {
+			"programmingJudgeConfig": {
+				"testDataId": "5993fa5393d1de004a0fcee4",
+				"answer": "",
+				"answerCompiler": "NO_COMPILER",
+				"useSpecialJudge": false,
+				"checkerCompiler": "NO_COMPILER",
+				"checkerProgram": "",
+				"scoringRule": "NORMAL",
+				"useInteractor": false,
+				"interactorCompiler": "NO_COMPILER",
+				"interactorProgram": "",
+				"testDataVersion": 0
+			}
+		},
+		"solution": "",
+		"description": "如果今天是星期三，后天就是星期五；如果今天是星期六，后天就是星期一。我们用数字1到7对应星期一到星期日。给定某一天，请你输出那天的“后天”是星期几。\n\n### 输入格式：\n\n输入第一行给出一个正整数`D`（1 $$\\le$$ `D` $$\\le$$ 7），代表星期里的某一天。\n\n### 输出格式：\n\n在一行中输出`D`天的后天是星期几。\n\n### 输入样例：\n```in\n3\n```\n\n### 输出样例：\n```out\n5\n```",
+		"creatorId": "916259821889974272",
+		"indexInProblemPool": 1,
+		"diffProblemConfigCase": false
+	},
+	{
+		"id": "1570609751279202332",
+		"label": "",
+		"score": 5,
+		"problemPoolIndex": 9,
+		"problemPoolCompositionCount": 1,
+		"problemConfig": {
+			"programmingProblemConfig": {
+				"timeLimit": 400,
+				"memoryLimit": 65536,
+				"codeSizeLimit": 16,
+				"cases": {
+					"0": {
+						"hint": "",
+						"showHint": false,
+						"score": 3,
+						"updateAt": "2018-02-18T14:09:18Z",
+						"isPublic": false
+					},
+					"1": {
+						"hint": "",
+						"showHint": false,
+						"score": 1,
+						"updateAt": "2018-02-18T14:09:18Z",
+						"isPublic": false
+					},
+					"2": {
+						"hint": "",
+						"showHint": false,
+						"score": 1,
+						"updateAt": "2018-02-18T14:09:18Z",
+						"isPublic": false
+					}
+				},
+				"exampleTestDatas": [
+					{
+						"name": "",
+						"input": "988 7\n",
+						"output": "691.60\n"
+					}
+				],
+				"testdataDescriptionCode": "",
+				"customizeLimits": [],
+				"stackSizeLimit": 0,
+				"tools": [],
+				"ignorePresentationError": false
+			},
+			"solutionVisible": false,
+			"answerVisible": false
+		},
+		"deadline": "1970-01-01T00:00:00Z",
+		"problemId": "965226734617616384",
+		"title": "打折",
+		"content": "去商场淘打折商品时，计算打折以后的价钱是件颇费脑子的事情。例如原价 ￥988，标明打 7 折，则折扣价应该是 ￥988 x 70% = ￥691.60。本题就请你写个程序替客户计算折扣价。\n\n### 输入格式：\n\n输入在一行中给出商品的原价（不超过1万元的正整数）和折扣（为[1, 9]区间内的整数），其间以空格分隔。\n\n### 输出格式：\n\n在一行中输出商品的折扣价，保留小数点后 2 位。\n\n### 输入样例：\n```in\n988 7\n```\n\n### 输出样例：\n```out\n691.60\n```\n",
+		"type": "PROGRAMMING",
+		"author": "陈越",
+		"authorOrganization": {
+			"id": "1",
+			"name": "浙江大学",
+			"comment": "",
+			"code": "",
+			"country": "NO_COUNTRY",
+			"membersCount": 0,
+			"type": "UNKNOWN",
+			"balance": 0,
+			"subdomain": "",
+			"logo": ""
+		},
+		"difficulty": 1,
+		"knowledgePointPaths": [
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "64",
+						"name": "基本数据类型与表达式",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "65",
+						"name": "表达式",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			}
+		],
+		"compiler": "NO_COMPILER",
+		"acceptCount": 42,
+		"submitCount": 88,
+		"problemStatus": "REVIEWED",
+		"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+		"problemSetId": "1570609751203704832",
+		"judgeConfig": {
+			"programmingJudgeConfig": {
+				"testDataId": "5a89890ee54e53000bac2303",
+				"answer": "",
+				"answerCompiler": "NO_COMPILER",
+				"useSpecialJudge": false,
+				"checkerCompiler": "GCC",
+				"checkerProgram": "",
+				"scoringRule": "NORMAL",
+				"useInteractor": false,
+				"interactorCompiler": "NO_COMPILER",
+				"interactorProgram": "",
+				"testDataVersion": 0
+			}
+		},
+		"solution": "",
+		"description": "去商场淘打折商品时，计算打折以后的价钱是件颇费脑子的事情。例如原价 ￥988，标明打 7 折，则折扣价应该是 ￥988 x 70% = ￥691.60。本题就请你写个程序替客户计算折扣价。\n\n### 输入格式：\n\n输入在一行中给出商品的原价（不超过1万元的正整数）和折扣（为[1, 9]区间内的整数），其间以空格分隔。\n\n### 输出格式：\n\n在一行中输出商品的折扣价，保留小数点后 2 位。\n\n### 输入样例：\n```in\n988 7\n```\n\n### 输出样例：\n```out\n691.60\n```\n",
+		"creatorId": "916259821889974272",
+		"indexInProblemPool": 1,
+		"diffProblemConfigCase": false
+	},
+	{
+		"id": "1570609751279202333",
+		"label": "",
+		"score": 5,
+		"problemPoolIndex": 10,
+		"problemPoolCompositionCount": 1,
+		"problemConfig": {
+			"programmingProblemConfig": {
+				"timeLimit": 400,
+				"memoryLimit": 65536,
+				"codeSizeLimit": 16,
+				"cases": {
+					"0": {
+						"hint": "",
+						"showHint": false,
+						"score": 2,
+						"updateAt": "2019-03-23T16:45:51Z",
+						"isPublic": false
+					},
+					"1": {
+						"hint": "",
+						"showHint": false,
+						"score": 1,
+						"updateAt": "2019-03-23T16:45:51Z",
+						"isPublic": false
+					},
+					"2": {
+						"hint": "",
+						"showHint": false,
+						"score": 1,
+						"updateAt": "2019-03-23T16:45:51Z",
+						"isPublic": false
+					},
+					"3": {
+						"hint": "",
+						"showHint": false,
+						"score": 1,
+						"updateAt": "2019-03-23T16:45:51Z",
+						"isPublic": false
+					}
+				},
+				"exampleTestDatas": [
+					{
+						"name": "",
+						"input": "90 10\n",
+						"output": "4000\n"
+					}
+				],
+				"testdataDescriptionCode": "",
+				"customizeLimits": [],
+				"stackSizeLimit": 0,
+				"tools": [],
+				"ignorePresentationError": false
+			},
+			"solutionVisible": false,
+			"answerVisible": false
+		},
+		"deadline": "1970-01-01T00:00:00Z",
+		"problemId": "1109496501997522944",
+		"title": "心理阴影面积",
+		"content": "\n![xlyy.JPG](~/80a1c6dc-7d5f-4726-ae03-fbb6e8bfe1a5.JPG)\n\n\n这是一幅心理阴影面积图。我们都以为自己可以匀速前进（图中蓝色直线），而拖延症晚期的我们往往执行的是最后时刻的疯狂赶工（图中的红色折线）。由红、蓝线围出的面积，就是我们在做作业时的心理阴影面积。\n\n现给出红色拐点的坐标 $$(x,y)$$，要求你算出这个心理阴影面积。\n\n### 输入格式：\n\n输入在一行中给出 2 个不超过 100 的正整数 $$x$$ 和 $$y$$，并且保证有 $$x>y$$。这里假设横、纵坐标的最大值（即截止日和最终完成度）都是 100。\n\n### 输出格式：\n\n在一行中输出心理阴影面积。\n\n友情提醒：三角形的面积 = 底边长 x 高 / 2；矩形面积 = 底边长 x 高。嫑想得太复杂，这是一道 5 分考减法的题……\n\n### 输入样例：\n```in\n90 10\n```\n\n### 输出样例：\n```out\n4000\n```\n",
+		"type": "PROGRAMMING",
+		"author": "陈越",
+		"authorOrganization": {
+			"id": "1",
+			"name": "浙江大学",
+			"comment": "",
+			"code": "",
+			"country": "NO_COUNTRY",
+			"membersCount": 0,
+			"type": "UNKNOWN",
+			"balance": 0,
+			"subdomain": "",
+			"logo": ""
+		},
+		"difficulty": 1,
+		"knowledgePointPaths": [
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "64",
+						"name": "基本数据类型与表达式",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "65",
+						"name": "表达式",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			}
+		],
+		"compiler": "NO_COMPILER",
+		"acceptCount": 43,
+		"submitCount": 85,
+		"problemStatus": "REVIEWED",
+		"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+		"problemSetId": "1570609751203704832",
+		"judgeConfig": {
+			"programmingJudgeConfig": {
+				"testDataId": "5c9662bf18b10500075a1506",
+				"answer": "",
+				"answerCompiler": "NO_COMPILER",
+				"useSpecialJudge": false,
+				"checkerCompiler": "GCC",
+				"checkerProgram": "",
+				"scoringRule": "NORMAL",
+				"useInteractor": false,
+				"interactorCompiler": "NO_COMPILER",
+				"interactorProgram": "",
+				"testDataVersion": 0
+			}
+		},
+		"solution": "",
+		"description": "\n![xlyy.JPG](~/80a1c6dc-7d5f-4726-ae03-fbb6e8bfe1a5.JPG)\n\n\n这是一幅心理阴影面积图。我们都以为自己可以匀速前进（图中蓝色直线），而拖延症晚期的我们往往执行的是最后时刻的疯狂赶工（图中的红色折线）。由红、蓝线围出的面积，就是我们在做作业时的心理阴影面积。\n\n现给出红色拐点的坐标 $$(x,y)$$，要求你算出这个心理阴影面积。\n\n### 输入格式：\n\n输入在一行中给出 2 个不超过 100 的正整数 $$x$$ 和 $$y$$，并且保证有 $$x>y$$。这里假设横、纵坐标的最大值（即截止日和最终完成度）都是 100。\n\n### 输出格式：\n\n在一行中输出心理阴影面积。\n\n友情提醒：三角形的面积 = 底边长 x 高 / 2；矩形面积 = 底边长 x 高。嫑想得太复杂，这是一道 5 分考减法的题……\n\n### 输入样例：\n```in\n90 10\n```\n\n### 输出样例：\n```out\n4000\n```\n",
+		"creatorId": "916259821889974272",
+		"indexInProblemPool": 1,
+		"diffProblemConfigCase": false
+	},
+	{
+		"id": "1570609751279202334",
+		"label": "",
+		"score": 10,
+		"problemPoolIndex": 11,
+		"problemPoolCompositionCount": 1,
+		"problemConfig": {
+			"programmingProblemConfig": {
+				"timeLimit": 400,
+				"memoryLimit": 65536,
+				"codeSizeLimit": 16,
+				"cases": {
+					"0": {
+						"hint": "同sample,换个数字",
+						"showHint": false,
+						"score": 4,
+						"updateAt": "2020-02-06T14:18:26Z",
+						"isPublic": false
+					},
+					"1": {
+						"hint": "减法有负数, 除法结果为0",
+						"showHint": false,
+						"score": 3,
+						"updateAt": "2020-02-06T14:18:26Z",
+						"isPublic": false
+					},
+					"2": {
+						"hint": "余数为0",
+						"showHint": false,
+						"score": 3,
+						"updateAt": "2020-02-06T14:18:26Z",
+						"isPublic": false
+					}
+				},
+				"exampleTestDatas": [
+					{
+						"name": "",
+						"input": "5 3\n",
+						"output": "5 + 3 = 8\n5 - 3 = 2\n5 * 3 = 15\n5 / 3 = 1\n5 % 3 = 2\n"
+					}
+				],
+				"testdataDescriptionCode": "",
+				"customizeLimits": [],
+				"stackSizeLimit": 8192,
+				"tools": [],
+				"ignorePresentationError": false
+			},
+			"solutionVisible": false,
+			"answerVisible": false
+		},
+		"deadline": "1970-01-01T00:00:00Z",
+		"problemId": "1225423541779976192",
+		"title": "整数算术运算",
+		"content": "本题要求编写程序，计算并输出2个正整数的和、差、积、商与余数。题目保证输入和输出全部在整型范围内。\n\n### 输入格式:\n\n输入在一行中给出2个正整数A和B。\n\n### 输出格式:\n\n在5行中按照格式“A 运算符 B = 结果”顺序输出和、差、积、商与余数。\n\n### 输入样例:\n\n```in\n5 3\n```\n\n### 输出样例:\n\n在这里给出相应的输出。例如：\n\n```out\n5 + 3 = 8\n5 - 3 = 2\n5 * 3 = 15\n5 / 3 = 1\n5 % 3 = 2\n```\n",
+		"type": "PROGRAMMING",
+		"author": "颜晖",
+		"authorOrganization": {
+			"id": "2",
+			"name": "浙大城市学院",
+			"comment": "",
+			"code": "",
+			"country": "NO_COUNTRY",
+			"membersCount": 0,
+			"type": "UNKNOWN",
+			"balance": 0,
+			"subdomain": "",
+			"logo": ""
+		},
+		"difficulty": 1,
+		"knowledgePointPaths": [
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "64",
+						"name": "基本数据类型与表达式",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "65",
+						"name": "表达式",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			},
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "64",
+						"name": "基本数据类型与表达式",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "66",
+						"name": "输入输出格式化控制",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			}
+		],
+		"compiler": "NO_COMPILER",
+		"acceptCount": 41,
+		"submitCount": 144,
+		"problemStatus": "REVIEWED",
+		"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+		"problemSetId": "1570609751203704832",
+		"judgeConfig": {
+			"programmingJudgeConfig": {
+				"testDataId": "5e3c20326d31f80005314cb7",
+				"answer": "",
+				"answerCompiler": "NO_COMPILER",
+				"useSpecialJudge": false,
+				"checkerCompiler": "GCC",
+				"checkerProgram": "",
+				"scoringRule": "NORMAL",
+				"useInteractor": false,
+				"interactorCompiler": "NO_COMPILER",
+				"interactorProgram": "",
+				"testDataVersion": 0
+			}
+		},
+		"solution": "",
+		"description": "本题要求编写程序，计算并输出2个正整数的和、差、积、商与余数。题目保证输入和输出全部在整型范围内。\n\n### 输入格式:\n\n输入在一行中给出2个正整数A和B。\n\n### 输出格式:\n\n在5行中按照格式“A 运算符 B = 结果”顺序输出和、差、积、商与余数。\n\n### 输入样例:\n\n```in\n5 3\n```\n\n### 输出样例:\n\n在这里给出相应的输出。例如：\n\n```out\n5 + 3 = 8\n5 - 3 = 2\n5 * 3 = 15\n5 / 3 = 1\n5 % 3 = 2\n```\n",
+		"creatorId": "916259821889974272",
+		"indexInProblemPool": 1,
+		"diffProblemConfigCase": false
+	},
+	{
+		"id": "1570609751279202335",
+		"label": "",
+		"score": 10,
+		"problemPoolIndex": 12,
+		"problemPoolCompositionCount": 1,
+		"problemConfig": {
+			"programmingProblemConfig": {
+				"timeLimit": 400,
+				"memoryLimit": 65536,
+				"codeSizeLimit": 16,
+				"cases": {
+					"0": {
+						"hint": "sample等价，年是整数",
+						"showHint": false,
+						"score": 6,
+						"updateAt": "2015-08-03T19:49:58Z",
+						"isPublic": false
+					},
+					"1": {
+						"hint": "年不是整数",
+						"showHint": false,
+						"score": 4,
+						"updateAt": "2015-08-03T19:49:58Z",
+						"isPublic": false
+					}
+				},
+				"exampleTestDatas": [],
+				"testdataDescriptionCode": "",
+				"customizeLimits": [],
+				"stackSizeLimit": 0,
+				"tools": [],
+				"ignorePresentationError": false
+			},
+			"solutionVisible": false,
+			"answerVisible": false
+		},
+		"deadline": "1970-01-01T00:00:00Z",
+		"problemId": "488",
+		"title": "计算存款利息",
+		"content": "本题目要求计算存款利息，计算公式为$$interest = money\\times (1+rate)^{year} - money$$，其中$$interest$$为存款到期时的利息（税前），$$money$$是存款金额，$$year$$是存期，$$rate$$是年利率。\n\n### 输入格式：\n\n输入在一行中顺序给出三个正实数$$money$$、$$year$$和$$rate$$，以空格分隔。\n\n### 输出格式：\n\n在一行中按“interest = 利息”的格式输出，其中利息保留两位小数。\n\n### 输入样例：\n```in\n1000 3 0.025\n```\n\n### 输出样例：\n```out\ninterest = 76.89\n```",
+		"type": "PROGRAMMING",
+		"author": "颜晖",
+		"authorOrganization": {
+			"id": "2",
+			"name": "浙大城市学院",
+			"comment": "",
+			"code": "",
+			"country": "NO_COUNTRY",
+			"membersCount": 0,
+			"type": "UNKNOWN",
+			"balance": 0,
+			"subdomain": "",
+			"logo": ""
+		},
+		"difficulty": 1,
+		"knowledgePointPaths": [
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "64",
+						"name": "基本数据类型与表达式",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "65",
+						"name": "表达式",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			}
+		],
+		"compiler": "NO_COMPILER",
+		"acceptCount": 44,
+		"submitCount": 239,
+		"problemStatus": "REVIEWED",
+		"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+		"problemSetId": "1570609751203704832",
+		"judgeConfig": {
+			"programmingJudgeConfig": {
+				"testDataId": "5993fa4793d1de004a0fcc6b",
+				"answer": "",
+				"answerCompiler": "NO_COMPILER",
+				"useSpecialJudge": false,
+				"checkerCompiler": "NO_COMPILER",
+				"checkerProgram": "",
+				"scoringRule": "NORMAL",
+				"useInteractor": false,
+				"interactorCompiler": "NO_COMPILER",
+				"interactorProgram": "",
+				"testDataVersion": 0
+			}
+		},
+		"solution": "",
+		"description": "本题目要求计算存款利息，计算公式为$$interest = money\\times (1+rate)^{year} - money$$，其中$$interest$$为存款到期时的利息（税前），$$money$$是存款金额，$$year$$是存期，$$rate$$是年利率。\n\n### 输入格式：\n\n输入在一行中顺序给出三个正实数$$money$$、$$year$$和$$rate$$，以空格分隔。\n\n### 输出格式：\n\n在一行中按“interest = 利息”的格式输出，其中利息保留两位小数。\n\n### 输入样例：\n```in\n1000 3 0.025\n```\n\n### 输出样例：\n```out\ninterest = 76.89\n```",
+		"creatorId": "916259821889974272",
+		"indexInProblemPool": 1,
+		"diffProblemConfigCase": false
+	},
+	{
+		"id": "1570609751279202336",
+		"label": "",
+		"score": 10,
+		"problemPoolIndex": 13,
+		"problemPoolCompositionCount": 1,
+		"problemConfig": {
+			"programmingProblemConfig": {
+				"timeLimit": 400,
+				"memoryLimit": 65536,
+				"codeSizeLimit": 16,
+				"cases": {
+					"0": {
+						"hint": "",
+						"showHint": false,
+						"score": 3,
+						"updateAt": "2019-01-02T13:33:57Z",
+						"isPublic": false
+					},
+					"1": {
+						"hint": "",
+						"showHint": false,
+						"score": 3,
+						"updateAt": "2019-01-02T13:33:57Z",
+						"isPublic": false
+					},
+					"2": {
+						"hint": "",
+						"showHint": false,
+						"score": 1,
+						"updateAt": "2019-01-02T13:33:57Z",
+						"isPublic": false
+					},
+					"3": {
+						"hint": "",
+						"showHint": false,
+						"score": 1,
+						"updateAt": "2019-01-02T13:33:57Z",
+						"isPublic": false
+					},
+					"4": {
+						"hint": "",
+						"showHint": false,
+						"score": 2,
+						"updateAt": "2019-01-02T13:33:57Z",
+						"isPublic": false
+					}
+				},
+				"exampleTestDatas": [
+					{
+						"name": "",
+						"input": "3 7",
+						"output": "1 24"
+					},
+					{
+						"name": "",
+						"input": "8 4",
+						"output": "0 32"
+					}
+				],
+				"testdataDescriptionCode": "",
+				"customizeLimits": [],
+				"stackSizeLimit": 0,
+				"tools": [],
+				"ignorePresentationError": false
+			},
+			"solutionVisible": false,
+			"answerVisible": false
+		},
+		"deadline": "1970-01-01T00:00:00Z",
+		"problemId": "1080457179975778304",
+		"title": "冠军魔术",
+		"content": "![魔术.jpg](~/a4b1f9c6-007d-4137-aa94-28b343aa3c34.jpg)\n\n\n2018年FISM（世界魔术大会）近景总冠军简纶廷的表演中有一个情节：以桌面上一根带子为界，当他将纸牌从带子的一边推到另一边时，纸牌会变成硬币；把硬币推回另一边会变成纸牌。\n\n这里我们假设纸牌会变成等量的硬币，而硬币变成纸牌时，纸牌的数量会加倍。那么给定纸牌的初始数量，当他来回推了 N 次（来/回各算一次）后，手里拿的是纸牌还是硬币？数量是多少？\n\n\n### 输入格式：\n\n输入在一行里给出两个正整数，分别是纸牌的初始数量和魔术师推送的次数。这里假设初始状态下魔术师手里全是纸牌。\n\n### 输出格式：\n\n如果最后魔术师手里是纸牌，输出 0 和纸牌数量；如果是硬币，则输出 1 和硬币数量。数字间须有 1 个空格。题目保证结果数值不超出整型范围（即 $$2^{31}-1$$）。\n\n### 输入样例 1：\n```in\n3 7\n```\n\n### 输出样例 1：\n```out\n1 24\n```\n\n### 输入样例 2：\n```in\n8 4\n```\n\n### 输出样例 2：\n```out\n0 32\n```\n",
+		"type": "PROGRAMMING",
+		"author": "陈越",
+		"authorOrganization": {
+			"id": "1",
+			"name": "浙江大学",
+			"comment": "",
+			"code": "",
+			"country": "NO_COUNTRY",
+			"membersCount": 0,
+			"type": "UNKNOWN",
+			"balance": 0,
+			"subdomain": "",
+			"logo": ""
+		},
+		"difficulty": 1,
+		"knowledgePointPaths": [
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "67",
+						"name": "分支控制",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "68",
+						"name": "if-else",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			},
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "64",
+						"name": "基本数据类型与表达式",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "65",
+						"name": "表达式",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			}
+		],
+		"compiler": "NO_COMPILER",
+		"acceptCount": 42,
+		"submitCount": 134,
+		"problemStatus": "REVIEWED",
+		"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+		"problemSetId": "1570609751203704832",
+		"judgeConfig": {
+			"programmingJudgeConfig": {
+				"testDataId": "5c2cbdc513e9450009193f06",
+				"answer": "",
+				"answerCompiler": "NO_COMPILER",
+				"useSpecialJudge": false,
+				"checkerCompiler": "GCC",
+				"checkerProgram": "",
+				"scoringRule": "NORMAL",
+				"useInteractor": false,
+				"interactorCompiler": "NO_COMPILER",
+				"interactorProgram": "",
+				"testDataVersion": 0
+			}
+		},
+		"solution": "",
+		"description": "![魔术.jpg](~/a4b1f9c6-007d-4137-aa94-28b343aa3c34.jpg)\n\n\n2018年FISM（世界魔术大会）近景总冠军简纶廷的表演中有一个情节：以桌面上一根带子为界，当他将纸牌从带子的一边推到另一边时，纸牌会变成硬币；把硬币推回另一边会变成纸牌。\n\n这里我们假设纸牌会变成等量的硬币，而硬币变成纸牌时，纸牌的数量会加倍。那么给定纸牌的初始数量，当他来回推了 N 次（来/回各算一次）后，手里拿的是纸牌还是硬币？数量是多少？\n\n\n### 输入格式：\n\n输入在一行里给出两个正整数，分别是纸牌的初始数量和魔术师推送的次数。这里假设初始状态下魔术师手里全是纸牌。\n\n### 输出格式：\n\n如果最后魔术师手里是纸牌，输出 0 和纸牌数量；如果是硬币，则输出 1 和硬币数量。数字间须有 1 个空格。题目保证结果数值不超出整型范围（即 $$2^{31}-1$$）。\n\n### 输入样例 1：\n```in\n3 7\n```\n\n### 输出样例 1：\n```out\n1 24\n```\n\n### 输入样例 2：\n```in\n8 4\n```\n\n### 输出样例 2：\n```out\n0 32\n```\n",
+		"creatorId": "916259821889974272",
+		"indexInProblemPool": 1,
+		"diffProblemConfigCase": false
+	},
+	{
+		"id": "1570609751279202337",
+		"label": "",
+		"score": 10,
+		"problemPoolIndex": 14,
+		"problemPoolCompositionCount": 1,
+		"problemConfig": {
+			"programmingProblemConfig": {
+				"timeLimit": 400,
+				"memoryLimit": 65536,
+				"codeSizeLimit": 16,
+				"cases": {
+					"0": {
+						"hint": "",
+						"showHint": false,
+						"score": 10,
+						"updateAt": "2015-08-02T19:14:37Z",
+						"isPublic": false
+					}
+				},
+				"exampleTestDatas": [],
+				"testdataDescriptionCode": "",
+				"customizeLimits": [],
+				"stackSizeLimit": 0,
+				"tools": [],
+				"ignorePresentationError": false
+			},
+			"solutionVisible": false,
+			"answerVisible": false
+		},
+		"deadline": "1970-01-01T00:00:00Z",
+		"problemId": "484",
+		"title": "整数152的各位数字",
+		"content": "本题要求编写程序，输出整数152的个位数字、十位数字和百位数字的值。\n\n### 输入格式：\n\n本题无输入。\n\n### 输出格式：\n\n按照以下格式输出：\n```\n152 = 个位数字 + 十位数字*10 + 百位数字*100\n```",
+		"type": "PROGRAMMING",
+		"author": "颜晖",
+		"authorOrganization": {
+			"id": "1",
+			"name": "浙江大学",
+			"comment": "",
+			"code": "",
+			"country": "NO_COUNTRY",
+			"membersCount": 0,
+			"type": "UNKNOWN",
+			"balance": 0,
+			"subdomain": "",
+			"logo": ""
+		},
+		"difficulty": 1,
+		"knowledgePointPaths": [
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "64",
+						"name": "基本数据类型与表达式",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "65",
+						"name": "表达式",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			}
+		],
+		"compiler": "NO_COMPILER",
+		"acceptCount": 41,
+		"submitCount": 105,
+		"problemStatus": "REVIEWED",
+		"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+		"problemSetId": "1570609751203704832",
+		"judgeConfig": {
+			"programmingJudgeConfig": {
+				"testDataId": "5993fa4793d1de004a0fcc67",
+				"answer": "",
+				"answerCompiler": "NO_COMPILER",
+				"useSpecialJudge": false,
+				"checkerCompiler": "NO_COMPILER",
+				"checkerProgram": "",
+				"scoringRule": "NORMAL",
+				"useInteractor": false,
+				"interactorCompiler": "NO_COMPILER",
+				"interactorProgram": "",
+				"testDataVersion": 0
+			}
+		},
+		"solution": "",
+		"description": "本题要求编写程序，输出整数152的个位数字、十位数字和百位数字的值。\n\n### 输入格式：\n\n本题无输入。\n\n### 输出格式：\n\n按照以下格式输出：\n```\n152 = 个位数字 + 十位数字*10 + 百位数字*100\n```",
+		"creatorId": "916259821889974272",
+		"indexInProblemPool": 1,
+		"diffProblemConfigCase": false
+	},
+	{
+		"id": "1570609751279202338",
+		"label": "",
+		"score": 10,
+		"problemPoolIndex": 15,
+		"problemPoolCompositionCount": 1,
+		"problemConfig": {
+			"programmingProblemConfig": {
+				"timeLimit": 400,
+				"memoryLimit": 65536,
+				"codeSizeLimit": 16,
+				"cases": {
+					"0": {
+						"hint": "sample 满3位没有0",
+						"showHint": false,
+						"score": 5,
+						"updateAt": "2018-10-18T12:03:41Z",
+						"isPublic": false
+					},
+					"1": {
+						"hint": "2个0",
+						"showHint": false,
+						"score": 2,
+						"updateAt": "2018-10-18T12:03:41Z",
+						"isPublic": false
+					},
+					"2": {
+						"hint": "1个0，数字非相邻有序",
+						"showHint": false,
+						"score": 2,
+						"updateAt": "2018-10-18T12:03:41Z",
+						"isPublic": false
+					},
+					"3": {
+						"hint": "中间1个0",
+						"showHint": false,
+						"score": 1,
+						"updateAt": "2018-10-18T12:03:41Z",
+						"isPublic": false
+					}
+				},
+				"exampleTestDatas": [
+					{
+						"name": "",
+						"input": "123\n",
+						"output": "321\n"
+					}
+				],
+				"testdataDescriptionCode": "",
+				"customizeLimits": [],
+				"stackSizeLimit": 0,
+				"tools": [],
+				"ignorePresentationError": false
+			},
+			"solutionVisible": false,
+			"answerVisible": false
+		},
+		"deadline": "1970-01-01T00:00:00Z",
+		"problemId": "597",
+		"title": "逆序的三位数",
+		"content": "程序每次读入一个正3位数，然后输出按位逆序的数字。注意：当输入的数字含有结尾的0时，输出不应带有前导的0。比如输入700，输出应该是7。\n\n### 输入格式：\n\n每个测试是一个3位的正整数。\n\n### 输出格式：\n\n输出按位逆序的数。\n\n### 输入样例：\n```in\n123\n```\n\n### 输出样例：\n```out\n321\n```\n\n**鸣谢安阳师范学院软件学院李康康同学补充数据！**",
+		"type": "PROGRAMMING",
+		"author": "翁恺",
+		"authorOrganization": {
+			"id": "1",
+			"name": "浙江大学",
+			"comment": "",
+			"code": "",
+			"country": "NO_COUNTRY",
+			"membersCount": 0,
+			"type": "UNKNOWN",
+			"balance": 0,
+			"subdomain": "",
+			"logo": ""
+		},
+		"difficulty": 1,
+		"knowledgePointPaths": [
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "64",
+						"name": "基本数据类型与表达式",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "65",
+						"name": "表达式",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			}
+		],
+		"compiler": "NO_COMPILER",
+		"acceptCount": 43,
+		"submitCount": 94,
+		"problemStatus": "REVIEWED",
+		"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+		"problemSetId": "1570609751203704832",
+		"judgeConfig": {
+			"programmingJudgeConfig": {
+				"testDataId": "5bc8769d4ce2af000b0e0210",
+				"answer": "",
+				"answerCompiler": "NO_COMPILER",
+				"useSpecialJudge": false,
+				"checkerCompiler": "NO_COMPILER",
+				"checkerProgram": "",
+				"scoringRule": "NORMAL",
+				"useInteractor": false,
+				"interactorCompiler": "NO_COMPILER",
+				"interactorProgram": "",
+				"testDataVersion": 0
+			}
+		},
+		"solution": "",
+		"description": "程序每次读入一个正3位数，然后输出按位逆序的数字。注意：当输入的数字含有结尾的0时，输出不应带有前导的0。比如输入700，输出应该是7。\n\n### 输入格式：\n\n每个测试是一个3位的正整数。\n\n### 输出格式：\n\n输出按位逆序的数。\n\n### 输入样例：\n```in\n123\n```\n\n### 输出样例：\n```out\n321\n```\n\n**鸣谢安阳师范学院软件学院李康康同学补充数据！**",
+		"creatorId": "916259821889974272",
+		"indexInProblemPool": 1,
+		"diffProblemConfigCase": false
+	},
+	{
+		"id": "1570609751279202339",
+		"label": "",
+		"score": 15,
+		"problemPoolIndex": 16,
+		"problemPoolCompositionCount": 1,
+		"problemConfig": {
+			"programmingProblemConfig": {
+				"timeLimit": 400,
+				"memoryLimit": 65536,
+				"codeSizeLimit": 16,
+				"cases": {
+					"0": {
+						"hint": "sample， inch 尾数大于0.5，不是四舍五入而是截断",
+						"showHint": false,
+						"score": 8,
+						"updateAt": "2015-08-15T00:08:24Z",
+						"isPublic": false
+					},
+					"1": {
+						"hint": "0",
+						"showHint": false,
+						"score": 1,
+						"updateAt": "2015-08-15T00:08:24Z",
+						"isPublic": false
+					},
+					"2": {
+						"hint": "feet为0",
+						"showHint": false,
+						"score": 3,
+						"updateAt": "2015-08-15T00:08:24Z",
+						"isPublic": false
+					},
+					"3": {
+						"hint": "inch为0，尾数小于0.5",
+						"showHint": false,
+						"score": 3,
+						"updateAt": "2015-08-15T00:08:24Z",
+						"isPublic": false
+					}
+				},
+				"exampleTestDatas": [
+					{
+						"name": "",
+						"input": "170\n",
+						"output": "5 6\n"
+					}
+				],
+				"testdataDescriptionCode": "",
+				"customizeLimits": [],
+				"stackSizeLimit": 0,
+				"tools": [],
+				"ignorePresentationError": false
+			},
+			"solutionVisible": false,
+			"answerVisible": false
+		},
+		"deadline": "1970-01-01T00:00:00Z",
+		"problemId": "595",
+		"title": "厘米换算英尺英寸",
+		"content": "如果已知英制长度的英尺$$foot$$和英寸$$inch$$的值，那么对应的米是$$(foot+inch/12)\\times 0.3048$$。现在，如果用户输入的是厘米数，那么对应英制长度的英尺和英寸是多少呢？别忘了1英尺等于12英寸。\n\n### 输入格式：\n\n输入在一行中给出1个正整数，单位是厘米。\n\n### 输出格式：\n\n在一行中输出这个厘米数对应英制长度的英尺和英寸的整数值，中间用空格分开。英寸的值应小于12。\n\n### 输入样例：\n```in\n170\n```\n\n### 输出样例：\n```out\n5 6\n```",
+		"type": "PROGRAMMING",
+		"author": "翁恺",
+		"authorOrganization": {
+			"id": "1",
+			"name": "浙江大学",
+			"comment": "",
+			"code": "",
+			"country": "NO_COUNTRY",
+			"membersCount": 0,
+			"type": "UNKNOWN",
+			"balance": 0,
+			"subdomain": "",
+			"logo": ""
+		},
+		"difficulty": 1,
+		"knowledgePointPaths": [
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "64",
+						"name": "基本数据类型与表达式",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "65",
+						"name": "表达式",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			}
+		],
+		"compiler": "NO_COMPILER",
+		"acceptCount": 43,
+		"submitCount": 198,
+		"problemStatus": "REVIEWED",
+		"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+		"problemSetId": "1570609751203704832",
+		"judgeConfig": {
+			"programmingJudgeConfig": {
+				"testDataId": "5993fa4893d1de004a0fccd6",
+				"answer": "",
+				"answerCompiler": "NO_COMPILER",
+				"useSpecialJudge": false,
+				"checkerCompiler": "NO_COMPILER",
+				"checkerProgram": "",
+				"scoringRule": "NORMAL",
+				"useInteractor": false,
+				"interactorCompiler": "NO_COMPILER",
+				"interactorProgram": "",
+				"testDataVersion": 1
+			}
+		},
+		"solution": "",
+		"description": "如果已知英制长度的英尺$$foot$$和英寸$$inch$$的值，那么对应的米是$$(foot+inch/12)\\times 0.3048$$。现在，如果用户输入的是厘米数，那么对应英制长度的英尺和英寸是多少呢？别忘了1英尺等于12英寸。\n\n### 输入格式：\n\n输入在一行中给出1个正整数，单位是厘米。\n\n### 输出格式：\n\n在一行中输出这个厘米数对应英制长度的英尺和英寸的整数值，中间用空格分开。英寸的值应小于12。\n\n### 输入样例：\n```in\n170\n```\n\n### 输出样例：\n```out\n5 6\n```",
+		"creatorId": "916259821889974272",
+		"indexInProblemPool": 1,
+		"diffProblemConfigCase": false
+	},
+	{
+		"id": "1570609751279202340",
+		"label": "",
+		"score": 15,
+		"problemPoolIndex": 17,
+		"problemPoolCompositionCount": 1,
+		"problemConfig": {
+			"programmingProblemConfig": {
+				"timeLimit": 400,
+				"memoryLimit": 65536,
+				"codeSizeLimit": 16,
+				"cases": {
+					"0": {
+						"hint": "sample等价，读入和输出均有补0",
+						"showHint": false,
+						"score": 8,
+						"updateAt": "2015-08-02T20:31:18Z",
+						"isPublic": false
+					},
+					"1": {
+						"hint": "分钟需要借位",
+						"showHint": false,
+						"score": 6,
+						"updateAt": "2015-08-02T20:31:18Z",
+						"isPublic": false
+					},
+					"2": {
+						"hint": "边界测试",
+						"showHint": false,
+						"score": 1,
+						"updateAt": "2015-08-02T20:31:18Z",
+						"isPublic": false
+					}
+				},
+				"exampleTestDatas": [],
+				"testdataDescriptionCode": "",
+				"customizeLimits": [],
+				"stackSizeLimit": 0,
+				"tools": [],
+				"ignorePresentationError": false
+			},
+			"solutionVisible": false,
+			"answerVisible": false
+		},
+		"deadline": "1970-01-01T00:00:00Z",
+		"problemId": "486",
+		"title": "计算火车运行时间",
+		"content": "本题要求根据火车的出发时间和达到时间，编写程序计算整个旅途所用的时间。\n\n### 输入格式：\n\n输入在一行中给出2个4位正整数，其间以空格分隔，分别表示火车的出发时间和到达时间。每个时间的格式为2位小时数（00-23）和2位分钟数（00-59），假设出发和到达在同一天内。\n\n### 输出格式：\n\n在一行输出该旅途所用的时间，格式为“hh:mm”，其中hh为2位小时数、mm为2位分钟数。\n\n### 输入样例：\n```in\n1201 1530\n```\n\n### 输出样例：\n```out\n03:29\n```",
+		"type": "PROGRAMMING",
+		"author": "沈睿",
+		"authorOrganization": {
+			"id": "1",
+			"name": "浙江大学",
+			"comment": "",
+			"code": "",
+			"country": "NO_COUNTRY",
+			"membersCount": 0,
+			"type": "UNKNOWN",
+			"balance": 0,
+			"subdomain": "",
+			"logo": ""
+		},
+		"difficulty": 1,
+		"knowledgePointPaths": [
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "67",
+						"name": "分支控制",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "68",
+						"name": "if-else",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			},
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "64",
+						"name": "基本数据类型与表达式",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "66",
+						"name": "输入输出格式化控制",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			}
+		],
+		"compiler": "NO_COMPILER",
+		"acceptCount": 44,
+		"submitCount": 153,
+		"problemStatus": "REVIEWED",
+		"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+		"problemSetId": "1570609751203704832",
+		"judgeConfig": {
+			"programmingJudgeConfig": {
+				"testDataId": "5993fa4793d1de004a0fcc69",
+				"answer": "",
+				"answerCompiler": "NO_COMPILER",
+				"useSpecialJudge": false,
+				"checkerCompiler": "NO_COMPILER",
+				"checkerProgram": "",
+				"scoringRule": "NORMAL",
+				"useInteractor": false,
+				"interactorCompiler": "NO_COMPILER",
+				"interactorProgram": "",
+				"testDataVersion": 0
+			}
+		},
+		"solution": "",
+		"description": "本题要求根据火车的出发时间和达到时间，编写程序计算整个旅途所用的时间。\n\n### 输入格式：\n\n输入在一行中给出2个4位正整数，其间以空格分隔，分别表示火车的出发时间和到达时间。每个时间的格式为2位小时数（00-23）和2位分钟数（00-59），假设出发和到达在同一天内。\n\n### 输出格式：\n\n在一行输出该旅途所用的时间，格式为“hh:mm”，其中hh为2位小时数、mm为2位分钟数。\n\n### 输入样例：\n```in\n1201 1530\n```\n\n### 输出样例：\n```out\n03:29\n```",
+		"creatorId": "916259821889974272",
+		"indexInProblemPool": 1,
+		"diffProblemConfigCase": false
+	},
+	{
+		"id": "1570609751279202341",
+		"label": "",
+		"score": 15,
+		"problemPoolIndex": 18,
+		"problemPoolCompositionCount": 1,
+		"problemConfig": {
+			"programmingProblemConfig": {
+				"timeLimit": 400,
+				"memoryLimit": 65536,
+				"codeSizeLimit": 16,
+				"cases": {
+					"0": {
+						"hint": "sample 满4位，分钟数超过60，有进位",
+						"showHint": false,
+						"score": 8,
+						"updateAt": "2021-05-05T15:18:12Z",
+						"isPublic": false
+					},
+					"1": {
+						"hint": "读不满4位，进位分钟正好是0",
+						"showHint": false,
+						"score": 3,
+						"updateAt": "2015-08-15T00:12:55Z",
+						"isPublic": false
+					},
+					"2": {
+						"hint": "分钟小于0，输出不满4位且小时是0",
+						"showHint": false,
+						"score": 3,
+						"updateAt": "2020-10-16T13:45:23Z",
+						"isPublic": false
+					},
+					"3": {
+						"hint": "计算结果不产生进位",
+						"showHint": false,
+						"score": 1,
+						"updateAt": "2021-05-05T15:17:54Z",
+						"isPublic": false
+					}
+				},
+				"exampleTestDatas": [
+					{
+						"name": "",
+						"input": "1120 110",
+						"output": "1310"
+					}
+				],
+				"testdataDescriptionCode": "",
+				"customizeLimits": [],
+				"stackSizeLimit": 0,
+				"tools": [],
+				"ignorePresentationError": false
+			},
+			"solutionVisible": false,
+			"answerVisible": false
+		},
+		"deadline": "1970-01-01T00:00:00Z",
+		"problemId": "596",
+		"title": "然后是几点",
+		"content": "有时候人们用四位数字表示一个时间，比如 `1106` 表示 11 点零 6 分。现在，你的程序要根据起始时间和流逝的时间计算出终止时间。\n\n读入两个数字，第一个数字以这样的四位数字表示当前时间，第二个数字表示分钟数，计算当前时间经过那么多分钟后是几点，结果也表示为四位数字。当小时为个位数时，没有前导的零，例如 5 点 30 分表示为 `530`；0 点 30 分表示为 `030`。注意，第二个数字表示的分钟数可能超过 60，也可能是负数。\n\n### 输入格式：\n\n输入在一行中给出 2 个整数，分别是四位数字表示的起始时间、以及流逝的分钟数，其间以空格分隔。注意：在起始时间中，当小时为个位数时，没有前导的零，即 5 点 30 分表示为 `530`；0 点 30 分表示为 `030`。流逝的分钟数可能超过 60，也可能是负数。\n\n### 输出格式：\n\n输出不多于四位数字表示的终止时间，当小时为个位数时，没有前导的零。题目保证起始时间和终止时间在同一天内。\n\n### 输入样例：\n```in\n1120 110\n```\n\n### 输出样例：\n```out\n1310\n```\n\n**鸣谢燕山大学穆运峰老师、用户任钰补充数据！**",
+		"type": "PROGRAMMING",
+		"author": "翁恺",
+		"authorOrganization": {
+			"id": "1",
+			"name": "浙江大学",
+			"comment": "",
+			"code": "",
+			"country": "NO_COUNTRY",
+			"membersCount": 0,
+			"type": "UNKNOWN",
+			"balance": 0,
+			"subdomain": "",
+			"logo": ""
+		},
+		"difficulty": 1,
+		"knowledgePointPaths": [
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "64",
+						"name": "基本数据类型与表达式",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "65",
+						"name": "表达式",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			}
+		],
+		"compiler": "NO_COMPILER",
+		"acceptCount": 44,
+		"submitCount": 258,
+		"problemStatus": "REVIEWED",
+		"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+		"problemSetId": "1570609751203704832",
+		"judgeConfig": {
+			"programmingJudgeConfig": {
+				"testDataId": "5993fa4893d1de004a0fccd7",
+				"answer": "",
+				"answerCompiler": "NO_COMPILER",
+				"useSpecialJudge": false,
+				"checkerCompiler": "NO_COMPILER",
+				"checkerProgram": "",
+				"scoringRule": "NORMAL",
+				"useInteractor": false,
+				"interactorCompiler": "NO_COMPILER",
+				"interactorProgram": "",
+				"testDataVersion": 0
+			}
+		},
+		"solution": "",
+		"description": "有时候人们用四位数字表示一个时间，比如 `1106` 表示 11 点零 6 分。现在，你的程序要根据起始时间和流逝的时间计算出终止时间。\n\n读入两个数字，第一个数字以这样的四位数字表示当前时间，第二个数字表示分钟数，计算当前时间经过那么多分钟后是几点，结果也表示为四位数字。当小时为个位数时，没有前导的零，例如 5 点 30 分表示为 `530`；0 点 30 分表示为 `030`。注意，第二个数字表示的分钟数可能超过 60，也可能是负数。\n\n### 输入格式：\n\n输入在一行中给出 2 个整数，分别是四位数字表示的起始时间、以及流逝的分钟数，其间以空格分隔。注意：在起始时间中，当小时为个位数时，没有前导的零，即 5 点 30 分表示为 `530`；0 点 30 分表示为 `030`。流逝的分钟数可能超过 60，也可能是负数。\n\n### 输出格式：\n\n输出不多于四位数字表示的终止时间，当小时为个位数时，没有前导的零。题目保证起始时间和终止时间在同一天内。\n\n### 输入样例：\n```in\n1120 110\n```\n\n### 输出样例：\n```out\n1310\n```\n\n**鸣谢燕山大学穆运峰老师、用户任钰补充数据！**",
+		"creatorId": "916259821889974272",
+		"indexInProblemPool": 1,
+		"diffProblemConfigCase": false
+	},
+	{
+		"id": "1570609751279202342",
+		"label": "",
+		"score": 15,
+		"problemPoolIndex": 19,
+		"problemPoolCompositionCount": 1,
+		"problemConfig": {
+			"programmingProblemConfig": {
+				"timeLimit": 400,
+				"memoryLimit": 65536,
+				"codeSizeLimit": 16,
+				"cases": {
+					"0": {
+						"hint": "小写字母",
+						"showHint": false,
+						"score": 2,
+						"updateAt": "2019-11-03T12:44:10Z",
+						"isPublic": false
+					},
+					"1": {
+						"hint": "大写字母",
+						"showHint": false,
+						"score": 2,
+						"updateAt": "2019-11-03T12:44:10Z",
+						"isPublic": false
+					},
+					"2": {
+						"hint": "非英文字母",
+						"showHint": false,
+						"score": 2,
+						"updateAt": "2019-11-03T12:44:10Z",
+						"isPublic": false
+					},
+					"3": {
+						"hint": "边界数据",
+						"showHint": false,
+						"score": 2,
+						"updateAt": "2019-11-03T12:44:10Z",
+						"isPublic": false
+					},
+					"4": {
+						"hint": "sample1等价",
+						"showHint": false,
+						"score": 7,
+						"updateAt": "2019-11-03T12:44:10Z",
+						"isPublic": false
+					}
+				},
+				"exampleTestDatas": [
+					{
+						"name": "",
+						"input": "Reold  Z123?\n\n",
+						"output": "sFPME  a123?\n"
+					}
+				],
+				"testdataDescriptionCode": "",
+				"customizeLimits": [],
+				"stackSizeLimit": 0,
+				"tools": [],
+				"ignorePresentationError": false
+			},
+			"solutionVisible": false,
+			"answerVisible": false
+		},
+		"deadline": "1970-01-01T00:00:00Z",
+		"problemId": "1190972969213767680",
+		"title": "英文字母替换加密（大小写转换+后移1位）",
+		"content": "本题要求编写程序，将英文字母替换加密。为了防止信息被别人轻易窃取，需要把电码明文通过加密方式变换成为密文。变换规则是：将明文中的所有英文字母替换为字母表中的后一个字母，同时将小写字母转换为大写字母，大写字母转换为小写字母。例如，字母a->B、b->C、…、z->A、A->b、B->c、…、Z->a。输入一行字符，将其中的英文字母按照以上规则转换后输出，其他字符按原样输出。\n\n### 输入格式:\n\n输入一行字符，以回车符 '\\n'作为 结束符。\n\n### 输出格式:\n\n将输入的一行字符中的所有英文字母替换为字母表中的后一个字母，同时将小写字母转换为大写字母，大写字母转换为小写字母后输出，其他字符按原样输出。\n\n### 输入样例:\n\n在这里给出一组输入。例如：\n\n```in\nReold  Z123?\n\n```\n\n### 输出样例:\n\n在这里给出相应的输出。例如：\n\n```out\nsFPME  a123?\n```\n",
+		"type": "PROGRAMMING",
+		"author": "颜晖",
+		"authorOrganization": {
+			"id": "2",
+			"name": "浙大城市学院",
+			"comment": "",
+			"code": "",
+			"country": "NO_COUNTRY",
+			"membersCount": 0,
+			"type": "UNKNOWN",
+			"balance": 0,
+			"subdomain": "",
+			"logo": ""
+		},
+		"difficulty": 2,
+		"knowledgePointPaths": [
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "70",
+						"name": "循环控制",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "72",
+						"name": "while和do-while",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			},
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "64",
+						"name": "基本数据类型与表达式",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "65",
+						"name": "表达式",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			}
+		],
+		"compiler": "NO_COMPILER",
+		"acceptCount": 45,
+		"submitCount": 194,
+		"problemStatus": "REVIEWED",
+		"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+		"problemSetId": "1570609751203704832",
+		"judgeConfig": {
+			"programmingJudgeConfig": {
+				"testDataId": "5dbecb9a1e3bd10005aa83e5",
+				"answer": "",
+				"answerCompiler": "NO_COMPILER",
+				"useSpecialJudge": false,
+				"checkerCompiler": "GCC",
+				"checkerProgram": "",
+				"scoringRule": "NORMAL",
+				"useInteractor": false,
+				"interactorCompiler": "NO_COMPILER",
+				"interactorProgram": "",
+				"testDataVersion": 0
+			}
+		},
+		"solution": "",
+		"description": "本题要求编写程序，将英文字母替换加密。为了防止信息被别人轻易窃取，需要把电码明文通过加密方式变换成为密文。变换规则是：将明文中的所有英文字母替换为字母表中的后一个字母，同时将小写字母转换为大写字母，大写字母转换为小写字母。例如，字母a->B、b->C、…、z->A、A->b、B->c、…、Z->a。输入一行字符，将其中的英文字母按照以上规则转换后输出，其他字符按原样输出。\n\n### 输入格式:\n\n输入一行字符，以回车符 '\\n'作为 结束符。\n\n### 输出格式:\n\n将输入的一行字符中的所有英文字母替换为字母表中的后一个字母，同时将小写字母转换为大写字母，大写字母转换为小写字母后输出，其他字符按原样输出。\n\n### 输入样例:\n\n在这里给出一组输入。例如：\n\n```in\nReold  Z123?\n\n```\n\n### 输出样例:\n\n在这里给出相应的输出。例如：\n\n```out\nsFPME  a123?\n```\n",
+		"creatorId": "916259821889974272",
+		"indexInProblemPool": 1,
+		"diffProblemConfigCase": false
+	},
+	{
+		"id": "1570609751279202343",
+		"label": "",
+		"score": 15,
+		"problemPoolIndex": 20,
+		"problemPoolCompositionCount": 1,
+		"problemConfig": {
+			"programmingProblemConfig": {
+				"timeLimit": 400,
+				"memoryLimit": 65536,
+				"codeSizeLimit": 16,
+				"cases": {
+					"0": {
+						"hint": "与示例等价的一位数",
+						"showHint": false,
+						"score": 8,
+						"updateAt": "2015-10-20T21:57:42Z",
+						"isPublic": false
+					},
+					"1": {
+						"hint": "正常范围多位数，带有0",
+						"showHint": false,
+						"score": 3,
+						"updateAt": "2015-10-20T21:57:42Z",
+						"isPublic": false
+					},
+					"2": {
+						"hint": "一步到位",
+						"showHint": false,
+						"score": 1,
+						"updateAt": "2015-10-20T21:57:42Z",
+						"isPublic": false
+					},
+					"3": {
+						"hint": "输入取上界",
+						"showHint": false,
+						"score": 1,
+						"updateAt": "2015-10-20T21:57:42Z",
+						"isPublic": false
+					},
+					"4": {
+						"hint": "步骤达到上界",
+						"showHint": false,
+						"score": 1,
+						"updateAt": "2015-10-20T21:57:42Z",
+						"isPublic": false
+					},
+					"5": {
+						"hint": "输入取下界",
+						"showHint": false,
+						"score": 1,
+						"updateAt": "2015-10-20T21:57:42Z",
+						"isPublic": false
+					}
+				},
+				"exampleTestDatas": [],
+				"testdataDescriptionCode": "",
+				"customizeLimits": [],
+				"stackSizeLimit": 0,
+				"tools": [],
+				"ignorePresentationError": false
+			},
+			"solutionVisible": false,
+			"answerVisible": false
+		},
+		"deadline": "1970-01-01T00:00:00Z",
+		"problemId": "1065",
+		"title": "掉入陷阱的数字",
+		"content": "对任意一个自然数$$N_0$$，先将其各位数字相加求和，再将其和乘以3后加上1，变成一个新自然数$$N_1$$；然后对$$N_1$$重复这种操作，可以产生新自然数$$N_2$$；……多次重复这种操作，运算结果最终会得到一个固定不变的数$$N_k$$，就像掉入一个数字“陷阱”。\n\n本题要求对输入的自然数，给出其掉入“陷阱”的过程。\n\n### 输入格式:\n\n在一行内给出一个自然数$$N_0$$（$$N_0 <$$30000）。\n\n### 输出格式:\n\n对于输入的$$N_0$$，逐行输出其掉入陷阱的步骤。第$$i$$行描述$$N$$掉入陷阱的第$$i$$步，格式为： $$i$$:$$N_i$$ （$$i\\ge 1$$）。当某一步得到的自然数结果$$N_k$$($$k\\ge1$$)与上一步$$N_{k-1}$$相同时，停止输出。\n\n### 输入样例:\n```in\n5\n```\n\n### 输出样例:\n```out\n1:16\n2:22\n3:13\n4:13\n```",
+		"type": "PROGRAMMING",
+		"author": "周强",
+		"authorOrganization": {
+			"id": "19",
+			"name": "青岛大学",
+			"comment": "",
+			"code": "",
+			"country": "NO_COUNTRY",
+			"membersCount": 0,
+			"type": "UNKNOWN",
+			"balance": 0,
+			"subdomain": "",
+			"logo": ""
+		},
+		"difficulty": 1,
+		"knowledgePointPaths": [
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "70",
+						"name": "循环控制",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "72",
+						"name": "while和do-while",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			},
+			{
+				"knowledgePoints": [
+					{
+						"id": "63",
+						"name": "C程序设计",
+						"isLeaf": false,
+						"enName": "C Programming"
+					},
+					{
+						"id": "64",
+						"name": "基本数据类型与表达式",
+						"isLeaf": false,
+						"enName": ""
+					},
+					{
+						"id": "65",
+						"name": "表达式",
+						"isLeaf": true,
+						"enName": ""
+					}
+				]
+			}
+		],
+		"compiler": "NO_COMPILER",
+		"acceptCount": 42,
+		"submitCount": 252,
+		"problemStatus": "REVIEWED",
+		"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+		"problemSetId": "1570609751203704832",
+		"judgeConfig": {
+			"programmingJudgeConfig": {
+				"testDataId": "5993fa4c93d1de004a0fcd2a",
+				"answer": "",
+				"answerCompiler": "NO_COMPILER",
+				"useSpecialJudge": false,
+				"checkerCompiler": "NO_COMPILER",
+				"checkerProgram": "",
+				"scoringRule": "NORMAL",
+				"useInteractor": false,
+				"interactorCompiler": "NO_COMPILER",
+				"interactorProgram": "",
+				"testDataVersion": 0
+			}
+		},
+		"solution": "",
+		"description": "对任意一个自然数$$N_0$$，先将其各位数字相加求和，再将其和乘以3后加上1，变成一个新自然数$$N_1$$；然后对$$N_1$$重复这种操作，可以产生新自然数$$N_2$$；……多次重复这种操作，运算结果最终会得到一个固定不变的数$$N_k$$，就像掉入一个数字“陷阱”。\n\n本题要求对输入的自然数，给出其掉入“陷阱”的过程。\n\n### 输入格式:\n\n在一行内给出一个自然数$$N_0$$（$$N_0 <$$30000）。\n\n### 输出格式:\n\n对于输入的$$N_0$$，逐行输出其掉入陷阱的步骤。第$$i$$行描述$$N$$掉入陷阱的第$$i$$步，格式为： $$i$$:$$N_i$$ （$$i\\ge 1$$）。当某一步得到的自然数结果$$N_k$$($$k\\ge1$$)与上一步$$N_{k-1}$$相同时，停止输出。\n\n### 输入样例:\n```in\n5\n```\n\n### 输出样例:\n```out\n1:16\n2:22\n3:13\n4:13\n```",
+		"creatorId": "916259821889974272",
+		"indexInProblemPool": 1,
+		"diffProblemConfigCase": false
+	}
+]

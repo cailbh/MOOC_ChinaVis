@@ -1,0 +1,950 @@
+[
+		{
+			"id": "1595937666963656704",
+			"label": "",
+			"score": 300,
+			"problemPoolIndex": 1,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "与样例一致",
+							"showHint": false,
+							"score": 150,
+							"updateAt": "2022-11-18T13:00:05Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "测试数据",
+							"showHint": false,
+							"score": 150,
+							"updateAt": "2022-11-18T13:04:52Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "1  2  3  4\n5  6  7  8\n9 10 11 12\n1 2\n3 4\n5 6\n7 8\n",
+							"output": "    50    60\n   114   140\n   178   220\n"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 8192,
+					"tools": [],
+					"ignorePresentationError": true
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1593588967918919680",
+			"title": "矩阵乘法",
+			"content": "已知A矩阵是一个3行4列的整数矩阵，B矩阵是一个4行2列的整数矩阵。计算输出两矩阵的乘积矩阵C。\n### 输入格式:\n表空格式输入。分别按行输入两个矩阵，先输入A矩阵，再输入B矩阵。\n\n### 输出格式:\n\n格式控制输出C矩阵，按矩阵逻辑结构输出，每个数据输出字段宽度为6\n\n### 输入样例:\n\n\n```in\n1  2  3  4\n5  6  7  8\n9 10 11 12\n1 2\n3 4\n5 6\n7 8\n\n```\n\n### 输出样例:\n\n在这里给出相应的输出。例如：\n\n```out\n    50    60\n   114   140\n   178   220\n\n```\n",
+			"type": "PROGRAMMING",
+			"author": "王红鹰",
+			"authorOrganization": {
+				"id": "22",
+				"name": "兰州交通大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 2,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "969040536861708288",
+							"name": "FORTRAN",
+							"isLeaf": false,
+							"enName": "FORTRAN Programming"
+						},
+						{
+							"id": "969040815673827328",
+							"name": "数组及应用",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "969041541284225024",
+							"name": "多维数组",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 41,
+			"submitCount": 66,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1595937666900742144",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "637781d539c4615de5171bc1",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "GCC",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "GCC",
+					"interactorProgram": "",
+					"testDataVersion": 8
+				}
+			},
+			"solution": "",
+			"description": "已知A矩阵是一个3行4列的整数矩阵，B矩阵是一个4行2列的整数矩阵。计算输出两矩阵的乘积矩阵C。\n### 输入格式:\n表空格式输入。分别按行输入两个矩阵，先输入A矩阵，再输入B矩阵。\n\n### 输出格式:\n\n格式控制输出C矩阵，按矩阵逻辑结构输出，每个数据输出字段宽度为6\n\n### 输入样例:\n\n\n```in\n1  2  3  4\n5  6  7  8\n9 10 11 12\n1 2\n3 4\n5 6\n7 8\n\n```\n\n### 输出样例:\n\n在这里给出相应的输出。例如：\n\n```out\n    50    60\n   114   140\n   178   220\n\n```\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1595937666963656705",
+			"label": "",
+			"score": 300,
+			"problemPoolIndex": 2,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"test": {
+							"hint": "视作字符数组来输入和输出",
+							"showHint": false,
+							"score": 150,
+							"updateAt": "2022-11-01T02:23:34Z",
+							"isPublic": false
+						},
+						"test2": {
+							"hint": "使用字符数组来存储超长数字",
+							"showHint": false,
+							"score": 150,
+							"updateAt": "2022-11-01T02:24:31Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "000123",
+							"output": "1_2_3_\n3_2_1_"
+						},
+						{
+							"name": "",
+							"input": "987654321012345678902345678901987654321012345678902345678901",
+							"output": "9_8_7_6_5_4_3_2_1_0_1_2_3_4_5_6_7_8_9_0_2_3_4_5_6_7_8_9_0_1_9_8_7_6_5_4_3_2_1_0_1_2_3_4_5_6_7_8_9_0_2_3_4_5_6_7_8_9_0_1_\n1_0_9_8_7_6_5_4_3_2_0_9_8_7_6_5_4_3_2_1_0_1_2_3_4_5_6_7_8_9_1_0_9_8_7_6_5_4_3_2_0_9_8_7_6_5_4_3_2_1_0_1_2_3_4_5_6_7_8_9_"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 8192,
+					"tools": [],
+					"ignorePresentationError": true
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1587265611770654720",
+			"title": "正序和逆序输出超长正整数",
+			"content": "正序和逆序输出一个500位以内的十进制正整数，每一位后用_号隔开。（每一位后都有1个_号，包括最后一位）\n\n注意：若正整数开头输入0，则将开头的0视为无效。例如输入000123，那么实际输入的数字为123。\n### 输入格式：\n保证只输入正整数，且只数字0-9组成\n### 输入样例1:\n\n```in\n000123\n```\n\n### 输出样例1:\n\n\n```out\n1_2_3_\n3_2_1_\n```\n\n\n### 输入样例2:\n\n```in\n987654321012345678902345678901987654321012345678902345678901\n```\n\n### 输出样例2:\n\n\n```out\n9_8_7_6_5_4_3_2_1_0_1_2_3_4_5_6_7_8_9_0_2_3_4_5_6_7_8_9_0_1_9_8_7_6_5_4_3_2_1_0_1_2_3_4_5_6_7_8_9_0_2_3_4_5_6_7_8_9_0_1_\n1_0_9_8_7_6_5_4_3_2_0_9_8_7_6_5_4_3_2_1_0_1_2_3_4_5_6_7_8_9_1_0_9_8_7_6_5_4_3_2_0_9_8_7_6_5_4_3_2_1_0_1_2_3_4_5_6_7_8_9_\n```\n",
+			"type": "PROGRAMMING",
+			"author": "刘毅文",
+			"authorOrganization": {
+				"id": "31",
+				"name": "怀化学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 2,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "78",
+							"name": "数组",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "80",
+							"name": "字符串",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 35,
+			"submitCount": 114,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1595937666900742144",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "636080bc7815ff4379f23432",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "GCC",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "GCC",
+					"interactorProgram": "",
+					"testDataVersion": 14
+				}
+			},
+			"solution": "",
+			"description": "正序和逆序输出一个500位以内的十进制正整数，每一位后用_号隔开。（每一位后都有1个_号，包括最后一位）\n\n注意：若正整数开头输入0，则将开头的0视为无效。例如输入000123，那么实际输入的数字为123。\n### 输入格式：\n保证只输入正整数，且只数字0-9组成\n### 输入样例1:\n\n```in\n000123\n```\n\n### 输出样例1:\n\n\n```out\n1_2_3_\n3_2_1_\n```\n\n\n### 输入样例2:\n\n```in\n987654321012345678902345678901987654321012345678902345678901\n```\n\n### 输出样例2:\n\n\n```out\n9_8_7_6_5_4_3_2_1_0_1_2_3_4_5_6_7_8_9_0_2_3_4_5_6_7_8_9_0_1_9_8_7_6_5_4_3_2_1_0_1_2_3_4_5_6_7_8_9_0_2_3_4_5_6_7_8_9_0_1_\n1_0_9_8_7_6_5_4_3_2_0_9_8_7_6_5_4_3_2_1_0_1_2_3_4_5_6_7_8_9_1_0_9_8_7_6_5_4_3_2_0_9_8_7_6_5_4_3_2_1_0_1_2_3_4_5_6_7_8_9_\n```\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1595937666963656706",
+			"label": "",
+			"score": 300,
+			"problemPoolIndex": 3,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"1": {
+							"hint": "3 2 4",
+							"showHint": false,
+							"score": 60,
+							"updateAt": "2022-11-19T06:49:14Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "25 15 6",
+							"showHint": false,
+							"score": 60,
+							"updateAt": "2022-11-19T06:50:41Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "1 1 1",
+							"showHint": false,
+							"score": 60,
+							"updateAt": "2022-11-19T06:51:24Z",
+							"isPublic": false
+						},
+						"4": {
+							"hint": "7 8 9",
+							"showHint": false,
+							"score": 60,
+							"updateAt": "2022-11-19T06:52:40Z",
+							"isPublic": false
+						},
+						"5": {
+							"hint": "3  3 3",
+							"showHint": false,
+							"score": 60,
+							"updateAt": "2022-11-19T06:55:31Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "3 3 3\n1 0 1\n0 1 1\n1 0 0\n1 0 1\n0 1 1\n1 0 0",
+							"output": "1 0 1\n1 1 1\n1 0 1\n17"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 8192,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1590044783081549824",
+			"title": "布尔积与逻辑短路（动态数组）",
+			"content": "对于布尔(0-1)矩阵$$A=(a_{ij})_{m\\times n}$$和$$B=(b_{ij})_{n\\times p}$$，求$A$和$B$的布尔积$A\\odot B=(c_{ij})_{m\\times p}$，并返回逻辑与运算的执行次数。\n\n布尔积运算定义如下：\n$\\qquad c_{ij}=\\displaystyle\\bigvee_{k=1}^{n}(a_{ik}\\wedge b_{kj})$.\n其中，$\\vee$是逻辑或(||)操作，$\\wedge$是逻辑与(&&)操作。\n\n例如：\n$$\\left(\n\\begin{array}{ccc}\n1&0&1\\\\\n\\textcolor{red}{0}&\\textcolor{red}{1}&\\textcolor{red}{1}\\\\\n1&0&0\n\\end{array}\\right)\\odot \\left(\n\\begin{array}{ccc}\n1&0&\\textcolor{lightgreen}{1}\\\\\n0&1&\\textcolor{lightgreen}{1}\\\\\n1&0&\\textcolor{lightgreen}{0}\n\\end{array}\\right)=\\left(\n\\begin{array}{ccc}\n1&0&1\\\\\n1&1&\\large{\\textcircled{\\small{1}}}\\\\\n1&0&1\n\\end{array}\\right)\n$$\n其中，\n$\\qquad\\large{\\textcircled{\\small{1}}}=\\textcolor{red}{0}\\&\\&\\textcolor{lightgreen}{1}||\\textcolor{red}{1}\\&\\&\\textcolor{lightgreen}{1}||\\textcolor{red}{1}\\&\\&\\textcolor{lightgreen}{0}$\n考虑到逻辑运算的逻辑短路(惰性求值)现象，事实上，\n$\\qquad\\large{\\textcircled{\\small{1}}}=\\textcolor{red}{0}\\&\\&\\textcolor{lightgreen}{1}||\\textcolor{red}{1}\\&\\&\\textcolor{lightgreen}{1}$\n即只做了2次逻辑与操作。\n\n### 输入格式:\n第一行给出变量$m$, $n$和$p$的变量, 其中，$m,n,p\\in Z^+$。\n接下来的$m$行给出矩阵$A_{m\\times n}$，每行包括$n$个布尔值（即0/1值），用空格隔开；\n接下来的$n$行给出矩阵$B_{n\\times p}$，每行包括$p$个布尔值（即0/1值），用空格隔开。\n\n### 输出格式:\n首先输出$m$行$p$列数据，即$A\\odot B$的结果，列间使用一个空格隔开，最后一列后无空格；然后在下一行给出运算过程中逻辑与运算发生的次数。\n\n### 输入样例:\n```in\n3 3 3\n1 0 1\n0 1 1\n1 0 0\n1 0 1\n0 1 1\n1 0 0\n```\n\n### 输出样例:\n```out\n1 0 1\n1 1 1\n1 0 1\n17\n```\n\n### 提示:\n由于本题中矩阵$A$和$B$的维数是由变量$m$, $n$和$p$确定的，而C语言在定义普通数组时，数组大小必须是整型常量，所以不能在程序中直接定义二维数组，需要用到动态数组。请参考如下代码段：\n```c++\n#include <stdio.h>\n#include <stdlib.h>\n\nint main()\n{\n    int m, n, p, i, j;\n    int **A, **B, **C;\n    scanf(\"%d%d%d\", &m, &n, &p);\n    \n    //生成动态数组A,B和C, 即为这3个二维数组分配内存，然后录入矩阵数据\n    A=(int**)calloc(m,sizeof(int*));\n    B=(int**)calloc(n,sizeof(int*));\n\t\tC=(int**)calloc(m,sizeof(int*));\n    for(i=0;i<m;i++)\n    {\n        A[i]=(int*)calloc(n,sizeof(int));\n        for(j=0;j<n;j++)\n\t\t\tscanf(\"%d\", &A[i][j]);\n    }\n    for(i=0;i<n;i++)\n    {\n        B[i]=(int*)calloc(p,sizeof(int));\n        for(j=0;j<p;j++)\n\t\t\tscanf(\"%d\", &B[i][j]);\n    }\n\tfor(i=0;i<m;i++)\n    {\n        C[i]=(int*)calloc(p,sizeof(int));\n    }\n    \n    /*-----------------------------------\n\t\t矩阵录入数据已结束，以下是实现布尔积的代码部分，请注意：动态数组与普通数组的引用形式相同\n\t\t该部分上面的代码和下面的代码你无需关注，不过变量声明部分可能需要增加新的变量\n\t-----------------------------------*/\n    \n    \n    \n    \n    //动态数组用完后，所占内存不会自动释放，需要手动释放\n    for(i=0;i<m;i++)\n        free(A[i]);\n    free(A);\n    for(i=0;i<n;i++)\n        free(B[i]);\n    free(B);\n    for(i=0;i<m;i++)\n        free(C[i]);\n    free(C);\n\t\t\n    return 0;\n}\n```",
+			"type": "PROGRAMMING",
+			"author": "阎鹏飞",
+			"authorOrganization": {
+				"id": "97",
+				"name": "太原理工大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 3,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "78",
+							"name": "数组",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "81",
+							"name": "二维数组",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "64",
+							"name": "基本数据类型与表达式",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "65",
+							"name": "表达式",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "992015922862505984",
+							"name": "线性代数",
+							"isLeaf": false,
+							"enName": "Linear Algebra"
+						},
+						{
+							"id": "992016022380769280",
+							"name": "矩阵及其运算",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "992016252002140160",
+							"name": "矩阵的基本运算",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "82",
+							"name": "指针与结构",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "83",
+							"name": "指针",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 12,
+			"submitCount": 53,
+			"problemStatus": "PRIVATE",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1595937666900742144",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "63787c6a39c4615de5171f69",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "GCC",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "GCC",
+					"interactorProgram": "",
+					"testDataVersion": 24
+				}
+			},
+			"solution": "",
+			"description": "对于布尔(0-1)矩阵$$A=(a_{ij})_{m\\times n}$$和$$B=(b_{ij})_{n\\times p}$$，求$A$和$B$的布尔积$A\\odot B=(c_{ij})_{m\\times p}$，并返回逻辑与运算的执行次数。\n\n布尔积运算定义如下：\n$\\qquad c_{ij}=\\displaystyle\\bigvee_{k=1}^{n}(a_{ik}\\wedge b_{kj})$.\n其中，$\\vee$是逻辑或(||)操作，$\\wedge$是逻辑与(&&)操作。\n\n例如：\n$$\\left(\n\\begin{array}{ccc}\n1&0&1\\\\\n\\textcolor{red}{0}&\\textcolor{red}{1}&\\textcolor{red}{1}\\\\\n1&0&0\n\\end{array}\\right)\\odot \\left(\n\\begin{array}{ccc}\n1&0&\\textcolor{lightgreen}{1}\\\\\n0&1&\\textcolor{lightgreen}{1}\\\\\n1&0&\\textcolor{lightgreen}{0}\n\\end{array}\\right)=\\left(\n\\begin{array}{ccc}\n1&0&1\\\\\n1&1&\\large{\\textcircled{\\small{1}}}\\\\\n1&0&1\n\\end{array}\\right)\n$$\n其中，\n$\\qquad\\large{\\textcircled{\\small{1}}}=\\textcolor{red}{0}\\&\\&\\textcolor{lightgreen}{1}||\\textcolor{red}{1}\\&\\&\\textcolor{lightgreen}{1}||\\textcolor{red}{1}\\&\\&\\textcolor{lightgreen}{0}$\n考虑到逻辑运算的逻辑短路(惰性求值)现象，事实上，\n$\\qquad\\large{\\textcircled{\\small{1}}}=\\textcolor{red}{0}\\&\\&\\textcolor{lightgreen}{1}||\\textcolor{red}{1}\\&\\&\\textcolor{lightgreen}{1}$\n即只做了2次逻辑与操作。\n\n### 输入格式:\n第一行给出变量$m$, $n$和$p$的变量, 其中，$m,n,p\\in Z^+$。\n接下来的$m$行给出矩阵$A_{m\\times n}$，每行包括$n$个布尔值（即0/1值），用空格隔开；\n接下来的$n$行给出矩阵$B_{n\\times p}$，每行包括$p$个布尔值（即0/1值），用空格隔开。\n\n### 输出格式:\n首先输出$m$行$p$列数据，即$A\\odot B$的结果，列间使用一个空格隔开，最后一列后无空格；然后在下一行给出运算过程中逻辑与运算发生的次数。\n\n### 输入样例:\n```in\n3 3 3\n1 0 1\n0 1 1\n1 0 0\n1 0 1\n0 1 1\n1 0 0\n```\n\n### 输出样例:\n```out\n1 0 1\n1 1 1\n1 0 1\n17\n```\n\n### 提示:\n由于本题中矩阵$A$和$B$的维数是由变量$m$, $n$和$p$确定的，而C语言在定义普通数组时，数组大小必须是整型常量，所以不能在程序中直接定义二维数组，需要用到动态数组。请参考如下代码段：\n```c++\n#include <stdio.h>\n#include <stdlib.h>\n\nint main()\n{\n    int m, n, p, i, j;\n    int **A, **B, **C;\n    scanf(\"%d%d%d\", &m, &n, &p);\n    \n    //生成动态数组A,B和C, 即为这3个二维数组分配内存，然后录入矩阵数据\n    A=(int**)calloc(m,sizeof(int*));\n    B=(int**)calloc(n,sizeof(int*));\n\t\tC=(int**)calloc(m,sizeof(int*));\n    for(i=0;i<m;i++)\n    {\n        A[i]=(int*)calloc(n,sizeof(int));\n        for(j=0;j<n;j++)\n\t\t\tscanf(\"%d\", &A[i][j]);\n    }\n    for(i=0;i<n;i++)\n    {\n        B[i]=(int*)calloc(p,sizeof(int));\n        for(j=0;j<p;j++)\n\t\t\tscanf(\"%d\", &B[i][j]);\n    }\n\tfor(i=0;i<m;i++)\n    {\n        C[i]=(int*)calloc(p,sizeof(int));\n    }\n    \n    /*-----------------------------------\n\t\t矩阵录入数据已结束，以下是实现布尔积的代码部分，请注意：动态数组与普通数组的引用形式相同\n\t\t该部分上面的代码和下面的代码你无需关注，不过变量声明部分可能需要增加新的变量\n\t-----------------------------------*/\n    \n    \n    \n    \n    //动态数组用完后，所占内存不会自动释放，需要手动释放\n    for(i=0;i<m;i++)\n        free(A[i]);\n    free(A);\n    for(i=0;i<n;i++)\n        free(B[i]);\n    free(B);\n    for(i=0;i<m;i++)\n        free(C[i]);\n    free(C);\n\t\t\n    return 0;\n}\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1595937666963656707",
+			"label": "",
+			"score": 300,
+			"problemPoolIndex": 4,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"1": {
+							"hint": "样例",
+							"showHint": false,
+							"score": 50,
+							"updateAt": "2022-11-24T08:28:22Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "活动地点在家的两侧",
+							"showHint": false,
+							"score": 50,
+							"updateAt": "2022-11-24T08:28:22Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "活动地点在家的两侧",
+							"showHint": false,
+							"score": 50,
+							"updateAt": "2022-11-24T08:28:22Z",
+							"isPublic": false
+						},
+						"4": {
+							"hint": "活动地点在家的一侧",
+							"showHint": false,
+							"score": 50,
+							"updateAt": "2022-11-24T08:28:22Z",
+							"isPublic": false
+						},
+						"5": {
+							"hint": "活动地点在家的一侧",
+							"showHint": false,
+							"score": 50,
+							"updateAt": "2022-11-24T08:28:22Z",
+							"isPublic": false
+						},
+						"6": {
+							"hint": "一人的活动范围包含另外一人的活动范围",
+							"showHint": false,
+							"score": 50,
+							"updateAt": "2022-11-24T08:28:22Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "3 2 10 20\n8 15 13\n16 22",
+							"output": "10 and 20: impossible"
+						},
+						{
+							"name": "",
+							"input": "4 2 -48 -1\n-20 -35 -91 -23\n-22 66",
+							"output": "-48 and -1: possible"
+						},
+						{
+							"name": "",
+							"input": "5 3 6 8\n-10 3 1 5 -100\n100 6 14",
+							"output": "6 and 8: possible"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 8192,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1475728515092512768",
+			"title": "一维世界的疫情传播",
+			"content": "可怕的阿尔法病毒正在一维世界传播，如果某人的活动范围与病毒携带者的活动范围有交集，则有被感染的可能。假设有一名病毒携带者A在位于X的家附近活动，他到过的地方用$$x_i$$表示（这些地点不重复），对于X和$$x_i$$之间的区域，都认为是A的活动范围。另外有一名健康者B，他在位于Y的家附近活动，他到过的地方用$$y_i$$表示（这些地点不重复），对于Y和$$y_i$$之间的区域，都认为是B的活动范围。所有的地点都位于整数点上，$$−100≤X,Y,x_i,y_i≤100,X \\neq Y,x_i \\neq X,y_i \\neq Y$$。现在需要判断B是否有被感染的可能。\n\n### 输入格式:\n\n第一行输入$$N,M,X,Y$$四个整数，接下来2行分别是$$N$$个$$x_i$$和$$M$$个$$y_i$$的值。整数值之间都用空格隔开。具体如下：\n\n$$N M X Y$$\n\n$$x_1 x_2 … x_N$$\n\n$$y_1 y_2 … y_M$$\n\n### 输出格式:\n\n用家的位置表示A和B两人，输出是否有被感染的可能，具体格式请参见样例。\n\n### 输入样例1:\n\n```in\n3 2 10 20\n8 15 13\n16 22\n```\n\n### 输出样例1:\n\n```out\n10 and 20: impossible\n```\n\n### 输入样例2:\n```in\n4 2 -48 -1\n-20 -35 -91 -23\n-22 66\n```\n\n#### 输出样例2:\n```out\n-48 and -1: possible\n```\n\n### 输入样例3:\n```in\n5 3 6 8\n-10 3 1 5 -100\n100 6 14\n```\n\n### 输出样例3:\n```out\n6 and 8: possible\n```",
+			"type": "PROGRAMMING",
+			"author": "葛亮",
+			"authorOrganization": {
+				"id": "93",
+				"name": "重庆大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 3,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "78",
+							"name": "数组",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "79",
+							"name": "一维数组",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "67",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "68",
+							"name": "if-else",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "循环控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "71",
+							"name": "for",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 36,
+			"submitCount": 99,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1595937666900742144",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "61cabb0dccb6e912fcb9aaf7",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "GCC",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "可怕的阿尔法病毒正在一维世界传播，如果某人的活动范围与病毒携带者的活动范围有交集，则有被感染的可能。假设有一名病毒携带者A在位于X的家附近活动，他到过的地方用$$x_i$$表示（这些地点不重复），对于X和$$x_i$$之间的区域，都认为是A的活动范围。另外有一名健康者B，他在位于Y的家附近活动，他到过的地方用$$y_i$$表示（这些地点不重复），对于Y和$$y_i$$之间的区域，都认为是B的活动范围。所有的地点都位于整数点上，$$−100≤X,Y,x_i,y_i≤100,X \\neq Y,x_i \\neq X,y_i \\neq Y$$。现在需要判断B是否有被感染的可能。\n\n### 输入格式:\n\n第一行输入$$N,M,X,Y$$四个整数，接下来2行分别是$$N$$个$$x_i$$和$$M$$个$$y_i$$的值。整数值之间都用空格隔开。具体如下：\n\n$$N M X Y$$\n\n$$x_1 x_2 … x_N$$\n\n$$y_1 y_2 … y_M$$\n\n### 输出格式:\n\n用家的位置表示A和B两人，输出是否有被感染的可能，具体格式请参见样例。\n\n### 输入样例1:\n\n```in\n3 2 10 20\n8 15 13\n16 22\n```\n\n### 输出样例1:\n\n```out\n10 and 20: impossible\n```\n\n### 输入样例2:\n```in\n4 2 -48 -1\n-20 -35 -91 -23\n-22 66\n```\n\n#### 输出样例2:\n```out\n-48 and -1: possible\n```\n\n### 输入样例3:\n```in\n5 3 6 8\n-10 3 1 5 -100\n100 6 14\n```\n\n### 输出样例3:\n```out\n6 and 8: possible\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1595937666963656709",
+			"label": "",
+			"score": 300,
+			"problemPoolIndex": 5,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "小于",
+							"showHint": false,
+							"score": 60,
+							"updateAt": "2022-11-10T05:29:33Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "等于",
+							"showHint": false,
+							"score": 60,
+							"updateAt": "2022-11-10T05:29:33Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "当天",
+							"showHint": false,
+							"score": 60,
+							"updateAt": "2022-11-10T05:29:33Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "跨天(舍)",
+							"showHint": false,
+							"score": 60,
+							"updateAt": "2022-11-10T05:29:33Z",
+							"isPublic": false
+						},
+						"4": {
+							"hint": "跨天(入)",
+							"showHint": false,
+							"score": 60,
+							"updateAt": "2022-11-10T05:29:33Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "12.5\n2.3 1.6\n8:18:7.2\n",
+							"output": "None\n"
+						},
+						{
+							"name": "",
+							"input": "16.56\n1.05 2.67\n12:36:4.5\n",
+							"output": "22:49:24.50\n"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 8192,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": true
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1590577260791459840",
+			"title": "追赶问题",
+			"content": "甲乙两人相距 $$d$$ 公里，两人的行进速度分别为 $$v_1$$ 和 $$v_2$$ 公里/小时，从时刻 $$h_1:m_1:s_1$$ 同时出发同向而行，甲在前、乙在后，请计算乙追上甲的时刻 $$h_2:m_2:s_2$$。\n\n注：$$h_1:m_1:s_1$$ 和 $$h_2:m_2:s_2$$ 分别为两个时刻的时、分和秒，其中时和分为整数，秒为小数。\n\n#### 输入格式\n> $$d$$\n> $$v_1 \\ \\  v_2$$\n> $$h_1:m_1:s_1$$\n\n#### 输出格式\n> 若问题有解，则输出：$$h_2:m_2:s_2$$\n> 否则输出：None\n\n要求：时间的输出格式为 hh:mm:ss.ss。秒数保留 2 位小数。\n\n#### 输入样例1\n```in\n12.5\n2.3 1.6\n8:18:7.2\n\n```\n#### 输出样例1\n```out\nNone\n\n```\n\n#### 输入样例2\n```in\n16.56\n1.05 2.67\n12:36:4.5\n\n```\n#### 输出样例2\n```out\n22:49:24.50\n\n```\n\n注：为方便计算，假定两人行走的时间均不到 1 天。\n",
+			"type": "PROGRAMMING",
+			"author": "李祥",
+			"authorOrganization": {
+				"id": "135",
+				"name": "湖北经济学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "67",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "68",
+							"name": "if-else",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "74",
+							"name": "函数与程序结构",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "75",
+							"name": "函数定义与调用",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 21,
+			"submitCount": 277,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1595937666900742144",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "636c8c3dff323b25150f337e",
+					"answer": "#include <stdio.h>\n#include <math.h>\n\nvoid TimeOutput(int hour, int minute, double second);\nvoid TimeInput(int *hour, int *minute, double *second);\n\ndouble TotalSecond(int hour, int minute, double second);\nvoid ToHms(int *hour, int *minute, double *second, double total);\n\nvoid TimeAdd(int *endHour, int *endMinute, double *endSecond,\n\t\t\tint startHour, int startMinute, double startSecond, double duration);\n\nint main()\n{\n\tint h1, h2, m1, m2;\n\tdouble s1, s2, d, v1, v2, t;\n\n\tscanf(\"%lf\", &d);\n\tscanf(\"%lf%lf\", &v1, &v2);\n\tTimeInput(&h1, &m1, &s1);\n\n\tif (v2 > v1)\n\t{\n\t\tt = d / (v2 - v1);\n\t\tTimeAdd(&h2, &m2, &s2, h1, m1, s1, t * 3600.0);\n\t\tTimeOutput(h2, m2, s2);\n\t\tputchar('\\n');\n\t}\n\telse\n\t{\n\t\tputs(\"None\");\n\t}\n\treturn 0;\n}\n\nvoid TimeOutput(int hour, int minute, double second)\n{\n\tprintf(\"%02d:%02d:%05.2f\", hour, minute, second);\n}\n\nvoid TimeInput(int *hour, int *minute, double *second)\n{\n\tint h, m;\n\tdouble s;\n\tscanf(\"%d : %d : %lg\", &h, &m, &s);\n\t*hour = h;\n\t*minute = m;\n\t*second = s;\n}\n\ndouble TotalSecond(int hour, int minute, double second)\n{\n\treturn (hour * 60.0 + minute) * 60.0 + second;\n}\n\nvoid ToHms(int *hour, int *minute, double *second, double total)\n{\n\tint m;\n\t*second = fmod(total, 60.0);\n\tm = total / 60.0;\n\t*hour = m / 60;\n\t*minute = m % 60;\n}\n\nvoid TimeAdd(int *endHour, int *endMinute, double *endSecond,\n            int startHour, int startMinute, double startSecond, double duration)\n{\n\tdouble time = fmod(TotalSecond(startHour, startMinute, startSecond), 86400);\n\ttime = fmod(time + 86400 + fmod(duration, 86400), 86400);\n\tToHms(endHour, endMinute, endSecond, time);\n}\n",
+					"answerCompiler": "GCC",
+					"useSpecialJudge": false,
+					"checkerCompiler": "GCC",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "GCC",
+					"interactorProgram": "",
+					"testDataVersion": 6
+				}
+			},
+			"solution": "",
+			"description": "甲乙两人相距 $$d$$ 公里，两人的行进速度分别为 $$v_1$$ 和 $$v_2$$ 公里/小时，从时刻 $$h_1:m_1:s_1$$ 同时出发同向而行，甲在前、乙在后，请计算乙追上甲的时刻 $$h_2:m_2:s_2$$。\n\n注：$$h_1:m_1:s_1$$ 和 $$h_2:m_2:s_2$$ 分别为两个时刻的时、分和秒，其中时和分为整数，秒为小数。\n\n#### 输入格式\n> $$d$$\n> $$v_1 \\ \\  v_2$$\n> $$h_1:m_1:s_1$$\n\n#### 输出格式\n> 若问题有解，则输出：$$h_2:m_2:s_2$$\n> 否则输出：None\n\n要求：时间的输出格式为 hh:mm:ss.ss。秒数保留 2 位小数。\n\n#### 输入样例1\n```in\n12.5\n2.3 1.6\n8:18:7.2\n\n```\n#### 输出样例1\n```out\nNone\n\n```\n\n#### 输入样例2\n```in\n16.56\n1.05 2.67\n12:36:4.5\n\n```\n#### 输出样例2\n```out\n22:49:24.50\n\n```\n\n注：为方便计算，假定两人行走的时间均不到 1 天。\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1595937666963656708",
+			"label": "",
+			"score": 300,
+			"problemPoolIndex": 6,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"1": {
+							"hint": "2 2",
+							"showHint": false,
+							"score": 60,
+							"updateAt": "2022-11-12T15:05:55Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "2 0",
+							"showHint": false,
+							"score": 60,
+							"updateAt": "2022-11-13T04:28:09Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "5 3",
+							"showHint": false,
+							"score": 60,
+							"updateAt": "2022-11-18T10:46:47Z",
+							"isPublic": false
+						},
+						"4": {
+							"hint": "10 100",
+							"showHint": false,
+							"score": 60,
+							"updateAt": "2022-11-12T15:07:22Z",
+							"isPublic": false
+						},
+						"5": {
+							"hint": "10000 1000",
+							"showHint": false,
+							"score": 60,
+							"updateAt": "2022-11-18T10:47:11Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "2 2\n",
+							"output": "0.33\n"
+						},
+						{
+							"name": "",
+							"input": "2 0\n",
+							"output": "0.00\n"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 8192,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1591251585039200256",
+			"title": "连乘与累加",
+			"content": "本题目要求读入2个非负整数$$m$$和$$n$$，然后计算如下算式。\n\n$$\n\\qquad\\displaystyle\\sum_{i=1}^{m}{\\prod_{j=i}^{n}\\bigg((-1)^{j-i}\\frac{i}{i+j}}\\bigg)\n$$\n\n### 输入格式:\n在一行中给出2个非负整数$$m$$和$$n$$。要求：$$m,n\\leq 10^5$$。\n\n### 输出格式:\n输出$$\n\\displaystyle\\sum_{i=1}^{m}{\\prod_{j=i}^{n}\\bigg((-1)^{j-i}\\frac{i}{i+j}}\\bigg)\n$$的值。要求：结果精确到小数点后2位。\n\n### 输入样例1:\n\n在这里给出一组输入。例如：\n\n```in\n2 2\n```\n\n### 输出样例1:\n\n在这里给出相应的输出。例如：\n\n```out\n0.33\n```\n\n### 输入样例2:\n\n在这里给出一组输入。例如：\n\n```in\n2 0\n```\n\n### 输出样例2:\n\n在这里给出相应的输出。例如：\n\n```out\n0.00\n```",
+			"type": "PROGRAMMING",
+			"author": "阎鹏飞",
+			"authorOrganization": {
+				"id": "97",
+				"name": "太原理工大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "64",
+							"name": "基本数据类型与表达式",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "65",
+							"name": "表达式",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "循环控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "73",
+							"name": "嵌套循环",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 27,
+			"submitCount": 141,
+			"problemStatus": "PRIVATE",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1595937666900742144",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "636fb65339c4615de516d8d0",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "GCC",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "GCC",
+					"interactorProgram": "",
+					"testDataVersion": 23
+				}
+			},
+			"solution": "",
+			"description": "本题目要求读入2个非负整数$$m$$和$$n$$，然后计算如下算式。\n\n$$\n\\qquad\\displaystyle\\sum_{i=1}^{m}{\\prod_{j=i}^{n}\\bigg((-1)^{j-i}\\frac{i}{i+j}}\\bigg)\n$$\n\n### 输入格式:\n在一行中给出2个非负整数$$m$$和$$n$$。要求：$$m,n\\leq 10^5$$。\n\n### 输出格式:\n输出$$\n\\displaystyle\\sum_{i=1}^{m}{\\prod_{j=i}^{n}\\bigg((-1)^{j-i}\\frac{i}{i+j}}\\bigg)\n$$的值。要求：结果精确到小数点后2位。\n\n### 输入样例1:\n\n在这里给出一组输入。例如：\n\n```in\n2 2\n```\n\n### 输出样例1:\n\n在这里给出相应的输出。例如：\n\n```out\n0.33\n```\n\n### 输入样例2:\n\n在这里给出一组输入。例如：\n\n```in\n2 0\n```\n\n### 输出样例2:\n\n在这里给出相应的输出。例如：\n\n```out\n0.00\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		}
+	]

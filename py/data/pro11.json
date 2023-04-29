@@ -1,0 +1,989 @@
+[
+		{
+			"id": "1598484478849466368",
+			"label": "",
+			"score": 300,
+			"problemPoolIndex": 1,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"zip1": {
+							"hint": "",
+							"showHint": false,
+							"score": 60,
+							"updateAt": "2022-11-29T15:42:41Z",
+							"isPublic": false
+						},
+						"zip2": {
+							"hint": "",
+							"showHint": false,
+							"score": 60,
+							"updateAt": "2022-11-29T15:42:41Z",
+							"isPublic": false
+						},
+						"zip3": {
+							"hint": "",
+							"showHint": false,
+							"score": 60,
+							"updateAt": "2022-11-29T15:42:41Z",
+							"isPublic": false
+						},
+						"zip4": {
+							"hint": "",
+							"showHint": false,
+							"score": 60,
+							"updateAt": "2022-11-29T15:42:41Z",
+							"isPublic": false
+						},
+						"zip5": {
+							"hint": "",
+							"showHint": false,
+							"score": 60,
+							"updateAt": "2022-11-29T15:42:41Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "10 10\n0 3 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n1 2 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 5 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 6 0 0 \n",
+							"output": "10 10 5\n0 1 3\n3 0 1\n3 1 2\n5 6 5\n9 7 6"
+						},
+						{
+							"name": "",
+							"input": "10 10\n0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n\n",
+							"output": "10 10 0\n"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 8192,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1597616700563124224",
+			"title": "精准查找",
+			"content": "题目给出一个n*m的棋盘，在棋盘上会落入一定数量且携带有数字的棋子，（没有落子的值为一般为0）我们需要统计出棋盘上棋子的数量，并且找到它相应的位置坐标。\n### 输入格式:\n\n输入第一行给出n,m.接着输入一个n*m的二维数组\n\n### 输出格式:\n\n在第一行输出数组大小，以空格分隔，再输出棋盘落子数量，接着输出落子对应的坐标，及棋子所携带的数字。没有棋子则输出0。\n\n### 输入样例:\n\n```in\n10 10\n0 3 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n1 2 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 5 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 6 0 0 \n\n```\n\n### 输出样例:\n\n\n```out\n10 10 5\n0 1 3\n3 0 1\n3 1 2\n5 6 5\n9 7 6\n```\n### 输入样例:\n\n```in\n10 10\n0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n\n\n```\n### 输出样例:\n\n\n```out\n10 10 0\n```\n\n\n\n\n",
+			"type": "PROGRAMMING",
+			"author": "黄正鹏",
+			"authorOrganization": {
+				"id": "1067247900581347328",
+				"name": "贵州工程应用技术学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "78",
+							"name": "数组",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "81",
+							"name": "二维数组",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 40,
+			"submitCount": 72,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1598484478786551808",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "63862871c44a5e15e4002aaf",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "GCC",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "GCC",
+					"interactorProgram": "",
+					"testDataVersion": 6
+				}
+			},
+			"solution": "",
+			"description": "题目给出一个n*m的棋盘，在棋盘上会落入一定数量且携带有数字的棋子，（没有落子的值为一般为0）我们需要统计出棋盘上棋子的数量，并且找到它相应的位置坐标。\n### 输入格式:\n\n输入第一行给出n,m.接着输入一个n*m的二维数组\n\n### 输出格式:\n\n在第一行输出数组大小，以空格分隔，再输出棋盘落子数量，接着输出落子对应的坐标，及棋子所携带的数字。没有棋子则输出0。\n\n### 输入样例:\n\n```in\n10 10\n0 3 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n1 2 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 5 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 6 0 0 \n\n```\n\n### 输出样例:\n\n\n```out\n10 10 5\n0 1 3\n3 0 1\n3 1 2\n5 6 5\n9 7 6\n```\n### 输入样例:\n\n```in\n10 10\n0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 \n\n\n```\n### 输出样例:\n\n\n```out\n10 10 0\n```\n\n\n\n\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1598484478849466369",
+			"label": "",
+			"score": 300,
+			"problemPoolIndex": 2,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"jxs": {
+							"hint": "",
+							"showHint": false,
+							"score": 300,
+							"updateAt": "2022-11-22T03:38:18Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "2\n277\n268",
+							"output": "28 56 83 167\n27 54 80 161"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 8192,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1594898001611501568",
+			"title": "奖项计算",
+			"content": "中国大学生程序设计竞赛（CCPC）女生专场即将举办，本次比赛设置金、银、铜奖，各奖项数分别为有效参赛队伍数的 $10\\%、20\\%、30\\%$。其中，有效参赛队伍是指至少成功解出1道题的正式参赛队伍。若有效参赛队伍数为$A$，则：\n* 金奖项数=$\\lceil J \\rceil$，$J = A*10\\%$\n* 银奖项数=$\\lceil Y \\rceil$，$Y = A*30\\%-J$\n* 铜奖项数=$\\lceil T \\rceil$，$T = A*60\\% – Y - J$\n\n其中，$\\lceil x \\rceil$表示向上取整，即取不小于 $x$ 的最小整数。\n\n### 输入格式:\n\n首先输入一个整数T，表示测试数据的组数。对于每组测试数据，输入一个整数$A$，表示有效参赛队伍数。\n\n### 输出格式:\n\n对于每组测试数据，输出金、银、铜奖的奖项数及奖项总数。每两个数据之间留一个空格。\n\n### 输入样例:\n\n```in\n2\n277\n268\n```\n\n### 输出样例:\n\n```out\n28 56 83 167\n27 54 80 161\n```\n",
+			"type": "PROGRAMMING",
+			"author": "黄龙军",
+			"authorOrganization": {
+				"id": "170",
+				"name": "绍兴文理学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "64",
+							"name": "基本数据类型与表达式",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "65",
+							"name": "表达式",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 40,
+			"submitCount": 129,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1598484478786551808",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "637c442ab102dd0b2d82cb18",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "GCC",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "GCC",
+					"interactorProgram": "",
+					"testDataVersion": 4
+				}
+			},
+			"solution": "",
+			"description": "中国大学生程序设计竞赛（CCPC）女生专场即将举办，本次比赛设置金、银、铜奖，各奖项数分别为有效参赛队伍数的 $10\\%、20\\%、30\\%$。其中，有效参赛队伍是指至少成功解出1道题的正式参赛队伍。若有效参赛队伍数为$A$，则：\n* 金奖项数=$\\lceil J \\rceil$，$J = A*10\\%$\n* 银奖项数=$\\lceil Y \\rceil$，$Y = A*30\\%-J$\n* 铜奖项数=$\\lceil T \\rceil$，$T = A*60\\% – Y - J$\n\n其中，$\\lceil x \\rceil$表示向上取整，即取不小于 $x$ 的最小整数。\n\n### 输入格式:\n\n首先输入一个整数T，表示测试数据的组数。对于每组测试数据，输入一个整数$A$，表示有效参赛队伍数。\n\n### 输出格式:\n\n对于每组测试数据，输出金、银、铜奖的奖项数及奖项总数。每两个数据之间留一个空格。\n\n### 输入样例:\n\n```in\n2\n277\n268\n```\n\n### 输出样例:\n\n```out\n28 56 83 167\n27 54 80 161\n```\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1598484478849466370",
+			"label": "",
+			"score": 300,
+			"problemPoolIndex": 3,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "恰好",
+							"showHint": false,
+							"score": 60,
+							"updateAt": "2022-11-06T05:23:39Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "当天(入)",
+							"showHint": false,
+							"score": 60,
+							"updateAt": "2022-11-06T05:23:39Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "当天(舍)",
+							"showHint": false,
+							"score": 60,
+							"updateAt": "2022-11-06T05:23:39Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "跨天(入)",
+							"showHint": false,
+							"score": 60,
+							"updateAt": "2022-11-06T05:23:39Z",
+							"isPublic": false
+						},
+						"4": {
+							"hint": "跨天(舍)",
+							"showHint": false,
+							"score": 60,
+							"updateAt": "2022-11-06T05:23:39Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "16.56\n1.98 1.86\n8:18:7.2\n",
+							"output": "12:36:52.20\n"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 8192,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": true
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1589126032802738176",
+			"title": "相遇问题",
+			"content": "甲乙两人相距 $$d$$ 公里，两人的行进速度分别为 $$v_1$$ 和 $$v_2$$ 公里/小时，从时刻 $$h_1:m_1:s_1$$ 同时出发相向而行，请计算两人相遇的时刻 $$h_2:m_2:s_2$$。\n\n注：$$h_1:m_1:s_1$$ 和 $$h_2:m_2:s_2$$ 分别为两个时刻的时、分和秒，其中时和分为整数，秒为小数。\n\n#### 输入格式\n> $$d$$\n> $$v_1 \\ \\  v_2$$\n> $$h_1:m_1:s_1$$\n\n#### 输出格式\n> $$h_2:m_2:s_2$$\n\n要求：时间的输出格式为 hh:mm:ss.ss。秒数保留 2 位小数。\n\n#### 输入样例\n```in\n16.56\n1.98 1.86\n8:18:7.2\n\n```\n#### 输出样例\n```out\n12:36:52.20\n\n```\n\n注：为方便计算，假定两人行走的时间均不到 1 天。\n",
+			"type": "PROGRAMMING",
+			"author": "李祥",
+			"authorOrganization": {
+				"id": "135",
+				"name": "湖北经济学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "74",
+							"name": "函数与程序结构",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "75",
+							"name": "函数定义与调用",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 32,
+			"submitCount": 134,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1598484478786551808",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "636744dbc7625e5d8eb2a633",
+					"answer": "#include <stdio.h>\n#include <math.h>\n\nvoid TimeOutput(int hour, int minute, double second);\nvoid TimeInput(int *hour, int *minute, double *second);\n\ndouble TotalSecond(int hour, int minute, double second);\nvoid ToHms(int *hour, int *minute, double *second, double total);\n\nvoid TimeAdd(int *endHour, int *endMinute, double *endSecond,\n\t\t\tint startHour, int startMinute, double startSecond, double duration);\n\nint main()\n{\n\tint h1, h2, m1, m2;\n\tdouble s1, s2, d, v1, v2, t;\n\n\tscanf(\"%lf\", &d);\n\tscanf(\"%lf%lf\", &v1, &v2);\n\tTimeInput(&h1, &m1, &s1);\n\n\tt = d / (v1 + v2);\n\tTimeAdd(&h2, &m2, &s2, h1, m1, s1, t * 3600.0);\n\n\tTimeOutput(h2, m2, s2);\n\tputchar('\\n');\n\treturn 0;\n}\n\nvoid TimeOutput(int hour, int minute, double second)\n{\n\tprintf(\"%02d:%02d:%05.2f\", hour, minute, second);\n}\n\nvoid TimeInput(int *hour, int *minute, double *second)\n{\n\tint h, m;\n\tdouble s;\n\tscanf(\"%d : %d : %lg\", &h, &m, &s);\n\t*hour = h;\n\t*minute = m;\n\t*second = s;\n}\n\ndouble TotalSecond(int hour, int minute, double second)\n{\n\treturn (hour * 60.0 + minute) * 60.0 + second;\n}\n\nvoid ToHms(int *hour, int *minute, double *second, double total)\n{\n\tint m;\n\t*second = fmod(total, 60.0);\n\tm = total / 60.0;\n\t*hour = m / 60;\n\t*minute = m % 60;\n}\n\nvoid TimeAdd(int *endHour, int *endMinute, double *endSecond,\n            int startHour, int startMinute, double startSecond, double duration)\n{\n\tdouble time = fmod(TotalSecond(startHour, startMinute, startSecond), 86400);\n\ttime = fmod(time + 86400 + fmod(duration, 86400), 86400);\n\tToHms(endHour, endMinute, endSecond, time);\n}\n",
+					"answerCompiler": "GCC",
+					"useSpecialJudge": false,
+					"checkerCompiler": "GCC",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "GCC",
+					"interactorProgram": "",
+					"testDataVersion": 9
+				}
+			},
+			"solution": "",
+			"description": "甲乙两人相距 $$d$$ 公里，两人的行进速度分别为 $$v_1$$ 和 $$v_2$$ 公里/小时，从时刻 $$h_1:m_1:s_1$$ 同时出发相向而行，请计算两人相遇的时刻 $$h_2:m_2:s_2$$。\n\n注：$$h_1:m_1:s_1$$ 和 $$h_2:m_2:s_2$$ 分别为两个时刻的时、分和秒，其中时和分为整数，秒为小数。\n\n#### 输入格式\n> $$d$$\n> $$v_1 \\ \\  v_2$$\n> $$h_1:m_1:s_1$$\n\n#### 输出格式\n> $$h_2:m_2:s_2$$\n\n要求：时间的输出格式为 hh:mm:ss.ss。秒数保留 2 位小数。\n\n#### 输入样例\n```in\n16.56\n1.98 1.86\n8:18:7.2\n\n```\n#### 输出样例\n```out\n12:36:52.20\n\n```\n\n注：为方便计算，假定两人行走的时间均不到 1 天。\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1598484478849466371",
+			"label": "",
+			"score": 300,
+			"problemPoolIndex": 4,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"1488": {
+							"hint": "",
+							"showHint": false,
+							"score": 300,
+							"updateAt": "2020-10-20T13:41:11Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "2\n2019-11-11\n2020-02-28",
+							"output": "2019-11-12\n2020-02-29"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 8192,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1318547787983212544",
+			"title": "明天",
+			"content": "小明喜欢上了日期的计算。这次他要做的是日期的加1天操作，即求在已知日期的基础上加上1天后的结果日期。如，日期为2019-11-11，加上1天，则结果日期为2019-11-12。\n\n### 输入格式:\n\n输入数据的第一行为一个正整数T，表示测试数据的组数。然后是T组测试数据，每组测试输入1个日期d，日期形式为yyyy-mm-dd。保证输入的日期合法，而且输入的日期和结果日期都在[1000-01-01，9999-12-31]范围内。\n\n### 输出格式:\n\n对于每组测试，在一行上以yyyy-mm-dd的形式输出结果日期。\n\n### 输入样例:\n\n```in\n2\n2019-11-11\n2020-02-28\n```\n\n### 输出样例:\n\n```out\n2019-11-12\n2020-02-29\n```\n",
+			"type": "PROGRAMMING",
+			"author": "黄龙军",
+			"authorOrganization": {
+				"id": "170",
+				"name": "绍兴文理学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 2,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "67",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "68",
+							"name": "if-else",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "循环控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "71",
+							"name": "for",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "67",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "69",
+							"name": "switch",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 36,
+			"submitCount": 124,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1598484478786551808",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5f8ee8f703e5d90007cc1d69",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "GCC",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 1
+				}
+			},
+			"solution": "",
+			"description": "小明喜欢上了日期的计算。这次他要做的是日期的加1天操作，即求在已知日期的基础上加上1天后的结果日期。如，日期为2019-11-11，加上1天，则结果日期为2019-11-12。\n\n### 输入格式:\n\n输入数据的第一行为一个正整数T，表示测试数据的组数。然后是T组测试数据，每组测试输入1个日期d，日期形式为yyyy-mm-dd。保证输入的日期合法，而且输入的日期和结果日期都在[1000-01-01，9999-12-31]范围内。\n\n### 输出格式:\n\n对于每组测试，在一行上以yyyy-mm-dd的形式输出结果日期。\n\n### 输入样例:\n\n```in\n2\n2019-11-11\n2020-02-28\n```\n\n### 输出样例:\n\n```out\n2019-11-12\n2020-02-29\n```\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1598484478849466373",
+			"label": "",
+			"score": 300,
+			"problemPoolIndex": 5,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"1": {
+							"hint": "",
+							"showHint": false,
+							"score": 300,
+							"updateAt": "2022-11-26T14:18:21Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "2\n6 5 1 2 3 4 6\n5 4 5 6 6 4",
+							"output": "6 5 4 3 2 1\n1 2 3 4 5 6\n6 6 5 4 4\n1 1 3 4 4"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 8192,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1596508596257673216",
+			"title": "胜局排序",
+			"content": "n个人打乒乓球，好不热闹。已知每人各自胜了几局，请按胜局从多到少排序并输出每个人的胜局数及每个人的排名，若胜局数相同，则排名也相同。\n\n### 输入格式:\n\n首先输入一个正整数T，表示测试数据的组数，然后是T组测试数据。每组测试先输入人数n（不大于10），再输入n个整数（不大于30），表示各人的胜局数。\n\n### 输出格式:\n\n对于每组测试，输出两行，第一行是各人从多到少排序的胜局数，第二行是各人相应的排名（从1开始）。每行的每两个数据之间留一个空格。\n\n### 输入样例:\n\n```in\n2\n6 5 1 2 3 4 6\n5 4 5 6 6 4\n```\n\n### 输出样例:\n\n```out\n6 5 4 3 2 1\n1 2 3 4 5 6\n6 6 5 4 4\n1 1 3 4 4\n```",
+			"type": "PROGRAMMING",
+			"author": "黄龙军",
+			"authorOrganization": {
+				"id": "170",
+				"name": "绍兴文å­¦é¢",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 2,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "Cç¨åºè®¾è®¡",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "78",
+							"name": "æ°ç»",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "79",
+							"name": "ä¸ç»´æ°ç»",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 27,
+			"submitCount": 87,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1598484478786551808",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "6382202d1d8a342ac5c49b4f",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "GCC",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "GCC",
+					"interactorProgram": "",
+					"testDataVersion": 3
+				}
+			},
+			"solution": "",
+			"description": "nä¸ªäººæä¹ä¹çï¼å¥½ä¸ç­é¹ãå·²ç¥æ¯äººåèªèäºå å±ï¼è¯·æèå±ä»å¤å°å°æåºå¹¶è¾åºæ¯ä¸ªäººçèå±æ°åæ¯ä¸ªäººçæåï¼è¥èå±æ°ç¸åï¼åæåä¹ç¸åã\n\n### è¾å¥æ ¼å¼:\n\né¦åè¾å¥ä¸ä¸ªæ­£æ´æ°Tï¼è¡¨ç¤ºæµè¯æ°æ®çç»æ°ï¼ç¶åæ¯Tç»æµè¯æ°æ®ãæ¯ç»æµè¯åè¾å¥äººæ°nï¼ä¸å¤§äº10ï¼ï¼åè¾å¥nä¸ªæ´æ°ï¼ä¸å¤§äº30ï¼ï¼è¡¨ç¤ºåäººçèå±æ°ã\n\n### è¾åºæ ¼å¼:\n\nå¯¹äºæ¯ç»æµè¯ï¼è¾åºä¸¤è¡ï¼ç¬¬ä¸è¡æ¯åäººä»å¤å°å°æåºçèå±æ°ï¼ç¬¬äºè¡æ¯åäººç¸åºçæåï¼ä»1å¼å§ï¼ãæ¯è¡çæ¯ä¸¤ä¸ªæ°æ®ä¹é´çä¸ä¸ªç©ºæ ¼ã\n\n### è¾å¥æ ·ä¾:\n\n```in\n2\n6 5 1 2 3 4 6\n5 4 5 6 6 4\n```\n\n### è¾åºæ ·ä¾:\n\n```out\n6 5 4 3 2 1\n1 2 3 4 5 6\n6 6 5 4 4\n1 1 3 4 4\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1598484478849466374",
+			"label": "",
+			"score": 300,
+			"problemPoolIndex": 6,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"1": {
+							"hint": "1",
+							"showHint": false,
+							"score": 30,
+							"updateAt": "2022-11-28T00:29:14Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "1",
+							"showHint": false,
+							"score": 30,
+							"updateAt": "2022-11-28T00:29:40Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "3",
+							"showHint": false,
+							"score": 30,
+							"updateAt": "2022-11-28T00:30:02Z",
+							"isPublic": false
+						},
+						"4": {
+							"hint": "4",
+							"showHint": false,
+							"score": 30,
+							"updateAt": "2022-11-28T00:32:54Z",
+							"isPublic": false
+						},
+						"5": {
+							"hint": "5",
+							"showHint": false,
+							"score": 30,
+							"updateAt": "2022-11-28T00:34:07Z",
+							"isPublic": false
+						},
+						"6": {
+							"hint": "6",
+							"showHint": false,
+							"score": 30,
+							"updateAt": "2022-11-28T00:36:12Z",
+							"isPublic": false
+						},
+						"7": {
+							"hint": "7",
+							"showHint": false,
+							"score": 30,
+							"updateAt": "2022-11-28T00:38:01Z",
+							"isPublic": false
+						},
+						"8": {
+							"hint": "8",
+							"showHint": false,
+							"score": 30,
+							"updateAt": "2022-11-28T00:38:49Z",
+							"isPublic": false
+						},
+						"9": {
+							"hint": "9",
+							"showHint": false,
+							"score": 30,
+							"updateAt": "2022-11-28T00:44:21Z",
+							"isPublic": false
+						},
+						"10": {
+							"hint": "10",
+							"showHint": false,
+							"score": 30,
+							"updateAt": "2022-11-28T00:49:37Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "10 \n56 12 1 99 1000 234 33 55 99 812",
+							"output": "532.00\n"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 8192,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1597024555586289664",
+			"title": "F008 排队买饭­",
+			"content": "周晓晓吃完中午饭后又觉得没吃饱，因此想要再去食堂买点饭，当她走进食堂发现已经有n个人排队了，她知道每个人买饭需要的时间。她想帮助大家尽快的买到饭，即让n个人的平均等待时间最小，周晓晓已经饿的无法想出办法，只想知道他们最小的平均等待时间是多少，你能帮助她吗?输入格式:输入可能有多组，每组第一行为一个整数n。 第二行 n 个整数，第 i 个整数 Ti 表示第i个人的等待时间Ti。输出格式:每组输出占一行，为每组最小的平均等待时间（输出结果精确到小数点后两位）。输入样例:10 56 12 1 99 1000 234 33 55 99 812输出样例:532.00",
+			"type": "PROGRAMMING",
+			"author": "å¨æ²»å½",
+			"authorOrganization": {
+				"id": "27",
+				"name": "ä¸åå¸èå¤§å­¦",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "Cç¨åºè®¾è®¡",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "89",
+							"name": "å¶ä»",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "315",
+							"name": "å¶ä»",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 25,
+			"submitCount": 110,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1598484478786551808",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "638400da1d8a342ac5c4a2fa",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "GCC",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "GCC",
+					"interactorProgram": "",
+					"testDataVersion": 21
+				}
+			},
+			"solution": "",
+			"description": "å¨ææåå®ä¸­åé¥­ååè§å¾æ²¡åé¥±ï¼å æ­¤æ³è¦åå»é£å ä¹°ç¹é¥­ï¼å½å¥¹èµ°è¿é£å åç°å·²ç»ænä¸ªäººæéäºï¼å¥¹ç¥éæ¯ä¸ªäººä¹°é¥­éè¦çæ¶é´ãå¥¹æ³å¸®å©å¤§å®¶å°½å¿«çä¹°å°é¥­ï¼å³è®©nä¸ªäººçå¹³åç­å¾æ¶é´æå°ï¼å¨ææå·²ç»é¥¿çæ æ³æ³åºåæ³ï¼åªæ³ç¥éä»ä»¬æå°çå¹³åç­å¾æ¶é´æ¯å¤å°ï¼ä½ è½å¸®å©å¥¹å?\n\n### è¾å¥æ ¼å¼:\n\nè¾å¥å¯è½æå¤ç»ï¼æ¯ç»ç¬¬ä¸è¡ä¸ºä¸ä¸ªæ´æ°nã ç¬¬äºè¡ n ä¸ªæ´æ°ï¼ç¬¬ i ä¸ªæ´æ° Ti è¡¨ç¤ºç¬¬iä¸ªäººçç­å¾æ¶é´Tiã\n\n### è¾åºæ ¼å¼:\n\næ¯ç»è¾åºå ä¸è¡ï¼ä¸ºæ¯ç»æå°çå¹³åç­å¾æ¶é´ï¼è¾åºç»æç²¾ç¡®å°å°æ°ç¹åä¸¤ä½ï¼ã\n\n### è¾å¥æ ·ä¾:\n\n```in\n10 \n56 12 1 99 1000 234 33 55 99 812\n```\n\n### è¾åºæ ·ä¾:\n\n```out\n532.00\n```\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1598484478849466372",
+			"label": "",
+			"score": 300,
+			"problemPoolIndex": 7,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"1": {
+							"hint": "2 100 13",
+							"showHint": false,
+							"score": 75,
+							"updateAt": "2022-11-11T05:40:34Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "22 418 53",
+							"showHint": false,
+							"score": 75,
+							"updateAt": "2022-11-11T05:41:01Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "2 4 5",
+							"showHint": false,
+							"score": 75,
+							"updateAt": "2022-11-11T05:41:29Z",
+							"isPublic": false
+						},
+						"4": {
+							"hint": "3 17 23",
+							"showHint": false,
+							"score": 75,
+							"updateAt": "2022-11-11T05:45:21Z",
+							"isPublic": false
+						},
+						"5": {
+							"hint": "3333 5555 10",
+							"showHint": false,
+							"score": 0,
+							"updateAt": "2022-11-11T05:43:30Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "2 4 5\n",
+							"output": "1 1\n"
+						},
+						{
+							"name": "",
+							"input": "22 418 53\n",
+							"output": "7 1\n"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 8192,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1590379064198819840",
+			"title": "数论中的模幂运算",
+			"content": "设a,m,n∈Z+，且a×n≤230, 试计算：am(mod n)，即求a的m次方再对n求余，并给出a参与的乘法次数。输入格式:在一行内输入三个正整数a,m和n，用空格隔开，要求a×n≤230输出格式:am(mod n)的结果，大小不超过231−1输入样例1:2 4 5输出样例1:1 1",
+			"type": "PROGRAMMING",
+			"author": "éé¹é£",
+			"authorOrganization": {
+				"id": "97",
+				"name": "å¤ªåçå·¥å¤§å­¦",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 2,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "316",
+							"name": "ä¸­å­¦ä¿¡æ¯å­¦",
+							"isLeaf": false,
+							"enName": "Middle School Informatics"
+						},
+						{
+							"id": "327",
+							"name": "ç®æ³åæ°æ®ç»æåæ­¥",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "332",
+							"name": "æ°è®º",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "Cç¨åºè®¾è®¡",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "å¾ªç¯æ§å¶",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "73",
+							"name": "åµå¥å¾ªç¯",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "1049225510747021312",
+							"name": "è®¡ç®æºç§å­¦å¯¼è®º",
+							"isLeaf": false,
+							"enName": "Introduction to Computer Science"
+						},
+						{
+							"id": "1049225683992748032",
+							"name": "æ°æ®è¡¨ç¤º",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "1049226397448056832",
+							"name": "è¿å¶è½¬æ¢",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 11,
+			"submitCount": 36,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1598484478786551808",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "636c00a439c4615de516ab3b",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "GCC",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "GCC",
+					"interactorProgram": "",
+					"testDataVersion": 40
+				}
+			},
+			"solution": "",
+			"description": "è®¾$$a, m, n\\in Z^+$$ï¼ä¸$$a\\times n\\leq 2^{30}$$, è¯è®¡ç®ï¼$$a^m (\\rm{mod}\\space \\it{n})$$ï¼å³æ±$$a$$ç$$m$$æ¬¡æ¹åå¯¹$$n$$æ±ä½ï¼å¹¶ç»åº$$a$$åä¸çä¹æ³æ¬¡æ°ã\n\n### è¾å¥æ ¼å¼:\nå¨ä¸è¡åè¾å¥ä¸ä¸ªæ­£æ´æ°$$a, m$$å$$n$$ï¼ç¨ç©ºæ ¼éå¼ï¼è¦æ±$$a\\times n\\leq 2^{30}$$\n\n### è¾åºæ ¼å¼:\n$$a^m (\\rm{mod}\\space \\it{n})$$çç»æï¼å¤§å°ä¸è¶è¿$$2^{31}-1$$\n\n### è¾å¥æ ·ä¾1:\n```in\n2 4 5\n```\n\n### è¾åºæ ·ä¾1:\n```out\n1 1\n```\n\n### è¾å¥æ ·ä¾2:\n```in\n22 418 53\n```\n\n### è¾åºæ ·ä¾2:\n```out\n7 1\n```\n\n### æç¤ºï¼\nå¯¹äºå¹è¿ç®ï¼æï¼\n**è§å1**ï¼è®¾$$(m)_{10}=(b_kb_{k-1}b_{k-2}\\cdots b_2b_1b_0)_2$$ï¼å¶ä¸­ä¸æ ä»£è¡¨è¿å¶ï¼åæ\n$$\n\\begin{array}{ll}\na^m&=a^{b_kb_{k-1}b_{k-2}\\cdots b_2b_1b_0}\\\\\n&=a^{b_k\\times 2^k+b_{k-1}\\times 2^{k-1}+\\cdots +b_0\\times 2^0}\\\\\n&=a^{b_k\\times 2^k}\\times a^{b_{k-1}\\times 2^{k-1}}\\times \\cdots \\times 2^{b_0\\times 2^0}\n\\end{array}\n$$\n\nå¦\n$$\n\\begin{array}{ll}\n5^{(5)_{10}}=5^{(101)_{2}}&=5^{1\\times 4}\\times 5^{0\\times 2}\\times\n5^{1\\times 1}\\\\\n&=((1^2\\times 5)^2)^2\\times 5\n\\end{array}\n$$\n\nä½å½$$a$$æ$$m$$å¼å¾å¤§æ¶ï¼$$a^m$$ä¼å¾å¤§ï¼çè³è¶è¿è®¡ç®æºå¯ä»¥è¡¨ç¤ºçèå´ï¼å³åçæº¢åºï¼ãæ­¤æ¶ï¼å¨åæ¨¡å¹è¿ç®æ¶ï¼ä¸è½åæ±å¹åæ±æ¨¡ãèèå°æ¨¡è¿ç®æï¼\n**è§å2**ï¼å¦æ$$a=b\\times c$$ï¼å\n$$\n\\begin{array}{ll}\na \\space(\\rm{mod}\\space \\it{n})&=(b\\times c)\\space(\\rm{mod}\\space \\it{n})\\\\\n&=((b\\space(\\rm{mod}\\space \\it{n}))\\times c)\\space(\\rm{mod}\\space \\it{n})\\\\\n&=(b\\space(\\rm{mod}\\space \\it{n})\\times c\\space(\\rm{mod}\\space \\it{n}))\\space(\\rm{mod}\\space \\it{n})\n\\end{array}$$\n\nå¦\n$$\n\\begin{array}{ll}\n5^{(5)_{10}}\\space(\\rm{mod}\\space 8)\n&=5^{(101)_{2}}\\space(\\rm{mod}\\space 8)\\\\\n&=(5^{1\\times 4}\\times 5^{0\\times 2}\\times 5^{1\\times 1})\\space(\\rm{mod}\\space 8)\\\\\n&=((((1^2\\space(\\rm{mod}\\space 8)\\times 5)\\space(\\rm{mod}\\space 8))^2\\space(\\rm{mod}\\space 8))^2\\space(\\rm{mod}\\space 8)\\times 5)\\space(\\rm{mod}\\space 8)\n\\end{array}\n$$\n\nå½$m>n$ä¸$n$æ¯ç´ æ°æ¶ï¼è¿å¯ä»¥åè**è´¹é©¬å°å®ç**è¿è¡è¿ä¸æ­¥åç®ï¼\n**è§å3**ï¼è®¾$$a,n\\in Z^+$$ï¼è¥$$n$$æ¯ç´ æ°ï¼ä¸$$\\rm{GCD}(\\it{a,n})=\\rm{1}$$ï¼å³$$a$$å$$n$$äºè´¨ï¼åæï¼$$a^{n-1}\\space(\\rm{mod}\\space \\it{n})=\\rm{1}$$\n\n**ä¸¾ä¾è¯´æ**\n$$\n\\begin{array}{ll}\n15^{40}\\space(\\rm{mod}\\space 31)&=((15^{30}\\space(\\rm{mod}\\space 31))\\times (15^{10}\\space(\\rm{mod}\\space 31))) \\space(\\rm{mod}\\space 31)\\\\\n&=(1\\times (15^{10}\\space(\\rm{mod}\\space 31))) \\space(\\rm{mod}\\space 31)\\\\\n&=15^{10}\\space(\\rm{mod}\\space 31)\n\\end{array}\n$$\n\nåçï¼æï¼\n$$\n\\begin{array}{ll}\n5^{200}\\space(\\rm{mod}\\space 31)&=\n5^{30\\times 6+20}\\space(\\rm{mod}\\space 31)\\\\\n&=5^{20}\\space(\\rm{mod}\\space 31)\n\\end{array}\n$$\n\nå æ­¤ï¼è®¡ç®æ¨¡å¹$$a^m \\space(\\rm{mod}\\space \\it{n})$$æ¶ï¼è¯·åèå¦ä¸ç®æ³ï¼\n\n$$\\bold{\\textcolor{blue}{ç®æ³}}\\textcolor{red}{\\rm{ExpMod}}$$\nè¾å¥ï¼$$a, m, n$$\nè¾åºï¼$$a^m \\space(\\rm{mod}\\space \\it{n})$$\n1$$\\quad$$ **if** $$n$$æ¯ç´ æ° **and** $$a$$ä¸$$n$$äºè´¨ **and** $$m\\geq n$$ **then**\n2$$\\qquad$$m%=n-1\n3$$\\quad$$$$c\\gets1$$\n2$$\\quad$$å°$$m$$è½¬æ¢ä¸ºäºè¿å¶ä¸²$$b_{\\textcolor{red}{k}}b_{k-1}\\cdots b_2b_1b_{\\textcolor{red}{0}}$$\n3$$\\quad$$**for** $$j\\gets \\textcolor{red}{k}$$ **downto** $$\\textcolor{red}{0}$$ **do**\n4$$\\qquad$$$$c\\gets c^2\\space (\\rm{mod}\\space \\it{n})$$\n5$$\\qquad$$**if** $$b_j$$ **then**\n6$$\\qquad\\quad$$$$c\\gets ac\\space (\\rm{mod}\\space \\it{n})$$\n7$$\\qquad$$**end_if**\n8$$\\quad$$**end_for**\n9$$\\quad$$**return** $$c$$\n\n**æ³¨æ**ï¼æ­£æ´æ°çæ¨¡(**mod**)è¿ç®å³æ±ä½(**%**)æä½ã",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		}
+	]

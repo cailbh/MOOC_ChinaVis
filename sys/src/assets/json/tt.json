@@ -24,6 +24,12 @@
   "father":"1",
   "son":[]
   },{
+  "id":"1.3.1",
+  "name":"ASCII码",
+  "layout":0,
+  "father":"1",
+  "son":[]
+  },{
   "id":"1.4",
   "name":"枚举型",
   "layout":0,
@@ -32,6 +38,18 @@
   },{
   "id":"1.5",
   "name":"布尔型",
+  "layout":0,
+  "father":"1",
+  "son":[]
+  },{
+  "id":"1.6",
+  "name":"进制转换",
+  "layout":0,
+  "father":"1",
+  "son":[]
+  },{
+  "id":"1.7",
+  "name":"输入输出",
   "layout":0,
   "father":"1",
   "son":[]
@@ -86,7 +104,43 @@
   "son":[]
   },{
   "id":"2.3",
+  "name":"字符串",
+  "layout":1,
+  "father":"2",
+  "son":[]
+  },{
+  "id":"2.4",
   "name":"类型转换",
+  "layout":1,
+  "father":"2",
+  "son":[]
+  },{
+  "id":"2.5",
+  "name":"转义字符",
+  "layout":1,
+  "father":"2",
+  "son":[]
+  },{
+  "id":"2.6",
+  "name":"格式控制符",
+  "layout":1,
+  "father":"2",
+  "son":[]
+  },{
+  "id":"2.7",
+  "name":"标识符",
+  "layout":1,
+  "father":"2",
+  "son":[]
+  },{
+  "id":"2.8",
+  "name":"注释",
+  "layout":1,
+  "father":"2",
+  "son":[]
+  },{
+  "id":"2.9",
+  "name":"条件表达式",
   "layout":1,
   "father":"2",
   "son":[]
@@ -176,9 +230,39 @@
   "son":[]
   },{
   "id":"6.3",
-  "name":"字符串",
+  "name":"字符串数组",
   "layout":1,
   "father":"6",
+  "son":[]
+  },{
+  "id":"7",
+  "name":"指针",
+  "layout":0,
+  "father":"-1",
+  "son":[]
+  },{
+  "id":"8",
+  "name":"结构体",
+  "layout":0,
+  "father":"-1",
+  "son":[]
+  },{
+  "id":"8.1",
+  "name":"结构体定义",
+  "layout":1,
+  "father":"8",
+  "son":[]
+  },{
+  "id":"8.2",
+  "name":"结构体数组",
+  "layout":1,
+  "father":"-1",
+  "son":[]
+  },{
+  "id":"9",
+  "name":"链表",
+  "layout":1,
+  "father":"-1",
   "son":[]
   }
 ]

@@ -1,0 +1,2628 @@
+[
+		{
+			"id": "1594605504100421632",
+			"label": "",
+			"score": 1,
+			"problemPoolIndex": 1,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1759",
+			"title": "直接访问就是直接利用变量的地址直接进行访问。",
+			"content": "直接访问就是直接利用变量的地址直接进行访问。  ~@[](1)",
+			"type": "TRUE_OR_FALSE",
+			"author": "王从银",
+			"authorOrganization": {
+				"id": "36",
+				"name": "吉首大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "82",
+							"name": "指针与结构",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "83",
+							"name": "指针",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1594605247375466496",
+			"judgeConfig": {
+				"trueOrFalseJudgeConfig": {
+					"answer": "TRUE"
+				}
+			},
+			"solution": "",
+			"description": "直接访问就是直接利用变量的地址直接进行访问。  ",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1594605504100421633",
+			"label": "",
+			"score": 1,
+			"problemPoolIndex": 2,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1799",
+			"title": "指向结构体变量的指针可以作函数参数，实现传址调用。",
+			"content": "指向结构体变量的指针可以作函数参数，实现传址调用。 ~@[](1)",
+			"type": "TRUE_OR_FALSE",
+			"author": "王从银",
+			"authorOrganization": {
+				"id": "36",
+				"name": "吉首大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "82",
+							"name": "指针与结构",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "83",
+							"name": "指针",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1594605247375466496",
+			"judgeConfig": {
+				"trueOrFalseJudgeConfig": {
+					"answer": "TRUE"
+				}
+			},
+			"solution": "",
+			"description": "指向结构体变量的指针可以作函数参数，实现传址调用。 ",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1594605504104615936",
+			"label": "",
+			"score": 1,
+			"problemPoolIndex": 3,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1009991897476583424",
+			"title": "变量定义：int \\*p, q; 中，p和q都是指针。  ",
+			"content": "变量定义：int \\*p, q; 中，p和q都是指针。  ~@[](1)",
+			"type": "TRUE_OR_FALSE",
+			"author": "张高燕",
+			"authorOrganization": {
+				"id": "2",
+				"name": "浙大城市学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "82",
+							"name": "指针与结构",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "83",
+							"name": "指针",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1594605247375466496",
+			"judgeConfig": {
+				"trueOrFalseJudgeConfig": {
+					"answer": "FALSE"
+				}
+			},
+			"solution": "",
+			"description": "变量定义：int \\*p, q; 中，p和q都是指针。  ",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1594605504104615937",
+			"label": "",
+			"score": 1,
+			"problemPoolIndex": 4,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1024566602666127360",
+			"title": "要通过函数调用来改变主调函数中某个变量的值，可以把指针作为函数的参数。  ",
+			"content": "要通过函数调用来改变主调函数中某个变量的值，可以把指针作为函数的参数。  ~@[](1)",
+			"type": "TRUE_OR_FALSE",
+			"author": "张泳",
+			"authorOrganization": {
+				"id": "2",
+				"name": "浙大城市学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "82",
+							"name": "指针与结构",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "83",
+							"name": "指针",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1594605247375466496",
+			"judgeConfig": {
+				"trueOrFalseJudgeConfig": {
+					"answer": "TRUE"
+				}
+			},
+			"solution": "",
+			"description": "要通过函数调用来改变主调函数中某个变量的值，可以把指针作为函数的参数。  ",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1594605504104615938",
+			"label": "",
+			"score": 1,
+			"problemPoolIndex": 5,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1024567663640494080",
+			"title": "数组的基地址是在内存中存储数组的起始位置，数组名本身就是一个地址即指针值。  ",
+			"content": "数组的基地址是在内存中存储数组的起始位置，数组名本身就是一个地址即指针值。  ~@[](1)",
+			"type": "TRUE_OR_FALSE",
+			"author": "张泳",
+			"authorOrganization": {
+				"id": "2",
+				"name": "浙大城市学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "82",
+							"name": "指针与结构",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "83",
+							"name": "指针",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1594605247375466496",
+			"judgeConfig": {
+				"trueOrFalseJudgeConfig": {
+					"answer": "TRUE"
+				}
+			},
+			"solution": "",
+			"description": "数组的基地址是在内存中存储数组的起始位置，数组名本身就是一个地址即指针值。  ",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1594605504104615939",
+			"label": "",
+			"score": 1,
+			"problemPoolIndex": 6,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1024570278864531456",
+			"title": "调用strcmp函数比较字符串大小时，通常较长的字符串会较大。  ",
+			"content": "调用strcmp函数比较字符串大小时，通常较长的字符串会较大。  ~@[](1)",
+			"type": "TRUE_OR_FALSE",
+			"author": "张泳",
+			"authorOrganization": {
+				"id": "2",
+				"name": "浙大城市学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "78",
+							"name": "数组",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "80",
+							"name": "字符串",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "82",
+							"name": "指针与结构",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "83",
+							"name": "指针",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1594605247375466496",
+			"judgeConfig": {
+				"trueOrFalseJudgeConfig": {
+					"answer": "FALSE"
+				}
+			},
+			"solution": "",
+			"description": "调用strcmp函数比较字符串大小时，通常较长的字符串会较大。  ",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1594605504104615940",
+			"label": "",
+			"score": 1,
+			"problemPoolIndex": 7,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1024633651694190592",
+			"title": "如果函数的返回类型是指针，则可以返回函数内部任意变量的地址。  ",
+			"content": "如果函数的返回类型是指针，则可以返回函数内部任意变量的地址。  ~@[](1)",
+			"type": "TRUE_OR_FALSE",
+			"author": "张泳",
+			"authorOrganization": {
+				"id": "2",
+				"name": "浙大城市学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "82",
+							"name": "指针与结构",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "83",
+							"name": "指针",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1594605247375466496",
+			"judgeConfig": {
+				"trueOrFalseJudgeConfig": {
+					"answer": "FALSE"
+				}
+			},
+			"solution": "",
+			"description": "如果函数的返回类型是指针，则可以返回函数内部任意变量的地址。  ",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1594605504104615941",
+			"label": "",
+			"score": 1,
+			"problemPoolIndex": 8,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1024633748700053504",
+			"title": "如果函数的返回类型是指针，则可以返回0。  ",
+			"content": "如果函数的返回类型是指针，则可以返回0。  ~@[](1)",
+			"type": "TRUE_OR_FALSE",
+			"author": "张泳",
+			"authorOrganization": {
+				"id": "2",
+				"name": "浙大城市学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "82",
+							"name": "指针与结构",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "83",
+							"name": "指针",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1594605247375466496",
+			"judgeConfig": {
+				"trueOrFalseJudgeConfig": {
+					"answer": "TRUE"
+				}
+			},
+			"solution": "",
+			"description": "如果函数的返回类型是指针，则可以返回0。  ",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1594605504104615942",
+			"label": "",
+			"score": 1,
+			"problemPoolIndex": 9,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1135736215152844800",
+			"title": "可以将一个整型数据赋给一个指针变量，如p=3000。  ",
+			"content": "可以将一个整型数据赋给一个指针变量，如p=3000。  ~@[](1)",
+			"type": "TRUE_OR_FALSE",
+			"author": "崔孝凤",
+			"authorOrganization": {
+				"id": "77",
+				"name": "山东理工大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "82",
+							"name": "指针与结构",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "83",
+							"name": "指针",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1594605247375466496",
+			"judgeConfig": {
+				"trueOrFalseJudgeConfig": {
+					"answer": "FALSE"
+				}
+			},
+			"solution": "",
+			"description": "可以将一个整型数据赋给一个指针变量，如p=3000。  ",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1594605504108810240",
+			"label": "",
+			"score": 1,
+			"problemPoolIndex": 10,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1135737127170695168",
+			"title": "指针变量中保存的不一定是一个地址。  ",
+			"content": "指针变量中保存的不一定是一个地址。  ~@[](1)",
+			"type": "TRUE_OR_FALSE",
+			"author": "崔孝凤",
+			"authorOrganization": {
+				"id": "77",
+				"name": "山东理工大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "82",
+							"name": "指针与结构",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "83",
+							"name": "指针",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1594605247375466496",
+			"judgeConfig": {
+				"trueOrFalseJudgeConfig": {
+					"answer": "FALSE"
+				}
+			},
+			"solution": "",
+			"description": "指针变量中保存的不一定是一个地址。  ",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1594605840114507776",
+			"label": "",
+			"score": 2,
+			"problemPoolIndex": 1,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false,
+				"multipleChoiceProblemConfig": {
+					"choices": [
+						"`p>s`",
+						"`*p>*s`",
+						"`a[p]>a[s]`",
+						"`p-a>p-s`"
+					],
+					"maxDisplayChoicesPerLine": 1
+				}
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1071289414412328960",
+			"title": "下面程序输出数组中的最大值，由s指针指向该元素   ",
+			"content": "下面程序输出数组中的最大值，由s指针指向该元素\n```\nint main()\n {\n    int a[10]={6,7,2,9,1,10,5,8,4,3,},*p,*s;\n    for(p=a, s=a; p-a<10; p++)\n    if( ---?--- )\n      s=p;\n    printf(\"The max:%d\",*s):\n    return 0;\n}\n```\n则在if语句中的判断表达式应该是：",
+			"type": "MULTIPLE_CHOICE",
+			"author": "王俊玲-ktp",
+			"authorOrganization": {
+				"id": "46",
+				"name": "集美大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "82",
+							"name": "指针与结构",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "83",
+							"name": "指针",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "78",
+							"name": "数组",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "79",
+							"name": "一维数组",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1594605247375466496",
+			"judgeConfig": {
+				"multipleChoiceJudgeConfig": {
+					"answer": "B"
+				}
+			},
+			"solution": "",
+			"description": "下面程序输出数组中的最大值，由s指针指向该元素\n```\nint main()\n {\n    int a[10]={6,7,2,9,1,10,5,8,4,3,},*p,*s;\n    for(p=a, s=a; p-a<10; p++)\n    if( ---?--- )\n      s=p;\n    printf(\"The max:%d\",*s):\n    return 0;\n}\n```\n则在if语句中的判断表达式应该是：",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1594605840118702080",
+			"label": "",
+			"score": 2,
+			"problemPoolIndex": 2,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false,
+				"multipleChoiceProblemConfig": {
+					"choices": [
+						"BABBAB",
+						"ABBBBA",
+						"BABABA",
+						"BAABBA"
+					],
+					"maxDisplayChoicesPerLine": 1
+				}
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1071341425396727808",
+			"title": "以下程序的输出结果是：   ",
+			"content": "以下程序的输出结果是：\n```\n#include<stdio.h>\nvoid sub1(char a,char b)\n{\n    char c;\n    c=a;\n    a=b;\n    b=c;\n}\nvoid sub2(char* a,char b)\n{\n    char c;\n    c=*a;\n    *a=b;b=c;\n}\nvoid sub3(char* a,char*b)\n{\n    char c;\n    c=*a;\n    *a=*b;\n    *b=c;\n}\nint main()\n{\n    char a,b;\n    a='A';b='B';sub3(&a,&b);putchar(a);putchar(b);\n    a='A';b='B';sub2(&a,b);putchar(a);putchar(b);\n    a='A';b='B';sub1(a,b);putchar(a);putchar(b);\n    return 0;\n}\n```",
+			"type": "MULTIPLE_CHOICE",
+			"author": "王俊玲-ktp",
+			"authorOrganization": {
+				"id": "46",
+				"name": "集美大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "82",
+							"name": "指针与结构",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "83",
+							"name": "指针",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "74",
+							"name": "函数与程序结构",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "75",
+							"name": "函数定义与调用",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1594605247375466496",
+			"judgeConfig": {
+				"multipleChoiceJudgeConfig": {
+					"answer": "A"
+				}
+			},
+			"solution": "",
+			"description": "以下程序的输出结果是：\n```\n#include<stdio.h>\nvoid sub1(char a,char b)\n{\n    char c;\n    c=a;\n    a=b;\n    b=c;\n}\nvoid sub2(char* a,char b)\n{\n    char c;\n    c=*a;\n    *a=b;b=c;\n}\nvoid sub3(char* a,char*b)\n{\n    char c;\n    c=*a;\n    *a=*b;\n    *b=c;\n}\nint main()\n{\n    char a,b;\n    a='A';b='B';sub3(&a,&b);putchar(a);putchar(b);\n    a='A';b='B';sub2(&a,b);putchar(a);putchar(b);\n    a='A';b='B';sub1(a,b);putchar(a);putchar(b);\n    return 0;\n}\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1594605840118702081",
+			"label": "",
+			"score": 2,
+			"problemPoolIndex": 3,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false,
+				"multipleChoiceProblemConfig": {
+					"choices": [
+						"xyabcAB",
+						"abcABz",
+						"ABabcz",
+						"xycdBCD"
+					],
+					"maxDisplayChoicesPerLine": 1
+				}
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1071346134736093184",
+			"title": "下列程序的输出结果是    ",
+			"content": "下列程序的输出结果是\n```\nint main( )\n {\n     char *p1, *p2, str[50]=\"xyz\";\n     p1=\"abcd\";\n     p2=\"ABCD\";\n     strcpy(str+2,strcat(p1+2,p2+1));\n     printf（\"%s\",str);\n     return 0\n }\n```",
+			"type": "MULTIPLE_CHOICE",
+			"author": "王俊玲-ktp",
+			"authorOrganization": {
+				"id": "46",
+				"name": "集美大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "78",
+							"name": "数组",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "80",
+							"name": "字符串",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "82",
+							"name": "指针与结构",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "83",
+							"name": "指针",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1594605247375466496",
+			"judgeConfig": {
+				"multipleChoiceJudgeConfig": {
+					"answer": "D"
+				}
+			},
+			"solution": "",
+			"description": "下列程序的输出结果是\n```\nint main( )\n {\n     char *p1, *p2, str[50]=\"xyz\";\n     p1=\"abcd\";\n     p2=\"ABCD\";\n     strcpy(str+2,strcat(p1+2,p2+1));\n     printf（\"%s\",str);\n     return 0\n }\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1594605840118702082",
+			"label": "",
+			"score": 2,
+			"problemPoolIndex": 4,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false,
+				"multipleChoiceProblemConfig": {
+					"choices": [
+						"17",
+						"18",
+						"19",
+						"20"
+					],
+					"maxDisplayChoicesPerLine": 1
+				}
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1071346669052674048",
+			"title": "执行以下程序后，y的值是：   ",
+			"content": "执行以下程序后，y的值是：\n```\nint main ( )\n {\n    int a[]={2,4,6,8,10};\n    int y=1,x,*p;\n    p=&a[1];\n    for(x=0;x<3;x++)\n      y + = * (p + x);\n    printf(\"%d\\n\",y);\n    return 0;\n }\n```",
+			"type": "MULTIPLE_CHOICE",
+			"author": "王俊玲-ktp",
+			"authorOrganization": {
+				"id": "46",
+				"name": "集美大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "78",
+							"name": "数组",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "79",
+							"name": "一维数组",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "82",
+							"name": "指针与结构",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "83",
+							"name": "指针",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1594605247375466496",
+			"judgeConfig": {
+				"multipleChoiceJudgeConfig": {
+					"answer": "C"
+				}
+			},
+			"solution": "",
+			"description": "执行以下程序后，y的值是：\n```\nint main ( )\n {\n    int a[]={2,4,6,8,10};\n    int y=1,x,*p;\n    p=&a[1];\n    for(x=0;x<3;x++)\n      y + = * (p + x);\n    printf(\"%d\\n\",y);\n    return 0;\n }\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1594605840118702083",
+			"label": "",
+			"score": 3,
+			"problemPoolIndex": 5,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false,
+				"multipleChoiceProblemConfig": {
+					"choices": [
+						"p=q",
+						"*p=*q",
+						"n=*q",
+						"p=n"
+					],
+					"maxDisplayChoicesPerLine": 1
+				}
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1354729264799879168",
+			"title": "若有说明：int n=2,*p=&n,*q=p,则以下非法的赋值语句是: （ ）。",
+			"content": "若有说明：int n=2,*p=&n,*q=p,则以下非法的赋值语句是: （ ）。\n@[](3)\n\nA. p=q\nB. *p=*q\nC. n=*q\nD. p=n",
+			"type": "MULTIPLE_CHOICE",
+			"author": "郑卫华",
+			"authorOrganization": {
+				"id": "1353694861766860800",
+				"name": "新疆科技学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "82",
+							"name": "指针与结构",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "83",
+							"name": "指针",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1594605247375466496",
+			"judgeConfig": {
+				"multipleChoiceJudgeConfig": {
+					"answer": "D"
+				}
+			},
+			"solution": "",
+			"description": "若有说明：int n=2,*p=&n,*q=p,则以下非法的赋值语句是: （ ）。",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1594605840122896384",
+			"label": "",
+			"score": 3,
+			"problemPoolIndex": 6,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false,
+				"multipleChoiceProblemConfig": {
+					"choices": [
+						"a[p]",
+						"p[a]",
+						"*(p+2)",
+						"p+2"
+					],
+					"maxDisplayChoicesPerLine": 1
+				}
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1354730030843367424",
+			"title": "若有说明语句“int a[5],*p=a;”,则对数组元素的正确引用是(    )。",
+			"content": "若有说明语句“int a[5],*p=a;”,则对数组元素的正确引用是(    )。\n@[](3)\n\nA. a[p]\nB. p[a]\nC. *(p+2)\nD. p+2",
+			"type": "MULTIPLE_CHOICE",
+			"author": "郑卫华",
+			"authorOrganization": {
+				"id": "1353694861766860800",
+				"name": "新疆科技学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "82",
+							"name": "指针与结构",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "83",
+							"name": "指针",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1594605247375466496",
+			"judgeConfig": {
+				"multipleChoiceJudgeConfig": {
+					"answer": "C"
+				}
+			},
+			"solution": "",
+			"description": "若有说明语句“int a[5],*p=a;”,则对数组元素的正确引用是(    )。",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1594605840122896385",
+			"label": "",
+			"score": 2,
+			"problemPoolIndex": 7,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false,
+				"multipleChoiceProblemConfig": {
+					"choices": [
+						"5,2,3",
+						"-5,-12,-17",
+						"-5,-12,-7",
+						"5,-2,-7"
+					],
+					"maxDisplayChoicesPerLine": 1
+				}
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1458820420605440000",
+			"title": "以下程序的输出结果",
+			"content": "以下程序的输出结果\n```\nvoid Sub(int x, int y, int *z)\n{   *z=y-x;  }\nvoid main()\n{  \n     int a,b,c;\n     Sub(10,5,&a);\n     Sub(7,a,&b);\n     Sub(a,b,&c);\n     printf(\"%d,%d,%d\\n\",a,b,c); \n}\n```\n",
+			"type": "MULTIPLE_CHOICE",
+			"author": "张庆",
+			"authorOrganization": {
+				"id": "46",
+				"name": "集美大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "82",
+							"name": "指针与结构",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "83",
+							"name": "指针",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1594605247375466496",
+			"judgeConfig": {
+				"multipleChoiceJudgeConfig": {
+					"answer": "C"
+				}
+			},
+			"solution": "",
+			"description": "以下程序的输出结果\n```\nvoid Sub(int x, int y, int *z)\n{   *z=y-x;  }\nvoid main()\n{  \n     int a,b,c;\n     Sub(10,5,&a);\n     Sub(7,a,&b);\n     Sub(a,b,&c);\n     printf(\"%d,%d,%d\\n\",a,b,c); \n}\n```\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1594605840122896386",
+			"label": "",
+			"score": 2,
+			"problemPoolIndex": 8,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false,
+				"multipleChoiceProblemConfig": {
+					"choices": [
+						"*p+6        ",
+						"*(p+6)       ",
+						"p+5\n",
+						"*p+=5            "
+					],
+					"maxDisplayChoicesPerLine": 1
+				}
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1458821423795539968",
+			"title": "```",
+			"content": "下列数组定义\n```\nint a[10]={1,2,3,4,5,6,7,8,9,10},*p=a;\n```\n 则数值为6的表达式是",
+			"type": "MULTIPLE_CHOICE",
+			"author": "张庆",
+			"authorOrganization": {
+				"id": "46",
+				"name": "集美大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "82",
+							"name": "指针与结构",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "83",
+							"name": "指针",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1594605247375466496",
+			"judgeConfig": {
+				"multipleChoiceJudgeConfig": {
+					"answer": "D"
+				}
+			},
+			"solution": "",
+			"description": "下列数组定义\n```\nint a[10]={1,2,3,4,5,6,7,8,9,10},*p=a;\n```\n 则数值为6的表达式是",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1594605840122896387",
+			"label": "",
+			"score": 2,
+			"problemPoolIndex": 9,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false,
+				"multipleChoiceProblemConfig": {
+					"choices": [
+						"p>s\n",
+						"a[p]>a[s] ",
+						"*p>*s ",
+						"p-a>p-s"
+					],
+					"maxDisplayChoicesPerLine": 1
+				}
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1458822434413088768",
+			"title": "下面程序输出数组中的最大值,由s指针指向该元素.",
+			"content": "下面程序输出数组中的最大值,由s指针指向该元素.\n\n\t int main()\n     {\n\t\t int a[10]={6,7,2,9,1,10,5,8,4,3,},*p,*s;\n\t\t for(p=a, s=a; p-a<10; p++)\n             if(---?---)    s=p;\n\t\t printf(\"The max:%d\",*s):\n\t\t return 0;\n     }    \n\n则在if语句中的判断表达式应该是:",
+			"type": "MULTIPLE_CHOICE",
+			"author": "张庆",
+			"authorOrganization": {
+				"id": "46",
+				"name": "集美大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "82",
+							"name": "指针与结构",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "83",
+							"name": "指针",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1594605247375466496",
+			"judgeConfig": {
+				"multipleChoiceJudgeConfig": {
+					"answer": "C"
+				}
+			},
+			"solution": "",
+			"description": "下面程序输出数组中的最大值,由s指针指向该元素.\n\n\t int main()\n     {\n\t\t int a[10]={6,7,2,9,1,10,5,8,4,3,},*p,*s;\n\t\t for(p=a, s=a; p-a<10; p++)\n             if(---?---)    s=p;\n\t\t printf(\"The max:%d\",*s):\n\t\t return 0;\n     }    \n\n则在if语句中的判断表达式应该是:",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1594605840122896388",
+			"label": "",
+			"score": 2,
+			"problemPoolIndex": 10,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false,
+				"multipleChoiceProblemConfig": {
+					"choices": [
+						"a+(i++)  ",
+						"&a[++i]\n",
+						"a+i  ",
+						"&a[i+1] "
+					],
+					"maxDisplayChoicesPerLine": 1
+				}
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1458824261459636224",
+			"title": "以下程序段给数组所有的元素输入数据, 请选择正确答案填入:",
+			"content": "以下程序段给数组所有的元素输入数据, 请选择正确答案填入:\n```\n    int main()\n    {  \n\t\tint a[10],i=0;\n        while(i<10)\n\t\tscanf(\"%d\",＿＿);\n\t    return 0;\n     }\n```\n",
+			"type": "MULTIPLE_CHOICE",
+			"author": "张庆",
+			"authorOrganization": {
+				"id": "46",
+				"name": "集美大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "82",
+							"name": "指针与结构",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "83",
+							"name": "指针",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1594605247375466496",
+			"judgeConfig": {
+				"multipleChoiceJudgeConfig": {
+					"answer": "A"
+				}
+			},
+			"solution": "",
+			"description": "以下程序段给数组所有的元素输入数据, 请选择正确答案填入:\n```\n    int main()\n    {  \n\t\tint a[10],i=0;\n        while(i<10)\n\t\tscanf(\"%d\",＿＿);\n\t    return 0;\n     }\n```\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1594605940920414208",
+			"label": "",
+			"score": 1,
+			"problemPoolIndex": 1,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"multipleChoiceMoreThanOneAnswerProblemConfig": {
+					"optionsCount": 4,
+					"choices": [
+						"p = malloc(sizeof(double));",
+						"p = (double *)malloc(sizeof(*p));",
+						"p = malloc(8);",
+						"p = (double *)malloc(sizeof(double));"
+					],
+					"maxDisplayChoicesPerLine": 1
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1361581978393346048",
+			"title": "若有定义 `double *p;`，使`p`指向一个双精度型的动态存储单元的语句为（）。",
+			"content": "若有定义 `double *p;`，使`p`指向一个双精度型的动态存储单元的语句为（）。\n\n\n*@[](1)\n\nA. p = malloc(sizeof(double));\nB. p = (double *)malloc(sizeof(*p));\nC. p = malloc(8);\nD. p = (double *)malloc(sizeof(double));",
+			"type": "MULTIPLE_CHOICE_MORE_THAN_ONE_ANSWER",
+			"author": "颜晖",
+			"authorOrganization": {
+				"id": "2",
+				"name": "浙大城市学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "82",
+							"name": "指针与结构",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "83",
+							"name": "指针",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "REJECTED",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1594605247375466496",
+			"judgeConfig": {
+				"multipleChoiceMoreThanOneAnswerJudgeConfig": {
+					"answers": [
+						"B",
+						"D"
+					],
+					"scoringMethod": "NO_SCORING_METHOD"
+				}
+			},
+			"solution": "",
+			"description": "若有定义 `double *p;`，使`p`指向一个双精度型的动态存储单元的语句为（）。\n\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1594605940924608512",
+			"label": "",
+			"score": 2,
+			"problemPoolIndex": 2,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"multipleChoiceMoreThanOneAnswerProblemConfig": {
+					"optionsCount": 4,
+					"choices": [
+						"double \\*p;",
+						"double \\*p = a;",
+						"double \\*p = &a;",
+						"double \\*p = \\*a;"
+					],
+					"maxDisplayChoicesPerLine": 1
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1453269105388953600",
+			"title": "指针的定义",
+			"content": "指针的定义\n\n有如下变量定义：\n\n```c\ndouble a;\n```\n\n下列指针定义语句中，▁▁▁▁▁ 是正确的。",
+			"type": "MULTIPLE_CHOICE_MORE_THAN_ONE_ANSWER",
+			"author": "李祥",
+			"authorOrganization": {
+				"id": "135",
+				"name": "湖北经济学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "82",
+							"name": "指针与结构",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "83",
+							"name": "指针",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1594605247375466496",
+			"judgeConfig": {
+				"multipleChoiceMoreThanOneAnswerJudgeConfig": {
+					"answers": [
+						"A",
+						"C"
+					],
+					"scoringMethod": "NO_SCORING_METHOD"
+				}
+			},
+			"solution": "",
+			"description": "指针的定义\n\n有如下变量定义：\n\n```c\ndouble a;\n```\n\n下列指针定义语句中，▁▁▁▁▁ 是正确的。",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1594605940924608513",
+			"label": "",
+			"score": 2,
+			"problemPoolIndex": 3,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"multipleChoiceMoreThanOneAnswerProblemConfig": {
+					"optionsCount": 4,
+					"choices": [
+						"q = a;",
+						"q = &a;",
+						"q = p;",
+						"q = &p;"
+					],
+					"maxDisplayChoicesPerLine": 1
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1453269812134481920",
+			"title": "指针的使用(1)",
+			"content": "指针的使用(1)\n\n有如下变量定义：\n\n```c\ndouble a;\ndouble *p, *q;\n```\n\n假设 p 指向 a，则使 q 指向 a 的正确语句是 ▁▁▁▁▁ 。",
+			"type": "MULTIPLE_CHOICE_MORE_THAN_ONE_ANSWER",
+			"author": "李祥",
+			"authorOrganization": {
+				"id": "135",
+				"name": "湖北经济学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "82",
+							"name": "指针与结构",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "83",
+							"name": "指针",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1594605247375466496",
+			"judgeConfig": {
+				"multipleChoiceMoreThanOneAnswerJudgeConfig": {
+					"answers": [
+						"C",
+						"B"
+					],
+					"scoringMethod": "NO_SCORING_METHOD"
+				}
+			},
+			"solution": "",
+			"description": "指针的使用(1)\n\n有如下变量定义：\n\n```c\ndouble a;\ndouble *p, *q;\n```\n\n假设 p 指向 a，则使 q 指向 a 的正确语句是 ▁▁▁▁▁ 。",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1594605940924608514",
+			"label": "",
+			"score": 2,
+			"problemPoolIndex": 4,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"multipleChoiceMoreThanOneAnswerProblemConfig": {
+					"optionsCount": 4,
+					"choices": [
+						"\\*b = \\*a;",
+						"b = a;",
+						"q = p;",
+						"\\*q = \\*p;"
+					],
+					"maxDisplayChoicesPerLine": 1
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1453275719919607808",
+			"title": "指针的使用(2)",
+			"content": "指针的使用(2)\n\n有如下变量定义：\n\n```c\ndouble a = 2.5, b;\ndouble *p, *q;\n```\n\n假设 p 指向 a，q 指向 b，则使 b 的值变成 2.5 的正确语句是 ▁▁▁▁▁ 。",
+			"type": "MULTIPLE_CHOICE_MORE_THAN_ONE_ANSWER",
+			"author": "李祥",
+			"authorOrganization": {
+				"id": "135",
+				"name": "湖北经济学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "82",
+							"name": "指针与结构",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "83",
+							"name": "指针",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1594605247375466496",
+			"judgeConfig": {
+				"multipleChoiceMoreThanOneAnswerJudgeConfig": {
+					"answers": [
+						"D",
+						"B"
+					],
+					"scoringMethod": "NO_SCORING_METHOD"
+				}
+			},
+			"solution": "",
+			"description": "指针的使用(2)\n\n有如下变量定义：\n\n```c\ndouble a = 2.5, b;\ndouble *p, *q;\n```\n\n假设 p 指向 a，q 指向 b，则使 b 的值变成 2.5 的正确语句是 ▁▁▁▁▁ 。",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1594605940924608515",
+			"label": "",
+			"score": 2,
+			"problemPoolIndex": 5,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"multipleChoiceMoreThanOneAnswerProblemConfig": {
+					"optionsCount": 4,
+					"choices": [
+						"\\*&q = &a;",
+						"\\*q = \\*p;",
+						"&q = &p;",
+						"q = &\\*p;"
+					],
+					"maxDisplayChoicesPerLine": 1
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1453282841156849664",
+			"title": "指针的使用(3)",
+			"content": "指针的使用(3)\n\n有如下变量定义：\n\n```c\ndouble a;\ndouble *p, *q;\n```\n\n假设 p 指向 a，则使 q 指向 a 的正确语句是 ▁▁▁▁▁ 。",
+			"type": "MULTIPLE_CHOICE_MORE_THAN_ONE_ANSWER",
+			"author": "李祥",
+			"authorOrganization": {
+				"id": "135",
+				"name": "湖北经济学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "82",
+							"name": "指针与结构",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "83",
+							"name": "指针",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1594605247375466496",
+			"judgeConfig": {
+				"multipleChoiceMoreThanOneAnswerJudgeConfig": {
+					"answers": [
+						"A",
+						"D"
+					],
+					"scoringMethod": "NO_SCORING_METHOD"
+				}
+			},
+			"solution": "",
+			"description": "指针的使用(3)\n\n有如下变量定义：\n\n```c\ndouble a;\ndouble *p, *q;\n```\n\n假设 p 指向 a，则使 q 指向 a 的正确语句是 ▁▁▁▁▁ 。",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1594605940924608516",
+			"label": "",
+			"score": 2,
+			"problemPoolIndex": 6,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"multipleChoiceMoreThanOneAnswerProblemConfig": {
+					"optionsCount": 4,
+					"choices": [
+						"\\*q = p;",
+						"q = &a;",
+						"\\*&b = \\*p;",
+						"\\*q = \\*&a;"
+					],
+					"maxDisplayChoicesPerLine": 1
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1453316927681339392",
+			"title": "指针的使用(4)",
+			"content": "指针的使用(4)\n\n有如下变量定义：\n\n```c\ndouble a = 2.5, b;\ndouble *p, *q;\n```\n\n假设 p 指向 a，q 指向 b，则使 b 的值变成 2.5 的正确语句是 ▁▁▁▁▁ 。",
+			"type": "MULTIPLE_CHOICE_MORE_THAN_ONE_ANSWER",
+			"author": "李祥",
+			"authorOrganization": {
+				"id": "135",
+				"name": "湖北经济学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "82",
+							"name": "指针与结构",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "83",
+							"name": "指针",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1594605247375466496",
+			"judgeConfig": {
+				"multipleChoiceMoreThanOneAnswerJudgeConfig": {
+					"answers": [
+						"C",
+						"D"
+					],
+					"scoringMethod": "NO_SCORING_METHOD"
+				}
+			},
+			"solution": "",
+			"description": "指针的使用(4)\n\n有如下变量定义：\n\n```c\ndouble a = 2.5, b;\ndouble *p, *q;\n```\n\n假设 p 指向 a，q 指向 b，则使 b 的值变成 2.5 的正确语句是 ▁▁▁▁▁ 。",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1594605940924608517",
+			"label": "",
+			"score": 2,
+			"problemPoolIndex": 7,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"multipleChoiceMoreThanOneAnswerProblemConfig": {
+					"optionsCount": 4,
+					"choices": [
+						"p = &a;",
+						"q = &b;",
+						"p = &b;",
+						"q = &a;"
+					],
+					"maxDisplayChoicesPerLine": 1
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1453367886584418304",
+			"title": "指针的使用",
+			"content": "指针的使用\n\n若有以下变量定义\n\n```c\nchar a, *p;\ndouble b, *q;\n```\n\n则下列语句中， ▁▁▁▁▁ 是合理合法的。",
+			"type": "MULTIPLE_CHOICE_MORE_THAN_ONE_ANSWER",
+			"author": "李祥",
+			"authorOrganization": {
+				"id": "135",
+				"name": "湖北经济学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "82",
+							"name": "指针与结构",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "83",
+							"name": "指针",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1594605247375466496",
+			"judgeConfig": {
+				"multipleChoiceMoreThanOneAnswerJudgeConfig": {
+					"answers": [
+						"A",
+						"B"
+					],
+					"scoringMethod": "NO_SCORING_METHOD"
+				}
+			},
+			"solution": "",
+			"description": "指针的使用\n\n若有以下变量定义\n\n```c\nchar a, *p;\ndouble b, *q;\n```\n\n则下列语句中， ▁▁▁▁▁ 是合理合法的。",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},{
+			"0": {
+				"id": "1594606249013014529",
+				"label": "",
+				"score": 4,
+				"problemPoolIndex": 1,
+				"problemPoolCompositionCount": 1,
+				"problemConfig": {
+					"fillInTheBlankProblemConfig": {
+						"scores": [
+							2,
+							2
+						],
+						"blankLength": 6,
+						"blanks": [
+							{
+								"index": 97,
+								"multipleLine": false,
+								"length": 3,
+								"choices": {},
+								"maxDisplayChoicesPerLine": 1
+							},
+							{
+								"index": 141,
+								"multipleLine": false,
+								"length": 6,
+								"choices": {},
+								"maxDisplayChoicesPerLine": 1
+							}
+						],
+						"choiceBlank": false
+					},
+					"solutionVisible": false,
+					"answerVisible": false
+				},
+				"deadline": "1970-01-01T00:00:00Z",
+				"problemId": "1592520419796709376",
+				"title": "数组输入输出-指针法",
+				"content": "请用指针法完成数组的输入输出操作\n```\nvoid fun(int *a,int n)\n{\n    int i;\n    for(i=0;i<n;i++)\n        scanf(\"%d\",);\n    for(i=0;i<n;i++)\n        printf(\"%d\",);\n}\n\nint main()\n{\n   int x[5]={1,2,3,4,5};\n   fun(x,5);\n\t return 0;\n```\n\n",
+				"type": "FILL_IN_THE_BLANK",
+				"author": "唐艳琴",
+				"authorOrganization": {
+					"id": "177",
+					"name": "中国人民解放军陆军工程大学",
+					"comment": "",
+					"code": "",
+					"country": "NO_COUNTRY",
+					"membersCount": 0,
+					"type": "UNKNOWN",
+					"balance": 0,
+					"subdomain": "",
+					"logo": ""
+				},
+				"difficulty": 3,
+				"knowledgePointPaths": [
+					{
+						"knowledgePoints": [
+							{
+								"id": "1",
+								"name": "数据结构与算法",
+								"isLeaf": false,
+								"enName": "Data Structures and Algorithms"
+							},
+							{
+								"id": "7",
+								"name": "线性结构",
+								"isLeaf": false,
+								"enName": "Linear Lists"
+							},
+							{
+								"id": "8",
+								"name": "顺序表",
+								"isLeaf": true,
+								"enName": "Sequential Lists"
+							}
+						]
+					},
+					{
+						"knowledgePoints": [
+							{
+								"id": "63",
+								"name": "C程序设计",
+								"isLeaf": false,
+								"enName": "C Programming"
+							},
+							{
+								"id": "78",
+								"name": "数组",
+								"isLeaf": false,
+								"enName": ""
+							},
+							{
+								"id": "79",
+								"name": "一维数组",
+								"isLeaf": true,
+								"enName": ""
+							}
+						]
+					},
+					{
+						"knowledgePoints": [
+							{
+								"id": "63",
+								"name": "C程序设计",
+								"isLeaf": false,
+								"enName": "C Programming"
+							},
+							{
+								"id": "82",
+								"name": "指针与结构",
+								"isLeaf": false,
+								"enName": ""
+							},
+							{
+								"id": "83",
+								"name": "指针",
+								"isLeaf": true,
+								"enName": ""
+							}
+						]
+					}
+				],
+				"compiler": "NO_COMPILER",
+				"acceptCount": 0,
+				"submitCount": 0,
+				"problemStatus": "PENDING_REVIEW",
+				"problemSelfCheckStatus": "NONE_SELF_CHECK",
+				"problemSetId": "1594605247375466496",
+				"judgeConfig": {
+					"fillInTheBlankJudgeConfig": {
+						"answers": [
+							{
+								"availableAnswers": [
+									"a+i"
+								],
+								"groupId": 0
+							},
+							{
+								"availableAnswers": [
+									"*(a+i)"
+								],
+								"groupId": 0
+							}
+						]
+					}
+				},
+				"solution": "",
+				"description": "请用指针法完成数组的输入输出操作\n```\nvoid fun(int *a,int n)\n{\n    int i;\n    for(i=0;i<n;i++)\n        scanf(\"%d\",);\n    for(i=0;i<n;i++)\n        printf(\"%d\",);\n}\n\nint main()\n{\n   int x[5]={1,2,3,4,5};\n   fun(x,5);\n\t return 0;\n```\n\n",
+				"creatorId": "916259821889974272",
+				"indexInProblemPool": 1,
+				"diffProblemConfigCase": false
+			}
+		},{
+			"0": {
+				"id": "1594892310117146624",
+				"label": "",
+				"score": 7,
+				"problemPoolIndex": 1,
+				"problemPoolCompositionCount": 1,
+				"problemConfig": {
+					"fillInTheBlankForProgrammingProblemConfig": {
+						"timeLimit": 400,
+						"memoryLimit": 65536,
+						"blankLength": 10,
+						"scores": [
+							1,
+							1,
+							1,
+							1,
+							1,
+							1,
+							1
+						],
+						"cases": {
+							"1": {
+								"hint": "",
+								"showHint": false,
+								"score": 0,
+								"updateAt": "2021-02-27T14:12:19Z",
+								"isPublic": false
+							}
+						},
+						"blanks": [
+							{
+								"index": 145,
+								"multipleLine": false,
+								"length": 10,
+								"choices": {},
+								"maxDisplayChoicesPerLine": 0
+							},
+							{
+								"index": 211,
+								"multipleLine": false,
+								"length": 3,
+								"choices": {},
+								"maxDisplayChoicesPerLine": 0
+							},
+							{
+								"index": 213,
+								"multipleLine": false,
+								"length": 6,
+								"choices": {},
+								"maxDisplayChoicesPerLine": 0
+							},
+							{
+								"index": 243,
+								"multipleLine": false,
+								"length": 2,
+								"choices": {},
+								"maxDisplayChoicesPerLine": 0
+							},
+							{
+								"index": 383,
+								"multipleLine": false,
+								"length": 5,
+								"choices": {},
+								"maxDisplayChoicesPerLine": 0
+							},
+							{
+								"index": 387,
+								"multipleLine": false,
+								"length": 6,
+								"choices": {},
+								"maxDisplayChoicesPerLine": 0
+							},
+							{
+								"index": 392,
+								"multipleLine": false,
+								"length": 5,
+								"choices": {},
+								"maxDisplayChoicesPerLine": 0
+							}
+						]
+					},
+					"solutionVisible": false,
+					"answerVisible": false
+				},
+				"deadline": "1970-01-01T00:00:00Z",
+				"problemId": "1365663382014099456",
+				"title": "用指针将数组中的元素逆序存放",
+				"content": "本题目要求编写一个函数，用指针将数组中的元素逆序存放。\n\n```c++\n#include <stdio.h>\nvoid Rev(int  *x, int n);\n\nint main()\n{  \t\n\tint i,a[10]={3,7,9,11,0,6,7,5,4,2};\n\tint *p;\n    //调用逆序函数\n    printf(\"The array has been reverted:\\n\");\n    for(; ; p++)\n       \t\tprintf(\"%d,\", );\n    return 0;\n} \nvoid Rev(int  *x, int n)\n{   \n\t  int t,*p,*i,*j,m=(n-1)/2;\n    i=x;  j=x+n-1;  p=x+m;\n    for(;i<=p;i++,j--)\n    {  \n\t\t\t\n\t\t\t \n\t\t\t\n\t\t}\n}\n\n\n\n```\n",
+				"type": "FILL_IN_THE_BLANK_FOR_PROGRAMMING",
+				"author": "余贞侠",
+				"authorOrganization": {
+					"id": "13",
+					"name": "成都信息工程大学",
+					"comment": "",
+					"code": "",
+					"country": "NO_COUNTRY",
+					"membersCount": 0,
+					"type": "UNKNOWN",
+					"balance": 0,
+					"subdomain": "",
+					"logo": ""
+				},
+				"difficulty": 1,
+				"knowledgePointPaths": [
+					{
+						"knowledgePoints": [
+							{
+								"id": "63",
+								"name": "C程序设计",
+								"isLeaf": false,
+								"enName": "C Programming"
+							},
+							{
+								"id": "82",
+								"name": "指针与结构",
+								"isLeaf": false,
+								"enName": ""
+							},
+							{
+								"id": "83",
+								"name": "指针",
+								"isLeaf": true,
+								"enName": ""
+							}
+						]
+					}
+				],
+				"compiler": "GCC",
+				"acceptCount": 0,
+				"submitCount": 0,
+				"problemStatus": "PENDING_REVIEW",
+				"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+				"problemSetId": "1594605247375466496",
+				"judgeConfig": {
+					"fillInTheBlankForProgrammingJudgeConfig": {
+						"testDataId": "603a5137db1d7600077ce30c",
+						"answers": [
+							" Rev(a,10);",
+							"p=a",
+							"p<a+10",
+							"*p",
+							"t=*i; ",
+							"*i=*j;",
+							"*j=t;"
+						],
+						"code": "#include <stdio.h>\n\nvoid Rev(int  *x, int n);\n\nint main()\n{  \t\n\tint i,a[10]={3,7,9,11,0,6,7,5,4,2};\n\tint *p;\n\t//下面调用逆序函数\n   @@\n    printf(\"The array has been reverted:\\n\");\n    for(@@; @@; p++)\n       \t\tprintf(\"%d,\",@@);\n    return 0;\n} \nvoid Rev(int  *x, int n)\n{   \n    int t,*p,*i,*j,m=(n-1)/2;\n    i=x;  j=x+n-1;  p=x+m;\n    for(;i<=p;i++,j--)\n    {  \n\t\t\t@@\n\t\t\t@@ \n\t\t\t@@\n\t\t}\n}\n",
+						"testDataVersion": 1
+					}
+				},
+				"solution": "",
+				"description": "本题目要求编写一个函数，用指针将数组中的元素逆序存放。\n\n```c++\n#include <stdio.h>\nvoid Rev(int  *x, int n);\n\nint main()\n{  \t\n\tint i,a[10]={3,7,9,11,0,6,7,5,4,2};\n\tint *p;\n    //调用逆序函数\n    printf(\"The array has been reverted:\\n\");\n    for(; ; p++)\n       \t\tprintf(\"%d,\", );\n    return 0;\n} \nvoid Rev(int  *x, int n)\n{   \n\t  int t,*p,*i,*j,m=(n-1)/2;\n    i=x;  j=x+n-1;  p=x+m;\n    for(;i<=p;i++,j--)\n    {  \n\t\t\t\n\t\t\t \n\t\t\t\n\t\t}\n}\n\n\n\n```\n",
+				"creatorId": "916259821889974272",
+				"indexInProblemPool": 1,
+				"diffProblemConfigCase": false
+			}
+		},
+		{
+			"1": {
+				"id": "1594892310121340928",
+				"label": "",
+				"score": 4,
+				"problemPoolIndex": 2,
+				"problemPoolCompositionCount": 1,
+				"problemConfig": {
+					"fillInTheBlankForProgrammingProblemConfig": {
+						"timeLimit": 400,
+						"memoryLimit": 65536,
+						"blankLength": 22,
+						"scores": [
+							1,
+							1,
+							1,
+							1
+						],
+						"cases": {
+							"ceshi1": {
+								"hint": "",
+								"showHint": false,
+								"score": 0,
+								"updateAt": "2021-12-09T11:29:53Z",
+								"isPublic": false
+							}
+						},
+						"blanks": [
+							{
+								"index": 171,
+								"multipleLine": false,
+								"length": 12,
+								"choices": {},
+								"maxDisplayChoicesPerLine": 0
+							},
+							{
+								"index": 216,
+								"multipleLine": false,
+								"length": 4,
+								"choices": {},
+								"maxDisplayChoicesPerLine": 0
+							},
+							{
+								"index": 393,
+								"multipleLine": false,
+								"length": 25,
+								"choices": {},
+								"maxDisplayChoicesPerLine": 0
+							},
+							{
+								"index": 433,
+								"multipleLine": false,
+								"length": 16,
+								"choices": {},
+								"maxDisplayChoicesPerLine": 0
+							}
+						]
+					},
+					"solutionVisible": false,
+					"answerVisible": false
+				},
+				"deadline": "1970-01-01T00:00:00Z",
+				"problemId": "1468904835624538112",
+				"title": "字符串排序",
+				"content": "输入十个字符串，按非降序排列，并输出排序后的字符串。\n\n```c++\n#include <stdio.h>\n#include <string.h>\nint main()\n{\n\tvoid sort(char *[]);\n \tint i;\n \tchar *p[10],str[10][20];\n \tfor (i=0;i<10;i++)\n   \t\t       \n \tfor (i=0;i<10;i++)\n   \t\tscanf(\"%s\",);\n \tsort(p);\n \tfor (i=0;i<10;i++)\n   \tprintf(\"%s\\n\",p[i]);\n \treturn 0;\n }\n\nvoid sort(char *s[])\n{\n\tint i,j;\n \tchar *temp;\n \tfor (i=0;i<9;i++)\n  \t\tfor (j=0;j<9-i;j++)\n    \t\tif ()\n       \t\t{\n\t\t\t\ttemp=*(s+j);\n        \t\t\n        \t\t*(s+j+1)=temp;\n       \t\t}\n}\n```\n",
+				"type": "FILL_IN_THE_BLANK_FOR_PROGRAMMING",
+				"author": "郝星星",
+				"authorOrganization": {
+					"id": "84",
+					"name": "西北大学",
+					"comment": "",
+					"code": "",
+					"country": "NO_COUNTRY",
+					"membersCount": 0,
+					"type": "UNKNOWN",
+					"balance": 0,
+					"subdomain": "",
+					"logo": ""
+				},
+				"difficulty": 1,
+				"knowledgePointPaths": [
+					{
+						"knowledgePoints": [
+							{
+								"id": "63",
+								"name": "C程序设计",
+								"isLeaf": false,
+								"enName": "C Programming"
+							},
+							{
+								"id": "82",
+								"name": "指针与结构",
+								"isLeaf": false,
+								"enName": ""
+							},
+							{
+								"id": "83",
+								"name": "指针",
+								"isLeaf": true,
+								"enName": ""
+							}
+						]
+					}
+				],
+				"compiler": "GCC",
+				"acceptCount": 0,
+				"submitCount": 0,
+				"problemStatus": "PENDING_REVIEW",
+				"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+				"problemSetId": "1594605247375466496",
+				"judgeConfig": {
+					"fillInTheBlankForProgrammingJudgeConfig": {
+						"testDataId": "61b1e8b1d2a0db12d7a63fdc",
+						"answers": [
+							"p[i]=str[i];",
+							"p[i]",
+							"strcmp(*(s+j),*(s+j+1))>0",
+							"*(s+j)=*(s+j+1);"
+						],
+						"code": "#include <stdio.h>\n#include <string.h>\nint main()\n{\n\tvoid sort(char *[]);\n \tint i;\n \tchar *p[10],str[10][20];\n \tfor (i=0;i<10;i++)\n   \t\t@@       \n \tfor (i=0;i<10;i++)\n   \t\tscanf(\"%s\",@@);\n \tsort(p);\n \tfor (i=0;i<10;i++)\n   \tprintf(\"%s\\n\",p[i]);\n \treturn 0;\n }\n\nvoid sort(char *s[])\n{\n\tint i,j;\n \tchar *temp;\n \tfor (i=0;i<9;i++)\n  \t\tfor (j=0;j<9-i;j++)\n    \t\tif (@@)\n       \t\t{\n\t\t\t\ttemp=*(s+j);\n        \t\t@@\n        \t\t*(s+j+1)=temp;\n       \t\t}\n}",
+						"testDataVersion": 0
+					}
+				},
+				"solution": "",
+				"description": "输入十个字符串，按非降序排列，并输出排序后的字符串。\n\n```c++\n#include <stdio.h>\n#include <string.h>\nint main()\n{\n\tvoid sort(char *[]);\n \tint i;\n \tchar *p[10],str[10][20];\n \tfor (i=0;i<10;i++)\n   \t\t       \n \tfor (i=0;i<10;i++)\n   \t\tscanf(\"%s\",);\n \tsort(p);\n \tfor (i=0;i<10;i++)\n   \tprintf(\"%s\\n\",p[i]);\n \treturn 0;\n }\n\nvoid sort(char *s[])\n{\n\tint i,j;\n \tchar *temp;\n \tfor (i=0;i<9;i++)\n  \t\tfor (j=0;j<9-i;j++)\n    \t\tif ()\n       \t\t{\n\t\t\t\ttemp=*(s+j);\n        \t\t\n        \t\t*(s+j+1)=temp;\n       \t\t}\n}\n```\n",
+				"creatorId": "916259821889974272",
+				"indexInProblemPool": 1,
+				"diffProblemConfigCase": false
+			}
+		}
+	]

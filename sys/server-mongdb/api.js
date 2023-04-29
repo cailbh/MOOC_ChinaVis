@@ -55,6 +55,17 @@ router.get('/api/concept/allConcept', (req, res) => {
         }
     });
 });
+// 获取概念树接口
+router.get('/api/concept/conceptTree', (req, res) => {
+    // 通过模型去查找数据库
+    models.ConceptTree.find((err, data) => {
+        if (err) {
+            res.send(err);
+        } else {
+            res.send(data);
+        }
+    });
+});
 // 获取学生接口
 router.get('/api/student/allStudent', (req, res) => {
     // 通过模型去查找数据库

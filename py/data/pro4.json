@@ -1,0 +1,2667 @@
+ [
+		{
+			"id": "1576062560193093632",
+			"label": "",
+			"score": 15,
+			"problemPoolIndex": 1,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "sample 1，结尾不到达upper",
+							"showHint": false,
+							"score": 7,
+							"updateAt": "2016-10-07T13:28:37Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "sample 2，不合法数据",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2016-10-07T13:28:37Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "最大范围",
+							"showHint": false,
+							"score": 3,
+							"updateAt": "2016-10-07T13:28:37Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "最大边界点",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2016-10-07T13:28:37Z",
+							"isPublic": false
+						},
+						"4": {
+							"hint": "最小边界点",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2016-10-07T13:28:37Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "9",
+			"title": "输出华氏-摄氏温度转换表",
+			"content": "输入2个正整数`lower`和`upper`（`lower`$$\\le$$`upper`$$\\le$$100），请输出一张取值范围为[`lower`，`upper`]、且每次增加2华氏度的华氏-摄氏温度转换表。\n\n温度转换的计算公式：$$C = 5 \\times (F - 32) / 9$$，其中：$$C$$表示摄氏温度，$$F$$表示华氏温度。\n\n### 输入格式:\n\n在一行中输入2个整数，分别表示`lower`和`upper`的值，中间用空格分开。\n\n### 输出格式:\n\n第一行输出：\"fahr celsius\"\n\n接着每行输出一个华氏温度fahr（整型）与一个摄氏温度celsius（占据6个字符宽度，靠右对齐，保留1位小数）。\n\n若输入的范围不合法，则输出\"Invalid.\"。 \n\n### 输入样例1:\n```in\n32 35\n```\n\n### 输出样例1:\n```out\nfahr celsius\n32   0.0\n34   1.1\n```\n\n### 输入样例2:\n```\n40 30\n```\n\n### 输出样例2:\n```\nInvalid.\n```",
+			"type": "PROGRAMMING",
+			"author": "C课程组",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "循环控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "71",
+							"name": "for",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "67",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "68",
+							"name": "if-else",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 39,
+			"submitCount": 160,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1576062560117596160",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5993fa4493d1de004a0fcb93",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "输入2个正整数`lower`和`upper`（`lower`$$\\le$$`upper`$$\\le$$100），请输出一张取值范围为[`lower`，`upper`]、且每次增加2华氏度的华氏-摄氏温度转换表。\n\n温度转换的计算公式：$$C = 5 \\times (F - 32) / 9$$，其中：$$C$$表示摄氏温度，$$F$$表示华氏温度。\n\n### 输入格式:\n\n在一行中输入2个整数，分别表示`lower`和`upper`的值，中间用空格分开。\n\n### 输出格式:\n\n第一行输出：\"fahr celsius\"\n\n接着每行输出一个华氏温度fahr（整型）与一个摄氏温度celsius（占据6个字符宽度，靠右对齐，保留1位小数）。\n\n若输入的范围不合法，则输出\"Invalid.\"。 \n\n### 输入样例1:\n```in\n32 35\n```\n\n### 输出样例1:\n```out\nfahr celsius\n32   0.0\n34   1.1\n```\n\n### 输入样例2:\n```\n40 30\n```\n\n### 输出样例2:\n```\nInvalid.\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1576062560193093633",
+			"label": "",
+			"score": 15,
+			"problemPoolIndex": 2,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "sample 1 小于50",
+							"showHint": false,
+							"score": 5,
+							"updateAt": "2015-07-05T19:13:31Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "sample 2 大于50",
+							"showHint": false,
+							"score": 5,
+							"updateAt": "2015-07-05T19:13:31Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "等于50",
+							"showHint": false,
+							"score": 3,
+							"updateAt": "2015-07-05T19:13:31Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "小于0",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2015-07-05T19:13:31Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "72",
+			"title": "阶梯电价",
+			"content": "为了提倡居民节约用电，某省电力公司执行“阶梯电价”，安装一户一表的居民用户电价分为两个“阶梯”：月用电量50千瓦时（含50千瓦时）以内的，电价为0.53元/千瓦时；超过50千瓦时的，超出部分的用电量，电价上调0.05元/千瓦时。请编写程序计算电费。\n\n### 输入格式:\n\n输入在一行中给出某用户的月用电量（单位：千瓦时）。\n\n### 输出格式:\n\n在一行中输出该用户应支付的电费（元），结果保留两位小数，格式如：“cost = 应付电费值”；若用电量小于0，则输出\"Invalid Value!\"。\n\n### 输入样例1:\n```in\n10\n```\n\n### 输出样例1:\n```out\ncost = 5.30\n```\n\n### 输入样例2:\n```\n100\n```\n\n### 输出样例2:\n```\ncost = 55.50\n```",
+			"type": "PROGRAMMING",
+			"author": "陈建海",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "67",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "68",
+							"name": "if-else",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 39,
+			"submitCount": 72,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1576062560117596160",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5993fa4493d1de004a0fcb9a",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "为了提倡居民节约用电，某省电力公司执行“阶梯电价”，安装一户一表的居民用户电价分为两个“阶梯”：月用电量50千瓦时（含50千瓦时）以内的，电价为0.53元/千瓦时；超过50千瓦时的，超出部分的用电量，电价上调0.05元/千瓦时。请编写程序计算电费。\n\n### 输入格式:\n\n输入在一行中给出某用户的月用电量（单位：千瓦时）。\n\n### 输出格式:\n\n在一行中输出该用户应支付的电费（元），结果保留两位小数，格式如：“cost = 应付电费值”；若用电量小于0，则输出\"Invalid Value!\"。\n\n### 输入样例1:\n```in\n10\n```\n\n### 输出样例1:\n```out\ncost = 5.30\n```\n\n### 输入样例2:\n```\n100\n```\n\n### 输出样例2:\n```\ncost = 55.50\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1576062560193093634",
+			"label": "",
+			"score": 10,
+			"problemPoolIndex": 3,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "sample 1 >0",
+							"showHint": false,
+							"score": 4,
+							"updateAt": "2015-07-08T11:49:11Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "sample 2 =0",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2015-07-08T11:49:11Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "sample 3 <0",
+							"showHint": false,
+							"score": 4,
+							"updateAt": "2015-07-08T11:49:11Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "77",
+			"title": "计算符号函数的值",
+			"content": "对于任一整数$$n$$，符号函数$$sign(n)$$的定义如下：\n\n![](~/3)\n\n请编写程序计算该函数对任一输入整数的值。\n\n### 输入格式:\n\n输入在一行中给出整数n。\n\n### 输出格式:\n\n在一行中按照格式“sign(n) = 函数值”输出该整数n对应的函数值。\n\n### 输入样例1:\n```in\n10\n```\n\n### 输出样例1:\n```out\nsign(10) = 1\n```\n\n### 输入样例2:\n```\n0\n```\n\n### 输出样例2:\n```\nsign(0) = 0\n```\n\n### 输入样例3:\n```\n-98\n```\n\n### 输出样例3:\n```\nsign(-98) = -1\n```",
+			"type": "PROGRAMMING",
+			"author": "C课程组",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "67",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "68",
+							"name": "if-else",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 41,
+			"submitCount": 102,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1576062560117596160",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5993fa4493d1de004a0fcb9f",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "对于任一整数$$n$$，符号函数$$sign(n)$$的定义如下：\n\n![](~/3)\n\n请编写程序计算该函数对任一输入整数的值。\n\n### 输入格式:\n\n输入在一行中给出整数n。\n\n### 输出格式:\n\n在一行中按照格式“sign(n) = 函数值”输出该整数n对应的函数值。\n\n### 输入样例1:\n```in\n10\n```\n\n### 输出样例1:\n```out\nsign(10) = 1\n```\n\n### 输入样例2:\n```\n0\n```\n\n### 输出样例2:\n```\nsign(0) = 0\n```\n\n### 输入样例3:\n```\n-98\n```\n\n### 输出样例3:\n```\nsign(-98) = -1\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1576062560193093635",
+			"label": "",
+			"score": 15,
+			"problemPoolIndex": 4,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "sample 1 起步价，不等待",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2015-07-08T15:12:09Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "sample 2 超过、10公里内，不等待，舍",
+							"showHint": false,
+							"score": 5,
+							"updateAt": "2015-07-08T15:12:09Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "sample 3 超过10公里，等待，入",
+							"showHint": false,
+							"score": 5,
+							"updateAt": "2015-07-08T15:12:09Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "3公里、5分钟",
+							"showHint": false,
+							"score": 3,
+							"updateAt": "2015-07-08T15:12:09Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "85",
+			"title": "出租车计价",
+			"content": "本题要求根据某城市普通出租车收费标准编写程序进行车费计算。具体标准如下：\n\n- 起步里程为3公里，起步费10元；\n- 超起步里程后10公里内，每公里2元；\n- 超过10公里以上的部分加收50%的回空补贴费，即每公里3元；\n- 营运过程中，因路阻及乘客要求临时停车的，按每5分钟2元计收（不足5分钟则不收费）。 \n\n### 输入格式:\n\n输入在一行中给出输入行驶里程（单位为公里，精确到小数点后1位）与等待时间（整数，单位为分钟），其间以空格分隔。\n\n### 输出格式:\n\n在一行中输出乘客应支付的车费（单位为元），结果四舍五入，保留到元。\n\n### 输入样例1:\n```in\n2.6 2\n```\n\n### 输出样例1:\n```out\n10\n```\n\n### 输入样例2:\n```\n5.1 4\n```\n\n### 输出样例2:\n```\n14\n```\n\n### 输入样例3:\n```\n12.5 9\n```\n\n### 输出样例3:\n```\n34\n```",
+			"type": "PROGRAMMING",
+			"author": "沈睿",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "67",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "68",
+							"name": "if-else",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 42,
+			"submitCount": 237,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1576062560117596160",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5993fa4493d1de004a0fcba7",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "本题要求根据某城市普通出租车收费标准编写程序进行车费计算。具体标准如下：\n\n- 起步里程为3公里，起步费10元；\n- 超起步里程后10公里内，每公里2元；\n- 超过10公里以上的部分加收50%的回空补贴费，即每公里3元；\n- 营运过程中，因路阻及乘客要求临时停车的，按每5分钟2元计收（不足5分钟则不收费）。 \n\n### 输入格式:\n\n输入在一行中给出输入行驶里程（单位为公里，精确到小数点后1位）与等待时间（整数，单位为分钟），其间以空格分隔。\n\n### 输出格式:\n\n在一行中输出乘客应支付的车费（单位为元），结果四舍五入，保留到元。\n\n### 输入样例1:\n```in\n2.6 2\n```\n\n### 输出样例1:\n```out\n10\n```\n\n### 输入样例2:\n```\n5.1 4\n```\n\n### 输出样例2:\n```\n14\n```\n\n### 输入样例3:\n```\n12.5 9\n```\n\n### 输出样例3:\n```\n34\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1576062560193093636",
+			"label": "",
+			"score": 20,
+			"problemPoolIndex": 5,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "sample 1 和要约简，有负数，有整数部分",
+							"showHint": false,
+							"score": 4,
+							"updateAt": "2017-01-22T21:10:51Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "sample 2 输出整数",
+							"showHint": false,
+							"score": 4,
+							"updateAt": "2017-01-22T21:10:51Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "sample 3 只有分数部分",
+							"showHint": false,
+							"score": 4,
+							"updateAt": "2017-01-22T21:10:51Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "若不随时化简，则会溢出；输出为负数",
+							"showHint": false,
+							"score": 3,
+							"updateAt": "2017-01-22T21:10:51Z",
+							"isPublic": false
+						},
+						"4": {
+							"hint": "输出负整数",
+							"showHint": false,
+							"score": 3,
+							"updateAt": "2017-01-22T21:10:51Z",
+							"isPublic": false
+						},
+						"5": {
+							"hint": "最大N，结果为0",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2017-01-22T21:10:51Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "5\n2/5 4/15 1/30 -2/60 8/3\n",
+							"output": "3 1/3\n"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "4974",
+			"title": "N个数求和",
+			"content": "本题的要求很简单，就是求`N`个数字的和。麻烦的是，这些数字是以有理数`分子/分母`的形式给出的，你输出的和也必须是有理数的形式。\n\n### 输入格式：\n\n输入第一行给出一个正整数`N`（$$\\le$$100）。随后一行按格式`a1/b1 a2/b2 ...`给出`N`个有理数。题目保证所有分子和分母都在长整型范围内。另外，负数的符号一定出现在分子前面。\n\n### 输出格式：\n\n输出上述数字和的最简形式 —— 即将结果写成`整数部分 分数部分`，其中分数部分写成`分子/分母`，要求分子小于分母，且它们没有公因子。如果结果的整数部分为0，则只输出分数部分。\n\n### 输入样例1：\n```in\n5\n2/5 4/15 1/30 -2/60 8/3\n```\n\n### 输出样例1：\n```out\n3 1/3\n```\n\n### 输入样例2：\n```\n2\n4/3 2/3\n```\n\n### 输出样例2：\n```\n2\n```\n\n### 输入样例3：\n```\n3\n1/3 -1/6 1/8\n```\n\n### 输出样例3：\n```\n7/24\n```",
+			"type": "PROGRAMMING",
+			"author": "陈越",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 2,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "67",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "68",
+							"name": "if-else",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "循环控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "72",
+							"name": "while和do-while",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 39,
+			"submitCount": 372,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1576062560117596160",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5993fa5793d1de004a0fd1ae",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "本题的要求很简单，就是求`N`个数字的和。麻烦的是，这些数字是以有理数`分子/分母`的形式给出的，你输出的和也必须是有理数的形式。\n\n### 输入格式：\n\n输入第一行给出一个正整数`N`（$$\\le$$100）。随后一行按格式`a1/b1 a2/b2 ...`给出`N`个有理数。题目保证所有分子和分母都在长整型范围内。另外，负数的符号一定出现在分子前面。\n\n### 输出格式：\n\n输出上述数字和的最简形式 —— 即将结果写成`整数部分 分数部分`，其中分数部分写成`分子/分母`，要求分子小于分母，且它们没有公因子。如果结果的整数部分为0，则只输出分数部分。\n\n### 输入样例1：\n```in\n5\n2/5 4/15 1/30 -2/60 8/3\n```\n\n### 输出样例1：\n```out\n3 1/3\n```\n\n### 输入样例2：\n```\n2\n4/3 2/3\n```\n\n### 输出样例2：\n```\n2\n```\n\n### 输入样例3：\n```\n3\n1/3 -1/6 1/8\n```\n\n### 输出样例3：\n```\n7/24\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1576062560193093637",
+			"label": "",
+			"score": 15,
+			"problemPoolIndex": 6,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "sample1等价，有不在范围内的字符, 有完全算错, 有没有最后取映射",
+							"showHint": false,
+							"score": 8,
+							"updateAt": "2019-06-26T16:35:07Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "sample2等价",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2019-06-26T16:35:07Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "N=100, 包含所有11种映射",
+							"showHint": false,
+							"score": 4,
+							"updateAt": "2019-06-26T16:35:07Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "最小N",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2019-06-26T16:35:07Z",
+							"isPublic": false
+						},
+						"4": {
+							"hint": "验证能通过，但有非数字字符",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2019-06-26T16:35:07Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "4\n320124198808240056\n12010X198901011234\n110108196711301866\n37070419881216001X\n",
+							"output": "12010X198901011234\n110108196711301866\n37070419881216001X\n"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "5015",
+			"title": "查验身份证",
+			"content": "一个合法的身份证号码由17位地区、日期编号和顺序编号加1位校验码组成。校验码的计算规则如下：\n\n首先对前17位数字加权求和，权重分配为：{7，9，10，5，8，4，2，1，6，3，7，9，10，5，8，4，2}；然后将计算的和对11取模得到值`Z`；最后按照以下关系对应`Z`值与校验码`M`的值：\n```\nZ：0 1 2 3 4 5 6 7 8 9 10\nM：1 0 X 9 8 7 6 5 4 3 2\n```\n现在给定一些身份证号码，请你验证校验码的有效性，并输出有问题的号码。\n\n### 输入格式：\n\n输入第一行给出正整数$$N$$（$$\\le 100$$）是输入的身份证号码的个数。随后$$N$$行，每行给出1个18位身份证号码。\n\n### 输出格式：\n\n按照输入的顺序每行输出1个有问题的身份证号码。这里并不检验前17位是否合理，只检查前17位是否全为数字且最后1位校验码计算准确。如果所有号码都正常，则输出`All passed`。\n\n### 输入样例1：\n```in\n4\n320124198808240056\n12010X198901011234\n110108196711301866\n37070419881216001X\n```\n\n### 输出样例1：\n```out\n12010X198901011234\n110108196711301866\n37070419881216001X\n```\n\n### 输入样例2：\n```\n2\n320124198808240056\n110108196711301862\n```\n\n### 输出样例2：\n```\nAll passed\n```\n\n**鸣谢阜阳师范学院范建中老师补充数据**\n\n**鸣谢浙江工业大学之江学院石洗凡老师纠正数据**\n",
+			"type": "PROGRAMMING",
+			"author": "陈越",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "67",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "68",
+							"name": "if-else",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "循环控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "71",
+							"name": "for",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "78",
+							"name": "数组",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "80",
+							"name": "字符串",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 43,
+			"submitCount": 234,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1576062560117596160",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5d139ebbc65a1e0007fdd996",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "一个合法的身份证号码由17位地区、日期编号和顺序编号加1位校验码组成。校验码的计算规则如下：\n\n首先对前17位数字加权求和，权重分配为：{7，9，10，5，8，4，2，1，6，3，7，9，10，5，8，4，2}；然后将计算的和对11取模得到值`Z`；最后按照以下关系对应`Z`值与校验码`M`的值：\n```\nZ：0 1 2 3 4 5 6 7 8 9 10\nM：1 0 X 9 8 7 6 5 4 3 2\n```\n现在给定一些身份证号码，请你验证校验码的有效性，并输出有问题的号码。\n\n### 输入格式：\n\n输入第一行给出正整数$$N$$（$$\\le 100$$）是输入的身份证号码的个数。随后$$N$$行，每行给出1个18位身份证号码。\n\n### 输出格式：\n\n按照输入的顺序每行输出1个有问题的身份证号码。这里并不检验前17位是否合理，只检查前17位是否全为数字且最后1位校验码计算准确。如果所有号码都正常，则输出`All passed`。\n\n### 输入样例1：\n```in\n4\n320124198808240056\n12010X198901011234\n110108196711301866\n37070419881216001X\n```\n\n### 输出样例1：\n```out\n12010X198901011234\n110108196711301866\n37070419881216001X\n```\n\n### 输入样例2：\n```\n2\n320124198808240056\n110108196711301862\n```\n\n### 输出样例2：\n```\nAll passed\n```\n\n**鸣谢阜阳师范学院范建中老师补充数据**\n\n**鸣谢浙江工业大学之江学院石洗凡老师纠正数据**\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1576062560193093638",
+			"label": "",
+			"score": 15,
+			"problemPoolIndex": 7,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "sample1等价",
+							"showHint": false,
+							"score": 5,
+							"updateAt": "2017-03-29T18:43:42Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "sample2等价",
+							"showHint": false,
+							"score": 3,
+							"updateAt": "2017-03-29T18:43:42Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "sample3等价",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2017-03-29T18:43:42Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "没有人点赞",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2017-03-29T18:43:42Z",
+							"isPublic": false
+						},
+						"4": {
+							"hint": "最长字符串",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2017-03-29T18:43:42Z",
+							"isPublic": false
+						},
+						"5": {
+							"hint": "最短字符串, 结束符后有多余字符",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2017-03-29T18:43:42Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "6087",
+			"title": "情人节",
+			"content": "![](~/356)\n\n以上是朋友圈中一奇葩贴：“2月14情人节了，我决定造福大家。第2个赞和第14个赞的，我介绍你俩认识…………咱三吃饭…你俩请…”。现给出此贴下点赞的朋友名单，请你找出那两位要请客的倒霉蛋。\n\n### 输入格式：\n\n输入按照点赞的先后顺序给出不知道多少个点赞的人名，每个人名占一行，为不超过10个英文字母的非空单词，以回车结束。一个英文句点`.`标志输入的结束，这个符号不算在点赞名单里。\n\n### 输出格式：\n\n根据点赞情况在一行中输出结论：若存在第2个人A和第14个人B，则输出“A and B are inviting you to dinner...”；若只有A没有B，则输出“A is the only one for you...”；若连A都没有，则输出“Momo... No one is for you ...”。\n\n### 输入样例1：\n```in\nGaoXZh\nMagi\nEinst\nQuark\nLaoLao\nFatMouse\nZhaShen\nfantacy\nlatesum\nSenSen\nQuanQuan\nwhatever\nwhenever\nPotaty\nhahaha\n.\n```\n\n### 输出样例1：\n```out\nMagi and Potaty are inviting you to dinner...\n```\n\n### 输入样例2：\n```\nLaoLao\nFatMouse\nwhoever\n.\n```\n\n### 输出样例2：\n```\nFatMouse is the only one for you...\n```\n\n### 输入样例3：\n```\nLaoLao\n.\n```\n\n### 输出样例3：\n```\nMomo... No one is for you ...\n```",
+			"type": "PROGRAMMING",
+			"author": "陈越",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "67",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "68",
+							"name": "if-else",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "循环控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "71",
+							"name": "for",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 41,
+			"submitCount": 237,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1576062560117596160",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5993fa5c93d1de004a0fd2e7",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "![](~/356)\n\n以上是朋友圈中一奇葩贴：“2月14情人节了，我决定造福大家。第2个赞和第14个赞的，我介绍你俩认识…………咱三吃饭…你俩请…”。现给出此贴下点赞的朋友名单，请你找出那两位要请客的倒霉蛋。\n\n### 输入格式：\n\n输入按照点赞的先后顺序给出不知道多少个点赞的人名，每个人名占一行，为不超过10个英文字母的非空单词，以回车结束。一个英文句点`.`标志输入的结束，这个符号不算在点赞名单里。\n\n### 输出格式：\n\n根据点赞情况在一行中输出结论：若存在第2个人A和第14个人B，则输出“A and B are inviting you to dinner...”；若只有A没有B，则输出“A is the only one for you...”；若连A都没有，则输出“Momo... No one is for you ...”。\n\n### 输入样例1：\n```in\nGaoXZh\nMagi\nEinst\nQuark\nLaoLao\nFatMouse\nZhaShen\nfantacy\nlatesum\nSenSen\nQuanQuan\nwhatever\nwhenever\nPotaty\nhahaha\n.\n```\n\n### 输出样例1：\n```out\nMagi and Potaty are inviting you to dinner...\n```\n\n### 输入样例2：\n```\nLaoLao\nFatMouse\nwhoever\n.\n```\n\n### 输出样例2：\n```\nFatMouse is the only one for you...\n```\n\n### 输入样例3：\n```\nLaoLao\n.\n```\n\n### 输出样例3：\n```\nMomo... No one is for you ...\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1576062560193093639",
+			"label": "",
+			"score": 10,
+			"problemPoolIndex": 8,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "sample1等价，分母正、分子负",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2017-03-29T18:51:03Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "sample2等价，分母负、分子正，无限循环小数",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2017-03-29T18:51:03Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "sample3等价，分母0、分子正",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2017-03-29T18:51:03Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "分子分母都正，取最大值",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2017-03-29T18:51:03Z",
+							"isPublic": false
+						},
+						"4": {
+							"hint": "分子分母都负，取最小值",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2017-03-29T18:51:03Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "6089",
+			"title": "A除以B",
+			"content": "真的是简单题哈 —— 给定两个绝对值不超过100的整数$$A$$和$$B$$，要求你按照“$$A/B=$$商”的格式输出结果。\n\n### 输入格式：\n\n输入在第一行给出两个整数$$A$$和$$B$$（$$-100 \\le A, B \\le 100$$），数字间以空格分隔。\n\n### 输出格式：\n\n在一行中输出结果：如果分母是正数，则输出“$$A/B=$$商”；如果分母是负数，则要用括号把分母括起来输出；如果分母为零，则输出的商应为`Error`。输出的商应保留小数点后2位。\n\n### 输入样例1：\n```in\n-1 2\n```\n\n### 输出样例1：\n```out\n-1/2=-0.50\n```\n\n### 输入样例2：\n```\n1 -3\n```\n\n### 输出样例2：\n```\n1/(-3)=-0.33\n```\n\n### 输入样例3：\n```\n5 0\n```\n\n### 输出样例3：\n```\n5/0=Error\n```",
+			"type": "PROGRAMMING",
+			"author": "陈越",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "67",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "68",
+							"name": "if-else",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 40,
+			"submitCount": 138,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1576062560117596160",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5993fa5c93d1de004a0fd2e9",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "真的是简单题哈 —— 给定两个绝对值不超过100的整数$$A$$和$$B$$，要求你按照“$$A/B=$$商”的格式输出结果。\n\n### 输入格式：\n\n输入在第一行给出两个整数$$A$$和$$B$$（$$-100 \\le A, B \\le 100$$），数字间以空格分隔。\n\n### 输出格式：\n\n在一行中输出结果：如果分母是正数，则输出“$$A/B=$$商”；如果分母是负数，则要用括号把分母括起来输出；如果分母为零，则输出的商应为`Error`。输出的商应保留小数点后2位。\n\n### 输入样例1：\n```in\n-1 2\n```\n\n### 输出样例1：\n```out\n-1/2=-0.50\n```\n\n### 输入样例2：\n```\n1 -3\n```\n\n### 输出样例2：\n```\n1/(-3)=-0.33\n```\n\n### 输入样例3：\n```\n5 0\n```\n\n### 输出样例3：\n```\n5/0=Error\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1576062560193093640",
+			"label": "",
+			"score": 10,
+			"problemPoolIndex": 9,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "sample等价",
+							"showHint": false,
+							"score": 7,
+							"updateAt": "2017-03-29T19:03:02Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "最高、最矮的男女生",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2017-03-29T19:03:02Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "最大N，随机数据",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2017-03-29T19:03:02Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "最小N，正好整除",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2017-03-29T19:03:02Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "6092",
+			"title": "最佳情侣身高差",
+			"content": "专家通过多组情侣研究数据发现，最佳的情侣身高差遵循着一个公式：（女方的身高）$$\\times$$1.09 =（男方的身高）。如果符合，你俩的身高差不管是牵手、拥抱、接吻，都是最和谐的差度。\n\n下面就请你写个程序，为任意一位用户计算他/她的情侣的最佳身高。\n\n### 输入格式：\n\n输入第一行给出正整数$$N$$（$$\\le 10$$），为前来查询的用户数。随后$$N$$行，每行按照“性别 身高”的格式给出前来查询的用户的性别和身高，其中“性别”为“F”表示女性、“M”表示男性；“身高”为区间 [1.0, 3.0] 之间的实数。\n\n### 输出格式：\n\n对每一个查询，在一行中为该用户计算出其情侣的最佳身高，保留小数点后2位。\n\n### 输入样例：\n```in\n2\nM 1.75\nF 1.8\n```\n\n### 输出样例：\n```out\n1.61\n1.96\n```",
+			"type": "PROGRAMMING",
+			"author": "陈越",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "67",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "68",
+							"name": "if-else",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "循环控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "71",
+							"name": "for",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 44,
+			"submitCount": 151,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1576062560117596160",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5993fa5c93d1de004a0fd2ec",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "专家通过多组情侣研究数据发现，最佳的情侣身高差遵循着一个公式：（女方的身高）$$\\times$$1.09 =（男方的身高）。如果符合，你俩的身高差不管是牵手、拥抱、接吻，都是最和谐的差度。\n\n下面就请你写个程序，为任意一位用户计算他/她的情侣的最佳身高。\n\n### 输入格式：\n\n输入第一行给出正整数$$N$$（$$\\le 10$$），为前来查询的用户数。随后$$N$$行，每行按照“性别 身高”的格式给出前来查询的用户的性别和身高，其中“性别”为“F”表示女性、“M”表示男性；“身高”为区间 [1.0, 3.0] 之间的实数。\n\n### 输出格式：\n\n对每一个查询，在一行中为该用户计算出其情侣的最佳身高，保留小数点后2位。\n\n### 输入样例：\n```in\n2\nM 1.75\nF 1.8\n```\n\n### 输出样例：\n```out\n1.61\n1.96\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1576062560193093641",
+			"label": "",
+			"score": 10,
+			"problemPoolIndex": 10,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "sample等价",
+							"showHint": false,
+							"score": 6,
+							"updateAt": "2017-04-19T15:38:21Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "第1个数",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2017-04-19T15:38:21Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "最后一个数",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2017-04-19T15:38:21Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "6290",
+			"title": "寻找250",
+			"content": "![](~/365)\n\n对方不想和你说话，并向你扔了一串数…… 而你必须从这一串数字中找到“250”这个高大上的感人数字。\n\n### 输入格式：\n\n输入在一行中给出不知道多少个绝对值不超过1000的整数，其中保证至少存在一个“250”。\n\n### 输出格式：\n\n在一行中输出第一次出现的“250”是对方扔过来的第几个数字（计数从1开始）。题目保证输出的数字在整型范围内。\n\n### 输入样例：\n```in\n888 666 123 -233 250 13 250 -222\n```\n\n### 输出样例：\n```out\n5\n```",
+			"type": "PROGRAMMING",
+			"author": "陈越",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "67",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "68",
+							"name": "if-else",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "循环控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "72",
+							"name": "while和do-while",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 40,
+			"submitCount": 100,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1576062560117596160",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5993fa5d93d1de004a0fd35b",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "![](~/365)\n\n对方不想和你说话，并向你扔了一串数…… 而你必须从这一串数字中找到“250”这个高大上的感人数字。\n\n### 输入格式：\n\n输入在一行中给出不知道多少个绝对值不超过1000的整数，其中保证至少存在一个“250”。\n\n### 输出格式：\n\n在一行中输出第一次出现的“250”是对方扔过来的第几个数字（计数从1开始）。题目保证输出的数字在整型范围内。\n\n### 输入样例：\n```in\n888 666 123 -233 250 13 250 -222\n```\n\n### 输出样例：\n```out\n5\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1576062560193093642",
+			"label": "",
+			"score": 20,
+			"problemPoolIndex": 11,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "sample等价，结果有舍入，有不匹配，有直接结束",
+							"showHint": false,
+							"score": 12,
+							"updateAt": "2017-04-19T15:48:08Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "同一本书被借多次，有不匹配",
+							"showHint": false,
+							"score": 3,
+							"updateAt": "2017-04-19T15:48:08Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "书号、时间取到边界值",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2017-04-19T15:48:08Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "最大数据，有连续S和连续E，有S和E全反",
+							"showHint": false,
+							"score": 3,
+							"updateAt": "2017-04-19T15:48:08Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "6293",
+			"title": "阅览室",
+			"content": "天梯图书阅览室请你编写一个简单的图书借阅统计程序。当读者借书时，管理员输入书号并按下`S`键，程序开始计时；当读者还书时，管理员输入书号并按下`E`键，程序结束计时。书号为不超过1000的正整数。当管理员将0作为书号输入时，表示一天工作结束，你的程序应输出当天的读者借书次数和平均阅读时间。\n\n注意：由于线路偶尔会有故障，可能出现不完整的纪录，即只有`S`没有`E`，或者只有`E`没有`S`的纪录，系统应能自动忽略这种无效纪录。另外，题目保证书号是书的唯一标识，同一本书在任何时间区间内只可能被一位读者借阅。\n\n### 输入格式：\n\n输入在第一行给出一个正整数$$N$$（$$\\le 10$$），随后给出$$N$$天的纪录。每天的纪录由若干次借阅操作组成，每次操作占一行，格式为：\n\n`书号`（[1, 1000]内的整数） `键值`（`S`或`E`） `发生时间`（`hh:mm`，其中`hh`是[0,23]内的整数，`mm`是[0, 59]内整数）\n\n每一天的纪录保证按时间递增的顺序给出。\n\n### 输出格式：\n\n对每天的纪录，在一行中输出当天的读者借书次数和平均阅读时间（以分钟为单位的精确到个位的整数时间）。\n\n### 输入样例：\n```in\n3\n1 S 08:10\n2 S 08:35\n1 E 10:00\n2 E 13:16\n0 S 17:00\n0 S 17:00\n3 E 08:10\n1 S 08:20\n2 S 09:00\n1 E 09:20\n0 E 17:00\n```\n\n### 输出样例：\n```out\n2 196\n0 0\n1 60\n```",
+			"type": "PROGRAMMING",
+			"author": "陈越",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 2,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "循环控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "73",
+							"name": "嵌套循环",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "67",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "68",
+							"name": "if-else",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 36,
+			"submitCount": 128,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1576062560117596160",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5993fa5d93d1de004a0fd35d",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "天梯图书阅览室请你编写一个简单的图书借阅统计程序。当读者借书时，管理员输入书号并按下`S`键，程序开始计时；当读者还书时，管理员输入书号并按下`E`键，程序结束计时。书号为不超过1000的正整数。当管理员将0作为书号输入时，表示一天工作结束，你的程序应输出当天的读者借书次数和平均阅读时间。\n\n注意：由于线路偶尔会有故障，可能出现不完整的纪录，即只有`S`没有`E`，或者只有`E`没有`S`的纪录，系统应能自动忽略这种无效纪录。另外，题目保证书号是书的唯一标识，同一本书在任何时间区间内只可能被一位读者借阅。\n\n### 输入格式：\n\n输入在第一行给出一个正整数$$N$$（$$\\le 10$$），随后给出$$N$$天的纪录。每天的纪录由若干次借阅操作组成，每次操作占一行，格式为：\n\n`书号`（[1, 1000]内的整数） `键值`（`S`或`E`） `发生时间`（`hh:mm`，其中`hh`是[0,23]内的整数，`mm`是[0, 59]内整数）\n\n每一天的纪录保证按时间递增的顺序给出。\n\n### 输出格式：\n\n对每天的纪录，在一行中输出当天的读者借书次数和平均阅读时间（以分钟为单位的精确到个位的整数时间）。\n\n### 输入样例：\n```in\n3\n1 S 08:10\n2 S 08:35\n1 E 10:00\n2 E 13:16\n0 S 17:00\n0 S 17:00\n3 E 08:10\n1 S 08:20\n2 S 09:00\n1 E 09:20\n0 E 17:00\n```\n\n### 输出样例：\n```out\n2 196\n0 0\n1 60\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1576062560193093643",
+			"label": "",
+			"score": 10,
+			"problemPoolIndex": 12,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "sample等价，有等于边界值，呼吸上下越界，脉搏上越界",
+							"showHint": false,
+							"score": 6,
+							"updateAt": "2017-04-19T17:23:45Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "脉搏下越界",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2017-04-19T17:23:45Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "取边界值",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2017-04-19T17:23:45Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "6298",
+			"title": "装睡",
+			"content": "你永远叫不醒一个装睡的人 —— 但是通过分析一个人的呼吸频率和脉搏，你可以发现谁在装睡！医生告诉我们，正常人睡眠时的呼吸频率是每分钟15-20次，脉搏是每分钟50-70次。下面给定一系列人的呼吸频率与脉搏，请你找出他们中间有可能在装睡的人，即至少一项指标不在正常范围内的人。\n\n### 输入格式：\n\n输入在第一行给出一个正整数$$N$$（$$\\le 10$$）。随后$$N$$行，每行给出一个人的名字（仅由英文字母组成的、长度不超过3个字符的串）、其呼吸频率和脉搏（均为不超过100的正整数）。\n\n### 输出格式：\n\n按照输入顺序检查每个人，如果其至少一项指标不在正常范围内，则输出其名字，每个名字占一行。\n\n### 输入样例：\n```in\n4\nAmy 15 70\nTom 14 60\nJoe 18 50\nZoe 21 71\n```\n\n### 输出样例：\n```out\nTom\nZoe\n```",
+			"type": "PROGRAMMING",
+			"author": "陈越",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "67",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "68",
+							"name": "if-else",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 50,
+			"submitCount": 104,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1576062560117596160",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5993fa5d93d1de004a0fd362",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "你永远叫不醒一个装睡的人 —— 但是通过分析一个人的呼吸频率和脉搏，你可以发现谁在装睡！医生告诉我们，正常人睡眠时的呼吸频率是每分钟15-20次，脉搏是每分钟50-70次。下面给定一系列人的呼吸频率与脉搏，请你找出他们中间有可能在装睡的人，即至少一项指标不在正常范围内的人。\n\n### 输入格式：\n\n输入在第一行给出一个正整数$$N$$（$$\\le 10$$）。随后$$N$$行，每行给出一个人的名字（仅由英文字母组成的、长度不超过3个字符的串）、其呼吸频率和脉搏（均为不超过100的正整数）。\n\n### 输出格式：\n\n按照输入顺序检查每个人，如果其至少一项指标不在正常范围内，则输出其名字，每个名字占一行。\n\n### 输入样例：\n```in\n4\nAmy 15 70\nTom 14 60\nJoe 18 50\nZoe 21 71\n```\n\n### 输出样例：\n```out\nTom\nZoe\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1576062560193093644",
+			"label": "",
+			"score": 15,
+			"problemPoolIndex": 13,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "",
+							"showHint": false,
+							"score": 9,
+							"updateAt": "2000-01-01T00:00:00Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2000-01-01T00:00:00Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2000-01-01T00:00:00Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "",
+							"showHint": false,
+							"score": 3,
+							"updateAt": "2000-01-01T00:00:00Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "3 6\n2 1 3 3 4 5\n0 0 1 0 1 1\n0 1 1 0 0 1\n1 0 1 0 1 0\n1 1 0 0 1 1\n",
+							"output": "13\n11\n12\n"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "10649",
+			"title": "判断题",
+			"content": "判断题的评判很简单，本题就要求你写个简单的程序帮助老师判题并统计学生们判断题的得分。\n\n### 输入格式：\n\n输入在第一行给出两个不超过 100 的正整数 N 和 M，分别是学生人数和判断题数量。第二行给出 M 个不超过 5 的正整数，是每道题的满分值。第三行给出每道题对应的正确答案，0 代表“非”，1 代表“是”。随后 N 行，每行给出一个学生的解答。数字间均以空格分隔。\n\n### 输出格式：\n\n按照输入的顺序输出每个学生的得分，每个分数占一行。\n\n### 输入样例：\n```in\n3 6\n2 1 3 3 4 5\n0 0 1 0 1 1\n0 1 1 0 0 1\n1 0 1 0 1 0\n1 1 0 0 1 1\n```\n\n### 输出样例：\n```out\n13\n11\n12\n```\n",
+			"type": "PROGRAMMING",
+			"author": "CHEN, Yue",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "循环控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "73",
+							"name": "嵌套循环",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "67",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "68",
+							"name": "if-else",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "78",
+							"name": "数组",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "79",
+							"name": "一维数组",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 40,
+			"submitCount": 122,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1576062560117596160",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5af50ff88c3638000a2d9371",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "判断题的评判很简单，本题就要求你写个简单的程序帮助老师判题并统计学生们判断题的得分。\n\n### 输入格式：\n\n输入在第一行给出两个不超过 100 的正整数 N 和 M，分别是学生人数和判断题数量。第二行给出 M 个不超过 5 的正整数，是每道题的满分值。第三行给出每道题对应的正确答案，0 代表“非”，1 代表“是”。随后 N 行，每行给出一个学生的解答。数字间均以空格分隔。\n\n### 输出格式：\n\n按照输入的顺序输出每个学生的得分，每个分数占一行。\n\n### 输入样例：\n```in\n3 6\n2 1 3 3 4 5\n0 0 1 0 1 1\n0 1 1 0 0 1\n1 0 1 0 1 0\n1 1 0 0 1 1\n```\n\n### 输出样例：\n```out\n13\n11\n12\n```\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1576062560193093645",
+			"label": "",
+			"score": 15,
+			"problemPoolIndex": 14,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "sample等价",
+							"showHint": false,
+							"score": 9,
+							"updateAt": "2015-07-01T16:12:21Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "N最小",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2015-07-01T16:12:21Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "较大N",
+							"showHint": false,
+							"score": 4,
+							"updateAt": "2015-07-01T16:12:21Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "10",
+			"title": "求N分之一序列前N项和",
+			"content": "本题要求编写程序，计算序列 1 + 1/2 + 1/3 + ... 的前N项之和。\n\n### 输入格式:\n\n输入在一行中给出一个正整数N。\n\n### 输出格式:\n\n在一行中按照“sum = S”的格式输出部分和的值S，精确到小数点后6位。题目保证计算结果不超过双精度范围。\n\n### 输入样例:\n```in\n6\n```\n\n### 输出样例:\n```out\nsum = 2.450000\n```",
+			"type": "PROGRAMMING",
+			"author": "C课程组",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "循环控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "71",
+							"name": "for",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 41,
+			"submitCount": 62,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1576062560117596160",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5993fa4493d1de004a0fcb94",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "本题要求编写程序，计算序列 1 + 1/2 + 1/3 + ... 的前N项之和。\n\n### 输入格式:\n\n输入在一行中给出一个正整数N。\n\n### 输出格式:\n\n在一行中按照“sum = S”的格式输出部分和的值S，精确到小数点后6位。题目保证计算结果不超过双精度范围。\n\n### 输入样例:\n```in\n6\n```\n\n### 输出样例:\n```out\nsum = 2.450000\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1576062560193093646",
+			"label": "",
+			"score": 15,
+			"problemPoolIndex": 15,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "sample等价",
+							"showHint": false,
+							"score": 9,
+							"updateAt": "2015-07-01T16:20:13Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "N最小",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2015-07-01T16:20:13Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "较大N",
+							"showHint": false,
+							"score": 4,
+							"updateAt": "2015-07-01T16:20:13Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "11",
+			"title": "求奇数分之一序列前N项和",
+			"content": "本题要求编写程序，计算序列 1 + 1/3 + 1/5 + ... 的前N项之和。\n\n### 输入格式:\n\n输入在一行中给出一个正整数N。\n\n### 输出格式:\n\n 在一行中按照“sum = S”的格式输出部分和的值S，精确到小数点后6位。题目保证计算结果不超过双精度范围。\n\n### 输入样例:\n```in\n23\n```\n\n### 输出样例:\n```out\nsum = 2.549541\n```",
+			"type": "PROGRAMMING",
+			"author": "C课程组",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "循环控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "71",
+							"name": "for",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 39,
+			"submitCount": 71,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1576062560117596160",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5993fa4493d1de004a0fcb95",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "本题要求编写程序，计算序列 1 + 1/3 + 1/5 + ... 的前N项之和。\n\n### 输入格式:\n\n输入在一行中给出一个正整数N。\n\n### 输出格式:\n\n 在一行中按照“sum = S”的格式输出部分和的值S，精确到小数点后6位。题目保证计算结果不超过双精度范围。\n\n### 输入样例:\n```in\n23\n```\n\n### 输出样例:\n```out\nsum = 2.549541\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1576062560193093647",
+			"label": "",
+			"score": 15,
+			"problemPoolIndex": 16,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "同sample",
+							"showHint": false,
+							"score": 9,
+							"updateAt": "2015-07-05T15:23:45Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "最小N",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2015-07-05T15:23:45Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "较大N",
+							"showHint": false,
+							"score": 4,
+							"updateAt": "2015-07-05T15:23:45Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "12",
+			"title": "求简单交错序列前N项和",
+			"content": "本题要求编写程序,计算序列 1 - 1/4 + 1/7 - 1/10 + ... 的前N项之和。\n\n### 输入格式:\n\n输入在一行中给出一个正整数N。\n\n### 输出格式:\n\n在一行中按照“sum = S”的格式输出部分和的值S，精确到小数点后三位。题目保证计算结果不超过双精度范围。\n\n### 输入样例:\n```in\n10\n```\n\n### 输出样例:\n```out\nsum = 0.819\n```",
+			"type": "PROGRAMMING",
+			"author": "C课程组",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "循环控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "71",
+							"name": "for",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 39,
+			"submitCount": 57,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1576062560117596160",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5993fa4493d1de004a0fcb96",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "本题要求编写程序,计算序列 1 - 1/4 + 1/7 - 1/10 + ... 的前N项之和。\n\n### 输入格式:\n\n输入在一行中给出一个正整数N。\n\n### 输出格式:\n\n在一行中按照“sum = S”的格式输出部分和的值S，精确到小数点后三位。题目保证计算结果不超过双精度范围。\n\n### 输入样例:\n```in\n10\n```\n\n### 输出样例:\n```out\nsum = 0.819\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1576062560193093648",
+			"label": "",
+			"score": 15,
+			"problemPoolIndex": 17,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "同sample，n为正整数",
+							"showHint": false,
+							"score": 13,
+							"updateAt": "2015-07-05T15:55:27Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "n==0",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2015-07-05T15:55:27Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "13",
+			"title": "生成3的乘方表",
+			"content": "输入一个非负整数$$n$$，生成一张3的乘方表，输出$$3^0$$~$$3^n$$的值。可调用幂函数计算3的乘方。\n\n### 输入格式:\n\n输入在一行中给出一个非负整数$$n$$。\n\n### 输出格式:\n\n按照幂的递增顺序输出$$n+1$$行，每行格式为“pow(3,i) = 3的i次幂的值”。题目保证输出数据不超过长整型整数的范围。\n\n### 输入样例:\n```in\n3\n```\n\n### 输出样例:\n```out\npow(3,0) = 1\npow(3,1) = 3\npow(3,2) = 9\npow(3,3) = 27\n```",
+			"type": "PROGRAMMING",
+			"author": "C课程组",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "循环控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "71",
+							"name": "for",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 39,
+			"submitCount": 82,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1576062560117596160",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5993fa4493d1de004a0fcb97",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "输入一个非负整数$$n$$，生成一张3的乘方表，输出$$3^0$$~$$3^n$$的值。可调用幂函数计算3的乘方。\n\n### 输入格式:\n\n输入在一行中给出一个非负整数$$n$$。\n\n### 输出格式:\n\n按照幂的递增顺序输出$$n+1$$行，每行格式为“pow(3,i) = 3的i次幂的值”。题目保证输出数据不超过长整型整数的范围。\n\n### 输入样例:\n```in\n3\n```\n\n### 输出样例:\n```out\npow(3,0) = 1\npow(3,1) = 3\npow(3,2) = 9\npow(3,3) = 27\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1576062560193093649",
+			"label": "",
+			"score": 15,
+			"problemPoolIndex": 18,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "同sample",
+							"showHint": false,
+							"score": 13,
+							"updateAt": "2015-07-05T19:34:14Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "最小边界",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2015-07-05T19:34:14Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "73",
+			"title": "求平方与倒数序列的部分和",
+			"content": "本题要求对两个正整数$$m$$和$$n$$（$$m \\le n$$）编写程序，计算序列和$$m^2 + 1/m + (m+1)^2 + 1/(m+1) + \\cdots + n^2 + 1/n$$。\n\n### 输入格式:\n\n输入在一行中给出两个正整数$$m$$和$$n$$（$$m \\le n$$），其间以空格分开。\n\n### 输出格式:\n\n在一行中按照“sum = S”的格式输出部分和的值S，精确到小数点后六位。题目保证计算结果不超过双精度范围。\n\n### 输入样例:\n```in\n5 10\n```\n\n### 输出样例:\n```out\nsum = 355.845635\n```",
+			"type": "PROGRAMMING",
+			"author": "C课程组",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "循环控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "71",
+							"name": "for",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 39,
+			"submitCount": 54,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1576062560117596160",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5993fa4493d1de004a0fcb9b",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "本题要求对两个正整数$$m$$和$$n$$（$$m \\le n$$）编写程序，计算序列和$$m^2 + 1/m + (m+1)^2 + 1/(m+1) + \\cdots + n^2 + 1/n$$。\n\n### 输入格式:\n\n输入在一行中给出两个正整数$$m$$和$$n$$（$$m \\le n$$），其间以空格分开。\n\n### 输出格式:\n\n在一行中按照“sum = S”的格式输出部分和的值S，精确到小数点后六位。题目保证计算结果不超过双精度范围。\n\n### 输入样例:\n```in\n5 10\n```\n\n### 输出样例:\n```out\nsum = 355.845635\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1576062560193093650",
+			"label": "",
+			"score": 20,
+			"problemPoolIndex": 19,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "sample等价",
+							"showHint": false,
+							"score": 12,
+							"updateAt": "2017-04-19T17:20:52Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "最大光棍",
+							"showHint": false,
+							"score": 3,
+							"updateAt": "2017-04-19T17:20:52Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "最大x",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2017-04-19T17:20:52Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "x是光棍",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2017-04-19T17:20:52Z",
+							"isPublic": false
+						},
+						"4": {
+							"hint": "最小x",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2017-04-19T17:20:52Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "6297",
+			"title": "整除光棍",
+			"content": "这里所谓的“光棍”，并不是指单身汪啦~ 说的是全部由1组成的数字，比如1、11、111、1111等。传说任何一个光棍都能被一个不以5结尾的奇数整除。比如，111111就可以被13整除。 现在，你的程序要读入一个整数`x`，这个整数一定是奇数并且不以5结尾。然后，经过计算，输出两个数字：第一个数字`s`，表示`x`乘以`s`是一个光棍，第二个数字`n`是这个光棍的位数。这样的解当然不是唯一的,题目要求你输出最小的解。\n\n提示：一个显然的办法是逐渐增加光棍的位数，直到可以整除`x`为止。但难点在于，`s`可能是个非常大的数 —— 比如，程序输入31，那么就输出3584229390681和15，因为31乘以3584229390681的结果是111111111111111，一共15个1。\n\n### 输入格式：\n\n输入在一行中给出一个不以5结尾的正奇数`x`（$$< 1000$$）。\n\n### 输出格式：\n\n在一行中输出相应的最小的`s`和`n`，其间以1个空格分隔。\n\n### 输入样例：\n```in\n31\n```\n\n### 输出样例：\n```out\n3584229390681 15\n```",
+			"type": "PROGRAMMING",
+			"author": "翁恺",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 2,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "循环控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "72",
+							"name": "while和do-while",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 40,
+			"submitCount": 136,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1576062560117596160",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5993fa5d93d1de004a0fd361",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "这里所谓的“光棍”，并不是指单身汪啦~ 说的是全部由1组成的数字，比如1、11、111、1111等。传说任何一个光棍都能被一个不以5结尾的奇数整除。比如，111111就可以被13整除。 现在，你的程序要读入一个整数`x`，这个整数一定是奇数并且不以5结尾。然后，经过计算，输出两个数字：第一个数字`s`，表示`x`乘以`s`是一个光棍，第二个数字`n`是这个光棍的位数。这样的解当然不是唯一的,题目要求你输出最小的解。\n\n提示：一个显然的办法是逐渐增加光棍的位数，直到可以整除`x`为止。但难点在于，`s`可能是个非常大的数 —— 比如，程序输入31，那么就输出3584229390681和15，因为31乘以3584229390681的结果是111111111111111，一共15个1。\n\n### 输入格式：\n\n输入在一行中给出一个不以5结尾的正奇数`x`（$$< 1000$$）。\n\n### 输出格式：\n\n在一行中输出相应的最小的`s`和`n`，其间以1个空格分隔。\n\n### 输入样例：\n```in\n31\n```\n\n### 输出样例：\n```out\n3584229390681 15\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1576062560193093651",
+			"label": "",
+			"score": 15,
+			"problemPoolIndex": 20,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "",
+							"showHint": false,
+							"score": 10,
+							"updateAt": "2000-01-01T00:00:00Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2000-01-01T00:00:00Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "",
+							"showHint": false,
+							"score": 4,
+							"updateAt": "2000-01-01T00:00:00Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "8\nA-T B-F C-F D-F\nC-T B-F A-F D-F\nA-F D-F C-F B-T\nB-T A-F C-F D-F\nB-F D-T A-F C-F\nA-T C-F B-F D-F\nD-T B-F C-F A-F\nC-T A-F B-F D-F\n",
+							"output": "13224143\n"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "10718",
+			"title": "Wifi密码",
+			"content": "下面是微博上流传的一张照片：“各位亲爱的同学们，鉴于大家有时需要使用 wifi，又怕耽误亲们的学习，现将 wifi 密码设置为下列数学题答案：A-1；B-2；C-3；D-4；请同学们自己作答，每两日一换。谢谢合作！！~”—— 老师们为了促进学生学习也是拼了…… 本题就要求你写程序把一系列题目的答案按照卷子上给出的对应关系翻译成 wifi 的密码。这里简单假设每道选择题都有 4 个选项，有且只有 1 个正确答案。\n\n\n![wifi.jpg](~/7e56be3f-caba-45f1-b9cb-38a96d44de76.jpg)\n\n\n### 输入格式：\n\n输入第一行给出一个正整数 N（$$\\le$$ 100），随后 N 行，每行按照 `编号-答案` 的格式给出一道题的 4 个选项，`T` 表示正确选项，`F` 表示错误选项。选项间用空格分隔。\n\n### 输出格式：\n\n在一行中输出 wifi 密码。\n\n### 输入样例：\n```in\n8\nA-T B-F C-F D-F\nC-T B-F A-F D-F\nA-F D-F C-F B-T\nB-T A-F C-F D-F\nB-F D-T A-F C-F\nA-T C-F B-F D-F\nD-T B-F C-F A-F\nC-T A-F B-F D-F\n```\n\n### 输出样例：\n```out\n13224143\n```\n",
+			"type": "PROGRAMMING",
+			"author": "CHEN, Yue",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "循环控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "73",
+							"name": "嵌套循环",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "64",
+							"name": "基本数据类型与表达式",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "65",
+							"name": "表达式",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 52,
+			"submitCount": 156,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1576062560117596160",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5af5103b8c3638000a2d93b6",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "下面是微博上流传的一张照片：“各位亲爱的同学们，鉴于大家有时需要使用 wifi，又怕耽误亲们的学习，现将 wifi 密码设置为下列数学题答案：A-1；B-2；C-3；D-4；请同学们自己作答，每两日一换。谢谢合作！！~”—— 老师们为了促进学生学习也是拼了…… 本题就要求你写程序把一系列题目的答案按照卷子上给出的对应关系翻译成 wifi 的密码。这里简单假设每道选择题都有 4 个选项，有且只有 1 个正确答案。\n\n\n![wifi.jpg](~/7e56be3f-caba-45f1-b9cb-38a96d44de76.jpg)\n\n\n### 输入格式：\n\n输入第一行给出一个正整数 N（$$\\le$$ 100），随后 N 行，每行按照 `编号-答案` 的格式给出一道题的 4 个选项，`T` 表示正确选项，`F` 表示错误选项。选项间用空格分隔。\n\n### 输出格式：\n\n在一行中输出 wifi 密码。\n\n### 输入样例：\n```in\n8\nA-T B-F C-F D-F\nC-T B-F A-F D-F\nA-F D-F C-F B-T\nB-T A-F C-F D-F\nB-F D-T A-F C-F\nA-T C-F B-F D-F\nD-T B-F C-F A-F\nC-T A-F B-F D-F\n```\n\n### 输出样例：\n```out\n13224143\n```\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		}
+	]

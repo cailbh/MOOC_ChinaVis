@@ -44,9 +44,10 @@ export default {
     return {
       data: '',
       problemsData: [],
-      submissionsData:[],
-      studentsData:[],
+      submissionsData: [],
+      studentsData: [],
       conceptsData: [],
+      conceptTree: [],
       problemConceptData: [],
       userProblemData: [],
       proMaxMinDR: [],
@@ -57,12 +58,20 @@ export default {
       conMaxMinDC: [],
       conAttrList: [],
       conAttrMaxMinList: [],
-      curProblemId:'',
-      selectProblemId:'',
-      assistGTransformX: 10,
-      assistGTransformY: 100,
-      drawEntityLocation: [],
-      showEntityList: [],
+      Ent_problem:[],
+      Ent_concept:[],
+      entG:"",
+      relG:"",
+      curProblemId: '',
+      selectProblemId: '',
+      curConceptId: '',
+      selectConceptId: '',
+      proX:500,
+      proY:0,
+      treeX:50,
+      treeY:0,
+      proStepY:0,
+      conStepY:0,
       rootSvg: null,
       groupsSvg: null,
       arcG: null,
@@ -78,16 +87,9 @@ export default {
       importanceColor_linear: null,
       importanceCompute_color: null,
       relevanceScale_linear: null,
-      totalDurationScale_linear: null,
-      // entProMinColor: "rgb(1, 164, 183)",
-      // entProMaxColor: "rgb(106, 52, 127)",
-      zoomInUrl: require("@/assets/img/zoomIn.png"),
-      zoomOutUrl: require("@/assets/img/zoomOut.png"),
-      editToolUrl: require("@/assets/img/edit.png"),
-      layoutShow: 2,
       graphGTransformK: 1,
       graphGTransformX: 10,
-      graphGTransformY: 100,
+      graphGTransformY: 10,
       graphSvgScale: 1,
       moveTimer: null,
       moveFlag: false,
@@ -101,7 +103,7 @@ export default {
       width: 0,
       height: 0,
       curToolState: 'unEdit',
-      margin: { top: 80, right: 20, bottom: 0, left: 20 },
+      margin: { top: 10, right: 20, bottom: 0, left: 20 },
       color: [
         "rgb(255,60,60)",
         "rgb(255,83,255)",
@@ -167,8 +169,19 @@ export default {
       const _this = this;
       _this.$bus.$emit("selectEnt", val);
 
-
     },
+    Ent_problem:{
+      deep:true,
+      handler(){
+        this.updataEntProblem();
+      }
+    },
+    Ent_concept:{
+      deep:true,
+      handler(){
+        this.updataEntConcept();
+      }
+    }
     // groupsSvg: {
     //   deep: true,
     //   handler() {
@@ -177,63 +190,8 @@ export default {
     // }
   },
   methods: {
-    getProblems() {
-      const _this = this;
-      let data = [];
-      this.$http
-        // .get("/api/problem/allProblem", { params: { name: "12345" } }, {})
-        .get("/api/problem/allProblem", {}, {})
-        .then((response) => {
-          _this.problemsData = response.body;
-          _this.$bus.$emit("allProblem", _this.problemsData);
-        });
-    },
-    getConcept() {
-      const _this = this;
-      this.$http
-        .get("/api/concept/allConcept", {}, {})
-        .then((response) => {
-          _this.conceptsData = response.body;
-          _this.$bus.$emit("Concept", _this.conceptsData);
-        });
-    },
-    getSubmissions() {
-      const _this = this;
-      this.$http.get("/api/Submission/allLog", {}, {})
-        .then((response) => {
-          _this.submissionsData = response.body;
-          _this.$bus.$emit("Submission", _this.submissionsData);
-        });
-    },
-    getProblemConcept() {
-      const _this = this;
-      this.$http.get("/api/conceptProblem/allRel", {}, {})
-        .then((response) => {
-          _this.problemConceptData = response.body;
-          _this.$bus.$emit("Pro_Con", _this.problemConceptData);
-          _this.updataGraph();
-        });
-    },
-    getStudents() {
-      const _this = this;
-      this.$http.get("/api/student/allStudent", {}, {})
-        .then((response) => {
-          _this.studentsData = response.body;
-          _this.$bus.$emit("Student", _this.studentsData);
-        });
-    },
-    getAllData() {
-      const _this = this;
-      this.getStudents();
-      this.getProblems();
-      this.getConcept();
-      this.getProblemConcept();
-      this.getSubmissions();
-      // .then(()=>{ 
-      // _this.updataGraph();
-      // })
-    },
-    drawMain(svg) {
+
+    drawMainO(svg) {
       let _this = this;
       let data = _this.data;
       let margin = _this.margin;
@@ -253,49 +211,6 @@ export default {
       let relG = groups.append("g").attr("id", "relG").attr("width", width).attr("height", height);
       let entG = groups.append("g").attr("id", "entG").attr("width", width).attr("height", height);
       let frontG = groups.append("g").attr("id", "frontG").attr("width", width).attr("height", height);
-      var defs = svg.append("defs");
-
-      var filter = defs
-        .append("filter")
-        .attr("id", "coolShadow")
-        .attr("x", "-100%")
-        .attr("y", "-100%") //
-        .attr("width", "400%")
-        .attr("height", "400%"); //
-
-      filter
-        .append("feBlend")
-        .attr("in", "SourceGraphic")
-        .attr("mdoe", "normal")
-
-      filter
-        .append("feMorphology")
-        .attr("in", "SourceGraphic")
-        .attr("result", "upperLayer")
-        .attr("operator", "dilate")
-        .attr("radius", "0.5 0.2");
-      filter
-        .append("feMorphology")
-        .attr("in", "SourceAlpha")
-        .attr("result", "enlargedAlpha")
-        .attr("operator", "dilate")
-        .attr("radius", "0.2 0.2");
-
-      filter
-        .append("feGaussianBlur")
-        .attr("in", "enlargedAlpha")
-        .attr("result", "bluredAlpha")
-        .attr("stdDeviation", "1");
-
-      filter
-        .append("feOffset")
-        .attr("in", "bluredAlpha")
-        .attr("result", "lowerLayer")
-        .attr("dy", "0.2"); //
-
-      var feMerge = filter.append("feMerge");
-      feMerge.append("feMergeNode").attr("in", "lowerLayer");
-      feMerge.append("feMergeNode").attr("in", "upperLayer");
 
       _this.arcG = arcG;
       let stepY = _this.stepY;
@@ -400,42 +315,42 @@ export default {
         .attr("cy", function (d) { return d.y })
         .attr("r", 30)
         .attr("opacity", "0")
-        .on("mousemove",function(d){
-          let curSvgEnt= d3.select(this);
+        .on("mousemove", function (d) {
+          let curSvgEnt = d3.select(this);
           let curType = curSvgEnt.attr("class");
           let curId = curSvgEnt.attr("id");
           let idNameList = [];
           let curEnt = {};
-          let tipName  ='';
-          if(curType == 'problem'){
-            
+          let tipName = '';
+          if (curType == 'problem') {
+
             curEnt = _this.problemsData.find(function (p) {
               return (p.id).toString() == (curId.toString());
             });
             tipName = curEnt['problemPoolIndex']
             problemConceptData.forEach(rel => {
-              if(rel['problem'] == curId){
-                  let conID = rel['contentId'];
-                  idNameList.push(`#entCon_${conID}`);
+              if (rel['problem'] == curId) {
+                let conID = rel['contentId'];
+                idNameList.push(`#entCon_${conID}`);
               }
             });
             idNameList.push(`#entPro_${curId}`)
           }
-          else if(curType == "concept"){
+          else if (curType == "concept") {
             curEnt = _this.conceptsData.find(function (p) {
               return (p.id).toString() == (curId.toString());
             });
             tipName = curEnt['name']
             problemConceptData.forEach(rel => {
-              if(rel['contentId'] == curId){
-                  let proID = rel['problem'];
-                  idNameList.push(`#entPro_${proID}`);
+              if (rel['contentId'] == curId) {
+                let proID = rel['problem'];
+                idNameList.push(`#entPro_${proID}`);
               }
             });
             idNameList.push(`#entCon_${curId}`);
           }
           _this.entHover(idNameList);
-          
+
           var yPosition = d.clientY + 20;
           var xPosition = d.clientX + 20;
           var chartTooltip = d3
@@ -449,45 +364,45 @@ export default {
           chartTooltip.classed("hidden", false);
 
         })
-        .on("click",function(d){
-          let curSvgEnt= d3.select(this);
+        .on("click", function (d) {
+          let curSvgEnt = d3.select(this);
           let curType = curSvgEnt.attr("class");
           let curId = curSvgEnt.attr("id");
           let idNameList = [];
-          if(curType == 'problem'){
+          if (curType == 'problem') {
             idNameList.push(`#entPro_${curId}`);
             _this.curProblemId = curId;
           }
-          else if(curType == "concept"){
+          else if (curType == "concept") {
             idNameList.push(`#entCon_${curId}`)
           }
           _this.entHover(idNameList);
         })
-        .on("mouseleave",function(d){
-          let curSvgEnt= d3.select(this);
+        .on("mouseleave", function (d) {
+          let curSvgEnt = d3.select(this);
           let curType = curSvgEnt.attr("class");
           let curId = curSvgEnt.attr("id");
           let idNameList = [];
-          if(curType == 'problem'){
+          if (curType == 'problem') {
             problemConceptData.forEach(rel => {
-              if(rel['problem'] == curId){
-                  let conID = rel['contentId'];
-                  idNameList.push(`#entCon_${conID}`)
+              if (rel['problem'] == curId) {
+                let conID = rel['contentId'];
+                idNameList.push(`#entCon_${conID}`)
               }
             });
             idNameList.push(`#entPro_${curId}`)
           }
-          else if(curType == "concept"){
+          else if (curType == "concept") {
             problemConceptData.forEach(rel => {
-              if(rel['contentId'] == curId){
-                  let proID = rel['problem'];
-                  idNameList.push(`#entPro_${proID}`)
+              if (rel['contentId'] == curId) {
+                let proID = rel['problem'];
+                idNameList.push(`#entPro_${proID}`)
               }
             });
             idNameList.push(`#entCon_${curId}`)
           }
           _this.entRemoveHover(idNameList);
-          
+
           d3.select(".chartTooltip").classed("hidden", true);
         })
         .call(drags());
@@ -512,10 +427,6 @@ export default {
         .style('stroke-width', "2")
 
       forceSimulation.on("tick", () => {
-        // link.attr("x1", d => d.source.x)
-        //     .attr("y1", d => d.source.y)
-        //     .attr("x2", d => d.target.x)
-        //     .attr("y2", d => d.target.y);
         circle.attr("cx", (d) => {
           let esx = d.x;
           let esy = d.y;
@@ -524,10 +435,10 @@ export default {
           if (esy < rSize) esy = rSize;
           esy = esy > svgHeight - rSize ? svgHeight - rSize : esy;
           if (d.type == "problem")
-              _this.updateEntity(entG,esx,esy,`entPro_${d.id}`)
+            _this.updateEntity(entG, esx, esy, `entPro_${d.id}`)
           //   _this.drawEntityProblem(entG, esx, esy, `entPro_${d.id}`);
           else if (d.type == "concept")
-              _this.updateEntity(entG,esx,esy,`entCon_${d.id}`)
+            _this.updateEntity(entG, esx, esy, `entCon_${d.id}`)
           //   _this.drawEntityConcept(entG, esx, esy, `entCon_${d.id}`);
           if (d.x < rSize) return rSize
           return d.x > svgWidth - rSize ? svgWidth - rSize : d.x
@@ -536,14 +447,6 @@ export default {
             if (d.y < rSize) return rSize
             return d.y > svgHeight - rSize ? svgHeight - rSize : d.y
           });
-        // text.attr("x", (d) => {
-        //     if (d.x < rSize) return rSize
-        //     return d.x > svgWidth - rSize ? svgWidth - rSize : d.x
-        // })
-        //     .attr("y", (d) => {
-        //         if (d.y < rSize) return rSize
-        //         return d.y > svgHeight - rSize ? svgHeight - rSize : d.y
-        //     });
 
         path.attr("d", (d) => {
           let eSource = d.source;
@@ -565,38 +468,307 @@ export default {
           path.quadraticCurveTo(esx, esy, etx, ety);
           return path.toString();
         })
-        // ntext.attr("x", d => d.x)
-        //     .attr("y", d => d.y);
-        // etext.attr("x", function (d) { return (d.source.x + d.target.x) / 2 })
-        //     .attr("y", function (d) { return (d.source.y + d.target.y) / 2 })
 
       });
-
-
-      // let stepX = 10;
-      // for(let i=0;i<problemData.length;i++){
-      //   console.log(problemData[i]['type'],problemData[i]['typetext'])
-      //   _this.drawCircle(circleG,1+i*stepX,100,10,"red",1,"problemEnt",`problem_${i}`);
-      // }
 
       svg.call(graphZoom)
 
     },
-    entHover(idList){
-      for(let i=0;i<idList.length;i++){
+    drawPro_Con(svg){
+      let problemConceptData = _this.problemConceptData;
+      
+    },
+    drawMain(svg) {
+      let _this = this;
+      let data = _this.data;
+      let margin = _this.margin;
+
+      let width = _this.width - margin.left - margin.right;
+      let height = _this.height - margin.top - margin.bottom;
+
+      let graphGTransformX = _this.graphGTransformX;
+      let graphGTransformY = _this.graphGTransformY;
+      let graphGTransformK = _this.graphGTransformK;
+      let groups = svg.append("g").attr("id", "groups").attr("width", width).attr("height", height)
+        .attr("transform", "translate(" + graphGTransformX + ',' + graphGTransformY + ") scale(" + graphGTransformK + ")");
+      this.groupsSvg = groups;
+
+      let backG = groups.append("g").attr("id", "backG").attr("width", width).attr("height", height);
+      let arcG = groups.append("g").attr("id", "arcG").attr("width", width).attr("height", height);
+      let relG = groups.append("g").attr("id", "relG").attr("width", width).attr("height", height);
+      let entG = groups.append("g").attr("id", "entG").attr("width", width).attr("height", height);
+      let frontG = groups.append("g").attr("id", "frontG").attr("width", width).attr("height", height);
+
+      _this.arcG = arcG;
+      _this.entG = entG;
+      _this.relG = relG;
+      let interval = _this.circleInterval;
+
+
+      let scalePre = _this.graphSvgScale;
+      let stx = 0;
+      let sty = 0;
+      let stk = 1;
+      var graphZoom = d3.zoom()
+        .scaleExtent([0, 10])
+        .on("start", (e) => {
+          sty = e.transform.y;
+          stx = e.transform.x;
+          stk = e.transform.k;
+        })
+        .on('zoom', (e) => {
+          graphGTransformX = _this.graphGTransformX + e.transform.x - stx;
+          graphGTransformY = _this.graphGTransformY + e.transform.y - sty;
+          graphGTransformK = _this.graphGTransformK + e.transform.k - stk;
+
+          groups.attr('transform', 'translate(' + (graphGTransformX) + ',' + (graphGTransformY) + ') scale(' + (graphGTransformK) + ')')
+        })
+        .on('end', (e) => {
+          _this.graphGTransformX = graphGTransformX;
+          _this.graphGTransformY = graphGTransformY;
+          _this.graphGTransformK = graphGTransformK;
+          groups.attr('transform', 'translate(' + (graphGTransformX) + ',' + (graphGTransformY) + ') scale(' + (graphGTransformK) + ')')
+        });
+
+      svg.call(graphZoom);
+      const dragCon = () => {
+
+        function dragstarted(event, d) {
+          console.log("s",event,d)
+        }
+        function dragged(event, d) {
+          console.log("s",event,d)
+        }
+
+        function dragended(event, d) {
+          console.log("e",event,d)
+        }
+        return d3.drag()
+          .on("start", dragstarted)
+          .on("drag", dragged)
+          .on("end", dragended);
+      }
+      let problemConceptData = _this.problemConceptData;
+      let conceptTree = _this.conceptTree;
+      
+      let problemData = tools.deepClone(_this.problemsData);
+      // let treeData = _this.getTreeData(conceptTree);
+      // console.log(treeData)
+      // concept---------
+      let treeX = _this.treeX;
+      let treeY = _this.treeY;
+      let stepY = height / (conceptTree.length + 2);
+      _this.conStepY = stepY;
+      let Ent_concept = [];
+      for (let i = 0; i < conceptTree.length; i++) {
+        let tempCon = tools.deepClone(conceptTree[i]);
+        let cy = treeY + i * stepY;
+        let cid = tempCon['id'];
+        tempCon['lay'] = cid.split(".").length;
+        let cx = treeX * tempCon['lay'];
+        tempCon['cx'] = cx;
+        tempCon['cy'] = cy;
+        tempCon['fill'] = "grey";
+        tempCon['r'] = 7;
+        tempCon['opacity'] = 1;
+        Ent_concept.push(tempCon);
+        // let circle = _this.drawCircle(entG, cx, cy, r, fill, opacity, 'entCon', `entCon_${cid}`);
+        // circle.on("click",function(d){
+        //   console.log(d)
+        // })
+        // let text = _this.drawTxt(entG, cx+20, cy+3.5, Cname, "black", 12, `entConText_${cid}`);
+      }
+        _this.Ent_concept = Ent_concept;
+      // for (let i = 0; i < conceptTree.length; i++) {
+      //   let tempCon = tools.deepClone(conceptTree[i]);
+      //   let cy = treeY + i * stepY;
+      //   let cid = tempCon['id'];
+      //   
+      // }
+      //------------
+
+      //problem -----------
+      let proX = _this.proX;
+      let proY = _this.proY;
+      let Ent_problem = [];
+      let proStepY = height/(problemData.length+2); 
+      _this.proStepY = proStepY;
+      for (let i = 0; i < problemData.length; i++) {
+        let tempPro = tools.deepClone(problemData[i]);
+        let cy = proY + i * proStepY;
+        let pid = tempPro['id'];
+        // let lay = cid.split(".").length;
+        let cx = proX;
+        let r = proStepY;
+        let fill = "grey";
+        let opacity = 0.8;
+        // let Cname  = tempPro['name'];
+        tempPro['cx'] = cx;
+        tempPro['cy'] = cy;
+        tempPro['order'] = i;
+        tempPro['width'] = 100;
+        tempPro['fill'] = "grey";
+        tempPro['height'] = proStepY-1;
+        Ent_problem.push(tempPro);
+        
+        // let circle = _this.drawCircle(entG, cx, cy, r, fill, opacity, );t text = _this.drawTxt(entG, cx+20, cy+3.5, Cname, "black", 12, `entConText_${cid}`);
+      }
+      _this.Ent_problem = Ent_problem;
+      // ---------------------
+
+
+
+      
+    },
+    updataEntConcept(){
+      const _this = this;
+      let entG = _this.entG;
+      let relG = _this.relG;
+      let Ent_concept = tools.deepClone(_this.Ent_concept);
+      
+      let conX = _this.treeX;
+      let conY = _this.treeY;
+      let conStepY = _this.conStepY;
+      for(let i = 0;i<Ent_concept.length;i++){
+        let curEntCon = Ent_concept[i];
+        let cid = curEntCon['id'];
+        let cx = curEntCon['cx'];
+        let cy = curEntCon['cy'];
+        let r = curEntCon['r'];
+        let Cname  = curEntCon['name'];
+        let fill = curEntCon['fill'];
+        let opacity = curEntCon['opacity'];
+
+        let circle = _this.drawCircle(entG, cx, cy, r, fill, opacity, 'entCon', `entCon_${cid}`);
+        let text = _this.drawTxt(entG, cx+20, cy+3.5, Cname, "black", 12, `entConText_${cid}`);
+        let fatherId = curEntCon['father'];
+        if (parseInt(fatherId) != -1) {
+          let curCon = Ent_concept.find(function (d) { return d['id'] == cid; });
+          let fatherCon = Ent_concept.find(function (d) { return d['id'] == fatherId; });
+          let sx = fatherCon['cx'];
+          let sy = fatherCon['cy'];
+          let tx = curCon['cx'];
+          let ty = curCon['cy'];
+
+          _this.drawBsLine(relG, sx, sy, tx, ty, "grey", "2px", "0.4", `conRel_${fatherId}_${cid}`, "conRel");
+        }
+      }
+    },  
+    updataEntProblem(){
+      const _this = this;
+      let entG = _this.entG;
+      let Ent_problem = tools.deepClone(_this.Ent_problem);
+      
+      let proX = _this.proX;
+      let proY = _this.proY;
+      let proStepY = _this.proStepY;
+      for(let i = 0;i<Ent_problem.length;i++){
+        let curEntPro = Ent_problem[i];
+        let pid = curEntPro['id'];
+        let cx = curEntPro['cx'];
+        let cy = curEntPro['cy'];
+        let cH = curEntPro['height'];
+        let cW = curEntPro['width'];
+        let fill = curEntPro['fill'];
+        let pOrder = curEntPro['order'];
+        let rect = _this.drawRect(entG, cx, cy, cW, cH, 1, fill, "0", "none","0.3", `entPro_${pid}`, 'entPro');
+        rect.on("mousemove",function(d){
+          let selectPro = d3.select(this);
+          let selectProId = selectPro.attr("id").split("_")[1];
+          let proD = Ent_problem.find(function(p){return p['id'] == selectProId});
+          let od = proD['order'];
+          Ent_problem.forEach(entPro=>{
+            if(entPro['id'] == selectProId){
+              entPro['cy']=proY + entPro['order'] * proStepY;
+              entPro['height']=(proStepY -1) * 5;
+              od = entPro['order'];
+            }
+            else if(entPro['order']<od){
+              entPro['cy']=proY + entPro['order'] * proStepY;
+              entPro['height']=(proStepY -1)
+            }
+            else if(entPro['order']>od){
+              entPro['cy']=proY + entPro['order'] * proStepY+(proStepY -1)*4;
+              entPro['height']=(proStepY -1)
+            }
+          })
+          _this.Ent_problem =Ent_problem;
+        }).on("click",function(d){
+          let selectPro = d3.select(this);
+          let selectProId = selectPro.attr("id").split("_")[1];
+          _this.curProblemId = selectProId;
+        })
+        // le
+
+      }
+    },    
+    drawBsLine(svg, sx, sy, tx, ty, stroke, width, opacity, idName, className) {
+      let line = svg.append('path')
+        .attr("class", className)
+        .attr("id", idName)
+        .attr('d', function (d) {
+          let path = d3.path();
+          path.moveTo(sx, sy);
+          path.quadraticCurveTo(sx, ty, tx, ty);
+          // path.bezierCurveTo((sx+tx)/2,sy,(sx+tx)/2, ty, tx, ty);
+          return path.toString();
+        })
+        .style("fill", "none")
+        .style('stroke', stroke)
+        .style("stroke-opacity", opacity)
+        .style('stroke-width', width);
+      return line;
+    },
+    drawTxt(svg, x, y, text, fill, fontsize = 12, idN) {
+        let txt = svg.append("text")
+          .attr("y", y)
+          .attr("x", x)
+          .attr("id", idN)
+          .attr("fill", fill)
+          .attr("font-size", fontsize)
+          .style("text-anchor", "start")
+          .text(text)
+        return txt;
+    },
+    getTreeData(data) {
+      const _this = this;
+      let oriData = tools.deepClone(this.data);
+      var treeData = {
+        "name": "root",
+        "children": []
+      };
+      for (let i = data.length - 1; i >= 0; i--) {
+        console.log(data[i])
+        if (parseInt(data[i]['father']) == -1) {
+          treeData['children'].push(data[i]);
+        }
+        else {
+          let fId = data[i]['father'];
+          let fatherD = data.find(function (d) { return d['id'] == fId; });
+          if (!fatherD['children']) {
+            fatherD['children'] = [data[i]]
+          }
+          else
+            fatherD['children'].push(data[i])
+        }
+      }
+      return treeData;
+    },
+    entHover(idList) {
+      for (let i = 0; i < idList.length; i++) {
         let transformd = d3.select(idList[i]).attr("transform");
-          d3.select(idList[i])
+        d3.select(idList[i])
           .transition().duration(100)
           .attr("transform", function (d) {
             return transformd.split("scale")[0] + " scale(1.2)"
           })
-          // .style("filter", "url(#coolShadow)")
+        // .style("filter", "url(#coolShadow)")
       }
     },
-    entRemoveHover(idList){
-      for(let i=0;i<idList.length;i++){
+    entRemoveHover(idList) {
+      for (let i = 0; i < idList.length; i++) {
         let transformd = d3.select(idList[i]).attr("transform")
-          d3.select(idList[i])
+        d3.select(idList[i])
           .transition().duration(100)
           .attr("transform", function (d) {
             return transformd.split("scale")[0] + " scale(1)"
@@ -632,23 +804,23 @@ export default {
       let points = _this.calcRegularPolygonPoints(attrLen, 0, 0, rSize);
       let entColor = importanceCompute_color(importanceColor_linear(curEnt['scoringRate']));
 
-      let entPolygon = _this.drawPolygon(entG,points,`pro_${idn}`,'5px',entColor,entColor);
+      let entPolygon = _this.drawPolygon(entG, points, `pro_${idn}`, '5px', entColor, entColor);
 
-      entPolygon.on("mouseover",function(d){
+      entPolygon.on("mouseover", function (d) {
       })
       let pointsList = [];
       const pathAxis = d3.path();
-        pathAxis.moveTo(0,0);
-      for(let i=0;i<points.length;i++){
-        pathAxis.lineTo(points[i][0],points[i][1]);
-        pathAxis.moveTo(0,0);
-        pathAxis.lineTo(points[i][0],points[i][1]);
+      pathAxis.moveTo(0, 0);
+      for (let i = 0; i < points.length; i++) {
+        pathAxis.lineTo(points[i][0], points[i][1]);
+        pathAxis.moveTo(0, 0);
+        pathAxis.lineTo(points[i][0], points[i][1]);
       }
-        pathAxis.lineTo(points[0][0],points[0][1]);
+      pathAxis.lineTo(points[0][0], points[0][1]);
       let rgbValue = tools.getRgbValue(entColor);
-      let r = parseInt(rgbValue[0])*0.2;
-      let g = parseInt(rgbValue[1])*0.4;
-      let b = parseInt(rgbValue[2])*0.7;
+      let r = parseInt(rgbValue[0]) * 0.2;
+      let g = parseInt(rgbValue[1]) * 0.4;
+      let b = parseInt(rgbValue[2]) * 0.7;
       _this.drawPathLine(entG, pathAxis, `rgb(${r},${g},${b})`, 0.2, "10,3", `proAxis_${idn}`, "");
       // -------------------------
       const path = d3.path();
@@ -677,8 +849,8 @@ export default {
         })
         .curve(d3.curveCatmullRom)
       // .curve(d3.curveBundle)
-      _this.drawPolygon(entG,pointsList,`proAttr_${idn}`,'1px',`rgb(${r},${g},${b})`,`rgba(${r},${g},${b},0.3)`);
-        // .attr("opacity","0.3")
+      _this.drawPolygon(entG, pointsList, `proAttr_${idn}`, '1px', `rgb(${r},${g},${b})`, `rgba(${r},${g},${b},0.3)`);
+      // .attr("opacity","0.3")
       // _this.drawPathLine(entG, curve_generator(pointsList), "rgb(200,200,200)", 2, "0", "", "");
 
     },
@@ -726,7 +898,7 @@ export default {
           .outerRadius(h);
         var arcPathBack = d3.arc()
           .innerRadius(1)
-          .outerRadius(h+2);
+          .outerRadius(h + 2);
         var pathArc = arcPath(dataset);
         let entColor = importanceCompute_color(importanceColor_linear(curEnt['scoringRate']));
         // _this.drawArc(entG, 0, 0, arcPathBack(dataset), "#000", "#000", 'type', 0, 3);
@@ -741,21 +913,37 @@ export default {
       let entG = svg.select(`#${pId}`);
       let transformd = entG.attr("transform")
       let s = 'scale(1)';
-      if(transformd.split("scale").length>1){
+      if (transformd.split("scale").length > 1) {
         s = `scale${transformd.split("scale")[1]}`;
       }
       entG.attr("transform", `translate(${x},${y}) ${s}`);
     },
-    drawPolygon(svg,points,idName,strokeWidth,stroke,fill){
+    drawPolygon(svg, points, idName, strokeWidth, stroke, fill) {
       let polygon = svg.append("polygon")
         .attr("points", points)
-        .attr("id",idName)
+        .attr("id", idName)
         .attr("stroke-linejoin", "round")
 
         .attr("stroke-width", strokeWidth)
         .attr("fill", fill)
         .attr("stroke", stroke)
       return polygon;
+    },
+    drawRect(svg, x, y, w, h, rx, fill, strokeWidth, stroke, opacity, idName, className) {
+      d3.select(`#${idName}`).remove();
+      let rect = svg.append("rect")
+        .attr("x", x)
+        .attr("y", y)
+        .attr("width", w)
+        .attr("height", h)
+        .attr("id", idName)
+        .attr("class", className)
+        .attr("opacity", opacity)
+        .attr("fill", fill)
+        .attr("rx", rx)
+        .attr("stroke", stroke)
+        .attr("stroke-width", strokeWidth)
+      return rect;
     },
     calcRsize(domin, value, r) {
       let point_linear = d3.scaleLinear().domain([domin[1], domin[0]]).range([r / 3, r]);
@@ -791,7 +979,7 @@ export default {
     drawCircle(svg, x, y, r, fill, opacity, className = 'entCircle', idName) {
       const _this = this;
       const oData = _this.data
-      svg.append("circle")
+      let circle = svg.append("circle")
         .attr("id", idName)
         .attr("class", className)
         .attr("opacity", opacity)
@@ -799,6 +987,7 @@ export default {
         .attr("cy", y)
         .attr("r", r)
         .attr("fill", fill)
+      return circle;
     },
 
     drawArc(svg, x, y, arcPath, stroke, fill, className, stroke_dasharray = "0", width = 3) {
@@ -876,12 +1065,12 @@ export default {
       // _this.getConceptProblem();
       // _this.getUserProblem();
       // _this.updataGraph();
-      _this.getAllData();
     });
   },
   mounted() {
     const _this = this;
 
+    d3.select(".chartTooltip").classed("hidden", true);
     this.updataGraph();
     this.$bus.$on('graphData', (val) => {
       _this.data = val;
@@ -893,6 +1082,26 @@ export default {
       _this.updataGraph();
     });
 
+    this.$bus.$on('allProblem', (val) => {
+      _this.problemsData = val;
+    });
+    this.$bus.$on('Submission', (val) => {
+      _this.submissionsData = val;
+    });
+    this.$bus.$on('Student', (val) => {
+      _this.studentsData = val;
+    });
+    this.$bus.$on('Pro_Con', (val) => {
+      _this.problemConceptData = val;
+
+      _this.updataGraph();
+    });
+    this.$bus.$on('Concept', (val) => {
+      _this.conceptsData = val;
+    });
+    this.$bus.$on('ConceptTree', (val) => {
+      _this.conceptTree = val;
+    });
     // this.$refs.moveGraphLeft.addEventListener("mouseover", _this.moveGraphLeft); // 监听点击事件
     // this.$refs.moveGraphRight.addEventListener("mousemove", _this.moveGraphRight); // 监听点击事件
     // this.$refs.moveGraphLeft.addEventListener("mouseleave", _this.leaveGraphMove); // 监听点击事件

@@ -1,0 +1,1002 @@
+[
+		{
+			"id": "1593399728040169472",
+			"label": "A",
+			"score": 300,
+			"problemPoolIndex": 1,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 50,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "有效*",
+							"showHint": false,
+							"score": 20,
+							"updateAt": "2022-11-15T11:37:46Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "有效*",
+							"showHint": false,
+							"score": 20,
+							"updateAt": "2022-11-15T11:37:46Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "有效*",
+							"showHint": false,
+							"score": 20,
+							"updateAt": "2022-11-15T11:37:46Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "有效",
+							"showHint": false,
+							"score": 20,
+							"updateAt": "2022-11-15T11:37:46Z",
+							"isPublic": false
+						},
+						"4": {
+							"hint": "有效*",
+							"showHint": false,
+							"score": 20,
+							"updateAt": "2022-11-15T11:37:46Z",
+							"isPublic": false
+						},
+						"5": {
+							"hint": "有效",
+							"showHint": false,
+							"score": 20,
+							"updateAt": "2022-11-15T11:37:46Z",
+							"isPublic": false
+						},
+						"6": {
+							"hint": "有效",
+							"showHint": false,
+							"score": 20,
+							"updateAt": "2022-11-15T11:37:46Z",
+							"isPublic": false
+						},
+						"7": {
+							"hint": "有效*",
+							"showHint": false,
+							"score": 20,
+							"updateAt": "2022-11-16T05:01:13Z",
+							"isPublic": false
+						},
+						"8": {
+							"hint": "有效",
+							"showHint": false,
+							"score": 20,
+							"updateAt": "2022-11-15T11:37:46Z",
+							"isPublic": false
+						},
+						"9": {
+							"hint": "有效*",
+							"showHint": false,
+							"score": 20,
+							"updateAt": "2022-11-15T11:37:46Z",
+							"isPublic": false
+						},
+						"10": {
+							"hint": "有效*",
+							"showHint": false,
+							"score": 20,
+							"updateAt": "2022-11-15T11:37:46Z",
+							"isPublic": false
+						},
+						"11": {
+							"hint": "有效*",
+							"showHint": false,
+							"score": 20,
+							"updateAt": "2022-11-15T11:37:46Z",
+							"isPublic": false
+						},
+						"12": {
+							"hint": "无效*",
+							"showHint": false,
+							"score": 20,
+							"updateAt": "2022-11-15T11:37:46Z",
+							"isPublic": false
+						},
+						"13": {
+							"hint": "无效*",
+							"showHint": false,
+							"score": 20,
+							"updateAt": "2022-11-15T11:37:46Z",
+							"isPublic": false
+						},
+						"14": {
+							"hint": "无效",
+							"showHint": false,
+							"score": 20,
+							"updateAt": "2022-11-15T11:37:46Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "3\n",
+							"output": "March\n"
+						},
+						{
+							"name": "",
+							"input": "15\n",
+							"output": "None\n"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": true
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "985063502890082304",
+			"title": "输出月份名(*)",
+			"content": "请编写程序，输入月份数，输出对应的英文月份名。\n\n<table>\n<tr>\n<td align=\"center\"><b>月份数</b></td>\n<td align=\"center\"><b>月份名</b></td>\n</tr>\n<tr>\n<td align=\"center\">1</td>\n<td align=\"center\">January</td>\n</tr>\n<tr>\n<td align=\"center\">2</td>\n<td align=\"center\">February</td>\n</tr>\n<tr>\n<td align=\"center\">3</td>\n<td align=\"center\">March</td>\n</tr>\n<tr>\n<td align=\"center\">4</td>\n<td align=\"center\">April</td>\n</tr>\n<tr>\n<td align=\"center\">5</td>\n<td align=\"center\">May</td>\n</tr>\n<tr>\n<td align=\"center\">6</td>\n<td align=\"center\">June</td>\n</tr>\n<tr>\n<td align=\"center\">7</td>\n<td align=\"center\">July</td>\n</tr>\n<tr>\n<td align=\"center\">8</td>\n<td align=\"center\">August</td>\n</tr>\n<tr>\n<td align=\"center\">9</td>\n<td align=\"center\">September</td>\n</tr>\n<tr>\n<td align=\"center\">10</td>\n<td align=\"center\">October</td>\n</tr>\n<tr>\n<td align=\"center\">11</td>\n<td align=\"center\">November</td>\n</tr>\n<tr>\n<td align=\"center\">12</td>\n<td align=\"center\">December</td>\n</tr>\n</table>\n\n#### 输入格式\n> m\n\n#### 输出格式\n> 若 m 在 1 ~ 12 范围内，则输出月份名\n> 若 m 在 1 ~ 12 范围外，则输出None\n\n#### 输入样例1\n```in\n3\n\n```\n#### 输出样例1\n```out\nMarch\n\n```\n\n#### 输入样例2\n```in\n15\n\n```\n#### 输出样例2\n```out\nNone\n\n```\n",
+			"type": "PROGRAMMING",
+			"author": "李祥",
+			"authorOrganization": {
+				"id": "135",
+				"name": "湖北经济学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "67",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "68",
+							"name": "if-else",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "67",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "69",
+							"name": "switch",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 39,
+			"submitCount": 101,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1593399727973060608",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "63737a0a3dc6570b5304e465",
+					"answer": "#include <stdio.h>\n\nvoid ShowNameMonthEng(int month);\n\nint main()\n{\n\tint m;\n\tscanf(\"%d\", &m);\n\tShowNameMonthEng(m);\n\tputchar('\\n');\n\treturn 0;\n}\n\nvoid ShowNameMonthEng(int month)\n{\n\tswitch (month)\n\t{\n\tcase 1:\n\t\tprintf(\"January\");\n\t\tbreak;\n\tcase 2:\n\t\tprintf(\"February\");\n\t\tbreak;\n\tcase 3:\n\t\tprintf(\"March\");\n\t\tbreak;\n\tcase 4:\n\t\tprintf(\"April\");\n\t\tbreak;\n\tcase 5:\n\t\tprintf(\"May\");\n\t\tbreak;\n\tcase 6:\n\t\tprintf(\"June\");\n\t\tbreak;\n\tcase 7:\n\t\tprintf(\"July\");\n\t\tbreak;\n\tcase 8:\n\t\tprintf(\"August\");\n\t\tbreak;\n\tcase 9:\n\t\tprintf(\"September\");\n\t\tbreak;\n\tcase 10:\n\t\tprintf(\"October\");\n\t\tbreak;\n\tcase 11:\n\t\tprintf(\"November\");\n\t\tbreak;\n\tcase 12:\n\t\tprintf(\"December\");\n\t\tbreak;\n\tdefault:\n\t\tprintf(\"None\");\n\t}\n}\n",
+					"answerCompiler": "GCC",
+					"useSpecialJudge": false,
+					"checkerCompiler": "GCC",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 6
+				}
+			},
+			"solution": "",
+			"description": "请编写程序，输入月份数，输出对应的英文月份名。\n\n<table>\n<tr>\n<td align=\"center\"><b>月份数</b></td>\n<td align=\"center\"><b>月份名</b></td>\n</tr>\n<tr>\n<td align=\"center\">1</td>\n<td align=\"center\">January</td>\n</tr>\n<tr>\n<td align=\"center\">2</td>\n<td align=\"center\">February</td>\n</tr>\n<tr>\n<td align=\"center\">3</td>\n<td align=\"center\">March</td>\n</tr>\n<tr>\n<td align=\"center\">4</td>\n<td align=\"center\">April</td>\n</tr>\n<tr>\n<td align=\"center\">5</td>\n<td align=\"center\">May</td>\n</tr>\n<tr>\n<td align=\"center\">6</td>\n<td align=\"center\">June</td>\n</tr>\n<tr>\n<td align=\"center\">7</td>\n<td align=\"center\">July</td>\n</tr>\n<tr>\n<td align=\"center\">8</td>\n<td align=\"center\">August</td>\n</tr>\n<tr>\n<td align=\"center\">9</td>\n<td align=\"center\">September</td>\n</tr>\n<tr>\n<td align=\"center\">10</td>\n<td align=\"center\">October</td>\n</tr>\n<tr>\n<td align=\"center\">11</td>\n<td align=\"center\">November</td>\n</tr>\n<tr>\n<td align=\"center\">12</td>\n<td align=\"center\">December</td>\n</tr>\n</table>\n\n#### 输入格式\n> m\n\n#### 输出格式\n> 若 m 在 1 ~ 12 范围内，则输出月份名\n> 若 m 在 1 ~ 12 范围外，则输出None\n\n#### 输入样例1\n```in\n3\n\n```\n#### 输出样例1\n```out\nMarch\n\n```\n\n#### 输入样例2\n```in\n15\n\n```\n#### 输出样例2\n```out\nNone\n\n```\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1593399728040169473",
+			"label": "B",
+			"score": 300,
+			"problemPoolIndex": 2,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"1": {
+							"hint": "等价于样例，大写字母",
+							"showHint": false,
+							"score": 100,
+							"updateAt": "2022-10-27T08:20:29Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "小写字母",
+							"showHint": false,
+							"score": 100,
+							"updateAt": "2022-10-27T08:20:29Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "其他字符",
+							"showHint": false,
+							"score": 100,
+							"updateAt": "2022-10-27T08:20:29Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "A",
+							"output": "a"
+						},
+						{
+							"name": "",
+							"input": "a",
+							"output": "a"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 8192,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1585535365241401344",
+			"title": "大写字母转换为小写",
+			"content": "用户输入一个字符，如果为大写字母，则输出小写字母；如果为其他字符，则原样输出。\n\n\n\n### 输入格式:\n\n输入一个字符。\n\n### 输出格式:\n\n对输入的大写字母输出其对应的小写字母，其他字符则原样输出。\n\n### 输入样例:\n\n例如：\n\n```in\nA\n```\n\n### 输出样例:\n\n例如：\n\n```out\na\n```\n### 输入样例:\n\n例如：\n\n```in\na\n```\n\n### 输出样例:\n\n例如：\n\n```out\na\n```\n\n",
+			"type": "PROGRAMMING",
+			"author": "王小凤",
+			"authorOrganization": {
+				"id": "84",
+				"name": "西北大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "64",
+							"name": "基本数据类型与表达式",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "65",
+							"name": "表达式",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 41,
+			"submitCount": 69,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1593399727973060608",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "635a3f4dee9ae64fae95be40",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "GCC",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "GCC",
+					"interactorProgram": "",
+					"testDataVersion": 5
+				}
+			},
+			"solution": "需要对输入的字符进行检查判断是否大写字母，如果是则输出其对应的小写字母，如果不是，则原样输出。",
+			"description": "用户输入一个字符，如果为大写字母，则输出小写字母；如果为其他字符，则原样输出。\n\n\n\n### 输入格式:\n\n输入一个字符。\n\n### 输出格式:\n\n对输入的大写字母输出其对应的小写字母，其他字符则原样输出。\n\n### 输入样例:\n\n例如：\n\n```in\nA\n```\n\n### 输出样例:\n\n例如：\n\n```out\na\n```\n### 输入样例:\n\n例如：\n\n```in\na\n```\n\n### 输出样例:\n\n例如：\n\n```out\na\n```\n\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1593399728040169474",
+			"label": "C",
+			"score": 300,
+			"problemPoolIndex": 3,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"1": {
+							"hint": "测试用例1：3 5 2",
+							"showHint": false,
+							"score": 75,
+							"updateAt": "2022-11-09T06:05:55Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "测试用例2：1 4 1",
+							"showHint": false,
+							"score": 75,
+							"updateAt": "2022-11-09T06:06:03Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "测试用例3：1 1 3",
+							"showHint": false,
+							"score": 75,
+							"updateAt": "2022-11-09T06:06:10Z",
+							"isPublic": false
+						},
+						"4": {
+							"hint": "测试用例4：1 1 225",
+							"showHint": false,
+							"score": 75,
+							"updateAt": "2022-11-09T06:06:15Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "3 5 2\n",
+							"output": "2\t7\t12\t17\t22\n4\t11\t18\t25\t32\n6\t15\t24\t33\t42\n2\t4\t25"
+						},
+						{
+							"name": "",
+							"input": "1 4 1\n",
+							"output": "1\t6\t11\t16\n0"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 8192,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1590018567452618752",
+			"title": "矩阵输出",
+			"content": "输出特殊格式的矩阵。\n\n### 输入格式:\n\n输入一行，给出3个整数：$$m$$、$$n$$和$$q$$，分别表示：\n1. 待输出矩阵的行数$$m$$；\n1. 待输出矩阵的列数$$n$$；\n1. 待输出矩阵中第1行第1列的数字$$q$$。\n\n### 输出格式:\n\n首先，输出$$m$$行$$n$$列的矩阵，要求：\n1. 第1列是公差为2的等差数列；\n1. 第$$i$$行是公差为$$2\\times i+3$$的等差数列。\n\n然后，在下一行输出第一个能被5整除的数的行号、列号及数值；若不存在这样的数值，则输出0\n\n### 输入样例1:\n```in\n3 5 2\n```\n\n### 输出样例1:\n```out\n2\t7\t12\t17\t22\n4\t11\t18\t25\t32\n6\t15\t24\t33\t42\n2\t4\t25\n```\n**注意**：列间用一个水平制表位相隔，最后一列后面没有制表位。\n### 输入样例2:\n```in\n1 4 1\n```\n### 输出样例2:\n```out\n1\t6\t11\t16\n0\n```\n**注意**：列间用一个水平制表位(\\t)相隔，最后一列后面没有制表位。",
+			"type": "PROGRAMMING",
+			"author": "阎鹏飞",
+			"authorOrganization": {
+				"id": "97",
+				"name": "太原理工大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "循环控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "73",
+							"name": "嵌套循环",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "64",
+							"name": "基本数据类型与表达式",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "66",
+							"name": "输入输出格式化控制",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 35,
+			"submitCount": 207,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1593399727973060608",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "636a887fff323b25150f2792",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "GCC",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "GCC",
+					"interactorProgram": "",
+					"testDataVersion": 54
+				}
+			},
+			"solution": "",
+			"description": "输出特殊格式的矩阵。\n\n### 输入格式:\n\n输入一行，给出3个整数：$$m$$、$$n$$和$$q$$，分别表示：\n1. 待输出矩阵的行数$$m$$；\n1. 待输出矩阵的列数$$n$$；\n1. 待输出矩阵中第1行第1列的数字$$q$$。\n\n### 输出格式:\n\n首先，输出$$m$$行$$n$$列的矩阵，要求：\n1. 第1列是公差为2的等差数列；\n1. 第$$i$$行是公差为$$2\\times i+3$$的等差数列。\n\n然后，在下一行输出第一个能被5整除的数的行号、列号及数值；若不存在这样的数值，则输出0\n\n### 输入样例1:\n```in\n3 5 2\n```\n\n### 输出样例1:\n```out\n2\t7\t12\t17\t22\n4\t11\t18\t25\t32\n6\t15\t24\t33\t42\n2\t4\t25\n```\n**注意**：列间用一个水平制表位相隔，最后一列后面没有制表位。\n### 输入样例2:\n```in\n1 4 1\n```\n### 输出样例2:\n```out\n1\t6\t11\t16\n0\n```\n**注意**：列间用一个水平制表位(\\t)相隔，最后一列后面没有制表位。",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1593399728040169475",
+			"label": "D",
+			"score": 300,
+			"problemPoolIndex": 4,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"8043": {
+							"hint": "",
+							"showHint": false,
+							"score": 300,
+							"updateAt": "2020-10-10T12:30:40Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "1 2 hello world!\n9 6 welcome to acm world",
+							"output": "he\n\nto acm"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 8192,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1314906125914398720",
+			"title": "字符串输入输出练习",
+			"content": "输入起始位置m、长度l及字符串s，要求输出字符串s从第m个字符开始的长度为l的子串。\n\n### 输入格式:\n\n测试数据有多组，处理到文件尾。\n每组测试数据输入一行，首先是以一个空格间隔的两个整数m、l，分别表示起始位置和长度，然后在一个空格之后是一个字符串s（长度不超过80，可能包含空格）。测试数据保证取得的结果字符串至少包含一个字符。\n\n### 输出格式:\n\n对于每组测试，输出字符串s从第m个字符开始的长度为l的子串（若长度不足l，则只需输出从第m个字符开始到最后一个字符结束的子串）。每两组测试数据之间留一个空行。\n\n### 输入样例:\n\n```in\n1 2 hello world!\n9 6 welcome to acm world\n```\n\n### 输出样例:\n\n```out\nhe\n\nto acm\n```\n\n### 来源：\n黄龙军, 等. 大学生程序设计竞赛入门—C/C++程序设计（微课视频版）, 北京:清华大学出版社, 2020.11. ISBN:9787302564744\t",
+			"type": "PROGRAMMING",
+			"author": "黄龙军",
+			"authorOrganization": {
+				"id": "170",
+				"name": "绍兴文理学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 2,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "78",
+							"name": "数组",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "80",
+							"name": "字符串",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 31,
+			"submitCount": 154,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1593399727973060608",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5f81a970f7f11e00069b24e4",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "GCC",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 3
+				}
+			},
+			"solution": "",
+			"description": "输入起始位置m、长度l及字符串s，要求输出字符串s从第m个字符开始的长度为l的子串。\n\n### 输入格式:\n\n测试数据有多组，处理到文件尾。\n每组测试数据输入一行，首先是以一个空格间隔的两个整数m、l，分别表示起始位置和长度，然后在一个空格之后是一个字符串s（长度不超过80，可能包含空格）。测试数据保证取得的结果字符串至少包含一个字符。\n\n### 输出格式:\n\n对于每组测试，输出字符串s从第m个字符开始的长度为l的子串（若长度不足l，则只需输出从第m个字符开始到最后一个字符结束的子串）。每两组测试数据之间留一个空行。\n\n### 输入样例:\n\n```in\n1 2 hello world!\n9 6 welcome to acm world\n```\n\n### 输出样例:\n\n```out\nhe\n\nto acm\n```\n\n### 来源：\n黄龙军, 等. 大学生程序设计竞赛入门—C/C++程序设计（微课视频版）, 北京:清华大学出版社, 2020.11. ISBN:9787302564744\t",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1593399728040169476",
+			"label": "E",
+			"score": 300,
+			"problemPoolIndex": 5,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"20211202": {
+							"hint": "",
+							"showHint": false,
+							"score": 300,
+							"updateAt": "2021-12-17T15:56:28Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "3\n2021\n2022\n2100",
+							"output": "20211202\nnone\nnone"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 8192,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1466430406186815488",
+			"title": "美好日子",
+			"content": "据说2021年12月2日是一个美好日子，因为这是一个完全对称日！这里认为一个美好日子是一个共8位数字的完全对称日（例如20211202），其中年份占4位，月份、日份都是2位。对于给定的年份，请判断该年是否存在美好日子。\n\n### 输入格式:\n\n首先输入一个正整数T（<8000）表示测试数据的组数，然后输入T组测试数据。对于每组测试数据，输入一个年份y（2020<y<10000）。\n\n### 输出格式:\n\n对于每组测试数据，输出一行。若年份y存在美好日子，则输出该日期，否则输出“none”。引号不必输出。\n\n### 输入样例:\n\n```in\n3\n2021\n2022\n2100\n```\n\n### 输出样例:\n\n```out\n20211202\nnone\nnone\n```\n\n### 说明:\n2021年12月2日，顺利接娃放学，晚饭没获差评。谨以此题纪念这个美好日子。",
+			"type": "PROGRAMMING",
+			"author": "黄龙军",
+			"authorOrganization": {
+				"id": "170",
+				"name": "绍兴文理学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 2,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "循环控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "71",
+							"name": "for",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "78",
+							"name": "数组",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "79",
+							"name": "一维数组",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "924247594312409088",
+							"name": "Python程序设计",
+							"isLeaf": false,
+							"enName": "Python Programming"
+						},
+						{
+							"id": "924248495018221568",
+							"name": "循环结构",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "924249775870582784",
+							"name": "遍历循环for",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "924247594312409088",
+							"name": "Python程序设计",
+							"isLeaf": false,
+							"enName": "Python Programming"
+						},
+						{
+							"id": "924247889578827776",
+							"name": "组合数据类型",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "924249261695049728",
+							"name": "列表",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 32,
+			"submitCount": 115,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1593399727973060608",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "61bcb32ccc8d047d05a18cf4",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "GCC",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 2
+				}
+			},
+			"solution": "",
+			"description": "据说2021年12月2日是一个美好日子，因为这是一个完全对称日！这里认为一个美好日子是一个共8位数字的完全对称日（例如20211202），其中年份占4位，月份、日份都是2位。对于给定的年份，请判断该年是否存在美好日子。\n\n### 输入格式:\n\n首先输入一个正整数T（<8000）表示测试数据的组数，然后输入T组测试数据。对于每组测试数据，输入一个年份y（2020<y<10000）。\n\n### 输出格式:\n\n对于每组测试数据，输出一行。若年份y存在美好日子，则输出该日期，否则输出“none”。引号不必输出。\n\n### 输入样例:\n\n```in\n3\n2021\n2022\n2100\n```\n\n### 输出样例:\n\n```out\n20211202\nnone\nnone\n```\n\n### 说明:\n2021年12月2日，顺利接娃放学，晚饭没获差评。谨以此题纪念这个美好日子。",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1593399728040169477",
+			"label": "F",
+			"score": 300,
+			"problemPoolIndex": 6,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"1253": {
+							"hint": "",
+							"showHint": false,
+							"score": 300,
+							"updateAt": "2021-08-22T07:43:12Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "3\n15 16\n2 3\n512 511",
+							"output": "Yes\nNo\nYes"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 8192,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1429348337564860416",
+			"title": "海明悬崖",
+			"content": "在信息编码中，两个二进制编码的对应位取值不同的数量称为这两个编码的海明距离。例如：10101和00110从第一位开始依次有第一位、第四、五位不同，则海明距离为3。\n\n若两个二进制编码的每一位都不相同，则这两个编码产生了海明悬崖(Hamming Cliff)。例如，15的二进制编码为01111，16的二进制编码为10000，则产生“Hamming Cliff”。\n\n任务：给你两个正整数，请你判断是否会产生“Hamming Cliff”。\n\n### 输入格式:\n\n输入数据的第一行为一个正整数T, 表示测试数据的组数。然后是T组测试数据(1<=T<=30)。\n每组测试数据输入两个正整数n,m（1<=n<=$$2^{31}$$-1）。 \n说明:若两个二进制编码长度不等，则在较短的编码前面添加前导0。\n\n### 输出格式:\n\n对于每组测试数据，若产生“Hamming Cliff”输出“Yes”，否则输出“No”。引号不必输出。\n\n### 输入样例:\n\n```in\n3\n15 16\n2 3\n512 511\n```\n\n### 输出样例:\n\n```out\nYes\nNo\nYes\n```\n",
+			"type": "PROGRAMMING",
+			"author": "黄龙军",
+			"authorOrganization": {
+				"id": "170",
+				"name": "绍兴文理学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 2,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "78",
+							"name": "数组",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "79",
+							"name": "一维数组",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 23,
+			"submitCount": 90,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1593399727973060608",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "61220010e61ce94930f44198",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "GCC",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 1
+				}
+			},
+			"solution": "",
+			"description": "在信息编码中，两个二进制编码的对应位取值不同的数量称为这两个编码的海明距离。例如：10101和00110从第一位开始依次有第一位、第四、五位不同，则海明距离为3。\n\n若两个二进制编码的每一位都不相同，则这两个编码产生了海明悬崖(Hamming Cliff)。例如，15的二进制编码为01111，16的二进制编码为10000，则产生“Hamming Cliff”。\n\n任务：给你两个正整数，请你判断是否会产生“Hamming Cliff”。\n\n### 输入格式:\n\n输入数据的第一行为一个正整数T, 表示测试数据的组数。然后是T组测试数据(1<=T<=30)。\n每组测试数据输入两个正整数n,m（1<=n<=$$2^{31}$$-1）。 \n说明:若两个二进制编码长度不等，则在较短的编码前面添加前导0。\n\n### 输出格式:\n\n对于每组测试数据，若产生“Hamming Cliff”输出“Yes”，否则输出“No”。引号不必输出。\n\n### 输入样例:\n\n```in\n3\n15 16\n2 3\n512 511\n```\n\n### 输出样例:\n\n```out\nYes\nNo\nYes\n```\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1593399728040169478",
+			"label": "G",
+			"score": 300,
+			"problemPoolIndex": 7,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"gsdf": {
+							"hint": "",
+							"showHint": false,
+							"score": 300,
+							"updateAt": "2022-10-27T04:54:05Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "2\n10 1\n20 20 80 80 10 10 10 40 40 60\n10 2\n20 20 80 80 10 10 10 40 40 60",
+							"output": "35.00\n31.67"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 8192,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1585490141660078080",
+			"title": "歌手得分",
+			"content": "在歌手大赛中，有n个评委为参赛的歌手打分，分数为0~100分。歌手最后得分为去掉$m$个最高分和$m$个最低分后，剩余的$n-2m$个分数的平均值。\n\n### 输入格式:\n\n输入数据的第一行为一个正整数$T$，表示测试数据的组数，然后是$T$组测试数据。对于每组测试数据，第一行输入两个整数$n, m(3<n<100, m<n/2)$，含义如上；第二行输入$n$个整数。\n\n### 输出格式:\n\n对于每组测试数据，输出一行，包含一个实数，表示歌手的最后得分。结果保留两位小数。\n\n### 输入样例:\n\n```in\n2\n10 1\n20 20 80 80 10 10 10 40 40 60\n10 2\n20 20 80 80 10 10 10 40 40 60\n```\n\n### 输出样例:\n\n```out\n35.00\n31.67\n```\n",
+			"type": "PROGRAMMING",
+			"author": "黄龙军",
+			"authorOrganization": {
+				"id": "170",
+				"name": "绍兴文理学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 2,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "78",
+							"name": "数组",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "79",
+							"name": "一维数组",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 28,
+			"submitCount": 69,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1593399727973060608",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "635a0eed7815ff4379f20b93",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "GCC",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "GCC",
+					"interactorProgram": "",
+					"testDataVersion": 6
+				}
+			},
+			"solution": "",
+			"description": "在歌手大赛中，有n个评委为参赛的歌手打分，分数为0~100分。歌手最后得分为去掉$m$个最高分和$m$个最低分后，剩余的$n-2m$个分数的平均值。\n\n### 输入格式:\n\n输入数据的第一行为一个正整数$T$，表示测试数据的组数，然后是$T$组测试数据。对于每组测试数据，第一行输入两个整数$n, m(3<n<100, m<n/2)$，含义如上；第二行输入$n$个整数。\n\n### 输出格式:\n\n对于每组测试数据，输出一行，包含一个实数，表示歌手的最后得分。结果保留两位小数。\n\n### 输入样例:\n\n```in\n2\n10 1\n20 20 80 80 10 10 10 40 40 60\n10 2\n20 20 80 80 10 10 10 40 40 60\n```\n\n### 输出样例:\n\n```out\n35.00\n31.67\n```\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		}
+	]

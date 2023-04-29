@@ -1,0 +1,1763 @@
+[
+		{
+			"id": "1590883382295392256",
+			"label": "",
+			"score": 1,
+			"problemPoolIndex": 1,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1003656104566480896",
+			"title": "执行以下程序段后，`x`的值为0，`y`的值为1。",
+			"content": "执行以下程序段后，`x`的值为0，`y`的值为1。\n```\nint x, y;\nif (x = 0) y = 0;\nelse y = 1;\n```\n ~@[](1)",
+			"type": "TRUE_OR_FALSE",
+			"author": "颜晖",
+			"authorOrganization": {
+				"id": "2",
+				"name": "浙大城市学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "67",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "68",
+							"name": "if-else",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1590883382228283392",
+			"judgeConfig": {
+				"trueOrFalseJudgeConfig": {
+					"answer": "TRUE"
+				}
+			},
+			"solution": "",
+			"description": "执行以下程序段后，`x`的值为0，`y`的值为1。\n```\nint x, y;\nif (x = 0) y = 0;\nelse y = 1;\n```\n ",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1590883382295392257",
+			"label": "",
+			"score": 1,
+			"problemPoolIndex": 2,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1024837410332393472",
+			"title": "执行以下程序段，sum的值是1.5。",
+			"content": "执行以下程序段，sum的值是1.5。\n```\nint i, sum;\nsum = 0;\nfor (i = 1; i <= 2; i++){\n    sum = sum + 1.0/i;\n}\n```\n  ~@[](1)",
+			"type": "TRUE_OR_FALSE",
+			"author": "颜晖",
+			"authorOrganization": {
+				"id": "2",
+				"name": "浙大城市学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "循环控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "71",
+							"name": "for",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1590883382228283392",
+			"judgeConfig": {
+				"trueOrFalseJudgeConfig": {
+					"answer": "FALSE"
+				}
+			},
+			"solution": "",
+			"description": "执行以下程序段，sum的值是1.5。\n```\nint i, sum;\nsum = 0;\nfor (i = 1; i <= 2; i++){\n    sum = sum + 1.0/i;\n}\n```\n  ",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1590883382295392258",
+			"label": "",
+			"score": 1,
+			"problemPoolIndex": 3,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1030718866018963456",
+			"title": "以下C语言表达式的值为“真”。",
+			"content": " 以下C语言表达式的值为“真”。\n ```\n'D' - 'A' == 'd' - 'a'\n```\n ~@[](1)",
+			"type": "TRUE_OR_FALSE",
+			"author": "颜晖",
+			"authorOrganization": {
+				"id": "2",
+				"name": "浙大城市学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "64",
+							"name": "基本数据类型与表达式",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "65",
+							"name": "表达式",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1590883382228283392",
+			"judgeConfig": {
+				"trueOrFalseJudgeConfig": {
+					"answer": "TRUE"
+				}
+			},
+			"solution": "",
+			"description": " 以下C语言表达式的值为“真”。\n ```\n'D' - 'A' == 'd' - 'a'\n```\n ",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1590883382295392259",
+			"label": "",
+			"score": 2,
+			"problemPoolIndex": 4,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1346063700595122176",
+			"title": "已知'A'的ASCII代码值为65，则'D'的ASCII代码值为68",
+			"content": "已知'A'的ASCII代码值为65，则'D'的ASCII代码值为68\n~@[](2)",
+			"type": "TRUE_OR_FALSE",
+			"author": "cjl",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "78",
+							"name": "数组",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "80",
+							"name": "字符串",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1590883382228283392",
+			"judgeConfig": {
+				"trueOrFalseJudgeConfig": {
+					"answer": "TRUE"
+				}
+			},
+			"solution": "",
+			"description": "已知'A'的ASCII代码值为65，则'D'的ASCII代码值为68",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1590883382295392260",
+			"label": "",
+			"score": 2,
+			"problemPoolIndex": 5,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1346064837498634240",
+			"title": "假定X和y为int型，则执行x=2; y=x+3/2; 后，y的值是3",
+			"content": "假定X和y为int型，则执行x=2; y=x+3/2; 后，y的值是3\n~@[](2)",
+			"type": "TRUE_OR_FALSE",
+			"author": "cjl",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "64",
+							"name": "基本数据类型与表达式",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "65",
+							"name": "表达式",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1590883382228283392",
+			"judgeConfig": {
+				"trueOrFalseJudgeConfig": {
+					"answer": "TRUE"
+				}
+			},
+			"solution": "",
+			"description": "假定X和y为int型，则执行x=2; y=x+3/2; 后，y的值是3",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1590883382295392261",
+			"label": "",
+			"score": 2,
+			"problemPoolIndex": 1,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"fillInTheBlankProblemConfig": {
+					"scores": [
+						2
+					],
+					"blankLength": 4,
+					"blanks": [
+						{
+							"index": 25,
+							"multipleLine": false,
+							"length": 4,
+							"choices": {},
+							"maxDisplayChoicesPerLine": 0
+						}
+					],
+					"choiceBlank": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "991668010194337792",
+			"title": "当a=1,b=2,c=3时，下面打印语句的输出是 @ ",
+			"content": "当a=1,b=2,c=3时，下面打印语句的输出是 @@[](2) \n```\nprintf(“%d#%d#”, (a, b), a>b?(c=4):(c=5) );\n```",
+			"type": "FILL_IN_THE_BLANK",
+			"author": "徐镜春",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 2,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "64",
+							"name": "基本数据类型与表达式",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "66",
+							"name": "输入输出格式化控制",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "64",
+							"name": "基本数据类型与表达式",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "65",
+							"name": "表达式",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1590883382228283392",
+			"judgeConfig": {
+				"fillInTheBlankJudgeConfig": {
+					"answers": [
+						{
+							"availableAnswers": [
+								"2#5#"
+							],
+							"groupId": 0
+						}
+					]
+				}
+			},
+			"solution": "",
+			"description": "当a=1,b=2,c=3时，下面打印语句的输出是  \n```\nprintf(“%d#%d#”, (a, b), a>b?(c=4):(c=5) );\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1590883382295392262",
+			"label": "",
+			"score": 3,
+			"problemPoolIndex": 2,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"fillInTheBlankProblemConfig": {
+					"scores": [
+						3
+					],
+					"blankLength": 4,
+					"blanks": [
+						{
+							"index": 11,
+							"multipleLine": false,
+							"length": 4,
+							"choices": {},
+							"maxDisplayChoicesPerLine": 0
+						}
+					],
+					"choiceBlank": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "992224342769156096",
+			"title": "下列程序的输出结果是 @ 。",
+			"content": "下列程序的输出结果是 @@[](3) 。\n\n```\nvoid swap(int x, int y)\n{  \n    int  t;\n    t=x; x=y; y=t;\n    return;\n}\nvoid main(void)\n{  \n        int a=3, b=2;\n        swap(a, b);\n        printf(\"%d#%d#\", a, b);\n        return;\n}\n\n```\n",
+			"type": "FILL_IN_THE_BLANK",
+			"author": "徐镜春",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 2,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "74",
+							"name": "函数与程序结构",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "75",
+							"name": "函数定义与调用",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1590883382228283392",
+			"judgeConfig": {
+				"fillInTheBlankJudgeConfig": {
+					"answers": [
+						{
+							"availableAnswers": [
+								"3#2#"
+							],
+							"groupId": 0
+						}
+					]
+				}
+			},
+			"solution": "",
+			"description": "下列程序的输出结果是  。\n\n```\nvoid swap(int x, int y)\n{  \n    int  t;\n    t=x; x=y; y=t;\n    return;\n}\nvoid main(void)\n{  \n        int a=3, b=2;\n        swap(a, b);\n        printf(\"%d#%d#\", a, b);\n        return;\n}\n\n```\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1590883382295392263",
+			"label": "",
+			"score": 4,
+			"problemPoolIndex": 3,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"fillInTheBlankProblemConfig": {
+					"scores": [
+						2,
+						2
+					],
+					"blankLength": 5,
+					"blanks": [
+						{
+							"index": 138,
+							"multipleLine": false,
+							"length": 5,
+							"choices": {},
+							"maxDisplayChoicesPerLine": 0
+						},
+						{
+							"index": 211,
+							"multipleLine": false,
+							"length": 4,
+							"choices": {},
+							"maxDisplayChoicesPerLine": 0
+						}
+					],
+					"choiceBlank": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1187944839771090944",
+			"title": "以下程序从键盘读入20个数据到数组中，统计其中正数的个数，并计算它们之和。请填空。",
+			"content": "以下程序从键盘读入20个数据到数组中，统计其中正数的个数，并计算它们之和。请填空。\n```\nint main(void)\n{ int i,a[20], sum, count;\n  sum=count=0;\n  for(i=0; i<20; i++)  scanf(\"%d\", @@[](2) );\n  for (i=0; i<20; i++)\n     if(a[i]>0)\n     {  count++;\n        sum+=@@[](2); \n     }\n   printf(\"sum=%d,count=%d\\n\",sum,count);\t\n   return 0;\t\t\n}\n```\n\n",
+			"type": "FILL_IN_THE_BLANK",
+			"author": "王俊玲",
+			"authorOrganization": {
+				"id": "46",
+				"name": "集美大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "78",
+							"name": "数组",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "79",
+							"name": "一维数组",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1590883382228283392",
+			"judgeConfig": {
+				"fillInTheBlankJudgeConfig": {
+					"answers": [
+						{
+							"availableAnswers": [
+								"&a[i]"
+							],
+							"groupId": 0
+						},
+						{
+							"availableAnswers": [
+								"a[i]"
+							],
+							"groupId": 0
+						}
+					]
+				}
+			},
+			"solution": "",
+			"description": "以下程序从键盘读入20个数据到数组中，统计其中正数的个数，并计算它们之和。请填空。\n```\nint main(void)\n{ int i,a[20], sum, count;\n  sum=count=0;\n  for(i=0; i<20; i++)  scanf(\"%d\",  );\n  for (i=0; i<20; i++)\n     if(a[i]>0)\n     {  count++;\n        sum+=; \n     }\n   printf(\"sum=%d,count=%d\\n\",sum,count);\t\n   return 0;\t\t\n}\n```\n\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1590883382295392264",
+			"label": "",
+			"score": 4,
+			"problemPoolIndex": 4,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"fillInTheBlankProblemConfig": {
+					"scores": [
+						2,
+						2
+					],
+					"blankLength": 1,
+					"blanks": [
+						{
+							"index": 254,
+							"multipleLine": false,
+							"length": 1,
+							"choices": {},
+							"maxDisplayChoicesPerLine": 0
+						},
+						{
+							"index": 273,
+							"multipleLine": false,
+							"length": 1,
+							"choices": {},
+							"maxDisplayChoicesPerLine": 0
+						}
+					],
+					"choiceBlank": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1188065197807390720",
+			"title": "写出下面程序的运行结果。",
+			"content": "写出下面程序的运行结果。\n```\n#include <stdio.h>\nint main(void)\n{  float s[6]={1, 3, 5, 7, 9};\n   float x;\n   int i;\n   scanf(“%f”, &x);\n   for (i=4 ; i>=0; i--)\n      if(s[i]>x)  s[i+1]=s[i];\n      else break;\n   printf(\"%d \\n\",i+1);\n   return 0;\n}\n```\n(1) 如果输入4，则输出@@[](2) 。   \n(2) 如果输入5，则输出@@[](2) 。\n",
+			"type": "FILL_IN_THE_BLANK",
+			"author": "王俊玲",
+			"authorOrganization": {
+				"id": "46",
+				"name": "集美大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "循环控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "71",
+							"name": "for",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "78",
+							"name": "数组",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "79",
+							"name": "一维数组",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1590883382228283392",
+			"judgeConfig": {
+				"fillInTheBlankJudgeConfig": {
+					"answers": [
+						{
+							"availableAnswers": [
+								"2"
+							],
+							"groupId": 0
+						},
+						{
+							"availableAnswers": [
+								"3"
+							],
+							"groupId": 0
+						}
+					]
+				}
+			},
+			"solution": "",
+			"description": "写出下面程序的运行结果。\n```\n#include <stdio.h>\nint main(void)\n{  float s[6]={1, 3, 5, 7, 9};\n   float x;\n   int i;\n   scanf(“%f”, &x);\n   for (i=4 ; i>=0; i--)\n      if(s[i]>x)  s[i+1]=s[i];\n      else break;\n   printf(\"%d \\n\",i+1);\n   return 0;\n}\n```\n(1) 如果输入4，则输出 。   \n(2) 如果输入5，则输出 。\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1590883382295392265",
+			"label": "",
+			"score": 3,
+			"problemPoolIndex": 5,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"fillInTheBlankProblemConfig": {
+					"scores": [
+						3
+					],
+					"blankLength": 11,
+					"blanks": [
+						{
+							"index": 33,
+							"multipleLine": false,
+							"length": 11,
+							"choices": {},
+							"maxDisplayChoicesPerLine": 0
+						}
+					],
+					"choiceBlank": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "992229949559566336",
+			"title": "若输入：how are you? <回车>，以下程序的输出结果是 @ 。",
+			"content": "若输入：how are you? <回车>，以下程序的输出结果是 @@[](3) 。\n\n```\n#include <stdio.h>\nvoid main(void )\n{   \n    int word;\n    char ch;    \n    word=0;\n    while( (ch=getchar()) != '?' ){\n        if(ch==' ') word=0;\n        else if(word==0){\n             word=1;\n             if(ch<='z'&&ch>='a') ch=ch-'a'+'A';\n        }\n        putchar(ch);\n    }\n    return;\n}\n\n```",
+			"type": "FILL_IN_THE_BLANK",
+			"author": "徐镜春",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 3,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "循环控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "72",
+							"name": "while和do-while",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "67",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "68",
+							"name": "if-else",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1590883382228283392",
+			"judgeConfig": {
+				"fillInTheBlankJudgeConfig": {
+					"answers": [
+						{
+							"availableAnswers": [
+								"How Are You"
+							],
+							"groupId": 0
+						}
+					]
+				}
+			},
+			"solution": "",
+			"description": "若输入：how are you? <回车>，以下程序的输出结果是  。\n\n```\n#include <stdio.h>\nvoid main(void )\n{   \n    int word;\n    char ch;    \n    word=0;\n    while( (ch=getchar()) != '?' ){\n        if(ch==' ') word=0;\n        else if(word==0){\n             word=1;\n             if(ch<='z'&&ch>='a') ch=ch-'a'+'A';\n        }\n        putchar(ch);\n    }\n    return;\n}\n\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1590883382295392266",
+			"label": "",
+			"score": 10,
+			"problemPoolIndex": 1,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"codeCompletionProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "整数解",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2022-11-02T12:17:38Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "实数解, 舍",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2022-11-02T12:17:38Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "实数解, 舍",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2022-11-02T12:17:38Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "实数解, 入",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2022-11-02T12:17:38Z",
+							"isPublic": false
+						},
+						"4": {
+							"hint": "实数解, 入",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2022-11-02T12:17:38Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "15 2.5 1.5\n",
+							"output": "3.75\n"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": true
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "5963",
+			"title": "相遇问题",
+			"content": "甲乙两人相向而行，已知两人之间的距离和各自的行进速度，请问需要多长时间两人才能相遇？\n\n#### 函数原型\n\n```c\ndouble Encounter(double distance, double speed1, double speed2);\n```\n\n说明：参数 `distance`、`speed1` 和 `speed2` 均为正数，分别为距离(km)和两人的速度(km/h)。函数值为时间(h)。\n\n#### 裁判程序\n\n```c\n#include <stdio.h>\n\ndouble Encounter(double distance, double speed1, double speed2);\n\nint main()\n{\n\tdouble d, s1, s2, t;\n\tscanf(\"%lg%lg%lg\", &d, &s1, &s2);\n\tt = Encounter(d, s1, s2);\n\tprintf(\"%.2f\\n\", t);\n\treturn 0;\n}\n\n/* 你提交的代码将被嵌在这里 */\n```\n\n#### 输入样例\n```in\n15 2.5 1.5\n\n```\n#### 输出样例\n```out\n3.75\n\n```\n",
+			"type": "CODE_COMPLETION",
+			"author": "李祥",
+			"authorOrganization": {
+				"id": "135",
+				"name": "湖北经济学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "74",
+							"name": "函数与程序结构",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "75",
+							"name": "函数定义与调用",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "GCC",
+			"acceptCount": 40,
+			"submitCount": 60,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1590883382228283392",
+			"judgeConfig": {
+				"codeCompletionJudgeConfig": {
+					"testDataId": "63625fe27815ff4379f25189",
+					"answer": "double Encounter(double distance, double speed1, double speed2)\n{\n\treturn distance / (speed1 + speed2);\n}\n",
+					"code": "#include <stdio.h>\n\ndouble Encounter(double distance, double speed1, double speed2);\n\nint main()\n{\n\tdouble d, s1, s2, t;\n\twhile (~scanf(\"%lg%lg%lg\", &d, &s1, &s2))\n\t{\n\t\tt = Encounter(d, s1, s2);\n\t\tprintf(\"%.2f\\n\", t);\n\t}\n\treturn 0;\n}\n\n@@@\n",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 3
+				}
+			},
+			"solution": "",
+			"description": "甲乙两人相向而行，已知两人之间的距离和各自的行进速度，请问需要多长时间两人才能相遇？\n\n#### 函数原型\n\n```c\ndouble Encounter(double distance, double speed1, double speed2);\n```\n\n说明：参数 `distance`、`speed1` 和 `speed2` 均为正数，分别为距离(km)和两人的速度(km/h)。函数值为时间(h)。\n\n#### 裁判程序\n\n```c\n#include <stdio.h>\n\ndouble Encounter(double distance, double speed1, double speed2);\n\nint main()\n{\n\tdouble d, s1, s2, t;\n\tscanf(\"%lg%lg%lg\", &d, &s1, &s2);\n\tt = Encounter(d, s1, s2);\n\tprintf(\"%.2f\\n\", t);\n\treturn 0;\n}\n\n/* 你提交的代码将被嵌在这里 */\n```\n\n#### 输入样例\n```in\n15 2.5 1.5\n\n```\n#### 输出样例\n```out\n3.75\n\n```\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1590883382295392267",
+			"label": "",
+			"score": 5,
+			"problemPoolIndex": 2,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"codeCompletionProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "都为零",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2022-11-09T21:20:25Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "零和非零",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2022-11-09T21:20:25Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "非零和零",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2022-11-09T21:20:25Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "倍数",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2022-11-09T21:20:25Z",
+							"isPublic": false
+						},
+						"4": {
+							"hint": "非倍数",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2022-11-09T21:20:25Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "36 -18",
+							"output": "Yes"
+						},
+						{
+							"name": "",
+							"input": "-27 12",
+							"output": "No"
+						},
+						{
+							"name": "",
+							"input": "0 0",
+							"output": "Yes"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1070942143770443776",
+			"title": "判断倍数",
+			"content": "请编写函数，判断一个整数是另一个整数的倍数。\n\n#### 函数原型\n\n```c\nint IsMultiple(int x, int y);\n```\n\n说明：参数 `x` 和 `y` 是两个任意整数。若 `x` 是 `y` 的倍数，则函数值为 1(真)，否则为 0(假)。\n\n#### 裁判程序\n\n```c\n#include <stdio.h>\n\nint IsMultiple(int x, int y);\n\nint main()\n{\n    int x, y;\n    scanf(\"%d%d\", &x, &y);\n    if (IsMultiple(x, y))\n    {\n        puts(\"Yes\");\n    }\n    else\n    {\n        puts(\"No\");\n    }\n    return 0;\n}\n\n/* 你提交的代码将被嵌在这里 */\n```\n\n#### 输入样例1\n```in\n36 -18\n```\n#### 输出样例1\n```out\nYes\n```\n#### 输入样例2\n```in\n-27 12\n```\n#### 输出样例2\n```out\nNo\n```\n#### 输入样例3\n```in\n0 0\n```\n#### 输出样例3\n```out\nYes\n```\n",
+			"type": "CODE_COMPLETION",
+			"author": "李祥",
+			"authorOrganization": {
+				"id": "135",
+				"name": "湖北经济学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "74",
+							"name": "函数与程序结构",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "75",
+							"name": "函数定义与调用",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "67",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "68",
+							"name": "if-else",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "GCC",
+			"acceptCount": 39,
+			"submitCount": 287,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1590883382228283392",
+			"judgeConfig": {
+				"codeCompletionJudgeConfig": {
+					"testDataId": "636c199939c4615de516abc3",
+					"answer": "",
+					"code": "#include <stdio.h>\n\nint IsMultiple(int x, int y);\n\nint main()\n{\n\tint x, y;\n\twhile (~scanf(\"%d%d\", &x, &y))\n\t{\n\t\tputs(IsMultiple(x, y) ? \"Yes\" : \"No\");\n\t}\n\treturn 0;\n}\n\n@@@\n",
+					"useSpecialJudge": false,
+					"checkerCompiler": "GCC",
+					"checkerProgram": "",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 2
+				}
+			},
+			"solution": "",
+			"description": "请编写函数，判断一个整数是另一个整数的倍数。\n\n#### 函数原型\n\n```c\nint IsMultiple(int x, int y);\n```\n\n说明：参数 `x` 和 `y` 是两个任意整数。若 `x` 是 `y` 的倍数，则函数值为 1(真)，否则为 0(假)。\n\n#### 裁判程序\n\n```c\n#include <stdio.h>\n\nint IsMultiple(int x, int y);\n\nint main()\n{\n    int x, y;\n    scanf(\"%d%d\", &x, &y);\n    if (IsMultiple(x, y))\n    {\n        puts(\"Yes\");\n    }\n    else\n    {\n        puts(\"No\");\n    }\n    return 0;\n}\n\n/* 你提交的代码将被嵌在这里 */\n```\n\n#### 输入样例1\n```in\n36 -18\n```\n#### 输出样例1\n```out\nYes\n```\n#### 输入样例2\n```in\n-27 12\n```\n#### 输出样例2\n```out\nNo\n```\n#### 输入样例3\n```in\n0 0\n```\n#### 输出样例3\n```out\nYes\n```\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1590883382295392268",
+			"label": "",
+			"score": 10,
+			"problemPoolIndex": 3,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"codeCompletionProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"ksm": {
+							"hint": "1",
+							"showHint": false,
+							"score": 10,
+							"updateAt": "2022-11-02T00:39:20Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "2 3\n2 10",
+							"output": "8\n1024"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"tools": [
+						"MAKE"
+					],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1587363595560706048",
+			"title": "快速幂",
+			"content": "要求实现一个递归函数，高效求$a^b(1≤a,b≤62, a^b<2^{63})$。\n\n### 函数接口定义：\n```c++\nlong long int pow(int a, int b);\n```\n其中`a` 、`b` 是用户传入的参数。\n\n### 裁判测试程序样例：\n```c++\n#include<iostream>\nusing namespace std;\n\nlong long int pow(int a, int b); //求a^b\n\n//输入整数a，b，求 a^b，处理到文件尾 \nint main() { \n    int a,b;\n    while(cin>>a>>b) {\n        cout<<pow(a,b)<<endl; \n    }    \n    return 0;\n}\n```\n### 输入样例：\n\n```in\n2 3\n2 10\n```\n\n### 输出样例：\n\n```out\n8\n1024\n```",
+			"type": "CODE_COMPLETION",
+			"author": "黄龙军",
+			"authorOrganization": {
+				"id": "170",
+				"name": "绍兴文理学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 2,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "74",
+							"name": "函数与程序结构",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "76",
+							"name": "递归函数",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "GXX",
+			"acceptCount": 40,
+			"submitCount": 98,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1590883382228283392",
+			"judgeConfig": {
+				"codeCompletionJudgeConfig": {
+					"testDataId": "6360db36c7625e5d8eb27509",
+					"answer": "",
+					"code": "#include<iostream>\nusing namespace std;\n@@@\n//输入整数a，b，求 a^b，处理到文件尾 \nint main() { \n    int a,b;\n    while(cin>>a>>b) {\n        cout<<pow(a,b)<<endl; \n    }    \n    return 0;\n}",
+					"useSpecialJudge": false,
+					"checkerCompiler": "GCC",
+					"checkerProgram": "",
+					"useInteractor": false,
+					"interactorCompiler": "GCC",
+					"interactorProgram": "",
+					"testDataVersion": 20
+				}
+			},
+			"solution": "",
+			"description": "要求实现一个递归函数，高效求$a^b(1≤a,b≤62, a^b<2^{63})$。\n\n### 函数接口定义：\n```c++\nlong long int pow(int a, int b);\n```\n其中`a` 、`b` 是用户传入的参数。\n\n### 裁判测试程序样例：\n```c++\n#include<iostream>\nusing namespace std;\n\nlong long int pow(int a, int b); //求a^b\n\n//输入整数a，b，求 a^b，处理到文件尾 \nint main() { \n    int a,b;\n    while(cin>>a>>b) {\n        cout<<pow(a,b)<<endl; \n    }    \n    return 0;\n}\n```\n### 输入样例：\n\n```in\n2 3\n2 10\n```\n\n### 输出样例：\n\n```out\n8\n1024\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1590883382295392269",
+			"label": "",
+			"score": 20,
+			"problemPoolIndex": 1,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "sample等价，有2位数",
+							"showHint": false,
+							"score": 12,
+							"updateAt": "2015-08-06T22:46:52Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "有1位数",
+							"showHint": false,
+							"score": 4,
+							"updateAt": "2015-08-06T22:46:52Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "全1",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2015-08-06T22:46:52Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "全0",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2015-08-06T22:46:52Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "528",
+			"title": "IP地址转换",
+			"content": "一个IP地址是用四个字节（每个字节8个位）的二进制码组成。请将32位二进制码表示的IP地址转换为十进制格式表示的IP地址输出。\n\n### 输入格式：\n\n输入在一行中给出32位二进制字符串。\n\n### 输出格式：\n\n在一行中输出十进制格式的IP地址，其由4个十进制数组成（分别对应4个8位的二进制数），中间用“.”分隔开。\n\n### 输入样例：\n```in\n11001100100101000001010101110010\n```\n\n### 输出样例：\n```out\n204.148.21.114\n```",
+			"type": "PROGRAMMING",
+			"author": "C课程组",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 2,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "78",
+							"name": "数组",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "80",
+							"name": "字符串",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 40,
+			"submitCount": 95,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1590883382228283392",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5993fa4793d1de004a0fcc93",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "NO_COMPILER",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "一个IP地址是用四个字节（每个字节8个位）的二进制码组成。请将32位二进制码表示的IP地址转换为十进制格式表示的IP地址输出。\n\n### 输入格式：\n\n输入在一行中给出32位二进制字符串。\n\n### 输出格式：\n\n在一行中输出十进制格式的IP地址，其由4个十进制数组成（分别对应4个8位的二进制数），中间用“.”分隔开。\n\n### 输入样例：\n```in\n11001100100101000001010101110010\n```\n\n### 输出样例：\n```out\n204.148.21.114\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1590883382295392270",
+			"label": "",
+			"score": 10,
+			"problemPoolIndex": 2,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"1": {
+							"hint": "",
+							"showHint": false,
+							"score": 10,
+							"updateAt": "2020-01-15T06:56:24Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "3\n3 11\n13 11\n11 9",
+							"output": "Sg\n"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1216973362726117376",
+			"title": "胜者",
+			"content": "Sg和Gs进行乒乓球比赛，进行若干局之后，想确定最后是谁胜（赢的局数多者胜）。\n\n### 输入格式:\n\n测试数据有多组，处理到文件尾。每组测试先输入一个整数n，接下来的n行中每行输入两个整数a，b（0≤a，b≤20），表示Sg与Gs的比分是a比b。 \n\n### 输出格式:\n\n对于每组测试数据，若还不能确定胜负则输出“CONTINUE”，否则在一行上输出胜者“Sg”或“Gs”。引号不必输出。\n\n### 输入样例:\n\n```in\n3\n3 11\n13 11\n11 9\n```\n\n### 输出样例:\n\n```out\nSg\n```\n\n### 来源：\n\n\\[1\\] 黄龙军, 等. 大学生程序设计竞赛入门—C/C++程序设计（微课视频版）, 北京:清华大学出版社, 2020.11. ISBN:9787302564744\\\n\\[2\\] 黄龙军.程序设计竞赛入门（Python版）,北京:清华大学出版社,2021.4. ISBN:9787302571230",
+			"type": "PROGRAMMING",
+			"author": "黄龙军",
+			"authorOrganization": {
+				"id": "170",
+				"name": "绍兴文理学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 2,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "924247594312409088",
+							"name": "Python程序设计",
+							"isLeaf": false,
+							"enName": "Python Programming"
+						},
+						{
+							"id": "924248495018221568",
+							"name": "循环结构",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "924249775870582784",
+							"name": "遍历循环for",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "循环控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "71",
+							"name": "for",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "67",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "68",
+							"name": "if-else",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "924247594312409088",
+							"name": "Python程序设计",
+							"isLeaf": false,
+							"enName": "Python Programming"
+						},
+						{
+							"id": "924248445119619072",
+							"name": "选择分支结构",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "924249494362513408",
+							"name": "if-else",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 40,
+			"submitCount": 465,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1590883382228283392",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5e1eb798568cd000064d318a",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "GCC",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 3
+				}
+			},
+			"solution": "",
+			"description": "Sg和Gs进行乒乓球比赛，进行若干局之后，想确定最后是谁胜（赢的局数多者胜）。\n\n### 输入格式:\n\n测试数据有多组，处理到文件尾。每组测试先输入一个整数n，接下来的n行中每行输入两个整数a，b（0≤a，b≤20），表示Sg与Gs的比分是a比b。 \n\n### 输出格式:\n\n对于每组测试数据，若还不能确定胜负则输出“CONTINUE”，否则在一行上输出胜者“Sg”或“Gs”。引号不必输出。\n\n### 输入样例:\n\n```in\n3\n3 11\n13 11\n11 9\n```\n\n### 输出样例:\n\n```out\nSg\n```\n\n### 来源：\n\n\\[1\\] 黄龙军, 等. 大学生程序设计竞赛入门—C/C++程序设计（微课视频版）, 北京:清华大学出版社, 2020.11. ISBN:9787302564744\\\n\\[2\\] 黄龙军.程序设计竞赛入门（Python版）,北京:清华大学出版社,2021.4. ISBN:9787302571230",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1590883382295392271",
+			"label": "",
+			"score": 15,
+			"problemPoolIndex": 3,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 2000,
+					"memoryLimit": 524288,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2020-12-14T14:59:46Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2020-12-14T14:59:46Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2020-12-14T14:59:46Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2020-12-14T14:59:46Z",
+							"isPublic": false
+						},
+						"4": {
+							"hint": "",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2020-12-14T14:59:46Z",
+							"isPublic": false
+						},
+						"5": {
+							"hint": "",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2020-12-14T14:59:46Z",
+							"isPublic": false
+						},
+						"6": {
+							"hint": "",
+							"showHint": false,
+							"score": 3,
+							"updateAt": "2020-12-14T14:59:46Z",
+							"isPublic": false
+						},
+						"7": {
+							"hint": "",
+							"showHint": false,
+							"score": 3,
+							"updateAt": "2020-12-14T14:59:46Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "2 3\n0 1 0\n0 0 1\n2\n1 1 2 1\n1 2 2 3",
+							"output": "0\n2"
+						},
+						{
+							"name": "",
+							"input": "3 3\n1 1 0\n1 0 1\n1 1 1\n4\n1 1 2 1\n1 2 2 3\n1 1 1 1\n1 1 3 3",
+							"output": "2\n2\n1\n7"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1338497807797219328",
+			"title": "今天你健康打卡了吗？",
+			"content": "\n## 题目描述\n众所周知，疫情期间，同学们每天都应该进行健康打卡，以确保自己的情况能被如实的反馈给辅导员，当然，这在学园都市也不例外。\n\n“为什么还有这么多同学没有健康打卡？刚刚我们不是已经发送信息通知他们了吗？”风纪委员177支部内传来了黑子焦急的声音。\n\n“可...可能是他们还没来得及看手机。”一旁的另外一位风纪委员初春回应道。\n\n“不行，打卡时间已经快到了，我要去当面提醒他们。”\n\n正直的风纪委员黑子同学决定直接使用瞬间移动赶到宿舍区，但在出发之前，她需要让初春进行定位扫描，确定哪些宿舍有人未进行健康打卡。\n\n堆积如山的工作让初春有点忙不过来了，你能帮帮她吗？\n\n首先，地图为一个 $$n$$ 行 $$m$$ 列的矩形二维平面，输入的第一行会分别给出两个正整数 $$n$$ 和 $$m$$ ，随后会给出一个 $$n$$行 $$m$$ 列的矩阵，$$A_i,_j$$ 表示**第 $$i$$ 行第 $$j$$ 列**上，数据所输入的值。当 $$A_i,_j = 0$$ 时，表示坐标 $$(i,j)$$ 上不存在需要提醒健康打卡的宿舍，当 $$A_i,_j = 1$$ 时，表示坐标 $$(i,j)$$ 上存在一个需要提醒健康打卡的宿舍，题目保证每一个 $$A_i,_j$$ 的值均为 $$0$$或 $$1$$ 。\n\n随后一行给出一个正整数 $$q$$，表示黑子会对初春询问 $$q$$ 次，接下来 $$q$$ 行，每一行分别给出四个正整数 $$x1,y1,x2,y2$$, 表示询问，以 $$(x1,y1)$$ 为左上角，$$(x2,y2)$$ 为右下角的矩形范围内，有多少个需要提醒健康打卡的宿舍。\n(ps:以上故事纯属虚构，但同学们记得要健康打卡哦~）\n\n### 输入格式:\n\n输入的第一行为两个正整数   $$ n,m $$\n\n接下来 $$n$$行，每行 $$m$$ 个数字，\n对应 $$A_i,_j$$ 的值\n\n接下来的一行给出一个正整数 $$q$$ ,表示有 $$q$$ 次询问  \n\n接下来共有 $$q$$ 行，每行给出四个正整数\n$$x1,y1,x2,y2$$\n\n### 输出格式:\n\n对于每一次查询，仅输出一个正整数  $$ans$$\n\n$$ans$$ 表示以 $$(x1,y1)$$ 为左上角，$$(x2,y2)$$ 为右下角的矩形范围内，有多少个需要提醒健康打卡的宿舍。\n\n### 输入样例1:\n\n```in\n2 3\n0 1 0\n0 0 1\n2\n1 1 2 1\n1 2 2 3\n```\n\n### 输出样例1:\n\n\n```out\n0\n2\n```\n\n\n### 输入样例2:\n\n\n```in\n3 3\n1 1 0\n1 0 1\n1 1 1\n4\n1 1 2 1\n1 2 2 3\n1 1 1 1\n1 1 3 3\n```\n\n### 输出样例2:\n\n```out\n2\n2\n1\n7\n```\n\n\n### 数据范围\n$$0<=A_i,_j<=1$$\n\n$$1<=n,m<=1000$$\n\n$$1<=q<=1000$$\n\n$$1<=x1<=x2<=n$$\n\n$$1<=y1<=y2<=m$$\n\n",
+			"type": "PROGRAMMING",
+			"author": "HZU-ACM",
+			"authorOrganization": {
+				"id": "250",
+				"name": "惠州学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 3,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "1",
+							"name": "数据结构与算法",
+							"isLeaf": false,
+							"enName": "Data Structures and Algorithms"
+						},
+						{
+							"id": "907153560049655808",
+							"name": "概论",
+							"isLeaf": false,
+							"enName": "Overview"
+						},
+						{
+							"id": "907153726118928384",
+							"name": "其他",
+							"isLeaf": true,
+							"enName": "Others"
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 285,
+			"problemStatus": "PENDING_REVIEW",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1590883382228283392",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5fd77df91f69d400069a9391",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "GCC",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "\n## 题目描述\n众所周知，疫情期间，同学们每天都应该进行健康打卡，以确保自己的情况能被如实的反馈给辅导员，当然，这在学园都市也不例外。\n\n“为什么还有这么多同学没有健康打卡？刚刚我们不是已经发送信息通知他们了吗？”风纪委员177支部内传来了黑子焦急的声音。\n\n“可...可能是他们还没来得及看手机。”一旁的另外一位风纪委员初春回应道。\n\n“不行，打卡时间已经快到了，我要去当面提醒他们。”\n\n正直的风纪委员黑子同学决定直接使用瞬间移动赶到宿舍区，但在出发之前，她需要让初春进行定位扫描，确定哪些宿舍有人未进行健康打卡。\n\n堆积如山的工作让初春有点忙不过来了，你能帮帮她吗？\n\n首先，地图为一个 $$n$$ 行 $$m$$ 列的矩形二维平面，输入的第一行会分别给出两个正整数 $$n$$ 和 $$m$$ ，随后会给出一个 $$n$$行 $$m$$ 列的矩阵，$$A_i,_j$$ 表º**ç¬¬ $$i$$ è¡ç¬¬ $$j$$ å**ä¸ï¼æ°æ®æè¾å¥çå¼ãå½ $$A_i,_j = 0$$ æ¶ï¼è¡¨ç¤ºåæ  $$(i,j)$$ ä¸ä¸å­å¨éè¦æéå¥åº·æå¡çå®¿èï¼å½ $$A_i,_j = 1$$ æ¶ï¼è¡¨ç¤ºåæ  $$(i,j)$$ ä¸å­å¨ä¸ä¸ªéè¦æéå¥åº·æå¡çå®¿èï¼é¢ç®ä¿è¯æ¯ä¸ä¸ª $$A_i,_j$$ çå¼åä¸º $$0$$æ $$1$$ ã\n\néåä¸è¡ç»åºä¸ä¸ªæ­£æ´æ° $$q$$ï¼è¡¨ç¤ºé»å­ä¼å¯¹åæ¥è¯¢é® $$q$$ æ¬¡ï¼æ¥ä¸æ¥ $$q$$ è¡ï¼æ¯ä¸è¡åå«ç»åºåä¸ªæ­£æ´æ° $$x1,y1,x2,y2$$, è¡¨ç¤ºè¯¢é®ï¼ä»¥ $$(x1,y1)$$ ä¸ºå·¦ä¸è§ï¼$$(x2,y2)$$ ä¸ºå³ä¸è§çç©å½¢èå´åï¼æå¤å°ä¸ªéè¦æéå¥åº·æå¡çå®¿èã\n(ps:ä»¥ä¸æäºçº¯å±èæï¼ä½åå­¦ä»¬è®°å¾è¦å¥åº·æå¡å¦~ï¼\n\n### è¾å¥æ ¼å¼:\n\nè¾å¥çç¬¬ä¸è¡ä¸ºä¸¤ä¸ªæ­£æ´æ°   $$ n,m $$\n\næ¥ä¸æ¥ $$n$$è¡ï¼æ¯è¡ $$m$$ ä¸ªæ°å­ï¼\nå¯¹åº $$A_i,_j$$ çå¼\n\næ¥ä¸æ¥çä¸è¡ç»åºä¸ä¸ªæ­£æ´æ° $$q$$ ,è¡¨ç¤ºæ $$q$$ æ¬¡è¯¢é®  \n\næ¥ä¸æ¥å±æ $$q$$ è¡ï¼æ¯è¡ç»åºåä¸ªæ­£æ´æ°\n$$x1,y1,x2,y2$$\n\n### è¾åºæ ¼å¼:\n\nå¯¹äºæ¯ä¸æ¬¡æ¥è¯¢ï¼ä»è¾åºä¸ä¸ªæ­£æ´æ°  $$ans$$\n\n$$ans$$ è¡¨ç¤ºä»¥ $$(x1,y1)$$ ä¸ºå·¦ä¸è§ï¼$$(x2,y2)$$ ä¸ºå³ä¸è§çç©å½¢èå´åï¼æå¤å°ä¸ªéè¦æéå¥åº·æå¡çå®¿èã\n\n### è¾å¥æ ·ä¾1:\n\n```in\n2 3\n0 1 0\n0 0 1\n2\n1 1 2 1\n1 2 2 3\n```\n\n### è¾åºæ ·ä¾1:\n\n\n```out\n0\n2\n```\n\n\n### è¾å¥æ ·ä¾2:\n\n\n```in\n3 3\n1 1 0\n1 0 1\n1 1 1\n4\n1 1 2 1\n1 2 2 3\n1 1 1 1\n1 1 3 3\n```\n\n### è¾åºæ ·ä¾2:\n\n```out\n2\n2\n1\n7\n```\n\n\n### æ°æ®èå´\n$$0<=A_i,_j<=1$$\n\n$$1<=n,m<=1000$$\n\n$$1<=q<=1000$$\n\n$$1<=x1<=x2<=n$$\n\n$$1<=y1<=y2<=m$$\n\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		}
+	]

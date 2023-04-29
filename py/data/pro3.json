@@ -1,0 +1,1626 @@
+[
+		{
+			"id": "1573619795449196544",
+			"label": "",
+			"score": 2,
+			"problemPoolIndex": 1,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false,
+				"multipleChoiceProblemConfig": {
+					"choices": [
+						"15",
+						"9",
+						"6",
+						"5"
+					],
+					"maxDisplayChoicesPerLine": 1
+				}
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1055",
+			"title": "After running the following piece of code, the value of `s` is _",
+			"content": "After running the following piece of code, the value of `s` is __.   @[](2)\n\n```\nint i=5, s=0;\ndo {\n    if (i%2) continue;\n    else s += i;\n} while(--i);\n```\n\n\nA. 15\nB. 9\nC. 6\nD. 5",
+			"type": "MULTIPLE_CHOICE",
+			"author": "往年试卷",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 3,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "循环控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "72",
+							"name": "while和do-while",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "67",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "68",
+							"name": "if-else",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1573619795390476288",
+			"judgeConfig": {
+				"multipleChoiceJudgeConfig": {
+					"answer": "C"
+				}
+			},
+			"solution": "",
+			"description": "After running the following piece of code, the value of `s` is __.\n\n```\nint i=5, s=0;\ndo {\n    if (i%2) continue;\n    else s += i;\n} while(--i);\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1573619795449196545",
+			"label": "",
+			"score": 2,
+			"problemPoolIndex": 2,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false,
+				"multipleChoiceProblemConfig": {
+					"choices": [
+						"15",
+						"10",
+						"9",
+						"6"
+					],
+					"maxDisplayChoicesPerLine": 1
+				}
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1103",
+			"title": "下列程序段执行后`s`值为__。",
+			"content": "下列程序段执行后`s`值为__。@[](2)\n\n```\nint i=5, s=0;\nwhile(i--)  \n    if (i%2) continue; \n    else s+=i;\n```\n\nA. 15\t\nB. 10\t\nC. 9\t\nD. 6",
+			"type": "MULTIPLE_CHOICE",
+			"author": "往年试卷",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 2,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "循环控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "72",
+							"name": "while和do-while",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "67",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "68",
+							"name": "if-else",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1573619795390476288",
+			"judgeConfig": {
+				"multipleChoiceJudgeConfig": {
+					"answer": "D"
+				}
+			},
+			"solution": "",
+			"description": "下列程序段执行后`s`值为__。\n\n```\nint i=5, s=0;\nwhile(i--)\n    if (i%2) continue;\n    else s+=i;\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1573619795449196546",
+			"label": "",
+			"score": 1,
+			"problemPoolIndex": 3,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false,
+				"multipleChoiceProblemConfig": {
+					"choices": [
+						"和之前与其具有相同缩进位置的if配对",
+						"和之前与其最近的if配对",
+						"和之前与其最近的且不带else的if配对",
+						"和之前的第一个if配对"
+					],
+					"maxDisplayChoicesPerLine": 1
+				}
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "5138",
+			"title": "在嵌套使用if语句时，C语言规定else总是（）。   ",
+			"content": "在嵌套使用if语句时，C语言规定else总是（）。   @[](1)\n\nA. 和之前与其具有相同缩进位置的if配对\nB. 和之前与其最近的if配对\nC. 和之前与其最近的且不带else的if配对\nD. 和之前的第一个if配对",
+			"type": "MULTIPLE_CHOICE",
+			"author": "颜晖",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "67",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "68",
+							"name": "if-else",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1573619795390476288",
+			"judgeConfig": {
+				"multipleChoiceJudgeConfig": {
+					"answer": "C"
+				}
+			},
+			"solution": "",
+			"description": "在嵌套使用if语句时，C语言规定else总是（）。   \n\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1573619795449196547",
+			"label": "",
+			"score": 1,
+			"problemPoolIndex": 4,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false,
+				"multipleChoiceProblemConfig": {
+					"choices": [
+						"break语句只能用于switch语句",
+						"在switch语句中必须使用default",
+						"break语句必须与switch语句中的case配对使用",
+						"在switch语句中，不一定使用break语句"
+					],
+					"maxDisplayChoicesPerLine": 1
+				}
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "5139",
+			"title": "下列叙述中正确的是（）。   ",
+			"content": "下列叙述中正确的是（）。   @[](1)\n\nA. break语句只能用于switch语句\nB. 在switch语句中必须使用default\nC. break语句必须与switch语句中的case配对使用\nD. 在switch语句中，不一定使用break语句",
+			"type": "MULTIPLE_CHOICE",
+			"author": "颜晖",
+			"authorOrganization": {
+				"id": "2",
+				"name": "浙大城市学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "67",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "69",
+							"name": "switch",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1573619795390476288",
+			"judgeConfig": {
+				"multipleChoiceJudgeConfig": {
+					"answer": "D"
+				}
+			},
+			"solution": "",
+			"description": "下列叙述中正确的是（）。   \n\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1573619795449196548",
+			"label": "",
+			"score": 1,
+			"problemPoolIndex": 5,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false,
+				"multipleChoiceProblemConfig": {
+					"choices": [
+						"0",
+						"1",
+						"2",
+						"3"
+					],
+					"maxDisplayChoicesPerLine": 1
+				}
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "5164",
+			"title": "下列程序段的输出结果是（）。   ",
+			"content": "下列程序段的输出结果是（）。   @[](1)\n```\nint main(void)\n{   \n      int  a = 2, b = -1, c = 2;\n      \n      if(a < b)\n            if(b < 0)  \n                  c = 0;\n      else  c++;\n      printf(\"%d\\n\",c);\t\n      \n      return 0;\n}\n\n```\n\nA. 0\nB. 1\nC. 2\nD. 3",
+			"type": "MULTIPLE_CHOICE",
+			"author": "颜晖",
+			"authorOrganization": {
+				"id": "2",
+				"name": "浙大城市学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "67",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "68",
+							"name": "if-else",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1573619795390476288",
+			"judgeConfig": {
+				"multipleChoiceJudgeConfig": {
+					"answer": "C"
+				}
+			},
+			"solution": "",
+			"description": "下列程序段的输出结果是（）。   \n```\nint main(void)\n{   \n      int  a = 2, b = -1, c = 2;\n      \n      if(a < b)\n            if(b < 0)  \n                  c = 0;\n      else  c++;\n      printf(\"%d\\n\",c);\t\n      \n      return 0;\n}\n\n```\n\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1573619795449196549",
+			"label": "",
+			"score": 1,
+			"problemPoolIndex": 6,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false,
+				"multipleChoiceProblemConfig": {
+					"choices": [
+						"a=2,b=1",
+						"a=1,b=1",
+						"a=1,b=0",
+						"a=2,b=2"
+					],
+					"maxDisplayChoicesPerLine": 1
+				}
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "5165",
+			"title": "下列程序段的输出结果是 （）。   ",
+			"content": "下列程序段的输出结果是 （）。   @[](1)\n```\nint main(void)\n{ \t\n      int x = 1, a = 0, b = 0;\n      \n      switch(x)\t\t\n      {\n            case 0:   b++;\n            case 1:   a++;\n            case 2:   a++; b++;\t\n      }\n      printf(\"a=%d,b=%d\\n\",a,b);\t\t\n\n      return 0;\n}\n\n```\n\nA. a=2,b=1\nB. a=1,b=1\nC. a=1,b=0\nD. a=2,b=2",
+			"type": "MULTIPLE_CHOICE",
+			"author": "颜晖",
+			"authorOrganization": {
+				"id": "2",
+				"name": "浙大城市学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "67",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "69",
+							"name": "switch",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1573619795390476288",
+			"judgeConfig": {
+				"multipleChoiceJudgeConfig": {
+					"answer": "A"
+				}
+			},
+			"solution": "",
+			"description": "下列程序段的输出结果是 （）。   \n```\nint main(void)\n{ \t\n      int x = 1, a = 0, b = 0;\n      \n      switch(x)\t\t\n      {\n            case 0:   b++;\n            case 1:   a++;\n            case 2:   a++; b++;\t\n      }\n      printf(\"a=%d,b=%d\\n\",a,b);\t\t\n\n      return 0;\n}\n\n```\n\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1573619795449196550",
+			"label": "",
+			"score": 2,
+			"problemPoolIndex": 7,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false,
+				"multipleChoiceProblemConfig": {
+					"choices": [
+						"a>=10 or a<=0",
+						"a>=0 | a<=10",
+						"a>=10 && a<=0",
+						"a>=10 || a<=0"
+					],
+					"maxDisplayChoicesPerLine": 1
+				}
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "924653915557863424",
+			"title": "能正确表示逻辑关系\"a≥10 或 a≤0\"的C语言表达式是（）。 ",
+			"content": "能正确表示逻辑关系\"a≥10 或 a≤0\"的C语言表达式是（）。 @[](2)\nA. a>=10 or a<=0\nB. a>=0 | a<=10\nC. a>=10 && a<=0\nD. a>=10 || a<=0\n",
+			"type": "MULTIPLE_CHOICE",
+			"author": "李廷元",
+			"authorOrganization": {
+				"id": "39",
+				"name": "中国民用航空飞行学院",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "67",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "68",
+							"name": "if-else",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1573619795390476288",
+			"judgeConfig": {
+				"multipleChoiceJudgeConfig": {
+					"answer": "D"
+				}
+			},
+			"solution": "",
+			"description": "能正确表示逻辑关系\"a≥10 或 a≤0\"的C语言表达式是（）。",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1573619795449196551",
+			"label": "",
+			"score": 2,
+			"problemPoolIndex": 8,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false,
+				"multipleChoiceProblemConfig": {
+					"choices": [
+						"(x>= -58) && (x<= -40) && (x>=40) &&(x<=58) ",
+						"(x>= -58) || (x<= -40) || (x>=40) || (x<=58)",
+						"(x>= -58) && (x<= -40) || (x>=40) && (x<=58)",
+						"(x>= -58) | |(x<= -40) && (x>=40) || (x<=58)"
+					],
+					"maxDisplayChoicesPerLine": 1
+				}
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1251147504444915712",
+			"title": "能正确表示“当x的取值在[-58,-40]和[40,58]范围内为真，否则为假”的表达式是（）。 ",
+			"content": "能正确表示“当x的取值在[-58,-40]和[40,58]范围内为真，否则为假”的表达式是（）。@[](2) \nA. (x>= -58) && (x<= -40) && (x>=40) &&(x<=58) \nB. (x>= -58) || (x<= -40) || (x>=40) || (x<=58)\nC. (x>= -58) && (x<= -40) || (x>=40) && (x<=58)\nD. (x>= -58) | |(x<= -40) && (x>=40) || (x<=58)\n",
+			"type": "MULTIPLE_CHOICE",
+			"author": "吴永芬",
+			"authorOrganization": {
+				"id": "177",
+				"name": "中国人民解放军陆军工程大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "67",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "68",
+							"name": "if-else",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1573619795390476288",
+			"judgeConfig": {
+				"multipleChoiceJudgeConfig": {
+					"answer": "C"
+				}
+			},
+			"solution": "",
+			"description": "能正确表示“当x的取值在[-58,-40]和[40,58]范围内为真，否则为假”的表达式是（）。 \n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1573619795449196552",
+			"label": "",
+			"score": 2,
+			"problemPoolIndex": 9,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false,
+				"multipleChoiceProblemConfig": {
+					"choices": [
+						"大写字母A~Z",
+						"任何字符",
+						"除大写字母以外",
+						"大写字母B~Y"
+					],
+					"maxDisplayChoicesPerLine": 1
+				}
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1393045668840546304",
+			"title": "当字符型变量ch 取何值（或何范围）时输出“YES”",
+			"content": "当字符型变量ch 取何值（或何范围）时输出“YES”\n```\nchar ch;\nscanf(\"%c\",&ch);\nif(ch<='A'&&ch>='Z')\nprintf(\"NO\"); \nelse printf(\"YES\");\n```",
+			"type": "MULTIPLE_CHOICE",
+			"author": "唐艳琴",
+			"authorOrganization": {
+				"id": "177",
+				"name": "中国人民解放军陆军工程大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "67",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "68",
+							"name": "if-else",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1573619795390476288",
+			"judgeConfig": {
+				"multipleChoiceJudgeConfig": {
+					"answer": "B"
+				}
+			},
+			"solution": "",
+			"description": "当字符型变量ch 取何值（或何范围）时输出“YES”\n```\nchar ch;\nscanf(\"%c\",&ch);\nif(ch<='A'&&ch>='Z')\nprintf(\"NO\"); \nelse printf(\"YES\");\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1573619795449196553",
+			"label": "",
+			"score": 2,
+			"problemPoolIndex": 10,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"solutionVisible": false,
+				"answerVisible": false,
+				"multipleChoiceProblemConfig": {
+					"choices": [
+						"I和K",
+						"除I和K以外的大写字母",
+						"除大写字母外的其他字符",
+						"大写字母"
+					],
+					"maxDisplayChoicesPerLine": 1
+				}
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1393047366518681600",
+			"title": "当字符型变量ch 取何值（或何范围）时输出“YES”",
+			"content": "当字符型变量ch 取何值（或何范围）时输出“YES”\n```\nchar ch;\nscanf(\"%c\",&ch);\nif(ch>='A'&&ch<='Z')\nif(ch!='I'&&ch!='K')printf(\"NO\");\nelse printf(\"YES\");\n```",
+			"type": "MULTIPLE_CHOICE",
+			"author": "唐艳琴",
+			"authorOrganization": {
+				"id": "177",
+				"name": "中国人民解放军陆军工程大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "67",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "68",
+							"name": "if-else",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 0,
+			"submitCount": 0,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "NONE_SELF_CHECK",
+			"problemSetId": "1573619795390476288",
+			"judgeConfig": {
+				"multipleChoiceJudgeConfig": {
+					"answer": "A"
+				}
+			},
+			"solution": "",
+			"description": "当字符型变量ch 取何值（或何范围）时输出“YES”\n```\nchar ch;\nscanf(\"%c\",&ch);\nif(ch>='A'&&ch<='Z')\nif(ch!='I'&&ch!='K')printf(\"NO\");\nelse printf(\"YES\");\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1573619795449196554",
+			"label": "",
+			"score": 10,
+			"problemPoolIndex": 1,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "",
+							"showHint": false,
+							"score": 4,
+							"updateAt": "2019-07-16T08:20:27Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "",
+							"showHint": false,
+							"score": 3,
+							"updateAt": "2019-07-16T08:20:27Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2019-07-16T08:20:27Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2019-07-16T08:20:27Z",
+							"isPublic": false
+						},
+						"4": {
+							"hint": "",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2019-07-16T08:20:27Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "95\n",
+							"output": "gong xi ni kao le 95 fen!\n"
+						},
+						{
+							"name": "",
+							"input": "89\n",
+							"output": "kao le 89 fen bie xie qi!\n"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 0,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1151029863834054656",
+			"title": "真的恭喜你",
+			"content": "当别人告诉你自己考了 x 分的时候，你要回答说：“恭喜你考了 x 分！”比如小明告诉你他考了90分，你就用汉语拼音打出来 `gong xi ni kao le 90 fen!`。\n\n但是如果小明没考好，比如只考了 20 分，你也“恭喜”人家就不对了。这时候你应该安慰他说：“考了 20 分别泄气！”用汉语拼音写出来就是 `kao le 20 fen bie xie qi!`。\n\n### 输入格式：\n\n输入在一行里给出一位小朋友的分数。这个分数是一个 0 到 100 之间的整数。\n\n### 输出格式：\n\n在一行中输出你对这位小朋友说的话。如果人家考到不低于 90 分，就说 `gong xi ni kao le X fen!`；如果不到 90 分，就说 `kao le X fen bie xie qi!`。其中 `X` 是小朋友输入的分数。\n\n### 输入样例 1：\n```in\n95\n```\n\n### 输出样例 1：\n```out\ngong xi ni kao le 95 fen!\n```\n\n### 输入样例 2：\n```in\n89\n```\n\n### 输出样例 2：\n```out\nkao le 89 fen bie xie qi!\n```\n",
+			"type": "PROGRAMMING",
+			"author": "陈越",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "67",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "68",
+							"name": "if-else",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 41,
+			"submitCount": 97,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1573619795390476288",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5d2d88cbc70564000737a45b",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "GCC",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "当别人告诉你自己考了 x 分的时候，你要回答说：“恭喜你考了 x 分！”比如小明告诉你他考了90分，你就用汉语拼音打出来 `gong xi ni kao le 90 fen!`。\n\n但是如果小明没考好，比如只考了 20 分，你也“恭喜”人家就不对了。这时候你应该安慰他说：“考了 20 分别泄气！”用汉语拼音写出来就是 `kao le 20 fen bie xie qi!`。\n\n### 输入格式：\n\n输入在一行里给出一位小朋友的分数。这个分数是一个 0 到 100 之间的整数。\n\n### 输出格式：\n\n在一行中输出你对这位小朋友说的话。如果人家考到不低于 90 分，就说 `gong xi ni kao le X fen!`；如果不到 90 分，就说 `kao le X fen bie xie qi!`。其中 `X` 是小朋友输入的分数。\n\n### 输入样例 1：\n```in\n95\n```\n\n### 输出样例 1：\n```out\ngong xi ni kao le 95 fen!\n```\n\n### 输入样例 2：\n```in\n89\n```\n\n### 输出样例 2：\n```out\nkao le 89 fen bie xie qi!\n```\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1573619795449196555",
+			"label": "",
+			"score": 10,
+			"problemPoolIndex": 2,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "样例修改",
+							"showHint": false,
+							"score": 5,
+							"updateAt": "2020-08-04T07:56:03Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "价格相等的情况",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2020-08-04T07:56:03Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "价格全部大于的情况",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2020-08-04T07:56:03Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "价格全部为负数的情况",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2020-08-04T07:56:03Z",
+							"isPublic": false
+						},
+						"4": {
+							"hint": "随机生成的最大边界数据",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2020-08-04T07:56:03Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "4 99\n98.0\n97.0\n100.2\n98.9",
+							"output": "On Sale! 98.0\nOn Sale! 97.0\nOn Sale! 98.9"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [
+						{
+							"compiler": "JAVAC",
+							"timeLimit": 600,
+							"memoryLimit": 65536
+						}
+					],
+					"stackSizeLimit": 8192,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1224976127319232512",
+			"title": "降价提醒机器人",
+			"content": "小 T 想买一个玩具很久了，但价格有些高，他打算等便宜些再买。但天天盯着购物网站很麻烦，请你帮小 T 写一个降价提醒机器人，当玩具的当前价格比他设定的价格便宜时发出提醒。\n\n\n### 输入格式：\n\n输入第一行是两个正整数 $$N$$ 和 $$M$$ ($$1 \\le N \\le 100, 0 \\le M \\le 1000$$)，表示有 $$N$$ 条价格记录，小 T 设置的价格为 $$M$$。\n\n接下来 $$N$$ 行，每行有一个实数 $$P_i$$（$$-1000.0 < P_i < 1000.0$$），表示一条价格记录。\n\n### 输出格式：\n\n对每一条比设定价格 $$M$$ 便宜的价格记录 `P`，在一行中输出 `On Sale! P`，其中 `P` 输出到小数点后 1 位。\n\n### 输入样例：\n```in\n4 99\n98.0\n97.0\n100.2\n98.9\n```\n\n### 输出样例：\n```out\nOn Sale! 98.0\nOn Sale! 97.0\nOn Sale! 98.9\n```\n",
+			"type": "PROGRAMMING",
+			"author": "DAI, Longao",
+			"authorOrganization": {
+				"id": "1018809498843906048",
+				"name": "杭州百腾教育科技有限公司",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "70",
+							"name": "循环控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "71",
+							"name": "for",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "67",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "68",
+							"name": "if-else",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 41,
+			"submitCount": 119,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1573619795390476288",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5f291493ac389f0007015559",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "GCC",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "小 T 想买一个玩具很久了，但价格有些高，他打算等便宜些再买。但天天盯着购物网站很麻烦，请你帮小 T 写一个降价提醒机器人，当玩具的当前价格比他设定的价格便宜时发出提醒。\n\n\n### 输入格式：\n\n输入第一行是两个正整数 $$N$$ 和 $$M$$ ($$1 \\le N \\le 100, 0 \\le M \\le 1000$$)，表示有 $$N$$ 条价格记录，小 T 设置的价格为 $$M$$。\n\n接下来 $$N$$ 行，每行有一个实数 $$P_i$$（$$-1000.0 < P_i < 1000.0$$），表示一条价格记录。\n\n### 输出格式：\n\n对每一条比设定价格 $$M$$ 便宜的价格记录 `P`，在一行中输出 `On Sale! P`，其中 `P` 输出到小数点后 1 位。\n\n### 输入样例：\n```in\n4 99\n98.0\n97.0\n100.2\n98.9\n```\n\n### 输出样例：\n```out\nOn Sale! 98.0\nOn Sale! 97.0\nOn Sale! 98.9\n```\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1573619795449196556",
+			"label": "",
+			"score": 10,
+			"problemPoolIndex": 3,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2021-04-05T04:11:45Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2021-04-05T04:11:45Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2021-04-05T04:11:45Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2021-04-05T04:11:45Z",
+							"isPublic": false
+						},
+						"4": {
+							"hint": "",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2021-04-05T04:11:45Z",
+							"isPublic": false
+						},
+						"5": {
+							"hint": "",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2021-04-05T04:11:45Z",
+							"isPublic": false
+						},
+						"6": {
+							"hint": "",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2021-04-05T04:11:45Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "9808",
+							"output": "1998-08"
+						},
+						{
+							"name": "",
+							"input": "0510",
+							"output": "2005-10"
+						},
+						{
+							"name": "",
+							"input": "196711",
+							"output": "1967-11"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 8192,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1378923205529280512",
+			"title": "强迫症",
+			"content": "小强在统计一个小区里居民的出生年月，但是发现大家填写的生日格式不统一，例如有的人写 `199808`，有的人只写 `9808`。有强迫症的小强请你写个程序，把所有人的出生年月都整理成 `年年年年-月月` 格式。对于那些只写了年份后两位的信息，我们默认小于 `22` 都是 `20` 开头的，其他都是 `19` 开头的。\n\n### 输入格式：\n\n输入在一行中给出一个出生年月，为一个 6 位或者 4 位数，题目保证是 1000 年 1 月到 2021 年 12 月之间的合法年月。\n\n### 输出格式：\n\n在一行中按标准格式 `年年年年-月月` 将输入的信息整理输出。\n\n### 输入样例 1：\n```in\n9808\n```\n\n### 输出样例 1：\n```out\n1998-08\n```\n\n### 输入样例 2：\n```in\n0510\n```\n\n### 输出样例 2：\n```out\n2005-10\n```\n\n### 输入样例 3：\n```in\n196711\n```\n\n### 输出样例 3：\n```out\n1967-11\n```\n\n",
+			"type": "PROGRAMMING",
+			"author": "陈越",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "67",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "68",
+							"name": "if-else",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 40,
+			"submitCount": 166,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1573619795390476288",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "606a8e018f44070006c0a507",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "GCC",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "小强在统计一个小区里居民的出生年月，但是发现大家填写的生日格式不统一，例如有的人写 `199808`，有的人只写 `9808`。有强迫症的小强请你写个程序，把所有人的出生年月都整理成 `年年年年-月月` 格式。对于那些只写了年份后两位的信息，我们默认小于 `22` 都是 `20` 开头的，其他都是 `19` 开头的。\n\n### 输入格式：\n\n输入在一行中给出一个出生年月，为一个 6 位或者 4 位数，题目保证是 1000 年 1 月到 2021 年 12 月之间的合法年月。\n\n### 输出格式：\n\n在一行中按标准格式 `年年年年-月月` 将输入的信息整理输出。\n\n### 输入样例 1：\n```in\n9808\n```\n\n### 输出样例 1：\n```out\n1998-08\n```\n\n### 输入样例 2：\n```in\n0510\n```\n\n### 输出样例 2：\n```out\n2005-10\n```\n\n### 输入样例 3：\n```in\n196711\n```\n\n### 输出样例 3：\n```out\n1967-11\n```\n\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1573619795449196557",
+			"label": "",
+			"score": 10,
+			"problemPoolIndex": 4,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 200,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 1,
+					"cases": {
+						"0": {
+							"hint": " ",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2020-08-04T09:08:34Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": " ",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2020-08-04T09:08:34Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": " ",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2020-08-04T09:08:34Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": " ",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2020-08-04T09:08:34Z",
+							"isPublic": false
+						},
+						"4": {
+							"hint": " ",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2020-08-04T09:08:34Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "0 0 3 4\n",
+							"output": "7\n"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 8192,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1290575573688696832",
+			"title": "西安距离",
+			"content": "小明来到了古都西安，想去参观大唐西市！\n\n西安的道路可以看做是与x轴或y轴垂直的直线，小明位于(a,b)，而目的地位于(c,d)，问最少几步可以到达。\n\n### 输入格式:\n\n一行中四个整数，a,b,c,d，表示坐标为(a,b)与(c,d)，这里0<=a,b,c,d<=1000\n\n### 输出格式:\n\n输出这两个点的西安距离。\n\n### 输入样例:\n\n```in\n0 0 3 4\n```\n\n### 输出样例:\n\n```out\n7\n```",
+			"type": "PROGRAMMING",
+			"author": "翁恺",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "67",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "68",
+							"name": "if-else",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "172",
+							"name": "Java程序设计",
+							"isLeaf": false,
+							"enName": "Java Programming"
+						},
+						{
+							"id": "183",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "185",
+							"name": "if-else",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				},
+				{
+					"knowledgePoints": [
+						{
+							"id": "924247594312409088",
+							"name": "Python程序设计",
+							"isLeaf": false,
+							"enName": "Python Programming"
+						},
+						{
+							"id": "924247696443711488",
+							"name": "输入输出",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "924248852306845696",
+							"name": "其他",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 41,
+			"submitCount": 66,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1573619795390476288",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "5f292592ac389f00070155a0",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "GCC",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "小明来到了古都西安，想去参观大唐西市！\n\n西安的道路可以看做是与x轴或y轴垂直的直线，小明位于(a,b)，而目的地位于(c,d)，问最少几步可以到达。\n\n### 输入格式:\n\n一行中四个整数，a,b,c,d，表示坐标为(a,b)与(c,d)，这里0<=a,b,c,d<=1000\n\n### 输出格式:\n\n输出这两个点的西安距离。\n\n### 输入样例:\n\n```in\n0 0 3 4\n```\n\n### 输出样例:\n\n```out\n7\n```",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		},
+		{
+			"id": "1573619795449196558",
+			"label": "",
+			"score": 10,
+			"problemPoolIndex": 5,
+			"problemPoolCompositionCount": 1,
+			"problemConfig": {
+				"programmingProblemConfig": {
+					"timeLimit": 400,
+					"memoryLimit": 65536,
+					"codeSizeLimit": 16,
+					"cases": {
+						"0": {
+							"hint": "",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2022-04-03T07:46:52Z",
+							"isPublic": false
+						},
+						"1": {
+							"hint": "",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2022-04-03T07:46:52Z",
+							"isPublic": false
+						},
+						"2": {
+							"hint": "",
+							"showHint": false,
+							"score": 2,
+							"updateAt": "2022-04-03T07:46:52Z",
+							"isPublic": false
+						},
+						"3": {
+							"hint": "",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2022-04-03T07:46:52Z",
+							"isPublic": false
+						},
+						"4": {
+							"hint": "",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2022-04-03T07:46:52Z",
+							"isPublic": false
+						},
+						"5": {
+							"hint": "",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2022-04-03T07:46:52Z",
+							"isPublic": false
+						},
+						"6": {
+							"hint": "",
+							"showHint": false,
+							"score": 1,
+							"updateAt": "2022-04-03T07:46:52Z",
+							"isPublic": false
+						}
+					},
+					"exampleTestDatas": [
+						{
+							"name": "",
+							"input": "12 18 18 8",
+							"output": "18-Y 8-Y\nqing 1 zhao gu hao 2"
+						},
+						{
+							"name": "",
+							"input": "12 18 10 15",
+							"output": "10-N 15-Y\n2: huan ying ru guan"
+						}
+					],
+					"testdataDescriptionCode": "",
+					"customizeLimits": [],
+					"stackSizeLimit": 8192,
+					"tools": [],
+					"ignorePresentationError": false
+				},
+				"solutionVisible": false,
+				"answerVisible": false
+			},
+			"deadline": "1970-01-01T00:00:00Z",
+			"problemId": "1510524152983986176",
+			"title": "谁能进图书馆",
+			"content": "为了保障安静的阅读环境，有些公共图书馆对儿童入馆做出了限制。例如“12 岁以下儿童禁止入馆，除非有 18 岁以上（包括 18 岁）的成人陪同”。现在有两位小/大朋友跑来问你，他们能不能进去？请你写个程序自动给他们一个回复。\n\n### 输入格式：\n\n输入在一行中给出 4 个整数：\n```\n禁入年龄线 陪同年龄线 询问者1的年龄 询问者2的年龄\n```\n\n这里的`禁入年龄线`是指严格小于该年龄的儿童禁止入馆；`陪同年龄线`是指大于等于该年龄的人士可以陪同儿童入馆。默认两个询问者的编号依次分别为 `1` 和 `2`；年龄和年龄线都是 [1, 200] 区间内的整数，并且保证 `陪同年龄线` 严格大于 `禁入年龄线`。\n\n### 输出格式：\n\n在一行中输出对两位询问者的回答，如果可以进就输出 `年龄-Y`，否则输出 `年龄-N`，中间空 1 格，行首尾不得有多余空格。\n\n在第二行根据两个询问者的情况输出一句话：\n\n- 如果两个人必须一起进，则输出 `qing X zhao gu hao Y`，其中 `X` 是陪同人的编号， `Y` 是小孩子的编号；\n- 如果两个人都可以进但不是必须一起的，则输出 `huan ying ru guan`；\n- 如果两个人都进不去，则输出 `zhang da zai lai ba`；\n- 如果一个人能进一个不能，则输出 `X: huan ying ru guan`，其中 `X` 是可以入馆的那个人的编号。\n\n### 输入样例 1：\n```in\n12 18 18 8\n```\n\n### 输出样例 1：\n```out\n18-Y 8-Y\nqing 1 zhao gu hao 2\n```\n\n### 输入样例 2：\n```in\n12 18 10 15\n```\n\n### 输出样例 2：\n```out\n10-N 15-Y\n2: huan ying ru guan\n```\n\n",
+			"type": "PROGRAMMING",
+			"author": "陈越",
+			"authorOrganization": {
+				"id": "1",
+				"name": "浙江大学",
+				"comment": "",
+				"code": "",
+				"country": "NO_COUNTRY",
+				"membersCount": 0,
+				"type": "UNKNOWN",
+				"balance": 0,
+				"subdomain": "",
+				"logo": ""
+			},
+			"difficulty": 1,
+			"knowledgePointPaths": [
+				{
+					"knowledgePoints": [
+						{
+							"id": "63",
+							"name": "C程序设计",
+							"isLeaf": false,
+							"enName": "C Programming"
+						},
+						{
+							"id": "67",
+							"name": "分支控制",
+							"isLeaf": false,
+							"enName": ""
+						},
+						{
+							"id": "68",
+							"name": "if-else",
+							"isLeaf": true,
+							"enName": ""
+						}
+					]
+				}
+			],
+			"compiler": "NO_COMPILER",
+			"acceptCount": 40,
+			"submitCount": 202,
+			"problemStatus": "REVIEWED",
+			"problemSelfCheckStatus": "SUCCESSFUL_SELF_CHECK",
+			"problemSetId": "1573619795390476288",
+			"judgeConfig": {
+				"programmingJudgeConfig": {
+					"testDataId": "624950ecf666296c03914106",
+					"answer": "",
+					"answerCompiler": "NO_COMPILER",
+					"useSpecialJudge": false,
+					"checkerCompiler": "GCC",
+					"checkerProgram": "",
+					"scoringRule": "NORMAL",
+					"useInteractor": false,
+					"interactorCompiler": "NO_COMPILER",
+					"interactorProgram": "",
+					"testDataVersion": 0
+				}
+			},
+			"solution": "",
+			"description": "为了保障安静的阅读环境，有些公共图书馆对儿童入馆做出了限制。例如“12 岁以下儿童禁止入馆，除非有 18 岁以上（包括 18 岁）的成人陪同”。现在有两位小/大朋友跑来问你，他们能不能进去？请你写个程序自动给他们一个回复。\n\n### 输入格式：\n\n输入在一行中给出 4 个整数：\n```\n禁入年龄线 陪同年龄线 询问者1的年龄 询问者2的年龄\n```\n\n这里的`禁入年龄线`是指严格小于该年龄的儿童禁止入馆；`陪同年龄线`是指大于等于该年龄的人士可以陪同儿童入馆。默认两个询问者的编号依次分别为 `1` 和 `2`；年龄和年龄线都是 [1, 200] 区间内的整数，并且保证 `陪同年龄线` 严格大于 `禁入年龄线`。\n\n### 输出格式：\n\n在一行中输出对两位询问者的回答，如果可以进就输出 `年龄-Y`，否则输出 `年龄-N`，中间空 1 格，行首尾不得有多余空格。\n\n在第二行根据两个询问者的情况输出一句话：\n\n- 如果两个人必须一起进，则输出 `qing X zhao gu hao Y`，其中 `X` 是陪同人的编号， `Y` 是小孩子的编号；\n- 如果两个人都可以进但不是必须一起的，则输出 `huan ying ru guan`；\n- 如果两个人都进不去，则输出 `zhang da zai lai ba`；\n- 如果一个人能进一个不能，则输出 `X: huan ying ru guan`，其中 `X` 是可以入馆的那个人的编号。\n\n### 输入样例 1：\n```in\n12 18 18 8\n```\n\n### 输出样例 1：\n```out\n18-Y 8-Y\nqing 1 zhao gu hao 2\n```\n\n### 输入样例 2：\n```in\n12 18 10 15\n```\n\n### 输出样例 2：\n```out\n10-N 15-Y\n2: huan ying ru guan\n```\n\n",
+			"creatorId": "916259821889974272",
+			"indexInProblemPool": 1,
+			"diffProblemConfigCase": false
+		}
+	]

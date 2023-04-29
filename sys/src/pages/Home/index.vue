@@ -15,7 +15,7 @@
           <ControlPanel></ControlPanel>
         </div>
         <div id="graphContainer" v-show="showGraph" class="panel">
-          <Graph @timeDur="getTimeDur" :videoTime="videoTime" @toolState="getToolState" ></Graph>
+          <Graph></Graph>
         </div>
         <!-- <div id="overviewPanel" class="panel">
           <OverviewPanel></OverviewPanel>
@@ -42,11 +42,18 @@ import Head from "@/components/Header/index.vue";
 import Graph from '@/components/Graph/index.vue';
 import ProcPanel from '@/components/ProblemContentPanel/index.vue';
 import NetPPanel from '@/components/NetProblemPanel/index.vue';
-export default {
+export default{
   components: { Head, Graph, ProcPanel,NetPPanel},
   /* eslint-disable no-unused-vars */
   data() {
     return {
+      problemsData: [],
+      submissionsData:[],
+      studentsData:[],
+      conceptsData: [],
+      conceptTree: [],
+      problemConceptData: [],
+      userProblemData: [],
       timer: null,
       showVideo: true,
       showGraph: true,
@@ -122,6 +129,72 @@ export default {
     },
   },
   methods: {
+    getProblems() {
+      const _this = this;
+      let data = [];
+      this.$http
+        // .get("/api/problem/allProblem", { params: { name: "12345" } }, {})
+        .get("/api/problem/allProblem", {}, {})
+        .then((response) => {
+          _this.problemsData = response.body;
+          _this.$bus.$emit("allProblem", _this.problemsData);
+        });
+    },
+    getConcept() {
+      const _this = this;
+      this.$http
+        .get("/api/concept/allConcept", {}, {})
+        .then((response) => {
+          _this.conceptsData = response.body;
+          _this.$bus.$emit("Concept", _this.conceptsData);
+        });
+    },
+    getConceptTree() {
+      const _this = this;
+      this.$http
+        .get("/api/concept/conceptTree", {}, {})
+        .then((response) => {
+          _this.conceptTree = response.body;
+          console.log(_this.conceptTree)
+          _this.$bus.$emit("ConceptTree", _this.conceptTree);
+        });
+    },
+    getSubmissions() {
+      const _this = this;
+      this.$http.get("/api/Submission/allLog", {}, {})
+        .then((response) => {
+          _this.submissionsData = response.body;
+          _this.$bus.$emit("Submission", _this.submissionsData);
+        });
+    },
+    getProblemConcept() {
+      const _this = this;
+      this.$http.get("/api/conceptProblem/allRel", {}, {})
+        .then((response) => {
+          _this.problemConceptData = response.body;
+          _this.$bus.$emit("Pro_Con", _this.problemConceptData);
+        });
+    },
+    getStudents() {
+      const _this = this;
+      this.$http.get("/api/student/allStudent", {}, {})
+        .then((response) => {
+          _this.studentsData = response.body;
+          _this.$bus.$emit("Student", _this.studentsData);
+        });
+    },
+    getAllData() {
+      const _this = this;
+      this.getConceptTree();
+      this.getStudents();
+      this.getProblems();
+      this.getConcept();
+      this.getSubmissions();
+      this.getProblemConcept();
+      // .then(()=>{ 
+      // _this.updataGraph();
+      // })
+    },
     getSelectEnt(val){
       console.log(val)
       this.selectEntId = val;
@@ -149,6 +222,8 @@ export default {
   mounted() {
     this.$el.style.setProperty("--heightStyle", this.windowHeight + "px");
     this.showVideo = true;
+    
+    this.getAllData();
     // this.getData();
   },
   beforeDestroy() {

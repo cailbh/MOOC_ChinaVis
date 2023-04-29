@@ -39,7 +39,6 @@ for c in collect_concept.find({}):
     entConcept.append(c)
 
 for l in collect_userSubmissions.find({}):
-    print(l)
     userId = l['user']['user']['id']
     if userId not in entStudent:
         entStudent[userId] = {}
@@ -71,7 +70,7 @@ for l in collect_userSubmissions.find({}):
 pro_con_list = []
 for r in collect_problem_concept.find({}):
     problemId = r['problem']
-    conceptId = r['contentId']
+    conceptId = r['conceptId']
     pro_con_list.append(r)
     for p in entProblem:
         if p['id'] == problemId:
@@ -94,7 +93,7 @@ for ep in entProblem:
 for c in entConcept:
     i = 0
     for r in pro_con_list:
-        if str(r['contentId']) == str(c['id']):
+        if str(r['conceptId']) == str(c['id']):
             i += 1
             problemId = r['problem']
             for p in entProblem:
@@ -105,10 +104,14 @@ for c in entConcept:
                     c['scoringRate'] += p['scoringRate']
                     c['accuracy'] += p['accuracy']
     print(i, c)
-    c['acceptedRate'] = c['acceptedAttempts'] / c['totalAttempts']
-    c['scoringRate'] = c['scoringRate'] / i
-    c['accuracy'] = c['accuracy'] / i
+    if c['totalAttempts'] != 0:
+        c['acceptedRate'] = c['acceptedAttempts'] / c['totalAttempts']
+    else:
+        c['acceptedRate'] = 0
+    if i != 0:
+        c['scoringRate'] = c['scoringRate'] / i
+        c['accuracy'] = c['accuracy'] / i
 
 ent_problem.insert_many(entProblem)
 ent_concept.insert_many(entConcept)
-ent_user.insert_many([entStudent])
+# ent_user.insert_many([entStudent])
