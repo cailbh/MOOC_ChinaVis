@@ -22,12 +22,7 @@ entProblem = []
 entStudent = {}
 entConcept = []
 for p in collect_problem.find({}):
-    p['totalAttempts'] = 0
-    p['acceptedAttempts'] = 0
-    p['totalScore'] = 0
-    p['accuracy'] = 0
-    p['conCount'] = 0
-    p['log'] = {}
+
     entProblem.append(p)
 
 for c in collect_concept.find({}):

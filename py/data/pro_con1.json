@@ -5,23 +5,23 @@
 },{
     "problem":"1568086661408161792",
     "concept_name":"转义字符",
-    "conceptId":"2.5"
+    "conceptId":"2-5"
 },{
     "problem":"1568086661408161792",
     "concept_name":"输入输出",
-    "conceptId":"1.7"
+    "conceptId":"1-7"
 },{
     "problem":"1568086661408161792",
     "concept_name":"格式控制符",
-    "conceptId":"2.6"
+    "conceptId":"2-6"
 },{
     "problem":"1568086661408161792",
     "concept_name":"字符串",
-    "conceptId":"2.3"
+    "conceptId":"2-3"
 },{
     "problem":"1568086661408161793",
     "concept_name":"浮点型",
-    "conceptId":"1.2"
+    "conceptId":"1-2"
 },{
     "problem":"1568086661408161794",
     "concept_name":"表达式",
@@ -29,23 +29,23 @@
 },{
     "problem":"1568086661408161794",
     "concept_name":"转义字符",
-    "conceptId":"2.5"
+    "conceptId":"2-5"
 },{
     "problem":"1568086661408161794",
     "concept_name":"输入输出",
-    "conceptId":"1.7"
+    "conceptId":"1-7"
 },{
     "problem":"1568086661408161794",
     "concept_name":"格式控制符",
-    "conceptId":"2.6"
+    "conceptId":"2-6"
 },{
     "problem":"1568086661408161794",
     "concept_name":"字符串",
-    "conceptId":"2.3"
+    "conceptId":"2-3"
 },{
     "problem":"1568086661408161795",
     "concept_name":"标识符",
-    "conceptId":"2.7"
+    "conceptId":"2-7"
 },{
     "problem":"1568086661408161796",
     "concept_name":"表达式",
@@ -53,23 +53,23 @@
 },{
     "problem":"1568086661408161797",
     "concept_name":"注释",
-    "conceptId":"2.8"
+    "conceptId":"2-8"
 },{
     "problem":"1568086661408161798",
     "concept_name":"输入输出",
-    "conceptId":"1.7"
+    "conceptId":"1-7"
 },{
     "problem":"1568086661408161798",
     "concept_name":"字符类型",
-    "conceptId":"1.3"
+    "conceptId":"1-3"
 },{
     "problem":"1568086661408161798",
     "concept_name":"ASCII码",
-    "conceptId":"1.3.1"
+    "conceptId":"1-3-1"
 },{
     "problem":"1568086661408161799",
     "concept_name":"逻辑运算符",
-    "conceptId":"2.1.4"
+    "conceptId":"2-1-4"
 },{
     "problem":"1568086661408161799",
     "concept_name":"表达式",
@@ -81,19 +81,19 @@
 },{
     "problem":"1568086661408161800",
     "concept_name":"逻辑运算符",
-    "conceptId":"2.1.4"
+    "conceptId":"2-1-4"
 },{
     "problem":"1568086661408161800",
     "concept_name":"算术运算符",
-    "conceptId":"2.1.1"
+    "conceptId":"2-1-1"
 },{
     "problem":"1568086661408161800",
     "concept_name":"赋值运算符",
-    "conceptId":"2.1.2"
+    "conceptId":"2-1-2"
 },{
     "problem":"1568086661408161800",
     "concept_name":"类型转换",
-    "conceptId":"2.4"
+    "conceptId":"2-4"
 },{
     "problem":"1568086661408161801",
     "concept_name":"表达式",
@@ -101,7 +101,7 @@
 },{
     "problem":"1568086661408161801",
     "concept_name":"逻辑运算符",
-    "conceptId":"2.1.4"
+    "conceptId":"2-1-4"
 },{
     "problem":"1568086661408161802",
     "concept_name":"表达式",
@@ -109,7 +109,7 @@
 },{
     "problem":"1568086661408161802",
     "concept_name":"算术运算符",
-    "conceptId":"2.1.1"
+    "conceptId":"2-1-1"
 },{
     "problem":"1568086661408161803",
     "concept_name":"表达式",
@@ -117,15 +117,15 @@
 },{
     "problem":"1568086661408161803",
     "concept_name":"算术运算符",
-    "conceptId":"2.1.1"
+    "conceptId":"2-1-1"
 },{
     "problem":"1568086661408161804",
     "concept_name":"逻辑运算符",
-    "conceptId":"2.1.4"
+    "conceptId":"2-1-4"
 },{
     "problem":"1568086661408161804",
     "concept_name":"关系运算符",
-    "conceptId":"2.1.3"
+    "conceptId":"2-1-3"
 },{
     "problem":"1568086661408161804",
     "concept_name":"表达式",
@@ -133,47 +133,47 @@
 },{
     "problem":"1568086661408161805",
     "concept_name":"逻辑运算符",
-    "conceptId":"2.1.4"
+    "conceptId":"2-1-4"
 },{
     "problem":"1568086661408161805",
     "concept_name":"关系运算符",
-    "conceptId":"2.1.3"
+    "conceptId":"2-1-3"
 },{
     "problem":"1568086661408161805",
     "concept_name":"算术运算符",
-    "conceptId":"2.1.1"
+    "conceptId":"2-1-1"
 },{
     "problem":"1568086661408161806",
     "concept_name":"进制转换",
-    "conceptId":"1.6"
+    "conceptId":"1-6"
 },{
     "problem":"1568086661408161807",
     "concept_name":"进制转换",
-    "conceptId":"1.6"
+    "conceptId":"1-6"
 },{
     "problem":"1568086661408161808",
     "concept_name":"进制转换",
-    "conceptId":"1.6"
+    "conceptId":"1-6"
 },{
     "problem":"1568086661408161809",
     "concept_name":"进制转换",
-    "conceptId":"1.6"
+    "conceptId":"1-6"
 },{
     "problem":"1568086661408161810",
     "concept_name":"进制转换",
-    "conceptId":"1.6"
+    "conceptId":"1-6"
 },{
     "problem":"1568086661408161811",
     "concept_name":"字符串",
-    "conceptId":"2.3"
+    "conceptId":"2-3"
 },{
     "problem":"1568086661408161811",
     "concept_name":"输入输出",
-    "conceptId":"1.7"
+    "conceptId":"1-7"
 },{
     "problem":"1568086661408161812",
     "concept_name":"字符串",
-    "conceptId":"2.3"
+    "conceptId":"2-3"
 },{
     "problem":"1568086661408161812",
     "concept_name":"表达式",
@@ -181,7 +181,7 @@
 },{
     "problem":"1568086661408161813",
     "concept_name":"逻辑运算符",
-    "conceptId":"2.1.4"
+    "conceptId":"2-1-4"
 },{
     "problem":"1568086661408161813",
     "concept_name":"表达式",
@@ -189,47 +189,47 @@
 },{
     "problem":"1568086661408161814",
     "concept_name":"进制转换",
-    "conceptId":"1.6"
+    "conceptId":"1-6"
 },{
     "problem":"1568086661408161815",
     "concept_name":"浮点类型",
-    "conceptId":"1.2"
+    "conceptId":"1-2"
 },{
     "problem":"1568086661408161815",
     "concept_name":"算术运算符",
-    "conceptId":"2.1.1"
+    "conceptId":"2-1-1"
 },{
     "problem":"1568086661408161815",
     "concept_name":"类型转换",
-    "conceptId":"2.4"
+    "conceptId":"2-4"
 },{
     "problem":"1568086661408161815",
     "concept_name":"输入输出",
-    "conceptId":"1.7"
+    "conceptId":"1-7"
 },{
     "problem":"1568086661408161816",
     "concept_name":"ASCII码",
-    "conceptId":"1.3.1"
+    "conceptId":"1-3-1"
 },{
     "problem":"1568086661408161816",
     "concept_name":"输入输出",
-    "conceptId":"1.7"
+    "conceptId":"1-7"
 },{
     "problem":"1568086661408161817",
     "concept_name":"输入输出",
-    "conceptId":"1.7"
+    "conceptId":"1-7"
 },{
     "problem":"1568086661408161817",
     "concept_name":"算术运算符",
-    "conceptId":"2.1.1"
+    "conceptId":"2-1-1"
 },{
     "problem":"1568086661408161817",
     "concept_name":"赋值运算符",
-    "conceptId":"2.1.2"
+    "conceptId":"2-1-2"
 },{
     "problem":"1568086661408161818",
     "concept_name":"输入输出",
-    "conceptId":"1.7"
+    "conceptId":"1-7"
 },{
     "problem":"1568086661408161818",
     "concept_name":"循环控制",
@@ -237,19 +237,19 @@
 },{
     "problem":"1568086661408161819",
     "concept_name":"输入输出",
-    "conceptId":"1.7"
+    "conceptId":"1-7"
 },{
     "problem":"1568086661408161819",
     "concept_name":"if-else",
-    "conceptId":"3.1"
+    "conceptId":"3-1"
 },{
     "problem":"1568086661408161820",
     "concept_name":"输入输出",
-    "conceptId":"1.7"
+    "conceptId":"1-7"
 },{
     "problem":"1568086661408161821",
     "concept_name":"输入输出",
-    "conceptId":"1.7"
+    "conceptId":"1-7"
 },{
     "problem":"1570609751279202304",
     "concept_name":"表达式",
@@ -257,27 +257,27 @@
 },{
     "problem":"1570609751279202305",
     "concept_name":"输入输出",
-    "conceptId":"1.7"
+    "conceptId":"1-7"
 },{
     "problem":"1570609751279202305",
     "concept_name":"格式控制符",
-    "conceptId":"2.6"
+    "conceptId":"2-6"
 },{
     "problem":"1570609751279202306",
     "concept_name":"整型",
-    "conceptId":"1.1"
+    "conceptId":"1-1"
 },{
     "problem":"1570609751279202306",
     "concept_name":"算术运算符",
-    "conceptId":"2.1.1"
+    "conceptId":"2-1-1"
 },{
     "problem":"1570609751279202307",
     "concept_name":"浮点型",
-    "conceptId":"1.2"
+    "conceptId":"1-2"
 },{
     "problem":"1570609751279202307",
     "concept_name":"类型转换",
-    "conceptId":"2.4"
+    "conceptId":"2-4"
 },{
     "problem":"1570609751279202308",
     "concept_name":"表达式",
@@ -289,11 +289,11 @@
 },{
     "problem":"1570609751279202309",
     "concept_name":"ASCII码",
-    "conceptId":"1.3.1"
+    "conceptId":"1-3-1"
 },{
     "problem":"1570609751279202310",
     "concept_name":"赋值运算符",
-    "conceptId":"2.1.2"
+    "conceptId":"2-1-2"
 },{
     "problem":"1570609751279202310",
     "concept_name":"基本数据类型",
@@ -301,11 +301,11 @@
 },{
     "problem":"1570609751279202310",
     "concept_name":"赋值运算符",
-    "conceptId":"2.1.2"
+    "conceptId":"2-1-2"
 },{
     "problem":"1570609751279202310",
     "concept_name":"算术运算符",
-    "conceptId":"2.1.1"
+    "conceptId":"2-1-1"
 },{
     "problem":"1570609751279202311",
     "concept_name":"基本数据类型",
@@ -313,11 +313,11 @@
 },{
     "problem":"1570609751279202311",
     "concept_name":"整型",
-    "conceptId":"1.1"
+    "conceptId":"1-1"
 },{
     "problem":"1570609751279202311",
     "concept_name":"算术运算符",
-    "conceptId":"2.1.1"
+    "conceptId":"2-1-1"
 },{
     "problem":"1570609751279202312",
     "concept_name":"基本数据类型",
@@ -325,19 +325,19 @@
 },{
     "problem":"1570609751279202312",
     "concept_name":"整型",
-    "conceptId":"1.1"
+    "conceptId":"1-1"
 },{
     "problem":"1570609751279202312",
     "concept_name":"条件表达式",
-    "conceptId":"2.9"
+    "conceptId":"2-9"
 },{
     "problem":"1570609751279202313",
     "concept_name":"结构体定义",
-    "conceptId":"8.1"
+    "conceptId":"8-1"
 },{
     "problem":"1570609751279202313",
     "concept_name":"结构体数组",
-    "conceptId":"8.2"
+    "conceptId":"8-2"
 },{
     "problem":"1570609751279202313",
     "concept_name":"数组",
@@ -345,7 +345,7 @@
 },{
     "problem":"1570609751279202313",
     "concept_name":"字符数组",
-    "conceptId":"6.3"
+    "conceptId":"6-3"
 },{
     "problem":"1570609751279202314",
     "concept_name":"表达式",
@@ -361,7 +361,7 @@
 },{
     "problem":"1570609751279202315",
     "concept_name":"条件表达式",
-    "conceptId":"2.9"
+    "conceptId":"2-9"
 },{
     "problem":"1570609751279202316",
     "concept_name":"表达式",
@@ -369,75 +369,75 @@
 },{
     "problem":"1570609751279202316",
     "concept_name":"整型",
-    "conceptId":"1.1"
+    "conceptId":"1-1"
 },{
     "problem":"1570609751279202316",
     "concept_name":"字符型",
-    "conceptId":"1.3"
+    "conceptId":"1-3"
 },{
     "problem":"1570609751279202316",
     "concept_name":"浮点型",
-    "conceptId":"1.2"
+    "conceptId":"1-2"
 },{
     "problem":"1570609751279202316",
     "concept_name":"类型转换",
-    "conceptId":"2.4"
+    "conceptId":"2-4"
 },{
     "problem":"1570609751279202316",
     "concept_name":"算术运算符",
-    "conceptId":"2.1.1"
+    "conceptId":"2-1-1"
 },{
     "problem":"1570609751279202317",
     "concept_name":"字符型",
-    "conceptId":"1.3"
+    "conceptId":"1-3"
 },{
     "problem":"1570609751279202317",
     "concept_name":"类型转换",
-    "conceptId":"2.4"
+    "conceptId":"2-4"
 },{
     "problem":"1570609751279202317",
     "concept_name":"整型",
-    "conceptId":"1.1"
+    "conceptId":"1-1"
 },{
     "problem":"1570609751279202317",
     "concept_name":"算术运算符",
-    "conceptId":"2.1.1"
+    "conceptId":"2-1-1"
 },{
     "problem":"1570609751279202317",
     "concept_name":"输入输出",
-    "conceptId":"1.7"
+    "conceptId":"1-7"
 },{
     "problem":"1570609751279202318",
     "concept_name":"输入输出",
-    "conceptId":"1.7"
+    "conceptId":"1-7"
 },{
     "problem":"1570609751279202318",
     "concept_name":"字符型",
-    "conceptId":"1.3"
+    "conceptId":"1-3"
 },{
     "problem":"1570609751279202319",
     "concept_name":"逻辑运算符",
-    "conceptId":"2.1.4"
+    "conceptId":"2-1-4"
 },{
     "problem":"1570609751279202319",
     "concept_name":"比较运算符",
-    "conceptId":"2.1.3"
+    "conceptId":"2-1-3"
 },{
     "problem":"1570609751279202320",
     "concept_name":"while循环",
-    "conceptId":"2.1.3"
+    "conceptId":"2-1-3"
 },{
     "problem":"1570609751279202320",
     "concept_name":"break/continue",
-    "conceptId":"4.3"
+    "conceptId":"4-3"
 },{
     "problem":"1570609751279202320",
     "concept_name":"输入输出",
-    "conceptId":"1.7"
+    "conceptId":"1-7"
 },{
     "problem":"1570609751279202320",
     "concept_name":"逻辑运算符",
-    "conceptId":"2.1.4"
+    "conceptId":"2-1-4"
 },{
     "problem":"1570609751279202321",
     "concept_name":"表达式",
@@ -445,27 +445,27 @@
 },{
     "problem":"1570609751279202321",
     "concept_name":"条件表达式",
-    "conceptId":"2.9"
+    "conceptId":"2-9"
 },{
     "problem":"1570609751279202322",
     "concept_name":"整型",
-    "conceptId":"1.1"
+    "conceptId":"1-1"
 },{
     "problem":"1570609751279202322",
     "concept_name":"赋值运算符",
-    "conceptId":"2.1.2"
+    "conceptId":"2-1-2"
 },{
     "problem":"1570609751279202322",
     "concept_name":"优先级",
-    "conceptId":"2.2"
+    "conceptId":"2-2"
 },{
     "problem":"1570609751279202322",
     "concept_name":"算术运算符",
-    "conceptId":"2.1.1"
+    "conceptId":"2-1-1"
 },{
     "problem":"1570609751279202323",
     "concept_name":"赋值运算符",
-    "conceptId":"2.1.2"
+    "conceptId":"2-1-2"
 },{
     "problem":"1570609751279202323",
     "concept_name":"表达式",
@@ -473,119 +473,119 @@
 },{
     "problem":"1570609751279202323",
     "concept_name":"算术运算符",
-    "conceptId":"2.1.1"
+    "conceptId":"2-1-1"
 },{
     "problem":"1570609751279202323",
     "concept_name":"整型",
-    "conceptId":"1.1"
+    "conceptId":"1-1"
 },{
     "problem":"1570609751279202323",
     "concept_name":"浮点型",
-    "conceptId":"1.2"
+    "conceptId":"1-2"
 },{
     "problem":"1570609751279202324",
     "concept_name":"整型",
-    "conceptId":"1.1"
+    "conceptId":"1-1"
 },{
     "problem":"1570609751279202324",
     "concept_name":"输入输出",
-    "conceptId":"1.7"
+    "conceptId":"1-7"
 },{
     "problem":"1570609751279202324",
     "concept_name":"算术运算符",
-    "conceptId":"2.1.1"
+    "conceptId":"2-1-1"
 },{
     "problem":"1570609751279202324",
     "concept_name":"格式控制符",
-    "conceptId":"2.6"
+    "conceptId":"2-6"
 },{
     "problem":"1570609751279202325",
     "concept_name":"整型",
-    "conceptId":"1.1"
+    "conceptId":"1-1"
 },{
     "problem":"1570609751279202325",
     "concept_name":"输入输出",
-    "conceptId":"1.7"
+    "conceptId":"1-7"
 },{
     "problem":"1570609751279202325",
     "concept_name":"算术运算符",
-    "conceptId":"2.1.1"
+    "conceptId":"2-1-1"
 },{
     "problem":"1570609751279202325",
     "concept_name":"格式控制符",
-    "conceptId":"2.6"
+    "conceptId":"2-6"
 },{
     "problem":"1570609751279202326",
     "concept_name":"输入输出",
-    "conceptId":"1.7"
+    "conceptId":"1-7"
 },{
     "problem":"1570609751279202326",
     "concept_name":"算术运算符",
-    "conceptId":"2.1.1"
+    "conceptId":"2-1-1"
 },{
     "problem":"1570609751279202326",
     "concept_name":"格式控制符",
-    "conceptId":"2.6"
+    "conceptId":"2-6"
 },{
     "problem":"1570609751279202327",
     "concept_name":"输入输出",
-    "conceptId":"1.7"
+    "conceptId":"1-7"
 },{
     "problem":"1570609751279202327",
     "concept_name":"算术运算符",
-    "conceptId":"2.1.1"
+    "conceptId":"2-1-1"
 },{
     "problem":"1570609751279202327",
     "concept_name":"格式控制符",
-    "conceptId":"2.6"
+    "conceptId":"2-6"
 },{
     "problem":"1570609751279202328",
     "concept_name":"输入输出",
-    "conceptId":"1.7"
+    "conceptId":"1-7"
 },{
     "problem":"1570609751279202328",
     "concept_name":"字符串",
-    "conceptId":"2.3"
+    "conceptId":"2-3"
 },{
     "problem":"1570609751279202328",
     "concept_name":"字符数组",
-    "conceptId":"6.3"
+    "conceptId":"6-3"
 },{
     "problem":"1570609751279202328",
     "concept_name":"算术运算符",
-    "conceptId":"2.1.1"
+    "conceptId":"2-1-1"
 },{
     "problem":"1570609751279202328",
     "concept_name":"赋值运算符",
-    "conceptId":"2.1.2"
+    "conceptId":"2-1-2"
 },{
     "problem":"1570609751279202329",
     "concept_name":"输入输出",
-    "conceptId":"1.7"
+    "conceptId":"1-7"
 },{
     "problem":"1570609751279202329",
     "concept_name":"算术运算符",
-    "conceptId":"2.1.1"
+    "conceptId":"2-1-1"
 },{
     "problem":"1570609751279202329",
     "concept_name":"类型转换",
-    "conceptId":"2.4"
+    "conceptId":"2-4"
 },{
     "problem":"1570609751279202330",
     "concept_name":"类型转换",
-    "conceptId":"2.4"
+    "conceptId":"2-4"
 },{
     "problem":"1570609751279202330",
     "concept_name":"输入输出",
-    "conceptId":"1.7"
+    "conceptId":"1-7"
 },{
     "problem":"1570609751279202330",
     "concept_name":"字符串",
-    "conceptId":"2.3"
+    "conceptId":"2-3"
 },{
     "problem":"1570609751279202331",
     "concept_name":"整型",
-    "conceptId":"1.1"
+    "conceptId":"1-1"
 },{
     "problem":"1570609751279202331",
     "concept_name":"分支控制",
@@ -593,27 +593,27 @@
 },{
     "problem":"1570609751279202331",
     "concept_name":"算术运算符",
-    "conceptId":"2.1.1"
+    "conceptId":"2-1-1"
 },{
     "problem":"1570609751279202332",
     "concept_name":"输入输出",
-    "conceptId":"1.7"
+    "conceptId":"1-7"
 },{
     "problem":"1570609751279202332",
     "concept_name":"算术运算符",
-    "conceptId":"2.1.1"
+    "conceptId":"2-1-1"
 },{
     "problem":"1570609751279202332",
     "concept_name":"整型",
-    "conceptId":"1.1"
+    "conceptId":"1-1"
 },{
     "problem":"1570609751279202332",
     "concept_name":"浮点型",
-    "conceptId":"1.2"
+    "conceptId":"1-2"
 },{
     "problem":"1570609751279202333",
     "concept_name":"整型",
-    "conceptId":"1.1"
+    "conceptId":"1-1"
 },{
     "problem":"1570609751279202333",
     "concept_name":"分支控制",
@@ -621,15 +621,15 @@
 },{
     "problem":"1570609751279202333",
     "concept_name":"算术运算符",
-    "conceptId":"2.1.1"
+    "conceptId":"2-1-1"
 },{
     "problem":"1570609751279202334",
     "concept_name":"浮点型",
-    "conceptId":"1.2"
+    "conceptId":"1-2"
 },{
     "problem":"1570609751279202334",
     "concept_name":"整型",
-    "conceptId":"1.1"
+    "conceptId":"1-1"
 },{
     "problem":"1570609751279202334",
     "concept_name":"分支控制",
@@ -637,27 +637,27 @@
 },{
     "problem":"1570609751279202334",
     "concept_name":"算术运算符",
-    "conceptId":"2.1.1"
+    "conceptId":"2-1-1"
 },{
     "problem":"1570609751279202334",
     "concept_name":"输入输出",
-    "conceptId":"1.7"
+    "conceptId":"1-7"
 },{
     "problem":"1570609751279202335",
     "concept_name":"算术运算符",
-    "conceptId":"2.1.1"
+    "conceptId":"2-1-1"
 },{
     "problem":"1570609751279202335",
     "concept_name":"输入输出",
-    "conceptId":"1.7"
+    "conceptId":"1-7"
 },{
     "problem":"1570609751279202335",
     "concept_name":"浮点型",
-    "conceptId":"1.2"
+    "conceptId":"1-2"
 },{
     "problem":"1570609751279202336",
     "concept_name":"整型",
-    "conceptId":"1.1"
+    "conceptId":"1-1"
 },{
     "problem":"1570609751279202336",
     "concept_name":"分支控制",
@@ -665,7 +665,7 @@
 },{
     "problem":"1570609751279202336",
     "concept_name":"算术运算符",
-    "conceptId":"2.1.1"
+    "conceptId":"2-1-1"
 },{
     "problem":"1570609751279202336",
     "concept_name":"循环控制",
@@ -673,31 +673,31 @@
 },{
     "problem":"1570609751279202337",
     "concept_name":"整型",
-    "conceptId":"1.1"
+    "conceptId":"1-1"
 },{
     "problem":"1570609751279202337",
     "concept_name":"算术运算符",
-    "conceptId":"2.1.1"
+    "conceptId":"2-1-1"
 },{
     "problem":"1570609751279202337",
     "concept_name":"赋值运算符",
-    "conceptId":"2.1.2"
+    "conceptId":"2-1-2"
 },{
     "problem":"1570609751279202337",
     "concept_name":"输入输出",
-    "conceptId":"1.7"
+    "conceptId":"1-7"
 },{
     "problem":"1570609751279202337",
     "concept_name":"输入输出",
-    "conceptId":"1.7"
+    "conceptId":"1-7"
 },{
     "problem":"1570609751279202338",
     "concept_name":"整型",
-    "conceptId":"1.1"
+    "conceptId":"1-1"
 },{
     "problem":"1570609751279202338",
     "concept_name":"算术运算符",
-    "conceptId":"2.1.1"
+    "conceptId":"2-1-1"
 },{
     "problem":"1570609751279202338",
     "concept_name":"循环控制",
@@ -709,31 +709,31 @@
 },{
     "problem":"1570609751279202339",
     "concept_name":"浮点型",
-    "conceptId":"1.2"
+    "conceptId":"1-2"
 },{
     "problem":"1570609751279202339",
     "concept_name":"算术运算符",
-    "conceptId":"2.1.1"
+    "conceptId":"2-1-1"
 },{
     "problem":"1570609751279202339",
     "concept_name":"输入输出",
-    "conceptId":"1.7"
+    "conceptId":"1-7"
 },{
     "problem":"1570609751279202339",
     "concept_name":"类型转换",
-    "conceptId":"2.4"
+    "conceptId":"2-4"
 },{
     "problem":"1570609751279202340",
     "concept_name":"整型",
-    "conceptId":"1.1"
+    "conceptId":"1-1"
 },{
     "problem":"1570609751279202340",
     "concept_name":"算术运算符",
-    "conceptId":"2.1.1"
+    "conceptId":"2-1-1"
 },{
     "problem":"1570609751279202340",
     "concept_name":"输入输出",
-    "conceptId":"1.7"
+    "conceptId":"1-7"
 },{
     "problem":"1570609751279202340",
     "concept_name":"分支控制",
@@ -741,15 +741,15 @@
 },{
     "problem":"1570609751279202341",
     "concept_name":"整型",
-    "conceptId":"1.1"
+    "conceptId":"1-1"
 },{
     "problem":"1570609751279202341",
     "concept_name":"算术运算符",
-    "conceptId":"2.1.1"
+    "conceptId":"2-1-1"
 },{
     "problem":"1570609751279202341",
     "concept_name":"输入输出",
-    "conceptId":"1.7"
+    "conceptId":"1-7"
 },{
     "problem":"1570609751279202341",
     "concept_name":"分支控制",
@@ -757,7 +757,7 @@
 },{
     "problem":"1570609751279202342",
     "concept_name":"输入输出",
-    "conceptId":"1.7"
+    "conceptId":"1-7"
 },{
     "problem":"1570609751279202342",
     "concept_name":"分支控制",
@@ -769,15 +769,15 @@
 },{
     "problem":"1570609751279202342",
     "concept_name":"字符型",
-    "conceptId":"1.3"
+    "conceptId":"1-3"
 },{
     "problem":"1570609751279202342",
     "concept_name":"ASCII码",
-    "conceptId":"1.3.1"
+    "conceptId":"1-3-1"
 },{
     "problem":"1570609751279202343",
     "concept_name":"整型",
-    "conceptId":"1.1"
+    "conceptId":"1-1"
 },{
     "problem":"1570609751279202343",
     "concept_name":"循环控制",
@@ -785,7 +785,7 @@
 },{
     "problem":"1570609751279202343",
     "concept_name":"输入输出",
-    "conceptId":"1.7"
+    "conceptId":"1-7"
 },{
     "problem":"1570609751279202343",
     "concept_name":"分支控制",
@@ -793,11 +793,11 @@
 },{
     "problem":"1570609751279202343",
     "concept_name":"算术运算符",
-    "conceptId":"2.1.1"
+    "conceptId":"2-1-1"
 },{
     "problem":"1573619795449196544",
     "concept_name":"while循环",
-    "conceptId":"4.2"
+    "conceptId":"4-2"
 },{
     "problem":"1573619795449196544",
     "concept_name":"循环控制",
@@ -805,7 +805,7 @@
 },{
     "problem":"1573619795449196544",
     "concept_name":"while循环",
-    "conceptId":"4.2"
+    "conceptId":"4-2"
 },{
     "problem":"1573619795449196544",
     "concept_name":"逻辑运算符",
@@ -813,7 +813,7 @@
 },{
     "problem":"1573619795449196544",
     "concept_name":"break/continue",
-    "conceptId":"4.3"
+    "conceptId":"4-3"
 },{
     "problem":"1573619795449196544",
     "concept_name":"分支控制",
@@ -821,10 +821,10 @@
 },{
     "problem":"1573619795449196544",
     "concept_name":"算术运算符",
-    "conceptId":"2.1.1"
+    "conceptId":"2-1-1"
 },{
     "problem":"1573619795449196545",
     "concept_name":"while循环",
-    "conceptId":"4.2"
+    "conceptId":"4-2"
 }
 ]

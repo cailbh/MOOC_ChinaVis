@@ -4,7 +4,7 @@
     <button v-on:click="clickHandler">按钮</button> -->
     <!-- <svg width="1200" height="1000"></svg> -->
 
-    <div id="Container" >
+    <div id="Container">
       <!-- <div id="Container-back"></div> -->
       <div id="head">
 
@@ -42,14 +42,15 @@ import Head from "@/components/Header/index.vue";
 import Graph from '@/components/Graph/index.vue';
 import ProcPanel from '@/components/ProblemContentPanel/index.vue';
 import NetPPanel from '@/components/NetProblemPanel/index.vue';
-export default{
-  components: { Head, Graph, ProcPanel,NetPPanel},
+import tools from "@/utils/tools.js";
+export default {
+  components: { Head, Graph, ProcPanel, NetPPanel },
   /* eslint-disable no-unused-vars */
   data() {
     return {
       problemsData: [],
-      submissionsData:[],
-      studentsData:[],
+      submissionsData: [],
+      studentsData: [],
       conceptsData: [],
       conceptTree: [],
       problemConceptData: [],
@@ -58,9 +59,9 @@ export default{
       showVideo: true,
       showGraph: true,
       showEdit: false,
-      selectEntId:"0",
+      selectEntId: "0",
       selectEnt: "0",
-      toolState:'',
+      toolState: '',
       timeDur: "",
       videoTime: 0,
       windowWidth: document.documentElement.clientWidth, //实时屏幕宽度
@@ -109,13 +110,13 @@ export default{
     };
   },
   watch: {
-    toolState(val){
-      if(val=='edit')
+    toolState(val) {
+      if (val == 'edit')
         this.showEdit = true;
       else
         this.showEdit = false;
     },
-    selectEnt(val){
+    selectEnt(val) {
       this.selectEntId = val;
     },
     timeDur() {
@@ -137,7 +138,6 @@ export default{
         .get("/api/problem/allProblem", {}, {})
         .then((response) => {
           _this.problemsData = response.body;
-          _this.$bus.$emit("allProblem", _this.problemsData);
         });
     },
     getConcept() {
@@ -155,7 +155,6 @@ export default{
         .get("/api/concept/conceptTree", {}, {})
         .then((response) => {
           _this.conceptTree = response.body;
-          console.log(_this.conceptTree)
           _this.$bus.$emit("ConceptTree", _this.conceptTree);
         });
     },
@@ -165,6 +164,7 @@ export default{
         .then((response) => {
           _this.submissionsData = response.body;
           _this.$bus.$emit("Submission", _this.submissionsData);
+          this.calStudent();
         });
     },
     getProblemConcept() {
@@ -183,26 +183,125 @@ export default{
           _this.$bus.$emit("Student", _this.studentsData);
         });
     },
+    calStudent() {
+      const _this = this;
+      let entStudent = [];
+      let entConcept = [];
+      let entProblem = [];
+      let conceptTree = tools.deepClone(_this.conceptTree);
+      let problemsData = tools.deepClone(_this.problemsData);
+      let submissionsData = tools.deepClone(_this.submissionsData);
+      let problemConceptData = tools.deepClone(_this.problemConceptData);
+      for (let i = 0; i < problemsData.length; i++) {
+        problemsData[i]['totalAttempts'] = 0;
+        problemsData[i]['acceptedAttempts'] = 0;
+        problemsData[i]['totalScore'] = 0;
+        problemsData[i]['accuracy'] = 0;
+        problemsData[i]['conCount'] = 0;
+      }
+      for (let c = 0; c < conceptTree.length; c++) {
+        conceptTree[c]['totalAttempts'] = 0;
+        conceptTree[c]['acceptedAttempts'] = 0;
+        conceptTree[c]['totalScore'] = 0;
+        conceptTree[c]['accuracy'] = 0;
+        conceptTree[c]['proCount'] = 0;
+        
+      }
+      for (let l = 0; l < submissionsData.length;l++){
+        let userId = submissionsData[l]['user']['user']['id'];
+        if (entStudent.find(function (eS) { return eS['id'] == userId; }) == undefined) {
+          entStudent.push({ 'id': userId, "pro": [] });
+        }
+        let entStu = entStudent.find(function (eS) { return eS['id'] == userId; });
+        let jageProblemContents = submissionsData[l]['judgeResponseContents'];
+        let submitAt = submissionsData[l]['submitAt'];
+        for (let i = 0; i < jageProblemContents.length; i++) {
+          let problemId = jageProblemContents[i]['problemSetProblemId'];
+          let score = jageProblemContents[i]['score'];
+          let proStatus = jageProblemContents[i]['status'];
+          if (entStu['pro'].find(function (p) { return p['id'] == problemId; }) == undefined) {
+            entStu['pro'].push({ "id": problemId, 'log': [jageProblemContents[i]], 'best': jageProblemContents[i] })
+          }
+          let eSP = entStu['pro'].find(function (p) { return p['id'] == problemId; })
+          eSP['log'].push(jageProblemContents[i]);
+          if (eSP['best']['score'] < score) {
+            eSP['best'] = i;
+          }
+          let pro = problemsData.find(function (p) { return p['id'] == problemId; })
+          if(pro!=undefined){
+            
+            pro['totalAttempts'] += 1;
+            if (proStatus == 'ACCEPTED')
+              pro['acceptedAttempts'] += 1;
+            pro['totalScore'] += score / pro['score'];
+          }
+        }
+      }
+
+      for (let c = 0; c < conceptTree.length; c++) {
+        let pcount = 0;
+          for (let i = 0; i < problemConceptData.length; i++) {
+          let conceptId = problemConceptData[i]['conceptId'];
+          if(conceptId == conceptTree[c]['id']){
+            pcount++;
+            let problemId = problemConceptData[i]['problem'];
+            let ProBycon = problemsData.find(function (p) { return p['id'] == problemId; });
+            conceptTree[c]['proCount'] += 1;
+            conceptTree[c]['totalAttempts'] += ProBycon['totalAttempts'];
+            conceptTree[c]['acceptedAttempts'] += ProBycon['acceptedAttempts'];
+            conceptTree[c]['scoringRate'] += ProBycon['scoringRate'];
+            conceptTree[c]['accuracy'] += ProBycon['accuracy'];
+          }
+        }
+        if (conceptTree[c]['totalAttempts'] != 0)
+          conceptTree[c]['acceptedRate'] = conceptTree[c]['acceptedAttempts'] / conceptTree[c]['totalAttempts'];
+        else
+            conceptTree[c]['acceptedRate'] = 0;
+        if (pcount != 0)
+            conceptTree[c]['scoringRate'] = conceptTree[c]['scoringRate'] / pcount;
+            conceptTree[c]['accuracy'] = conceptTree[c]['accuracy'] / pcount;
+      }
+
+      
+      for (let i = 0; i < problemsData.length; i++) {
+        if(problemsData[i]['totalAttempts']!=0){
+        problemsData[i]['scoringRate'] = problemsData[i]['totalScore'] / problemsData[i]['totalAttempts'];
+        problemsData[i]['acceptedRate'] = problemsData[i]['acceptedAttempts'] / problemsData[i]['totalAttempts'];}
+        let num = 0
+        let cur = 0
+        // for l in ep['log']:
+        //     num += 1
+        //     if ep['log'][l][0] == ep['score']:
+        //         cur += 1
+        // if cur != 0:
+        //     ep['accuracy'] = cur / num
+      }
+      console.log(entStudent, problemsData)
+      _this.conceptTree = conceptTree;
+      _this.$bus.$emit("ConceptTree", _this.conceptTree);
+      _this.problemsData = problemsData;
+      _this.$bus.$emit("allProblem", _this.problemsData);
+    },
     getAllData() {
       const _this = this;
       this.getConceptTree();
       this.getStudents();
       this.getProblems();
       this.getConcept();
-      this.getSubmissions();
       this.getProblemConcept();
+      this.getSubmissions();
       // .then(()=>{ 
       // _this.updataGraph();
       // })
     },
-    getSelectEnt(val){
+    getSelectEnt(val) {
       console.log(val)
       this.selectEntId = val;
     },
     getTimeDur(value) {
       this.timeDur = value
     },
-    getToolState(val){
+    getToolState(val) {
       this.toolState = val;
     },
     getVideoTime(value) {
@@ -222,7 +321,7 @@ export default{
   mounted() {
     this.$el.style.setProperty("--heightStyle", this.windowHeight + "px");
     this.showVideo = true;
-    
+
     this.getAllData();
     // this.getData();
   },

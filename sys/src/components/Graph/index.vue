@@ -43,7 +43,9 @@ export default {
   data() {
     return {
       data: '',
+      graphHeight:0,
       problemsData: [],
+      proSetData: [],
       submissionsData: [],
       studentsData: [],
       conceptsData: [],
@@ -61,13 +63,18 @@ export default {
       Ent_problem:[],
       Ent_concept:[],
       entG:"",
+      entSetG:"",
+      entbySetG:"",
       relG:"",
       curProblemId: '',
+      curProblemSetId:'',
       selectProblemId: '',
       curConceptId: '',
       selectConceptId: '',
       proX:500,
       proY:0,
+      setX:800,
+      setY:0,
       treeX:50,
       treeY:0,
       proStepY:0,
@@ -104,44 +111,23 @@ export default {
       height: 0,
       curToolState: 'unEdit',
       margin: { top: 10, right: 20, bottom: 0, left: 20 },
-      color: [
+      mcolor: [
         "rgb(255,60,60)",
+        "rgb(155,20,100)",
         "rgb(255,83,255)",
+        "rgb(200,100,50)",
         "rgb(235,135,162)",
+        "rgb(200,200,102)",
         "rgb(255,178,101)",
         "rgb(63,151,134)",
-        "rgb(83,255,255)",
+        "rgb(83,155,255)",
+        "rgb(50,200,120)",
+        "rgb(2,50,200)",
         "rgb(0,122,244)",
+        "rgb(150,122,244)",
         "rgb(168,168,255)",
         "rgb(200,200,200)",
       ],
-      mcolor: [
-        "rgb(91, 107, 255)",
-        "rgb(6, 214, 160)",
-        "rgb(255, 120, 90)",
-        "rgb(125, 98, 211)",
-        "rgb(255, 113, 212)",
-        "rgb(112, 214, 255)",
-        "rgb(255, 159, 28)",
-        "rgb(255, 77, 109)",
-      ],
-      // mcolor: [
-      //   "rgb(255,60,60)",
-      //   "rgb(155,20,100)",
-      //   "rgb(255,83,255)",
-      //   "rgb(200,100,50)",
-      //   "rgb(235,135,162)",
-      //   "rgb(200,200,102)",
-      //   "rgb(255,178,101)",
-      //   "rgb(63,151,134)",
-      //   "rgb(83,155,255)",
-      //   "rgb(50,200,120)",
-      //   "rgb(2,50,200)",
-      //   "rgb(0,122,244)",
-      //   "rgb(150,122,244)",
-      //   "rgb(168,168,255)",
-      //   "rgb(200,200,200)",
-      // ],
       mLigntcolor: [
         "#ff9c9c",
         "#cc88b0",
@@ -168,18 +154,41 @@ export default {
     curProblemId(val) {
       const _this = this;
       _this.$bus.$emit("selectEnt", val);
-
+      let Ent_concept = _this.Ent_concept;
+      let Ent_problem = _this.Ent_problem;
+      let pro_conRelData = _this.problemConceptData;
+      // entCon
+      d3.selectAll(`.entCon`)
+        .attr("opacity","0.1");
+      d3.selectAll(`.proConRel`)
+        .attr("opacity","0.1");
+      pro_conRelData.forEach(rel=>{
+        let proId = rel['problem'];
+        let conId = rel['conceptId'];
+        if(proId == val){
+          d3.select(`#entCon_${conId}`)
+          .attr("opacity","1");
+          d3.select(`#proConRel_${conId}_${proId}`)
+          .attr("opacity","1");
+        }
+      })
+    },
+    curProblemSetId(val){
+      this.updataEntProblemDetailBySet();
     },
     Ent_problem:{
       deep:true,
       handler(){
         this.updataEntProblem();
+        this.updataEntProblemSetBack();
+        this.updataPro_ConRel();
       }
     },
     Ent_concept:{
       deep:true,
       handler(){
         this.updataEntConcept();
+        this.updataPro_ConRel();
       }
     }
     // groupsSvg: {
@@ -248,7 +257,7 @@ export default {
       for (let r = 0; r < problemConceptData.length; r++) {
         let curRel = problemConceptData[r];
         let pId = curRel['problem'];
-        let cId = curRel['contentId'];
+        let cId = curRel['conceptId'];
         ent_edge.push({
           source: pId,
           target: cId
@@ -330,7 +339,7 @@ export default {
             tipName = curEnt['problemPoolIndex']
             problemConceptData.forEach(rel => {
               if (rel['problem'] == curId) {
-                let conID = rel['contentId'];
+                let conID = rel['conceptId'];
                 idNameList.push(`#entCon_${conID}`);
               }
             });
@@ -342,7 +351,7 @@ export default {
             });
             tipName = curEnt['name']
             problemConceptData.forEach(rel => {
-              if (rel['contentId'] == curId) {
+              if (rel['conceptId'] == curId) {
                 let proID = rel['problem'];
                 idNameList.push(`#entPro_${proID}`);
               }
@@ -386,7 +395,7 @@ export default {
           if (curType == 'problem') {
             problemConceptData.forEach(rel => {
               if (rel['problem'] == curId) {
-                let conID = rel['contentId'];
+                let conID = rel['conceptId'];
                 idNameList.push(`#entCon_${conID}`)
               }
             });
@@ -394,7 +403,7 @@ export default {
           }
           else if (curType == "concept") {
             problemConceptData.forEach(rel => {
-              if (rel['contentId'] == curId) {
+              if (rel['conceptId'] == curId) {
                 let proID = rel['problem'];
                 idNameList.push(`#entPro_${proID}`)
               }
@@ -474,10 +483,6 @@ export default {
       svg.call(graphZoom)
 
     },
-    drawPro_Con(svg){
-      let problemConceptData = _this.problemConceptData;
-      
-    },
     drawMain(svg) {
       let _this = this;
       let data = _this.data;
@@ -496,11 +501,15 @@ export default {
       let backG = groups.append("g").attr("id", "backG").attr("width", width).attr("height", height);
       let arcG = groups.append("g").attr("id", "arcG").attr("width", width).attr("height", height);
       let relG = groups.append("g").attr("id", "relG").attr("width", width).attr("height", height);
+      let entSetG = groups.append("g").attr("id", "entSetG").attr("width", width).attr("height", height);
+      let entbySetG = groups.append("g").attr("id", "entbySetG").attr("width", width).attr("height", height);
       let entG = groups.append("g").attr("id", "entG").attr("width", width).attr("height", height);
       let frontG = groups.append("g").attr("id", "frontG").attr("width", width).attr("height", height);
 
       _this.arcG = arcG;
       _this.entG = entG;
+      _this.entSetG = entSetG;
+      _this.entbySetG = entbySetG;
       _this.relG = relG;
       let interval = _this.circleInterval;
 
@@ -517,20 +526,20 @@ export default {
           stk = e.transform.k;
         })
         .on('zoom', (e) => {
-          graphGTransformX = _this.graphGTransformX + e.transform.x - stx;
+          graphGTransformX = _this.graphGTransformX //+ e.transform.x - stx;
           graphGTransformY = _this.graphGTransformY + e.transform.y - sty;
-          graphGTransformK = _this.graphGTransformK + e.transform.k - stk;
+          graphGTransformK = _this.graphGTransformK //+ e.transform.k - stk;
 
-          groups.attr('transform', 'translate(' + (graphGTransformX) + ',' + (graphGTransformY) + ') scale(' + (graphGTransformK) + ')')
+          entbySetG.attr('transform', 'translate(' + (graphGTransformX) + ',' + (graphGTransformY) + ') scale(' + (graphGTransformK) + ')')
         })
         .on('end', (e) => {
           _this.graphGTransformX = graphGTransformX;
           _this.graphGTransformY = graphGTransformY;
           _this.graphGTransformK = graphGTransformK;
-          groups.attr('transform', 'translate(' + (graphGTransformX) + ',' + (graphGTransformY) + ') scale(' + (graphGTransformK) + ')')
+          entbySetG.attr('transform', 'translate(' + (graphGTransformX) + ',' + (graphGTransformY) + ') scale(' + (graphGTransformK) + ')')
         });
 
-      svg.call(graphZoom);
+        svg.call(graphZoom);
       const dragCon = () => {
 
         function dragstarted(event, d) {
@@ -558,13 +567,16 @@ export default {
       let treeX = _this.treeX;
       let treeY = _this.treeY;
       let stepY = height / (conceptTree.length + 2);
+
+      let proSetData = [];
+      let setOd = 0;
       _this.conStepY = stepY;
       let Ent_concept = [];
       for (let i = 0; i < conceptTree.length; i++) {
         let tempCon = tools.deepClone(conceptTree[i]);
         let cy = treeY + i * stepY;
         let cid = tempCon['id'];
-        tempCon['lay'] = cid.split(".").length;
+        tempCon['lay'] = cid.split("-").length;
         let cx = treeX * tempCon['lay'];
         tempCon['cx'] = cx;
         tempCon['cy'] = cy;
@@ -572,32 +584,44 @@ export default {
         tempCon['r'] = 7;
         tempCon['opacity'] = 1;
         Ent_concept.push(tempCon);
-        // let circle = _this.drawCircle(entG, cx, cy, r, fill, opacity, 'entCon', `entCon_${cid}`);
-        // circle.on("click",function(d){
-        //   console.log(d)
-        // })
-        // let text = _this.drawTxt(entG, cx+20, cy+3.5, Cname, "black", 12, `entConText_${cid}`);
       }
         _this.Ent_concept = Ent_concept;
-      // for (let i = 0; i < conceptTree.length; i++) {
-      //   let tempCon = tools.deepClone(conceptTree[i]);
-      //   let cy = treeY + i * stepY;
-      //   let cid = tempCon['id'];
-      //   
-      // }
       //------------
 
+      let proMaxMinDR = _this.proMaxMinDR;
+      let proMaxMinDC = _this.proMaxMinDC;
+      let proAttrMaxMinList = _this.proAttrMaxMinList;
+      let currentMaxColor = _this.entProMaxColor;
+      let currentMinColor = _this.entProMinColor;
+      let importanceColor_linear = d3.scaleLinear().domain([proMaxMinDC[0], proMaxMinDC[1]]).range([0, 1]);
+      let importanceCompute_color = d3.interpolate(currentMinColor, currentMaxColor);
+      let rSize_linear = d3.scaleLinear().domain([proMaxMinDR[1], proMaxMinDR[0]]).range([50, 100]);
+
+      console.log(proMaxMinDR,proMaxMinDC,proAttrMaxMinList)
       //problem -----------
       let proX = _this.proX;
       let proY = _this.proY;
       let Ent_problem = [];
       let proStepY = height/(problemData.length+2); 
       _this.proStepY = proStepY;
+      _this.graphHeight = height;
       for (let i = 0; i < problemData.length; i++) {
         let tempPro = tools.deepClone(problemData[i]);
         let cy = proY + i * proStepY;
         let pid = tempPro['id'];
-        // let lay = cid.split(".").length;
+        let pSetId = tempPro['problemSetId'];
+        if(proSetData.find(function(ps){return ps['id'] == pSetId;})==undefined){
+          proSetData.push({
+            "id":pSetId,
+            "order":setOd,
+            "set":[pid]
+          })
+          setOd++;
+        }
+        else{
+          proSetData.find(function(ps){return ps['id'] == pSetId;})['set'].push(pid);
+        }
+        // let lay = cid.split("-").length;
         let cx = proX;
         let r = proStepY;
         let fill = "grey";
@@ -606,8 +630,8 @@ export default {
         tempPro['cx'] = cx;
         tempPro['cy'] = cy;
         tempPro['order'] = i;
-        tempPro['width'] = 100;
-        tempPro['fill'] = "grey";
+        tempPro['width'] =rSize_linear(tempPro['scoringRate']);
+        tempPro['fill'] = importanceCompute_color(importanceColor_linear(tempPro["conCount"]));
         tempPro['height'] = proStepY-1;
         Ent_problem.push(tempPro);
         
@@ -615,11 +639,36 @@ export default {
       }
       _this.Ent_problem = Ent_problem;
       // ---------------------
-
+      _this.proSetData =proSetData;
+      _this.updataPro_ConRel()
 
 
       
     },
+    updataPro_ConRel(){
+      const _this = this;
+      let entG = _this.entG;
+      let relG = _this.relG;
+      let Ent_concept = tools.deepClone(_this.Ent_concept);
+      let Ent_problem = tools.deepClone(_this.Ent_problem);
+      let pro_conRelData = tools.deepClone(_this.problemConceptData);
+      for(let i=0;i<pro_conRelData.length;i++){
+        let curRel = pro_conRelData[i];
+        let conId = curRel['conceptId'];
+        let proId = curRel['problem'];
+        let conData = Ent_concept.find(function(d){return d['id'] == conId;});
+        let proData = Ent_problem.find(function(d){return d['id'] == proId;});
+          let sx = conData['cx']+100;
+          let sy = conData['cy'];
+          let tx = proData['cx'];
+          let ty = proData['cy']+proData['height']/2;
+          let c1x = (sx)+300;
+          let c1y = (sy)
+          let c2x = (sx+tx)/2;
+          let c2y = (ty)
+        _this.drawBsLine(relG, sx, sy,c1x,c1y,c2x,c2y, tx, ty, "grey", "2px", "0.4", `proConRel_${conId}_${proId}`, "proConRel");
+      }
+    },  
     updataEntConcept(){
       const _this = this;
       let entG = _this.entG;
@@ -650,7 +699,7 @@ export default {
           let tx = curCon['cx'];
           let ty = curCon['cy'];
 
-          _this.drawBsLine(relG, sx, sy, tx, ty, "grey", "2px", "0.4", `conRel_${fatherId}_${cid}`, "conRel");
+          _this.drawBsLine(relG, sx, sy,sx,ty,sx,ty, tx, ty, "grey", "2px", "0.4", `conRel_${fatherId}_${cid}`, "conRel");
         }
       }
     },  
@@ -671,7 +720,7 @@ export default {
         let cW = curEntPro['width'];
         let fill = curEntPro['fill'];
         let pOrder = curEntPro['order'];
-        let rect = _this.drawRect(entG, cx, cy, cW, cH, 1, fill, "0", "none","0.3", `entPro_${pid}`, 'entPro');
+        let rect = _this.drawRect(entG, cx, cy, cW, cH, 1, fill, "0", "none","1", `entPro_${pid}`, 'entPro');
         rect.on("mousemove",function(d){
           let selectPro = d3.select(this);
           let selectProId = selectPro.attr("id").split("_")[1];
@@ -701,16 +750,86 @@ export default {
         // le
 
       }
+    },      
+    updataEntProblemDetailBySet(){
+      const _this = this;
+      let entG = _this.entbySetG;
+      let selectSetId = _this.curProblemSetId;
+      let Ent_problem = tools.deepClone(_this.Ent_problem);
+      
+      let setX = _this.setX;
+      let setY = _this.setY;
+      let setEnt = [];
+      for(let i = 0;i<Ent_problem.length;i++){
+        if(Ent_problem[i]["problemSetId"] == selectSetId){
+          let entSetPro =tools.deepClone(Ent_problem[i]);
+          setEnt.push(entSetPro);
+          // setEnt[cx] = 
+        }
+      }
+      let setStepY = 300;
+      let attrList = _this.proAttrList;
+      let attrLen = attrList.length;
+      let setProWidth = 300;
+      let attrW = setProWidth/(attrLen);
+      let proAttrMaxMinList = _this.proAttrMaxMinList;
+      for(let i = 0;i<setEnt.length;i++){
+        let curEntPro = setEnt[i];
+        let pid = curEntPro['id'];
+        let cx = setX;
+        let cy = setY+i*setStepY;
+        let cH = setStepY-10;
+        let cW = 300;
+        let fill = curEntPro['fill'];
+        let pOrder = curEntPro['order'];
+        let rect = _this.drawRect(entG, cx, cy, cW, cH, 1, fill, "10", "none","1", `probySet_${pid}`, 'probySet');
+        rect.on("click",function(d){
+          let selectPro = d3.select(this);
+          let selectProId = selectPro.attr("id").split("_")[1];
+          _this.curProblemId = selectProId;
+        })
+        for (let j = 0; j < attrLen; j++) {
+          let curP = _this.calcRsize(proAttrMaxMinList[j], curEntPro[attrList[j]], cH);
+          let attColor = _this.mLigntcolor[j]
+          let rectAttr = _this.drawRect(entG, cx+j*attrW, cy+cH-curP, attrW-10, curP, 1, attColor, "5", "none","1", `probySetAttr_${pid}_${attrList[j]}`, 'probySetAttr');
+      }
+      }
     },    
-    drawBsLine(svg, sx, sy, tx, ty, stroke, width, opacity, idName, className) {
+    updataEntProblemSetBack(){
+      const _this = this;
+      let entSetG = _this.entSetG;
+      let proSetData = tools.deepClone(_this.proSetData);
+      let Ent_problem = tools.deepClone(_this.Ent_problem);
+      let colorList = _this.mcolor;
+      for(let i=0;i<proSetData.length;i++){
+        let fill = colorList[proSetData[i]['order']];
+        let psid = proSetData[i]['id'];
+        let set = proSetData[i]['set'];
+        let cx = _this.proX-3;
+        let cy = Ent_problem.find(function(ep){return ep['id'] == set[0];})['cy'];
+        let width = 106;
+        let edP = Ent_problem.find(function(ep){return ep['id'] == set[set.length-1];})
+        let height = edP['cy'] - cy+edP['height'];
+        let rect = _this.drawRect(entSetG, cx, cy, width, height, 10, fill, "5", "none","0.1", `proSet_${psid}`, 'proSet');
+        rect.on("click",function(d){
+          let selectSet = d3.select(this);
+          d3.selectAll(".proSet").attr("opacity",0.1);
+          selectSet.attr("opacity",0.5)
+          let selectSetId = selectSet.attr("id").split("_")[1];
+          _this.curProblemSetId = selectSetId;
+        })
+      }
+    }, 
+    drawBsLine(svg, sx, sy,c1x,c1y,c2x,c2y, tx, ty, stroke, width, opacity, idName, className) {
+      d3.select(`#${idName}`).remove();
       let line = svg.append('path')
         .attr("class", className)
         .attr("id", idName)
         .attr('d', function (d) {
           let path = d3.path();
           path.moveTo(sx, sy);
-          path.quadraticCurveTo(sx, ty, tx, ty);
-          // path.bezierCurveTo((sx+tx)/2,sy,(sx+tx)/2, ty, tx, ty);
+          // path.quadraticCurveTo(cx, cy, tx, ty);
+          path.bezierCurveTo(c1x,c1y,c2x, c2y, tx, ty);
           return path.toString();
         })
         .style("fill", "none")
@@ -1020,8 +1139,8 @@ export default {
         .attr("height", height);
       _this.rootSvg = svg;
       let proData = _this.problemsData;
-      let proMaxMinDR = _this.getMaxMin(proData, 'conCount');
-      let proMaxMinDC = _this.getMaxMin(proData, 'scoringRate');
+      let proMaxMinDR = _this.getMaxMin(proData, 'scoringRate');
+      let proMaxMinDC = _this.getMaxMin(proData, 'conCount');
 
       let proAttrList = ['accuracy', 'totalAttempts', 'acceptedRate', 'conCount', 'scoringRate'];
       _this.proAttrList = proAttrList;
@@ -1030,7 +1149,6 @@ export default {
         proAttrMaxMinList.push(_this.getMaxMin(proData, proAttrList[i]));
       }
       _this.proAttrMaxMinList = proAttrMaxMinList;
-
       _this.proMaxMinDR = proMaxMinDR;
       _this.proMaxMinDC = proMaxMinDC;
 
@@ -1048,6 +1166,8 @@ export default {
 
       _this.conMaxMinDR = conMaxMinDR;
       _this.conMaxMinDC = conMaxMinDC;
+
+      console.log(conAttrMaxMinList)
 
       _this.drawMain(svg);
       // });
@@ -1072,18 +1192,10 @@ export default {
 
     d3.select(".chartTooltip").classed("hidden", true);
     this.updataGraph();
-    this.$bus.$on('graphData', (val) => {
-      _this.data = val;
-      let showEntityList = tools.deepClone(_this.data);
-      for (let e in showEntityList) {
-        showEntityList[e]['show'] = true;
-      }
-      _this.showEntityList = showEntityList;
-      _this.updataGraph();
-    });
 
     this.$bus.$on('allProblem', (val) => {
       _this.problemsData = val;
+      _this.updataGraph();
     });
     this.$bus.$on('Submission', (val) => {
       _this.submissionsData = val;
@@ -1093,8 +1205,6 @@ export default {
     });
     this.$bus.$on('Pro_Con', (val) => {
       _this.problemConceptData = val;
-
-      _this.updataGraph();
     });
     this.$bus.$on('Concept', (val) => {
       _this.conceptsData = val;
