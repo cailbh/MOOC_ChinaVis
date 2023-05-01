@@ -39,17 +39,20 @@ import domtoimage from 'dom-to-image';
 import tools from "@/utils/tools.js";
 
 export default {
-  props: ["videoTime"],
+  props: ["toolsState"],
   data() {
     return {
       data: '',
       graphHeight:0,
+      toolAddRel:false,
       problemsData: [],
-      proSetData: [],
+      proSetOriData: [],
       submissionsData: [],
       studentsData: [],
       conceptsData: [],
       conceptTree: [],
+      proSetData:[],
+      interY:10,
       problemConceptData: [],
       userProblemData: [],
       proMaxMinDR: [],
@@ -151,6 +154,14 @@ export default {
   watch: {
     type(val) {
     },
+    toolsState(val){
+      console.log(val);
+      this.addRel = val['addRel']
+    },
+    graphGTransformY(){
+      
+      this.updataPro_ProSelfRel(this.graphGTransformY);
+    },
     curProblemId(val) {
       const _this = this;
       _this.$bus.$emit("selectEnt", val);
@@ -175,6 +186,7 @@ export default {
     },
     curProblemSetId(val){
       this.updataEntProblemDetailBySet();
+      this.updataPro_ProSelfRel(this.graphGTransformY);
     },
     Ent_problem:{
       deep:true,
@@ -519,7 +531,7 @@ export default {
       let sty = 0;
       let stk = 1;
       var graphZoom = d3.zoom()
-        .scaleExtent([0, 10])
+        .scaleExtent([0, 100])
         .on("start", (e) => {
           sty = e.transform.y;
           stx = e.transform.x;
@@ -529,7 +541,7 @@ export default {
           graphGTransformX = _this.graphGTransformX //+ e.transform.x - stx;
           graphGTransformY = _this.graphGTransformY + e.transform.y - sty;
           graphGTransformK = _this.graphGTransformK //+ e.transform.k - stk;
-
+          _this.updataPro_ProSelfRel(graphGTransformY);
           entbySetG.attr('transform', 'translate(' + (graphGTransformX) + ',' + (graphGTransformY) + ') scale(' + (graphGTransformK) + ')')
         })
         .on('end', (e) => {
@@ -563,6 +575,16 @@ export default {
       let problemData = tools.deepClone(_this.problemsData);
       // let treeData = _this.getTreeData(conceptTree);
       // console.log(treeData)
+
+      let conMaxMinDR = _this.conMaxMinDR;
+      let conMaxMinDC = _this.conMaxMinDC;
+      let conAttrMaxMinList = _this.conAttrMaxMinList;
+      let currentConMaxColor = _this.entConMaxColor;
+      let currentConMinColor = _this.entConMinColor;
+      let importanceConColor_linear = d3.scaleLinear().domain([conMaxMinDC[0], conMaxMinDC[1]]).range([0, 1]);
+      let importanceConCompute_color = d3.interpolate(currentConMinColor, currentConMaxColor);
+      let rConSize_linear = d3.scaleLinear().domain([conMaxMinDR[1], conMaxMinDR[0]]).range([2, 12]);
+
       // concept---------
       let treeX = _this.treeX;
       let treeY = _this.treeY;
@@ -571,6 +593,7 @@ export default {
       let proSetData = [];
       let setOd = 0;
       _this.conStepY = stepY;
+      let interY = _this.interY;
       let Ent_concept = [];
       for (let i = 0; i < conceptTree.length; i++) {
         let tempCon = tools.deepClone(conceptTree[i]);
@@ -580,8 +603,8 @@ export default {
         let cx = treeX * tempCon['lay'];
         tempCon['cx'] = cx;
         tempCon['cy'] = cy;
-        tempCon['fill'] = "grey";
-        tempCon['r'] = 7;
+        tempCon['fill'] = importanceConCompute_color(importanceConColor_linear(tempCon['scoringRate']));
+        tempCon['r'] =  rConSize_linear(tempCon['proCount']);
         tempCon['opacity'] = 1;
         Ent_concept.push(tempCon);
       }
@@ -602,12 +625,11 @@ export default {
       let proX = _this.proX;
       let proY = _this.proY;
       let Ent_problem = [];
-      let proStepY = height/(problemData.length+2); 
+      let proStepY = (height - _this.interY*12)/(problemData.length+12); 
       _this.proStepY = proStepY;
       _this.graphHeight = height;
       for (let i = 0; i < problemData.length; i++) {
         let tempPro = tools.deepClone(problemData[i]);
-        let cy = proY + i * proStepY;
         let pid = tempPro['id'];
         let pSetId = tempPro['problemSetId'];
         if(proSetData.find(function(ps){return ps['id'] == pSetId;})==undefined){
@@ -621,6 +643,7 @@ export default {
         else{
           proSetData.find(function(ps){return ps['id'] == pSetId;})['set'].push(pid);
         }
+        let cy = proY + i * proStepY + interY*setOd;
         // let lay = cid.split("-").length;
         let cx = proX;
         let r = proStepY;
@@ -632,18 +655,81 @@ export default {
         tempPro['order'] = i;
         tempPro['width'] =rSize_linear(tempPro['scoringRate']);
         tempPro['fill'] = importanceCompute_color(importanceColor_linear(tempPro["conCount"]));
-        tempPro['height'] = proStepY-1;
+        tempPro['height'] = proStepY;
         Ent_problem.push(tempPro);
         
         // let circle = _this.drawCircle(entG, cx, cy, r, fill, opacity, );t text = _this.drawTxt(entG, cx+20, cy+3.5, Cname, "black", 12, `entConText_${cid}`);
       }
+      
+      let colorList = _this.mcolor;
+      for(let i=0;i<proSetData.length;i++){
+        proSetData[i]['fill'] = colorList[proSetData[i]['order']];
+        let psid = proSetData[i]['id'];
+        let set = proSetData[i]['set'];
+        proSetData[i]['cx'] = _this.proX-3;
+        proSetData[i]['cy'] = Ent_problem.find(function(ep){return ep['id'] == set[0];})['cy'];
+        proSetData[i]['width'] = 106;
+        let edP = Ent_problem.find(function(ep){return ep['id'] == set[set.length-1];})
+        proSetData[i]['height'] = edP['cy'] - proSetData[i]['cy']+edP['height'];
+      }
       _this.Ent_problem = Ent_problem;
       // ---------------------
       _this.proSetData =proSetData;
-      _this.updataPro_ConRel()
+      _this.updataPro_ConRel();
 
+      _this.updataParallelCoordinatesplot();
 
       
+    },
+    updataParallelCoordinatesplot(){
+       const _this = this;
+      let entG = _this.entG;
+      let relG = _this.relG;
+      let Ent_concept = tools.deepClone(_this.Ent_concept);
+      let Ent_problem = tools.deepClone(_this.Ent_problem);
+      let pro_conRelData = tools.deepClone(_this.problemConceptData);
+      let studentsData = tools.deepClone(_this.studentsData);
+      let proSetData = tools.deepClone(_this.proSetData);
+      let proSetOriData = tools.deepClone(_this.proSetOriData);
+      console.log(studentsData,proSetData,proSetOriData);
+      //轴
+      let paraX = 1100;
+      let stepY = _this.graphHeight/(proSetData.length+2);
+      for(let i = 0;i<proSetData.length;i++){
+        let cx = paraX;
+        let cy = stepY*(i+1)//proSetData[i]['cy']+proSetData[i]['height']/2;
+        let width = 200;
+        let height = 3;
+        let psId = proSetData[i]['id'];
+        let fill = proSetData[i]['fill'];
+        proSetData[i]['axisX'] = cx;
+        proSetData[i]['axisY'] = cy;
+        proSetData[i]['axisW'] = width;
+        proSetData[i]['axisH'] = height;
+        let axis = _this.drawRect(entG, cx, cy, width, height, 0, fill, "0", "none","0.5", `proSetAxis_${psId}`, 'proSetAxis');
+      }
+
+      for(let i =0 ;i<studentsData.length;i++){
+        let path = d3.path();
+        let proSetScore = studentsData[i]['proSetScore'];
+        let stuId = studentsData[i]['id'];
+        for(let s=0;s<proSetScore.length;s++){
+          let psId = proSetScore[s]['id'];
+          let psData = proSetData.find(function(psd){return psd['id'] == psId;});
+          let cx = psData['axisX'];
+          let w = psData['axisW'];
+          let val_linear = d3.scaleLinear().domain([0,proSetScore[s]['totalScore']]).range([cx, cx+w]);
+          let pointy = psData['axisY'];
+          let pointx = val_linear(proSetScore[s]['score']); 
+          if(s==0){
+            path.moveTo(pointx,pointy);
+          }
+          else{
+            path.lineTo(pointx,pointy);
+          }
+        }
+        _this.drawLine(relG, path, "rgb(200,200,200)", 2, '0', `stuSetScoreLine_${stuId}`, 'stuSetScoreLine');
+      }
     },
     updataPro_ConRel(){
       const _this = this;
@@ -667,6 +753,32 @@ export default {
           let c2x = (sx+tx)/2;
           let c2y = (ty)
         _this.drawBsLine(relG, sx, sy,c1x,c1y,c2x,c2y, tx, ty, "grey", "2px", "0.4", `proConRel_${conId}_${proId}`, "proConRel");
+      }
+    },  
+    updataPro_ProSelfRel(tranY){
+      const _this = this;
+      let entG = _this.entG;
+      let relG = _this.relG;
+      let selectSetId = _this.curProblemSetId;
+      let Ent_problem = tools.deepClone(_this.Ent_problem);
+      for(let i=0;i<Ent_problem.length;i++){
+        let pid = Ent_problem[i]['id'];
+        if(Ent_problem[i]["problemSetId"] == selectSetId){
+          let proData = Ent_problem.find(function(d){return d['id'] == pid;});
+          let prog = d3.select(`#entPro_${pid}`)
+          let proSlefg = d3.select(`#probySet_${pid}`)
+            let sx = parseFloat(prog.attr("x"))+parseFloat(prog.attr("width"));
+            let sy = parseFloat(prog.attr("y"))+parseFloat(prog.attr("height"))/2;
+            let tx = parseFloat(proSlefg.attr("x"));
+            let ty = parseFloat(proSlefg.attr("y"))+tranY+parseFloat(proSlefg.attr("height"))/2;
+          // console.log(sx,sy,tx,ty,prog.attr("x"),proSlefg.attr("y"),prog.attr("width"),prog.attr("height"),proSlefg.attr("height"))
+            let c1x = (sx)+100;
+            let c1y = (sy)
+            let c2x = (tx)-100;
+            let c2y = (ty)
+            let fill = proData['fill']
+          _this.drawBsLine(relG, sx, sy,c1x,c1y,c2x,c2y, tx, ty, fill, "2px", "0.4", `proSelfRel_${pid}`, "proSelfRel");
+        }
       }
     },  
     updataEntConcept(){
@@ -707,9 +819,12 @@ export default {
       const _this = this;
       let entG = _this.entG;
       let Ent_problem = tools.deepClone(_this.Ent_problem);
-      
+      let proSetData = tools.deepClone(_this.proSetData);
       let proX = _this.proX;
       let proY = _this.proY;
+      
+      let interY = _this.interY;
+
       let proStepY = _this.proStepY;
       for(let i = 0;i<Ent_problem.length;i++){
         let curEntPro = Ent_problem[i];
@@ -720,25 +835,38 @@ export default {
         let cW = curEntPro['width'];
         let fill = curEntPro['fill'];
         let pOrder = curEntPro['order'];
+        let inter = 0;
         let rect = _this.drawRect(entG, cx, cy, cW, cH, 1, fill, "0", "none","1", `entPro_${pid}`, 'entPro');
         rect.on("mousemove",function(d){
           let selectPro = d3.select(this);
           let selectProId = selectPro.attr("id").split("_")[1];
           let proD = Ent_problem.find(function(p){return p['id'] == selectProId});
+          let pSetId = proD['problemSetId'];
+          let pSet = proSetData.find(function(ps){return ps['id'] == pSetId;})
+          let pSetOd = pSet['order']+1;
           let od = proD['order'];
           Ent_problem.forEach(entPro=>{
             if(entPro['id'] == selectProId){
-              entPro['cy']=proY + entPro['order'] * proStepY;
-              entPro['height']=(proStepY -1) * 5;
+              entPro['cy']=proY + entPro['order'] * proStepY + interY*pSetOd;
+              entPro['height']=(proStepY -inter) * 5;
               od = entPro['order'];
             }
             else if(entPro['order']<od){
-              entPro['cy']=proY + entPro['order'] * proStepY;
-              entPro['height']=(proStepY -1)
+              let cproD = Ent_problem.find(function(p){return p['id'] == entPro['id']});
+              let cpSetId = cproD['problemSetId'];
+              let cpSet = proSetData.find(function(ps){return ps['id'] == cpSetId;})
+              let cpSetOd = cpSet['order']+1;
+              
+              entPro['cy']=proY + entPro['order'] * proStepY+ interY*cpSetOd;
+              entPro['height']=(proStepY -inter)
             }
             else if(entPro['order']>od){
-              entPro['cy']=proY + entPro['order'] * proStepY+(proStepY -1)*4;
-              entPro['height']=(proStepY -1)
+              let cproD = Ent_problem.find(function(p){return p['id'] == entPro['id']});
+              let cpSetId = cproD['problemSetId'];
+              let cpSet = proSetData.find(function(ps){return ps['id'] == cpSetId;})
+              let cpSetOd = cpSet['order']+1;
+              entPro['cy']=proY + entPro['order'] * proStepY+(proStepY -1)*4+ interY*cpSetOd;
+              entPro['height']=(proStepY -inter)
             }
           })
           _this.Ent_problem =Ent_problem;
@@ -756,10 +884,14 @@ export default {
       let entG = _this.entbySetG;
       let selectSetId = _this.curProblemSetId;
       let Ent_problem = tools.deepClone(_this.Ent_problem);
-      
+      let proMaxMinDR = _this.proMaxMinDR;
       let setX = _this.setX;
       let setY = _this.setY;
       let setEnt = [];
+      entG.selectAll(".probySet").remove();
+      entG.selectAll(".probySetB").remove();
+      entG.selectAll(".probySetAttr").remove();
+
       for(let i = 0;i<Ent_problem.length;i++){
         if(Ent_problem[i]["problemSetId"] == selectSetId){
           let entSetPro =tools.deepClone(Ent_problem[i]);
@@ -767,22 +899,25 @@ export default {
           // setEnt[cx] = 
         }
       }
-      let setStepY = 300;
+      let setStepY = 50;
       let attrList = _this.proAttrList;
       let attrLen = attrList.length;
-      let setProWidth = 300;
+      let setProWidth = 100;
       let attrW = setProWidth/(attrLen);
       let proAttrMaxMinList = _this.proAttrMaxMinList;
+      let wSize_linear = d3.scaleLinear().domain([proMaxMinDR[1], proMaxMinDR[0]]).range([20, 100]);
+        
       for(let i = 0;i<setEnt.length;i++){
         let curEntPro = setEnt[i];
         let pid = curEntPro['id'];
         let cx = setX;
         let cy = setY+i*setStepY;
-        let cH = setStepY-10;
-        let cW = 300;
+        let cH = setStepY-20;
+        let cW = wSize_linear(curEntPro['scoringRate']);
         let fill = curEntPro['fill'];
         let pOrder = curEntPro['order'];
-        let rect = _this.drawRect(entG, cx, cy, cW, cH, 1, fill, "10", "none","1", `probySet_${pid}`, 'probySet');
+        let rectback = _this.drawRect(entG, cx, cy, 100, cH, 5, "grey", "10", "grey","0.3", `probySetB_${pid}`, 'probySetB');
+        let rect = _this.drawRect(entG, cx, cy, cW, cH, 5, fill, "10", fill,"1", `probySet_${pid}`, 'probySet');
         rect.on("click",function(d){
           let selectPro = d3.select(this);
           let selectProId = selectPro.attr("id").split("_")[1];
@@ -790,30 +925,33 @@ export default {
         })
         for (let j = 0; j < attrLen; j++) {
           let curP = _this.calcRsize(proAttrMaxMinList[j], curEntPro[attrList[j]], cH);
-          let attColor = _this.mLigntcolor[j]
-          let rectAttr = _this.drawRect(entG, cx+j*attrW, cy+cH-curP, attrW-10, curP, 1, attColor, "5", "none","1", `probySetAttr_${pid}_${attrList[j]}`, 'probySetAttr');
+          let attColor = _this.mLigntcolor[j*2]
+          let rectAttr = _this.drawRect(entG, cx+j*attrW, cy+cH-curP, attrW-10, curP, 1, attColor, "0.2", "grey","1", `probySetAttr_${pid}_${attrList[j]}`, 'probySetAttr');
       }
       }
-    },    
+    },
     updataEntProblemSetBack(){
       const _this = this;
       let entSetG = _this.entSetG;
       let proSetData = tools.deepClone(_this.proSetData);
       let Ent_problem = tools.deepClone(_this.Ent_problem);
-      let colorList = _this.mcolor;
       for(let i=0;i<proSetData.length;i++){
-        let fill = colorList[proSetData[i]['order']];
+        let fill = proSetData[i]['fill'];
         let psid = proSetData[i]['id'];
         let set = proSetData[i]['set'];
-        let cx = _this.proX-3;
-        let cy = Ent_problem.find(function(ep){return ep['id'] == set[0];})['cy'];
-        let width = 106;
+        proSetData[i]['cy'] = Ent_problem.find(function(ep){return ep['id'] == set[0];})['cy'];
         let edP = Ent_problem.find(function(ep){return ep['id'] == set[set.length-1];})
-        let height = edP['cy'] - cy+edP['height'];
+        proSetData[i]['height'] = edP['cy'] - proSetData[i]['cy']+edP['height'];
+        let cx = proSetData[i]['cx'];
+        let cy = proSetData[i]['cy'];
+        let width = proSetData[i]['width'];
+        let height = proSetData[i]['height'];
         let rect = _this.drawRect(entSetG, cx, cy, width, height, 10, fill, "5", "none","0.1", `proSet_${psid}`, 'proSet');
         rect.on("click",function(d){
           let selectSet = d3.select(this);
           d3.selectAll(".proSet").attr("opacity",0.1);
+          d3.selectAll(".proSelfRel").remove();
+          // _this.updataPro_ProSelfRel();
           selectSet.attr("opacity",0.5)
           let selectSetId = selectSet.attr("id").split("_")[1];
           _this.curProblemSetId = selectSetId;
@@ -848,6 +986,17 @@ export default {
           .style("text-anchor", "start")
           .text(text)
         return txt;
+    },
+    drawLine(svg, path, stroke, width, stroke_dasharray = "0", idName, className) {
+      let line = svg.append('path')
+        .attr('d', path.toString())
+        .attr('stroke', stroke)
+        .attr('class', className)
+        .attr('id', idName)
+        .attr("stroke-dasharray", stroke_dasharray)
+        .attr('stroke-width', width)
+        .attr('fill', 'none')
+        return line;
     },
     getTreeData(data) {
       const _this = this;
@@ -1202,6 +1351,9 @@ export default {
     });
     this.$bus.$on('Student', (val) => {
       _this.studentsData = val;
+    });
+    this.$bus.$on('proSet', (val) => {
+      _this.proSetOriData = val;
     });
     this.$bus.$on('Pro_Con', (val) => {
       _this.problemConceptData = val;

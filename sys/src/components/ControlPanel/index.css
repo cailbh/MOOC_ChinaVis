@@ -59,7 +59,7 @@
   display: none;
   /* background-color: aqua; */
   height: 80px;
-  margin: 20px;
+  margin: 2px;
   margin-top: 0;
   border-bottom: solid rgba(179, 179, 179, 1) 3px;
 
@@ -67,9 +67,9 @@
 #baseInformation{
   width: calc(100% - 40px);
   /* background-color: aqua; */
-  height: 252px;
-  margin: 20px;
-  border-bottom: solid rgba(179, 179, 179, 1) 3px;
+  height: 102px;
+  margin: 2px;
+  /* border-bottom: solid rgba(179, 179, 179, 1) 3px; */
 
 }
 .el-button {
@@ -88,7 +88,7 @@
   width: 100px !important;
 }
 .el-dropdown {
-  font-size: 24px;
+  font-size: 20px;
   color: rgb(114, 114, 114);
 }
 .el-table_2_column_4   el-table__cell{
@@ -112,11 +112,11 @@
 }
 .el-descriptions {
   box-sizing: border-box;
-  font-size: 18px;
+  font-size: 14px;
   color: rgb(114, 114, 114);
 }
 .el-table--fit {
-  font-size: 24px;
+  font-size: 20px;
   
   color: rgb(114, 114, 114);
 }
@@ -127,7 +127,7 @@
   width: calc(100% - 40px);
   /* background-color: aqua; */
   height: 252px;
-  margin: 20px;
+  margin: 2px;
   margin-top: 60px;
   /* border-bottom: solid rgba(179, 179, 179, 1) 3px; */
 
@@ -138,12 +138,12 @@
 }
 .el-switch {
   float: right;
-  margin: 5px;
+  /* margin: 5px; */
 }
 .el-switch__core {
-  border-radius: 31px;
-  width: 50px !important;
-  height: 27px;
+  /* border-radius: 31px; */
+  /* width: 50px !important; */
+  /* height: 27px; */
 }
 
 .icons{
@@ -210,7 +210,7 @@
   width: calc(100% - 40px);
   /* background-color: aqua; */
   height: 252px;
-  margin: 20px;
+  margin: 2px;
   margin-top: -16px;
   /* border-bottom: solid rgba(179, 179, 179, 1) 3px; */
 
@@ -220,7 +220,7 @@
   width: calc(100% - 40px);
   /* background-color: aqua; */
   height: 120px;
-  margin: 20px;
+  margin: 2px;
   margin-top: 64px;
   /* border-bottom: solid rgba(179, 179, 179, 1) 3px; */
 
@@ -239,21 +239,21 @@
 }
 .upTitle{
   text-align: center;
-  font-size: 24px;
+  font-size: 20px;
   color: rgb(122, 133, 147);
 }
 .upImg{
   float: left;
   height: calc(70% - 50px);
   width: calc(100% - 50px);
-  margin: 20px;
+  margin: 2px;
   background-color: aqua;
 }
 .upButton{
   float: left;
   height: calc(30% - 50px);
   width: calc(100% - 0px);
-  /* margin: 20px; */
+  /* margin: 2px; */
 }
 .tt{
   background: none;

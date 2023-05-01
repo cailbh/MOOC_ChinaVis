@@ -22,33 +22,6 @@
                 {{ scope.row.value }}</div>
 
               </div>
-              <div v-if="scope.row.key == 'Course section'">
-                <el-dropdown :hide-on-click="true" @command="handleCommand">
-                  <span class="el-dropdown-link">
-                    {{ selectSession }}<i class="el-icon-arrow-down el-icon--right"></i>
-                  </span>
-                  <!-- Course name -->
-                  <el-dropdown-menu slot="dropdown">
-                    <el-dropdown-item command="8.P.1">8.P.1</el-dropdown-item>
-                    <el-dropdown-item command="3.1.3">3.1.3</el-dropdown-item>
-                    <el-dropdown-item command="3.3">3.3</el-dropdown-item>
-                    <!-- <el-dropdown-item disabled>双皮奶</el-dropdown-item> -->
-                    <!-- <el-dropdown-item divided>蚵仔煎</el-dropdown-item> -->
-                  </el-dropdown-menu>
-                </el-dropdown>
-
-              </div>
-              <div v-if="scope.row.key == 'Lecture Style'" class="LectureStyle">
-
-              </div>
-              <!-- <el-tag :type="scope.row.value === '' ? 'primary' : 'success'" disable-transitions>{{ scope.row.tag -->
-              <!-- // }}</el-tag> -->
-              <div v-if="scope.row.key == 'Instructor'">
-                {{ scope.row.value }}
-              </div>
-              <div v-if="scope.row.key == 'Video duration'">
-                {{ scope.row.value }}
-              </div>
               <!-- <div :class="scope.row.name" :id="scope.row.name" :height="scope.row.value === '' ? '10' : '0'" disable-transitions>
                 {{ scope.row.value }}
               </div> -->
@@ -140,42 +113,8 @@
           </el-table-column>
       </el-table>
     </div>
-    <!-- <div id="upLoad2S">
-        <div id="upLoadSlides">
-          <div class="upTitle">Slides</div>
-          <div class="upImg">
-
-            <el-image style="width: 100%; height: 100%" :src="upSliderUrl" ></el-image>
-          </div>
-          <div class="upButton">
-            <el-upload class="uploadSlidesB" action="https://jsonplaceholder.typicode.com/posts/"
-              :on-change="handleSlidesChange" :file-list="fileSlidesList">
-              <el-button ref="sliderBut" size="small" type="primary">Upload</el-button>
-            </el-upload> 
-              <div id="iconUploadSliderel" @click="sliderUpClk">
-                <img class="iconUpload" :src="upLoadUrl" >
-              </div>
-          </div>
-          <div></div>
-        </div>
-        <div id="upLoadScript">
-          <div class="upTitle">Script</div>
-          <div class="upImg">
-            <el-image style="width: 100%; height: 100%" :src="upScriptUrl" ></el-image>
-          </div>
-          <div class="upButton">
-            <el-upload class="uploadScriptB" action="https://jsonplaceholder.typicode.com/posts/"
-              :on-change="handleScriptChange" :file-list="fileScriptList">
-              <el-button ref="scriptBut" size="small" type="primary">Upload</el-button>
-            </el-upload>
-              <div id="iconUploadScriptel" @click="scriptUpClk">
-                <img class="iconUpload" :src="upLoadUrl" >
-              </div>
-              </div>
-            </div>
-          </div> -->
     </div>
-    <div id="lectureStyleIconDiv">
+    <!-- <div id="lectureStyleIconDiv">
         <img class="icons" :src="lectureStyleIconUrl">
       </div>
       <div id="banshuDiv">
@@ -186,7 +125,7 @@
       </div>
       <div id="pptDiv">
         <img class="icons ppt" :src="pptUrl">
-      </div>
+      </div> -->
   </div>
 </template>
   
@@ -195,8 +134,6 @@ import * as d3 from 'd3'
 import { onMounted, ref } from 'vue';
 import filenames from "@/utils/fileName";
 import domtoimage from 'dom-to-image';
-import TestJson from "@/assets/json/case2_fin.json";
-import TestRelJson from "@/assets/json/case2_fin_rel.json";
 import tools from "@/utils/tools.js";
 import { select } from 'd3';
 
@@ -204,7 +141,6 @@ export default {
   props: ["videoTime"],
   data() {
     return {
-      data: TestJson,
       selectSession: "3.3",
       TopicCount:"4",
       nodeCount:"23",
@@ -220,7 +156,6 @@ export default {
       upScriptUrl: require('@/assets/img/Script.png'),
       // require('@/assets/videos/index.mp4'),
       upLoadUrl: require('@/assets/img/openFile.png'),
-      relData: TestRelJson,
       videoUploadIcon: '@/',
       tableData: [{
         key: 'Course name',
@@ -229,29 +164,16 @@ export default {
       // nameinput: "Trees",
         // value: 'Random Variables   ',
         // value: 'Fundamental Graphs   ',
-        value: 'asdsadasds  Trees   ',
-      }, {
-        key: 'Course section',
-        value: '',
-      }, {
-        key: 'Instructor',
-        // value: 'Erik Kole, Dr.',
-        // value: 'Cristian Felix',
-        value: 'Alexander S. Kulikov',
-      }, {
-        key: 'Video duration',
-        // value: '11m 12s',
-        // value: '9m 10s',
-        value: '8m 01s',
-      }, {
-        key: 'Lecture Style',
-        value: '',
+        value: 'C语言程序设计',
       }
       ],
       switchL:{
-        "1":true,
-        "2":true,
-        "3":true
+        "1":false,
+        "2":false,
+        "3":false
+      },
+      curToolState:{
+        "addRel":false
       },
       lectureStyleIconUrl: require("@/assets/img/lecture style.png"),
       banshuUrl: require("@/assets/img/lecture style banshu.png"),
@@ -259,13 +181,13 @@ export default {
       pptUrl: require("@/assets/img/lecture style ppt.png"),
       layoutSelect:"3",
       toolsData: [{
-        key: 'Relationships',
+        key: 'addRel',
         value: '1',
       }, {
-        key: 'Editable',
+        key: '2',
         value: '2',
       },  {
-        key: 'Layout Level',
+        key: '3',
         value: '',
       }
       ],
@@ -284,7 +206,14 @@ export default {
   watch: {
     type(val) {
     },
-
+    switchL:{
+      deep:true,
+      handler(val){
+        console.log(val);
+          this.curToolState['addRel']=val['1']
+        this.$emit("getToolState", this.curToolState);
+      }
+    }
   },
   methods: {
     handleCommand(command) {
