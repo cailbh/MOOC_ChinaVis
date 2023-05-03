@@ -29,7 +29,7 @@ const problemsSchema = mongoose.Schema({
     option: Object,
     answer: String,
     score: Number,
-    type: Number,
+    type: String,
     typetext: String,
     location: String,
     context_id: Array,

@@ -209,8 +209,7 @@ export default {
     switchL:{
       deep:true,
       handler(val){
-        console.log(val);
-          this.curToolState['addRel']=val['1']
+        this.curToolState['addRel']=val['1'];
         this.$emit("getToolState", this.curToolState);
       }
     }

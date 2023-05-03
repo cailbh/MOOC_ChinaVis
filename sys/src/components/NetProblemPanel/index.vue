@@ -4,12 +4,12 @@
 <template>
   <div class="netPPanel">
     <div class="panelHead"></div>
-      <!-- //SupportPanel</div> -->
+    <!-- //SupportPanel</div> -->
     <div id="netPPanelDiv" class="panelBody" ref="netPPanelDiv">
       <div id="topicLine" ref="topicLine"></div>
       <div id="netPData" ref="netPData"></div>
     </div>
-    </div>
+  </div>
 </template>
   
 <script>
@@ -28,42 +28,42 @@ export default {
       typeRadio: "cell State",
       treeData: null,
       toolsState: '',
-      problemsData:[],
-      problemConceptData:[],
-      problemRelByConcept:[],
-      problemListByConcept:[],
-      submissionsData:[],
-      studentsData:[],
-      conceptsData:[],
-      netData:[],
-      calcNetDataRady:0,
+      problemsData: [],
+      problemConceptData: [],
+      problemRelByConcept: [],
+      problemListByConcept: [],
+      submissionsData: [],
+      studentsData: [],
+      conceptsData: [],
+      netData: [],
+      calcNetDataRady: 0,
       nameinput: "Fundamental Graphs",
       curEntId: "",
       insertEntId: "",
       insertSourceEntId: "-1",
       insertTargetEntId: "-1",
       sonList: [],
-      
-     
+
+
       margin: { top: 5, right: 5, bottom: 5, left: 5 },
     };
   },
   watch: {
     typeRadio(val) {
     },
-    netData(){
+    netData() {
     },
-    studentsData(){
+    studentsData() {
       this.calcNetDataRady++;
     },
-    problemsData(){
+    problemsData() {
       this.calcNetDataRady++;
     },
-    submissionsData(){
+    submissionsData() {
       this.calcNetDataRady++;
     },
-    calcNetDataRady(val){
-      if(val==3){
+    calcNetDataRady(val) {
+      if (val == 3) {
         // this.calcNetData();
         // this.getProRel();
       }
@@ -77,7 +77,7 @@ export default {
     }
   },
   methods: {
-    
+
     drawnetPData() {
       const _this = this;
       const margin = _this.margin;
@@ -96,15 +96,15 @@ export default {
       // _this.sonG = sonG;
       _this.drawQuestionSurface(entG);
     },
-    drawQuestionSurface(svg){
+    drawQuestionSurface(svg) {
       const _this = this;
-      let psvg =svg
+      let psvg = svg
       let width = psvg.attr("width");
       let height = psvg.attr("height");
       psvg.select("#netPG").remove();
       // let prog = psvg.append("g").attr("id", "netPG").attr("width", width).attr("height", height);
       let groups = svg.append("g").attr("id", "groups").attr("width", width).attr("height", height)
-        // .attr("transform", "translate(" + graphGTransformX + ',' + graphGTransformY + ") scale(" + graphGTransformK + ")");
+      // .attr("transform", "translate(" + graphGTransformX + ',' + graphGTransformY + ") scale(" + graphGTransformK + ")");
       // this.groupsSvg = groups;
 
       let backG = groups.append("g").attr("id", "proRbackG").attr("width", width).attr("height", height);
@@ -120,31 +120,33 @@ export default {
       let proInList = tools.deepClone(_this.problemListByConcept);
       let ent_node = [];
       let ent_edge = [];
-      
-      let proId = _this.curEntId;
-      if(proId == ""){return;}
 
+      let proId = _this.curEntId;
+      if (proId == "") { return; }
+      let proList = proInList[proId]
       for (let r = 0; r < problemConceptData.length; r++) {
         let curRel = problemConceptData[r];
         let pId = curRel['problem'];
-        let cId = curRel['contentId'];
-        if(proInList.find(function (d) { return d['id'] == pId }) != undefined){
-        ent_edge.push({
-          source: pId,
-          target: cId
-        })
-        if (ent_node.find(function (d) { return d['id'] == pId }) == undefined) {
-          ent_node.push({ "id": pId, "type": "problem" })
-        }
-        if (ent_node.find(function (d) { return d['id'] == cId }) == undefined) {
-          ent_node.push({ "id": cId, "type": "concept" })
-        }
+        let cId = curRel['conceptId'];
+        if (1) {
+          if (proList.indexOf(pId) != -1) {
+            ent_edge.push({
+              source: pId,
+              target: cId
+            })
+            if (ent_node.find(function (d) { return d['id'] == pId }) == undefined) {
+              ent_node.push({ "id": pId, "type": "problem" })
+            }
+            if (ent_node.find(function (d) { return d['id'] == cId }) == undefined) {
+              ent_node.push({ "id": cId, "type": "concept" })
+            }
+          }
         }
       }
       // Object.keys(netData).forEach((r)=>{
       //   let s = r.split("_")[0];
       //   let t = r.split("_")[1];
-        
+
       //   if((s == proId)||(t==proId)){
       //   ent_edge.push({
       //     source: s,
@@ -218,8 +220,8 @@ export default {
         .attr("cx", function (d) {
           if (d.type == "problem")
             _this.drawEntityProblem(entG, d.x, d.y, `astPro_${d.id}`);
-          // else if (d.type == "concept")
-          //   _this.drawEntityConcept(entG, d.x, d.y, `entCon_${d.id}`);
+          else if (d.type == "concept")
+            _this.drawEntityConcept(entG, d.x, d.y, `astCon_${d.id}`);
           return d.x;
         })
         .attr("cy", function (d) { return d.y })
@@ -237,8 +239,6 @@ export default {
           let eTarget = d.target
           let eSourceId = eSource['id']
           let eTargetId = eTarget['id']
-          console.log(netData[`${eSourceId}_${eTargetId}`]);
-          console.log(`${eTargetId}_${eSourceId}`, netData[`${eTargetId}_${eSourceId}`]);
           let startA = [eSource.x, eSource.y]
           let endA = [eTarget.x, eTarget.y]
           let path = d3.path()
@@ -260,12 +260,13 @@ export default {
           esy = esy > svgHeight - rSize ? svgHeight - rSize : esy;
 
           if (d.type == "problem")
-              _this.updateEntity(entG,esx,esy,`astPro_${d.id}`)
+            _this.updateEntity(entG, esx, esy, `astPro_${d.id}`)
           //   _this.drawEntityProblem(entG, esx, esy, `entPro_${d.id}`);
           else if (d.type == "concept")
-              // _this.updateEntity(entG,esx,esy,`astCon_${d.id}`)
+            _this.updateEntity(entG, esx, esy, `astCon_${d.id}`)
+            // _this.updateEntity(entG,esx,esy,`astCon_${d.id}`)
 
-          if (d.x < rSize) return rSize;
+            if (d.x < rSize) return rSize;
           return d.x > svgWidth - rSize ? svgWidth - rSize : d.x
         })
           .attr("cy", (d) => {
@@ -273,29 +274,32 @@ export default {
             return d.y > svgHeight - rSize ? svgHeight - rSize : d.y
           });
 
+        let width_linear = d3.scaleLinear().domain([0, 1]).range([0, 10]);
+
         ent_node.forEach(n => {
           if (n['type'] == "problem") {
-            let sourceId = n['id'];
+            let sourceId = n['id']; 
             ent_node.forEach(en => {
               if (en['type'] == "problem") {
                 let targetId = en['id'];
-                  console.log(netData[`${sourceId}_${targetId}`]);
-                  if(netData[`${sourceId}_${targetId}`]!=undefined){
-                    d3.select(`.pros_${sourceId}_prot_${targetId}`).remove()
-                    relG.append('path')
-                        .attr("class", function (d) { return `pros_${sourceId}_prot_${targetId}` })
-                        .attr('d', function (d) {
-                          let startA = [n.x, n.y]
-                          let endA = [en.x, en.y]
-                          let path = d3.path();
-                          path.moveTo(startA[0], startA[1])
-                          path.quadraticCurveTo(startA[0], startA[1], endA[0], endA[1]);
-                          return path.toString()
-                        })
-                        .style('stroke', "grey")
-                        .style("stroke-opacity", "0.3")
-                        .style('stroke-width', "10")
-                  }
+                if (netData[`${sourceId}_${targetId}`] != undefined) {
+                  d3.select(`.pros_${sourceId}_prot_${targetId}`).remove()
+                  relG.append('path')
+                    .attr("class", function (d) { return `pros_${sourceId}_prot_${targetId}` })
+                    .attr('d', function (d) {
+                      let startA = [n.x, n.y]
+                      let endA = [en.x, en.y]
+                      let path = d3.path();
+                      path.moveTo(startA[0], startA[1]);
+                      let conP = _this.getControlPoints(startA,endA);
+                      path.quadraticCurveTo(conP[0], conP[1], endA[0], endA[1]);
+                      return path.toString()
+                    })
+                    .style('stroke', "grey")
+                    .style('fill', "none")
+                    .style("stroke-opacity", "0.3")
+                    .style('stroke-width', width_linear(netData[`${sourceId}_${targetId}`]))
+                }
               }
             })
           }
@@ -326,7 +330,7 @@ export default {
 
 
     },
-    
+
     drawEntityProblem(svg, x, y, pId) {
       const _this = this;
       d3.select("#" + pId).remove();
@@ -341,11 +345,15 @@ export default {
       let rSize = 10;//rSize_linear(curEnt['conCount']);
 
       let points = _this.calcRegularPolygonPoints(3, 0, 0, rSize);
-      let r=20;let g=190;let b =200;
-      _this.drawPolygon(entG,points,`astpro_${idn}`,'1px',`rgb(${r},${g},${b})`,`rgba(${r},${g},${b},1)`);
+      let r = 20; let g = 190; let b = 200;
+      _this.drawPolygon(entG, points, `astpro_${idn}`, '1px', `rgb(${r},${g},${b})`, `rgba(${r},${g},${b},1)`);
 
     },
-    
+    getControlPoints(startP,endP){
+      let conP = [];
+      // return [(startP[0]+endP[0])/2,(startP[1]+endP[1])/2]
+      return [(startP[0]),(endP[1])]
+    },
     calcRegularPolygonPoints(num, x, y, r) {
       let arcStep = Math.PI * 2 / num;
       let points = [];
@@ -354,11 +362,11 @@ export default {
       }
       return points
     },
-    
-    drawPolygon(svg,points,idName,strokeWidth,stroke,fill){
+
+    drawPolygon(svg, points, idName, strokeWidth, stroke, fill) {
       let polygon = svg.append("polygon")
         .attr("points", points)
-        .attr("id",idName)
+        .attr("id", idName)
         .attr("stroke-linejoin", "round")
 
         .attr("stroke-width", strokeWidth)
@@ -377,45 +385,11 @@ export default {
         return (p.id).toString() == (idn.toString())
       });
       // let attrList =[{attrName:'difficulty',attrValue:curEnt['difficulty']},];
-      let attrList = _this.conAttrList;
+      let rSize = 10;//rSize_linear(curEnt['conCount']);
 
-      let attrLen = attrList.length;
-
-      let conMaxMinDR = _this.conMaxMinDR;
-      let conMaxMinDC = _this.conMaxMinDC;
-      let conAttrMaxMinList = _this.conAttrMaxMinList;
-      let currentMaxColor = _this.entConMaxColor;
-      let currentMinColor = _this.entConMinColor;
-      let importanceColor_linear = d3.scaleLinear().domain([conMaxMinDC[0], conMaxMinDC[1]]).range([0, 1]);
-      let importanceCompute_color = d3.interpolate(currentMinColor, currentMaxColor);
-      let rSize_linear = d3.scaleLinear().domain([conMaxMinDR[1], conMaxMinDR[0]]).range([20, 50]);
-
-      let rSize = rSize_linear(curEnt['proCount']);
-
-      let points = _this.calcRegularPolygonPoints(attrLen, 0, 0, rSize);
-
-
-      let StartR = 0//Math.PI/4;
-      let StepInterR = Math.PI * 2 / 15;
-
-      let StepR = (Math.PI * 2 - StepInterR * attrLen) / attrLen;
-
-
-      for (let i = 0; i < attrLen; i++) {
-        let curP = _this.calcattrPoint(attrLen, i, conAttrMaxMinList[i], curEnt[attrList[i]], 0, 0, rSize);
-        let h = _this.calcRsize(conAttrMaxMinList[i], curEnt[attrList[i]], rSize)
-        var dataset = { startAngle: StartR + i * (StepR + StepInterR) + StepInterR, endAngle: StartR + (i + 1) * (StepR + StepInterR) }; //创建一个弧生成器
-        var arcPath = d3.arc()
-          .innerRadius(1)
-          .outerRadius(h);
-        var arcPathBack = d3.arc()
-          .innerRadius(1)
-          .outerRadius(h+2);
-        var pathArc = arcPath(dataset);
-        let entColor = importanceCompute_color(importanceColor_linear(curEnt['scoringRate']));
-        // _this.drawArc(entG, 0, 0, arcPathBack(dataset), "#000", "#000", 'type', 0, 3);
-        _this.drawArc(entG, 0, 0, pathArc, entColor, entColor, 'type', 0, 3);
-      }
+      let points = _this.calcRegularPolygonPoints(10, 0, 0, rSize);
+      let r = 120; let g = 190; let b = 200;
+      _this.drawPolygon(entG, points, `astcon_${idn}`, '1px', `rgb(${r},${g},${b})`, `rgba(${r},${g},${b},1)`);
 
 
 
@@ -425,104 +399,79 @@ export default {
       let entG = svg.select(`#${pId}`);
       let transformd = entG.attr("transform")
       let s = 'scale(1)';
-      if(transformd.split("scale").length>1){
+      if (transformd.split("scale").length > 1) {
         s = `scale${transformd.split("scale")[1]}`;
       }
       entG.attr("transform", `translate(${x},${y}) ${s}`);
     },
-    calcNetData(){
-      const _this = this;
-      let problemData = _this.problemsData;
-      let submissionsData  = _this.submissionsData;
-      let studentsData = _this.studentsData[0];
-      let minSupport = 0.1;
-      let minConfidence = 0.1;
-      let frequentItemset2 = {}; 
-      let frequentItemset1 = {}; 
-      let netData = {};
-      for(let i=0;i<problemData.length-1;i++){
-        let problemId=problemData[i]['id'];
-        frequentItemset1[`${problemId}`]=0;
-        Object.keys(studentsData).forEach((s)=>{
-            let problemI=studentsData[s][problemId]['best'];
-            if(problemI['status'] != 'ACCEPTED'){
-              frequentItemset1[`${problemId}`]++;
-            }
-          })
-      }
-      for(let i=0;i<problemData.length-1;i++){
-        let problemIId=problemData[i]['id'];
-        if(frequentItemset1[`${problemIId}`]>0){
-        for(let j=i+1;j<problemData.length;j++){
-          let problemJId=problemData[j]['id'];
-          frequentItemset2[`${problemIId}_${problemJId}`]=0;
-          frequentItemset2[`${problemJId}_${problemIId}`]=0;
-          let supportCount = 0;
-        if(frequentItemset1[`${problemJId}`]>0){
-          Object.keys(studentsData).forEach((s)=>{
-            let problemI=studentsData[s][problemIId]['best'];
-            let problemJ=studentsData[s][problemJId]['best'];
-            if((problemI['status'] != 'ACCEPTED')&&(problemJ['status'] != 'ACCEPTED')){
-              frequentItemset2[`${problemIId}_${problemJId}`]++;
-              frequentItemset2[`${problemJId}_${problemIId}`]++;
-            }
-          })
-          netData[`${problemIId}_${problemJId}`]=frequentItemset2[`${problemIId}_${problemJId}`]/frequentItemset1[`${problemIId}`];
-          netData[`${problemJId}_${problemIId}`]=frequentItemset2[`${problemJId}_${problemIId}`]/frequentItemset1[`${problemJId}`];
-        }
-        }
-      }
-      }
-      console.log(netData)
-      _this.netData = netData;
-    },
-    getProRel(){
+    getProRel() {
       const _this = this;
       let conceptsData = _this.conceptsData;
+      let problemsData = _this.problemsData;
       let problemConceptData = _this.problemConceptData;
       let ProRel = [];
-      let proLis = []
-      for(let c = 0; c<conceptsData.length;c++){
-        let conceptId = conceptsData[c]['id'];
-        let proList = []
-        problemConceptData.forEach(r=>{
-          let curCId = r['contentId']
-          if(curCId == conceptId){
-          let curPId = r['problem']
-            if(1){
-              proList.forEach(perPId=>{
-                ProRel.push({
-                  "source":perPId,
-                  "target":curPId
-                })
-              })
-            }
-            proList.push(r['problem']);
+      let proLis = {}
+      for (let p = 0; p < problemsData.length; p++) {
+        let pId = problemsData[p]['id'];
+        let proList = [];
+        let conList = [];
+        for (let c = 0; c < problemConceptData.length; c++) {
+          let curPId = problemConceptData[c]['problem'];
+          let curCId = problemConceptData[c]['conceptId'];
+          if (curPId == pId) {
+            conList.push(curCId);
           }
-        })
-      }
-      let proId = _this.curEntId;
-      for (let r = 0; r < ProRel.length; r++) {
-        let curRel = ProRel[r];
-        let s = curRel['source'];
-        let t = curRel['target'];
-        if((s == proId)||(t==proId)){
-            if (proLis.find(function (d) { return d['id'] == s }) == undefined) {
-                proLis.push({"id":s});
+        }
+        for (let r = 0; r < conList.length; r++) {
+          let cId = conList[r];
+          for (let c = 0; c < problemConceptData.length; c++) {
+            let curPId = problemConceptData[c]['problem'];
+            let curCId = problemConceptData[c]['conceptId'];
+            if (curCId == cId) {
+              proList.push(curPId);
             }
-            if (proLis.find(function (d) { return d['id'] == s }) == undefined) {
-                proLis.push({"id":t});
-            }
+          }
+        }
+        proLis[pId] = proList;
       }
-      }
+      // for(let c = 0; c<conceptsData.length;c++){
+      //   let conceptId = conceptsData[c]['id'];
+      //   let proList = []
+      //   problemConceptData.forEach(r=>{
+      //     let curCId = r['conceptId']
+      //     if(curCId == conceptId){
+      //       proList.push(r['problem']);
+      //     }
+      //   })
+      //   let listTemp = tools.deepClone(proList);
+      //   console.log(conceptId,conceptsData[c]['concept_name'],proList)
+      //   for(let p = 0; p<proList.length;p++){
+      //     proLis[proList[p]] = listTemp;
+      //   }
+      // }
+      console.log(proLis)
+      // let proId = _this.curEntId;
+      // for (let r = 0; r < ProRel.length; r++) {
+      //   let curRel = ProRel[r];
+      //   let s = curRel['source'];
+      //   let t = curRel['target'];
+      //   if((s == proId)||(t==proId)){
+      //       if (proLis.find(function (d) { return d['id'] == s }) == undefined) {
+      //           proLis.push({"id":s});
+      //       }
+      //       if (proLis.find(function (d) { return d['id'] == s }) == undefined) {
+      //           proLis.push({"id":t});
+      //       }
+      // }
+      // }
       _this.problemRelByConcept = ProRel;
       _this.problemListByConcept = proLis;
     },
     updata() {
-    const _this = this;
-    
+      const _this = this;
+
       _this.getProRel();
-      _this.calcNetData();
+      // _this.calcNetData();
       _this.drawnetPData();
     },
     click_Ent(time) {
@@ -541,23 +490,27 @@ export default {
     const _this = this
     // _this.tableData.find(function (d) { return d['key'] == 'name' })['value'] = 'Computer Network';
     this.$bus.$on('selectEnt', (val) => {
-     _this.curEntId = val;
-    //  _this.updata();
+      _this.curEntId = val;
+      console.log(val)
+      _this.updata();
     });
     this.$bus.$on('allProblem', (val) => {
-     _this.problemsData = val;
+      _this.problemsData = val;
     });
     this.$bus.$on('Submission', (val) => {
-     _this.submissionsData = val;
+      _this.submissionsData = val;
     });
     this.$bus.$on('Student', (val) => {
-     _this.studentsData = val;
+      _this.studentsData = val;
     });
     this.$bus.$on('Pro_Con', (val) => {
-     _this.problemConceptData = val;
+      _this.problemConceptData = val;
     });
-    this.$bus.$on('Concept', (val) => {
+    this.$bus.$on('ConceptTree', (val) => {
       _this.conceptsData = val;
+    });
+    this.$bus.$on('netData', (val) => {
+      _this.netData = val;
     });
   },
   // beforeDestroy() {

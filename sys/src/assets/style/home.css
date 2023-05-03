@@ -106,7 +106,13 @@
     scrollbar-width: none;
     float: left;
     width: 22%;
-    height: 35%;
+    height: 50%;
+  }
+  #scatterPanel{
+    scrollbar-width: none;
+    float: left;
+    width: 22%;
+    height: 50%;
   }
   #overviewPanel{
     scrollbar-width: none;
