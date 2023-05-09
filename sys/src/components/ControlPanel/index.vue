@@ -88,12 +88,15 @@
         <el-table :data="toolsData" style="color:rgb(167, 167, 167);width;: 100%">
           <el-table-column prop="key" label="" width="260">
           </el-table-column>
-          <el-table-column prop="value" label="" width="260">
+          <el-table-column prop="value" label="" width="360">
             <template slot-scope="scope">
-              <div v-if="scope.row.key != 'Layout Level'">
-                <el-switch size="middle" v-model="switchL[scope.row.value]" active-text="" inactive-text="">
+              <div v-if="scope.row.key == 'addRel'">
+                <el-switch size="middle" v-model="switchL[1]" active-text="" inactive-text="1">
                 </el-switch>
-
+                <el-switch size="middle" v-model="switchL[2]" active-text="" inactive-text="2">
+                </el-switch>
+                <el-switch size="middle" v-model="switchL[3]" active-text="" inactive-text="3">
+                </el-switch>
               </div>
               <div v-if="scope.row.key == 'Layout Level'" class="Level">
                 <el-slider
@@ -173,7 +176,9 @@ export default {
         "3":false
       },
       curToolState:{
-        "addRel":false
+        "addRel":false,
+        "addRelMain":false,
+        "delRel":false
       },
       lectureStyleIconUrl: require("@/assets/img/lecture style.png"),
       banshuUrl: require("@/assets/img/lecture style banshu.png"),
@@ -210,6 +215,8 @@ export default {
       deep:true,
       handler(val){
         this.curToolState['addRel']=val['1'];
+        this.curToolState['addRelMain']=val['2'];
+        this.curToolState['delRel']=val['3'];
         this.$emit("getToolState", this.curToolState);
       }
     }

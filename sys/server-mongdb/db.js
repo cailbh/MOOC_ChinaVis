@@ -61,6 +61,13 @@ const conceptProblemSchema = mongoose.Schema({
     problem: String,
     conceptId:Number
 })
+
+const createdRelSchema = mongoose.Schema({
+    problem: String,
+    conceptId:String,
+    type:String
+})
+
 const problemConceptSchema = mongoose.Schema({
     concept: String,
     problem: String
@@ -89,6 +96,8 @@ const Models = {
     Problem:mongoose.model('problem', problemsSchema, 'ent_problem'),
     Student:mongoose.model('student', studentSchema, 'ent_student'),
     Submission:mongoose.model('submission', submissionsSchema, 'submissions'),
+
+    createdRel:mongoose.model('createdRel', createdRelSchema, 'createdRel'),
 }
 
 module.exports = Models;

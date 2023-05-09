@@ -6,3 +6,26 @@
   /* left: 0;
     top: 0; */
 }
+
+#addGroupDiv{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 6px;
+  right: 99px;
+}
+#delGroupDiv{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 6px;
+  right: 66px;
+}
+
+#confirmGroupDiv{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 6px;
+  right: 33px;
+}

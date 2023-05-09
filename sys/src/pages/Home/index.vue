@@ -80,6 +80,37 @@ export default {
       videoTime: 0,
       windowWidth: document.documentElement.clientWidth, //实时屏幕宽度
       windowHeight: document.documentElement.clientHeight, //实时屏幕高度
+      // attrColorList:[
+      //   "rgb(255, 77, 109)",
+      //   "rgb(255, 113, 212)",
+      //   "rgb(255, 120, 90)",
+      //   "rgb(255, 159, 28)",
+      //   "rgb(6, 214, 160)",
+      //   "rgb(125, 98, 211)",
+      // ],
+      attrColorList:[
+        "rgb(56, 191, 201)",
+        "rgb(226, 205, 191)",
+        "rgb(255, 233, 141)",
+        "rgb(115, 230, 163)",
+        "rgb(255, 122, 125)",
+        "rgb(224, 207, 243)",
+      ],
+      attrColorLightList:[
+        "rgb(255, 176, 200)",
+        "rgb(255, 184, 240)",
+        "rgb(255, 173, 159)",
+        "rgb(255, 208, 133)",
+        "rgb(145, 226, 199)",
+        "rgb(167, 158, 221)",
+      ],
+      stuColorList:[
+        "rgb(254, 33, 79)",
+        "rgb(252, 171, 1)",
+        "rgb(85, 6, 134)",
+        "rgb(203, 64, 156)",
+        "rgb(73, 178, 101)",
+      ],
       mcolor: [
         "rgb(255,60,60)",
         "rgb(155,20,100)",
@@ -210,12 +241,22 @@ export default {
       let problemsData = tools.deepClone(_this.problemsData);
       let submissionsData = tools.deepClone(_this.submissionsData);
       let problemConceptData = tools.deepClone(_this.problemConceptData);
+      let tempStudent = {};
+      for (let i = 0; i < SelectStudentList.length; i++) {
+        tempStudent[SelectStudentList[i]['id']] = -1;
+      }
+      
       for (let i = 0; i < problemsData.length; i++) {
         problemsData[i]['totalAttempts'] = 0;
         problemsData[i]['acceptedAttempts'] = 0;
+        problemsData[i]['totalAttemptsPeople'] = 0;
+        problemsData[i]['acceptedAttemptsPeople'] = 0;
         problemsData[i]['totalScore'] = 0;
         problemsData[i]['accuracy'] = 0;
         problemsData[i]['conCount'] = 0;
+        problemsData[i]['conList'] = [];
+        problemsData[i]['scoringRate'] = 0;
+        problemsData[i]['stu'] = tools.deepClone(tempStudent);
         let proSetId = problemsData[i]['problemSetId'];
         if (entProSet.find(function (es) { return es['id'] == proSetId; }) == undefined) {
           entProSet.push({
@@ -240,7 +281,7 @@ export default {
       for (let l = 0; l < submissionsData.length; l++) {
         let userId = submissionsData[l]['user']['user']['id'];
 
-        if (1) {//SelectStudentList.indexOf(userId)!=-1){
+        // if (SelectStudentList.indexOf(userId)!=-1){
           if (entStudent.find(function (eS) { return eS['id'] == userId; }) == undefined) {
             entStudent.push({ 'id': userId, "pro": [] });
           }
@@ -251,30 +292,67 @@ export default {
             let problemId = jageProblemContents[i]['problemSetProblemId'];
             let score = jageProblemContents[i]['score'];
             let proStatus = jageProblemContents[i]['status'];
+
             if (entStu['pro'].find(function (p) { return p['id'] == problemId; }) == undefined) {
-              entStu['pro'].push({ "id": problemId, 'log': [], 'best': jageProblemContents[i] })
+              entStu['pro'].push({ "id": problemId, 'log': [], 'best': jageProblemContents[i], "totalAttempts": 0, "totalScore": 0 })
             }
+            
             let eSP = entStu['pro'].find(function (p) { return p['id'] == problemId; })
             // eSP['log'].push(jageProblemContents[i]);
+
             if (eSP['best']['score'] < score) {
               eSP['best'] = jageProblemContents[i];
             }
             let pro = problemsData.find(function (p) { return p['id'] == problemId; })
             if (pro != undefined) {
-
+              // if (SelectStudentList.indexOf(userId)!=-1){
+              pro['stu'][userId] =0;
               pro['totalAttempts'] += 1;
-              if (proStatus == 'ACCEPTED')
+              eSP['totalAttempts'] += 1;
+              if (proStatus == 'ACCEPTED'){
                 pro['acceptedAttempts'] += 1;
+                pro['stu'][userId] = 1;
+              }
               pro['totalScore'] += score / pro['score'];
+              // }
+              eSP['totalScore'] += score / pro['score'];
             }
           }
-        }
+        // }
       }
       for (let i = 0; i < problemConceptData.length; i++) {
         let conceptId = problemConceptData[i]['conceptId'];
         let problemId = problemConceptData[i]['problem'];
         let Pro = problemsData.find(function (p) { return p['id'] == problemId; });
         Pro['conCount']++;
+        Pro['conList'].push(conceptId);
+      }
+
+
+      for (let i = 0; i < problemsData.length; i++) {
+        if (problemsData[i]['totalAttempts'] != 0) {
+          problemsData[i]['scoringRate'] = problemsData[i]['totalScore'] / problemsData[i]['totalAttempts'];
+          problemsData[i]['acceptedRate'] = problemsData[i]['acceptedAttempts'] / problemsData[i]['totalAttempts'];
+        }
+        let num = 0;
+        let cur = 0;
+        let stu = problemsData[i]['stu'];
+        Object.keys(stu).forEach((s)=>{
+          if(stu[s]==1){
+            num++;
+            cur++;
+          }
+          if(stu[s]==0){
+            num++;
+          }
+        })
+        // for l in ep['log']:
+        //     num += 1
+        //     if ep['log'][l][0] == ep['score']:
+        //         cur += 1
+        // if cur != 0:
+        problemsData[i]['totalAttemptsPeople'] = num;
+        problemsData[i]['acceptedAttemptsPeople'] = cur;
       }
       for (let c = 0; c < conceptTree.length; c++) {
         let pcount = 0;
@@ -289,6 +367,8 @@ export default {
             conceptTree[c]['acceptedAttempts'] += ProBycon['acceptedAttempts'];
             conceptTree[c]['scoringRate'] += ProBycon['scoringRate'];
             conceptTree[c]['accuracy'] += ProBycon['accuracy'];
+            conceptTree[c]['totalAttemptsPeople'] = ProBycon['totalAttemptsPeople'];
+            conceptTree[c]['acceptedAttemptsPeople'] = ProBycon['acceptedAttemptsPeople'];
           }
         }
         if (conceptTree[c]['totalAttempts'] != 0)
@@ -299,22 +379,6 @@ export default {
           conceptTree[c]['scoringRate'] = conceptTree[c]['scoringRate'] / pcount;
           conceptTree[c]['accuracy'] = conceptTree[c]['accuracy'] / pcount;
         }
-      }
-
-
-      for (let i = 0; i < problemsData.length; i++) {
-        if (problemsData[i]['totalAttempts'] != 0) {
-          problemsData[i]['scoringRate'] = problemsData[i]['totalScore'] / problemsData[i]['totalAttempts'];
-          problemsData[i]['acceptedRate'] = problemsData[i]['acceptedAttempts'] / problemsData[i]['totalAttempts'];
-        }
-        let num = 0
-        let cur = 0
-        // for l in ep['log']:
-        //     num += 1
-        //     if ep['log'][l][0] == ep['score']:
-        //         cur += 1
-        // if cur != 0:
-        //     ep['accuracy'] = cur / num
       }
       let logLen = 0;
       for (let i = 0; i < entStudent.length; i++) {
@@ -465,6 +529,9 @@ export default {
     const _this = this;
     this.$el.style.setProperty("--heightStyle", this.windowHeight + "px");
     this.showVideo = true;
+    this.$bus.$emit("attrColorList", _this.attrColorLightList);
+    this.$bus.$emit("attrColorLightList", _this.attrColorLightList);
+    this.$bus.$emit("stuColorList", _this.stuColorList);
     this.$bus.$emit("groupData", _this.groupData);
     this.toolState = {
       "addRel": false
@@ -472,12 +539,12 @@ export default {
     this.getAllData();
     this.$bus.$on('Updata_Pro_Con', (val) => {
       _this.problemConceptData = val;
-      // _this.calStudent();
+      _this.calStudent();
     });
 
     this.$bus.$on('SelectedStu', (val) => {
       _this.SelectStudentList = val;
-      _this.calStudent();
+      // _this.calStudent();
     });
     // this.getData();
   },

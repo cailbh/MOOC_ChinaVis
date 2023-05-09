@@ -20,6 +20,37 @@ router.post('/api/test/createData', (req, res) => {
         }
     });
 });
+//创建联系
+router.post('/api/conceptProblem/createRel', (req, res) => {
+    // 这里的req.body能够使用就在index.js中引入了const bodyParser = require('body-parser')
+    let newRel = new models.createdRel({
+        problem: req.body.params.problem,
+        conceptId:req.body.params.conceptId,
+        type:req.body.params.type
+    });
+    // 保存数据数据进mongoDB
+    newRel.save((err, data) => {
+        if (err) {
+            res.send(err);
+        } else {
+            res.send('createRelsuccessed');
+        }
+    });
+});
+//删除联系
+router.post('/api/conceptProblem/delRel', (req, res) => {
+    // 保存数据数据进mongoDB
+    models.createdRel.deleteMany({
+        problem: req.body.params.problem,
+        conceptId:req.body.params.conceptId,
+    },(err, data) => {
+        if (err) {
+            res.send(err);
+        } else {
+            res.send('createRelsuccessed');
+        }
+    });
+});
 // 获取问题接口
 router.get('/api/problem/allProblem', (req, res) => {
     // 通过模型去查找数据库

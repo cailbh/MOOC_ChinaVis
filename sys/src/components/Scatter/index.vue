@@ -6,6 +6,16 @@
     <div class="panelHead">C</div>
     <div id="scatterCantain" ref="scatterCantain" class="panelBody">
     </div>
+    
+    <div id="addGroupDiv" @click="addGroupClk" ref="addBtn">
+      <img class="icons" :src="addGroupUrl">
+    </div>
+    <div id="delGroupDiv" @click="delGroupClk" ref="addBtn">
+      <img class="icons" :src="delGroupUrl">
+    </div>
+    <div id="confirmGroupDiv" @click="confirmGroupClk" ref="addBtn">
+      <img class="icons" :src="confirmGroupUrl">
+    </div>
     <!-- <div id="moveLeft" ref="movescatterLeft"></div>
                     <div id="moveRight" ref="movescatterRight"></div> -->
     <!-- <div id="assistscatterCantain" class="panel">
@@ -31,17 +41,25 @@ import domtoimage from 'dom-to-image';
 // import TestJson from "@/assets/json/case2_fin.json";
 // import TestRelJson from "@/assets/json/case2_fin_rel.json";
 import tools from "@/utils/tools.js";
+import contour from "@/utils/contour";
 
 export default {
   props: ["toolsState"],
   data() {
     return {
       data: '',
+      addGroupUrl:require("@/assets/img/addGroup.png"),
+      delGroupUrl:require("@/assets/img/delGroup.png"),
+      confirmGroupUrl:require("@/assets/img/confirmGroup.png"),
       scatterHeight:0,
       selectStartX:0,
       selectStartY:0,
       selectEndX:0,
       selectEndY:0,
+      selectGroupId:-1,
+      selectGroup:[],
+      stuAttrList:[],
+      stuAttrMaxMinList:[],
       SelectStudentList:[],
       groupData:[],
       selectClick:0,
@@ -53,6 +71,7 @@ export default {
       conceptTree: [],
       proSetData:[],
       interY:10,
+      attrColorList:[],
       problemConceptData: [],
       userProblemData: [],
       MaxMinX: [],
@@ -86,6 +105,7 @@ export default {
       rootSvg: null,
       groupsSvg: null,
       arcG: null,
+      backG: null,
       curEntId: '',
       minDImportance: 0,
       maxDImportance: 0,
@@ -104,10 +124,8 @@ export default {
       scatterSvgScale: 1,
       moveTimer: null,
       moveFlag: false,
-      entProMinColor: "rgb(203, 230, 209)",
-      entProMaxColor: "rgb(22, 144, 207)",
-      entConMinColor: "rgb(255, 162, 66)",
-      entConMaxColor: "rgb(252, 85, 49)",
+      stuMinColor: "rgb(255, 255, 255)",
+      stuMaxColor: "rgb(153, 16, 78)",
       stepX: 80,
       stepY: 100,
       typeXMap: {
@@ -122,7 +140,8 @@ export default {
       width: 0,
       height: 0,
       curToolState: 'unEdit',
-      margin: { top: 10, right: 20, bottom: 0, left: 20 },
+      margin: { top: 1, right: 2, bottom: 0, left: 2 },
+      stuColorList:[],
       mcolor: [
         "rgb(255,60,60)",
         "rgb(155,20,100)",
@@ -157,18 +176,95 @@ export default {
         "rgb(168,168,255)",
         "rgb(200,200,200)",
       ],
+      attrColorList:[
+        "rgb(0, 125, 104)",
+        "#6f8be0",
+        "#ff9c9c",
+        "rgb(115, 230, 163)",
+        "rgb(56, 191, 201)",
+        "rgb(224, 207, 243)",
+      ],
     };
   },
 
   watch: {
-    SelectStudentList(val){
-      this.updataScatter();
-      this.$bus.$emit("SelectedStu", val);
+    selectGroupId(val){
+      const _this = this;
+      this.$refs.scatterCantain.addEventListener("mousedown", _this.mouseDown);
+    },
+
+    SelectStudentList:{
+      deep:true,
+      handler(val){
+        let entG = this.entG;
+        this.updataScatter();
+        this.drawContour(entG);
+      }
+  },
+    selectGroup(val){
+      const _this = this;
+      console.log(val);
+      d3.selectAll(".stuGroup").remove();
+      let num = val.length;
+      let backG = _this.backG;
+      let colorList = _this.stuColorList;
+      for(let i=0;i<num;i++){
+        let cx = 10+i*40;
+        let cy = 10;
+        let r = 15;
+        let fill = colorList[i];
+        let opacity = 1;
+        let circle = _this.drawCircle(backG, cx, cy, r, "white", opacity,fill,3 ,'stuGroup', `stuGroup_${i}`);
+        circle.on("click",function(){
+          d3.selectAll(`.stuGroup`).attr("opacity",0.1);
+          d3.select(this).attr("opacity",1);
+          let id = d3.select(this).attr("id").split("_")[1];
+          _this.selectGroupId = id;
+        }).on("mouseover",function(){
+          d3.selectAll(`.stuGroup`).attr("opacity",0.1);
+          d3.select(this).attr("opacity",1);
+          _this.$refs.scatterCantain.removeEventListener("mouseup", _this.mouseUp);
+          _this.$refs.scatterCantain.removeEventListener("mousedown", _this.mouseDown);
+        })
+      }
     },
     type(val) {
     },
   },
   methods: {
+
+    addGroupClk(){
+      const _this = this;
+      let selectStuGroup = _this.selectGroup;
+      if(selectStuGroup.length<5)
+        selectStuGroup.push([]);
+      _this.selectGroup = selectStuGroup;
+      // d3.select(`#addGroupDiv`)
+      // .attr("style", function(){
+      //   return `right:${450-(selectStuGroup.length)*40}px`
+      // });
+    },
+    delGroupClk(){
+      const _this = this;
+      let selectStuGroup = _this.selectGroup;
+      if(selectStuGroup.length>0)
+        selectStuGroup.pop();
+      _this.selectGroup = selectStuGroup;
+      // d3.select(`#addGroupDiv`)
+      // .attr("style", function(){
+      //   return `right:${450-(selectStuGroup.length)*40}px`
+      // });
+    },
+    confirmGroupClk(){
+      const _this = this;
+      let selectStuGroup = _this.selectGroup;
+      
+      this.$bus.$emit("SelectedStu", _this.SelectStudentList);
+      // d3.select(`#addGroupDiv`)
+      // .attr("style", function(){
+      //   return `right:${450-(selectStuGroup.length)*40}px`
+      // });
+    },
 
     drawMain(svg) {
       let _this = this;
@@ -195,15 +291,18 @@ export default {
 
       let MaxMinX =_this.MaxMinX;
       let MaxMinY = _this.MaxMinY;
-      let xSize_linear = d3.scaleLinear().domain([MaxMinX[1], MaxMinX[0]]).range([10,width]);
-      let ySize_linear = d3.scaleLinear().domain([MaxMinY[1], MaxMinY[0]]).range([10,height]);
+
+      let xSize_linear = d3.scaleLinear().domain([MaxMinX[1], MaxMinX[0]]).range([30,width-30]);
+      let ySize_linear = d3.scaleLinear().domain([MaxMinY[1], MaxMinY[0]]).range([30,height-30]);
 
       _this.arcG = arcG;
       _this.entG = entG;
       _this.entSetG = entSetG;
       _this.entbySetG = entbySetG;
       _this.relG = relG;
+      _this.backG = backG;
       let interval = _this.circleInterval;
+
 
 
       let scalePre = _this.scatterSvgScale;
@@ -232,6 +331,17 @@ export default {
 
         // svg.call(scatterZoom);
 
+
+      let attrList = _this.stuAttrList;
+      let stuAttrMaxMinList = _this.stuAttrMaxMinList;
+
+      let rSize_linear = d3.scaleLinear().domain([stuAttrMaxMinList[0][1], stuAttrMaxMinList[0][0]]).range([3,8]);
+      
+      let stuMaxColor = _this.stuMaxColor;
+      let stuMinColor = _this.stuMinColor;
+      let stuColor_linear = d3.scaleLinear().domain([stuAttrMaxMinList[0][1], stuAttrMaxMinList[0][0]]).range([0, 1]);
+      let stuCompute_color = d3.interpolate(stuMinColor,stuMaxColor);
+
         let groupData = tools.deepClone(_this.groupData);
         console.log(groupData);
         let colorList = _this.mcolor;
@@ -241,11 +351,58 @@ export default {
           let sId = groupData[i]['id']
           groupData[i]['cx'] = cx;
           groupData[i]['cy'] = cy;
-          groupData[i]['r'] = 5;
-          groupData[i]['fill'] = colorList[parseInt(groupData[i]['kmeansC'])];
+          groupData[i]['r'] = rSize_linear(groupData[i][attrList[0]]);
+          groupData[i]['fill'] = stuCompute_color(stuColor_linear(groupData[i][attrList[0]])) //'grey'//colorList[parseInt(groupData[i]['kmeansC'])];
         }
-      _this.groupData =groupData;
+      _this.groupData = groupData;
       _this.updataScatter();
+    },
+    drawContour(svg){
+      const _this = this;
+      d3.selectAll(".counter").remove();
+      let groupData = tools.deepClone(_this.groupData);
+      let SelectStudentList = _this.SelectStudentList;
+      let nodesList = [
+        [],[],[],[],[]
+      ]
+        for(let i=0;i<SelectStudentList.length;i++){
+          for(let j=0;j<SelectStudentList[i].length;j++){
+            let stuD = groupData.find(function(s){return s['id'] == SelectStudentList[i][j]});
+            let stuTemp = {
+              x:stuD['cx'],
+              y:stuD['cy'],
+              r:stuD['r']+6*3-3
+            }
+                 nodesList[i].push(stuTemp);
+            }
+        }
+        let colorList = _this.stuColorList;
+        // for(let i=0;i<groupData.length;i++){
+        //   let sId = groupData[i]['id']
+        //   // console.log(groupData[i]['kmeansC'])
+        //     nodesList[parseInt(groupData[i]['kmeansC'])].push({
+        //       x:groupData[i]['cx'],
+        //       y:groupData[i]['cy'],
+        //       r:groupData[i]['r']
+        //     })
+        // }
+        let k = 0;
+      nodesList.forEach(nodeList=>{
+      let path = contour(nodeList,30);
+      let contourData = _this.arcsToPaths(path)
+        contourData.forEach(contourD=>{
+          svg.append("path")
+          .attr("class","counter")
+          .attr("d", function() { return contourD.d; })
+          .style("stroke", colorList[parseInt(k)])
+          .style("stroke-width", 3)
+          .style("opacity",1)
+          // .attr("stroke-dasharray", "3")
+          // .attr("stroke-dashoffset", "30")
+          .attr("transform", function() {return contourD.transform;});})
+          k++;
+        })
+      
     },
     drawPolygon(svg, points, idName, strokeWidth, stroke, fill) {
       let polygon = svg.append("polygon")
@@ -258,9 +415,33 @@ export default {
         .attr("stroke", stroke)
       return polygon;
     },
-    drawCircle(svg, x, y, r, fill, opacity, className = 'entCircle', idName) {
+    arcsToPaths(arcs) {
+      let paths = [];
+      let arcGen = d3.arc();
+
+      arcs.forEach(function (arc) {
+          let startAngleTemp = arc.startAngle;
+
+          if (startAngleTemp > arc.endAngle) {
+            startAngleTemp -= 2 * Math.PI;
+          }
+
+          paths.push({
+            d: arcGen({
+              innerRadius: arc.radius,
+              outerRadius: arc.radius,
+              startAngle: startAngleTemp,
+              endAngle: arc.endAngle
+            }),
+            transform: "translate(" + arc.center.x + "," + arc.center.y + ")"
+          });
+        });
+
+        return paths;
+    },
+    drawCircle(svg, x, y, r, fill, opacity,stroke, width, className = 'entCircle', idName) {
       const _this = this;
-      const oData = _this.data
+      const oData = _this.data;
       d3.select(`#${idName}`).remove();
       let circle = svg.append("circle")
         .attr("id", idName)
@@ -269,6 +450,8 @@ export default {
         .attr("cx", x)
         .attr("cy", y)
         .attr("r", r)
+        .attr('stroke', stroke)
+        .attr('stroke-width', width)
         .attr("fill", fill)
       return circle;
     },
@@ -279,7 +462,6 @@ export default {
       ]
     },
     mouseDown(event){
-      console.log(event)
       const _this = this;
       let entG = _this.entG
       let sx = event.layerX-_this.scatterGTransformX;
@@ -318,11 +500,16 @@ export default {
     },
     getSelectStudentList(){
       const _this = this;
+      let temp = tools.deepClone(_this.SelectStudentList);
       let groupData =   _this.groupData;
       let sx =_this.selectStartX;
       let sy = _this.selectStartY;
       let tx =_this.selectEndX;
       let ty = _this.selectEndY;
+      _this.selectStartX = 0;
+      _this.selectStartY = 0;
+      _this.selectEndX = 0;
+      _this.selectEndY = 0;
       let minx = sx<tx?sx:tx;
       let miny = sy<ty?sy:ty;
       let maxx = sx>tx?sx:tx;
@@ -333,10 +520,20 @@ export default {
           let cy = groupData[i]['cy'];
           let sId = groupData[i]['id'];
           if(((cx>minx)&&(cx<maxx))&&((cy>miny)&&(cy<maxy))){
-            SelectStudentList.push(sId);
+            let jg = 0;
+            temp.forEach(t=>{
+              t.forEach(s=>{
+                if(s == sId)
+                  jg = 1;
+              })
+            }) 
+            if(jg==0)
+              SelectStudentList.push(sId);
           }
         }
-      _this.SelectStudentList = SelectStudentList;
+      let selectGroupId = _this.selectGroupId;
+      temp[selectGroupId] =SelectStudentList;
+      _this.SelectStudentList= temp;
     },
     drawRect(svg, x, y, w, h, rx, fill, strokeWidth, stroke, opacity, idName, className) {
       d3.select(`#${idName}`).remove();
@@ -365,12 +562,60 @@ export default {
           let r=groupData[i]['r']
           let sId = groupData[i]['id']
           let fill = groupData[i]['fill'];
-          let opacity =0.3;
-          if(SelectStudentList.indexOf(sId)!=-1){
-            opacity = 1;
+          let opacity =1;
+          // if(SelectStudentList.indexOf(sId)!=-1){
+          //   opacity = 1;
+          // }
+          _this.drawCircle(entG, cx, cy, r, fill, opacity,"grey","0", 'entStu', `entStu_${sId}`);
+          let stuAttrList = _this.stuAttrList;
+          let stuAttrMaxMinList = _this.stuAttrMaxMinList;
+          let attrLen = stuAttrList.length;
+          let colorList = _this.attrColorList;
+          let starR = 0;//-Math.PI/2;
+          let stepH = 5;
+          let perh = r;
+          for (let j = 0; j < attrLen; j++) {
+            if(stuAttrList[j] == 'scoringRate'){
+
+            }
+            else if(stuAttrList[j] == 'acceptedNum'){
+              
+            }
+            else{
+            let Angle_linear = d3.scaleLinear().domain([stuAttrMaxMinList[j][1], stuAttrMaxMinList[j][0]]).range([0,Math.PI*2]);
+            let h = perh+stepH;
+            var dataset = { startAngle:starR, endAngle: starR+Angle_linear(groupData[i][stuAttrList[j]]) }; //创建一个弧生成器
+            var datasetB = { startAngle:starR, endAngle: starR+Math.PI*2 }; //创建一个弧生成器
+            var arcPath = d3.arc()
+              .innerRadius(perh)
+              .outerRadius(h-1);
+            var arcPathBack = d3.arc()
+              .innerRadius(1)
+              .outerRadius(h + 2);
+              perh = h;
+            var pathArc = arcPath(dataset);
+            var pathArcB = arcPath(datasetB);
+            let entColor = colorList[j];//importanceCompute_color(importanceColor_linear(curEnt['scoringRate']));
+            // _this.drawArc(entG, 0, 0, arcPathBack(dataset), "#000", "#000", 'type', 0, 3);
+            _this.drawArc(entG, cx, cy, pathArcB, fill, "rgb(230,230,230)", 'typeB',`stuAttrB_${sId}_${j}`, 0, 0);
+            _this.drawArc(entG, cx, cy, pathArc, entColor, entColor, 'type',`stuAttr_${sId}_${j}`, 0, 0);}
           }
-          _this.drawCircle(entG, cx, cy, r, fill, opacity, 'entStu', `entStu_${sId}`);
+
         }
+    },
+    
+    drawArc(svg, x, y, arcPath, stroke, fill, className,idN, stroke_dasharray = "0", width = 3) {
+      d3.select(`#${idN}`).remove();
+      svg.append("path")
+        .attr("d", arcPath)
+        .attr("class", className)
+        .attr("id",idN)
+        .attr("transform", "translate(" + x + "," + y + ")")
+        .attr("stroke", stroke)
+        .attr('stroke-width', width)
+        .attr("stroke-dasharray", stroke_dasharray)
+        .attr("stroke-linejoin", "round")
+        .attr("fill", fill)
     },
     updataAll() {
       var _this = this;
@@ -388,6 +633,15 @@ export default {
       let data = _this.groupData;
       let MaxMinX = _this.getMaxMin(data, 'x');
       let MaxMinY = _this.getMaxMin(data, 'y');
+
+      let stuAttrList = ['scoringRate', 'bestScore', 'totalAttempts','acceptedNum','time']
+      _this.stuAttrList = stuAttrList;
+      let stuAttrMaxMinList = [];
+
+      for (let i = 0; i < stuAttrList.length; i++) {
+        stuAttrMaxMinList.push(_this.getMaxMin(data, stuAttrList[i]));
+      }
+      _this.stuAttrMaxMinList = stuAttrMaxMinList;
 
       _this.MaxMinX = MaxMinX;
       _this.MaxMinY = MaxMinY;
@@ -410,7 +664,10 @@ export default {
       _this.groupData = val;
       this.updataAll();
     });
-    this.$refs.scatterCantain.addEventListener("mousedown", _this.mouseDown); // 监听点击事件
+    
+    // this.$bus.$on('attrColorList', (val) => {_this.attrColorList = val;});
+    this.$bus.$on('stuColorList', (val) => {_this.stuColorList = val;});
+    // this.$refs.scatterCantain.addEventListener("mousedown", _this.mouseDown); // 监听点击事件
     // this.$refs.movescatterRight.addEventListener("mousemove", _this.movescatterRight); // 监听点击事件
     // this.$refs.movescatterLeft.addEventListener("mouseleave", _this.leavescatterMove); // 监听点击事件
     // this.$refs.movescatterRight.addEventListener("mouseleave", _this.leavescatterMove); // 监听点击事件

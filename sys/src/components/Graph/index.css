@@ -114,13 +114,6 @@
       stroke-dashoffset: 50%;
   }
 }
-#zoomInDiv{
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  top: 57px;
-  right: 720px;
-}
 #zoomOutDiv{
   position: absolute;
   width: 30px;
