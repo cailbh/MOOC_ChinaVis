@@ -509,7 +509,7 @@ export default {
       let rSize = rSize_linear(curEnt['conCount']);
       if(idn ==_this.curEntId){rSize+=20}
       let points = _this.calcRegularPolygonPoints(attrLen, 0, 0, rSize);
-      let entColor = "rgba(220,220,220,0)"//importanceCompute_color(importanceColor_linear(curEnt['scoringRate']));
+      let entColor = "rgba(220,220,220,0.5)"//importanceCompute_color(importanceColor_linear(curEnt['scoringRate']));
 
       let entPolygon = _this.drawPolygon(entG, points, `pro_${idn}`, '5px', entColor, entColor);
 

@@ -78,7 +78,7 @@
 
               </div>
               <div v-if="scope.row.key == 'count'" class="Level">
-                relationships:&nbsp&nbsp&nbsp{{ relCount }}  
+                r:&nbsp&nbsp&nbsp{{ relCount }}  
               </div>
             </template>
           </el-table-column>
@@ -116,7 +116,12 @@
           </el-table-column>
       </el-table>
     </div>
-    </div>
+   
+    <div id="confirmButDiv" @click="confirmClk" ref="addBtn">
+      <img class="icons" :src="confirmUrl">
+    </div> 
+
+  </div>
     <!-- <div id="lectureStyleIconDiv">
         <img class="icons" :src="lectureStyleIconUrl">
       </div>
@@ -155,6 +160,8 @@ export default {
       fileVideoList: [],
       fileSlidesList: [],
       fileScriptList: [],
+      
+      confirmUrl:require("@/assets/img/confirmGroup.png"),
       upSliderUrl: require('@/assets/img/Slider.png'),
       upScriptUrl: require('@/assets/img/Script.png'),
       // require('@/assets/videos/index.mp4'),
@@ -178,8 +185,9 @@ export default {
       curToolState:{
         "addRel":false,
         "addRelMain":false,
-        "delRel":false
+        "delRel":false,
       },
+      renew:false,
       lectureStyleIconUrl: require("@/assets/img/lecture style.png"),
       banshuUrl: require("@/assets/img/lecture style banshu.png"),
       kousuUrl: require("@/assets/img/lecture style kousu.png"),
@@ -224,6 +232,16 @@ export default {
   methods: {
     handleCommand(command) {
       this.selectSession = command;
+    },
+    confirmClk(){
+      
+        this.renew=true;
+        this.$bus.$emit("renew", this.renew);
+        // this.curToolState['addRel']=false;
+        // this.curToolState['addRelMain']=false;
+        // this.curToolState['delRel']=false;
+        this.$emit("getToolState", this.curToolState);
+        this.renew=false;
     },
     click_Ent(time) {
       this.$emit("timeDur", time);

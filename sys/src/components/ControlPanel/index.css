@@ -258,6 +258,15 @@
 .tt{
   background: none;
 }
+
+#confirmButDiv{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 345px;
+  left: 345px;
+}
+
 #iconUploadVideoel{
   /* float: left; */
   width: 37px;

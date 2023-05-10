@@ -76,6 +76,7 @@ export default {
       entSetG:"",
       entbySetG:"",
       relG:"",
+      frontG:"",
       curProblemId: '',
       curConceptId: '',
       curProblemSetId:'',
@@ -114,16 +115,17 @@ export default {
       entProMinColor: "rgb(203, 230, 209)",
       entProMaxColor: "rgb(22, 144, 207)",
 
+      setMaxColor: "rgb(4, 38, 79)",
+      setMinColor: "rgb(112, 202, 235)",
+
       entConMaxColor: "rgb(220, 4, 52)",
-      entConMinColor: "rgb(255, 255, 255)",
+      entConMinColor: "rgb(231, 201, 203)",
       
       entConRectMaxColor:  "rgb(56, 191, 201)",
       entConRectMinColor:"rgb(200, 200, 200)",
 
       setConCountColorMax: "rgb(67, 186, 133)",
       setConCountColorMin: "rgb(255, 255, 255)",
-      setMaxColor: "rgb(5, 163, 215)",
-      setMinColor: "rgb(255, 255, 255)",
       stepX: 80,
       stepY: 100,
       typeXMap: {
@@ -223,6 +225,7 @@ export default {
         // })
         // _this.problemConceptData = pro_conRelData;
         _this.createRel(curproId,val,type);
+
       }
       else if(_this.toolDelRel){
         _this.delRel(curproId,val);
@@ -334,7 +337,11 @@ export default {
           type:type
          } }, {})
         .then((response) => {
-          console.log(response.body);
+          _this.$message({
+          message: 'add success',
+          type: 'success',
+          duration: 1000
+        });
         });
     },
     delRel(problemId,conceptId) {
@@ -345,7 +352,11 @@ export default {
           conceptId:conceptId,
          } }, {})
         .then((response) => {
-          console.log(response.body);
+            _this.$message({
+            message: 'del success',
+            type: 'warning',
+            duration: 1000
+          });
         });
     },
     drawMainO(svg) {
@@ -658,6 +669,7 @@ export default {
       _this.entSetG = entSetG;
       _this.entbySetG = entbySetG;
       _this.relG = relG;
+      _this.frontG = frontG;
       let interval = _this.circleInterval;
 
 
@@ -733,7 +745,7 @@ export default {
       // concept---------
       let treeX = _this.treeX;
       let treeY = _this.treeY;
-      let stepY = height / (conceptTree.length + 2);
+      let stepY = (height-90) / (conceptTree.length);
 
       let tempConDistribution = {};
 
@@ -816,7 +828,7 @@ export default {
         Ent_problem.push(tempPro);
         // let circle = _this.drawCircle(entG, cx, cy, r, fill, opacity, );t text = _this.drawTxt(entG, cx+20, cy+3.5, Cname, "black", 12, `entConText_${cid}`);
       }
-      let setStepY = height/proSetData.length;
+      let setStepY = (height-90)/proSetData.length;
       let colorList = _this.mcolor;
       let tempTypeDistribution = {};
       Object.keys(typeXMap).forEach(t=>{
@@ -851,7 +863,7 @@ export default {
         // let edP = Ent_problem.find(function(ep){return ep['id'] == set[set.length-1];})
         // proSetData[i]['height'] = edP['cy'] - proSetData[i]['cy']+edP['height'];
         // -----------------------------------
-        proSetData[i]['cy'] = setStepY*i;
+        proSetData[i]['cy'] = 30+setStepY*i;
         proSetData[i]['height'] = setStepY-10;
         // -------------------------------------
       }
@@ -862,12 +874,61 @@ export default {
       _this.Ent_problem = Ent_problem;
       // ---------------------
       _this.proSetData =proSetData;
-          // this.updataPro_ConRel();
+          // this.updataPro_ConRel(); 
           this.updataProSet_ConRel();
 
       _this.updataParallelCoordinatesplotBySet();
-
+      _this.drawFigureAnnotation();
       
+    },
+    drawFigureAnnotation(){
+      const _this = this;
+      let frontG = _this.frontG;
+
+      let currentConMaxColor = _this.entConMaxColor;
+      let currentConMinColor = _this.entConMinColor;
+      let len =6;
+
+      let Color_linear = d3.scaleLinear().domain([0, len]).range([0, 1]);
+      let Rsize_linear = d3.scaleLinear().domain([0, len]).range([1, 6]);
+      let Compute_color = d3.interpolate(currentConMinColor, currentConMaxColor);
+
+      let currentConRectMaxColor = _this.entConRectMaxColor;
+      let currentConRectMinColor = _this.entConRectMinColor;
+      let rectConColor_linear = d3.scaleLinear().domain([0,len]).range([0, 1]);
+      let rectConCompute_color = d3.interpolate("white", currentConRectMaxColor);
+      // _this.drawCircle(frontG, 20, 1000, 10,currentConMaxColor , 1,currentConMaxColor,"1", 'FigAtt', `FigAtt_conColor`);
+
+      let textcon = _this.drawTxt(frontG, 10, 1065, "Concepts Value:", "black", 13, `FigAtt_con`);
+      let textset = _this.drawTxt(frontG, 350, 1065, "Set Value:", "black", 13, `FigAtt_set`);
+      let textpro = _this.drawTxt(frontG, 800, 1065, "Problems Value:", "black", 13, `FigAtt_pro`);
+      let text1 = _this.drawTxt(frontG, 10, 1085, "ScoringRate:", "black", 10, `FigAtt_conColor`);
+      let text2 = _this.drawTxt(frontG, 10, 1105, "Connection Nums:", "black", 10, `FigAtt_Rsize`);
+      // let text3 = _this.drawTxt(frontG, 100, 1070, "Low", "black", 10, `FigAtt_Low`);
+      // let text4 = _this.drawTxt(frontG, 100+10*len, 1070, "High", "black", 10, `FigAtt_High`);
+
+      let text5 = _this.drawTxt(frontG, 180, 1085, "Attempts:", "black", 10, `FigAtt_conColor`);
+      let text6 = _this.drawTxt(frontG, 180, 1105, "AcceptedRate:", "black", 10, `FigAtt_Rsize`);
+      // let text7 = _this.drawTxt(frontG, 100, 1070, "Low", "black", 10, `FigAtt_Low`);
+      // let text8 = _this.drawTxt(frontG, 100+10*len, 1070, "High", "black", 10, `FigAtt_High`);
+      let prex = 0;
+      let prerx = 0;
+      for(let i=0;i<len;i++){
+        let color = Compute_color(Color_linear(i));
+        let rcolor = rectConCompute_color(rectConColor_linear(i));
+        
+        _this.drawCircle(frontG, 110+10*i, 1082, 3,color , 1,"red","1", 'FigAtt', `FigAtt_conColor${i}`);
+
+        _this.drawCircle(frontG, 110+prex, 1102, Rsize_linear(i),Compute_color(Color_linear(7)) , 1,"red","1", 'FigAtt', `FigAtt_conRsize${i}`);
+        
+        prex+=Rsize_linear(i)*2+4;
+
+        _this.drawRect(frontG, 250+12*i, 1080, 10, 10, 0, rcolor, "1", "grey","1", `FigAtt_conRectColor${i}`, 'FigAtt');
+
+        _this.drawRect(frontG, 250+prerx, 1100, i*4, 10, 0, rectConCompute_color(rectConColor_linear(6)), "1", "grey","1", `FigAtt_conRectWidth${i}`, 'FigAtt');
+
+        prerx+= i*4+2;
+        }
     },
     updataSelectStudentListColor(){
       const _this = this;
@@ -897,7 +958,7 @@ export default {
 
       //轴
       let paraX = 1100;
-      let stepY = _this.graphHeight/(proSetData.length+2);
+      let stepY = (_this.graphHeight-90)/(proSetData.length);
       for(let i = 0;i<proSetData.length;i++){
         let cx = paraX;
         let cy = proSetData[i]['cy']+proSetData[i]['height']/2//;stepY*(i+1)
@@ -1055,6 +1116,7 @@ export default {
         let curRel = pro_conRelData[i];
         let conId = curRel['conceptId'];
         let proId = curRel['problem'];
+        let type = curRel['type'];
         let conData = Ent_concept.find(function(d){return d['id'] == conId;});
         let proData = Ent_problem.find(function(d){return d['id'] == proId;});
         let curproSetData = proSetData.find(function(pd){return pd['id'] == proData['problemSetId']});
@@ -1066,7 +1128,9 @@ export default {
         let c1y = (sy);
         let c2x = (sx);
         let c2y = (ty);
-        _this.drawBsLine(relG, sx, sy,c1x,c1y,c2x,c2y, tx, ty, "grey", "2px", "0.2", `proSetConRel_${conId}_${proData['problemSetId']}`, "proSetConRel");
+        let fill = "grey";
+        if(type=="1"){fill = 'red'}
+        _this.drawBsLine(relG, sx, sy,c1x,c1y,c2x,c2y, tx, ty, fill, "2px", "0.2", `proSetConRel_${conId}_${proData['problemSetId']}`, "proSetConRel");
       }
     },  
     updataPro_ProSelfRel(tranY){
@@ -1160,7 +1224,16 @@ export default {
 
         let rectB =  _this.drawRect(entG, cx+20, cy-8, 100, 16, 1, "rgb(200,200,200)", "0", "none","1", `entConRectB_${cid}`, 'entConRect');
         let rect =  _this.drawRect(entG, cx+20, cy-8, widthRect, 16, 1, fillRect, "0", "none","1", `entConRect_${cid}`, 'entConRect');
-
+        rectB.on("click",function(d){
+          let selectCon = d3.select(this);
+          let selectConId = selectCon.attr("id").split("_")[1];
+          _this.curConceptId = selectConId;
+        })
+        rect.on("click",function(d){
+          let selectCon = d3.select(this);
+          let selectConId = selectCon.attr("id").split("_")[1];
+          _this.curConceptId = selectConId;
+        })
         let text = _this.drawTxt(entG, cx+20, cy+3.5, Cname, "white", 12, `entConText_${cid}`);
         
         let fatherId = curEntCon['father'];
@@ -1373,44 +1446,38 @@ export default {
         let cy = proSetData[i]['cy'];
         let width = proSetData[i]['width'];
         let height = proSetData[i]['height'];
-        let rect = _this.drawRect(entSetG, cx, cy, width, height, 10, fill, "5", "none","1", `proSet_${psid}`, 'proSet');
-        // let rect1 = _this.drawRect(entSetG, cx, cy+height/3, width, 1, 1, "grey", "5", "none","1", `proSet1_${psid}`, 'proSet');
-        // let rect2 = _this.drawRect(entSetG, cx, cy+height/3*2, width, 1, 1, "grey", "5", "none","1", `proSet2_${psid}`, 'proSet');
-        let rect1 = _this.drawRect(entSetG, cx+width/3, cy, 1, height, 1, "white", "5", "none","1", `proSet1_${psid}`, 'proSet');
-        let rect2 = _this.drawRect(entSetG, cx+width/3*2, cy, 1, height, 1, "white", "5", "none","1", `proSet2_${psid}`, 'proSet');
-        // for(let j=0;j<8;j++){
-          // _this.drawRect(entSetG, cx+(width/9+1)*j, cy, width/9, height/3, 1, "white", "1", "black","1", `proSetConAttry_${psid}_${j}`, 'proSetConAttr');
-          // _this.drawRect(entSetG, cx, cy+11*j, 10, 10, 1, "white", "1", "black","1", `proSetConAttrx_${psid}_${j}`, 'proSetConAttr');
-        // }
-        
+        let rect = _this.drawRect(entSetG, cx, cy, width, height, 10, fill, "5", "none","1", `proSet_${psid}`, 'proSet');        
         rect.on("click",function(d){
           let selectSet = d3.select(this);
           d3.selectAll(".proSet").attr("opacity",0.1);
-          // d3.selectAll(".proSelfRel").remove();
-          // _this.updataPro_ProSelfRel();
-          // _this.updataPro_ProSetRel();
           selectSet.attr("opacity",1)
           let selectSetId = selectSet.attr("id").split("_")[1];
           _this.curProblemSetId = selectSetId;
         })
+        let rect1 = _this.drawRect(entSetG, cx, cy+height/3, width, 1, 1, "grey", "5", "none","1", `proSet1_${psid}`, 'proSet');
+        let rect2 = _this.drawRect(entSetG, cx, cy+height/3*2, width, 1, 1, "grey", "5", "none","1", `proSet2_${psid}`, 'proSet');
+        // let rect1 = _this.drawRect(entSetG, cx+width/3, cy, 1, height, 1, "white", "5", "none","1", `proSet1_${psid}`, 'proSet');
+        // let rect2 = _this.drawRect(entSetG, cx+width/3*2, cy, 1, height, 1, "white", "5", "none","1", `proSet2_${psid}`, 'proSet');
 
-        // let min1w = height/3;
-        // let max1w = width/9;       
+
+        let min1w = 0;
+        let max1w = width/9;       
+        let min1h = 0;
+        let max1h = height/3;
+
+        // let min1w = 3;
+        // let max1w = width/3-10;       
         // let min1h = 10;
-        // let max1h = height/3;
-
-        let min1w = 3;
-        let max1w = width/3-10;       
-        let min1h = 10;
-        let max1h = height/9;
+        // let max1h = height/9;
         let j=0
-        let setConCount_linear = d3.scaleLinear().domain([0, maxSetCon]).range([min1w, max1w]);
+        let setConCount_linear = d3.scaleLinear().domain([0, maxSetCon]).range([min1h, max1h]);
         let currentMinColor = _this.setConCountColorMin;
         let currentMaxColor = _this.setConCountColorMax;
         let setConCountColor_linear = d3.scaleLinear().domain([0, maxSetCon]).range([0, 1]);
         let setConCountCompute_color = d3.interpolate(currentMinColor, currentMaxColor);
         let conRootDistribution = {};
-        let maxnum = 0
+        let maxnum = 0;
+
         Object.keys(conDistribution).forEach(conD=>{
             let conid = conD;
             let idSpilt = conid.split("-");
@@ -1424,10 +1491,11 @@ export default {
               // --------------------------
             if(idSpilt.length == 1){
               // conRootDistribution[rootId] = conDistribution[conD];
-              let cw = setConCount_linear(conDistribution[conD]);
+              let ch
+               = setConCount_linear(conDistribution[conD]);
               let color = setConCountCompute_color(setConCountColor_linear(conDistribution[conD]))
-              // let disRect = _this.drawRect(entSetG, cx+(max1w)*j, cy+max1h - ch,max1w-5, ch, 1, color, "1", "white","1", `proSetConAttr_${psid}_${conid}`, 'proSetConAttr');
-              let disRect = _this.drawRect(entSetG, cx+5, cy+(max1h)*j,cw, height/9-3, 1, color, "1", "white","1", `proSetConAttr_${psid}_${conid}`, 'proSetConAttr');
+              let disRect = _this.drawRect(entSetG, cx+(max1w)*j, cy+max1h - ch,max1w-5, ch, 1, color, "1", "white","1", `proSetConAttr_${psid}_${conid}`, 'proSetConAttr');
+              // let disRect = _this.drawRect(entSetG, cx+5, cy+(max1h)*j,cw, height/9-3, 1, color, "1", "white","1", `proSetConAttr_${psid}_${conid}`, 'proSetConAttr');
               disRect.on("click",function(d){
                 let selectProAtt = d3.select(this);
                 let Ids = selectProAtt.attr("id").split("_");
@@ -1462,14 +1530,14 @@ export default {
         // })
 
 
-        // let min2w = 10;
-        // let max2w = width/6;       
-        // let min2h = 10;
-        // let max2h = height/3;
         let min2w = 10;
-        let max2w = width/3;       
+        let max2w = width/6;       
         let min2h = 10;
-        let max2h = height/6;
+        let max2h = height/3;
+        // let min2w = 10;
+        // let max2w = width/3;       
+        // let min2h = 10;
+        // let max2h = height/6;
         j=0;
         let prolen = proSetData[i]['set'].length;
         let settype_linear = d3.scaleLinear().domain([0, prolen]).range([min2w, max2w]);
@@ -1481,8 +1549,8 @@ export default {
         Object.keys(typeDistribution).forEach(typeD=>{
           let ch = settype_linear(typeDistribution[typeD]);
           let color = typeCompute_color(typeColor_linear(typeDistribution[typeD]))
-          // let disRect = _this.drawRect(entSetG, cx+(max2w)*j, cy+max2h+max2h - ch,max2w-5, ch, 1, color, "1", "white","1", `proSettypeAttr-${psid}-${typeD}`, 'proSettypeAttr');
-          let disRect = _this.drawRect(entSetG, cx+(width/3)+3, cy+(max2h)*j,ch, max2h-3, 1, color, "1", "grey","0.5", `proSettypeAttr-${psid}-${typeD}`, 'proSettypeAttr');
+          let disRect = _this.drawRect(entSetG, cx+(max2w)*j, cy+max2h+max2h - ch,max2w-5, ch, 1, color, "1", "white","1", `proSettypeAttr-${psid}-${typeD}`, 'proSettypeAttr');
+          // let disRect = _this.drawRect(entSetG, cx+(width/3)+3, cy+(max2h)*j,ch, max2h-3, 1, color, "1", "grey","0.5", `proSettypeAttr-${psid}-${typeD}`, 'proSettypeAttr');
          disRect.on("click",function(d){
                 let selectProAtt = d3.select(this);
                 let Ids = selectProAtt.attr("id").split("-");
@@ -1873,7 +1941,7 @@ export default {
     this.$nextTick(() => {
       // _this.createRel('1234','4321',0);
       // _this.createRel('123','321',0);
-      _this.delRel('1234','4321',0);
+      // _this.delRel('1234','4321',0);
 
       // _this.getProblems();
       // _this.getConcept();

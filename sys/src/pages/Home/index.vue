@@ -534,7 +534,9 @@ export default {
     this.$bus.$emit("stuColorList", _this.stuColorList);
     this.$bus.$emit("groupData", _this.groupData);
     this.toolState = {
-      "addRel": false
+      "addRel": false,
+      "addRelMain": false,
+      "delRel":false,
     }
     this.getAllData();
     this.$bus.$on('Updata_Pro_Con', (val) => {
@@ -542,6 +544,12 @@ export default {
       _this.calStudent();
     });
 
+    this.$bus.$on('renew', (val) => {
+      if(val){
+        _this.getProblemConcept();
+          _this.calStudent();
+      }
+    });
     this.$bus.$on('SelectedStu', (val) => {
       _this.SelectStudentList = val;
       // _this.calStudent();
