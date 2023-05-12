@@ -60,7 +60,16 @@ router.get('/api/problem/allProblem', (req, res) => {
         } else {
             res.send(data);
         }
+    }).select({ 
+        "_id":0,
+        "score": 1,
+         "id": 1,
+        "title":1,
+        "content":1,
+        "type":1,
+        "problemSetId":1,
     });
+    ;
 });
 
 
@@ -73,6 +82,16 @@ router.get('/api/Submission/allLog', (req, res) => {
         } else {
             res.send(data);
         }
+    }).select({ 
+        "_id":0,
+        "score": 1,
+        "user":1,
+        "submitAt":1,
+         "id": 1,
+        "judgeResponseContents":1,
+        "content":1,
+        "type":1,
+        "problemSetId":1,
     });
 });
 // 获取概念接口

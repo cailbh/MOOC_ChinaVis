@@ -572,7 +572,7 @@ export default {
           let attrLen = stuAttrList.length;
           let colorList = _this.attrColorList;
           let starR = 0;//-Math.PI/2;
-          let stepH = 5;
+          let stepH = 7;
           let perh = r;
           for (let j = 0; j < attrLen; j++) {
             if(stuAttrList[j] == 'scoringRate'){
@@ -582,7 +582,7 @@ export default {
               
             }
             else{
-            let Angle_linear = d3.scaleLinear().domain([stuAttrMaxMinList[j][1], stuAttrMaxMinList[j][0]]).range([0,Math.PI*2]);
+            let Angle_linear = d3.scaleLinear().domain([0, stuAttrMaxMinList[j][0]]).range([0,Math.PI*2]);
             let h = perh+stepH;
             var dataset = { startAngle:starR, endAngle: starR+Angle_linear(groupData[i][stuAttrList[j]]) }; //创建一个弧生成器
             var datasetB = { startAngle:starR, endAngle: starR+Math.PI*2 }; //创建一个弧生成器
@@ -634,7 +634,7 @@ export default {
       let MaxMinX = _this.getMaxMin(data, 'x');
       let MaxMinY = _this.getMaxMin(data, 'y');
 
-      let stuAttrList = ['scoringRate', 'bestScore', 'totalAttempts','acceptedNum','time']
+      let stuAttrList = ['scoringRate', 'bestScore', 'totalAttempts','acceptedNum']//,'time']
       _this.stuAttrList = stuAttrList;
       let stuAttrMaxMinList = [];
 

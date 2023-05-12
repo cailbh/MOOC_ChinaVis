@@ -43,13 +43,13 @@ export default {
   data() {
     return {
       data: '',
-      graphHeight:0,
-      toolAddRel:false,
-      toolAddRelMain:false,
-      toolDelRel:false,
-      detailsEntPro:[],
-      groupData:[],
-      SelectStudentList:[],
+      graphHeight: 0,
+      toolAddRel: false,
+      toolAddRelMain: false,
+      toolDelRel: false,
+      detailsEntPro: [],
+      groupData: [],
+      SelectStudentList: [],
       problemsData: [],
       proSetOriData: [],
       submissionsData: [],
@@ -57,8 +57,8 @@ export default {
       studentsData: [],
       conceptsData: [],
       conceptTree: [],
-      proSetData:[],
-      interY:10,
+      proSetData: [],
+      interY: 10,
       problemConceptData: [],
       createdProblemConceptData: [],
       userProblemData: [],
@@ -70,27 +70,27 @@ export default {
       conMaxMinDC: [],
       conAttrList: [],
       conAttrMaxMinList: [],
-      Ent_problem:[],
-      Ent_concept:[],
-      entG:"",
-      entSetG:"",
-      entbySetG:"",
-      relG:"",
-      frontG:"",
+      Ent_problem: [],
+      Ent_concept: [],
+      entG: "",
+      entSetG: "",
+      entbySetG: "",
+      relG: "",
+      frontG: "",
       curProblemId: '',
       curConceptId: '',
-      curProblemSetId:'',
+      curProblemSetId: '',
       selectProblemId: '',
       selectConceptId: '',
-      proX:450,
-      proY:30,
-      setWidth:300,
-      setX:900,
-      setY:30,
-      treeX:50,
-      treeY:30,
-      proStepY:0,
-      conStepY:0,
+      proX: 450,
+      proY: 30,
+      setWidth: 300,
+      setX: 870,
+      setY: 30,
+      treeX: 50,
+      treeY: 30,
+      proStepY: 0,
+      conStepY: 0,
       rootSvg: null,
       groupsSvg: null,
       arcG: null,
@@ -115,34 +115,37 @@ export default {
       entProMinColor: "rgb(203, 230, 209)",
       entProMaxColor: "rgb(22, 144, 207)",
 
-      setMaxColor: "rgb(4, 38, 79)",
-      setMinColor: "rgb(112, 202, 235)",
+      setMaxColor: "rgb(180, 212, 217)",
+      setMinColor: "rgb(190, 253, 147)",
 
       entConMaxColor: "rgb(220, 4, 52)",
       entConMinColor: "rgb(231, 201, 203)",
-      
-      entConRectMaxColor:  "rgb(56, 191, 201)",
-      entConRectMinColor:"rgb(200, 200, 200)",
 
-      setConCountColorMax: "rgb(67, 186, 133)",
-      setConCountColorMin: "rgb(255, 255, 255)",
+      entConRectMaxColor: "rgb(56, 191, 201)",
+      entConRectMinColor: "rgb(200, 200, 200)",
+
+      setConCountColorMax: "rgb(36, 123, 178)",
+      setConCountColorMin: "rgb(146, 189, 217)",
+
+      setTypeCountColorMax: "rgb(251, 104, 20)",
+      setTypeCountColorMin: "rgb(253, 209, 161)",
       stepX: 80,
       stepY: 100,
       typeXMap: {
-        "TRUE_OR_FALSE":0,
-        "MULTIPLE_CHOICE":1,
-        "FILL_IN_THE_BLANK":2,
-        "PROGRAMMING":3,
-        "CODE_COMPLETION":4,
-        "MULTIPLE_CHOICE_MORE_THAN_ONE_ANSWER":5
+        "TRUE_OR_FALSE": 0,
+        "MULTIPLE_CHOICE": 1,
+        "FILL_IN_THE_BLANK": 2,
+        "PROGRAMMING": 3,
+        // "CODE_COMPLETION":4,
+        // "MULTIPLE_CHOICE_MORE_THAN_ONE_ANSWER":5
       },
       circleInterval: 55,
       width: 0,
       height: 0,
       curToolState: 'unEdit',
       margin: { top: 10, right: 20, bottom: 0, left: 20 },
-      attrColorList:[],
-      stuColorList:[],
+      attrColorList: [],
+      stuColorList: [],
       mcolor: [
         "rgb(255,60,60)",
         "rgb(155,20,100)",
@@ -183,24 +186,25 @@ export default {
   watch: {
     type(val) {
     },
-    toolAddRel(val){
+    toolAddRel(val) {
       console.log(val);
     },
-    toolsState:{
-      deep:true,
-      handler(val){
+    toolsState: {
+      deep: true,
+      handler(val) {
         console.log(val)
-      this.toolAddRel = val['addRel'];
-      this.toolAddRelMain = val['addRelMain'];
-      this.toolDelRel = val['delRel'];
-    }},
-    SelectStudentList:{
-      deep:true,
-      handler(val){
+        this.toolAddRel = val['addRel'];
+        this.toolAddRelMain = val['addRelMain'];
+        this.toolDelRel = val['delRel'];
+      }
+    },
+    SelectStudentList: {
+      deep: true,
+      handler(val) {
         this.updataSelectStudentListColor();
       }
-  },
-    graphGTransformY(){
+    },
+    graphGTransformY() {
       const _this = this;
       _this.updataPro_ProSetRel(_this.graphGTransformY);
       // this.updataPro_ProSelfRel(this.graphGTransformY);
@@ -213,9 +217,9 @@ export default {
       let pro_conRelData = tools.deepClone(_this.problemConceptData);
       let curproId = _this.curProblemId;
       let setEnt = [];//tools.deepClone() ;
-      if(_this.toolAddRel){
+      if (_this.toolAddRel) {
         let type = 0;
-        if(_this.toolAddRelMain){
+        if (_this.toolAddRelMain) {
           type = 1;
         }
         // createdProblemConceptData
@@ -224,39 +228,39 @@ export default {
         //   "conceptId":val,
         // })
         // _this.problemConceptData = pro_conRelData;
-        _this.createRel(curproId,val,type);
+        _this.createRel(curproId, val, type);
 
       }
-      else if(_this.toolDelRel){
-        _this.delRel(curproId,val);
+      else if (_this.toolDelRel) {
+        _this.delRel(curproId, val);
       }
-      else{
+      else {
         d3.selectAll(`.entPro`)
-        .attr("opacity","0.1");
+          .attr("opacity", "0.1");
         d3.selectAll(`.entCon`)
-        .attr("opacity","0.1");
+          .attr("opacity", "0.1");
         d3.select(`#entCon_${val}`)
-        .attr("opacity","1");
+          .attr("opacity", "1");
         d3.selectAll(`.proConRel`)
-          .attr("opacity","0.1");
+          .attr("opacity", "0.1");
         d3.selectAll(`.proSetConRel`)
-          .attr("opacity","0.1");
-        pro_conRelData.forEach(rel=>{
+          .attr("opacity", "0.1");
+        pro_conRelData.forEach(rel => {
           let proId = rel['problem'];
           let conId = rel['conceptId'];
-          let proData = Ent_problem.find(function(d){return d['id'] == proId;})
+          let proData = Ent_problem.find(function (d) { return d['id'] == proId; })
           let proSetId = proData['problemSetId'];
-          if(conId == val){
+          if (conId == val) {
             // d3.select(`#entCon_${conId}`)
             // .attr("opacity","1");
             setEnt.push(proData);
             d3.select(`#entPro_${proId}`)
-            .attr("opacity","1");
+              .attr("opacity", "1");
             d3.select(`#proSetConRel_${conId}_${proSetId}`)
-            .attr("opacity","1");
+              .attr("opacity", "1");
           }
         })
-      _this.detailsEntPro = setEnt;
+        _this.detailsEntPro = setEnt;
       }
     },
     curProblemId(val) {
@@ -265,58 +269,90 @@ export default {
       let Ent_concept = _this.Ent_concept;
       let Ent_problem = _this.Ent_problem;
       let pro_conRelData = _this.problemConceptData;
-      _this.$bus.$emit("selectEntData", [val,Ent_problem]);
+      _this.$bus.$emit("selectEntData", [val, Ent_problem]);
       // entCon
       d3.selectAll(`.entCon`)
-        .attr("opacity","0.1");
+        .attr("opacity", "0.1");
       d3.selectAll(`.proConRel`)
-        .attr("opacity","0.1");
-      pro_conRelData.forEach(rel=>{
+        .attr("opacity", "0.1");
+      d3.selectAll(`.proSetConRel`)
+        .attr("opacity", "0.1");
+      pro_conRelData.forEach(rel => {
         let proId = rel['problem'];
         let conId = rel['conceptId'];
-        if(proId == val){
+        let proData = Ent_problem.find(function (d) { return d['id'] == proId; })
+        let proSetId = proData['problemSetId'];
+        if (proId == val) {
           d3.select(`#entCon_${conId}`)
-          .attr("opacity","1");
+            .attr("opacity", "1");
           d3.select(`#proConRel_${conId}_${proId}`)
-          .attr("opacity","1");
+            .attr("opacity", "1");
+          d3.select(`#proSetConRel_${conId}_${proSetId}`)
+            .attr("opacity", "1");
         }
       })
     },
-    problemConceptData:{
-      deep:true,
-      handler(val){
-        if(this.toolAddRel){
+    problemConceptData: {
+      deep: true,
+      handler(val) {
+        if (this.toolAddRel) {
           // this.updataPro_ConRel();
           this.updataProSet_ConRel();
           this.$bus.$emit("Updata_Pro_Con", val);
         }
       }
     },
-    curProblemSetId(val){
+    curProblemSetId(val) {
       const _this = this;
-      this.updataEntProblemDetailBySet("none",0);
-      // this.updataPro_ProSelfRel(this.graphGTransformY);
+      let Ent_concept = _this.Ent_concept;
+      let Ent_problem = _this.Ent_problem;
+      let pro_conRelData = _this.problemConceptData;
+      this.updataEntProblemDetailBySet("none", 0);
+      // this.updataPro_ProSelfRel(this.graphGTransformY);// entCon
+      d3.selectAll(`.entCon`)
+        .attr("opacity", "0.1");
+      d3.selectAll(`.proConRel`)
+        .attr("opacity", "0.1");
+      d3.selectAll(`.proSetConRel`)
+        .attr("opacity", "0.1");
+      pro_conRelData.forEach(rel => {
+        let proId = rel['problem'];
+        let conId = rel['conceptId'];
+        let proData = Ent_problem.find(function (d) { return d['id'] == proId; })
+        let proSetId = proData['problemSetId'];
+        if (proSetId == val) {
+          d3.select(`#entCon_${conId}`)
+            .attr("opacity", "1");
+          d3.select(`#proConRel_${conId}_${proId}`)
+            .attr("opacity", "1");
+          d3.select(`#proSetConRel_${conId}_${proSetId}`)
+            .attr("opacity", "1");
+        }
+      })
     },
-    detailsEntPro(val){
+    detailsEntPro(val) {
+
+      this.$bus.$emit("selectedPro", val);
+
       this.updataEntProblemDetail();
       this.updataParallelCoordinatesplotByPro();
       // this.updataPro_ProSelfRel(this.graphGTransformY);
     },
-    Ent_problem:{
-      deep:true,
-      handler(){
+    Ent_problem: {
+      deep: true,
+      handler() {
         // this.updataEntProblem();
         this.updataEntProblemSetBack();
-          // this.updataPro_ConRel();
-          this.updataProSet_ConRel();
+        // this.updataPro_ConRel();
+        this.updataProSet_ConRel();
       }
     },
-    Ent_concept:{
-      deep:true,
-      handler(){
+    Ent_concept: {
+      deep: true,
+      handler() {
         this.updataEntConcept();
-          // this.updataPro_ConRel();
-          this.updataProSet_ConRel();
+        // this.updataPro_ConRel();
+        this.updataProSet_ConRel();
       }
     }
     // groupsSvg: {
@@ -327,32 +363,36 @@ export default {
     // }
   },
   methods: {
-    
-    createRel(problemId,conceptId,type) {
+
+    createRel(problemId, conceptId, type) {
       const _this = this;
       this.$http
-        .post("/api/conceptProblem/createRel", { params: { 
-          problem: problemId,
-          conceptId:conceptId,
-          type:type
-         } }, {})
+        .post("/api/conceptProblem/createRel", {
+          params: {
+            problem: problemId,
+            conceptId: conceptId,
+            type: type
+          }
+        }, {})
         .then((response) => {
           _this.$message({
-          message: 'add success',
-          type: 'success',
-          duration: 1000
-        });
+            message: 'add success',
+            type: 'success',
+            duration: 1000
+          });
         });
     },
-    delRel(problemId,conceptId) {
+    delRel(problemId, conceptId) {
       const _this = this;
       this.$http
-        .post("/api/conceptProblem/delRel", { params: { 
-          problem: problemId,
-          conceptId:conceptId,
-         } }, {})
+        .post("/api/conceptProblem/delRel", {
+          params: {
+            problem: problemId,
+            conceptId: conceptId,
+          }
+        }, {})
         .then((response) => {
-            _this.$message({
+          _this.$message({
             message: 'del success',
             type: 'warning',
             duration: 1000
@@ -371,7 +411,7 @@ export default {
       let graphGTransformY = _this.graphGTransformY;
       let graphGTransformK = _this.graphGTransformK;
       let groups = svg.append("g").attr("id", "groups").attr("width", width).attr("height", height)
-        // .attr("transform", "translate(" + graphGTransformX + ',' + graphGTransformY + ") scale(" + graphGTransformK + ")");
+      // .attr("transform", "translate(" + graphGTransformX + ',' + graphGTransformY + ") scale(" + graphGTransformK + ")");
       this.groupsSvg = groups;
 
       let backG = groups.append("g").attr("id", "backG").attr("width", width).attr("height", height);
@@ -653,7 +693,7 @@ export default {
       let graphGTransformY = _this.graphGTransformY;
       let graphGTransformK = _this.graphGTransformK;
       let groups = svg.append("g").attr("id", "groups").attr("width", width).attr("height", height)
-        // .attr("transform", "translate(" + graphGTransformX + ',' + graphGTransformY + ") scale(" + graphGTransformK + ")");
+      // .attr("transform", "translate(" + graphGTransformX + ',' + graphGTransformY + ") scale(" + graphGTransformK + ")");
       this.groupsSvg = groups;
 
       let backG = groups.append("g").attr("id", "backG").attr("width", width).attr("height", height);
@@ -699,18 +739,18 @@ export default {
           entbySetG.attr('transform', 'translate(' + (graphGTransformX) + ',' + (graphGTransformY) + ') scale(' + (graphGTransformK) + ')')
         });
 
-        svg.call(graphZoom);
+      svg.call(graphZoom);
       const dragCon = () => {
 
         function dragstarted(event, d) {
-          console.log("s",event,d)
+          console.log("s", event, d)
         }
         function dragged(event, d) {
-          console.log("s",event,d)
+          console.log("s", event, d)
         }
 
         function dragended(event, d) {
-          console.log("e",event,d)
+          console.log("e", event, d)
         }
         return d3.drag()
           .on("start", dragstarted)
@@ -719,7 +759,7 @@ export default {
       }
       let problemConceptData = _this.problemConceptData;
       let conceptTree = _this.conceptTree;
-      
+
       let problemData = tools.deepClone(_this.problemsData);
       // let treeData = _this.getTreeData(conceptTree);
       // console.log(treeData)
@@ -734,18 +774,20 @@ export default {
       let rConSize_linear = d3.scaleLinear().domain([conMaxMinDR[1], conMaxMinDR[0]]).range([3, 6]);
       let r1ConSize_linear = d3.scaleLinear().domain([conMaxMinDR[1], conMaxMinDR[0]]).range([6, 9]);
       let r2ConSize_linear = d3.scaleLinear().domain([conMaxMinDR[1], conMaxMinDR[0]]).range([9, 12]);
-      let linearList = [rConSize_linear,r1ConSize_linear,r2ConSize_linear];
-    
+      let linearList = [rConSize_linear, r1ConSize_linear, r2ConSize_linear];
+
       let currentConRectMaxColor = _this.entConRectMaxColor;
       let currentConRectMinColor = _this.entConRectMinColor;
-      let rectConColor_linear = d3.scaleLinear().domain([conAttrMaxMinList[4][1], conAttrMaxMinList[4][0]]).range([0, 1]);
-      let rectConWidth_linear = d3.scaleLinear().domain([conAttrMaxMinList[2][1], conAttrMaxMinList[2][0]]).range([30, 100]);
+
+      let rectConColor_linear = d3.scaleLinear().domain([conAttrMaxMinList[2][1], conAttrMaxMinList[2][0]]).range([0, 1]);
+      let rectConWidth_linear = d3.scaleLinear().domain([conAttrMaxMinList[1][1], conAttrMaxMinList[1][0]]).range([30, 100]);
+
       let rectConCompute_color = d3.interpolate(currentConRectMinColor, currentConRectMaxColor);
 
       // concept---------
       let treeX = _this.treeX;
       let treeY = _this.treeY;
-      let stepY = (height-90) / (conceptTree.length);
+      let stepY = (height - 90) / (conceptTree.length);
 
       let tempConDistribution = {};
 
@@ -758,9 +800,9 @@ export default {
         let tempCon = tools.deepClone(conceptTree[i]);
         let cy = treeY + i * stepY;
         let cid = tempCon['id'];
-        
+
         tempConDistribution[cid] = 0;
-        
+
         tempCon['lay'] = cid.split("-").length;
         let cx = treeX * tempCon['lay'];
         tempCon['cx'] = cx;
@@ -768,11 +810,11 @@ export default {
         tempCon['fill'] = importanceConCompute_color(importanceConColor_linear(tempCon['scoringRate']));
         tempCon['rectFill'] = rectConCompute_color(rectConColor_linear(tempCon['acceptedRate']));
         tempCon['rectW'] = rectConWidth_linear(tempCon['totalAttempts']);
-        tempCon['r'] =  linearList[parseInt(3-tempCon['lay'])](tempCon['proCount']);
+        tempCon['r'] = linearList[parseInt(3 - tempCon['lay'])](tempCon['proCount']);
         tempCon['opacity'] = 1;
         Ent_concept.push(tempCon);
       }
-        _this.Ent_concept = Ent_concept;
+      _this.Ent_concept = Ent_concept;
       //------------
 
       let proMaxMinDR = _this.proMaxMinDR;
@@ -787,84 +829,97 @@ export default {
       let setMaxColor = _this.setMaxColor;
       let setMinColor = _this.setMinColor;
       let setColor_linear = d3.scaleLinear().domain([0, 1]).range([0, 1]);
-      let setCompute_color = d3.interpolate(setMinColor,setMaxColor);
-      
+      let setCompute_color = d3.interpolate(setMinColor, setMaxColor);
+
       let typeXMap = _this.typeXMap;
       //problem -----------
       let proX = _this.proX;
       let proY = _this.proY;
       let Ent_problem = [];
-      let proStepY = (height - _this.interY*12)/(problemData.length+12); 
+      let proStepY = (height - _this.interY * 12) / (problemData.length + 12);
       _this.proStepY = proStepY;
       _this.graphHeight = height;
       for (let i = 0; i < problemData.length; i++) {
         let tempPro = tools.deepClone(problemData[i]);
         let pid = tempPro['id'];
         let pSetId = tempPro['problemSetId'];
-        if(proSetData.find(function(ps){return ps['id'] == pSetId;})==undefined){
+        if (proSetData.find(function (ps) { return ps['id'] == pSetId; }) == undefined) {
           proSetData.push({
-            "id":pSetId,
-            "order":setOd,
-            "set":[tempPro]
+            "id": pSetId,
+            "order": setOd,
+            "set": [tempPro]
           })
           setOd++;
         }
-        else{
-          proSetData.find(function(ps){return ps['id'] == pSetId;})['set'].push(tempPro);
+        else {
+          proSetData.find(function (ps) { return ps['id'] == pSetId; })['set'].push(tempPro);
         }
-        let cy = proY + i * proStepY + interY*setOd;
+        let cy = proY + i * proStepY + interY * setOd;
         // let lay = cid.split("-").length;
         let cx = proX;
         let r = proStepY;
         let fill = "grey";
         let opacity = 0.8;
+        let scoreValueList = _this.getMaxMinValue(tempPro['stuData'], "scoringRate");
+        let acceptedValueList = _this.getMaxMinValue(tempPro['stuData'], "acceptedRate");
+        let totalAttemptsValueList = _this.getMaxMinValue(tempPro['stuData'], "totalAttempts");
         // let Cname  = tempPro['name'];
+        tempPro['scoreValueList'] = scoreValueList;
+        tempPro['acceptedValueList'] = acceptedValueList;
+        tempPro['totalAttemptsValueList'] = totalAttemptsValueList;
         tempPro['cx'] = cx//+typeXMap[tempPro['type']]*100;
         tempPro['cy'] = cy;
         tempPro['order'] = i;
-        tempPro['width'] =rSize_linear(tempPro["conCount"]);
+        tempPro['width'] = rSize_linear(tempPro["conCount"]);
         tempPro['fill'] = importanceCompute_color(importanceColor_linear(tempPro['scoringRate']));
         tempPro['height'] = proStepY;
         Ent_problem.push(tempPro);
         // let circle = _this.drawCircle(entG, cx, cy, r, fill, opacity, );t text = _this.drawTxt(entG, cx+20, cy+3.5, Cname, "black", 12, `entConText_${cid}`);
       }
-      let setStepY = (height-90)/proSetData.length;
+      let setStepY = (height - 90) / proSetData.length;
       let colorList = _this.mcolor;
       let tempTypeDistribution = {};
-      Object.keys(typeXMap).forEach(t=>{
+      Object.keys(typeXMap).forEach(t => {
         tempTypeDistribution[t] = 0;
       })
-      for(let i=0;i<proSetData.length;i++){
+      for (let i = 0; i < proSetData.length; i++) {
         let psid = proSetData[i]['id'];
         let set = proSetData[i]['set'];
-        proSetData[i]['cx'] = _this.proX-3;
+        proSetData[i]['cx'] = _this.proX - 3;
         proSetData[i]['width'] = _this.setWidth;
         let conDistribution = tools.deepClone(tempConDistribution);
         let typeDistribution = tools.deepClone(tempTypeDistribution);
         let scoringRate = 0;
-        set.forEach(sPro=>{
+        set.forEach(sPro => {
           let conList = sPro['conList'];
           scoringRate += sPro['scoringRate'];
-          conList.forEach(c=>{
+          conList.forEach(c => {
             conDistribution[c]++;
-            if(conDistribution[c]>_this.maxSetCon)
+            if (conDistribution[c] > _this.maxSetCon)
               _this.maxSetCon = conDistribution[c];
           });
           let type = sPro['type'];
+          if (type == 'MULTIPLE_CHOICE_MORE_THAN_ONE_ANSWER')
+            type = "MULTIPLE_CHOICE";
+          if (type == 'CODE_COMPLETION')
+            type = "PROGRAMMING";
           typeDistribution[type]++;
+          // let groupData = sPro['groupVal'];
+          // console.log(groupData)
         })
-        proSetData[i]['scoringRate'] = scoringRate/set.length;
+        proSetData[i]['scoringRate'] = scoringRate / set.length;
         proSetData[i]['conDistribution'] = conDistribution;
         proSetData[i]['typeDistribution'] = typeDistribution;
         // proSetData[i]['fill'] = colorList[proSetData[i]['order']];
+        // console.log
         proSetData[i]['fill'] = setCompute_color(setColor_linear(proSetData[i]['scoringRate']));
         // -----------------------------------
         // proSetData[i]['cy'] = Ent_problem.find(function(ep){return ep['id'] == set[0];})['cy'];
         // let edP = Ent_problem.find(function(ep){return ep['id'] == set[set.length-1];})
         // proSetData[i]['height'] = edP['cy'] - proSetData[i]['cy']+edP['height'];
         // -----------------------------------
-        proSetData[i]['cy'] = 30+setStepY*i;
-        proSetData[i]['height'] = setStepY-10;
+        proSetData[i]['cy'] = 30 + setStepY * i;
+        proSetData[i]['height'] = setStepY - 10;
         // -------------------------------------
       }
       // let conDistributiondomainList = []
@@ -873,76 +928,104 @@ export default {
       // })
       _this.Ent_problem = Ent_problem;
       // ---------------------
-      _this.proSetData =proSetData;
-          // this.updataPro_ConRel(); 
-          this.updataProSet_ConRel();
-
+      _this.proSetData = proSetData;
+      // this.updataPro_ConRel(); 
+      _this.updataEntProblemSetBack();
+      _this.updataProSet_ConRel();
+      _this.updataEntProblemDetail();
       _this.updataParallelCoordinatesplotBySet();
       _this.drawFigureAnnotation();
-      
+
     },
-    drawFigureAnnotation(){
+    drawFigureAnnotation() {
       const _this = this;
       let frontG = _this.frontG;
 
       let currentConMaxColor = _this.entConMaxColor;
       let currentConMinColor = _this.entConMinColor;
-      let len =6;
+      let len = 6;
 
       let Color_linear = d3.scaleLinear().domain([0, len]).range([0, 1]);
+      let Color_linear2 = d3.scaleLinear().domain([0, len*3]).range([0, 1]);
       let Rsize_linear = d3.scaleLinear().domain([0, len]).range([1, 6]);
       let Compute_color = d3.interpolate(currentConMinColor, currentConMaxColor);
+      let Compute_color1 = d3.interpolate("white",_this.setConCountColorMax);
+      let Compute_color2 = d3.interpolate("white",_this.setTypeCountColorMax);
+      let Compute_color3 = d3.interpolate(_this.setMinColor,_this.setMaxColor);
 
       let currentConRectMaxColor = _this.entConRectMaxColor;
       let currentConRectMinColor = _this.entConRectMinColor;
-      let rectConColor_linear = d3.scaleLinear().domain([0,len]).range([0, 1]);
+      let rectConColor_linear = d3.scaleLinear().domain([0, len]).range([0, 1]);
       let rectConCompute_color = d3.interpolate("white", currentConRectMaxColor);
-      // _this.drawCircle(frontG, 20, 1000, 10,currentConMaxColor , 1,currentConMaxColor,"1", 'FigAtt', `FigAtt_conColor`);
+      _this.drawCircle(frontG, 20, 1000, 10,currentConMaxColor , 1,currentConMaxColor,"1", 'FigAtt', `FigAtt_conColor`);
 
       let textcon = _this.drawTxt(frontG, 10, 1065, "Concepts Value:", "black", 13, `FigAtt_con`);
       let textset = _this.drawTxt(frontG, 350, 1065, "Set Value:", "black", 13, `FigAtt_set`);
-      let textpro = _this.drawTxt(frontG, 800, 1065, "Problems Value:", "black", 13, `FigAtt_pro`);
+      let textsetSR = _this.drawTxt(frontG, 540, 1085, "ScoringRate:", "black", 10, `FigAtt_conColor`);
+
+      let textsetR = _this.drawTxt(frontG, 480, 15, "Concepts", "black", 13, `FigAtt_conColor`,"middle");
+      let textsetcon = _this.drawTxt(frontG, 560, 15, "Type", "black", 13, `FigAtt_conColor`,"middle");
+      let textsettype = _this.drawTxt(frontG, 640, 15, "ScoringRate", "black", 13, `FigAtt_conColor`,"middle");
+      let textsetRscor = _this.drawTxt(frontG, 720, 15, "Attempts", "black", 13, `FigAtt_conColor`,"middle");
+
+      // let textpro = _this.drawTxt(frontG, 800, 1065, "Problems Value:", "black", 13, `FigAtt_pro`);
       let text1 = _this.drawTxt(frontG, 10, 1085, "ScoringRate:", "black", 10, `FigAtt_conColor`);
       let text2 = _this.drawTxt(frontG, 10, 1105, "Connection Nums:", "black", 10, `FigAtt_Rsize`);
+
       // let text3 = _this.drawTxt(frontG, 100, 1070, "Low", "black", 10, `FigAtt_Low`);
       // let text4 = _this.drawTxt(frontG, 100+10*len, 1070, "High", "black", 10, `FigAtt_High`);
 
       let text5 = _this.drawTxt(frontG, 180, 1085, "Attempts:", "black", 10, `FigAtt_conColor`);
       let text6 = _this.drawTxt(frontG, 180, 1105, "AcceptedRate:", "black", 10, `FigAtt_Rsize`);
-      // let text7 = _this.drawTxt(frontG, 100, 1070, "Low", "black", 10, `FigAtt_Low`);
-      // let text8 = _this.drawTxt(frontG, 100+10*len, 1070, "High", "black", 10, `FigAtt_High`);
+      let textsetnum = _this.drawTxt(frontG, 350, 1085, "Connection Nums:", "black", 10, `FigAtt_proConDis`);
+      let textsetTypenum = _this.drawTxt(frontG, 350, 1105, "Type Nums:", "black", 10, `FigAtt_proConDis`);
+
+      let text7 = _this.drawTxt(frontG, 602, 1095, "Low", "black", 10, `FigAtt_Low`);
+      let text8 = _this.drawTxt(frontG, 695, 1095, "High", "black", 10, `FigAtt_High`);
       let prex = 0;
       let prerx = 0;
-      for(let i=0;i<len;i++){
+      for (let i = 0; i < len*3; i++) {
+        let color3 = Compute_color3(Color_linear2(i));
+        
+        _this.drawRect(frontG, 620 + 4 * i, 1077, 4, 10, 0, color3, "1", "none", "1", `FigAtt_setColor${i}`, 'FigAtt');
+      }
+      for (let i = 0; i < len; i++) {
         let color = Compute_color(Color_linear(i));
+        let color1 = Compute_color1(Color_linear(i));
+        let color2 = Compute_color2(Color_linear(i));
+        // let color3 = Compute_color3(Color_linear(i));
         let rcolor = rectConCompute_color(rectConColor_linear(i));
+
+        _this.drawCircle(frontG, 110 + 10 * i, 1082, 3, color, 1, "red", "1", 'FigAtt', `FigAtt_conColor${i}`);
+
+        _this.drawCircle(frontG, 110 + prex, 1102, Rsize_linear(i), Compute_color(Color_linear(7)), 1, "red", "1", 'FigAtt', `FigAtt_conRsize${i}`);
+
+        prex += Rsize_linear(i) * 2 + 4;
+
+        _this.drawRect(frontG, 250 + 12 * i, 1077, 10, 10, 0, rcolor, "1", "grey", "1", `FigAtt_conRectColor${i}`, 'FigAtt');
+
+        _this.drawRect(frontG, 250 + prerx, 1097, i * 4, 10, 0, rectConCompute_color(rectConColor_linear(6)), "1", "grey", "1", `FigAtt_conRectWidth${i}`, 'FigAtt');
         
-        _this.drawCircle(frontG, 110+10*i, 1082, 3,color , 1,"red","1", 'FigAtt', `FigAtt_conColor${i}`);
+        _this.drawRect(frontG, 450 + prerx, 1077, i * 4, 10, 0, color1, "1", "grey", "1", `FigAtt_setconRectWidth${i}`, 'FigAtt');
 
-        _this.drawCircle(frontG, 110+prex, 1102, Rsize_linear(i),Compute_color(Color_linear(7)) , 1,"red","1", 'FigAtt', `FigAtt_conRsize${i}`);
-        
-        prex+=Rsize_linear(i)*2+4;
+        _this.drawRect(frontG, 450 + prerx, 1097, i * 4, 10, 0, color2, "1", "grey", "1", `FigAtt_settypeRectWidth${i}`, 'FigAtt');
 
-        _this.drawRect(frontG, 250+12*i, 1080, 10, 10, 0, rcolor, "1", "grey","1", `FigAtt_conRectColor${i}`, 'FigAtt');
-
-        _this.drawRect(frontG, 250+prerx, 1100, i*4, 10, 0, rectConCompute_color(rectConColor_linear(6)), "1", "grey","1", `FigAtt_conRectWidth${i}`, 'FigAtt');
-
-        prerx+= i*4+2;
-        }
+        prerx += i * 4 + 2;
+      }
     },
-    updataSelectStudentListColor(){
+    updataSelectStudentListColor() {
       const _this = this;
       let SelectStudentList = _this.SelectStudentList;
       let colorList = _this.stuColorList;
-      for(let i=0;i<SelectStudentList.length;i++){
-        for(let j=0;j<SelectStudentList[i].length;j++){
+      for (let i = 0; i < SelectStudentList.length; i++) {
+        for (let j = 0; j < SelectStudentList[i].length; j++) {
           let stuId = SelectStudentList[i][j];
-          d3.select(`#stuSetScoreLine_${stuId}`).attr("stroke",colorList[i]);
-          d3.select(`#stuScoreLine_${stuId}`).attr("stroke",colorList[i]);
+          d3.select(`#stuSetScoreLine_${stuId}`).attr("stroke", colorList[i]);
+          d3.select(`#stuScoreLine_${stuId}`).attr("stroke", colorList[i]);
         }
       }
     },
-    updataParallelCoordinatesplotBySet(){
+    updataParallelCoordinatesplotBySet() {
       const _this = this;
       let entG = _this.entG;
       let relG = _this.relG;
@@ -958,10 +1041,13 @@ export default {
 
       //轴
       let paraX = 1100;
-      let stepY = (_this.graphHeight-90)/(proSetData.length);
-      for(let i = 0;i<proSetData.length;i++){
+      let stepY = (_this.graphHeight - 90) / (proSetData.length);
+      let avpath = d3.path();
+      let prex = 0;
+      let prey = 0;
+      for (let i = 0; i < proSetData.length; i++) {
         let cx = paraX;
-        let cy = proSetData[i]['cy']+proSetData[i]['height']/2//;stepY*(i+1)
+        let cy = proSetData[i]['cy'] + proSetData[i]['height'] / 2//;stepY*(i+1)
         let width = 200;
         let height = 3;
         let psId = proSetData[i]['id'];
@@ -970,34 +1056,72 @@ export default {
         proSetData[i]['axisY'] = cy;
         proSetData[i]['axisW'] = width;
         proSetData[i]['axisH'] = height;
-        let axis = _this.drawRect(entG, cx, cy, width, height, 0, fill, "0", "none","0.5", `proSetAxis_${psId}`, 'proSetAxis');
+        let axis = _this.drawRect(entG, cx, cy, width, height, 0, fill, "0", "none", "1", `proSetAxis_${psId}`, 'proSetAxis');
+        let av = 0;
+        let num = 0;
+        let totalScore = 0
+        for (let j = 0; j < studentsData.length; j++) {
+          let proSetScore = studentsData[i]['proSetScore'];
+          let psData = proSetScore.find(function (psd) { return psd['id'] == psId; });
+          av += psData['score'];
+          totalScore = psData['totalScore'];
+          num += 1;
+        }
+        av /= num;
+        let val_linear = d3.scaleLinear().domain([0, totalScore]).range([cx, cx + width]);
+        let pointy = cy;
+        let pointx = val_linear(av);
+        if (i == 0) {
+          avpath.moveTo(pointx, pointy);
+          prex = pointx;
+          prey = pointy;
+        }
+        else {
+          let c1x = prex;
+          let c1y = (pointy + prey) / 2;
+          let c2x = pointx;
+          let c2y = c1y;
+          avpath.bezierCurveTo(c1x, c1y, c2x, c2y, pointx, pointy);
+          prey = pointy
+          prex = pointx
+        }
       }
-
-      for(let i =0 ;i<studentsData.length;i++){
+      _this.drawLine(relG, avpath, "grey", 3, '0', "1", `stuSetScoreLine_av`, 'stuSetScoreLine');
+      prex = 0;
+      prey = 0;
+      for (let i = 0; i < studentsData.length; i++) {
         let path = d3.path();
         let proSetScore = studentsData[i]['proSetScore'];
         let stuId = studentsData[i]['id'];
-        for(let s=0;s<proSetScore.length;s++){
+        for (let s = 0; s < proSetScore.length; s++) {
           let psId = proSetScore[s]['id'];
-          let psData = proSetData.find(function(psd){return psd['id'] == psId;});
+          let psData = proSetData.find(function (psd) { return psd['id'] == psId; });
           let cx = psData['axisX'];
           let w = psData['axisW'];
-          let val_linear = d3.scaleLinear().domain([0,proSetScore[s]['totalScore']]).range([cx, cx+w]);
+          let val_linear = d3.scaleLinear().domain([0, proSetScore[s]['totalScore']]).range([cx, cx + w]);
           let pointy = psData['axisY'];
-          let pointx = val_linear(proSetScore[s]['score']); 
-          if(s==0){
-            path.moveTo(pointx,pointy);
+          let pointx = val_linear(proSetScore[s]['score']);
+          if (s == 0) {
+            path.moveTo(pointx, pointy);
+            prex = pointx;
+            prey = pointy;
           }
-          else{
-            path.lineTo(pointx,pointy);
+          else {
+            let c1x = prex;
+            let c1y = (pointy + prey) / 2;
+            let c2x = pointx;
+            let c2y = c1y;
+            path.bezierCurveTo(c1x, c1y, c2x, c2y, pointx, pointy);
+            prey = pointy
+            prex = pointx
           }
         }
-          let groupD = groupData.find(function(d){return d['id'] == stuId;});
-          let fill = "grey";
-        _this.drawLine(relG, path, fill, 2, '0',"0.3" ,`stuSetScoreLine_${stuId}`, 'stuSetScoreLine');
+        let groupD = groupData.find(function (d) { return d['id'] == stuId; });
+        let fill = "grey";
+        _this.drawLine(relG, path, fill, 1, '0', "0.3", `stuSetScoreLine_${stuId}`, 'stuSetScoreLine');
       }
     },
-    updataParallelCoordinatesplotByPro(){
+    updataParallelCoordinatesplotByPro() {
       d3.selectAll(`.proSetAxis`).remove();
       d3.selectAll(`.proAxis`).remove();
       d3.selectAll(`.stuSetScoreLine`).remove();
@@ -1007,18 +1131,21 @@ export default {
       let studentsData = tools.deepClone(_this.studentsData);
       let proSetData = tools.deepClone(_this.proSetData);
       let proSetOriData = tools.deepClone(_this.proSetOriData);
-      let setEnt = tools.deepClone(_this.detailsEntPro) ;
+      let setEnt = tools.deepClone(_this.detailsEntPro);
       let colorList = _this.mcolor;
       let groupData = tools.deepClone(_this.groupData);
       //轴
       let paraX = 1100;
-      let stepY = _this.graphHeight/(setEnt.length);
-      for(let i = 0;i<setEnt.length;i++){
+      let stepY = _this.graphHeight / (setEnt.length);
+      let avpath = d3.path();
+      let prex = 0;
+      let prey = 0;
+      for (let i = 0; i < setEnt.length; i++) {
         let cx = paraX;
-        let cy = 10+
-        stepY*i;//setEnt[i]['cy']+setEnt[i]['height']/2//;stepY*(i+1)
+        let cy = 10 +
+          stepY * i;//setEnt[i]['cy']+setEnt[i]['height']/2//;stepY*(i+1)
         let width = 200;
-        let height = 3;
+        let height = 2;
         let psId = setEnt[i]['id'];
         let fill = setEnt[i]['fill'];
         setEnt[i]['axisX'] = cx;
@@ -1026,16 +1153,53 @@ export default {
         setEnt[i]['axisY'] = cy;
         setEnt[i]['axisW'] = width;
         setEnt[i]['axisH'] = height;
-        let axis = _this.drawRect(entG, cx, cy, width, height, 0, fill, "0", "none","1", `proAxis_${psId}`, 'proAxis');
+        let axis = _this.drawRect(entG, cx, cy, width, height, 0, fill, "0", "none", "1", `proAxis_${psId}`, 'proAxis');
+        let av = 0;
+        let num = 0;
+        let maxv = 0
+        for (let j = 0; j < studentsData.length; j++) {
+          let proList = studentsData[i]['pro'];
+          let psData = proList.find(function (psd) { return psd['id'] == psId; });
+          if (psData['totalScore'] != undefined) {
+            // console.log(psData)
+            av += psData['totalScore'] / psData['totalAttempts'];
+          }
+          // av+=psData['totalScore']/psData['totalAttempts'];
+          // else
+          num += 1;
+        }
+        av /= num;
+        // console.log(av)
+        let val_linear = d3.scaleLinear().domain([0, 1]).range([cx, cx + width]);
+        let pointy = cy;
+        let pointx = val_linear(av);
+        if (i == 0) {
+          avpath.moveTo(pointx, pointy);
+          prex = pointx;
+          prey = pointy;
+        }
+        else {
+          let c1x = prex;
+          let c1y = (pointy + prey) / 2;
+          let c2x = pointx;
+          let c2y = c1y;
+          avpath.bezierCurveTo(c1x, c1y, c2x, c2y, pointx, pointy);
+          prey = pointy
+          prex = pointx
+        }
+
       }
-      for(let i =0 ;i<studentsData.length;i++){
+      _this.drawLine(relG, avpath, "grey", 3, '0', "1", `stuScoreLine_av`, 'stuScoreLine');
+      prex = 0;
+      prey = 0;
+      for (let i = 0; i < studentsData.length; i++) {
         let path = d3.path();
         let proList = studentsData[i]['pro'];
         let stuId = studentsData[i]['id'];
-        let s= 0;
-        setEnt.forEach(se=>{
+        let s = 0;
+        setEnt.forEach(se => {
           let pId = se['id'];
-          let proaxisD = proList.find(function(se){return se['id'] == pId});
+          let proaxisD = proList.find(function (se) { return se['id'] == pId });
           let cx = se['axisX'];
           let w = se['axisW'];
           let pointy = se['axisY'];
@@ -1043,21 +1207,33 @@ export default {
           // let val_linear = d3.scaleLinear().domain([0,se['score']]).range([cx, cx+w]);
           // let pointx = val_linear(proaxisD['best']['score']); 
           // --------------------------------------
-          let val_linear = d3.scaleLinear().domain([0,1]).range([cx, cx+w]);
-          let pointx = val_linear(proaxisD['totalScore']/proaxisD['totalAttempts']); 
+          let val_linear = d3.scaleLinear().domain([0, 1]).range([cx, cx + w]);
+          let pointx = val_linear(proaxisD['totalScore'] / proaxisD['totalAttempts']);
+          if (proaxisD['totalScore'] == undefined)
+            pointx = val_linear(0)
           // -------------------------------------------
-          if(s==0){
-            path.moveTo(pointx,pointy);
-            s+=1;
+          if (s == 0) {
+            path.moveTo(pointx, pointy);
+            prex = pointx;
+            prey = pointy;
+            s += 1;
           }
-          else{
-            path.lineTo(pointx,pointy);
+          else {
+
+            let c1x = prex;
+            let c1y = (pointy + prey) / 2;
+            let c2x = pointx;
+            let c2y = c1y;
+            path.bezierCurveTo(c1x, c1y, c2x, c2y, pointx, pointy);
+            prey = pointy;
+            prex = pointx;
+            // path.lineTo();
           }
         })
-        
-        let groupD = groupData.find(function(d){return d['id'] == stuId;});
-          let fill = colorList[groupD['kmeansC']*3]
-          let line = _this.drawLine(entG, path, fill, 2, '0','0.3' ,`stuScoreLine_${stuId}`, 'stuScoreLine');
+
+        let groupD = groupData.find(function (d) { return d['id'] == stuId; });
+        let fill = 'grey'//colorList[groupD['kmeansC']*3];
+        let line = _this.drawLine(entG, path, fill, 1, '0', '0.3', `stuScoreLine_${stuId}`, 'stuScoreLine');
         // let proSetScore = studentsData[i]['proSetScore'];
         // let stuId = studentsData[i]['id'];
         // for(let s=0;s<proSetScore.length;s++){
@@ -1078,7 +1254,7 @@ export default {
         // _this.drawLine(relG, path, "rgb(200,200,200)", 2, '0', `stuSetScoreLine_${stuId}`, 'stuSetScoreLine');
       }
     },
-    updataPro_ConRel(){
+    updataPro_ConRel() {
       const _this = this;
       let entG = _this.entG;
       let relG = _this.relG;
@@ -1086,24 +1262,24 @@ export default {
       let Ent_concept = tools.deepClone(_this.Ent_concept);
       let Ent_problem = tools.deepClone(_this.Ent_problem);
       let pro_conRelData = tools.deepClone(_this.problemConceptData);
-      for(let i=0;i<pro_conRelData.length;i++){
+      for (let i = 0; i < pro_conRelData.length; i++) {
         let curRel = pro_conRelData[i];
         let conId = curRel['conceptId'];
         let proId = curRel['problem'];
-        let conData = Ent_concept.find(function(d){return d['id'] == conId;});
-        let proData = Ent_problem.find(function(d){return d['id'] == proId;});
-          let sx = conData['cx']+conData['rectW'] + 30;
-          let sy = conData['cy'];
-          let tx = proData['cx'];
-          let ty = proData['cy']+proData['height']/2;
-          let c1x = (sx)+100;
-          let c1y = (sy)
-          let c2x = (sx);
-          let c2y = (ty)
-        _this.drawBsLine(relG, sx, sy,c1x,c1y,c2x,c2y, tx, ty, "grey", "0.5px", "1", `proConRel_${conId}_${proId}`, "proConRel");
+        let conData = Ent_concept.find(function (d) { return d['id'] == conId; });
+        let proData = Ent_problem.find(function (d) { return d['id'] == proId; });
+        let sx = conData['cx'] + conData['rectW'] + 30;
+        let sy = conData['cy'];
+        let tx = proData['cx'];
+        let ty = proData['cy'] + proData['height'] / 2;
+        let c1x = (sx) + 100;
+        let c1y = (sy)
+        let c2x = (sx);
+        let c2y = (ty)
+        _this.drawBsLine(relG, sx, sy, c1x, c1y, c2x, c2y, tx, ty, "grey", "0.5px", "1", `proConRel_${conId}_${proId}`, "proConRel");
       }
-    },  
-    updataProSet_ConRel(){
+    },
+    updataProSet_ConRel() {
       const _this = this;
       let entG = _this.entG;
       let relG = _this.relG;
@@ -1112,54 +1288,54 @@ export default {
       let Ent_problem = tools.deepClone(_this.Ent_problem);
       let proSetData = tools.deepClone(_this.proSetData);
       let pro_conRelData = tools.deepClone(_this.problemConceptData);
-      for(let i=0;i<pro_conRelData.length;i++){
+      for (let i = 0; i < pro_conRelData.length; i++) {
         let curRel = pro_conRelData[i];
         let conId = curRel['conceptId'];
         let proId = curRel['problem'];
         let type = curRel['type'];
-        let conData = Ent_concept.find(function(d){return d['id'] == conId;});
-        let proData = Ent_problem.find(function(d){return d['id'] == proId;});
-        let curproSetData = proSetData.find(function(pd){return pd['id'] == proData['problemSetId']});
-        let sx = conData['cx']+130;
+        let conData = Ent_concept.find(function (d) { return d['id'] == conId; });
+        let proData = Ent_problem.find(function (d) { return d['id'] == proId; });
+        let curproSetData = proSetData.find(function (pd) { return pd['id'] == proData['problemSetId'] });
+        let sx = conData['cx'] + 130;
         let sy = conData['cy'];
         let tx = curproSetData['cx'];
-        let ty = curproSetData['cy']+curproSetData['height']/2;
-        let c1x = (sx)+150;
+        let ty = curproSetData['cy'] + curproSetData['height'] / 2;
+        let c1x = (sx) + 150;
         let c1y = (sy);
         let c2x = (sx);
         let c2y = (ty);
         let fill = "grey";
-        if(type=="1"){fill = 'red'}
-        _this.drawBsLine(relG, sx, sy,c1x,c1y,c2x,c2y, tx, ty, fill, "2px", "0.2", `proSetConRel_${conId}_${proData['problemSetId']}`, "proSetConRel");
+        if (type == "1") { fill = 'red' }
+        _this.drawBsLine(relG, sx, sy, c1x, c1y, c2x, c2y, tx, ty, fill, "1px", "0.2", `proSetConRel_${conId}_${proData['problemSetId']}`, "proSetConRel");
       }
-    },  
-    updataPro_ProSelfRel(tranY){
+    },
+    updataPro_ProSelfRel(tranY) {
       const _this = this;
       let entG = _this.entG;
       let relG = _this.relG;
       let selectSetId = _this.curProblemSetId;
       let Ent_problem = tools.deepClone(_this.Ent_problem);
-      for(let i=0;i<Ent_problem.length;i++){
+      for (let i = 0; i < Ent_problem.length; i++) {
         let pid = Ent_problem[i]['id'];
-        if(Ent_problem[i]["problemSetId"] == selectSetId){
-          let proData = Ent_problem.find(function(d){return d['id'] == pid;});
+        if (Ent_problem[i]["problemSetId"] == selectSetId) {
+          let proData = Ent_problem.find(function (d) { return d['id'] == pid; });
           let prog = d3.select(`#entPro_${pid}`)
           let proSlefg = d3.select(`#probySet_${pid}`)
-            let sx = parseFloat(prog.attr("x"))+parseFloat(prog.attr("width"));
-            let sy = parseFloat(prog.attr("y"))+parseFloat(prog.attr("height"))/2;
-            let tx = parseFloat(proSlefg.attr("x"));
-            let ty = parseFloat(proSlefg.attr("y"))+tranY+parseFloat(proSlefg.attr("height"))/2;
+          let sx = parseFloat(prog.attr("x")) + parseFloat(prog.attr("width"));
+          let sy = parseFloat(prog.attr("y")) + parseFloat(prog.attr("height")) / 2;
+          let tx = parseFloat(proSlefg.attr("x"));
+          let ty = parseFloat(proSlefg.attr("y")) + tranY + parseFloat(proSlefg.attr("height")) / 2;
           // console.log(sx,sy,tx,ty,prog.attr("x"),proSlefg.attr("y"),prog.attr("width"),prog.attr("height"),proSlefg.attr("height"))
-            let c1x = (sx)+100;
-            let c1y = (sy)
-            let c2x = (tx)-100;
-            let c2y = (ty)
-            let fill = proData['fill']
-          _this.drawBsLine(relG, sx, sy,c1x,c1y,c2x,c2y, tx, ty, fill, "2px", "0.4", `proSelfRel_${pid}`, "proSelfRel");
+          let c1x = (sx) + 100;
+          let c1y = (sy)
+          let c2x = (tx) - 100;
+          let c2y = (ty)
+          let fill = proData['fill']
+          _this.drawBsLine(relG, sx, sy, c1x, c1y, c2x, c2y, tx, ty, fill, "2px", "0.4", `proSelfRel_${pid}`, "proSelfRel");
         }
       }
-    },  
-    updataPro_ProSetRel(tranY){
+    },
+    updataPro_ProSetRel(tranY) {
       const _this = this;
       let entG = _this.entG;
       let relG = _this.relG;
@@ -1167,89 +1343,89 @@ export default {
       let Ent_problem = tools.deepClone(_this.detailsEntPro);
       let proSetData = tools.deepClone(_this.proSetData);
       d3.selectAll(`.proSetRel`).remove();
-      for(let i=0;i<Ent_problem.length;i++){
+      for (let i = 0; i < Ent_problem.length; i++) {
         let pid = Ent_problem[i]['id'];
-          let proSetId = Ent_problem[i]['problemSetId'];
-          let proSlefg = d3.select(`#proDetil_${pid}`)
-          let prog = d3.select(`#proSet_${proSetId}`)
-            let sx = parseFloat(prog.attr("x"))+parseFloat(prog.attr("width"));
-            let sy = parseFloat(prog.attr("y"))+parseFloat(prog.attr("height"))/2;
-            let tx = parseFloat(proSlefg.attr("x"));
-            let ty = parseFloat(proSlefg.attr("y"))+tranY+parseFloat(proSlefg.attr("height"))/2;
-          // console.log(sx,sy,tx,ty,prog.attr("x"),proSlefg.attr("y"),prog.attr("width"),prog.attr("height"),proSlefg.attr("height"))
-            let c1x = (sx)+100;
-            let c1y = (sy);
-            let c2x = (tx)-100;
-            let c2y = (ty);
-            let fill = Ent_problem[i]['fill'];
-          _this.drawBsLine(relG, sx, sy,c1x,c1y,c2x,c2y, tx, ty, fill, "2px", "0.4", `proSetRel_${pid}`, "proSetRel");
+        let proSetId = Ent_problem[i]['problemSetId'];
+        let proSlefg = d3.select(`#proDetil_${pid}`)
+        let prog = d3.select(`#proSet_${proSetId}`)
+        let sx = parseFloat(prog.attr("x")) + parseFloat(prog.attr("width"));
+        let sy = parseFloat(prog.attr("y")) + parseFloat(prog.attr("height")) / 2;
+        let tx = parseFloat(proSlefg.attr("x"));
+        let ty = parseFloat(proSlefg.attr("y")) + tranY + parseFloat(proSlefg.attr("height")) / 2;
+        // console.log(sx,sy,tx,ty,prog.attr("x"),proSlefg.attr("y"),prog.attr("width"),prog.attr("height"),proSlefg.attr("height"))
+        let c1x = (sx) + 100;
+        let c1y = (sy);
+        let c2x = (tx) - 100;
+        let c2y = (ty);
+        let fill = Ent_problem[i]['fill'];
+        _this.drawBsLine(relG, sx, sy, c1x, c1y, c2x, c2y, tx, ty, fill, "1px", "0.4", `proSetRel_${pid}`, "proSetRel");
         // }
       }
-    },  
-    updataEntConcept(){
+    },
+    updataEntConcept() {
       const _this = this;
       let entG = _this.entG;
       let relG = _this.relG;
       let Ent_concept = tools.deepClone(_this.Ent_concept);
-      
+
       let conX = _this.treeX;
       let conY = _this.treeY;
       let conStepY = _this.conStepY;
-      for(let i = 0;i<Ent_concept.length;i++){
+      for (let i = 0; i < Ent_concept.length; i++) {
         let curEntCon = Ent_concept[i];
         let cid = curEntCon['id'];
         let cx = curEntCon['cx'];
         let cy = curEntCon['cy'];
         let r = curEntCon['r'];
-        let Cname  = curEntCon['name'];
+        let Cname = curEntCon['name'];
         let fill = curEntCon['fill'];
         let opacity = curEntCon['opacity'];
 
         let fillRect = curEntCon['rectFill'];
         let widthRect = curEntCon['rectW'];
 
-        let circle = _this.drawCircle(entG, cx, cy, r, fill, opacity,"red","1", 'entCon', `entCon_${cid}`);
-        
-        circle.on("click",function(d){
+        let circle = _this.drawCircle(entG, cx, cy, r, fill, opacity, "red", "1", 'entCon', `entCon_${cid}`);
+
+        circle.on("click", function (d) {
           let selectCon = d3.select(this);
           let selectConId = selectCon.attr("id").split("_")[1];
           _this.curConceptId = selectConId;
         })
-         
+
         // let cG = entG.append("g")
         // .attr("transform", `translate(${cx},${cy})`);
 
         // _this.drawEntityConcept(entG, cx, cy, `entCon_${cid}`);
-        
 
-        let rectB =  _this.drawRect(entG, cx+20, cy-8, 100, 16, 1, "rgb(200,200,200)", "0", "none","1", `entConRectB_${cid}`, 'entConRect');
-        let rect =  _this.drawRect(entG, cx+20, cy-8, widthRect, 16, 1, fillRect, "0", "none","1", `entConRect_${cid}`, 'entConRect');
-        rectB.on("click",function(d){
+
+        let rectB = _this.drawRect(entG, cx + 20, cy - 8, 100, 16, 1, "rgb(200,200,200)", "0", "none", "1", `entConRectB_${cid}`, 'entConRect');
+        let rect = _this.drawRect(entG, cx + 20, cy - 8, widthRect, 16, 1, fillRect, "0", "none", "1", `entConRect_${cid}`, 'entConRect');
+        rectB.on("click", function (d) {
           let selectCon = d3.select(this);
           let selectConId = selectCon.attr("id").split("_")[1];
           _this.curConceptId = selectConId;
         })
-        rect.on("click",function(d){
+        rect.on("click", function (d) {
           let selectCon = d3.select(this);
           let selectConId = selectCon.attr("id").split("_")[1];
           _this.curConceptId = selectConId;
         })
-        let text = _this.drawTxt(entG, cx+20, cy+3.5, Cname, "white", 12, `entConText_${cid}`);
-        
+        let text = _this.drawTxt(entG, cx + 20, cy + 3.5, Cname, "white", 12, `entConText_${cid}`);
+
         let fatherId = curEntCon['father'];
         if (parseInt(fatherId) != -1) {
           let curCon = Ent_concept.find(function (d) { return d['id'] == cid; });
           let fatherCon = Ent_concept.find(function (d) { return d['id'] == fatherId; });
           let sx = fatherCon['cx'];
-          let sy = fatherCon['cy'];
-          let tx = curCon['cx'];
+          let sy = fatherCon['cy'] + fatherCon['r'];
+          let tx = curCon['cx'] - curCon['r'];
           let ty = curCon['cy'];
 
-          _this.drawBsLine(relG, sx, sy,sx,ty,sx,ty, tx, ty, "grey", "2px", "0.4", `conRel_${fatherId}_${cid}`, "conRel");
+          _this.drawBsLine(relG, sx, sy, sx, ty, sx, ty, tx, ty, "grey", "2px", "0.4", `conRel_${fatherId}_${cid}`, "conRel");
         }
       }
-    },  
-    updataEntProblem(){
+    },
+    updataEntProblem() {
       const _this = this;
       let entG = _this.entG;
       let Ent_problem = tools.deepClone(_this.Ent_problem);
@@ -1257,12 +1433,12 @@ export default {
       let proX = _this.proX;
       let proY = _this.proY;
       let typeColorMap = {
-        "TRUE_OR_FALSE":_this.mcolor[1],
-        "MULTIPLE_CHOICE":_this.mcolor[3],
-        "FILL_IN_THE_BLANK":_this.mcolor[5],
-        "PROGRAMMING":_this.mcolor[7],
-        "CODE_COMPLETION":_this.mcolor[9],
-        "MULTIPLE_CHOICE_MORE_THAN_ONE_ANSWER":_this.mcolor[11]
+        "TRUE_OR_FALSE": _this.mcolor[1],
+        "MULTIPLE_CHOICE": _this.mcolor[3],
+        "FILL_IN_THE_BLANK": _this.mcolor[5],
+        "PROGRAMMING": _this.mcolor[7],
+        "CODE_COMPLETION": _this.mcolor[9],
+        "MULTIPLE_CHOICE_MORE_THAN_ONE_ANSWER": _this.mcolor[11]
       }
       let interY = _this.interY;
       let typeXMap = _this.typeXMap;
@@ -1273,7 +1449,7 @@ export default {
 
       let proMaxMinDR = _this.proMaxMinDR;
       let wSize_linear = d3.scaleLinear().domain([proMaxMinDR[1], proMaxMinDR[0]]).range([20, 100]);
-      for(let i = 0;i<Ent_problem.length;i++){
+      for (let i = 0; i < Ent_problem.length; i++) {
         let curEntPro = Ent_problem[i];
         let type = curEntPro['type'];
         let pid = curEntPro['id'];
@@ -1285,95 +1461,95 @@ export default {
         let pOrder = curEntPro['order'];
         let inter = 1;
         let typeColor = typeColorMap[type]
-        let circle = _this.drawCircle(entG, cx, cy+_this.proStepY/2, proStepY/2, typeColor, '1',"none","1", 'entProCir', `entProCir_${pid}`);
+        let circle = _this.drawCircle(entG, cx, cy + _this.proStepY / 2, proStepY / 2, typeColor, '1', "none", "1", 'entProCir', `entProCir_${pid}`);
         // let rect = _this.drawRect(entG, cx+cH/2, cy, cW, cH, 1, fill, "0", "none","1", `entPro_${pid}`, 'entPro');
-        let rect = _this.drawRect(entG, cx+cH/2, cy, 180, cH, 1, fill, "0", "none","0.5", `entPro_${pid}`, 'entPro');
-        rect.on("mousemove",function(d){
+        let rect = _this.drawRect(entG, cx + cH / 2, cy, 180, cH, 1, fill, "0", "none", "0.5", `entPro_${pid}`, 'entPro');
+        rect.on("mousemove", function (d) {
           let selectPro = d3.select(this);
           let selectProId = selectPro.attr("id").split("_")[1];
-          let proD = Ent_problem.find(function(p){return p['id'] == selectProId});
+          let proD = Ent_problem.find(function (p) { return p['id'] == selectProId });
           let pSetId = proD['problemSetId'];
-          let pSet = proSetData.find(function(ps){return ps['id'] == pSetId;})
-          let pSetOd = pSet['order']+1;
+          let pSet = proSetData.find(function (ps) { return ps['id'] == pSetId; })
+          let pSetOd = pSet['order'] + 1;
           let od = proD['order'];
-          Ent_problem.forEach(entPro=>{
-            if(entPro['id'] == selectProId){
-              entPro['cy']=proY + entPro['order'] * proStepY + interY*pSetOd;
-              entPro['height']=(proStepY -inter) * 5;
+          Ent_problem.forEach(entPro => {
+            if (entPro['id'] == selectProId) {
+              entPro['cy'] = proY + entPro['order'] * proStepY + interY * pSetOd;
+              entPro['height'] = (proStepY - inter) * 5;
               od = entPro['order'];
             }
-            else if(entPro['order']<od){
-              let cproD = Ent_problem.find(function(p){return p['id'] == entPro['id']});
+            else if (entPro['order'] < od) {
+              let cproD = Ent_problem.find(function (p) { return p['id'] == entPro['id'] });
               let cpSetId = cproD['problemSetId'];
-              let cpSet = proSetData.find(function(ps){return ps['id'] == cpSetId;})
-              let cpSetOd = cpSet['order']+1;
-              
-              entPro['cy']=proY + entPro['order'] * proStepY+ interY*cpSetOd;
-              entPro['height']=(proStepY -inter)
+              let cpSet = proSetData.find(function (ps) { return ps['id'] == cpSetId; })
+              let cpSetOd = cpSet['order'] + 1;
+
+              entPro['cy'] = proY + entPro['order'] * proStepY + interY * cpSetOd;
+              entPro['height'] = (proStepY - inter)
             }
-            else if(entPro['order']>od){
-              let cproD = Ent_problem.find(function(p){return p['id'] == entPro['id']});
+            else if (entPro['order'] > od) {
+              let cproD = Ent_problem.find(function (p) { return p['id'] == entPro['id'] });
               let cpSetId = cproD['problemSetId'];
-              let cpSet = proSetData.find(function(ps){return ps['id'] == cpSetId;})
-              let cpSetOd = cpSet['order']+1;
-              entPro['cy']=proY + entPro['order'] * proStepY+(proStepY -1)*4+ interY*cpSetOd;
-              entPro['height']=(proStepY -inter)
+              let cpSet = proSetData.find(function (ps) { return ps['id'] == cpSetId; })
+              let cpSetOd = cpSet['order'] + 1;
+              entPro['cy'] = proY + entPro['order'] * proStepY + (proStepY - 1) * 4 + interY * cpSetOd;
+              entPro['height'] = (proStepY - inter)
             }
           })
-          _this.Ent_problem =Ent_problem;
-        }).on("click",function(d){
+          _this.Ent_problem = Ent_problem;
+        }).on("click", function (d) {
           let selectPro = d3.select(this);
           let selectProId = selectPro.attr("id").split("_")[1];
           _this.curProblemId = selectProId;
         })
         let attrW = 30
-        for (let j = 0; j < attrLen; j++) {
-          let curP = _this.calcRsize(proAttrMaxMinList[j], curEntPro[attrList[j]], 30);
-          let attColor = _this.mLigntcolor[j*2]
-          let rectAttr = _this.drawRect(entG, cx+j*attrW, cy, curP, cH, 1, attColor, "0.8", "grey","1", `prottr_${pid}_${attrList[j]}`, 'proAttr');
-        }
+        // for (let j = 0; j < attrLen; j++) {
+        //   let curP = _this.calcRsize(proAttrMaxMinList[j], curEntPro[attrList[j]], 30);
+        //   let attColor = _this.mLigntcolor[j*2]
+        //   let rectAttr = _this.drawRect(entG, cx+j*attrW, cy, curP, cH, 1, attColor, "0.8", "grey","1", `prottr_${pid}_${attrList[j]}`, 'proAttr');
+        // }
         // le
 
       }
-    },      
-    updataEntProblemDetailBySet(type,name){
+    },
+    updataEntProblemDetailBySet(type, name) {
       const _this = this;
       let selectSetId = _this.curProblemSetId;
       let Ent_problem = tools.deepClone(_this.Ent_problem);
       let setEnt = [];
-      if(type == 'con'){
+      if (type == 'con') {
         let pro_conRelData = tools.deepClone(_this.problemConceptData);
-        pro_conRelData.forEach(rel=>{
+        pro_conRelData.forEach(rel => {
           let proId = rel['problem'];
           let conId = rel['conceptId'];
-          if(conId == name){
-          let proData = Ent_problem.find(function(d){return d['id'] == proId;})
-          let proSetId = proData['problemSetId'];
-          if(proSetId == selectSetId){
-                setEnt.push(proData);
+          if (conId == name) {
+            let proData = Ent_problem.find(function (d) { return d['id'] == proId; })
+            let proSetId = proData['problemSetId'];
+            if (proSetId == selectSetId) {
+              setEnt.push(proData);
             }
           }
         })
-      _this.detailsEntPro = setEnt;
-      return;
+        _this.detailsEntPro = setEnt;
+        return;
       }
-      for(let i = 0;i<Ent_problem.length;i++){
-        if(Ent_problem[i]["problemSetId"] == selectSetId){
-          let entSetPro =tools.deepClone(Ent_problem[i]);
-          if(type=="none"){
+      for (let i = 0; i < Ent_problem.length; i++) {
+        if (Ent_problem[i]["problemSetId"] == selectSetId) {
+          let entSetPro = tools.deepClone(Ent_problem[i]);
+          if (type == "none") {
             setEnt.push(entSetPro);
           }
-          else if(type == 'type'){
-            if(Ent_problem[i]["type"] == name){
+          else if (type == 'type') {
+            if (Ent_problem[i]["type"] == name) {
               setEnt.push(entSetPro);
             }
           }
         }
       }
       _this.detailsEntPro = setEnt;
-    },    
+    },
 
-    updataEntProblemDetail(){
+    updataEntProblemDetail() {
       const _this = this;
       let entG = _this.entbySetG;
       let selectSetId = _this.curProblemSetId;
@@ -1381,54 +1557,147 @@ export default {
       let proMaxMinDR = _this.proMaxMinDR;
       let setX = _this.setX;
       let setY = _this.setY;
-      
+
+      let attrList = ["scoringRate", "acceptedRate", "totalAttempts"];
+      let attrLen = attrList.length;
+
       entG.selectAll(".proDetil").remove();
       entG.selectAll(".proDetilB").remove();
       entG.selectAll(".proDetilAttr").remove();
 
-      let setEnt = _this.detailsEntPro ;
+      let setEnt = _this.detailsEntPro;
 
       let setStepY = 50;
-      let attrList = _this.proAttrList;
-      let attrLen = attrList.length;
-      let setProWidth = 100;
-      let attrW = setProWidth/(attrLen);
+      let setProWidth = 80;
+      let attrW = setProWidth / (attrLen);
       let proAttrMaxMinList = _this.proAttrMaxMinList;
       let wSize_linear = d3.scaleLinear().domain([proMaxMinDR[1], proMaxMinDR[0]]).range([20, 100]);
-        
-      for(let i = 0;i<setEnt.length;i++){
+
+
+      for (let i = 0; i < setEnt.length; i++) {
         let curEntPro = setEnt[i];
         let pid = curEntPro['id'];
+        let gpro = Ent_problem.find(function(p){return p['id'] == pid; });
+        let groupVal = gpro['groupVal'];
+
         let cx = setX;
-        let cy = setY+i*setStepY;
-        let cH = setStepY-20;
+        let cy = setY + i * setStepY;
+        let cH = setStepY - 20;
         let cW = curEntPro['width']//wSize_linear(curEntPro['scoringRate']);
         let fill = curEntPro['fill'];
         let pOrder = curEntPro['order'];
-        let rectback = _this.drawRect(entG, cx, cy, 100, cH, 5, "grey", "10", "grey","0.3", `proDetilB_${pid}`, 'proDetilB');
-        let rect = _this.drawRect(entG, cx, cy, cW, cH, 5, fill, "10", fill,"1", `proDetil_${pid}`, 'proDetil');
-        rect.on("click",function(d){
+        let rectback = _this.drawRect(entG, cx, cy, 120, cH, 5, "grey", "10", "grey", "0.3", `proDetilB_${pid}`, 'proDetilB');
+        let rect = _this.drawRect(entG, cx, cy, cW, cH, 5, fill, "10", fill, "1", `proDetil_${pid}`, 'proDetil');
+        rect.on("click", function (d) {
           let selectPro = d3.select(this);
           let selectProId = selectPro.attr("id").split("_")[1];
           _this.curProblemId = selectProId;
         })
+        let scoreValueList = curEntPro['scoreValueList'];
+        let acceptedValueList = curEntPro['acceptedValueList'];
+        let totalAttemptsValueList = curEntPro['totalAttemptsValueList'];
+        let dmList = [scoreValueList, acceptedValueList, totalAttemptsValueList];
         for (let j = 0; j < attrLen; j++) {
+          let attColor = _this.attrColorList[j];
+          let Compute_color = d3.interpolate("white", attColor);
+          let maxMin = proAttrMaxMinList[j];
+          let color_linear = d3.scaleLinear().domain([maxMin[1], maxMin[0]]).range([0, 1]);
+          let curAttrColor = Compute_color(color_linear(curEntPro[attrList[j]]));
           let curP = _this.calcRsize(proAttrMaxMinList[j], curEntPro[attrList[j]], cH);
-          let attColor = _this.attrColorList[j]
-          let rectAttr = _this.drawRect(entG, cx+j*attrW, cy+cH-curP, attrW-10, curP, 1, attColor, "0.2", "grey","1", `proDetilAttr_${pid}_${attrList[j]}`, 'proDetilAttr');
+
+          _this.drawAttrreact(entG, cx + j * attrW, cy, attrW - 10, cH, dmList[j], attrList[j], curAttrColor, `proDetilsAttr_${pid}_${attrList[j]}`);
+          // let rectAttr = _this.drawRect(entG, cx+j*attrW, cy+cH-curP, attrW-10, curP, 1, attColor, "0.2", "grey","1", `proDetilAttr_${pid}_${attrList[j]}`, 'proDetilAttr');
+        }
+        let groupStepY = 10;
+        let gs_linear = d3.scaleLinear().domain([0,1]).range([0, cH]);
+        for (let g = 0; g < groupVal.length; g++) {
+          let curP = gs_linear(groupVal[g]['scoringRate']);
+          let gColor = _this.stuColorList[g];
+          let rectgroup = _this.drawRect(entG, cx+attrW*3+g*groupStepY, cy+cH-curP, groupStepY-5, curP, 1, gColor, "0.2", "grey","1", `proDetilGroup_${pid}_${g}`, 'proDetilGroup');
+        
         }
       }
-      
+
       _this.updataPro_ProSetRel(_this.graphGTransformY);
     },
+    getMaxMinValue(data, valueName) {
 
-    updataEntProblemSetBack(){
+      let mind = 1000000;
+      let maxd = -1000000;
+      let av = 0;
+      let num = 0;
+      let arr = []
+      Object.keys(data).forEach(stuD => {
+        maxd = (data[stuD][valueName] > maxd) ? data[stuD][valueName] : maxd;
+        mind = (data[stuD][valueName] < mind) ? data[stuD][valueName] : mind;
+        if (data[stuD][valueName] != undefined) {
+          av += data[stuD][valueName];
+          num += 1;
+          arr.push(data[stuD][valueName])
+        }
+      });
+      var compare = function (x, y) {//比较函数
+        return x>y
+      };
+      var mid; //中位数
+      arr.sort(compare); //数组排序
+      if (arr.length % 2 == 0) {
+        mid = (arr[arr.length / 2] + arr[arr.length / 2 + 1]) / 2
+      }
+      if (arr.length % 2 != 0) {
+        mid = arr[(arr.length + 1) / 2]
+      }
+
+      if (num != 0)
+        av /= num;
+      else
+        av = 0;
+      // if(!arr[arr.length/4])
+      // console.log(arr,arr.length/4,arr[arr.length/4])
+      return [mind, maxd, av,mid,arr[parseInt(arr.length/4)],arr[parseInt(arr.length/4*3)]]
+    },
+    drawAttrreact(svg, cx, cy, w, h, data, valueName, attrColor, idN) {
+      const _this = this;
+      let proAttrMaxMinList = _this.proAttrMaxMinList;
+      let attrList = _this.proAttrList;
+      let maxMin = proAttrMaxMinList[attrList.indexOf(valueName)];
+      let mind = data[0]
+      let maxd = data[1]
+      let av = data[2]
+      let mid = data[3]
+      let q1 = data[4]
+      let q2 = data[5]
+      let len_linear = d3.scaleLinear().domain([0, 1]).range([0, h]);
+      if (valueName == "totalAttempts") {
+        len_linear = d3.scaleLinear().domain([0, 67]).range([0, h]);
+      }
+      let avp = len_linear(av);
+      let maxp = len_linear(maxd);
+      let minp = len_linear(mind);
+      let midp = len_linear(mid);
+      let q1p = len_linear(q1);
+      let q2p = len_linear(q2);
+      let boxColor = "grey"
+      // _this.drawRect(svg, cx, cy, w, h, 1, attrColor, "0.2", "grey", "1", `B_${idN}`, 'proDetilAttr');
+      _this.drawRect(svg, cx+3, cy + h - q2p, w-6, q2p - q1p, 1, attrColor, "1", boxColor, "1", `${idN}`, 'proDetilAttr');
+      // _this.drawRect(svg, cx, cy + h - avp, w, 2, 1, "white", "0.2", "none", "1", `av_${idN}`, 'proDetilAttr');
+      _this.drawRect(svg, cx+3, cy + h - midp, w-6, 1, 1, boxColor, "0.2", "none", "1", `mid_${idN}`, 'proDetilAttr');
+      _this.drawRect(svg, cx, cy + h - maxp, w, 1, 1, boxColor, "0.2", "none", "1", `max_${idN}`, 'proDetilAttr');
+      _this.drawRect(svg, cx, cy + h - minp, w, 1, 1, boxColor, "0.2", "none", "1", `min_${idN}`, 'proDetilAttr');
+
+      _this.drawRect(svg, cx+w/2-1, cy + h - maxp, 1, maxp-q2p, 1, boxColor, "0", "none", "1", `maxl_${idN}`, 'proDetilAttr');
+      _this.drawRect(svg, cx+w/2-1, cy + h - q1p, 1, q1p-minp, 1, boxColor, "0", "none", "1", `minl_${idN}`, 'proDetilAttr');
+      // _this.drawRect(svg, cx, cy + h - q1p, w, 2, 1, boxColor, "0.2", "none", "1", `q1_${idN}`, 'proDetilAttr');
+      // _this.drawRect(svg, cx, cy + h - q2p, w, 2, 1, boxColor, "0.2", "none", "1", `q2_${idN}`, 'proDetilAttr');
+
+    },
+    updataEntProblemSetBack() {
       const _this = this;
       let entSetG = _this.entSetG;
       let proSetData = tools.deepClone(_this.proSetData);
       let Ent_problem = tools.deepClone(_this.Ent_problem);
       let maxSetCon = _this.maxSetCon
-      for(let i=0;i<proSetData.length;i++){
+      for (let i = 0; i < proSetData.length; i++) {
         let fill = proSetData[i]['fill'];
         let psid = proSetData[i]['id'];
         let set = proSetData[i]['set'];
@@ -1446,67 +1715,69 @@ export default {
         let cy = proSetData[i]['cy'];
         let width = proSetData[i]['width'];
         let height = proSetData[i]['height'];
-        let rect = _this.drawRect(entSetG, cx, cy, width, height, 10, fill, "5", "none","1", `proSet_${psid}`, 'proSet');        
-        rect.on("click",function(d){
+        let rect = _this.drawRect(entSetG, cx, cy, width, height, 10, fill, "5", "none", "1", `proSet_${psid}`, 'proSet');
+        // let rect1 = _this.drawRect(entSetG, cx, cy+height/3, width, 1, 1, "grey", "5", "none","1", `proSet1_${psid}`, 'proSet');
+        // let rect2 = _this.drawRect(entSetG, cx, cy+height/3*2, width, 1, 1, "grey", "5", "none","1", `proSet2_${psid}`, 'proSet');
+        let rect1 = _this.drawRect(entSetG, cx + width / 3-25, cy, 1, height, 1, "white", "5", "none", "1", `proSet1_${psid}`, 'proSet');
+        let rect2 = _this.drawRect(entSetG, cx + width / 3 * 2-50, cy, 1, height, 1, "white", "5", "none", "1", `proSet2_${psid}`, 'proSet');
+        rect.on("click", function (d) {
           let selectSet = d3.select(this);
-          d3.selectAll(".proSet").attr("opacity",0.1);
-          selectSet.attr("opacity",1)
+          d3.selectAll(".proSet").attr("opacity", 0.1);
+          selectSet.attr("opacity", 1)
           let selectSetId = selectSet.attr("id").split("_")[1];
           _this.curProblemSetId = selectSetId;
         })
-        let rect1 = _this.drawRect(entSetG, cx, cy+height/3, width, 1, 1, "grey", "5", "none","1", `proSet1_${psid}`, 'proSet');
-        let rect2 = _this.drawRect(entSetG, cx, cy+height/3*2, width, 1, 1, "grey", "5", "none","1", `proSet2_${psid}`, 'proSet');
-        // let rect1 = _this.drawRect(entSetG, cx+width/3, cy, 1, height, 1, "white", "5", "none","1", `proSet1_${psid}`, 'proSet');
-        // let rect2 = _this.drawRect(entSetG, cx+width/3*2, cy, 1, height, 1, "white", "5", "none","1", `proSet2_${psid}`, 'proSet');
 
+        // _this.drawRiver(entSetG,cx+width/3*2+3,cy,height,width/3,`proSetRiver_${psid}`,proSetData[i]['set']);
+        _this.drawSetValuePoly(entSetG, cx + width /2+1, cy, height - 2, width / 2, `proSetValuePoly_${psid}`, proSetData[i]['set']);
+        // let min1w = height/3;
+        // let max1w = width/9;       
+        // let min1h = 10;
+        // let max1h = height/3;
 
         let min1w = 0;
-        let max1w = width/9;       
-        let min1h = 0;
-        let max1h = height/3;
-
-        // let min1w = 3;
-        // let max1w = width/3-10;       
-        // let min1h = 10;
-        // let max1h = height/9;
-        let j=0
-        let setConCount_linear = d3.scaleLinear().domain([0, maxSetCon]).range([min1h, max1h]);
+        let max1w = width / 3 - 30;
+        let min1h = 10;
+        let max1h = (height - 6) / 8;
+        let j = 0
+        let setConCount_linear = d3.scaleLinear().domain([0, Math.sqrt(maxSetCon)]).range([min1w, max1w]);
         let currentMinColor = _this.setConCountColorMin;
         let currentMaxColor = _this.setConCountColorMax;
+
         let setConCountColor_linear = d3.scaleLinear().domain([0, maxSetCon]).range([0, 1]);
         let setConCountCompute_color = d3.interpolate(currentMinColor, currentMaxColor);
         let conRootDistribution = {};
         let maxnum = 0;
 
-        Object.keys(conDistribution).forEach(conD=>{
-            let conid = conD;
-            let idSpilt = conid.split("-");
-            let rootId = idSpilt[0];
-            maxnum+=conDistribution[conD];
-            if(conRootDistribution[rootId]!=undefined)
-              conRootDistribution[rootId] += conDistribution[conD];
-            else{
-              conRootDistribution[rootId] = 0;
-            }
-              // --------------------------
-            if(idSpilt.length == 1){
-              // conRootDistribution[rootId] = conDistribution[conD];
-              let ch
-               = setConCount_linear(conDistribution[conD]);
-              let color = setConCountCompute_color(setConCountColor_linear(conDistribution[conD]))
-              let disRect = _this.drawRect(entSetG, cx+(max1w)*j, cy+max1h - ch,max1w-5, ch, 1, color, "1", "white","1", `proSetConAttr_${psid}_${conid}`, 'proSetConAttr');
-              // let disRect = _this.drawRect(entSetG, cx+5, cy+(max1h)*j,cw, height/9-3, 1, color, "1", "white","1", `proSetConAttr_${psid}_${conid}`, 'proSetConAttr');
-              disRect.on("click",function(d){
-                let selectProAtt = d3.select(this);
-                let Ids = selectProAtt.attr("id").split("_");
-                let setId = Ids[1];
-                let conId = Ids[2];
-                _this.curProblemSetId = setId;
-                _this.updataEntProblemDetailBySet("con",conId)
-              })
-              j++;
-            }
-                // -------------------------------------
+        Object.keys(conDistribution).forEach(conD => {
+          let conid = conD;
+          let idSpilt = conid.split("-");
+          let rootId = idSpilt[0];
+          maxnum += conDistribution[conD];
+          if (conRootDistribution[rootId] != undefined)
+            conRootDistribution[rootId] += conDistribution[conD];
+          else {
+            conRootDistribution[rootId] = 0;
+          }
+          // --------------------------
+          if (idSpilt.length == 1) {
+            // conRootDistribution[rootId] = conDistribution[conD];
+            let cw = setConCount_linear(Math.sqrt(conDistribution[conD]));
+            let color = setConCountCompute_color(setConCountColor_linear(conDistribution[conD]))
+            // let disRect = _this.drawRect(entSetG, cx+(max1w)*j, cy+max1h - ch,max1w-5, ch, 1, color, "1", "white","1", `proSetConAttr_${psid}_${conid}`, 'proSetConAttr');
+            // let disRectB = _this.drawRect(entSetG, cx+5, cy+(max1h)*j,max1w, height/9-3, 1, "none", "1", "white","1", `proSetConAttrB_${psid}_${conid}`, 'proSetConAttr');
+            let disRect = _this.drawRect(entSetG, cx + 5, cy + 3 + (max1h) * j, cw, height / 8 - 3, 1, color, "1", "white", "1", `proSetConAttr_${psid}_${conid}`, 'proSetConAttr');
+            disRect.on("click", function (d) {
+              let selectProAtt = d3.select(this);
+              let Ids = selectProAtt.attr("id").split("_");
+              let setId = Ids[1];
+              let conId = Ids[2];
+              _this.curProblemSetId = setId;
+              _this.updataEntProblemDetailBySet("con", conId)
+            })
+            j++;
+          }
+          // -------------------------------------
         })
         // let curx = cx+3;
         // Object.keys(conRootDistribution).forEach(conrD=>{
@@ -1530,41 +1801,287 @@ export default {
         // })
 
 
-        let min2w = 10;
-        let max2w = width/6;       
-        let min2h = 10;
-        let max2h = height/3;
         // let min2w = 10;
-        // let max2w = width/3;       
+        // let max2w = width/6;       
         // let min2h = 10;
-        // let max2h = height/6;
-        j=0;
+        // let max2h = height/3;
+        let min2w = 0;
+        let max2w = width / 3 - 30;
+        let min2h = 10;
+        let max2h = height / 4;
+        j = 0;
         let prolen = proSetData[i]['set'].length;
-        let settype_linear = d3.scaleLinear().domain([0, prolen]).range([min2w, max2w]);
-        let typeMinColor = _this.setConCountColorMin;
-        let typeMaxColor = _this.setConCountColorMax;
+        let settype_linear = d3.scaleLinear().domain([0, Math.sqrt(prolen)]).range([min2w, max2w]);
+        let typeMinColor = _this.setTypeCountColorMin;
+        let typeMaxColor = _this.setTypeCountColorMax;
         let typeColor_linear = d3.scaleLinear().domain([0, prolen]).range([0, 1]);
         let typeCompute_color = d3.interpolate(typeMinColor, typeMaxColor);
         // console.log(proSetData[i]['set'],typeDistribution)
-        Object.keys(typeDistribution).forEach(typeD=>{
-          let ch = settype_linear(typeDistribution[typeD]);
+        Object.keys(typeDistribution).forEach(typeD => {
+          let ch = settype_linear(Math.sqrt(typeDistribution[typeD]));
           let color = typeCompute_color(typeColor_linear(typeDistribution[typeD]))
-          let disRect = _this.drawRect(entSetG, cx+(max2w)*j, cy+max2h+max2h - ch,max2w-5, ch, 1, color, "1", "white","1", `proSettypeAttr-${psid}-${typeD}`, 'proSettypeAttr');
-          // let disRect = _this.drawRect(entSetG, cx+(width/3)+3, cy+(max2h)*j,ch, max2h-3, 1, color, "1", "grey","0.5", `proSettypeAttr-${psid}-${typeD}`, 'proSettypeAttr');
-         disRect.on("click",function(d){
-                let selectProAtt = d3.select(this);
-                let Ids = selectProAtt.attr("id").split("-");
-                let setId = Ids[1];
-                let typeD = Ids[2];
-                _this.curProblemSetId = setId;
-                _this.updataEntProblemDetailBySet("type",typeD);
-              })
-          j++
+          // let disRect = _this.drawRect(entSetG, cx+(max2w)*j, cy+max2h+max2h - ch,max2w-5, ch, 1, color, "1", "white","1", `proSettypeAttr-${psid}-${typeD}`, 'proSettypeAttr');
+          // let disRectB = _this.drawRect(entSetG, cx + (width / 3)-25 , cy + (max2h) * j, max2w, max2h - 3, 1, "none", "1", "white", "1", `proSettypeAttrB-${psid}-${typeD}`, 'proSettypeAttrB');
+          let disRect = _this.drawRect(entSetG, cx + (width / 3) -23, cy + (max2h) * j, ch, max2h - 3, 1, color, "1", "white", "1", `proSettypeAttr-${psid}-${typeD}`, 'proSettypeAttr');
+          disRect.on("click", function (d) {
+            let selectProAtt = d3.select(this);
+            let Ids = selectProAtt.attr("id").split("-");
+            let setId = Ids[1];
+            let typeD = Ids[2];
+            _this.curProblemSetId = setId;
+            _this.updataEntProblemDetailBySet("type", typeD);
+          })
+          j++;
         })
 
+
       }
-    }, 
-    drawBsLine(svg, sx, sy,c1x,c1y,c2x,c2y, tx, ty, stroke, width, opacity, idName, className) {
+    },
+    drawSetValuePoly(svg, cx, cy, height, width, idN, set) {
+      const _this = this;
+      // let groupData = 
+      let data = [];
+      let keys = [];
+      let stepy = height / (set.length - 1);
+      let pathav = d3.path();
+      let pathavat = d3.path();
+      let pathavtd = d3.path();
+      let pathfcf = d3.path();
+      let pathfcz = d3.path();
+      let wScale = d3.scaleLinear().domain([0, 1]).range([1, width / 2-2]);
+      let maxOriAttempts = 30;
+      let wScaleat = d3.scaleLinear().domain([0, maxOriAttempts]).range([width / 2 + 5, width - 5]);
+
+      let minOriTimeDur = _this.proAttrMaxMinList[1][0];
+      let maxOriTimeDur = _this.proAttrMaxMinList[1][1];
+      let proSetData = tools.deepClone(_this.proSetData);
+      // for(let j=0;j<proSetData.length;j++){
+      //   let sets = proSetData[j]['set'];
+      for (let i = 0; i < set.length; i++) {
+        let proStuData = set[i]['stuData'];
+        let minTimeD = 10000000001;
+        let maxTimeD = -100000000000;
+        Object.keys(proStuData).forEach((s) => {
+          maxTimeD = (proStuData[s]['timeDur'] > maxTimeD) ? proStuData[s]['totalTimeDur'] : maxTimeD;
+          minTimeD = (proStuData[s]['timeDur'] < minTimeD) ? proStuData[s]['totalTimeDur'] : minTimeD;
+        })
+        maxOriTimeDur = (maxOriTimeDur > maxTimeD) ? maxOriTimeDur : maxTimeD;
+        minOriTimeDur = (minOriTimeDur < minTimeD) ? minOriTimeDur : minTimeD;
+      }
+      // }
+      let wScaletd = d3.scaleLinear().domain([minOriTimeDur, maxOriTimeDur]).range([width / 3 * 2 + 3, width - 5]);
+
+      let points = [];
+      let pointsfc = [];
+      let pointsat = [];
+      let pointsfcat = [];
+      let pointstd = [];
+      let pointsfctd = [];
+
+
+      for (let i = 0; i < set.length; i++) {
+        let proData = set[i];
+        let proStuData = set[i]['stuData'];
+        let minScoreRate = 1;
+        let maxScoreRate = 0;
+        let avScoreRate = 0;
+        let minAttempts = 1;
+        let maxAttempts = 0;
+        let avAttempts = 0;
+
+        let minTimeDur = 100000000;
+        let maxTimeDur = -1000000000000;
+        let avTimeDur = 0;
+        let num = 0;
+        Object.keys(proStuData).forEach((s) => {
+          maxScoreRate = (proStuData[s]['scoringRate'] > maxScoreRate) ? proStuData[s]['scoringRate'] : maxScoreRate;
+          minScoreRate = (proStuData[s]['scoringRate'] < minScoreRate) ? proStuData[s]['scoringRate'] : minScoreRate;
+
+          maxAttempts = (proStuData[s]['totalAttempts'] > maxAttempts) ? proStuData[s]['totalAttempts'] : maxAttempts;
+          minAttempts = (proStuData[s]['totalAttempts'] < minAttempts) ? proStuData[s]['totalAttempts'] : minAttempts;
+
+          maxTimeDur = (proStuData[s]['timeDur'] > maxTimeDur) ? proStuData[s]['totalTimeDur'] : maxTimeDur;
+          minTimeDur = (proStuData[s]['timeDur'] < minTimeDur) ? proStuData[s]['totalTimeDur'] : minTimeDur;
+
+          avScoreRate += proStuData[s]['scoringRate'];
+          avAttempts += proStuData[s]['totalAttempts'];
+          avTimeDur += proStuData[s]['timeDur'];
+          num++;
+        });
+        avScoreRate /= num;
+        avAttempts /= num;
+        avTimeDur /= num;
+
+        let fcScoreRate = 0;
+        let fcTimeDur = 0;
+        let fcAttempts = 0;
+        Object.keys(proStuData).forEach((s) => {
+          fcScoreRate += Math.pow(proStuData[s]['scoringRate'] - avScoreRate, 2);
+          fcAttempts += Math.pow(proStuData[s]['totalAttempts'] - avAttempts, 2);
+          fcTimeDur += Math.pow(proStuData[s]['timeDur'] - avTimeDur, 2);
+        })
+        fcScoreRate /= num;
+        fcAttempts /= num;
+        fcTimeDur /= num;
+
+        set[i]['maxScoreRate'] = maxScoreRate;
+        set[i]['minScoreRate'] = minScoreRate;
+        set[i]['avScoreRate'] = avScoreRate;
+        set[i]['fcScoreRate'] = fcScoreRate;
+
+        set[i]['maxAttempts'] = maxAttempts;
+        set[i]['minAttempts'] = minAttempts;
+        set[i]['avAttempts'] = avAttempts;
+        set[i]['fcAttempts'] = fcAttempts;
+
+        set[i]['maxTimeDur'] = maxTimeDur;
+        set[i]['minTimeDur'] = minTimeDur;
+        set[i]['avTimeDur'] = avTimeDur;
+        set[i]['fcTimeDur'] = fcTimeDur;
+
+        if (i == 0) {
+          pathav.moveTo(cx + wScale(avScoreRate), cy + stepy * i);
+          pathavat.moveTo(cx + wScaleat(avAttempts), cy + stepy * i);
+          pathavtd.moveTo(cx + wScaletd(avTimeDur), cy + stepy * i);
+        }
+
+        pathav.lineTo(cx + wScale(avScoreRate), cy + stepy * i);
+        pathavat.lineTo(cx + wScaleat(avAttempts), cy + stepy * i);
+        pathavtd.lineTo(cx + wScaletd(avTimeDur), cy + stepy * i);
+
+        points.push([cx + wScale(maxScoreRate), cy + stepy * i])
+        pointsfc.push([cx + wScale(avScoreRate + fcScoreRate), cy + stepy * i])
+        if (maxAttempts > maxOriAttempts)
+          maxAttempts = maxOriAttempts;
+        if (maxAttempts == 1) {
+          maxAttempts = 5
+        }
+        pointsat.push([cx + wScaleat(maxAttempts), cy + stepy * i]);
+        pointsfcat.push([cx + wScaleat(avAttempts + Math.sqrt(fcAttempts)), cy + stepy * i])
+
+        pointstd.push([cx + wScaletd(maxTimeDur), cy + stepy * i]);
+        pointsfctd.push([cx + wScaletd(avTimeDur + Math.sqrt(fcTimeDur)), cy + stepy * i])
+      };
+      for (let i = set.length - 1; i >= 0; i--) {
+        let proData = set[i];
+        let proStuData = set[i]['stuData'];
+        let minScoreRate = 1;
+        let maxScoreRate = 0;
+        let avScoreRate = set[i]['avScoreRate'];
+        let fcScoreRate = set[i]['fcScoreRate'];
+
+        let avAttempts = set[i]['avAttempts'];
+        let fcAttempts = set[i]['fcAttempts'];
+
+        let avTimeDur = set[i]['avTimeDur'];
+        let fcTimeDur = set[i]['fcTimeDur'];
+
+        let minAttempts = set[i]['minAttempts'];
+        let minTimeDur = set[i]['minTimeDur'];
+        Object.keys(proStuData).forEach((s) => {
+          maxScoreRate = (proStuData[s]['scoringRate'] > maxScoreRate) ? proStuData[s]['scoringRate'] : maxScoreRate;
+          minScoreRate = (proStuData[s]['scoringRate'] < minScoreRate) ? proStuData[s]['scoringRate'] : minScoreRate;
+        })
+        points.push([cx + wScale(minScoreRate), cy + stepy * i])
+        pointsfc.push([cx + wScale(avScoreRate - fcScoreRate), cy + stepy * i])
+
+        pointsat.push([cx + wScaleat(minAttempts), cy + stepy * i])
+        pointsfcat.push([cx + wScaleat(avAttempts - Math.sqrt(fcAttempts)), cy + stepy * i])
+
+        pointstd.push([cx + wScaletd(minTimeDur), cy + stepy * i])
+        pointsfctd.push([cx + wScaletd(avTimeDur - Math.sqrt(fcTimeDur)), cy + stepy * i])
+      };
+
+      let curve_generator = d3.line()
+        .x((d) => d[0])
+        .y((d) => d[1])
+        .curve(d3.curveBasisClosed )
+        // .curve(d3.curveLinearClosed)
+
+      let linepoly = _this.drawLine(svg, curve_generator(points), "none", 1, '0', '1', `setstuScoreLine_${idN}`, 'setstuScoreLine', "rgba(253, 195, 190,0.6)");
+      let linepolyfc = _this.drawLine(svg, curve_generator(pointsfc), "none", 1, '0', '1', `setstuScoreLinefc_${idN}`, 'setstuScoreLine', "rgba(255, 77, 109,0.6)");
+      let lineav = _this.drawLine(svg, pathav, "white", 1, '0', '1', `setstuScoreLineAv_${idN}`, 'setstuScoreLine');
+
+      let linepolyat = _this.drawLine(svg, curve_generator(pointsat), "none", 1, '0', '1', `setstuAttemptsLine_${idN}`, 'setstuAttemptsLine', "rgba(250, 210, 50,0.6)");
+      let linepolyfcat = _this.drawLine(svg, curve_generator(pointsfcat), "none", 1, '0', '1', `setstuAttemptsLinefc_${idN}`, 'setstuAttemptsLine', "rgba(181, 146, 9,0.6)");
+      let lineavat = _this.drawLine(svg, pathavat, "white", 1, '0', '1', `setstuAttemptsLineAv_${idN}`, 'setstuAttemptsLine');
+
+      // let linepolytd = _this.drawLine(svg, curve_generator(pointstd), "none", 1, '0','1' ,`setstuTimeDurLine_${idN}`, 'setstuTimeDurLine',"rgb(5, 13, 159)");
+      // let linepolyfctd = _this.drawLine(svg, curve_generator(pointsfctd), "none", 1, '0','1' ,`setstuTimeDurLinefc_${idN}`, 'setstuTimeDurLine',"rgb(5, 20, 90)");
+      // let lineavtd = _this.drawLine(svg, pathavtd, "white", 1, '0','1' ,`setstuTimeDurLineAv_${idN}`, 'setstuTimeDurLine');
+      // let linefcf = _this.drawLine(svg, pathfcf, "white", 1, '0','1' ,`setstuScoreLineFcf_${idN}`, 'setstuScoreLine');
+      // let linefcz = _this.drawLine(svg, pathfcz, "white", 1, '0','1' ,`setstuScoreLineFcz_${idN}`, 'setstuScoreLine');
+    },
+
+    drawRiver(svg, cx, cy, height, width, idN, set) {
+      const _this = this;
+      // let groupData = 
+      let data = [];
+      let keys = []
+      for (let i = 0; i < set.length; i++) {
+        let groupVal = set[i]['groupVal']
+        let temp = { "od": i };
+        for (let j = 0; j < groupVal.length; j++) {
+          if (keys.indexOf(("" + j)) == -1) {
+            keys.push("" + j);
+          }
+          let curScoringRate = groupVal[j]['scoringRate'];
+          temp[("" + j)] = curScoringRate;
+        }
+        data.push(temp)
+        // let curScoringRate = 
+      }
+      console.log(data)
+      var stack = d3.stack()
+        .keys(keys)
+        .order(d3.stackOrderInsideOut)
+        .offset(d3.stackOffsetWiggle);
+
+      let yRangeWidth = width;
+      let xStep = (width) / (data.length);
+      let stackData = stack(data)
+      // let maxx = Math.max.apply(Math, stackData.map(function (d) { return Math.max.apply(Math, d.map(function (c) { return c[1]; }));; }));
+      // let minx = Math.min.apply(Math, stackData.map(function (d) { return Math.max.apply(Math, d.map(function (c) { return c[1]; })); }));
+      console.log(stackData, minx, maxx)
+      let yScale = d3.scaleLinear().domain([-1, 1]).range([0, height]);
+
+      var area = d3.area()
+
+        .curve(d3.curveBasis)
+        .x(function (d) {
+          return d.data.od * xStep;
+        })
+        .y0(function (d) {
+          return yScale(d[0]);
+        })
+        .y1(function (d) {
+          return yScale(d[1]);
+        });
+
+      // let areaG = svg.append("g")
+      let typeColor = _this.stuColorList;
+      let colorLi = _this.mcolor;
+      for (let i = 0; i < stackData.length; i++) {
+
+        svg.append("path")
+          .attr("id", function (d) { return `${idN}_${stackData[i].key}` })
+          .attr("class", "river")
+          .attr("d", function (d) {
+            return area(stackData[i])
+          })
+          .attr("fill", function (d) {
+            return typeColor[stackData[i].key]
+          })
+          .attr("transform", `translate(${cx},${cy})`)
+          .on("mouseover", function (d) {
+            d3.selectAll(".river")
+            // .style("filter", "url()")
+            d3.select(this)
+            // .style("filter", "url(#coolShadow)")
+          })
+      }
+    },
+    drawBsLine(svg, sx, sy, c1x, c1y, c2x, c2y, tx, ty, stroke, width, opacity, idName, className) {
       d3.select(`#${idName}`).remove();
       let line = svg.append('path')
         .attr("class", className)
@@ -1573,7 +2090,7 @@ export default {
           let path = d3.path();
           path.moveTo(sx, sy);
           // path.quadraticCurveTo(cx, cy, tx, ty);
-          path.bezierCurveTo(c1x,c1y,c2x, c2y, tx, ty);
+          path.bezierCurveTo(c1x, c1y, c2x, c2y, tx, ty);
           return path.toString();
         })
         .style("fill", "none")
@@ -1582,18 +2099,18 @@ export default {
         .style('stroke-width', width);
       return line;
     },
-    drawTxt(svg, x, y, text, fill, fontsize = 12, idN) {
-        let txt = svg.append("text")
-          .attr("y", y)
-          .attr("x", x)
-          .attr("id", idN)
-          .attr("fill", fill)
-          .attr("font-size", fontsize)
-          .style("text-anchor", "start")
-          .text(text)
-        return txt;
+    drawTxt(svg, x, y, text, fill, fontsize = 12, idN,an='start') {
+      let txt = svg.append("text")
+        .attr("y", y)
+        .attr("x", x)
+        .attr("id", idN)
+        .attr("fill", fill)
+        .attr("font-size", fontsize)
+        .style("text-anchor", an)
+        .text(text)
+      return txt;
     },
-    drawLine(svg, path, stroke, width, stroke_dasharray = "0",opacity, idName, className) {
+    drawLine(svg, path, stroke, width, stroke_dasharray = "0", opacity, idName, className, fill = 'none') {
       d3.select(`#${idName}`).remove();
       let line = svg.append('path')
         .attr('d', path.toString())
@@ -1603,8 +2120,8 @@ export default {
         .attr("stroke-dasharray", stroke_dasharray)
         .attr('stroke-width', width)
         .style("stroke-opacity", opacity)
-        .attr('fill', 'none')
-        return line;
+        .attr('fill', fill)
+      return line;
     },
     getTreeData(data) {
       const _this = this;
@@ -1852,7 +2369,7 @@ export default {
         .attr('stroke-width', width)
         .attr('fill', 'none')
     },
-    drawCircle(svg, x, y, r, fill, opacity,stroke, width, className = 'entCircle', idName) {
+    drawCircle(svg, x, y, r, fill, opacity, stroke, width, className = 'entCircle', idName) {
       const _this = this;
       const oData = _this.data
       let circle = svg.append("circle")
@@ -1902,7 +2419,8 @@ export default {
       let proMaxMinDR = _this.getMaxMin(proData, 'conCount');
       let proMaxMinDC = _this.getMaxMin(proData, 'scoringRate');
 
-      let proAttrList = ['scoringRate', 'accuracy', 'totalAttempts',"totalAttemptsPeople", 'acceptedRate', 'conCount'];
+      // let proAttrList = ['scoringRate', 'timeDur', 'totalAttempts',"totalAttemptsPeople", 'acceptedRate', 'conCount'];
+      let proAttrList = ['scoringRate', 'acceptedRate', 'totalAttempts', 'conCount'];
       _this.proAttrList = proAttrList;
       let proAttrMaxMinList = [];
       for (let i = 0; i < proAttrList.length; i++) {
@@ -1916,7 +2434,7 @@ export default {
       let conMaxMinDR = _this.getMaxMin(conData, 'proCount');
       let conMaxMinDC = _this.getMaxMin(conData, 'scoringRate');
 
-      let conAttrList = ['scoringRate', 'accuracy', 'totalAttempts',"totalAttemptsPeople", 'acceptedRate', 'proCount'];
+      let conAttrList = ['scoringRate', 'totalAttempts', 'acceptedRate', 'proCount'];
       _this.conAttrList = conAttrList;
       let conAttrMaxMinList = [];
       for (let i = 0; i < conAttrList.length; i++) {
@@ -1926,8 +2444,8 @@ export default {
 
       _this.conMaxMinDR = conMaxMinDR;
       _this.conMaxMinDC = conMaxMinDC;
-      
-      this.$bus.$emit("Domin",[proAttrList,proAttrMaxMinList]);
+
+      this.$bus.$emit("Domin", [proAttrList, proAttrMaxMinList,conAttrList,conAttrMaxMinList]);
       _this.drawMain(svg);
       // });
     },
@@ -1956,7 +2474,7 @@ export default {
     d3.select(".chartTooltip").classed("hidden", true);
     this.updataGraph();
 
-    this.$bus.$on('stuColorList', (val) => {_this.stuColorList = val;});
+    this.$bus.$on('stuColorList', (val) => { _this.stuColorList = val; });
     this.$bus.$on('attrColorList', (val) => {
       _this.attrColorList = val;
     });
@@ -1966,6 +2484,8 @@ export default {
     this.$bus.$on('allProblem', (val) => {
       _this.problemsData = val;
       _this.updataGraph();
+      _this.updataSelectStudentListColor();
+      _this.updataParallelCoordinatesplotByPro();
     });
     this.$bus.$on('Submission', (val) => {
       _this.submissionsData = val;
@@ -2001,6 +2521,4 @@ export default {
 } 
 </script>
 
-<style>
-@import './index.css';
-</style>
+<style>@import './index.css';</style>
