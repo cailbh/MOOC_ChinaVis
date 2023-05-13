@@ -29,3 +29,48 @@
   top: 6px;
   right: 33px;
 }
+
+.scatterTooltip {
+  position: absolute;
+  width: 200px;
+  height: auto;
+  /* padding-left: 10px;
+  padding-top: -10px;
+  padding-bottom: -10px; */
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 5px;
+  /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); */
+  /* pointer-events: none; */
+}
+.scatterTooltip.hidden {
+  display: none;
+}
+.scatterTooltip p {
+  margin: 0;
+  font-size: 14px;
+  text-align: left;
+}
+.close {
+  position: absolute;
+  width: 490px;
+  height: 544px;
+  top: 100px;
+  right: 0;
+  /* padding-left: 10px;
+  padding-top: -10px;
+  padding-bottom: -10px; */
+  box-sizing: border-box;
+  background-color: none;
+  border-radius: 5px;
+  /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); */
+  /* pointer-events: none; */
+}
+.close.hidden {
+  display: none;
+}
+.close p {
+  margin: 0;
+  font-size: 14px;
+  text-align: left;
+}

@@ -35,9 +35,9 @@
   /* border-left: solid rgba(179, 179, 179, 1) 3px; */
   height: 100%;
   width: 100%;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
 }
 .rootdivisionLine{
   cursor: pointer;
@@ -91,4 +91,26 @@
 }
 .el-table--scrollable-x .el-table__body-wrapper{
   overflow: hidden;
+}
+
+.netTooltip {
+  position: absolute;
+  width: 200px;
+  height: auto;
+  /* padding-left: 10px;
+  padding-top: -10px;
+  padding-bottom: -10px; */
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 5px;
+  /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); */
+  /* pointer-events: none; */
+}
+.netTooltip.hidden {
+  display: none;
+}
+.netTooltip p {
+  margin: 0;
+  font-size: 14px;
+  text-align: left;
 }

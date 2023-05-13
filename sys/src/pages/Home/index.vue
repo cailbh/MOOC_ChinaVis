@@ -259,6 +259,7 @@ export default {
         'totalScore':0,
         'accuracy':0,
         'conCount':0,
+        'gvjg':-1,
         'conList':[],
         'scoringRate':0,
         'stu':[]
@@ -272,6 +273,7 @@ export default {
         tp['id'] = uid;
         tempAllStudent[uid] = (tp);
       }
+      valetemp['stuData']= tools.deepClone(tempAllStudent);
       setTimeData.forEach(set=>{
         set['timeSt'] = tools.time2mktime(set['time']);
       })
@@ -359,15 +361,19 @@ export default {
               // if (SelectStudentList.indexOf(userId)!=-1){
                 // console.log(StudentMap[userId],pro['groupVal'])
               if(StudentMap[userId]!=undefined){
+                pro['groupVal'][StudentMap[userId]]['stuData'][userId]['totalAttempts'] += 1;
+                pro['groupVal'][StudentMap[userId]]['stuData'][userId]['gvjg'] = 1;
                 pro['groupVal'][StudentMap[userId]]['stu'][userId] = 0;
                 pro['groupVal'][StudentMap[userId]]['totalAttempts'] +=1;
                 pro['groupVal'][StudentMap[userId]]['totalTimeDur'] += tools.time2mktime(submitAt) - timeSp;
                 if (proStatus == 'ACCEPTED'){
                   pro['groupVal'][StudentMap[userId]]['acceptedAttempts'] += 1;
+                  pro['groupVal'][StudentMap[userId]]['stuData'][userId]['acceptedAttempts'] += 1;
                   pro['groupVal'][StudentMap[userId]]['stu'][userId] = 1;
                 }
-                pro['groupVal'][StudentMap[userId]]
-                ['totalScore'] += score / pro['score'];
+                pro['groupVal'][StudentMap[userId]]['totalScore'] += score / pro['score'];
+                
+                pro['groupVal'][StudentMap[userId]]['stuData'][userId]['totalScore'] += score / pro['score'];
               }
               pro['stuData'][userId]['totalAttempts'] += 1;
               pro['stuData'][userId]['totalTimeDur'] += tools.time2mktime(submitAt) - timeSp;
@@ -416,6 +422,16 @@ export default {
             groupVal[j]['scoringRate'] = groupVal[j]['totalScore'] / groupVal[j]['totalAttempts'];
             groupVal[j]['acceptedRate'] = groupVal[j]['acceptedAttempts'] / groupVal[j]['totalAttempts'];
             groupVal[j]['timeDur'] = groupVal[j]['totalTimeDur'] / groupVal[j]['totalAttempts'];
+
+            let stuData = groupVal[j]['stuData'];
+            Object.keys(stuData).forEach((s) => {
+
+              if (stuData[s]['totalAttempts'] != 0) {
+                stuData[s]['scoringRate'] = stuData[s]['totalScore'] / stuData[s]['totalAttempts'];
+                stuData[s]['acceptedRate'] = stuData[s]['acceptedAttempts'] / stuData[s]['totalAttempts'];
+                // stuData[s]['timeDur'] = stuData[s]['totalTimeDur'] / stuData[s]['totalAttempts'];
+              }
+            })
           }
         }
 

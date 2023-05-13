@@ -6,7 +6,17 @@
     <div class="panelHead">C</div>
     <div id="scatterCantain" ref="scatterCantain" class="panelBody">
     </div>
-    
+
+    <div class="scatterTooltip">
+      <p>
+        <br /><strong class="name"></strong>
+        <br /><strong class="sr"></strong>
+        <br /><strong class="bs"></strong>
+        <br /><strong class="ta"></strong>
+      </p>
+    </div>
+    <div class="close" ref="listen">
+    </div>
     <div id="addGroupDiv" @click="addGroupClk" ref="addBtn">
       <img class="icons" :src="addGroupUrl">
     </div>
@@ -48,30 +58,30 @@ export default {
   data() {
     return {
       data: '',
-      addGroupUrl:require("@/assets/img/addGroup.png"),
-      delGroupUrl:require("@/assets/img/delGroup.png"),
-      confirmGroupUrl:require("@/assets/img/confirmGroup.png"),
-      scatterHeight:0,
-      selectStartX:0,
-      selectStartY:0,
-      selectEndX:0,
-      selectEndY:0,
-      selectGroupId:-1,
-      selectGroup:[],
-      stuAttrList:[],
-      stuAttrMaxMinList:[],
-      SelectStudentList:[],
-      groupData:[],
-      selectClick:0,
+      addGroupUrl: require("@/assets/img/addGroup.png"),
+      delGroupUrl: require("@/assets/img/delGroup.png"),
+      confirmGroupUrl: require("@/assets/img/confirmGroup.png"),
+      scatterHeight: 0,
+      selectStartX: 0,
+      selectStartY: 0,
+      selectEndX: 0,
+      selectEndY: 0,
+      selectGroupId: -1,
+      selectGroup: [],
+      stuAttrList: [],
+      stuAttrMaxMinList: [],
+      SelectStudentList: [],
+      groupData: [],
+      selectClick: 0,
       problemsData: [],
       proSetOriData: [],
       submissionsData: [],
       studentsData: [],
       conceptsData: [],
       conceptTree: [],
-      proSetData:[],
-      interY:10,
-      attrColorList:[],
+      proSetData: [],
+      interY: 10,
+      attrColorList: [],
       problemConceptData: [],
       userProblemData: [],
       MaxMinX: [],
@@ -82,30 +92,33 @@ export default {
       conMaxMinDC: [],
       conAttrList: [],
       conAttrMaxMinList: [],
-      Ent_problem:[],
-      Ent_concept:[],
-      entG:"",
-      entSetG:"",
-      entbySetG:"",
-      relG:"",
+      Ent_problem: [],
+      Ent_concept: [],
+      entG: "",
+      entSetG: "",
+      entbySetG: "",
+      relG: "",
       curProblemId: '',
       curConceptId: '',
-      curProblemSetId:'',
+      curProblemSetId: '',
       selectProblemId: '',
       curConceptId: '',
       selectConceptId: '',
-      proX:500,
-      proY:0,
-      setX:800,
-      setY:0,
-      treeX:50,
-      treeY:0,
-      proStepY:0,
-      conStepY:0,
+      proX: 500,
+      proY: 0,
+      setX: 800,
+      setY: 0,
+      treeX: 50,
+      treeY: 0,
+      proStepY: 0,
+      conStepY: 0,
       rootSvg: null,
+      rootSvgf: null,
       groupsSvg: null,
       arcG: null,
       backG: null,
+      scatterZoom: null,
+      jgDrag: true,
       curEntId: '',
       minDImportance: 0,
       maxDImportance: 0,
@@ -119,8 +132,8 @@ export default {
       importanceCompute_color: null,
       relevanceScale_linear: null,
       scatterGTransformK: 1,
-      scatterGTransformX: 10,
-      scatterGTransformY: 10,
+      scatterGTransformX: 0,
+      scatterGTransformY: 0,
       scatterSvgScale: 1,
       moveTimer: null,
       moveFlag: false,
@@ -129,19 +142,19 @@ export default {
       stepX: 80,
       stepY: 100,
       typeXMap: {
-        "TRUE_OR_FALSE":0,
-        "MULTIPLE_CHOICE":1,
-        "FILL_IN_THE_BLANK":2,
-        "PROGRAMMING":3,
-        "CODE_COMPLETION":4,
-        "MULTIPLE_CHOICE_MORE_THAN_ONE_ANSWER":5
+        "TRUE_OR_FALSE": 0,
+        "MULTIPLE_CHOICE": 1,
+        "FILL_IN_THE_BLANK": 2,
+        "PROGRAMMING": 3,
+        "CODE_COMPLETION": 4,
+        "MULTIPLE_CHOICE_MORE_THAN_ONE_ANSWER": 5
       },
       circleInterval: 55,
       width: 0,
       height: 0,
       curToolState: 'unEdit',
       margin: { top: 1, right: 2, bottom: 0, left: 2 },
-      stuColorList:[],
+      stuColorList: [],
       mcolor: [
         "rgb(255,60,60)",
         "rgb(155,20,100)",
@@ -176,7 +189,7 @@ export default {
         "rgb(168,168,255)",
         "rgb(200,200,200)",
       ],
-      attrColorList:[
+      attrColorList: [
         "rgb(0, 125, 104)",
         "#6f8be0",
         "#ff9c9c",
@@ -188,43 +201,53 @@ export default {
   },
 
   watch: {
-    selectGroupId(val){
+    selectGroupId(val) {
       const _this = this;
-      this.$refs.scatterCantain.addEventListener("mousedown", _this.mouseDown);
+      this.$refs.listen.addEventListener("mousedown", _this.mouseDown);
     },
-
-    SelectStudentList:{
-      deep:true,
-      handler(val){
+    groupsSvg: {
+      deep: true,
+      handler(val) {
+        console.log(val)
+        var content = this.groupsSvg.html();
+        this.rootSvgf.html(content)
+        this.drawFigureAnnotation();
+      }
+    },
+    SelectStudentList: {
+      deep: true,
+      handler(val) {
         let entG = this.entG;
         this.updataScatter();
         this.drawContour(entG);
       }
-  },
-    selectGroup(val){
+    },
+    selectGroup(val) {
       const _this = this;
-      console.log(val);
       d3.selectAll(".stuGroup").remove();
       let num = val.length;
-      let backG = _this.backG;
+      let backG = _this.rootSvgf;
       let colorList = _this.stuColorList;
-      for(let i=0;i<num;i++){
-        let cx = 10+i*40;
-        let cy = 10;
-        let r = 15;
+      for (let i = 0; i < num; i++) {
+        let cx = 20 + i * 40;
+        let cy = 500;
+        let r = 12;
         let fill = colorList[i];
         let opacity = 1;
-        let circle = _this.drawCircle(backG, cx, cy, r, "white", opacity,fill,3 ,'stuGroup', `stuGroup_${i}`);
-        circle.on("click",function(){
-          d3.selectAll(`.stuGroup`).attr("opacity",0.1);
-          d3.select(this).attr("opacity",1);
+        let circle = _this.drawCircle(backG, cx, cy, r, "white", opacity, fill, 3, 'stuGroup', `stuGroup_${i}`);
+        circle.on("click", function () {
+          d3.selectAll(`.stuGroup`).attr("opacity", 0.1);
+          d3.select(this).attr("opacity", 1);
           let id = d3.select(this).attr("id").split("_")[1];
           _this.selectGroupId = id;
-        }).on("mouseover",function(){
-          d3.selectAll(`.stuGroup`).attr("opacity",0.1);
-          d3.select(this).attr("opacity",1);
-          _this.$refs.scatterCantain.removeEventListener("mouseup", _this.mouseUp);
-          _this.$refs.scatterCantain.removeEventListener("mousedown", _this.mouseDown);
+
+          d3.select(".close").classed("hidden", false);
+        }).on("mouseover", function () {
+          d3.selectAll(`.stuGroup`).attr("opacity", 0.1);
+          d3.select(this).attr("opacity", 1);
+          _this.$refs.listen.removeEventListener("mouseup", _this.mouseUp);
+          _this.$refs.listen.removeEventListener("mousedown", _this.mouseDown);
+          _this.jgDrag = false;
         })
       }
     },
@@ -233,10 +256,10 @@ export default {
   },
   methods: {
 
-    addGroupClk(){
+    addGroupClk() {
       const _this = this;
       let selectStuGroup = _this.selectGroup;
-      if(selectStuGroup.length<5)
+      if (selectStuGroup.length < 5)
         selectStuGroup.push([]);
       _this.selectGroup = selectStuGroup;
       // d3.select(`#addGroupDiv`)
@@ -244,10 +267,10 @@ export default {
       //   return `right:${450-(selectStuGroup.length)*40}px`
       // });
     },
-    delGroupClk(){
+    delGroupClk() {
       const _this = this;
       let selectStuGroup = _this.selectGroup;
-      if(selectStuGroup.length>0)
+      if (selectStuGroup.length > 0)
         selectStuGroup.pop();
       _this.selectGroup = selectStuGroup;
       // d3.select(`#addGroupDiv`)
@@ -255,10 +278,10 @@ export default {
       //   return `right:${450-(selectStuGroup.length)*40}px`
       // });
     },
-    confirmGroupClk(){
+    confirmGroupClk() {
       const _this = this;
       let selectStuGroup = _this.selectGroup;
-      
+
       this.$bus.$emit("SelectedStu", _this.SelectStudentList);
       // d3.select(`#addGroupDiv`)
       // .attr("style", function(){
@@ -277,23 +300,24 @@ export default {
       let scatterGTransformX = _this.scatterGTransformX;
       let scatterGTransformY = _this.scatterGTransformY;
       let scatterGTransformK = _this.scatterGTransformK;
-      let groups = svg.append("g").attr("id", "ggroups").attr("width", width).attr("height", height)
+
+      let groups = svg.append("g").attr("id", "ggroups").attr("class", "groups").attr("width", width).attr("height", height)
         .attr("transform", "translate(" + scatterGTransformX + ',' + scatterGTransformY + ") scale(" + scatterGTransformK + ")");
       this.groupsSvg = groups;
 
-      let backG = groups.append("g").attr("id", "gbackG").attr("width", width).attr("height", height);
-      let arcG = groups.append("g").attr("id", "garcG").attr("width", width).attr("height", height);
-      let relG = groups.append("g").attr("id", "grelG").attr("width", width).attr("height", height);
-      let entSetG = groups.append("g").attr("id", "gentSetG").attr("width", width).attr("height", height);
-      let entbySetG = groups.append("g").attr("id", "gentbySetG").attr("width", width).attr("height", height);
-      let entG = groups.append("g").attr("id", "gentG").attr("width", width).attr("height", height);
-      let frontG = groups.append("g").attr("id", "gfrontG").attr("width", width).attr("height", height);
+      let backG = groups.append("g").attr("id", "gbackG").attr("class", "groups").attr("width", width).attr("height", height);
+      let arcG = groups.append("g").attr("id", "garcG").attr("class", "groups").attr("width", width).attr("height", height);
+      let relG = groups.append("g").attr("id", "grelG").attr("class", "groups").attr("width", width).attr("height", height);
+      let entSetG = groups.append("g").attr("id", "gentSetG").attr("class", "groups").attr("width", width).attr("height", height);
+      let entbySetG = groups.append("g").attr("id", "gentbySetG").attr("class", "groups").attr("width", width).attr("height", height);
+      let entG = groups.append("g").attr("id", "gentG").attr("class", "groups").attr("width", width).attr("height", height);
+      let frontG = groups.append("g").attr("id", "gfrontG").attr("class", "groups").attr("width", width).attr("height", height);
 
-      let MaxMinX =_this.MaxMinX;
+      let MaxMinX = _this.MaxMinX;
       let MaxMinY = _this.MaxMinY;
 
-      let xSize_linear = d3.scaleLinear().domain([MaxMinX[1], MaxMinX[0]]).range([30,width-30]);
-      let ySize_linear = d3.scaleLinear().domain([MaxMinY[1], MaxMinY[0]]).range([30,height-30]);
+      let xSize_linear = d3.scaleLinear().domain([MaxMinX[1], MaxMinX[0]]).range([30, width - 30]);
+      let ySize_linear = d3.scaleLinear().domain([MaxMinY[1], MaxMinY[0]]).range([30, height - 30]);
 
       _this.arcG = arcG;
       _this.entG = entG;
@@ -301,6 +325,8 @@ export default {
       _this.entbySetG = entbySetG;
       _this.relG = relG;
       _this.backG = backG;
+      _this.scatterZoom = scatterZoom;
+      let copyg = _this.rootSvgf.select("#ggroups");
       let interval = _this.circleInterval;
 
 
@@ -312,97 +338,165 @@ export default {
       var scatterZoom = d3.zoom()
         .scaleExtent([0, 100])
         .on("start", (e) => {
-          sty = e.transform.y;
-          stx = e.transform.x;
-          stk = e.transform.k;
+          if (_this.jgDrag) {
+            sty = e.transform.y;
+            stx = e.transform.x;
+            stk = e.transform.k;
+          }
         })
         .on('zoom', (e) => {
-          scatterGTransformX = _this.scatterGTransformX + e.transform.x - stx;
-          scatterGTransformY = _this.scatterGTransformY + e.transform.y - sty;
-          scatterGTransformK = _this.scatterGTransformK + e.transform.k - stk;
-          groups.attr('transform', 'translate(' + (scatterGTransformX) + ',' + (scatterGTransformY) + ') scale(' + (scatterGTransformK) + ')')
+          if (_this.jgDrag) {
+            scatterGTransformX = _this.scatterGTransformX + e.transform.x - stx;
+            scatterGTransformY = _this.scatterGTransformY + e.transform.y - sty;
+            scatterGTransformK = _this.scatterGTransformK + e.transform.k - stk;
+            groups.attr('transform', 'translate(' + (scatterGTransformX) + ',' + (scatterGTransformY) + ') scale(' + (scatterGTransformK) + ')')
+            _this.rootSvgf.selectAll(".groups").attr('transform', 'translate(' + (scatterGTransformX) + ',' + (scatterGTransformY) + ') scale(' + (scatterGTransformK) + ')')
+          }
         })
         .on('end', (e) => {
-          _this.scatterGTransformX = scatterGTransformX;
-          _this.scatterGTransformY = scatterGTransformY;
-          _this.scatterGTransformK = scatterGTransformK;
-          groups.attr('transform', 'translate(' + (scatterGTransformX) + ',' + (scatterGTransformY) + ') scale(' + (scatterGTransformK) + ')')
+          if (_this.jgDrag) {
+            _this.scatterGTransformX = scatterGTransformX;
+            _this.scatterGTransformY = scatterGTransformY;
+            _this.scatterGTransformK = scatterGTransformK;
+            groups.attr('transform', 'translate(' + (scatterGTransformX) + ',' + (scatterGTransformY) + ') scale(' + (scatterGTransformK) + ')')
+            _this.groupsSvg = groups;
+          }
         });
 
-        // svg.call(scatterZoom);
-
+      svg.call(scatterZoom);
+      d3.select(".close").classed("hidden", true);
+      d3.select(".scatterTooltip").classed("hidden", true);
+      // svg.call(d3.zoom().on('start', null).on('zoom',null).on('end', null))
 
       let attrList = _this.stuAttrList;
       let stuAttrMaxMinList = _this.stuAttrMaxMinList;
 
-      let rSize_linear = d3.scaleLinear().domain([stuAttrMaxMinList[0][1], stuAttrMaxMinList[0][0]]).range([3,8]);
-      
+      let rSize_linear = d3.scaleLinear().domain([stuAttrMaxMinList[0][1], stuAttrMaxMinList[0][0]]).range([3, 8]);
+
       let stuMaxColor = _this.stuMaxColor;
       let stuMinColor = _this.stuMinColor;
       let stuColor_linear = d3.scaleLinear().domain([stuAttrMaxMinList[0][1], stuAttrMaxMinList[0][0]]).range([0, 1]);
-      let stuCompute_color = d3.interpolate(stuMinColor,stuMaxColor);
+      let stuCompute_color = d3.interpolate(stuMinColor, stuMaxColor);
 
-        let groupData = tools.deepClone(_this.groupData);
-        console.log(groupData);
-        let colorList = _this.mcolor;
-        for(let i=0;i<groupData.length;i++){
-          let cx = xSize_linear(groupData[i]['x']);
-          let cy = ySize_linear(groupData[i]['y']);
-          let sId = groupData[i]['id']
-          groupData[i]['cx'] = cx;
-          groupData[i]['cy'] = cy;
-          groupData[i]['r'] = rSize_linear(groupData[i][attrList[0]]);
-          groupData[i]['fill'] = stuCompute_color(stuColor_linear(groupData[i][attrList[0]])) //'grey'//colorList[parseInt(groupData[i]['kmeansC'])];
-        }
+      let groupData = tools.deepClone(_this.groupData);
+      let colorList = _this.mcolor;
+      for (let i = 0; i < groupData.length; i++) {
+        let cx = xSize_linear(groupData[i]['x']);
+        let cy = ySize_linear(groupData[i]['y']);
+        let sId = groupData[i]['id']
+        groupData[i]['cx'] = cx;
+        groupData[i]['cy'] = cy;
+        groupData[i]['r'] = rSize_linear(groupData[i][attrList[0]]);
+        groupData[i]['fill'] = stuCompute_color(stuColor_linear(groupData[i][attrList[0]])) //'grey'//colorList[parseInt(groupData[i]['kmeansC'])];
+      }
       _this.groupData = groupData;
       _this.updataScatter();
     },
-    drawContour(svg){
+
+    drawTxt(svg, x, y, text, fill, fontsize = 12, idN, an = 'start') {
+      let txt = svg.append("text")
+        .attr("y", y)
+        .attr("x", x)
+        .attr("id", idN)
+        .attr("fill", fill)
+        .attr("font-size", fontsize)
+        .style("text-anchor", an)
+        .text(text)
+      return txt;
+    },
+    drawFigureAnnotation() {
+      const _this = this;
+      let frontG = _this.rootSvgf;
+
+      let stuMaxColor = _this.stuMaxColor;
+      let stuMinColor = _this.stuMinColor;
+
+      let len = 6;
+
+      let Color_linear = d3.scaleLinear().domain([0, len]).range([0, 1]);
+      let Rsize_linear = d3.scaleLinear().domain([0, len]).range([1, 6]);
+      let Compute_color = d3.interpolate(stuMinColor, stuMaxColor);
+
+      let textsr = _this.drawTxt(frontG, 6, 15, "ScoreingRate:", "black", 10, `FigScater_con`);
+      let textat = _this.drawTxt(frontG, 6, 45, "Attempts:", "black", 10, `FigScater_con`);
+      let textbs = _this.drawTxt(frontG, 6, 75, "BestScore:", "black", 10, `FigScater_con`);
+      let prex = 0;
+      let prerx = 0;
+      let colorBestS = _this.attrColorList[1];
+      let colorAttempts = _this.attrColorList[2];
+
+      _this.drawRect(frontG, 10, 58, 40, 5, 0, "rgb(230,230,230)", "1", "grey", "1", `FigScater_conRectColorB`, 'FigScater');
+      _this.drawRect(frontG, 10, 58, 30, 5, 0, colorAttempts, "1", "grey", "1", `FigScater_conRectColor`, 'FigScater');
+
+      _this.drawRect(frontG, 10, 88, 40, 5, 0, "rgb(230,230,230)", "1", "grey", "1", `FigScater_conRectB`, 'FigScater');
+      _this.drawRect(frontG, 10, 88, 30, 5, 0, colorBestS, "1", "grey", "1", `FigScater_conRect`, 'FigScater');
+
+      let path1 = d3.path();
+      let points = [[10, 50], [10, 54], [14, 50], [10, 54], [14, 58], [10, 54], [10, 58], [10, 54], [40, 54], [40, 54], [36, 50], [40, 54], [36, 58], [40, 54], [40, 50], [40, 58]]
+      let points2 = [[10, 80], [10, 84], [14, 80], [10, 84], [14, 88], [10, 84], [10, 88], [10, 84], [40, 84], [40, 84], [36, 80], [40, 84], [36, 88], [40, 84], [40, 80], [40, 88]]
+      let curve_generator = d3.line()
+        .x((d) => d[0])
+        .y((d) => d[1])
+      // .curve(d3.curveBasisClosed)
+      _this.drawLine(frontG, curve_generator(points), "black", 1, '0', '1', `line1`, 'FigScater_line1', "rgb(230,230,230)");
+      _this.drawLine(frontG, curve_generator(points2), "black", 1, '0', '1', `line2`, 'FigScater_line1', "rgb(230,230,230)");
+      for (let i = 0; i < len * 3; i++) {
+      }
+      for (let i = 0; i < len; i++) {
+        let color = Compute_color(Color_linear(i));
+        let circle = _this.drawCircle(frontG, 15 + prex, 23, Rsize_linear(i), color, 1, "red", "1", 'FigScater', `FigScater_conColor${i}`);
+        prex += Rsize_linear(i) * 2 + 4;
+        prerx += i * 4 + 2;
+      }
+
+    },
+    drawContour(svg) {
       const _this = this;
       d3.selectAll(".counter").remove();
       let groupData = tools.deepClone(_this.groupData);
       let SelectStudentList = _this.SelectStudentList;
       let nodesList = [
-        [],[],[],[],[]
+        [], [], [], [], []
       ]
-        for(let i=0;i<SelectStudentList.length;i++){
-          for(let j=0;j<SelectStudentList[i].length;j++){
-            let stuD = groupData.find(function(s){return s['id'] == SelectStudentList[i][j]});
-            let stuTemp = {
-              x:stuD['cx'],
-              y:stuD['cy'],
-              r:stuD['r']+6*3-3
-            }
-                 nodesList[i].push(stuTemp);
-            }
+      for (let i = 0; i < SelectStudentList.length; i++) {
+        for (let j = 0; j < SelectStudentList[i].length; j++) {
+          let stuD = groupData.find(function (s) { return s['id'] == SelectStudentList[i][j] });
+          let stuTemp = {
+            x: stuD['cx'],
+            y: stuD['cy'],
+            r: stuD['r'] + 6 * 3 - 3
+          }
+          nodesList[i].push(stuTemp);
         }
-        let colorList = _this.stuColorList;
-        // for(let i=0;i<groupData.length;i++){
-        //   let sId = groupData[i]['id']
-        //   // console.log(groupData[i]['kmeansC'])
-        //     nodesList[parseInt(groupData[i]['kmeansC'])].push({
-        //       x:groupData[i]['cx'],
-        //       y:groupData[i]['cy'],
-        //       r:groupData[i]['r']
-        //     })
-        // }
-        let k = 0;
-      nodesList.forEach(nodeList=>{
-      let path = contour(nodeList,30);
-      let contourData = _this.arcsToPaths(path)
-        contourData.forEach(contourD=>{
+      }
+      let colorList = _this.stuColorList;
+      // for(let i=0;i<groupData.length;i++){
+      //   let sId = groupData[i]['id']
+      //   // console.log(groupData[i]['kmeansC'])
+      //     nodesList[parseInt(groupData[i]['kmeansC'])].push({
+      //       x:groupData[i]['cx'],
+      //       y:groupData[i]['cy'],
+      //       r:groupData[i]['r']
+      //     })
+      // }
+      let k = 0;
+      nodesList.forEach(nodeList => {
+        let path = contour(nodeList, 60);
+        let contourData = _this.arcsToPaths(path)
+        contourData.forEach(contourD => {
           svg.append("path")
-          .attr("class","counter")
-          .attr("d", function() { return contourD.d; })
-          .style("stroke", colorList[parseInt(k)])
-          .style("stroke-width", 3)
-          .style("opacity",1)
-          // .attr("stroke-dasharray", "3")
-          // .attr("stroke-dashoffset", "30")
-          .attr("transform", function() {return contourD.transform;});})
-          k++;
+            .attr("class", "counter")
+            .attr("d", function () { return contourD.d; })
+            .style("stroke", colorList[parseInt(k)])
+            .style("stroke-width", 3)
+            .style("opacity", 1)
+            // .attr("stroke-dasharray", "3")
+            // .attr("stroke-dashoffset", "30")
+            .attr("transform", function () { return contourD.transform; });
         })
-      
+        k++;
+      })
+
     },
     drawPolygon(svg, points, idName, strokeWidth, stroke, fill) {
       let polygon = svg.append("polygon")
@@ -420,28 +514,28 @@ export default {
       let arcGen = d3.arc();
 
       arcs.forEach(function (arc) {
-          let startAngleTemp = arc.startAngle;
+        let startAngleTemp = arc.startAngle;
 
-          if (startAngleTemp > arc.endAngle) {
-            startAngleTemp -= 2 * Math.PI;
-          }
+        if (startAngleTemp > arc.endAngle) {
+          startAngleTemp -= 2 * Math.PI;
+        }
 
-          paths.push({
-            d: arcGen({
-              innerRadius: arc.radius,
-              outerRadius: arc.radius,
-              startAngle: startAngleTemp,
-              endAngle: arc.endAngle
-            }),
-            transform: "translate(" + arc.center.x + "," + arc.center.y + ")"
-          });
+        paths.push({
+          d: arcGen({
+            innerRadius: arc.radius,
+            outerRadius: arc.radius,
+            startAngle: startAngleTemp,
+            endAngle: arc.endAngle
+          }),
+          transform: "translate(" + arc.center.x + "," + arc.center.y + ")"
         });
+      });
 
-        return paths;
+      return paths;
     },
-    drawCircle(svg, x, y, r, fill, opacity,stroke, width, className = 'entCircle', idName) {
+    drawCircle(svg, x, y, r, fill, opacity, stroke, width, className = 'entCircle', idName) {
       const _this = this;
-      const oData = _this.data;
+
       d3.select(`#${idName}`).remove();
       let circle = svg.append("circle")
         .attr("id", idName)
@@ -455,85 +549,104 @@ export default {
         .attr("fill", fill)
       return circle;
     },
+
+    drawLine(svg, path, stroke, width, stroke_dasharray = "0", opacity, idName, className, fill = 'none') {
+      d3.select(`#${idName}`).remove();
+      let line = svg.append('path')
+        .attr('d', path.toString())
+        .attr('stroke', stroke)
+        .attr('class', className)
+        .attr('id', idName)
+        .attr("stroke-dasharray", stroke_dasharray)
+        .attr('stroke-width', width)
+        .style("stroke-opacity", opacity)
+        .attr('fill', fill)
+      return line;
+    },
     getMaxMin(data, attrname) {
       return [
         Math.max.apply(Math, data.map(function (d) { return d[attrname]; })),
         Math.min.apply(Math, data.map(function (d) { return d[attrname]; }))
       ]
     },
-    mouseDown(event){
+    mouseDown(event) {
       const _this = this;
+      _this.jgDrag = false;
+      console.log(_this.jgDrag)
       let entG = _this.entG
-      let sx = event.layerX-_this.scatterGTransformX;
-      let sy = event.layerY-_this.scatterGTransformY-40;
+      let sx = event.layerX - _this.scatterGTransformX;
+      let sy = event.layerY - _this.scatterGTransformY;
       _this.selectStartX = sx;
       _this.selectStartY = sy;
       // _this.drawRect(entG, sx, sy, 100, 100, 10, "grey", "5", "none","0.1", `SelectRect`, 'SelectRect');
-      this.$refs.scatterCantain.addEventListener("mousemove", _this.mouseMove);
+      this.$refs.listen.addEventListener("mousemove", _this.mouseMove);
     },
-    mouseMove(event){
+    mouseMove(event) {
       const _this = this;
       let entG = _this.entG
-      let tx = event.layerX-_this.scatterGTransformX;
-      let ty = event.layerY-_this.scatterGTransformY-40;
-      
+      let tx = event.layerX - _this.scatterGTransformX;
+      let ty = event.layerY - _this.scatterGTransformY;
+
       _this.selectEndX = tx;
       _this.selectEndY = ty;
-      let sx =_this.selectStartX;
+      let sx = _this.selectStartX;
       let sy = _this.selectStartY;
-      
-      
-      let minx = sx<tx?sx:tx;
-      let miny = sy<ty?sy:ty;
-      let maxx = sx>tx?sx:tx;
-      let maxy = sy>ty?sy:ty;
-      _this.drawRect(entG, minx, miny, maxx-minx, maxy-miny, 10, "grey", "5", "none","0.1", `SelectRect`, 'SelectRect');
-      this.$refs.scatterCantain.addEventListener("mouseup", _this.mouseUp);
+
+
+      let minx = sx < tx ? sx : tx;
+      let miny = sy < ty ? sy : ty;
+      let maxx = sx > tx ? sx : tx;
+      let maxy = sy > ty ? sy : ty;
+      _this.drawRect(entG, minx, miny, maxx - minx, maxy - miny, 10, "grey", "5", "none", "0.1", `SelectRect`, 'SelectRect');
+      this.$refs.listen.addEventListener("mouseup", _this.mouseUp);
       // this.$refs.scatterC.addEventListener("mousedown", _this.mouseDown);
     },
-    mouseUp(event){
+    mouseUp(event) {
       const _this = this;
-      this.$refs.scatterCantain.removeEventListener("mousemove", _this.mouseMove);
+      this.$refs.listen.removeEventListener("mousemove", _this.mouseMove);
+      _this.jgDrag = true;
+
+      d3.select(".close").classed("hidden", true);
       this.getSelectStudentList();
       // this.$refs.scatterCantain.removeEventL("mouseup", _this.mouseUp);
       // this.$refs.scatterC.addEventListener("mousedown", _this.mouseDown);
     },
-    getSelectStudentList(){
+    getSelectStudentList() {
       const _this = this;
       let temp = tools.deepClone(_this.SelectStudentList);
-      let groupData =   _this.groupData;
-      let sx =_this.selectStartX;
+      let groupData = _this.groupData;
+      let sx = _this.selectStartX;
       let sy = _this.selectStartY;
-      let tx =_this.selectEndX;
+      let tx = _this.selectEndX;
       let ty = _this.selectEndY;
       _this.selectStartX = 0;
       _this.selectStartY = 0;
       _this.selectEndX = 0;
       _this.selectEndY = 0;
-      let minx = sx<tx?sx:tx;
-      let miny = sy<ty?sy:ty;
-      let maxx = sx>tx?sx:tx;
-      let maxy = sy>ty?sy:ty;
+      let minx = sx < tx ? sx : tx;
+      let miny = sy < ty ? sy : ty;
+      let maxx = sx > tx ? sx : tx;
+      let maxy = sy > ty ? sy : ty;
       let SelectStudentList = [];
-        for(let i=0;i<groupData.length;i++){
-          let cx = groupData[i]['cx'];
-          let cy = groupData[i]['cy'];
-          let sId = groupData[i]['id'];
-          if(((cx>minx)&&(cx<maxx))&&((cy>miny)&&(cy<maxy))){
-            let jg = 0;
-            temp.forEach(t=>{
-              t.forEach(s=>{
-                if(s == sId)
-                  jg = 1;
-              })
-            }) 
-            if(jg==0)
-              SelectStudentList.push(sId);
-          }
+      for (let i = 0; i < groupData.length; i++) {
+        let cx = groupData[i]['cx'];
+        let cy = groupData[i]['cy'];
+        let sId = groupData[i]['id'];
+        if (((cx > minx) && (cx < maxx)) && ((cy > miny) && (cy < maxy))) {
+          let jg = 0;
+          temp.forEach(t => {
+            t.forEach(s => {
+              if (s == sId)
+                jg = 1;
+            })
+          })
+          if (jg == 0)
+            SelectStudentList.push(sId);
         }
+      }
       let selectGroupId = _this.selectGroupId;
-      temp[selectGroupId] =SelectStudentList;
-      _this.SelectStudentList= temp;
+      temp[selectGroupId] = SelectStudentList;
+      _this.SelectStudentList = temp;
     },
     drawRect(svg, x, y, w, h, rx, fill, strokeWidth, stroke, opacity, idName, className) {
       d3.select(`#${idName}`).remove();
@@ -551,65 +664,98 @@ export default {
         .attr("stroke-width", strokeWidth)
       return rect;
     },
-    updataScatter(){
+    updataScatter() {
       const _this = this;
       let entG = _this.entG;
-      let groupData =   _this.groupData;
-      let SelectStudentList  = _this.SelectStudentList;
-        for(let i=0;i<groupData.length;i++){
-          let cx = groupData[i]['cx'];
-          let cy = groupData[i]['cy'];
-          let r=groupData[i]['r']
-          let sId = groupData[i]['id']
-          let fill = groupData[i]['fill'];
-          let opacity =1;
-          // if(SelectStudentList.indexOf(sId)!=-1){
-          //   opacity = 1;
-          // }
-          _this.drawCircle(entG, cx, cy, r, fill, opacity,"grey","0", 'entStu', `entStu_${sId}`);
-          let stuAttrList = _this.stuAttrList;
-          let stuAttrMaxMinList = _this.stuAttrMaxMinList;
-          let attrLen = stuAttrList.length;
-          let colorList = _this.attrColorList;
-          let starR = 0;//-Math.PI/2;
-          let stepH = 7;
-          let perh = r;
-          for (let j = 0; j < attrLen; j++) {
-            if(stuAttrList[j] == 'scoringRate'){
+      let groupData = _this.groupData;
+      let SelectStudentList = _this.SelectStudentList;
+      for (let i = 0; i < groupData.length; i++) {
+        let cx = groupData[i]['cx'];
+        let cy = groupData[i]['cy'];
+        let r = groupData[i]['r']
+        let sId = groupData[i]['id']
+        let fill = groupData[i]['fill'];
+        let opacity = 1;
+        // if(SelectStudentList.indexOf(sId)!=-1){
+        //   opacity = 1;
+        // }
+        _this.drawCircle(entG, cx, cy, r, fill, opacity, "grey", "0", 'entStu', `entStu_${sId}`);
+        let stuAttrList = _this.stuAttrList;
+        let stuAttrMaxMinList = _this.stuAttrMaxMinList;
+        let attrLen = stuAttrList.length;
+        let colorList = _this.attrColorList;
+        let starR = 0;//-Math.PI/2;
+        let stepH = 7;
+        let perh = r;
+        for (let j = 0; j < attrLen; j++) {
+          if (stuAttrList[j] == 'scoringRate') {
 
-            }
-            else if(stuAttrList[j] == 'acceptedNum'){
-              
-            }
-            else{
-            let Angle_linear = d3.scaleLinear().domain([0, stuAttrMaxMinList[j][0]]).range([0,Math.PI*2]);
-            let h = perh+stepH;
-            var dataset = { startAngle:starR, endAngle: starR+Angle_linear(groupData[i][stuAttrList[j]]) }; //创建一个弧生成器
-            var datasetB = { startAngle:starR, endAngle: starR+Math.PI*2 }; //创建一个弧生成器
+          }
+          else if (stuAttrList[j] == 'acceptedNum') {
+
+          }
+          else {
+            let Angle_linear = d3.scaleLinear().domain([0, stuAttrMaxMinList[j][0]]).range([0, Math.PI * 2]);
+            let h = perh + stepH;
+            var dataset = { startAngle: starR, endAngle: starR + Angle_linear(groupData[i][stuAttrList[j]]) }; //创建一个弧生成器
+            var datasetB = { startAngle: starR, endAngle: starR + Math.PI * 2 }; //创建一个弧生成器
             var arcPath = d3.arc()
               .innerRadius(perh)
-              .outerRadius(h-1);
+              .outerRadius(h - 1);
             var arcPathBack = d3.arc()
               .innerRadius(1)
               .outerRadius(h + 2);
-              perh = h;
+            perh = h;
             var pathArc = arcPath(dataset);
             var pathArcB = arcPath(datasetB);
             let entColor = colorList[j];//importanceCompute_color(importanceColor_linear(curEnt['scoringRate']));
             // _this.drawArc(entG, 0, 0, arcPathBack(dataset), "#000", "#000", 'type', 0, 3);
-            _this.drawArc(entG, cx, cy, pathArcB, fill, "rgb(230,230,230)", 'typeB',`stuAttrB_${sId}_${j}`, 0, 0);
-            _this.drawArc(entG, cx, cy, pathArc, entColor, entColor, 'type',`stuAttr_${sId}_${j}`, 0, 0);}
+            _this.drawArc(entG, cx, cy, pathArcB, fill, "rgb(230,230,230)", 'typeB', `stuAttrB_${sId}_${j}`, 0, 0);
+            _this.drawArc(entG, cx, cy, pathArc, entColor, entColor, 'type', `stuAttr_${sId}_${j}`, 0, 0);
           }
-
         }
+
+        let circle = _this.drawCircle(entG, cx, cy, 25, fill, 0, "grey", "0", 'entStuF', `entStuF_${sId}_${i}`);
+        circle.on("mousemove", function (d) {
+          let ts = d3.select(this);
+          let id = ts.attr("id").split("_")[1];
+          _this.overScatterStuId = id;
+
+          _this.$bus.$emit("SelectingStu", _this.overScatterStuId);
+
+          let idod = ts.attr("id").split("_")[2];
+          let clasN = ts.attr("class");
+          let nametext = '';
+          let ent = groupData.find(function (c) { return c['id'] == id });
+          var yPosition = d.clientY + 20;
+          var xPosition = d.clientX + 20;
+          let srtext = ent['scoringRate'];
+          let totalAttemptsTxt = ent['totalAttempts'];
+          let bestScore = ent['bestScore']
+          var netTooltip = d3
+            .select(".scatterTooltip")
+            .style("left", xPosition + "px")
+            .style("top", yPosition + "px");
+          // 更新浮层内容
+          netTooltip.select(".name").text(`Student${i}`);
+          netTooltip.select(".bs").text(`bestScore: ${bestScore}`);
+          netTooltip.select(".ta").text(`totalAttempts: ${totalAttemptsTxt}`);
+          netTooltip.select(".sr").text(`scoringRate${srtext.toFixed(2)}`);
+          // 移除浮层hidden样式，展示浮层
+          netTooltip.classed("hidden", false);
+        }).on("mouseleave", function (d) {
+          _this.$bus.$emit("SelectingStu", "");
+          d3.select(".scatterTooltip").classed("hidden", true);
+        })
+      }
     },
-    
-    drawArc(svg, x, y, arcPath, stroke, fill, className,idN, stroke_dasharray = "0", width = 3) {
+
+    drawArc(svg, x, y, arcPath, stroke, fill, className, idN, stroke_dasharray = "0", width = 3) {
       d3.select(`#${idN}`).remove();
       svg.append("path")
         .attr("d", arcPath)
         .attr("class", className)
-        .attr("id",idN)
+        .attr("id", idN)
         .attr("transform", "translate(" + x + "," + y + ")")
         .attr("stroke", stroke)
         .attr('stroke-width', width)
@@ -626,15 +772,23 @@ export default {
       _this.height = height;
       d3.select("#scatterCantain").select("svg").remove()
       var svg = d3.select("#scatterCantain").append("svg")
-        .attr("width", width)
-        .attr("height", height);
-      _this.rootSvg = svg;
+        .attr("width", width - 50)
+        .attr("height", height - 50)
+        .attr('transform', 'translate(0,0)')
+        .style("position", "absolute");
 
+      var svgf = d3.select("#scatterCantain").append("svg")
+        .attr("width", width)
+        .attr("height", height)
+      _this.rootSvg = svg;
+      _this.rootSvgf = svgf;
+
+      _this.rootSvgFig = svg;
       let data = _this.groupData;
       let MaxMinX = _this.getMaxMin(data, 'x');
       let MaxMinY = _this.getMaxMin(data, 'y');
 
-      let stuAttrList = ['scoringRate', 'bestScore', 'totalAttempts','acceptedNum']//,'time']
+      let stuAttrList = ['scoringRate', 'bestScore', 'totalAttempts', 'acceptedNum']//,'time']
       _this.stuAttrList = stuAttrList;
       let stuAttrMaxMinList = [];
 
@@ -664,9 +818,9 @@ export default {
       _this.groupData = val;
       this.updataAll();
     });
-    
+
     // this.$bus.$on('attrColorList', (val) => {_this.attrColorList = val;});
-    this.$bus.$on('stuColorList', (val) => {_this.stuColorList = val;});
+    this.$bus.$on('stuColorList', (val) => { _this.stuColorList = val; });
     // this.$refs.scatterCantain.addEventListener("mousedown", _this.mouseDown); // 监听点击事件
     // this.$refs.movescatterRight.addEventListener("mousemove", _this.movescatterRight); // 监听点击事件
     // this.$refs.movescatterLeft.addEventListener("mouseleave", _this.leavescatterMove); // 监听点击事件
@@ -679,6 +833,4 @@ export default {
 } 
 </script>
 
-<style>
-@import './index.css';
-</style>
+<style>@import './index.css';</style>

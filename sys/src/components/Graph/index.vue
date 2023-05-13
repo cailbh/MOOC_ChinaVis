@@ -48,6 +48,7 @@ export default {
       toolAddRelMain: false,
       toolDelRel: false,
       detailsEntPro: [],
+      SelectingStudentId:"",
       groupData: [],
       SelectStudentList: [],
       problemsData: [],
@@ -85,7 +86,7 @@ export default {
       proX: 450,
       proY: 30,
       setWidth: 300,
-      setX: 870,
+      setX: 830,
       setY: 30,
       treeX: 50,
       treeY: 30,
@@ -187,7 +188,6 @@ export default {
     type(val) {
     },
     toolAddRel(val) {
-      console.log(val);
     },
     toolsState: {
       deep: true,
@@ -202,6 +202,22 @@ export default {
       deep: true,
       handler(val) {
         this.updataSelectStudentListColor();
+      }
+    },
+    SelectingStudentId(val){
+      console.log(val);
+      if(val == ""){
+          d3.selectAll(`.stuSetScoreLine`).attr("opacity", 1);
+          d3.selectAll(`.stuScoreLine`).attr("opacity", 1);
+      }
+      else{
+          d3.selectAll(`.stuSetScoreLine`).attr("opacity", 0.1).attr('stroke-width', 1);
+          d3.selectAll(`.stuScoreLine`).attr("opacity", 0.1).attr('stroke-width', 1);
+          
+          d3.select(`#stuScoreLine_av`).attr("opacity", 1).attr('stroke-width', 3);
+          d3.select(`#stuSetScoreLine_av`).attr("opacity", 1).attr('stroke-width', 3);
+          d3.select(`#stuSetScoreLine_${val}`).attr("opacity", 1).attr('stroke-width', 3);
+          d3.select(`#stuScoreLine_${val}`).attr("opacity", 1).attr('stroke-width', 3);
       }
     },
     graphGTransformY() {
@@ -253,13 +269,19 @@ export default {
           if (conId == val) {
             // d3.select(`#entCon_${conId}`)
             // .attr("opacity","1");
-            setEnt.push(proData);
+            if(setEnt.find(function(s){return s['id'] == proId})==undefined)
+              setEnt.push(proData);
             d3.select(`#entPro_${proId}`)
               .attr("opacity", "1");
             d3.select(`#proSetConRel_${conId}_${proSetId}`)
               .attr("opacity", "1");
           }
         })
+        
+      var compare = function (x, y) {//比较函数
+        return x["problemSetId"] > y["problemSetId"] 
+      };
+        setEnt.sort(compare)
         _this.detailsEntPro = setEnt;
       }
     },
@@ -331,6 +353,7 @@ export default {
       })
     },
     detailsEntPro(val) {
+
 
       this.$bus.$emit("selectedPro", val);
 
@@ -863,10 +886,24 @@ export default {
         let scoreValueList = _this.getMaxMinValue(tempPro['stuData'], "scoringRate");
         let acceptedValueList = _this.getMaxMinValue(tempPro['stuData'], "acceptedRate");
         let totalAttemptsValueList = _this.getMaxMinValue(tempPro['stuData'], "totalAttempts");
+        let groupVal = tempPro['groupVal'];
+
+        groupVal.forEach((group,g)=>{
+          let gscoreValueList = _this.getMaxMinValue(group['stuData'], "scoringRate",true);
+          let gacceptedValueList = _this.getMaxMinValue(group['stuData'], "acceptedRate",true);
+          let gtotalAttemptsValueList = _this.getMaxMinValue(group['stuData'], "totalAttempts",true);
+
+          tempPro['groupVal'][g]['scoreValueList'] = gscoreValueList;
+          tempPro['groupVal'][g]['acceptedValueList'] = gacceptedValueList;
+          tempPro['groupVal'][g]['totalAttemptsValueList'] = gtotalAttemptsValueList;
+        })
+
         // let Cname  = tempPro['name'];
         tempPro['scoreValueList'] = scoreValueList;
         tempPro['acceptedValueList'] = acceptedValueList;
         tempPro['totalAttemptsValueList'] = totalAttemptsValueList;
+
+
         tempPro['cx'] = cx//+typeXMap[tempPro['type']]*100;
         tempPro['cy'] = cy;
         tempPro['order'] = i;
@@ -932,8 +969,9 @@ export default {
       // this.updataPro_ConRel(); 
       _this.updataEntProblemSetBack();
       _this.updataProSet_ConRel();
-      _this.updataEntProblemDetail();
       _this.updataParallelCoordinatesplotBySet();
+      if (_this.detailsEntPro != [])
+        _this.updataEntProblemDetail();
       _this.drawFigureAnnotation();
 
     },
@@ -946,27 +984,27 @@ export default {
       let len = 6;
 
       let Color_linear = d3.scaleLinear().domain([0, len]).range([0, 1]);
-      let Color_linear2 = d3.scaleLinear().domain([0, len*3]).range([0, 1]);
+      let Color_linear2 = d3.scaleLinear().domain([0, len * 3]).range([0, 1]);
       let Rsize_linear = d3.scaleLinear().domain([0, len]).range([1, 6]);
       let Compute_color = d3.interpolate(currentConMinColor, currentConMaxColor);
-      let Compute_color1 = d3.interpolate("white",_this.setConCountColorMax);
-      let Compute_color2 = d3.interpolate("white",_this.setTypeCountColorMax);
-      let Compute_color3 = d3.interpolate(_this.setMinColor,_this.setMaxColor);
+      let Compute_color1 = d3.interpolate("white", _this.setConCountColorMax);
+      let Compute_color2 = d3.interpolate("white", _this.setTypeCountColorMax);
+      let Compute_color3 = d3.interpolate(_this.setMinColor, _this.setMaxColor);
 
       let currentConRectMaxColor = _this.entConRectMaxColor;
       let currentConRectMinColor = _this.entConRectMinColor;
       let rectConColor_linear = d3.scaleLinear().domain([0, len]).range([0, 1]);
       let rectConCompute_color = d3.interpolate("white", currentConRectMaxColor);
-      _this.drawCircle(frontG, 20, 1000, 10,currentConMaxColor , 1,currentConMaxColor,"1", 'FigAtt', `FigAtt_conColor`);
+      // _this.drawCircle(frontG, 20, 1000, 10, currentConMaxColor, 1, currentConMaxColor, "1", 'FigAtt', `FigAtt_conColor`);
 
       let textcon = _this.drawTxt(frontG, 10, 1065, "Concepts Value:", "black", 13, `FigAtt_con`);
       let textset = _this.drawTxt(frontG, 350, 1065, "Set Value:", "black", 13, `FigAtt_set`);
       let textsetSR = _this.drawTxt(frontG, 540, 1085, "ScoringRate:", "black", 10, `FigAtt_conColor`);
 
-      let textsetR = _this.drawTxt(frontG, 480, 15, "Concepts", "black", 13, `FigAtt_conColor`,"middle");
-      let textsetcon = _this.drawTxt(frontG, 560, 15, "Type", "black", 13, `FigAtt_conColor`,"middle");
-      let textsettype = _this.drawTxt(frontG, 640, 15, "ScoringRate", "black", 13, `FigAtt_conColor`,"middle");
-      let textsetRscor = _this.drawTxt(frontG, 720, 15, "Attempts", "black", 13, `FigAtt_conColor`,"middle");
+      let textsetR = _this.drawTxt(frontG, 480, 15, "Concepts", "black", 13, `FigAtt_conColor`, "middle");
+      let textsetcon = _this.drawTxt(frontG, 560, 15, "Type", "black", 13, `FigAtt_conColor`, "middle");
+      let textsettype = _this.drawTxt(frontG, 640, 15, "ScoringRate", "black", 13, `FigAtt_conColor`, "middle");
+      let textsetRscor = _this.drawTxt(frontG, 720, 15, "Attempts", "black", 13, `FigAtt_conColor`, "middle");
 
       // let textpro = _this.drawTxt(frontG, 800, 1065, "Problems Value:", "black", 13, `FigAtt_pro`);
       let text1 = _this.drawTxt(frontG, 10, 1085, "ScoringRate:", "black", 10, `FigAtt_conColor`);
@@ -984,9 +1022,9 @@ export default {
       let text8 = _this.drawTxt(frontG, 695, 1095, "High", "black", 10, `FigAtt_High`);
       let prex = 0;
       let prerx = 0;
-      for (let i = 0; i < len*3; i++) {
+      for (let i = 0; i < len * 3; i++) {
         let color3 = Compute_color3(Color_linear2(i));
-        
+
         _this.drawRect(frontG, 620 + 4 * i, 1077, 4, 10, 0, color3, "1", "none", "1", `FigAtt_setColor${i}`, 'FigAtt');
       }
       for (let i = 0; i < len; i++) {
@@ -1005,7 +1043,7 @@ export default {
         _this.drawRect(frontG, 250 + 12 * i, 1077, 10, 10, 0, rcolor, "1", "grey", "1", `FigAtt_conRectColor${i}`, 'FigAtt');
 
         _this.drawRect(frontG, 250 + prerx, 1097, i * 4, 10, 0, rectConCompute_color(rectConColor_linear(6)), "1", "grey", "1", `FigAtt_conRectWidth${i}`, 'FigAtt');
-        
+
         _this.drawRect(frontG, 450 + prerx, 1077, i * 4, 10, 0, color1, "1", "grey", "1", `FigAtt_setconRectWidth${i}`, 'FigAtt');
 
         _this.drawRect(frontG, 450 + prerx, 1097, i * 4, 10, 0, color2, "1", "grey", "1", `FigAtt_settypeRectWidth${i}`, 'FigAtt');
@@ -1158,7 +1196,7 @@ export default {
         let num = 0;
         let maxv = 0
         for (let j = 0; j < studentsData.length; j++) {
-          let proList = studentsData[i]['pro'];
+          let proList = studentsData[j]['pro'];
           let psData = proList.find(function (psd) { return psd['id'] == psId; });
           if (psData['totalScore'] != undefined) {
             // console.log(psData)
@@ -1353,9 +1391,9 @@ export default {
         let tx = parseFloat(proSlefg.attr("x"));
         let ty = parseFloat(proSlefg.attr("y")) + tranY + parseFloat(proSlefg.attr("height")) / 2;
         // console.log(sx,sy,tx,ty,prog.attr("x"),proSlefg.attr("y"),prog.attr("width"),prog.attr("height"),proSlefg.attr("height"))
-        let c1x = (sx) + 100;
+        let c1x = (sx) + 60;
         let c1y = (sy);
-        let c2x = (tx) - 100;
+        let c2x = (tx) - 60;
         let c2y = (ty);
         let fill = Ent_problem[i]['fill'];
         _this.drawBsLine(relG, sx, sy, c1x, c1y, c2x, c2y, tx, ty, fill, "1px", "0.4", `proSetRel_${pid}`, "proSetRel");
@@ -1568,59 +1606,84 @@ export default {
       let setEnt = _this.detailsEntPro;
 
       let setStepY = 50;
-      let setProWidth = 80;
-      let attrW = setProWidth / (attrLen);
+      let setProWidth = 200;
       let proAttrMaxMinList = _this.proAttrMaxMinList;
       let wSize_linear = d3.scaleLinear().domain([proMaxMinDR[1], proMaxMinDR[0]]).range([20, 100]);
 
-
+      let j = 0;
       for (let i = 0; i < setEnt.length; i++) {
         let curEntPro = setEnt[i];
         let pid = curEntPro['id'];
-        let gpro = Ent_problem.find(function(p){return p['id'] == pid; });
-        let groupVal = gpro['groupVal'];
+        let gpro = Ent_problem.find(function (p) { return p['id'] == pid; });
 
-        let cx = setX;
-        let cy = setY + i * setStepY;
-        let cH = setStepY - 20;
-        let cW = curEntPro['width']//wSize_linear(curEntPro['scoringRate']);
-        let fill = curEntPro['fill'];
-        let pOrder = curEntPro['order'];
-        let rectback = _this.drawRect(entG, cx, cy, 120, cH, 5, "grey", "10", "grey", "0.3", `proDetilB_${pid}`, 'proDetilB');
-        let rect = _this.drawRect(entG, cx, cy, cW, cH, 5, fill, "10", fill, "1", `proDetil_${pid}`, 'proDetil');
-        rect.on("click", function (d) {
-          let selectPro = d3.select(this);
-          let selectProId = selectPro.attr("id").split("_")[1];
-          _this.curProblemId = selectProId;
-        })
-        let scoreValueList = curEntPro['scoreValueList'];
-        let acceptedValueList = curEntPro['acceptedValueList'];
-        let totalAttemptsValueList = curEntPro['totalAttemptsValueList'];
-        let dmList = [scoreValueList, acceptedValueList, totalAttemptsValueList];
-        for (let j = 0; j < attrLen; j++) {
-          let attColor = _this.attrColorList[j];
-          let Compute_color = d3.interpolate("white", attColor);
-          let maxMin = proAttrMaxMinList[j];
-          let color_linear = d3.scaleLinear().domain([maxMin[1], maxMin[0]]).range([0, 1]);
-          let curAttrColor = Compute_color(color_linear(curEntPro[attrList[j]]));
-          let curP = _this.calcRsize(proAttrMaxMinList[j], curEntPro[attrList[j]], cH);
+        if (gpro != undefined) {
+          let groupVal = gpro['groupVal'];
+          let groupLen = groupVal.length;
+          setStepY = 50 + 10*groupLen;
+          let cx = setX;
+          let cy = setY + j * setStepY;
+          let cH = setStepY -20;
+          let cW = curEntPro['width']//wSize_linear(curEntPro['scoringRate']);
+          let fill = curEntPro['fill'];
+          let pOrder = curEntPro['order'];
+          let rectback = _this.drawRect(entG, cx, cy, setProWidth, cH, 5, "grey", "10", "grey", "0.3", `proDetilB_${pid}_${j}`, 'proDetilB');
+          let rect = _this.drawRect(entG, cx, cy, cW, cH, 5, fill, "10", fill, "1", `proDetil_${pid}`, 'proDetil');
+          j++;
+          rect.on("click", function (d) {
+            let selectPro = d3.select(this);
+            let selectProId = selectPro.attr("id").split("_")[1];
+            _this.curProblemId = selectProId;
+          })
+          let scoreValueList = curEntPro['scoreValueList'];
+          let acceptedValueList = curEntPro['acceptedValueList'];
+          let totalAttemptsValueList = curEntPro['totalAttemptsValueList'];
+          let dmList = [scoreValueList, acceptedValueList, totalAttemptsValueList];
+          let interW = setProWidth / (attrLen);
+          let attrW = interW;
+          let attrWA = interW/(groupLen+2);
+          for (let j = 0; j < attrLen; j++) {
+            let attColor = _this.attrColorList[j];
+            let Compute_color = d3.interpolate("white", attColor);
+            let maxMin = proAttrMaxMinList[j];
+            let color_linear = d3.scaleLinear().domain([maxMin[1], maxMin[0]]).range([0, 1]);
+            let curAttrColor = Compute_color(color_linear(curEntPro[attrList[j]]));
+            let curP = _this.calcRsize(proAttrMaxMinList[j], curEntPro[attrList[j]], cH);
 
-          _this.drawAttrreact(entG, cx + j * attrW, cy, attrW - 10, cH, dmList[j], attrList[j], curAttrColor, `proDetilsAttr_${pid}_${attrList[j]}`);
-          // let rectAttr = _this.drawRect(entG, cx+j*attrW, cy+cH-curP, attrW-10, curP, 1, attColor, "0.2", "grey","1", `proDetilAttr_${pid}_${attrList[j]}`, 'proDetilAttr');
-        }
-        let groupStepY = 10;
-        let gs_linear = d3.scaleLinear().domain([0,1]).range([0, cH]);
-        for (let g = 0; g < groupVal.length; g++) {
-          let curP = gs_linear(groupVal[g]['scoringRate']);
-          let gColor = _this.stuColorList[g];
-          let rectgroup = _this.drawRect(entG, cx+attrW*3+g*groupStepY, cy+cH-curP, groupStepY-5, curP, 1, gColor, "0.2", "grey","1", `proDetilGroup_${pid}_${g}`, 'proDetilGroup');
-        
+            _this.drawAttrreact(entG, cx + j * (interW), cy, attrW *0.8, cH, dmList[j], attrList[j], curAttrColor, `proDetilsAttr_${pid}_${attrList[j]}`,"grey",attColor);
+          } // let rectAttr = _this.drawRect(entG, cx+j*attrW, cy+cH-curP, attrW-10, curP, 1, attColor, "0.2", "grey","1", `proDetilAttr_${pid}_${attrList[j]}`, 'proDetilAttr');
+
+          let groupStepY = 10;
+          let gs_linear = d3.scaleLinear().domain([0, 1]).range([0, cH]);
+          for (let g = 0; g < groupLen; g++) {
+            let curP = gs_linear(groupVal[g]['scoringRate']);
+
+            // let 
+            let gscoreValueList = groupVal[g]['scoreValueList'];
+            let gacceptedValueList = groupVal[g]['acceptedValueList'];
+            let gtotalAttemptsValueList = groupVal[g]['totalAttemptsValueList'];
+            let gdmList = [gscoreValueList, gacceptedValueList, gtotalAttemptsValueList];
+            let gColor = _this.stuColorList[g];
+            // let rectgroup = _this.drawRect(entG, cx + attrW * 3 + g * groupStepY, cy + cH - curP, groupStepY - 5, curP, 1, gColor, "0.2", "grey", "1", `proDetilGroup_${pid}_${g}`, 'proDetilGroup');
+            
+            for (let j = 0; j < attrLen; j++) {
+              let attColor = _this.attrColorList[j];
+              let Compute_color = d3.interpolate("white", attColor);
+              let Compute_colorg = d3.interpolate("white", gColor);
+              let maxMin = proAttrMaxMinList[j];
+              let color_linear = d3.scaleLinear().domain([maxMin[1], maxMin[0]]).range([0, 1]);
+              let gcurAttrColor = Compute_color(color_linear(groupVal[g][attrList[j]]));
+              let gcurAttrGColor = Compute_colorg(color_linear(groupVal[g][attrList[j]]));
+
+              _this.drawAttrreact(entG, cx + j * (interW)+2+(g+0.5)*(attrWA), cy, attrWA, cH, gdmList[j], attrList[j], gcurAttrGColor, `proDetilsGroupAttr_${pid}_${g}_${attrList[j]}`,"grey",gColor);
+              // console.log(gdmList[j],attrList[j],curEntPro[attrList[j]],dmList[j])
+            }
+          }
         }
       }
 
       _this.updataPro_ProSetRel(_this.graphGTransformY);
     },
-    getMaxMinValue(data, valueName) {
+    getMaxMinValue(data, valueName,isGroupData = false) {
 
       let mind = 1000000;
       let maxd = -1000000;
@@ -1628,6 +1691,8 @@ export default {
       let num = 0;
       let arr = []
       Object.keys(data).forEach(stuD => {
+        if((!isGroupData)||(data[stuD]['gvjg'] != -1))
+        {
         maxd = (data[stuD][valueName] > maxd) ? data[stuD][valueName] : maxd;
         mind = (data[stuD][valueName] < mind) ? data[stuD][valueName] : mind;
         if (data[stuD][valueName] != undefined) {
@@ -1635,9 +1700,26 @@ export default {
           num += 1;
           arr.push(data[stuD][valueName])
         }
+      }
       });
+      
+      if (num != 0)
+        av /= num;
+      else
+        av = 0;
+      let fc = 0;
+      
+      arr.forEach(stuD => {
+          fc+=Math.pow(stuD - av, 2);
+      });
+
+      if (num != 0)
+        fc /= num;
+      else
+        fc = 0;
+
       var compare = function (x, y) {//比较函数
-        return x>y
+        return x > y
       };
       var mid; //中位数
       arr.sort(compare); //数组排序
@@ -1647,16 +1729,9 @@ export default {
       if (arr.length % 2 != 0) {
         mid = arr[(arr.length + 1) / 2]
       }
-
-      if (num != 0)
-        av /= num;
-      else
-        av = 0;
-      // if(!arr[arr.length/4])
-      // console.log(arr,arr.length/4,arr[arr.length/4])
-      return [mind, maxd, av,mid,arr[parseInt(arr.length/4)],arr[parseInt(arr.length/4*3)]]
+      return [mind, maxd, av, mid, arr[parseInt(arr.length / 4)], arr[parseInt(arr.length / 4 * 3)],fc]
     },
-    drawAttrreact(svg, cx, cy, w, h, data, valueName, attrColor, idN) {
+    drawAttrreactO(svg, cx, cy, w, h, data, valueName, attrColor, idN,boxColor = "grey" ) {
       const _this = this;
       let proAttrMaxMinList = _this.proAttrMaxMinList;
       let attrList = _this.proAttrList;
@@ -1669,7 +1744,12 @@ export default {
       let q2 = data[5]
       let len_linear = d3.scaleLinear().domain([0, 1]).range([0, h]);
       if (valueName == "totalAttempts") {
-        len_linear = d3.scaleLinear().domain([0, 67]).range([0, h]);
+        len_linear = d3.scaleLinear().domain([0, Math.sqrt(67)]).range([0, h]);
+        mind = Math.sqrt(mind);
+        maxd = Math.sqrt(maxd);
+        av = Math.sqrt(av);
+        q1 = Math.sqrt(q1);
+        q2 = Math.sqrt(q2);
       }
       let avp = len_linear(av);
       let maxp = len_linear(maxd);
@@ -1677,16 +1757,69 @@ export default {
       let midp = len_linear(mid);
       let q1p = len_linear(q1);
       let q2p = len_linear(q2);
-      let boxColor = "grey"
+      // let boxColor = "grey"
       // _this.drawRect(svg, cx, cy, w, h, 1, attrColor, "0.2", "grey", "1", `B_${idN}`, 'proDetilAttr');
-      _this.drawRect(svg, cx+3, cy + h - q2p, w-6, q2p - q1p, 1, attrColor, "1", boxColor, "1", `${idN}`, 'proDetilAttr');
+      _this.drawRect(svg, cx + 3, cy + h - q2p, w - 6, q2p - q1p, 1, attrColor, "1", boxColor, "1", `${idN}`, 'proDetilAttr');
       // _this.drawRect(svg, cx, cy + h - avp, w, 2, 1, "white", "0.2", "none", "1", `av_${idN}`, 'proDetilAttr');
-      _this.drawRect(svg, cx+3, cy + h - midp, w-6, 1, 1, boxColor, "0.2", "none", "1", `mid_${idN}`, 'proDetilAttr');
+      _this.drawRect(svg, cx + 3, cy + h - midp, w - 6, 1, 1, boxColor, "0.2", "none", "1", `mid_${idN}`, 'proDetilAttr');
       _this.drawRect(svg, cx, cy + h - maxp, w, 1, 1, boxColor, "0.2", "none", "1", `max_${idN}`, 'proDetilAttr');
       _this.drawRect(svg, cx, cy + h - minp, w, 1, 1, boxColor, "0.2", "none", "1", `min_${idN}`, 'proDetilAttr');
 
-      _this.drawRect(svg, cx+w/2-1, cy + h - maxp, 1, maxp-q2p, 1, boxColor, "0", "none", "1", `maxl_${idN}`, 'proDetilAttr');
-      _this.drawRect(svg, cx+w/2-1, cy + h - q1p, 1, q1p-minp, 1, boxColor, "0", "none", "1", `minl_${idN}`, 'proDetilAttr');
+      _this.drawRect(svg, cx + w / 2 - 1, cy + h - maxp, 1, maxp - q2p, 1, boxColor, "0", "none", "1", `maxl_${idN}`, 'proDetilAttr');
+      _this.drawRect(svg, cx + w / 2 - 1, cy + h - q1p, 1, q1p - minp, 1, boxColor, "0", "none", "1", `minl_${idN}`, 'proDetilAttr');
+      // _this.drawRect(svg, cx, cy + h - q1p, w, 2, 1, boxColor, "0.2", "none", "1", `q1_${idN}`, 'proDetilAttr');
+      // _this.drawRect(svg, cx, cy + h - q2p, w, 2, 1, boxColor, "0.2", "none", "1", `q2_${idN}`, 'proDetilAttr');
+
+    },
+    drawAttrreact(svg, cx, cy, w, h, data, valueName, attrColor, idN,boxColor = "grey",attColorO = 'none' ) {
+      const _this = this;
+      let proAttrMaxMinList = _this.proAttrMaxMinList;
+      let attrList = _this.proAttrList;
+      let maxMin = proAttrMaxMinList[attrList.indexOf(valueName)];
+      let mind = data[0];
+      let maxd = data[1];
+      let av = data[2];
+      let mid = data[3];
+      let q1 = data[4];
+      let q2 = data[5];
+      let fc = data[6];
+      console.log(fc)
+      let zfc = av+fc;
+      let ffc = av-fc;
+      let len_linear = d3.scaleLinear().domain([0, 1]).range([0, h]);
+      if (valueName == "totalAttempts") {
+        len_linear = d3.scaleLinear().domain([0, Math.sqrt(67)]).range([0, h]);
+        mind = Math.sqrt(mind);
+        maxd = Math.sqrt(maxd);
+        av = Math.sqrt(av);
+        q1 = Math.sqrt(q1);
+        q2 = Math.sqrt(q2);
+        zfc = Math.sqrt(zfc);
+        ffc = Math.sqrt(ffc);
+      }
+      let avp = len_linear(av);
+      let maxp = len_linear(maxd);
+      let minp = len_linear(mind);
+      let midp = len_linear(mid);
+      let q1p = len_linear(q1);
+      let q2p = len_linear(q2);
+      let zfcp = len_linear(zfc);
+      let ffcp = len_linear(ffc);
+      // let boxColor = "grey"
+      // _this.drawRect(svg, cx, cy, w, h, 1, attrColor, "0.2", "grey", "1", `B_${idN}`, 'proDetilAttr');
+      // _this.drawRect(svg, cx, cy + h - avp, w, 2, 1, "white", "0.2", "none", "1", `av_${idN}`, 'proDetilAttr');
+
+      _this.drawRect(svg, cx, cy + h - avp, w , avp - minp, 1, attrColor, "0.2", "white", "1", `mid_${idN}`, 'proDetilAttr');
+
+      _this.drawRect(svg, cx, cy + h - zfcp, w , zfcp - avp, 1, attColorO, "0.2", "none", "1", `zfc_${idN}`, 'proDetilAttr');
+      _this.drawRect(svg, cx, cy + h - avp, w , avp - ffcp, 1, attColorO, "0.2", "none", "1", `ffc_${idN}`, 'proDetilAttr');
+
+      _this.drawRect(svg, cx, cy + h - maxp, w, maxp - minp, 1, "none", "1", boxColor, "1", `${idN}`, 'proDetilAttr');
+      // _this.drawRect(svg, cx, cy + h - maxp, w, 1, 1, boxColor, "0.2", "none", "1", `max_${idN}`, 'proDetilAttr');
+      // _this.drawRect(svg, cx, cy + h - minp, w, 1, 1, boxColor, "0.2", "none", "1", `min_${idN}`, 'proDetilAttr');
+
+      // _this.drawRect(svg, cx + w / 2 - 1, cy + h - maxp, 1, maxp - q2p, 1, boxColor, "0", "none", "1", `maxl_${idN}`, 'proDetilAttr');
+      // _this.drawRect(svg, cx + w / 2 - 1, cy + h - q1p, 1, q1p - minp, 1, boxColor, "0", "none", "1", `minl_${idN}`, 'proDetilAttr');
       // _this.drawRect(svg, cx, cy + h - q1p, w, 2, 1, boxColor, "0.2", "none", "1", `q1_${idN}`, 'proDetilAttr');
       // _this.drawRect(svg, cx, cy + h - q2p, w, 2, 1, boxColor, "0.2", "none", "1", `q2_${idN}`, 'proDetilAttr');
 
@@ -1718,8 +1851,8 @@ export default {
         let rect = _this.drawRect(entSetG, cx, cy, width, height, 10, fill, "5", "none", "1", `proSet_${psid}`, 'proSet');
         // let rect1 = _this.drawRect(entSetG, cx, cy+height/3, width, 1, 1, "grey", "5", "none","1", `proSet1_${psid}`, 'proSet');
         // let rect2 = _this.drawRect(entSetG, cx, cy+height/3*2, width, 1, 1, "grey", "5", "none","1", `proSet2_${psid}`, 'proSet');
-        let rect1 = _this.drawRect(entSetG, cx + width / 3-25, cy, 1, height, 1, "white", "5", "none", "1", `proSet1_${psid}`, 'proSet');
-        let rect2 = _this.drawRect(entSetG, cx + width / 3 * 2-50, cy, 1, height, 1, "white", "5", "none", "1", `proSet2_${psid}`, 'proSet');
+        let rect1 = _this.drawRect(entSetG, cx + width / 3 - 25, cy, 1, height, 1, "white", "5", "none", "1", `proSet1_${psid}`, 'proSet');
+        let rect2 = _this.drawRect(entSetG, cx + width / 3 * 2 - 50, cy, 1, height, 1, "white", "5", "none", "1", `proSet2_${psid}`, 'proSet');
         rect.on("click", function (d) {
           let selectSet = d3.select(this);
           d3.selectAll(".proSet").attr("opacity", 0.1);
@@ -1729,7 +1862,7 @@ export default {
         })
 
         // _this.drawRiver(entSetG,cx+width/3*2+3,cy,height,width/3,`proSetRiver_${psid}`,proSetData[i]['set']);
-        _this.drawSetValuePoly(entSetG, cx + width /2+1, cy, height - 2, width / 2, `proSetValuePoly_${psid}`, proSetData[i]['set']);
+        _this.drawSetValuePoly(entSetG, cx + width / 2 + 1, cy, height - 2, width / 2, `proSetValuePoly_${psid}`, proSetData[i]['set']);
         // let min1w = height/3;
         // let max1w = width/9;       
         // let min1h = 10;
@@ -1822,7 +1955,7 @@ export default {
           let color = typeCompute_color(typeColor_linear(typeDistribution[typeD]))
           // let disRect = _this.drawRect(entSetG, cx+(max2w)*j, cy+max2h+max2h - ch,max2w-5, ch, 1, color, "1", "white","1", `proSettypeAttr-${psid}-${typeD}`, 'proSettypeAttr');
           // let disRectB = _this.drawRect(entSetG, cx + (width / 3)-25 , cy + (max2h) * j, max2w, max2h - 3, 1, "none", "1", "white", "1", `proSettypeAttrB-${psid}-${typeD}`, 'proSettypeAttrB');
-          let disRect = _this.drawRect(entSetG, cx + (width / 3) -23, cy + (max2h) * j, ch, max2h - 3, 1, color, "1", "white", "1", `proSettypeAttr-${psid}-${typeD}`, 'proSettypeAttr');
+          let disRect = _this.drawRect(entSetG, cx + (width / 3) - 23, cy + (max2h) * j, ch, max2h - 3, 1, color, "1", "white", "1", `proSettypeAttr-${psid}-${typeD}`, 'proSettypeAttr');
           disRect.on("click", function (d) {
             let selectProAtt = d3.select(this);
             let Ids = selectProAtt.attr("id").split("-");
@@ -1848,7 +1981,7 @@ export default {
       let pathavtd = d3.path();
       let pathfcf = d3.path();
       let pathfcz = d3.path();
-      let wScale = d3.scaleLinear().domain([0, 1]).range([1, width / 2-2]);
+      let wScale = d3.scaleLinear().domain([0, 1]).range([1, width / 2 - 2]);
       let maxOriAttempts = 30;
       let wScaleat = d3.scaleLinear().domain([0, maxOriAttempts]).range([width / 2 + 5, width - 5]);
 
@@ -1873,8 +2006,12 @@ export default {
 
       let points = [];
       let pointsfc = [];
+      let pointsav = [];
+
       let pointsat = [];
       let pointsfcat = [];
+      let pointsavat = [];
+
       let pointstd = [];
       let pointsfctd = [];
 
@@ -1950,6 +2087,7 @@ export default {
         pathavtd.lineTo(cx + wScaletd(avTimeDur), cy + stepy * i);
 
         points.push([cx + wScale(maxScoreRate), cy + stepy * i])
+        pointsav.push([cx + wScale(avScoreRate), cy + stepy * i])
         pointsfc.push([cx + wScale(avScoreRate + fcScoreRate), cy + stepy * i])
         if (maxAttempts > maxOriAttempts)
           maxAttempts = maxOriAttempts;
@@ -1957,6 +2095,7 @@ export default {
           maxAttempts = 5
         }
         pointsat.push([cx + wScaleat(maxAttempts), cy + stepy * i]);
+        pointsavat.push([cx + wScaleat(avAttempts), cy + stepy * i])
         pointsfcat.push([cx + wScaleat(avAttempts + Math.sqrt(fcAttempts)), cy + stepy * i])
 
         pointstd.push([cx + wScaletd(maxTimeDur), cy + stepy * i]);
@@ -1995,16 +2134,20 @@ export default {
       let curve_generator = d3.line()
         .x((d) => d[0])
         .y((d) => d[1])
-        .curve(d3.curveBasisClosed )
-        // .curve(d3.curveLinearClosed)
+        .curve(d3.curveBasisClosed)
+      let curve_generatorb = d3.line()
+        .x((d) => d[0])
+        .y((d) => d[1])
+        .curve(d3.curveBasis)
+      // .curve(d3.curveLinearClosed)
 
       let linepoly = _this.drawLine(svg, curve_generator(points), "none", 1, '0', '1', `setstuScoreLine_${idN}`, 'setstuScoreLine', "rgba(253, 195, 190,0.6)");
       let linepolyfc = _this.drawLine(svg, curve_generator(pointsfc), "none", 1, '0', '1', `setstuScoreLinefc_${idN}`, 'setstuScoreLine', "rgba(255, 77, 109,0.6)");
-      let lineav = _this.drawLine(svg, pathav, "white", 1, '0', '1', `setstuScoreLineAv_${idN}`, 'setstuScoreLine');
+      let lineav = _this.drawLine(svg, curve_generatorb(pointsav), "white", 1, '0', '1', `setstuScoreLineAv_${idN}`, 'setstuScoreLine');
 
       let linepolyat = _this.drawLine(svg, curve_generator(pointsat), "none", 1, '0', '1', `setstuAttemptsLine_${idN}`, 'setstuAttemptsLine', "rgba(250, 210, 50,0.6)");
       let linepolyfcat = _this.drawLine(svg, curve_generator(pointsfcat), "none", 1, '0', '1', `setstuAttemptsLinefc_${idN}`, 'setstuAttemptsLine', "rgba(181, 146, 9,0.6)");
-      let lineavat = _this.drawLine(svg, pathavat, "white", 1, '0', '1', `setstuAttemptsLineAv_${idN}`, 'setstuAttemptsLine');
+      let lineavat = _this.drawLine(svg, curve_generatorb(pointsavat), "white", 1, '0', '1', `setstuAttemptsLineAv_${idN}`, 'setstuAttemptsLine');
 
       // let linepolytd = _this.drawLine(svg, curve_generator(pointstd), "none", 1, '0','1' ,`setstuTimeDurLine_${idN}`, 'setstuTimeDurLine',"rgb(5, 13, 159)");
       // let linepolyfctd = _this.drawLine(svg, curve_generator(pointsfctd), "none", 1, '0','1' ,`setstuTimeDurLinefc_${idN}`, 'setstuTimeDurLine',"rgb(5, 20, 90)");
@@ -2099,7 +2242,7 @@ export default {
         .style('stroke-width', width);
       return line;
     },
-    drawTxt(svg, x, y, text, fill, fontsize = 12, idN,an='start') {
+    drawTxt(svg, x, y, text, fill, fontsize = 12, idN, an = 'start') {
       let txt = svg.append("text")
         .attr("y", y)
         .attr("x", x)
@@ -2445,7 +2588,7 @@ export default {
       _this.conMaxMinDR = conMaxMinDR;
       _this.conMaxMinDC = conMaxMinDC;
 
-      this.$bus.$emit("Domin", [proAttrList, proAttrMaxMinList,conAttrList,conAttrMaxMinList]);
+      this.$bus.$emit("Domin", [proAttrList, proAttrMaxMinList, conAttrList, conAttrMaxMinList]);
       _this.drawMain(svg);
       // });
     },
@@ -2472,7 +2615,7 @@ export default {
     const _this = this;
 
     d3.select(".chartTooltip").classed("hidden", true);
-    this.updataGraph();
+    // this.updataGraph();
 
     this.$bus.$on('stuColorList', (val) => { _this.stuColorList = val; });
     this.$bus.$on('attrColorList', (val) => {
@@ -2485,7 +2628,7 @@ export default {
       _this.problemsData = val;
       _this.updataGraph();
       _this.updataSelectStudentListColor();
-      _this.updataParallelCoordinatesplotByPro();
+      // _this.updataParallelCoordinatesplotByPro();
     });
     this.$bus.$on('Submission', (val) => {
       _this.submissionsData = val;
@@ -2501,6 +2644,10 @@ export default {
     });
     this.$bus.$on('SelectedStu', (val) => {
       _this.SelectStudentList = val;
+      // _this.calStudent();
+    });
+    this.$bus.$on('SelectingStu', (val) => {
+      _this.SelectingStudentId = val;
       // _this.calStudent();
     });
     // this.$bus.$on('Concept', (val) => {
