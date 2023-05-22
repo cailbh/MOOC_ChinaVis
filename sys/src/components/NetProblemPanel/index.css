@@ -29,6 +29,15 @@
   height: 85%;
   width: 60%;
 }
+#iconUploadVideoel {
+  float: left;
+  width: 30px;
+  height: 30px !important;
+  transform: translateY(23px);
+  position: absolute;
+  top: 32px;
+  left: 314px;
+}
 #netPData{
   float: left;
   /* background-color: red; */
@@ -38,6 +47,15 @@
   padding-left: 0px;
   padding-right: 0px;
   padding-top: 0px;
+}
+.el-button{
+  font-size: 15px;
+  margin-left: 50px;
+  padding: 5px,35px,5px,35px;
+
+  height: 25px;
+  line-height: 5px;
+  /* width: ; */
 }
 .rootdivisionLine{
   cursor: pointer;

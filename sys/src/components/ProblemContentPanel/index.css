@@ -35,9 +35,9 @@
   /* border-left: solid rgba(179, 179, 179, 1) 3px; */
   height: 100%;
   width: 100%;
-  padding-left: 30px;
+  /* padding-left: 30px;
   padding-right: 30px;
-  padding-top: 10px;
+  padding-top: 10px; */
 }
 .rootdivisionLine{
   cursor: pointer;
@@ -87,9 +87,15 @@
   margin: 5px;
 }
 #procPanelDiv{
-  overflow-y: scroll;
-  scrollbar-width: none;
+  /* overflow-y: scroll;
+  scrollbar-width: none; */
 }
 .el-table--scrollable-x .el-table__body-wrapper{
   overflow: hidden;
+}
+#connectCon{
+  height: 20%;
+  position: absolute;
+  bottom: 0;
+  background-color: aqua;
 }

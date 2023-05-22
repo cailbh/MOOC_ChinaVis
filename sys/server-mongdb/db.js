@@ -89,7 +89,7 @@ const Models = {
    
     Concept: mongoose.model('concept', conceptsSchema, 'ent_concept'),
     // UserProblem: mongoose.model('userProblem', userProblemSchema, 'filterDS_user_problem'),
-    ConceptTree: mongoose.model('conceptTree', conceptTreeSchema, 'conceptTree'),
+    ConceptTree: mongoose.model('conceptTree', conceptTreeSchema, 'conceptTreeNew'),
     // ConceptProblem: mongoose.model('conceptProblem', conceptProblemSchema, 'filterDS_concept_problem'),
     ProblemConcept: mongoose.model('problemConcept', problemConceptSchema, 'createdRel'),//'problem_concept'),
     // Problem:mongoose.model('problem', problemsSchema, 'problems'),

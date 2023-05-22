@@ -3,16 +3,21 @@
 
 <template>
   <div class="netPPanel">
-    <div class="panelHead"></div>
+    <div class="panelHead">Correlation View</div>
     <!-- //SupportPanel</div> -->
     <div id="netPPanelDiv" class="panelBody" ref="netPPanelDiv">
       <div id="topicLine" ref="topicLine"></div>
       <div id="netPData" ref="netPData"></div>
       
-      <div class="netTooltip">
+      <div class="netTooltip toolTip">
         <p>
-          <br /><strong class="name"></strong>
-          <br /><strong class="text"></strong>
+          <br /><strong class="name toolTipAttr"></strong>
+          <br /><strong class="text toolTipAttr"></strong>
+          <br /><strong class="attr0 toolTipAttr"></strong>
+          <br /><strong class="attr1 toolTipAttr"></strong>
+          <br /><strong class="attr2 toolTipAttr"></strong>
+          <br /><strong class="attr3 toolTipAttr"></strong>
+          <br /><strong class="attr4 toolTipAttr"></strong>
         </p>
       </div>
 
@@ -38,6 +43,7 @@ export default {
       toolsState: '',
       proAttrList: [],
       selectedPro: [],
+      selectedCon: '',
       proAttrMaxMinList: [],
       conAttrList: [],
       conAttrMaxMinList: [],
@@ -59,11 +65,11 @@ export default {
       insertTargetEntId: "-1",
       sonList: [],
 
-      entProMinColor: "rgb(203, 230, 209)",
-      entProMaxColor: "rgb(22, 144, 207)",
+      entProMinColor: "rgb(255,255,255)",
+      entProMaxColor: "rgb(255, 0, 0)",
 
-      entConMinColor: "rgb(203, 230, 209)",
-      entConMaxColor: "rgb(22, 144, 207)",
+      entConMinColor: "rgb(255,255,255)",
+      entConMaxColor: "rgb(46, 117, 182)",
 
       margin: { top: 5, right: 5, bottom: 5, left: 5 },
     };
@@ -114,11 +120,10 @@ export default {
       //.attr("transform", "translate(1,320)");
       // _this.entG = entG;
       // _this.sonG = sonG;
-      // _this.drawProConNet(entG);
+      _this.drawProConNet(entG);
       _this.drawFigureAnnotation(svg);
     },
     drawProConNet(svg) {
-      console.log(111)
       const _this = this;
       let psvg = svg
       let width = psvg.attr("width");
@@ -151,7 +156,8 @@ export default {
       // let proList = proInList[proId];
       let proList = proInList;
       console.log(111)
-      console.log(proList)
+      console.log(proList,proRel);
+      let addEgList = {'0_0':[],"0_1":[],"1_0":[],"1_1":[]};
       // let conList = proRel[proId];
       for (let r = 0; r < problemConceptData.length; r++) {
         let curRel = problemConceptData[r];
@@ -159,8 +165,43 @@ export default {
         let cId = curRel['conceptId'];
         let type = curRel['type'];
         if (pId != proId) {
+        }            
+        if(proId != ""){
+          if (pId == proId) {
+            ent_edgeP.push({
+              source: pId,
+              target: cId,
+              type:type
+            })
+            if (ent_nodeP.find(function (d) { return d['id'] == pId }) == undefined) {
+              ent_nodeP.push({ "id": pId, "type": "problem" })
+            }
+            if (ent_nodeP.find(function (d) { return d['id'] == cId }) == undefined) {
+              ent_nodeP.push({ "id": cId, "type": "concept" })
+            }
+          }
+          else{
+            for(let g=0;g<proRel.length;g++){
+              let arr = proRel[g];
+              
+              if ((proList.indexOf(pId) != -1)) {
+                if(arr.indexOf(cId)!=-1){
+                  let tp = `${g}_${type}`;
+                  if(addEgList[tp].indexOf(pId)==-1)
+                    addEgList[tp].push(pId);
+                    ent_edgeP.push({
+                      source: pId,
+                      target: cId,
+                      type:type
+                    })
+                  if (ent_nodeP.find(function (d) { return d['id'] == pId }) == undefined) {
+                    ent_nodeP.push({ "id": pId, "type": "problem" })
+                  }
+              }}
+            }
+          }  
         }
-        if (1) {
+        else {
           // if ((conList.indexOf(cId)!=-1)) {
           if ((proList.indexOf(pId) != -1)) {
             ent_edgeP.push({
@@ -177,23 +218,41 @@ export default {
             if (ent_nodeP.find(function (d) { return d['id'] == cId }) == undefined) {
               ent_nodeP.push({ "id": cId, "type": "concept" })
             }
+
           }
         }
       }
+      if(proId!=''){
+        Object.keys(addEgList).forEach(e=>{
+          let preId = proId
+          addEgList[e].forEach(sId=>{
+            addEgList[e].forEach(tId=>{
+                {ent_edgeP.push({
+                  source: sId,
+                  target: tId,
+                  type:"3"
+                })}
+                // preId = sId
+            })
+          })
+      })}
+      
+      console.log(ent_edgeP);
+
       let svgWidth = width;
       let svgHeight = height;
 
       var forceSimulationP = d3.forceSimulation()
         .force("link", d3.forceLink().id((d) => { return d.id }))
-        .force("charge", d3.forceManyBody().strength(parseInt(-ent_nodeP.length) * 1.5))
+        .force("charge", d3.forceManyBody().strength(parseInt(-ent_nodeP.length-ent_edgeP.length*1.2) * 1.5))
         .force("center", d3.forceCenter(svgWidth / 2, svgHeight / 2));
       forceSimulationP.nodes(ent_nodeP)
         .on("tick");
 
-      let disLinear = d3.scaleLinear().domain([0, 200]).range([svgWidth / 18, svgWidth / 150]);
+      let disLinear = d3.scaleLinear().domain([0, 200]).range([svgWidth / 18, svgWidth / 50]);
       forceSimulationP.force("link")
         .links(ent_edgeP)
-        .distance(disLinear(ent_nodeP.length));
+        .distance(disLinear(ent_nodeP.length+ent_edgeP.length));
 
       // var forceSimulationC = d3.forceSimulation()
       //   .force("link", d3.forceLink().id((d) => { return d.id }))
@@ -216,12 +275,16 @@ export default {
         function dragged(event, d) {
           d.fx = event.x;
           d.fy = event.y;
+          d.rx = event.x;
+          d.ry = event.y;
         }
 
         function dragended(event, d) {
           if (!event.active) forceSimulationP.alphaTarget(0);
           d.fx = null;
           d.fy = null;
+          d.rx = event.x;
+          d.ry = event.y;
         }
         return d3.drag()
           .on("start", dragstarted)
@@ -269,20 +332,48 @@ export default {
           let clasN = ts.attr("class");
           let nametext = '';
           let ent ='';
+          let attr = ['scoringRate', 'totalAttempts', 'acceptedRate', 'proCount'];
+          let attrN = ['Scoring Rate', 'Attempts', 'Pass Rate', 'Rel Count'];
           if(clasN == 'concept'){
+            
+            _this.$bus.$emit("SelectingCon", id);
+
             ent = conceptsData.find(function(c){return c['id'] == id});
-            nametext = ent.name
+            nametext = ent.name;
+
+          attr = ['scoringRate', 'totalAttempts', 'acceptedRate', 'proCount'];
+          attrN = ['Scoring Rate', 'Attempts', 'Pass Rate', 'Problems'];
           }
           if(clasN == 'problem'){
+            
+            _this.$bus.$emit("SelectingPro", id);
+
             ent = problemsData.find(function(c){return c['id'] == id});
             nametext = ent.title
+            attr = ['scoringRate', 'totalAttempts', 'acceptedRate', 'conCount'];
+            attrN = ['Scoring Rate', 'Attempts', 'Pass Rate', 'Concepts'];
           }
+
           var yPosition = d.clientY + 20;
           var xPosition = d.clientX + 20;
+          if(d.clientX>2100){
+            xPosition = d.clientX - 210;
+          }
+          if(d.clientY>1000){
+            yPosition = d.clientY + 100;
+          }
           var netTooltip = d3
             .select(".netTooltip")
             .style("left", xPosition + "px")
             .style("top", yPosition + "px");
+          for (let a = 0; a < attr.length; a++) {
+
+            netTooltip.select(`.attr${a}`).text(`${attrN[a]} : ${ent[attr[a]]}`)
+            if(attrN[a] == 'Pass Rate')
+              netTooltip.select(`.attr${a}`).text(`${attrN[a]} : ${ent[attr[a]].toFixed(2)}`)
+            if(attrN[a] == 'Scoring Rate')
+              netTooltip.select(`.attr${a}`).text(`${attrN[a]} : ${ent[attr[a]].toFixed(2)}`)
+          }
           // 更新浮层内容
           netTooltip.select(".name").text(clasN);
           netTooltip.select(".text").text(nametext);
@@ -291,6 +382,9 @@ export default {
         })
         .on("mouseleave", function (d) {
           
+            _this.$bus.$emit("SelectingCon", '');
+            _this.$bus.$emit("SelectingPro", '');
+
           d3.select(".netTooltip").classed("hidden", true);
         })
       // .call(drags());
@@ -299,7 +393,7 @@ export default {
         .data(ent_edgeP)
         .enter()
         .append('path')
-        .attr("class", function (d) { return "s-" + d.source.id + "-t-" + d.target.id })
+        .attr("class", function (d) { return `"net_${d.type}-s-${d.source.id}-t-${d.target.id}` })
         .attr('d', function (d) {
           let eSource = d.source
           let eTarget = d.target
@@ -319,10 +413,19 @@ export default {
           return "grey";
         })
         .style("stroke-opacity", "0.3")
-        .style('stroke-width', "2")
+        .style('stroke-width', function(d){
+          if((d.source['id'] == proId)||(d.target['id'] == proId)){
+            return 4;
+          }
+          return 2;
+        })
 
       forceSimulationP.on("tick", () => {
         circle.attr("cx", (d) => {
+          if(d.rx!=undefined){
+            d.x = d.rx;
+            d.y = d.ry;
+          }
           let esx = d.x;
           let esy = d.y;
           if (esx < rSize) esx = rSize;
@@ -337,18 +440,10 @@ export default {
             _this.updateEntity(entG, esx, esy, `astPro_${d.id}`)
           }
           else if (d.type == "problem") {
-            // if (esy < height/3-80) esy = height/3-80;
-            // if(esy > height/3+40) esy =  height/3+40;
-            // d.x = esx;
-            // d.y = esy;
             _this.updateEntity(entG, esx, esy, `astPro_${d.id}`)
           }
           //   _this.drawEntityProblem(entG, esx, esy, `entPro_${d.id}`);
           else if (d.type == "concept") {
-            // if (esy < 0) esy = 0;
-            // if(esy > height/3-140) esy =  height/3-140;
-            // d.x = esx;
-            // d.y = esy;
             _this.updateEntity(entG, esx, esy, `astCon_${d.id}`)
           }
           // _this.updateEntity(entG,esx,esy,`astCon_${d.id}`)
@@ -371,7 +466,7 @@ export default {
             ent_nodeP.forEach(en => {
               if (en['type'] == "problem") {
                 let targetId = en['id'];
-                if ((netData[`${sourceId}_${targetId}`] != undefined) && (netData[`${sourceId}_${targetId}`] > 0.5)) {
+                if ((netData[`${sourceId}_${targetId}`] != undefined) && (netData[`${sourceId}_${targetId}`] > 0.1)) {
                   d3.select(`.pros_${sourceId}_prot_${targetId}`).remove();
                   relG.append('path')
                     .attr("class", function (d) { return `pros_${sourceId}_prot_${targetId}` })
@@ -394,33 +489,11 @@ export default {
             })
           }
         })
-        // for (let r = 0; r < problemConceptData.length; r++) {
-        //   let curRel = problemConceptData[r];
-        //   let pId = curRel['problem'];
-        //   let cId = curRel['conceptId'];
-        //   let pro = ent_nodeP.find(function(p){return p['id'] == pId});
-        //   let con = ent_nodeC.find(function(c){return c['id' == cId]});
-        //   if(pro!=undefined&&con!=undefined){
-        //     relG.append('path')
-        //       .attr("class", function (d) { return `pros_${pId}_cont_${cId}` })
-        //       .attr('d', function (d) {
-        //         let startA = [pro.x, pro.y]
-        //         let endA = [con.x, con.y]
-        //         let path = d3.path();
-        //         path.moveTo(startA[0], startA[1]);
-        //         let conP = _this.getControlPoints(startA,endA);
-        //         path.quadraticCurveTo(conP[0], conP[1], endA[0], endA[1]);
-        //         return path.toString()
-        //       })
-        //       .style('stroke', "grey")
-        //       .style('fill', "none")
-        //       .style("stroke-opacity", "0.3")
-        //       .style('stroke-width', 1)
-        //   }
-        // }
 
         path.attr("d", (d) => {
-          if (!((d.source.type == 'problem') && (d.target.type == 'problem'))) {
+          // if (!((d.source.type == 'problem') && (d.target.type == 'problem'))) 
+          if (!(d.type==3)) 
+          {
             let eSource = d.source;
             let eTarget = d.target;
             let esx = eSource.x;
@@ -443,37 +516,6 @@ export default {
         })
 
       });
-      // forceSimulationC.on("tick", () => {
-      //   rect.attr("x", (d) => {
-      //     let esx = d.x;
-      //     let esy = d.y;
-      //     if (esx < rSize) esx = rSize;
-      //     esx = esx > svgWidth - rSize ? svgWidth - rSize : esx;
-      //     if (esy < rSize) esy = rSize;
-      //     esy = esy > svgHeight - rSize ? svgHeight - rSize : esy;
-      //     if (d.id == proId) {
-      //       esx=width/2;
-      //       esy = height/2;
-      //       d.x = esx;
-      //       d.y = esy;
-      //       _this.updateEntity(entG, esx, esy, `astProc_${d.id}`)
-      //     }
-      //     else if (d.type == "problem"){
-      //       _this.updateEntity(entG, esx, esy, `astProc_${d.id}`)
-      //     }
-      //     else if (d.type == "concept"){
-      //       _this.updateEntity(entG, esx, esy, `astConc_${d.id}`)}
-
-      //       if (d.x < rSize) return rSize;
-      //     return d.x > svgWidth - rSize ? svgWidth - rSize : d.x
-      //   })
-      //     .attr("y", (d) => {
-      //       if (d.y < rSize) return rSize
-      //       return d.y > svgHeight - rSize ? svgHeight - rSize : d.y
-      //     });
-
-
-      // });
 
     },
 
@@ -714,7 +756,7 @@ export default {
       let currentMinColor = _this.entConMinColor;
 
       let Color_linear = d3.scaleLinear().domain([0, 1]).range([0, 1]);
-      let Compute_color = d3.interpolate("white", "rgb(218, 0, 27)");
+      let Compute_color = d3.interpolate("white", currentMaxColor);
 
       let rSize_linear = d3.scaleLinear().domain([0, conMaxMinDR[0]]).range([5, 10]);
 
@@ -877,7 +919,7 @@ export default {
       _this.problemRelByConcept = proRel;
       _this.problemListByConcept = proLis;
     },
-    getProRel() {
+    getProRelO1() {
       const _this = this;
       let conceptsData = _this.conceptsData;
       let problemsData = _this.problemsData;
@@ -890,6 +932,31 @@ export default {
         proLis.push(pId);
       }
       console.log(proLis)
+      _this.problemRelByConcept = proRel;
+      _this.problemListByConcept = proLis;
+    },
+    getProRel() {
+      const _this = this;
+      let conceptsData = _this.conceptsData;
+      let problemsData = _this.problemsData;
+      let problemConceptData = _this.problemConceptData;
+      let selectedPro = _this.selectedPro;
+      let proRel =[[],[]];
+      let proLis = []
+      for (let p = 0; p < selectedPro.length; p++) {
+        let pId = selectedPro[p]['id'];
+        proLis.push(pId);
+      }
+      let pId = _this.curEntId;
+      for (let c = 0; c < problemConceptData.length; c++) {
+        let curPId = problemConceptData[c]['problem'];
+        let curCId = problemConceptData[c]['conceptId'];
+        let type = problemConceptData[c]['type'];
+        
+        if (curPId == pId) {
+          proRel[type].push(curCId);
+        }
+      }
       _this.problemRelByConcept = proRel;
       _this.problemListByConcept = proLis;
     },
@@ -949,35 +1016,47 @@ export default {
       let Rsize_linear = d3.scaleLinear().domain([0, len]).range([1, 6]);
       let Compute_color = d3.interpolate(stuMinColor, stuMaxColor);
 
-      let textsr = _this.drawTxt(frontG, 6, 15, "AcceptedRate:", "black", 10, `FigNet_con`);
-      let textat = _this.drawTxt(frontG, 6, 45, "Attempts:", "black", 10, `FigNet_con`);
-      let textbs = _this.drawTxt(frontG, 6, 75, "Connection nums:", "black", 10, `FigNet_con`);
+      let textsr = _this.drawTxt(frontG, 16, 15, "AcceptedRate", "black", 10, `FigNet_con`);
+      let textat = _this.drawTxt(frontG, 16, 35, "Attempts", "black", 10, `FigNet_con`);
+      let textbs = _this.drawTxt(frontG, 16, 55, "Connection nums", "black", 10, `FigNet_con`);
+
+      let texttm = _this.drawTxt(frontG, 136, 15, "Concepts", "black", 10, `FigNet_con`);
+      let textgn = _this.drawTxt(frontG, 136, 35, "problems", "black", 10, `FigNet_con`);
       let prex = 0;
       let prerx = 0;
       let colorar = _this.attrColorList[0];
       let colorat = _this.attrColorList[1];
       let colorcn = _this.attrColorList[2];
 
-      _this.drawRect(frontG, 10, 28, 40, 5, 0, "rgb(230,230,230)", "1", "grey", "1", `FigNet_conRectColoraB`, 'FigNet');
-      _this.drawRect(frontG, 10, 28, 30, 5, 0, colorar, "1", "grey", "1", `FigNet_conRectColora`, 'FigNet');
+      let colortm = _this.entProMaxColor;
+      let colorgn = _this.entConMaxColor;
 
-      _this.drawRect(frontG, 10, 58, 40, 5, 0, "rgb(230,230,230)", "1", "grey", "1", `FigNet_conRectColorB`, 'FigNet');
-      _this.drawRect(frontG, 10, 58, 30, 5, 0, colorat, "1", "grey", "1", `FigNet_conRectColor`, 'FigNet');
+      _this.drawRect(frontG, 1, 2, 10, 15, 0, "rgb(230,230,230)", "1", "grey", "1", `FigNet_conRectColoraB`, 'FigNet');
+      _this.drawRect(frontG, 1, 5, 10, 12, 0, colorar, "1", "grey", "1", `FigNet_conRectColora`, 'FigNet');
 
-      _this.drawRect(frontG, 10, 88, 40, 5, 0, "rgb(230,230,230)", "1", "grey", "1", `FigNet_conRectB`, 'FigNet');
-      _this.drawRect(frontG, 10, 88, 30, 5, 0, colorcn, "1", "grey", "1", `FigNet_conRect`, 'FigNet');
+      _this.drawRect(frontG, 1, 22, 10, 15, 0, "rgb(230,230,230)", "1", "grey", "1", `FigNet_conRectColorB`, 'FigNet');
+      _this.drawRect(frontG, 1, 25, 10, 12, 0, colorat, "1", "grey", "1", `FigNet_conRectColor`, 'FigNet');
+
+      _this.drawRect(frontG, 1, 42, 10, 15, 0, "rgb(230,230,230)", "1", "grey", "1", `FigNet_conRectB`, 'FigNet');
+      _this.drawRect(frontG, 1, 45, 10, 12, 0, colorcn, "1", "grey", "1", `FigNet_conRect`, 'FigNet');
+
+      _this.drawCircle(frontG, 120, 12, 7, colorgn, 1, "grey", "1", 'FigNet', `FigNet_conColorc`);
+
+      let points = _this.calcRegularPolygonPoints(3, 120, 31, 9);
+
+      let entPolygon = _this.drawPolygon(frontG, points, `FigNet_Proc`, '1px', "grey", colortm);
 
       let path1 = d3.path();
-      let points0 = [[10, 20], [10, 24], [14, 20], [10, 24], [14, 28], [10, 24], [10, 28], [10, 24], [40, 24], [40, 24], [36, 20], [40, 24], [36, 28], [40, 24], [40, 20], [40, 28]]
-      let points1 = [[10, 50], [10, 54], [14, 50], [10, 54], [14, 58], [10, 54], [10, 58], [10, 54], [40, 54], [40, 54], [36, 50], [40, 54], [36, 58], [40, 54], [40, 50], [40, 58]]
-      let points2 = [[10, 80], [10, 84], [14, 80], [10, 84], [14, 88], [10, 84], [10, 88], [10, 84], [40, 84], [40, 84], [36, 80], [40, 84], [36, 88], [40, 84], [40, 80], [40, 88]]
+      // let points0 = [[10, 20], [10, 24], [14, 20], [10, 24], [14, 28], [10, 24], [10, 28], [10, 24], [40, 24], [40, 24], [36, 20], [40, 24], [36, 28], [40, 24], [40, 20], [40, 28]]
+      // let points1 = [[10, 50], [10, 54], [14, 50], [10, 54], [14, 58], [10, 54], [10, 58], [10, 54], [40, 54], [40, 54], [36, 50], [40, 54], [36, 58], [40, 54], [40, 50], [40, 58]]
+      // let points2 = [[10, 80], [10, 84], [14, 80], [10, 84], [14, 88], [10, 84], [10, 88], [10, 84], [40, 84], [40, 84], [36, 80], [40, 84], [36, 88], [40, 84], [40, 80], [40, 88]]
       let curve_generator = d3.line()
         .x((d) => d[0])
         .y((d) => d[1])
       // .curve(d3.curveBasisClosed)
-      _this.drawLine(frontG, curve_generator(points0), "black", 1, '0', '1', `lineat`, 'FigNet_line1', "rgb(230,230,230)");
-      _this.drawLine(frontG, curve_generator(points1), "black", 1, '0', '1', `line2`, 'FigNet_line1', "rgb(230,230,230)");
-      _this.drawLine(frontG, curve_generator(points2), "black", 1, '0', '1', `line3`, 'FigNet_line1', "rgb(230,230,230)");
+      // _this.drawLine(frontG, curve_generator(points0), "black", 1, '0', '1', `lineat`, 'FigNet_line1', "rgb(230,230,230)");
+      // _this.drawLine(frontG, curve_generator(points1), "black", 1, '0', '1', `line2`, 'FigNet_line1', "rgb(230,230,230)");
+      // _this.drawLine(frontG, curve_generator(points2), "black", 1, '0', '1', `line3`, 'FigNet_line1', "rgb(230,230,230)");
       for (let i = 0; i < len * 3; i++) {
       }
       for (let i = 0; i < len; i++) {
@@ -1003,7 +1082,7 @@ export default {
     const _this = this;
     this.$nextTick(() => {
       // _this.calcNetData();
-      // _this.updata();
+      _this.updata();
       d3.select(".netTooltip").classed("hidden", true);
       _this.drawnetPData();
     });
@@ -1024,13 +1103,18 @@ export default {
     this.$bus.$on('selectEntData', (val) => {
       _this.curEntId = val[0];
       _this.EntProData = val[1];
-      // _this.updata();
+      _this.updata();
     });
 
     this.$bus.$on('selectedPro', (val) => {
       _this.selectedPro = val;
       _this.updata();
 
+    });
+
+    this.$bus.$on('selectCon', (val) => {
+      _this.selectedCon = val;
+      _this.updata();
     });
 
     this.$bus.$on('allProblem', (val) => {

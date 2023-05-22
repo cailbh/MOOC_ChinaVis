@@ -3,17 +3,20 @@
 
 <template>
   <div class="scatter" ref="scatterDiv">
-    <div class="panelHead">C</div>
+    <div class="panelHead">Performance View</div>
     <div id="scatterCantain" ref="scatterCantain" class="panelBody">
     </div>
 
-    <div class="scatterTooltip">
+    <div class="scatterTooltip toolTip">
       <p>
-        <br /><strong class="name"></strong>
-        <br /><strong class="sr"></strong>
-        <br /><strong class="bs"></strong>
-        <br /><strong class="ta"></strong>
-      </p>
+          <br /><strong class="name toolTipAttr"></strong>
+          <br /><strong class="text toolTipAttr"></strong>
+          <br /><strong class="attr0 toolTipAttr"></strong>
+          <br /><strong class="attr1 toolTipAttr"></strong>
+          <br /><strong class="attr2 toolTipAttr"></strong>
+          <br /><strong class="attr3 toolTipAttr"></strong>
+          <br /><strong class="attr4 toolTipAttr"></strong>
+        </p>
     </div>
     <div class="close" ref="listen">
     </div>
@@ -138,7 +141,7 @@ export default {
       moveTimer: null,
       moveFlag: false,
       stuMinColor: "rgb(255, 255, 255)",
-      stuMaxColor: "rgb(153, 16, 78)",
+      stuMaxColor: "rgb(76, 141, 5)",
       stepX: 80,
       stepY: 100,
       typeXMap: {
@@ -189,13 +192,14 @@ export default {
         "rgb(168,168,255)",
         "rgb(200,200,200)",
       ],
-      attrColorList: [
-        "rgb(0, 125, 104)",
-        "#6f8be0",
-        "#ff9c9c",
-        "rgb(115, 230, 163)",
-        "rgb(56, 191, 201)",
-        "rgb(224, 207, 243)",
+      attrColorList:[
+      "rgb(255, 77, 109)",
+        "rgb(255, 231, 32)",
+        "rgb(250, 210, 50)",
+        "rgb(255, 120, 90)",
+        "rgb(255, 159, 28)",
+        "rgb(6, 214, 160)",
+        "rgb(125, 98, 211)",
       ],
     };
   },
@@ -208,7 +212,6 @@ export default {
     groupsSvg: {
       deep: true,
       handler(val) {
-        console.log(val)
         var content = this.groupsSvg.html();
         this.rootSvgf.html(content)
         this.drawFigureAnnotation();
@@ -259,8 +262,9 @@ export default {
     addGroupClk() {
       const _this = this;
       let selectStuGroup = _this.selectGroup;
-      if (selectStuGroup.length < 5)
-        selectStuGroup.push([]);
+      // if (selectStuGroup.length < 5)
+      //   selectStuGroup.push([]);
+      selectStuGroup = [[],[],[]]
       _this.selectGroup = selectStuGroup;
       // d3.select(`#addGroupDiv`)
       // .attr("style", function(){
@@ -371,11 +375,11 @@ export default {
       let attrList = _this.stuAttrList;
       let stuAttrMaxMinList = _this.stuAttrMaxMinList;
 
-      let rSize_linear = d3.scaleLinear().domain([stuAttrMaxMinList[0][1], stuAttrMaxMinList[0][0]]).range([3, 8]);
+      let rSize_linear = d3.scaleLinear().domain([stuAttrMaxMinList[1][1], stuAttrMaxMinList[1][0]]).range([3, 8]);
 
       let stuMaxColor = _this.stuMaxColor;
       let stuMinColor = _this.stuMinColor;
-      let stuColor_linear = d3.scaleLinear().domain([stuAttrMaxMinList[0][1], stuAttrMaxMinList[0][0]]).range([0, 1]);
+      let stuColor_linear = d3.scaleLinear().domain([stuAttrMaxMinList[1][1], stuAttrMaxMinList[1][0]]).range([0, 1]);
       let stuCompute_color = d3.interpolate(stuMinColor, stuMaxColor);
 
       let groupData = tools.deepClone(_this.groupData);
@@ -386,8 +390,8 @@ export default {
         let sId = groupData[i]['id']
         groupData[i]['cx'] = cx;
         groupData[i]['cy'] = cy;
-        groupData[i]['r'] = rSize_linear(groupData[i][attrList[0]]);
-        groupData[i]['fill'] = stuCompute_color(stuColor_linear(groupData[i][attrList[0]])) //'grey'//colorList[parseInt(groupData[i]['kmeansC'])];
+        groupData[i]['r'] = rSize_linear(groupData[i][attrList[1]]);
+        groupData[i]['fill'] = stuCompute_color(stuColor_linear(groupData[i][attrList[1]])) //'grey'//colorList[parseInt(groupData[i]['kmeansC'])];
       }
       _this.groupData = groupData;
       _this.updataScatter();
@@ -417,11 +421,12 @@ export default {
       let Rsize_linear = d3.scaleLinear().domain([0, len]).range([1, 6]);
       let Compute_color = d3.interpolate(stuMinColor, stuMaxColor);
 
-      let textsr = _this.drawTxt(frontG, 6, 15, "ScoreingRate:", "black", 10, `FigScater_con`);
+      let textsr = _this.drawTxt(frontG, 6, 15, "BestScoreingRate:", "black", 10, `FigScater_con`);
       let textat = _this.drawTxt(frontG, 6, 45, "Attempts:", "black", 10, `FigScater_con`);
-      let textbs = _this.drawTxt(frontG, 6, 75, "BestScore:", "black", 10, `FigScater_con`);
+      let textbs = _this.drawTxt(frontG, 6, 75, "ScoreingRate:", "black", 10, `FigScater_con`);
       let prex = 0;
       let prerx = 0;
+      let colorSR = _this.attrColorList[0];
       let colorBestS = _this.attrColorList[1];
       let colorAttempts = _this.attrColorList[2];
 
@@ -429,7 +434,7 @@ export default {
       _this.drawRect(frontG, 10, 58, 30, 5, 0, colorAttempts, "1", "grey", "1", `FigScater_conRectColor`, 'FigScater');
 
       _this.drawRect(frontG, 10, 88, 40, 5, 0, "rgb(230,230,230)", "1", "grey", "1", `FigScater_conRectB`, 'FigScater');
-      _this.drawRect(frontG, 10, 88, 30, 5, 0, colorBestS, "1", "grey", "1", `FigScater_conRect`, 'FigScater');
+      _this.drawRect(frontG, 10, 88, 30, 5, 0, colorSR, "1", "grey", "1", `FigScater_conRect`, 'FigScater');
 
       let path1 = d3.path();
       let points = [[10, 50], [10, 54], [14, 50], [10, 54], [14, 58], [10, 54], [10, 58], [10, 54], [40, 54], [40, 54], [36, 50], [40, 54], [36, 58], [40, 54], [40, 50], [40, 58]]
@@ -444,7 +449,7 @@ export default {
       }
       for (let i = 0; i < len; i++) {
         let color = Compute_color(Color_linear(i));
-        let circle = _this.drawCircle(frontG, 15 + prex, 23, Rsize_linear(i), color, 1, "red", "1", 'FigScater', `FigScater_conColor${i}`);
+        let circle = _this.drawCircle(frontG, 15 + prex, 23, Rsize_linear(i), color, 1, "none", "1", 'FigScater', `FigScater_conColor${i}`);
         prex += Rsize_linear(i) * 2 + 4;
         prerx += i * 4 + 2;
       }
@@ -472,7 +477,6 @@ export default {
       let colorList = _this.stuColorList;
       // for(let i=0;i<groupData.length;i++){
       //   let sId = groupData[i]['id']
-      //   // console.log(groupData[i]['kmeansC'])
       //     nodesList[parseInt(groupData[i]['kmeansC'])].push({
       //       x:groupData[i]['cx'],
       //       y:groupData[i]['cy'],
@@ -481,7 +485,7 @@ export default {
       // }
       let k = 0;
       nodesList.forEach(nodeList => {
-        let path = contour(nodeList, 60);
+        let path = contour(nodeList, 80);
         let contourData = _this.arcsToPaths(path)
         contourData.forEach(contourD => {
           svg.append("path")
@@ -572,7 +576,6 @@ export default {
     mouseDown(event) {
       const _this = this;
       _this.jgDrag = false;
-      console.log(_this.jgDrag)
       let entG = _this.entG
       let sx = event.layerX - _this.scatterGTransformX;
       let sy = event.layerY - _this.scatterGTransformY;
@@ -628,6 +631,7 @@ export default {
       let maxx = sx > tx ? sx : tx;
       let maxy = sy > ty ? sy : ty;
       let SelectStudentList = [];
+      let BuSelectStudentList = [];
       for (let i = 0; i < groupData.length; i++) {
         let cx = groupData[i]['cx'];
         let cy = groupData[i]['cy'];
@@ -642,10 +646,25 @@ export default {
           })
           if (jg == 0)
             SelectStudentList.push(sId);
+          
+        }
+        else{
+          let jg = 0;
+          temp.forEach(t => {
+            t.forEach(s => {
+              if (s == sId)
+                jg = 1;
+            })
+          })
+          if (jg == 0)
+            BuSelectStudentList.push(sId);
         }
       }
       let selectGroupId = _this.selectGroupId;
       temp[selectGroupId] = SelectStudentList;
+      if((selectGroupId == 1)){
+        temp[2] = BuSelectStudentList;
+      }
       _this.SelectStudentList = temp;
     },
     drawRect(svg, x, y, w, h, rx, fill, strokeWidth, stroke, opacity, idName, className) {
@@ -688,7 +707,7 @@ export default {
         let stepH = 7;
         let perh = r;
         for (let j = 0; j < attrLen; j++) {
-          if (stuAttrList[j] == 'scoringRate') {
+          if (stuAttrList[j] == 'bestScore') {
 
           }
           else if (stuAttrList[j] == 'acceptedNum') {
@@ -729,20 +748,30 @@ export default {
           let ent = groupData.find(function (c) { return c['id'] == id });
           var yPosition = d.clientY + 20;
           var xPosition = d.clientX + 20;
+          
+          if(d.clientX>2100){
+            xPosition = d.clientX - 210;
+          }
           let srtext = ent['scoringRate'];
           let totalAttemptsTxt = ent['totalAttempts'];
           let bestScore = ent['bestScore']
-          var netTooltip = d3
+          var scatterTooltip = d3
             .select(".scatterTooltip")
             .style("left", xPosition + "px")
             .style("top", yPosition + "px");
           // 更新浮层内容
-          netTooltip.select(".name").text(`Student${i}`);
-          netTooltip.select(".bs").text(`bestScore: ${bestScore}`);
-          netTooltip.select(".ta").text(`totalAttempts: ${totalAttemptsTxt}`);
-          netTooltip.select(".sr").text(`scoringRate${srtext.toFixed(2)}`);
+          let attr = ['scoringRate', 'totalAttempts','bestScore'];
+          let attrN = ['Scoring Rate', 'Attempts', 'bestScoreRate', 'Rel Count'];
+          // 更新浮层内容
+          for (let a = 0; a < attr.length; a++) {
+
+            scatterTooltip.select(`.attr${a}`).text(`${attrN[a]} : ${ent[attr[a]]}`)
+            if(attrN[a] == 'Scoring Rate')
+              scatterTooltip.select(`.attr${a}`).text(`${attrN[a]} : ${ent[attr[a]].toFixed(2)}`)
+          }
+          scatterTooltip.select(".name").text(`Student${i+1}`);
           // 移除浮层hidden样式，展示浮层
-          netTooltip.classed("hidden", false);
+          scatterTooltip.classed("hidden", false);
         }).on("mouseleave", function (d) {
           _this.$bus.$emit("SelectingStu", "");
           d3.select(".scatterTooltip").classed("hidden", true);
@@ -772,7 +801,7 @@ export default {
       _this.height = height;
       d3.select("#scatterCantain").select("svg").remove()
       var svg = d3.select("#scatterCantain").append("svg")
-        .attr("width", width - 50)
+        .attr("width", width - 0)
         .attr("height", height - 50)
         .attr('transform', 'translate(0,0)')
         .style("position", "absolute");
@@ -813,7 +842,7 @@ export default {
   mounted() {
     const _this = this;
 
-    d3.select(".chartTooltip").classed("hidden", true);
+    d3.select(".scatterTooltip").classed("hidden", true);
     this.$bus.$on('groupData', (val) => {
       _this.groupData = val;
       this.updataAll();

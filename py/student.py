@@ -64,7 +64,7 @@ for l in collect_userSubmissions.find({}):
         if pScore != 0:
             if problemId not in entStudent[userId]:
                 entStudent[userId][problemId] = {'log': [], 'best': i, "totalAttempts": 0, "totalScore": 0,
-                                                 "timeStamp": 0}
+                                                 "timeStamp": 0, 'bestScoreRate': 0}
             entStudent[userId][problemId]['log'].append(i)
 
             entStudent[userId][problemId]['totalAttempts'] += 1
@@ -73,6 +73,7 @@ for l in collect_userSubmissions.find({}):
             # print(score / pScore)
             if entStudent[userId][problemId]['best']['score'] < score:
                 entStudent[userId][problemId]['best'] = i
+                entStudent[userId][problemId]['bestScoreRate'] = entStudent[userId][problemId]['best']['score'] / pScore
 
 # print(entStudent)
 tsneXStudent = []
@@ -89,6 +90,7 @@ for s in entStudent:
     cRate = 0
     totalAttempts = 0
     bestScore = 0
+    bestScoreRate = 0
     acceptedNUm = 0
     ctimeS = 0
     for p in entProblem:
@@ -98,12 +100,14 @@ for s in entStudent:
             # sScore = entStudent[s][pid]['best']['score']
             # val.append(sScore / pScore)
             sScoreRate = entStudent[s][pid]['totalScore'] / entStudent[s][pid]['totalAttempts']
-            val.append(sScoreRate)
             cRate += sScoreRate
             ctimeS += entStudent[s][pid]['timeStamp'] / entStudent[s][pid]['totalAttempts']
             i += 1
             totalAttempts += entStudent[s][pid]['totalAttempts']
             bestScore += entStudent[s][pid]['best']['score']
+            bestScoreRate += entStudent[s][pid]['bestScoreRate']
+            # val.append(sScoreRate)
+            val.append(bestScoreRate)
             if entStudent[s][pid]['best']['score'] == pScore:
                 acceptedNUm += 1
         else:
@@ -114,6 +118,7 @@ for s in entStudent:
     tempS['totalAttempts'] = totalAttempts
     tempS['acceptedNum'] = acceptedNUm
     tempS['bestScore'] = bestScore
+    tempS['bestScoreRate'] = bestScoreRate/i
     tempS['time'] = ctimeS / i
     tsneXStudent.append(tempS)
 
@@ -129,7 +134,7 @@ for s in tsneXStudent:
 
 X = np.array(dataMat)  # [[12, 23, 3], [23, 45, 6], [4, 5, 7], [6, 3, 5]])
 result = []
-X_tsne = TSNE(n_components=2, perplexity=10, learning_rate=200, n_iter=5000).fit_transform(X)
+X_tsne = TSNE(n_components=2, perplexity=25, learning_rate=500, n_iter=5000).fit_transform(X)
 color = ['c', 'b', 'g', 'r', 'm', 'y', 'k', 'w']
 # X_tsne = MDS(n_components=2,).fit_transform(X)
 # X_tsne = SpectralEmbedding(n_components=2).fit_transform(X)
@@ -142,10 +147,11 @@ for p in X_tsne:
         "y": float(p[1]),
         "kmeansC": int(kmeans.labels_[ii]),
         "scoringRate": float(tsneXStudent[ii]['scoringRate']),
+        "bestScoringRate": float(tsneXStudent[ii]['bestScoreRate']),
         "totalAttempts": float(tsneXStudent[ii]['totalAttempts']),
         "bestScore": float(tsneXStudent[ii]['bestScore']),
         "time": float(tsneXStudent[ii]['time']),
-        "acceptedNum":float(tsneXStudent[ii]['acceptedNum']),
+        "acceptedNum": float(tsneXStudent[ii]['acceptedNum']),
     })
     plt.scatter(p[0], p[1], c=color[kmeans.labels_[ii]], edgecolors='r')
     plt.text(p[0], p[1], str(ii), fontdict={'family': 'serif', 'size': 15, 'color': color[kmeans.labels_[ii]]},
@@ -155,3 +161,25 @@ plt.show()
 
 with open("group.json", 'w') as fw:
     json.dump(result, fw)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

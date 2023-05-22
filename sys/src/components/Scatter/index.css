@@ -24,10 +24,10 @@
 
 #confirmGroupDiv{
   position: absolute;
-  width: 30px;
-  height: 30px;
-  top: 6px;
-  right: 33px;
+  width: 35px;
+  height: 35px;
+  top: 4px;
+  right: 29px;
 }
 
 .scatterTooltip {
@@ -54,8 +54,8 @@
 .close {
   position: absolute;
   width: 490px;
-  height: 544px;
-  top: 100px;
+  height: 500px;
+  top: 50px;
   right: 0;
   /* padding-left: 10px;
   padding-top: -10px;

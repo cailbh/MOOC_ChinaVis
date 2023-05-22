@@ -3,54 +3,82 @@
 
 <template>
   <div class="procPanel">
-    <div class="panelHead"></div>
+    <div class="panelHead">Content View </div>
       <!-- //SupportPanel</div> -->
     <div id="procPanelDiv" class="panelBody" ref="procPanelDiv">
-      <div id="topicLine" ref="topicLine"></div>
+      <div id="questionSer" ref="questionSer"></div>
       
-      <el-table :data="tableData" style="width: 100%">
+        <el-table stripe  :data="tableData" style="width: 100%;height:80%;overflow-y: scroll;scrollbar-width: none;"         
+        :row-style="iRowStyle"
+        :cell-style="iCellStyle"
+        :header-row-style="iHeaderRowStyle"
+        :header-cell-style="iHeaderCellStyle">
           <!-- <el-table-column prop="key" label="" width="190">
           </el-table-column> -->
+          <!-- eslint-disable -->
           <el-table-column prop="value" label="" width="480">
             <template slot-scope="scope">
               <div v-if="scope.row.key == 'Title'">
-                <div style="float: left;height: auto;">
+                <div style="float: left;height: 40px;font-size: 24px;color: rgb(103, 103, 103);">
                 {{ scope.row.value }}</div>
 
               </div>
+              <div v-if="scope.row.key == 'Type'">
+                <!-- <div style="float: left;height:15px;font-size: 17px;"> -->
+                <div style="float: left;height: auto;;font-size: 20px;color: rgb(103, 103, 103);">
+                  {{ `${scope.row.value}` }}</div>
+              </div>
+              <div v-if="scope.row.key == 'ContentT'">
+                <div style="float: left;height: auto;;font-size: 22px;color: rgb(103, 103, 103);">
+                {{ scope.row.value }}</div>
+              </div>
               <div v-if="scope.row.key == 'Content'">
                 <div style="float: left;height: auto;">
+                  &nbsp;&nbsp;{{ `&nbsp;&nbsp;${scope.row.value}` }}</div>
+              </div>
+              <div v-if="scope.row.key == 'InputT'">
+                <div style="float: left;height: auto;;font-size: 22px;color: rgb(103, 103, 103);">
                 {{ scope.row.value }}</div>
+              </div>
+              <div v-if="scope.row.key == 'Input'">
+                <div style="float: left;height: auto;">
+                  &nbsp;&nbsp;{{ `&nbsp;&nbsp;${scope.row.value}` }}</div>
+              </div>
+              <div v-if="scope.row.key == 'OutT'">
+                <div style="float: left;height: auto;;font-size: 22px;color: rgb(103, 103, 103);">
+                {{ scope.row.value }}</div>
+              </div>
+              <div v-if="scope.row.key == 'Out'">
+                <div style="float: left;height: auto;">
+                  &nbsp;&nbsp;{{ `&nbsp;&nbsp;${scope.row.value}` }}</div>
               </div>
             </template>
           </el-table-column>
+          <!-- eslint-enable -->
         </el-table>
-      <div id="procData" ref="procData"></div>
+      <!-- <div id="connectCon" ref="connectCon">
+      </div> -->
+      <div id="procData" ref="procData">
+
+      </div>
     </div>
     </div>
 </template>
   
 <script>
 import * as d3 from 'd3'
-import { onMounted, ref } from 'vue';
-import filenames from "@/utils/fileName";
-import domtoimage from 'dom-to-image';
-// import TestJson from "@/assets/json/case2_fin.json";
-// import TestRelJson from "@/assets/json/case2_fin_rel.json";
 import tools from "@/utils/tools.js";
-import { tree } from 'd3';
-import { SourceNode } from 'source-list-map';
 
 export default {
   props: [],
   data() {
     return {
       typeRadio: "cell State",
-      // data: TestJson,
-      // relData: TestRelJson,
       treeData: null,
       toolsState: '',
       problemsData:[],
+      problemConceptData:[],
+      conceptTree:[],
       // confirmUrl: require("@/assets/img/confirm.svg"),
       // cancelUrl: require("@/assets/img/cancel.svg"),
       // toolsButsUrl: require("@/assets/img/toolsButs.png"),
@@ -64,11 +92,33 @@ export default {
       tableData: [{
         key: 'Title',
         value: '',
+      },{
+        key: 'Type',
+        value: '',
+      }, {
+        key: 'ContentT',
+        value: '',
       }, {
         key: 'Content',
         value: '',
+      }, {
+        key: 'InputT',
+        value: '',
+      }, {
+        key: 'Input',
+        value: '',
+      },{
+        key: 'OutT',
+        value: '',
+      },{
+        key: 'Out',
+        value: '',
       }
       ],
+      
+      graphGTransformK: 1,
+      graphGTransformX: 0,
+      graphGTransformY: 10,
       curEntId: "",
       insertEntId: "",
       insertSourceEntId: "-1",
@@ -171,208 +221,24 @@ export default {
     selectType(v) {
       // console.log(v)
     },
-    cancelClk() {
-      const _this = this;
-      let data = _this.data;
-      let curEntId = _this.curEntId;
-      let curEnt = data.find(function (d) { return d['id'] == curEntId; });
-      _this.drawEntity(curEnt);
-      _this.drawSonLine(curEnt);
-      _this.drawrootTree();
+    
 
+    iRowStyle:function ({row, rowIndex}) {
+        return 'height:35px';
     },
-    confirmClk() {
-      const _this = this;
-      let data = _this.data;
-      let curEntId = _this.curEntId;
-      let curEnt = data.find(function (d) { return d['id'] == curEntId; });
-      if (_this.typeRadio == "hidden State") {
-        curEnt['type'] = '1'
-      }
-      else {
-        curEnt['type'] = '0';
-      }
-      curEnt['name'] = _this.nameinput;
-
-      let styleValue = _this.lectureStyleValue;
-      let startSeconds = tools.time2seconds(curEnt['time'][0]);
-      let endSeconds = tools.time2seconds(curEnt['time'][1]);
-      let totalSeconds = endSeconds - startSeconds;
-      let typeDurReScale_linear = d3.scaleLinear([0, 100], [startSeconds, endSeconds]);
-      let typeData = { "1": [], "2": [], "3": [] };//;
-      let t1 = tools.seconds2time(typeDurReScale_linear(styleValue[0]));
-      let t2 = tools.seconds2time(typeDurReScale_linear(styleValue[1]));
-      typeData['1'].push([curEnt['time'][0], t1]);
-      typeData['2'].push([t1, t2]);
-      typeData['3'].push([t2, curEnt['time'][1]]);
-      curEnt["attribute"]["expressions"] = typeData;
-
-      let entRects = d3.selectAll(".procEnt").nodes();
-      console.log(entRects)
-      let totalSonDuration = _this.totalSonDuration;
-      let wid = _this.entLineWidth;
-      let cxReLinear = d3.scaleLinear([0, wid], [0, totalSonDuration]);
-      let preTime = '';
-      let typeTotalData = { "1": [], "2": [], "3": [] };//;
-      for (let n = 0; n < entRects.length; n++) {
-        let curRect = entRects[n];
-        let rectId = curRect.id.split("_")[1];
-        let rectData = data.find(function (d) { return d['id'] == rectId; });
-        let perDur = tools.time2seconds(rectData['time'][1]) - tools.time2seconds(rectData['time'][0]);
-        if (n == 0) {
-          preTime = rectData['time'][0];
-        }
-        let preSecond = tools.time2seconds(preTime);
-        let x = curRect.x.baseVal.value;
-        let w = curRect.width.baseVal.value;
-        let durSecond = cxReLinear(w);
-        let endTime = tools.seconds2time(preSecond + durSecond);
-        rectData['time'] = [preTime, endTime];
-        rectData['totalDuration'] += durSecond - perDur;
-        preTime = endTime;
-        for (let t in typeTotalData) {
-          typeTotalData[t] = [...typeTotalData[t], ...rectData['attribute']['expressions'][t]]
-        }
-      }
-      console.log(typeTotalData)
-      _this.data = data;
-      // console.log(entRects,entRects[0])
-
-      _this.drawEntity(curEnt);
-      _this.drawSonLine(curEnt);
-      _this.drawrootTree();
-      _this.$bus.$emit("graphData", data);
+    iHeaderRowStyle:function ({row, rowIndex}) {
+        return 'height:35px';
     },
-    click_node() {
-      const _this = this;
-      let nodeId = _this.curEntId;
-      let addDataId = _this.insertEntId;//parseInt(nodeId)+1+'';
-      let oriData = _this.data;
-      let state = _this.toolsState;
-      let returnData = [];
-      let returnRelData = {};
-      let relData = _this.relData;
-
-      if (state == 'addNodeSon') {
-        for (let i = 0; i < oriData.length; i++) {
-          let cData = oriData[i];
-          let cDataId = cData['id']
-          
-          let sons = cData['son'];
-          let sonsNew = [];
-          for(let s=0;s<sons.length;s++){
-            let ss = sons[s]
-              if(parseInt(ss)>=parseInt(addDataId)) ss = parseInt(ss)+1
-              sonsNew.push(ss+'')
-          }
-          cData['son'] = sonsNew;
-
-          if (parseInt(cDataId) == parseInt(addDataId)) {
-            let perData = tools.deepClone(cData);
-            let addData = tools.deepClone(perData);
-            addData['id'] = addDataId;
-            perData['id'] = (parseInt(addDataId) + 1)+'';
-            console.log(addData,perData)
-            let startT = cData['time'][0];
-            let endT = cData['time'][1];
-            let midT = tools.seconds2time((tools.time2seconds(endT) + tools.time2seconds(startT)) / 2);
-            addData['time'] = [startT, midT];
-            perData['time'] = [midT, endT];
-            addData['son'] = [];
-            addData['totalDuration'] = (tools.time2seconds(midT) - tools.time2seconds(startT));
-            perData['totalDuration'] -= addData['totalDuration'];
-            let typeTimes = perData['attribute']['expressions'];
-            let typePreData = { "1": [], "2": [], "3": [] };
-            let typeAddData = { "1": [], "2": [], "3": [] };
-            for (let t in typeTimes) {
-              for (let a = 0; a < typeTimes[t].length; a++) {
-                let st = typeTimes[t][a][0];
-                let et = typeTimes[t][a][1];
-                if (tools.time2seconds(et) <= tools.time2seconds(midT)) { typeAddData[t].push([st, et]) }
-                else if (tools.time2seconds(st) >= tools.time2seconds(midT)) { typePreData[t].push([st, et]) }
-                else if ((tools.time2seconds(st) < tools.time2seconds(midT)) && (tools.time2seconds(et) > tools.time2seconds(midT))) {
-                  typeAddData[t].push([st, midT]);
-                  typePreData[t].push([midT, et]);
-                }
-              }
-            }
-            perData['attribute']['expressions'] = typePreData;
-            addData['attribute']['expressions'] = typeAddData;
-            returnData.push(addData);
-            returnData.push(perData);
-          }
-          else if (parseInt(cData['id']) < parseInt(addDataId)) {
-            returnData.push(tools.deepClone(cData));
-          }
-          else if (parseInt(cData['id']) > parseInt(addDataId)){
-            let perData = tools.deepClone(cData);
-            perData['id'] = (parseInt(cDataId) + 1) + '';
-            returnData.push(perData);
-          }
-
-        }
-      
-      let bsNew = [];
-      let basicRel = relData['basicRel'];
-      for (let r = 0; r < basicRel.length; r++) {
-        let sourceId = basicRel[r][0];
-        let targetId = basicRel[r][1];
-        if(parseInt(sourceId)>=parseInt(addDataId)) sourceId = parseInt(sourceId)+1;
-        if(parseInt(targetId)>=parseInt(addDataId)) targetId = parseInt(targetId)+1;
-        bsNew.push([sourceId+'',targetId+''])
-      }
-      let ssNew = []
-      let similarityRel = relData['similarityRel'];
-      for (let r = 0; r < similarityRel.length; r++) {
-        let sourceId = similarityRel[r][0];
-        let targetId = similarityRel[r][1];
-        if(parseInt(sourceId)>=parseInt(addDataId)) sourceId = parseInt(sourceId)+1;
-        if(parseInt(targetId)>=parseInt(addDataId)) targetId = parseInt(targetId)+1;
-        ssNew.push([sourceId+'',targetId+''])
-      }
-      returnRelData = {'basicRel':bsNew,'similarityRel':ssNew};
-      let nData = returnData.find(function(d){return d['id'] == nodeId});
-      let aData = returnData.find(function(d){return d['id'] == addDataId});
-      if(nodeId!='-1'){
-        nData['son'].push(addDataId);
-        aData['layout'] = parseInt(nData['layout']+1);
-        aData['father'] = [nodeId];
-      }
-      else{
-        aData['layout'] = '0';
-      }
-      _this.data = (returnData);
-      _this.relData = returnRelData;
-      _this.getTreeData();
-      _this.updata();
-      }
-      if (state == 'addLinkBasic') {
-        let addSourceDataId = _this.insertSourceEntId;
-        let addTargetDataId = _this.insertTargetEntId;
-        if((addSourceDataId != '-1')&&(addTargetDataId != '-1')){
-          returnRelData =  tools.deepClone(relData);
-          returnRelData['basicRel'].push([addSourceDataId,addTargetDataId]);
-          _this.insertSourceEntId = '-1';
-          _this.insertTargetEntId = '-1';
-          _this.relData = returnRelData;
-          _this.getTreeData();
-          _this.updata();
-        }
-      }
+    iCellStyle:function ({row, column, rowIndex, columnIndex}) {
+        return 'padding:2px'
     },
-    addNodeSonClk() {
-      this.toolsState = 'addNodeSon';
-    },
-    addNodePerClk() {
-      this.toolsState = 'addNodePer';
-    },
-    addLinkBasicClk() {
-      this.toolsState = 'addLinkBasic';
+    iHeaderCellStyle:function ({row, column, rowIndex, columnIndex}) {
+        return 'padding:0px'
     },
     drawprocData() {
       const _this = this;
       const margin = _this.margin;
-      let width = this.$refs.procData.offsetWidth - margin.left - margin.right - 60;
+      let width = this.$refs.procData.offsetWidth - margin.left - margin.right;
       let height = this.$refs.procData.offsetHeight - margin.top - margin.bottom;
       d3.select("#procData").select("svg").remove();
       var svg = d3.select("#procData").append("svg")
@@ -380,8 +246,36 @@ export default {
         .attr("width", width)
         .attr("height", height);
 
+        let graphGTransformX = _this.graphGTransformX;
+      let graphGTransformY = _this.graphGTransformY;
+      let graphGTransformK = _this.graphGTransformK;
+      
+      let stx = 0;
+      let sty = 0;
+      let stk = 1;
       let entG = svg.append("g").attr("id", "entG").attr("width", width).attr("height", height);
       let sonG = svg.append("g").attr("id", "sonG").attr("width", width).attr("height", height).attr("transform", "translate(1,320)");
+        var graphZoom = d3.zoom()
+        .scaleExtent([0, 100])
+        .on("start", (e) => {
+          sty = e.transform.y;
+          stx = e.transform.x;
+          stk = e.transform.k;
+        })
+        .on('zoom', (e) => {
+          graphGTransformX = _this.graphGTransformX //+ e.transform.x - stx;
+          graphGTransformY = _this.graphGTransformY + e.transform.y - sty;
+          graphGTransformK = _this.graphGTransformK //+ e.transform.k - stk;
+          entG.attr('transform', 'translate(' + (graphGTransformX) + ',' + (graphGTransformY) + ') scale(' + (graphGTransformK) + ')')
+        })
+        .on('end', (e) => {
+          _this.graphGTransformX = graphGTransformX;
+          _this.graphGTransformY = graphGTransformY;
+          _this.graphGTransformK = graphGTransformK;
+          entG.attr('transform', 'translate(' + (graphGTransformX) + ',' + (graphGTransformY) + ') scale(' + (graphGTransformK) + ')')
+        });
+
+      svg.call(graphZoom);
       // _this.entG = entG;
       // _this.sonG = sonG;
       _this.drawQuestionSurface(entG);
@@ -919,23 +813,130 @@ export default {
       let w = psvg.attr("width");
       let h = psvg.attr("height");
       psvg.select("#procG").remove();
+      let backg = psvg.append("g").attr("id", "backG").attr("width", w).attr("height", h);
       let prog = psvg.append("g").attr("id", "procG").attr("width", w).attr("height", h);
       let proData = _this.problemsData;
+      let problemConceptData = _this.problemConceptData;
+      let conceptTree = _this.conceptTree;
+
+      console.log(conceptTree,problemConceptData);
       let proId = _this.curEntId;
       if(proId == ""){return;}
       let curPro = proData.find(function(p){return (p['id']).toString() == (proId).toString()})
       let title = curPro['title'];
+      let type = curPro['type'];
       let tx=10;
       let ty = 20;
       // ty = _this.drawTxt(prog,tx,ty,w,`Title:${title}`,"black",22,'title');
-      let content = curPro['content'];
+      let content = curPro['content'].split("###");
 
-      _this.tableData.find(function(t){return t['key'] == 'Title'})['value'] = title;
-      _this.tableData.find(function(t){return t['key'] == 'Content'})['value'] = content;
+      let input =" ";
+      let output ="";
+      if(proId == '1568086661408161798'){
+        title = "ASCII";
+        content = ["已知字符 'a' 的ASCII码为 97，执行下列语句的输出是_______。 `printf ('%d, %c', 'b', 'b'+1 )` ;"];
+        _this.tableData.find(function(t){return t['key'] == 'InputT'})['value'] = "";
+        input = "A.98, b   B.错误 C. 98, 99   D. 98, c"
+        _this.tableData.find(function(t){return t['key'] == 'OutT'})['value'] = "";
+        // output = "C. 98, 99   D. 98, c"
+      }
+      else if(type == 'PROGRAMMING'){
+        input =" "+ content[1].split("输入格式:")[1];
+        output =""+ content[2].split("输出格式:")[1];
+        title = `Title: ${' '} ${title}`;
+        _this.tableData.find(function(t){return t['key'] == 'ContentT'})['value'] = "Description:";
+        _this.tableData.find(function(t){return t['key'] == 'InputT'})['value'] = "Input Format:";
+        _this.tableData.find(function(t){return t['key'] == 'OutT'})['value'] = "Output Format:";
+      }
+      else{
+        title = "";
+
+        _this.tableData.find(function(t){return t['key'] == 'InputT'})['value'] = "";
+        _this.tableData.find(function(t){return t['key'] == 'OutT'})['value'] = "";
+      }
+      _this.tableData.find(function(t){return t['key'] == 'Title'})['value'] = `${' '} ${title}`;
+      _this.tableData.find(function(t){return t['key'] == 'Type'})['value'] = `Type: ${type}`;
+      _this.tableData.find(function(t){return t['key'] == 'Content'})['value'] = content[0];
+      _this.tableData.find(function(t){return t['key'] == 'Input'})['value'] = ` ${input}`;
+      _this.tableData.find(function(t){return t['key'] == 'Out'})['value'] = ` ${output}`;
       console.log(_this.tableData)
+      let conMap = {}
+      let conName = []
+      for(let i=0;i<conceptTree.length;i++){
+        conMap[conceptTree[i]['id']] = -1;
+        conName.push(conceptTree[i]['id'])
+      }
+      // var compare = function (x, y) {//比较函数
+      //   let lenx = x.length;
+      //   let leny = y.length;
+      //   if(lenx!=leny)return lenx>leny;
+      //   return x["problemSetId"] > y["problemSetId"] 
+      // };
+      // conName.sort(compare)
+
+      for (let i = 0; i < problemConceptData.length; i++) {
+        let conceptId = problemConceptData[i]['conceptId'];
+        let problemId = problemConceptData[i]['problem'];
+        let type = problemConceptData[i]['type'];
+        if(problemId == proId){
+          conMap[conceptId] = type;
+        }
+      }
+      let prex = 30;
+      let prey = 60;
+      let textWidth = _this.drawTxt(prog, 14, 20, "Related concepts：", "rgb(103, 103, 103)", 22, `kd`);
+      conceptTree.forEach(con=>{
+        let jg = conMap[con['id']];
+        if(jg!=-1){
+          let recColor = "rgb(218, 127, 136)";
+          if(jg==0)
+            recColor = "grey"
+          let textWidth = _this.drawTxt(prog, prex, prey, con['name'], "white", 16, `ProSur_con${con['id']}`);
+          _this.drawRect(backg, prex-4, prey-20, textWidth+8,28,  10, recColor, "1", "none", "1", `ProSur_coRect${con['id']}`, 'ProSur');
+        // prey+=10;
+          prex+=textWidth+20;
+          if(prex>270){
+            prex = 30;
+            prey+=30
+          }
+        }
+        // let textWidth = _this.drawTxt(prog, prex, prey, con['id']+''+conMap[con['id']], "black", 10, `FigNet_con`);
+
+          // _this.drawTxt(prog,prex,prey,w,`Title:${content}`,"black",16,'title');
+      })
       // _this.drawTxt(prog,tx,ty+25,w,`Title:${content}`,"black",16,'title');
+    },    
+    
+    drawRect(svg, x, y, w, h, rx, fill, strokeWidth, stroke, opacity, idName, className) {
+      d3.select(`#${idName}`).remove();
+      let rect = svg.append("rect")
+        .attr("x", x)
+        .attr("y", y)
+        .attr("width", w)
+        .attr("height", h)
+        .attr("id", idName)
+        .attr("class", className)
+        .attr("opacity", opacity)
+        .attr("fill", fill)
+        .attr("rx", rx)
+        .attr("stroke", stroke)
+        .attr("stroke-width", strokeWidth)
+      return rect;
     },
-    drawTxt(svg, x, y, width, txts, fill, fontsize = 12, idN) {
+    drawTxt(svg, x, y, text, fill, fontsize = 12, idN, an = 'start') {
+      let txt = svg.append("text")
+        .attr("y", y)
+        .attr("x", x)
+        .attr("id", idN)
+        .attr("fill", fill)
+        .attr("font-size", fontsize)
+        .style("text-anchor", an)
+        .text(text)
+      
+        let textWidth = document.getElementById(`${idN}`).getBBox().width;
+      return textWidth;
+    },
+    drawTxtW(svg, x, y, width, txts, fill, fontsize = 12, idN) {
       let tx = x;
       let ty = y;
       let preWidth = 0;
@@ -1158,6 +1159,15 @@ export default {
     });
     this.$bus.$on('allProblem', (val) => {
      _this.problemsData = val;
+      // _this.updata();
+    });
+    
+    this.$bus.$on('ConceptTree', (val) => {
+      _this.conceptTree = val;
+    });
+    
+    this.$bus.$on('Pro_Con', (val) => {
+      _this.problemConceptData = val;
     });
   },
   // beforeDestroy() {

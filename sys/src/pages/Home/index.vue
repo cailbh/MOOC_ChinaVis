@@ -82,24 +82,25 @@ export default {
       videoTime: 0,
       windowWidth: document.documentElement.clientWidth, //实时屏幕宽度
       windowHeight: document.documentElement.clientHeight, //实时屏幕高度
-      // attrColorList:[
-      //   "rgb(255, 77, 109)",
-      //   "rgb(255, 113, 212)",
-      //   "rgb(255, 120, 90)",
-      //   "rgb(255, 159, 28)",
-      //   "rgb(6, 214, 160)",
-      //   "rgb(125, 98, 211)",
-      // ],
       attrColorList:[
-        "rgb(253, 174, 134)",
+        "rgb(254, 33, 79)",
         "rgb(115, 230, 163)",
-        "rgb(255, 233, 141)",
-        "rgb(56, 191, 201)",
-        "rgb(255, 122, 125)",
-        "rgb(224, 207, 243)",
+        "rgb(250, 210, 50)",
+        "rgb(255, 120, 90)",
+        "rgb(255, 159, 28)",
+        "rgb(6, 214, 160)",
+        "rgb(125, 98, 211)",
       ],
+      // attrColorList:[
+      //   "rgb(253, 174, 134)",
+      //   "rgb(115, 230, 163)",
+      //   "rgb(255, 233, 141)",
+      //   "rgb(56, 191, 201)",
+      //   "rgb(255, 122, 125)",
+      //   "rgb(224, 207, 243)",
+      // ],
       attrColorLightList:[
-        "rgb(255, 176, 200)",
+        "rgb(253, 174, 134)",
         "rgb(255, 184, 240)",
         "rgb(255, 173, 159)",
         "rgb(255, 208, 133)",
@@ -107,12 +108,19 @@ export default {
         "rgb(167, 158, 221)",
       ],
       stuColorList:[
-        "rgb(254, 33, 79)",
-        "rgb(252, 171, 1)",
-        "rgb(85, 6, 134)",
+        "rgb(253, 174, 134)",
         "rgb(203, 64, 156)",
+        "rgb(85, 6, 134)",
+        "rgb(252, 171, 1)",
         "rgb(73, 178, 101)",
       ],
+      // stuColorList:[
+      //   "rgb(254, 33, 79)",
+      //   "rgb(252, 171, 1)",
+      //   "rgb(85, 6, 134)",
+      //   "rgb(203, 64, 156)",
+      //   "rgb(73, 178, 101)",
+      // ],
       mcolor: [
         "rgb(255,60,60)",
         "rgb(155,20,100)",
@@ -786,14 +794,9 @@ export default {
     getAllData() {
       const _this = this;
       this.getConceptTree();
-      // this.getStudents();
       this.getProblems();
-      // this.getConcept();
       this.getProblemConcept();
       this.getSubmissions();
-      // .then(()=>{ 
-      // _this.updataGraph();
-      // })
     },
     getSelectEnt(val) {
       this.selectEntId = val;
